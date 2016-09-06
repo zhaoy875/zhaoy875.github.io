@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhaoy875.github.io/"/>
-  <updated>2016-09-04T12:48:14.725Z</updated>
+  <updated>2016-09-05T19:07:09.207Z</updated>
   <id>http://zhaoy875.github.io/</id>
   
   <author>
@@ -20,10 +20,11 @@
     <link href="http://zhaoy875.github.io/2016/09/04/my%20fed/"/>
     <id>http://zhaoy875.github.io/2016/09/04/my fed/</id>
     <published>2016-09-03T20:25:26.677Z</published>
-    <updated>2016-09-04T12:48:14.725Z</updated>
+    <updated>2016-09-05T19:07:09.207Z</updated>
     
-    <content type="html"><![CDATA[<p>#Person urlmark 个人收藏夹<br><!-- 我的前端学习工作 --></p>
-<h2 id="每日必逛系列"><a href="#每日必逛系列" class="headerlink" title="每日必逛系列"></a>每日必逛系列</h2><h6 id="："><a href="#：" class="headerlink" title="："></a>：</h6><ul>
+    <content type="html"><![CDATA[<h1 id="个人站点收藏夹"><a href="#个人站点收藏夹" class="headerlink" title="个人站点收藏夹"></a>个人站点收藏夹</h1><!-- 我的前端学习工作 -->
+<h2 id="每日必逛系列"><a href="#每日必逛系列" class="headerlink" title="每日必逛系列"></a>每日必逛系列</h2><p>&gt;</p>
+<ul>
 <li><a href="http://gold.xitu.io" target="_blank" rel="external">掘金</a></li>
 <li><a href="https://github.com/zhaoy875" target="_blank" rel="external">github</a></li>
 <li><a href="https://segmentfault.com" target="_blank" rel="external">segmentfault</a></li>
@@ -31,9 +32,8 @@
 <li><a href="http://www.jianshu.com" target="_blank" rel="external">简书</a></li>
 <li>cnblogs </li>
 <li>知乎</li>
-<li>v2ex<br>…</li>
+<li>v2ex</li>
 </ul>
-<hr>
 <h2 id="前端站点"><a href="#前端站点" class="headerlink" title="前端站点"></a>前端站点</h2><h2 id="我的工作流"><a href="#我的工作流" class="headerlink" title="我的工作流"></a>我的工作流</h2><blockquote>
 <p>信息爆炸的年代，靠死记硬背知识注定被淘汰，我们需要的是一种高效的学习方式，自主的能习的能力。<br>借助工具：搜索引擎是最好的老师，如果你能在搜索引擎上找到答案的问题通常都不是很难的大问题，学会搜索，学会与人交流沟通，学会怎么问问题很重要，毕竟很多人真的不会问问题！ </p>
 </blockquote>
@@ -47,8 +47,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;#Person urlmark 个人收藏夹&lt;br&gt;&lt;!-- 我的前端学习工作 --&gt;&lt;/p&gt;
-&lt;h2 id=&quot;每日必逛系列&quot;&gt;&lt;a href=&quot;#每日必逛系列&quot; class=&quot;headerlink&quot; title=&quot;每日必逛系列&quot;&gt;&lt;/a&gt;每日必逛系列&lt;/h2&gt;&lt;h6 id=
+      &lt;h1 id=&quot;个人站点收藏夹&quot;&gt;&lt;a href=&quot;#个人站点收藏夹&quot; class=&quot;headerlink&quot; title=&quot;个人站点收藏夹&quot;&gt;&lt;/a&gt;个人站点收藏夹&lt;/h1&gt;&lt;!-- 我的前端学习工作 --&gt;
+&lt;h2 id=&quot;每日必逛系列&quot;&gt;&lt;a href=&quot;#每日必逛系列&quot; c
     
     </summary>
     
@@ -83,31 +83,89 @@
   </entry>
   
   <entry>
-    <title>URL bookmarks</title>
-    <link href="http://zhaoy875.github.io/2016/09/02/URL-bookmarks/"/>
-    <id>http://zhaoy875.github.io/2016/09/02/URL-bookmarks/</id>
-    <published>2016-09-02T04:06:24.000Z</published>
-    <updated>2016-09-04T19:52:17.285Z</updated>
+    <title>console的一些高级用法</title>
+    <link href="http://zhaoy875.github.io/2015/09/06/console%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/"/>
+    <id>http://zhaoy875.github.io/2015/09/06/console高级用法/</id>
+    <published>2015-09-06T15:06:24.000Z</published>
+    <updated>2016-09-05T19:07:20.092Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>人人人人</p>
-<div><br>    <pre><br>本人擅长Ai、Fw、Fl、Br、Ae、Pr、Id、Ps等软件的安装与卸载，精通CSS、JavaScript、PHP、ASP、C、C＋＋、C#、Java、Ruby、Perl、Lisp、python、Objective-C、ActionScript、Pascal、spss、sas等单词的拼写，熟悉Windows、Linux、Mac、Android、IOS、WP8等系统的开关机。<br><br>    </pre><br><br></div>
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//test </div><div class="line">console.__proto__</div></pre></td></tr></table></figure>
+<h2 id="console高级用法"><a href="#console高级用法" class="headerlink" title="console高级用法"></a>console高级用法</h2><pre><code>console.log()
+console.info(&quot;这是info&quot;);
+console.debug(&quot;这是debug&quot;);
+console.warn(&quot;这是warn&quot;);
+console.error(&quot;这是error&quot;);
+</code></pre><h3 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h3><p>console对象的上面5种方法，都可以使用printf风格的占位符。不过，占位符的种类比较少，只支持字符（%s）、整数（%d或%i）、浮点数（%f）和对象（%o）四种。</p>
+<pre><code>console.log(&quot;%d年%d月%d日&quot;,2011,3,26);
+console.log(&quot;圆周率是%f&quot;,3.1415926);
+console.warn(&quot;圆周率是%f&quot;,3.1415926);
+</code></pre><h3 id="分组group"><a href="#分组group" class="headerlink" title="分组group"></a>分组group</h3><pre><code>console.group(&quot;第一组信息&quot;);
+console.log(&quot;第一组第一条&quot;);
+console.log(&quot;第一组第二条&quot;);
+console.groupEnd();
+</code></pre><h3 id="console-dir"><a href="#console-dir" class="headerlink" title="console.dir()"></a>console.dir()</h3><p>console.dir()可以显示一个对象所有的属性和方法</p>
+<pre><code>console.dir(obj);
+</code></pre><h3 id="console-dirxml-用来显示网页的某个节点（node）所包含的节点html-xml代码。"><a href="#console-dirxml-用来显示网页的某个节点（node）所包含的节点html-xml代码。" class="headerlink" title="console.dirxml()用来显示网页的某个节点（node）所包含的节点html/xml代码。"></a>console.dirxml()用来显示网页的某个节点（node）所包含的节点html/xml代码。</h3><pre><code>var div= document.getElementById(&quot;foot&quot;);
+console.dirxml(div);
+</code></pre><h3 id="console-asset"><a href="#console-asset" class="headerlink" title="console.asset()"></a>console.asset()</h3><p>  console.assert()用来判断一个表达式或变量是否为真。如果结果为否，则在控制台输出一条相应信息，并且抛出一个异常。<br>比如，下面两个判断的结果都为否。</p>
+<pre><code>var result = 0;
+console.assert( result );    
+var year = 2000;
+console.assert(year == 2011 );
+</code></pre><h3 id="console-trace"><a href="#console-trace" class="headerlink" title="console.trace()"></a>console.trace()</h3><p>用来追踪函数的调用轨迹。</p>
+<p>比如，有一个加法器函数。    　</p>
+<pre><code>function add(a,b){
+    return a+b;
+}
+</code></pre><p>想知道这个函数是如何被调用的，在其中加入console.trace()方法就可以了</p>
+<pre><code>function add(a,b){
+　　console.trace();
+　　return a+b;
+}
 
-<h2 id="或者这样"><a href="#或者这样" class="headerlink" title="或者这样"></a>或者这样</h2><p><pre><br>    //代码<br></pre></p>
-<blockquote>
-<p>代码</p>
-<pre><code>var str=&quot;Hello happy world!&quot;
-console.log(str.slice(6,11));
-//测试md
-</code></pre></blockquote>
-]]></content>
+var x = add3(1,1);
+　　function add3(a,b){return add2(a,b);}
+　　function add2(a,b){return add1(a,b);}
+　　function add1(a,b){return add(a,b);}
+</code></pre><h3 id="计时功能"><a href="#计时功能" class="headerlink" title="计时功能"></a>计时功能</h3><p>console.time()和console.timeEnd()，用来显示之间代码的运行时间</p>
+<pre><code>console.time(&quot;计时器一&quot;);
+    var k=0; //内部循环体k次数
+　　for(var i=0;i&lt;1000;i++){
+　　　　for(var j=0;j&lt;1000;j++){
+            k++;
+        }
+　　}
+console.log(k)
+console.timeEnd(&quot;计时器一&quot;);
+</code></pre><h3 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h3><p>性能分析（Profiler）就是分析程序各个部分的运行时间，找出瓶颈所在，使用的方法是console.profile()。</p>
+<p>假定有一个函数Foo()，里面调用了另外两个函数funcA()和funcB()，其中funcA()调用10次，funcB()调用1次。</p>
+<pre><code>function Foo() {　　　　
+    for (var i = 0; i &lt; 10; i++) {
+        funcA(1000);
+    }　　　　
+    funcB(10000);　　
+}　　
+function funcA(count) {　　　　
+    for (var i = 0; i &lt; count; i++) {}　　
+}　　
+function funcB(count) {　　　　
+    for (var i = 0; i &lt; count; i++) {}　　
+}
+//然后就可以分析Foo()的运行性能了。
+
+console.profile(&apos;性能分析器一&apos;);
+Foo();
+console.profileEnd();
+</code></pre>]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h2&gt;&lt;p&gt;人人人人&lt;/p&gt;
-&lt;div&gt;&lt;br&gt;    &lt;pre&gt;&lt;br&gt;本人擅长Ai、Fw、Fl、Br、Ae、Pr、Id、Ps等软件的安装与卸载，精通
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;c
     
     </summary>
     
+    
+      <category term="js调试" scheme="http://zhaoy875.github.io/tags/js%E8%B0%83%E8%AF%95/"/>
     
   </entry>
   
