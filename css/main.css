@@ -1237,9 +1237,9 @@ pre .javascript .function {
   position: absolute;
   width: 100%;
   height: 2px;
-  bottom: 0;
+  bottom: -4px;
   left: 0;
-  background-color: #000;
+  background-color: rgba(0,0,0,0.9);
   visibility: hidden;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
@@ -1249,6 +1249,7 @@ pre .javascript .function {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
+  transition: all 0.8s;
 }
 .posts-expand .post-title-link:hover::before {
   visibility: visible;
@@ -1549,7 +1550,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #258af9;
+  background: #5d25ff;
 }
 .links-of-blogroll {
   font-size: 13px;
