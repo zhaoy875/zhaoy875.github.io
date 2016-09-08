@@ -1550,7 +1550,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #39995b;
+  background: #7c77f4;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2220,7 +2220,7 @@ body {
   box-sizing: border-box;
   padding: 40px;
   width: 700px;
-  background: #fff;
+  background: rgba(255,255,255,0.85);
   min-height: 700px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
