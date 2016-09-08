@@ -7,7 +7,7 @@
 /___|_| |_|\__,_|\___/ \__, |
                        |___/  
 
-  一入前端深似海,不会游泳的切图仔不是好前端
+  一入前端深似海
   勤有功，戏无益。戒之哉，宜勉力。---《三字经》
 -->
 <!doctype html>
@@ -54,7 +54,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Hexo,Github-Pages,Blog,SSH," />
 
 
 
@@ -72,55 +72,16 @@
 
 
 
-<meta name="description" content="个人站点收藏夹
-每日必逛系列&amp;gt;
-
-掘金
-github
-segmentfault
-微博
-简书
-cnblogs 
-知乎
-v2ex
-
-前端站点我的工作流
-信息爆炸的年代，靠死记硬背知识注定被淘汰，我们需要的是一种高效的学习方式，自主的能习的能力。借助工具：搜索引擎是最好的老师，如果你能在搜索引擎上找到答案的问题通常都不是很难的大问题，学会搜索，学会与人交流沟通，学会怎么问问题很重要，毕竟很多人真的">
+<meta name="description" content="前言hexo 使用自带的hexo-deploy-git插件实现自动部署到远程remote时，repository仓库链接使用ssh要比使用https快，也可以避免每次都要登录输入密码的步骤">
 <meta property="og:type" content="article">
-<meta property="og:title" content="my fav website">
-<meta property="og:url" content="http://zhaoy875.github.io/2016/09/07/my fed/index.html">
+<meta property="og:title" content="使用SSH免密简化Hexo deploy部署">
+<meta property="og:url" content="http://zhaoy875.github.io/2016/03/07/hexo-deploy-blog-use-ssh-link/index.html">
 <meta property="og:site_name" content="zhaoy">
-<meta property="og:description" content="个人站点收藏夹
-每日必逛系列&amp;gt;
-
-掘金
-github
-segmentfault
-微博
-简书
-cnblogs 
-知乎
-v2ex
-
-前端站点我的工作流
-信息爆炸的年代，靠死记硬背知识注定被淘汰，我们需要的是一种高效的学习方式，自主的能习的能力。借助工具：搜索引擎是最好的老师，如果你能在搜索引擎上找到答案的问题通常都不是很难的大问题，学会搜索，学会与人交流沟通，学会怎么问问题很重要，毕竟很多人真的">
-<meta property="og:updated_time" content="2016-09-05T19:07:09.207Z">
+<meta property="og:description" content="前言hexo 使用自带的hexo-deploy-git插件实现自动部署到远程remote时，repository仓库链接使用ssh要比使用https快，也可以避免每次都要登录输入密码的步骤">
+<meta property="og:updated_time" content="2016-09-08T05:10:24.712Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="my fav website">
-<meta name="twitter:description" content="个人站点收藏夹
-每日必逛系列&amp;gt;
-
-掘金
-github
-segmentfault
-微博
-简书
-cnblogs 
-知乎
-v2ex
-
-前端站点我的工作流
-信息爆炸的年代，靠死记硬背知识注定被淘汰，我们需要的是一种高效的学习方式，自主的能习的能力。借助工具：搜索引擎是最好的老师，如果你能在搜索引擎上找到答案的问题通常都不是很难的大问题，学会搜索，学会与人交流沟通，学会怎么问问题很重要，毕竟很多人真的">
+<meta name="twitter:title" content="使用SSH免密简化Hexo deploy部署">
+<meta name="twitter:description" content="前言hexo 使用自带的hexo-deploy-git插件实现自动部署到远程remote时，repository仓库链接使用ssh要比使用https快，也可以避免每次都要登录输入密码的步骤">
 
 
 
@@ -141,9 +102,9 @@ v2ex
 
 
 
-  <link rel="canonical" href="http://zhaoy875.github.io/2016/09/07/my fed/"/>
+  <link rel="canonical" href="http://zhaoy875.github.io/2016/03/07/hexo-deploy-blog-use-ssh-link/"/>
 
-  <title> my fav website | zhaoy </title>
+  <title> 使用SSH免密简化Hexo deploy部署 | zhaoy </title>
   
   <meta name="baidu-site-verification" content="k0UgqisIfE" />
 </head>
@@ -167,6 +128,81 @@ v2ex
   
     
   
+  
+
+  
+
+
+  
+
+
+
+	
+	<canvas id="yyx"></canvas>
+	<script>
+		(function(){
+		    document.addEventListener('touchmove', function(e) {
+		        e.preventDefault()
+		    })
+		    var c = document.getElementById('yyx'),
+		        x = c.getContext('2d'),
+		        pr = window.devicePixelRatio || 1,
+		        w = window.innerWidth,
+		        h = window.innerHeight,
+		        f = 90,
+		        q,
+		        m = Math,
+		        r = 0,
+		        u = m.PI * 2,
+		        v = m.cos,
+		        z = m.random
+		    c.width = w * pr
+		    c.height = h * pr
+		    x.scale(pr, pr)
+		    x.globalAlpha = 0.6
+		    c.style.cssText ='position: fixed;top: 0;left: 0;z-index: 0;width: 100%;height: 100%;pointer-events: none;';
+		    function i() {
+		        x.clearRect(0, 0, w, h)
+		        q = [{
+		            x: 0,
+		            y: h * .7 + f
+		        }, {
+		            x: 0,
+		            y: h * .7 - f
+		        }]
+		        while (q[1].x < w + f) d(q[0], q[1])
+		    }
+
+		    function d(i, j) {
+		        x.beginPath()
+		        x.moveTo(i.x, i.y)
+		        x.lineTo(j.x, j.y)
+		        var k = j.x + (z() * 2 - 0.25) * f,
+		            n = y(j.y)
+		        x.lineTo(k, n)
+		        x.closePath()
+		        r -= u / -50
+		        x.fillStyle = '#' + (v(r) * 127 + 128 << 16 | v(r + u / 3) * 127 + 128 << 8 | v(r + u / 3 * 2) * 127 + 128).toString(16)
+		        x.fill()
+		        q[0] = q[1]
+		        q[1] = {
+		            x: k,
+		            y: n
+		        }
+		    }
+
+		    function y(p) {
+		        var t = p + (z() * 2 - 1.1) * f
+		        return (t > h || t < 0) ? y(p) : t
+		    }
+		    document.onclick = i
+		    document.ontouchstart = i
+		    i()
+		})();  
+	        
+	</script>
+
+
 
   <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
@@ -307,7 +343,7 @@ v2ex
             
             
               
-                my fav website
+                使用SSH免密简化Hexo deploy部署
               
             
           </h1>
@@ -319,11 +355,30 @@ v2ex
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-07T02:29:37+08:00" content="2016-09-07">
-              2016-09-07
+            <time itemprop="dateCreated" datetime="2016-03-07T14:40:16+08:00" content="2016-03-07">
+              2016-03-07
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/博客/" itemprop="url" rel="index">
+                    <span itemprop="name">博客</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -352,27 +407,23 @@ v2ex
       
 
       
-        <h1 id="个人站点收藏夹"><a href="#个人站点收藏夹" class="headerlink" title="个人站点收藏夹"></a>个人站点收藏夹</h1><!-- 我的前端学习工作 -->
-<h2 id="每日必逛系列"><a href="#每日必逛系列" class="headerlink" title="每日必逛系列"></a>每日必逛系列</h2><p>&gt;</p>
-<ul>
-<li><a href="http://gold.xitu.io" target="_blank" rel="external">掘金</a></li>
-<li><a href="https://github.com/zhaoy875" target="_blank" rel="external">github</a></li>
-<li><a href="https://segmentfault.com" target="_blank" rel="external">segmentfault</a></li>
-<li><a href="weibo.com/123zhaoy">微博</a></li>
-<li><a href="http://www.jianshu.com" target="_blank" rel="external">简书</a></li>
-<li>cnblogs </li>
-<li>知乎</li>
-<li>v2ex</li>
-</ul>
-<h2 id="前端站点"><a href="#前端站点" class="headerlink" title="前端站点"></a>前端站点</h2><h2 id="我的工作流"><a href="#我的工作流" class="headerlink" title="我的工作流"></a>我的工作流</h2><blockquote>
-<p>信息爆炸的年代，靠死记硬背知识注定被淘汰，我们需要的是一种高效的学习方式，自主的能习的能力。<br>借助工具：搜索引擎是最好的老师，如果你能在搜索引擎上找到答案的问题通常都不是很难的大问题，学会搜索，学会与人交流沟通，学会怎么问问题很重要，毕竟很多人真的不会问问题！ </p>
-</blockquote>
-<h3 id="学习记录工具"><a href="#学习记录工具" class="headerlink" title="学习记录工具"></a>学习记录工具</h3><h4 id="知识管理工具-如为知笔记-印象笔记-有道笔记等"><a href="#知识管理工具-如为知笔记-印象笔记-有道笔记等" class="headerlink" title="知识管理工具 如为知笔记 印象笔记 有道笔记等"></a>知识管理工具 如为知笔记 印象笔记 有道笔记等</h4><p> 好记性不如烂笔头，一个分类合理有体系的知识管理软件能让自己效率大大提高。<br>习惯了各种分散零碎的学习模式，难免会忘记，记录，合理分门别类管理会大大帮助自己整理归纳知识库，等等，，，还有其他各种好处呀等你用过后就知道了</p>
-<h4 id="学习技术的教程网站"><a href="#学习技术的教程网站" class="headerlink" title="学习技术的教程网站"></a>学习技术的教程网站</h4><p>  这个就需要收藏和斟酌了，一个优秀的站点总会吸引优秀的来访者，或者因为高质量的内容或非凡的体验设计或是强大的功能等等总有它出众的地方，而你需要自己斟酌去筛选，下面是我自己学习前端过程中常逛的站点：</p>
-<p> 精品总是不多见的：<br>下面是我收藏的一些 前端博客、教程、前端技术、学习分享的站点：</p>
-<h2 id="前端技能"><a href="#前端技能" class="headerlink" title="前端技能"></a>前端技能</h2><p>  html(5) 、css(3 and 4?) 、javascript(es6 and more?)<br> <strong> 这三大基础，前几年nodejs横空出世，前端变得无限可能 </strong></p>
-<p> 。。。各种新的框架技术雨后春笋般的冒出来，<br> 前端，后端（nodejs server），桌面端(nw.js electron等)，移动端（angular，react native,vue）,重量级的前端自动化工程化（grunt,yo?,webpack,gulp等等）  如何去分辨糟粕与精华，不盲目跟风，学一样东西之前一定要明白他是干什么的，解决了什么问题？应用场景，对工作效率的影响，，，等等</p>
-<h3 id="分享下我的前端导航页"><a href="#分享下我的前端导航页" class="headerlink" title="分享下我的前端导航页"></a>分享下我的前端导航页</h3><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>今晚累了明天接着写，先睡了。。。<br>2016-9-4 04:19:43</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>hexo 使用自带的hexo-deploy-git插件实现自动部署到远程remote时，repository仓库链接使用ssh要比使用https快，也可以避免每次都要登录输入密码的步骤</p>
+<a id="more"></a>
+<h1 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h1><h2 id="修改站点配置-config-yml文件里面的deploy配置"><a href="#修改站点配置-config-yml文件里面的deploy配置" class="headerlink" title="修改站点配置 _config.yml文件里面的deploy配置"></a>修改站点配置 _config.yml文件里面的deploy配置</h2><pre><code>deploy:
+  type: git
+  repository: git@github.com:zhaoy875/zhaoy875.github.io.git  
+</code></pre><h2 id="列出已存在的SSH-Key"><a href="#列出已存在的SSH-Key" class="headerlink" title="列出已存在的SSH Key"></a>列出已存在的SSH Key</h2><p>打开Git Bash，并且输入：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ls</span> -<span class="keyword">al</span> ~/.ssh</div></pre></td></tr></table></figure></p>
+<p>这个命令会列出你<code>.ssh</code>账户中已经存在的SSH key，如果之前没有设置过，一般都是没有。那么就需要下面的生成密钥的步骤</p>
+<h2 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h2><p>然后输入：<br><code>ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code><br>这个命令将会生成一个以你邮箱为标签的ssh key，然后bash中会显示：</p>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Generating <span class="keyword">public</span>/<span class="keyword">private</span> rsa <span class="keyword">key</span> pair.</div><div class="line">Enter file <span class="keyword">in</span> which <span class="keyword">to</span> save the <span class="keyword">key</span> (/c/Users/you/.ssh/id_rsa): [Press enter]</div></pre></td></tr></table></figure>
+<p>回车，保存密钥文件到本地<br>复制密钥粘贴到远程仓库，这里以github为例，粘贴到github ssh key</p>
+<p>这样，你本地git bash就有了一个可用的SSH key。</p>
+<h2 id="将SSH-Key添加到Github中"><a href="#将SSH-Key添加到Github中" class="headerlink" title="将SSH Key添加到Github中"></a>将SSH Key添加到Github中</h2><p>下面将这个key添加到github网站。<br>打开<a href="https://github.com/settings/ssh" target="_blank" rel="external">https://github.com/settings/ssh</a>，点击<code>Add SSH Key</code>，复制<code>id_rsa.pub</code>中的所有内容到<code>Key</code>框中，在<code>Title</code>框中输入方便自己记忆的名字（建议输入能让自己明白是哪台电脑的名字，方便以后管理）。<br>当网页显示添加成功后，就已经完成了全部的操作。<br>下面进行一些测试，同样是打开Git Bash，输入：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ssh</span> <span class="selector-tag">-T</span> <span class="selector-tag">git</span>@<span class="keyword">github</span>.<span class="keyword">com</span></div></pre></td></tr></table></figure></p>
+<p>bash中会显示如下字样：</p>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">The authenticity <span class="keyword">of</span> host <span class="comment">'github.com (207.97.227.239)' can't be established.</span></div><div class="line">RSA <span class="keyword">key</span> fingerprint <span class="keyword">is</span> <span class="number">16</span>:<span class="number">27</span>:ac:a5:<span class="number">76</span>:<span class="number">28</span>:<span class="number">2</span>d:<span class="number">36</span>:<span class="number">63</span>:<span class="number">1</span>b:<span class="number">56</span>:<span class="number">4</span>d:eb:df:a6:<span class="number">48.</span></div><div class="line">Are you sure you want <span class="keyword">to</span> <span class="keyword">continue</span> connecting (yes/no)?</div></pre></td></tr></table></figure>
+<p>输入yes之后，计算机会自动将<code>github.com</code>列入已知的host，然后会出现如下提示：</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Hi username! You<span class="symbol">'ve</span> successfully authenticated, but GitHub does <span class="keyword">not</span></div><div class="line">provide shell <span class="keyword">access</span>.</div></pre></td></tr></table></figure>
+<p>over!</p>
 
       
     </div>
@@ -398,6 +449,18 @@ v2ex
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+          
+            <a href="/tags/Github-Pages/" rel="tag">#Github-Pages</a>
+          
+            <a href="/tags/Blog/" rel="tag">#Blog</a>
+          
+            <a href="/tags/SSH/" rel="tag">#SSH</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
@@ -411,8 +474,8 @@ v2ex
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/09/07/git常用命令/" rel="prev" title="git常用命令">
-                git常用命令 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/04/13/gitlab-install-intro/" rel="prev" title="Gitlab部署和汉化以及简单运维">
+                Gitlab部署和汉化以及简单运维 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -488,17 +551,8 @@ v2ex
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/zhaoy875_icon.jpg"
@@ -509,17 +563,24 @@ v2ex
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -570,17 +631,6 @@ v2ex
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#个人站点收藏夹"><span class="nav-number">1.</span> <span class="nav-text">个人站点收藏夹</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#每日必逛系列"><span class="nav-number">1.1.</span> <span class="nav-text">每日必逛系列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前端站点"><span class="nav-number">1.2.</span> <span class="nav-text">前端站点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我的工作流"><span class="nav-number">1.3.</span> <span class="nav-text">我的工作流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#学习记录工具"><span class="nav-number">1.3.1.</span> <span class="nav-text">学习记录工具</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#知识管理工具-如为知笔记-印象笔记-有道笔记等"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">知识管理工具 如为知笔记 印象笔记 有道笔记等</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#学习技术的教程网站"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">学习技术的教程网站</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前端技能"><span class="nav-number">1.4.</span> <span class="nav-text">前端技能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分享下我的前端导航页"><span class="nav-number">1.4.1.</span> <span class="nav-text">分享下我的前端导航页</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
-            
-          </div>
-        </section>
       
 
     </div>

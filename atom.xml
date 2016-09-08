@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhaoy875.github.io/"/>
-  <updated>2016-09-07T07:18:17.501Z</updated>
+  <updated>2016-09-07T09:27:49.370Z</updated>
   <id>http://zhaoy875.github.io/</id>
   
   <author>
@@ -20,17 +20,16 @@
     <link href="http://zhaoy875.github.io/2016/09/07/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>http://zhaoy875.github.io/2016/09/07/git常用命令/</id>
     <published>2016-09-07T07:16:43.000Z</published>
-    <updated>2016-09-07T07:18:17.501Z</updated>
+    <updated>2016-09-07T09:27:49.370Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="git示意图"><a href="#git示意图" class="headerlink" title="git示意图"></a>git示意图</h2><p>！<a href="git_articlex.png">图解git</a></p>
+    <content type="html"><![CDATA[<h2 id="git示意图"><a href="#git示意图" class="headerlink" title="git示意图"></a>git示意图</h2><p>！<a href="git_articlex.png">图解git</a><br><a id="more"></a></p>
 <p>git常用命令行</p>
 <p>！<a href="Git常用命令.jpg">git命令</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;git示意图&quot;&gt;&lt;a href=&quot;#git示意图&quot; class=&quot;headerlink&quot; title=&quot;git示意图&quot;&gt;&lt;/a&gt;git示意图&lt;/h2&gt;&lt;p&gt;！&lt;a href=&quot;git_articlex.png&quot;&gt;图解git&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;git常用命令行&lt;
+      &lt;h2 id=&quot;git示意图&quot;&gt;&lt;a href=&quot;#git示意图&quot; class=&quot;headerlink&quot; title=&quot;git示意图&quot;&gt;&lt;/a&gt;git示意图&lt;/h2&gt;&lt;p&gt;！&lt;a href=&quot;git_articlex.png&quot;&gt;图解git&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
@@ -38,15 +37,14 @@
   </entry>
   
   <entry>
-    <title>my fav website</title>
-    <link href="http://zhaoy875.github.io/2016/09/07/my%20fed/"/>
-    <id>http://zhaoy875.github.io/2016/09/07/my fed/</id>
-    <published>2016-09-06T18:29:37.401Z</published>
-    <updated>2016-09-05T19:07:09.207Z</updated>
+    <title>站点收藏</title>
+    <link href="http://zhaoy875.github.io/2016/09/06/%E6%94%B6%E8%97%8F%E7%BD%91%E5%9D%80/"/>
+    <id>http://zhaoy875.github.io/2016/09/06/收藏网址/</id>
+    <published>2016-09-06T14:16:12.000Z</published>
+    <updated>2016-09-08T05:12:11.958Z</updated>
     
     <content type="html"><![CDATA[<h1 id="个人站点收藏夹"><a href="#个人站点收藏夹" class="headerlink" title="个人站点收藏夹"></a>个人站点收藏夹</h1><!-- 我的前端学习工作 -->
-<h2 id="每日必逛系列"><a href="#每日必逛系列" class="headerlink" title="每日必逛系列"></a>每日必逛系列</h2><p>&gt;</p>
-<ul>
+<h2 id="每日必逛系列"><a href="#每日必逛系列" class="headerlink" title="每日必逛系列"></a>每日必逛系列</h2><ul>
 <li><a href="http://gold.xitu.io" target="_blank" rel="external">掘金</a></li>
 <li><a href="https://github.com/zhaoy875" target="_blank" rel="external">github</a></li>
 <li><a href="https://segmentfault.com" target="_blank" rel="external">segmentfault</a></li>
@@ -56,6 +54,7 @@
 <li>知乎</li>
 <li>v2ex</li>
 </ul>
+<a id="more"></a>
 <h2 id="前端站点"><a href="#前端站点" class="headerlink" title="前端站点"></a>前端站点</h2><h2 id="我的工作流"><a href="#我的工作流" class="headerlink" title="我的工作流"></a>我的工作流</h2><blockquote>
 <p>信息爆炸的年代，靠死记硬背知识注定被淘汰，我们需要的是一种高效的学习方式，自主的能习的能力。<br>借助工具：搜索引擎是最好的老师，如果你能在搜索引擎上找到答案的问题通常都不是很难的大问题，学会搜索，学会与人交流沟通，学会怎么问问题很重要，毕竟很多人真的不会问问题！ </p>
 </blockquote>
@@ -70,10 +69,178 @@
     <summary type="html">
     
       &lt;h1 id=&quot;个人站点收藏夹&quot;&gt;&lt;a href=&quot;#个人站点收藏夹&quot; class=&quot;headerlink&quot; title=&quot;个人站点收藏夹&quot;&gt;&lt;/a&gt;个人站点收藏夹&lt;/h1&gt;&lt;!-- 我的前端学习工作 --&gt;
-&lt;h2 id=&quot;每日必逛系列&quot;&gt;&lt;a href=&quot;#每日必逛系列&quot; c
+&lt;h2 id=&quot;每日必逛系列&quot;&gt;&lt;a href=&quot;#每日必逛系列&quot; class=&quot;headerlink&quot; title=&quot;每日必逛系列&quot;&gt;&lt;/a&gt;每日必逛系列&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://gold.xitu.io&quot;&gt;掘金&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/zhaoy875&quot;&gt;github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://segmentfault.com&quot;&gt;segmentfault&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;weibo.com/123zhaoy&quot;&gt;微博&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com&quot;&gt;简书&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;cnblogs &lt;/li&gt;
+&lt;li&gt;知乎&lt;/li&gt;
+&lt;li&gt;v2ex&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
+      <category term="博客" scheme="http://zhaoy875.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="网站收藏" scheme="http://zhaoy875.github.io/tags/%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/"/>
+    
+      <category term="前端学习" scheme="http://zhaoy875.github.io/tags/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gitlab部署和汉化以及简单运维</title>
+    <link href="http://zhaoy875.github.io/2016/04/13/gitlab-install-intro/"/>
+    <id>http://zhaoy875.github.io/2016/04/13/gitlab-install-intro/</id>
+    <published>2016-04-13T15:20:00.000Z</published>
+    <updated>2016-09-08T05:11:31.426Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>在跟网络中心的老师沟通成立镜像站的相关事宜的时候，意外地接下来搭建一套校内的 Git 服务的任务。<br><a href="https://imnerd.org/" target="_blank" rel="external">@怡红公子</a> 曾经搭建过一套类似的服务，但由于服务器端没有开启 VT 虚拟化导致不能安装 64 位的操作系统，再加上 Gitlab 不提供 32 位的安装包，所以长期以来怡红公子一直都是自行编译并配置 Gitlab 。考虑到后续维护的方便，我们决定趁着这个机会使用另一台支持安装 64 位操作系统的服务器，一劳永逸地解决这个问题。<br>我们的服务器环境是 <strong>CentOS 7.2 64bit</strong> ，以下所有操作均以此为基准。</p>
+<a id="more"></a>
+<h1 id="Gitlab-安装"><a href="#Gitlab-安装" class="headerlink" title="Gitlab 安装"></a>Gitlab 安装</h1><p>推荐使用 <a href="https://about.gitlab.com/downloads" target="_blank" rel="external">Install a GitLab CE Omnibus package</a> 安装 ，其他发行版可以点选对应版本，不再赘述。</p>
+<h2 id="安装和配置依赖"><a href="#安装和配置依赖" class="headerlink" title="安装和配置依赖"></a>安装和配置依赖</h2><p>如果需要安装 Postfix 来发送邮件，则需要在安装过程中选择 <code>Internet Site</code>。你也可以使用 Sendmail 之类的第三方发信服务或者使用自行配制的 SMTP 服务器。<br>除此以外，下列命令将会在防火墙中打开 HTTP(80) 和 SSH(22) 对应端口。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">sudo yum install curl policycoreutils openssh-server openssh-clients</div><div class="line">sudo systemctl <span class="built_in">enable</span> sshd</div><div class="line">sudo systemctl start sshd</div><div class="line">sudo yum install postfix</div><div class="line">sudo systemctl <span class="built_in">enable</span> postfix</div><div class="line">sudo systemctl start postfix</div><div class="line">sudo firewall-cmd --permanent --add-service=http</div><div class="line">sudo systemctl reload firewalld</div></pre></td></tr></table></figure>
+<h2 id="添加-Gitlab-源并安装"><a href="#添加-Gitlab-源并安装" class="headerlink" title="添加 Gitlab 源并安装"></a>添加 Gitlab 源并安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl <span class="_">-s</span>S https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash</div><div class="line">sudo yum install gitlab-ce</div></pre></td></tr></table></figure>
+<p>这个脚本会在源中添加 Gitlab-CE ，并自动执行<code>yum makecache</code>，然后安装<code>gitlab-ce</code>。由于源在国外，可能速度较慢，也可以手动添加来自 清华tuna 的源： <a href="https://mirrors.tuna.tsinghua.edu.cn/help/gitlab-ce/" target="_blank" rel="external">https://mirrors.tuna.tsinghua.edu.cn/help/gitlab-ce/</a> ， 链接中为各发行版下的教程，感谢 清华tuna 提供镜像。</p>
+<h2 id="配置并启动-Gitlab"><a href="#配置并启动-Gitlab" class="headerlink" title="配置并启动 Gitlab"></a>配置并启动 Gitlab</h2><p>此时已经可以启动服务了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl reconfigure</div></pre></td></tr></table></figure>
+<p>进行一长串复杂的启动流程之后， gitlab 就已经可以通过 <code>localhost</code> 进行访问了。</p>
+<h1 id="Gitlab-配置"><a href="#Gitlab-配置" class="headerlink" title="Gitlab 配置"></a>Gitlab 配置</h1><h2 id="修改域名"><a href="#修改域名" class="headerlink" title="修改域名"></a>修改域名</h2><p>默认的配置文件保存在 <code>/etc/gitlab/gitlab.rb</code> ，执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vim /etc/gitlab/gitlab.rb</div></pre></td></tr></table></figure>
+<p>打开文件，并修改：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">external_url <span class="string">'http://your.domain'</span></div></pre></td></tr></table></figure>
+<p>再次执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl reconfigure</div></pre></td></tr></table></figure>
+<p>即可。</p>
+<p>有一定概率出现 502 错误，刷新浏览器或者再次更新配置即可。</p>
+<h2 id="Gitlab-汉化"><a href="#Gitlab-汉化" class="headerlink" title="Gitlab 汉化"></a>Gitlab 汉化</h2><p>由于服务对象是广大师生，为了降低新手上手的难度，所有进行汉化也是非常有必要的。好在国内有人已经进行了这方面的工作，我们只需要共享其成果即可（欢迎向<a href="https://gitlab.com/larryli/gitlab" target="_blank" rel="external">原项目</a>提交高质量翻译）。</p>
+<p>首先确认版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo cat /opt/gitlab/embedded/service/gitlab-rails/VERSION</div></pre></td></tr></table></figure>
+<p>并确认当前汉化版本的 VERSION 是否相同，当前最新的汉化版本为 8.6 。<br>如果安装版本小于当前汉化版本，请先升级。如果安装版本大于当前汉化版本，请在本项目中提交新的 issue。<br>如果版本相同，首先在本地 clone 仓库。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># GitLab.com 仓库</span></div><div class="line">git <span class="built_in">clone</span> https://gitlab.com/larryli/gitlab.git</div><div class="line"></div><div class="line"><span class="comment"># 或 Coding.net 镜像</span></div><div class="line">git <span class="built_in">clone</span> https://git.coding.net/larryli/gitlab.git</div></pre></td></tr></table></figure>
+<blockquote>
+<p>根据我的测试， Coding.net 的镜像不完整，clone 之后无法 checkout</p>
+</blockquote>
+<p>然后比较汉化分支和原分支，导出 patch 用的 diff 文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 8.1 版本的汉化补丁</span></div><div class="line">git diff origin/8-6-stable..8-6-zh &gt; ../8.6.diff</div></pre></td></tr></table></figure>
+<p>然后上传 <code>8.6.diff</code> 文件到服务器。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 停止 gitlab</span></div><div class="line">sudo gitlab-ctl stop</div><div class="line">sudo patch <span class="_">-d</span> /opt/gitlab/embedded/service/gitlab-rails -p1 &lt; 8.6.diff</div></pre></td></tr></table></figure>
+<p>确定没有 .rej 文件，重启 GitLab 即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl start</div></pre></td></tr></table></figure>
+<p>如果汉化中出现问题，请重新安装 GitLab（<strong>注意备份数据</strong>）。</p>
+<h1 id="Gitlab-运维"><a href="#Gitlab-运维" class="headerlink" title="Gitlab 运维"></a>Gitlab 运维</h1><h2 id="管理"><a href="#管理" class="headerlink" title="管理"></a>管理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 启动所有 gitlab 组件：</span></div><div class="line">sudo gitlab-ctl start</div><div class="line"></div><div class="line"><span class="comment"># 停止所有 gitlab 组件：</span></div><div class="line">sudo gitlab-ctl stop</div><div class="line"></div><div class="line"><span class="comment"># 重启所有 gitlab 组件：</span></div><div class="line">sudo gitlab-ctl restart</div></pre></td></tr></table></figure>
+<h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><p>备份GitLab repositories and GitLab metadata<br>在 crontab 中加入如下命令：<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">0 </span><span class="number">2</span> * * * /<span class="keyword">usr</span>/bin/gitlab-rake gitlab:backup:create</div></pre></td></tr></table></figure></p>
+<h2 id="恢复"><a href="#恢复" class="headerlink" title="恢复"></a>恢复</h2><p>首先进入备份 gitlab 的目录，这个目录是配置文件中的<code>gitlab_rails[&#39;backup_path&#39;]</code>，默认为<code>/var/opt/gitlab/backups</code>。</p>
+<p>然后停止 unicorn 和 sidekiq ，保证数据库没有新的连接，不会有写数据情况。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl stop unicorn</div><div class="line"><span class="comment"># ok: down: unicorn: 0s, normally up</span></div><div class="line">sudo gitlab-ctl stop sidekiq</div><div class="line"><span class="comment"># ok: down: sidekiq: 0s, normally up</span></div></pre></td></tr></table></figure>
+<p>然后恢复数据，1406691018为备份文件的时间戳</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gitlab-rake gitlab:backup:restore BACKUP=1406691018</div></pre></td></tr></table></figure>
+<h2 id="修改数据存储地址"><a href="#修改数据存储地址" class="headerlink" title="修改数据存储地址"></a>修改数据存储地址</h2><p>默认情况下，gitlab 将数据存储在<code>/var/opt/gitlab/git-data</code>目录下，受限于分区情况&amp;方便管理，我们需要将数据迁移到别的目录下。</p>
+<h3 id="无需数据迁移"><a href="#无需数据迁移" class="headerlink" title="无需数据迁移"></a>无需数据迁移</h3><p>如果还没有投入使用，则可以直接在配置文件中添加：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git_data_dir <span class="string">"/path/to/git-data"</span></div></pre></td></tr></table></figure>
+<p>然后执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl reconfigure</div></pre></td></tr></table></figure>
+<p>就可以生效了。</p>
+<h3 id="进行数据迁移"><a href="#进行数据迁移" class="headerlink" title="进行数据迁移"></a>进行数据迁移</h3><p>如果已经有数据了，则需要进行迁移。</p>
+<p>首先需要暂停服务，避免用户在迁移期间读写数据：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl stop</div></pre></td></tr></table></figure>
+<p>然后使用rsync数据进行迁移：</p>
+<blockquote>
+<p>注意前一个地址不需要<code>/</code>，后一个地址需要<code>/</code>，且只需要迁移<code>repositories</code>目录即可</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo rsync -av /var/opt/gitlab/git-data/repositories /path/to/git-data/</div></pre></td></tr></table></figure>
+<p>然后运行配置工具以更新并重启服务：</p>
+<blockquote>
+<p>官网文档是先更新配置再启动服务，但我在使用中发现先更新配置会提示无法连接上服务器，出现这种问题时可以先启动服务再更新配置。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl reconfigure</div><div class="line">sudo gitlab-ctl start</div></pre></td></tr></table></figure>
+<p>最后不要忘了在网页端确认数据的地址是否正确。</p>
+<blockquote>
+<p>关于权限问题<br>在使用中，我一开始创建了一个<code>gitlabhq</code>用户并创建了一个文件夹，然后修改地址，服务正常启动后提示500。<br>后来使用<code>root</code>账户在<code>/home</code>下直接创建文件夹解决了这个问题。<br>如果有遇到类似问题的，可以尝试用<code>root</code>创建目录。</p>
+</blockquote>
+<h2 id="监听IPv6"><a href="#监听IPv6" class="headerlink" title="监听IPv6"></a>监听IPv6</h2><p>教育网拥有得天独厚的IPv6资源，所以为我们的gitlab服务添加IPv6支持很有必要。</p>
+<p>修改<code>/etc/gitlab/gitlab.rb</code>文件中的：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># nginx['listen_addresses'] = ['*']</span></div></pre></td></tr></table></figure>
+<p>为</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nginx[<span class="string">'listen_addresses'</span>] = [<span class="string">'*'</span>, <span class="string">'[::]'</span>]</div></pre></td></tr></table></figure>
+<p>然后执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl reconfigure</div></pre></td></tr></table></figure>
+<p>然后就可以通过IPv6访问了。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><a href="https://about.gitlab.com/downloads/" target="_blank" rel="external">Gitlab 下载</a></li>
+<li><a href="https://gitlab.com/larryli/gitlab/wikis/home" target="_blank" rel="external">GitLab Community Edition · Wiki</a></li>
+<li><a href="http://linuxtools-rst.readthedocs.org/zh_CN/latest/tool/crontab.html" target="_blank" rel="external">crontab 定时任务</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/raketasks/backup_restore.md" target="_blank" rel="external">Backup restore</a></li>
+<li><a href="https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/doc/settings/configuration.md#storing-git-data-in-an-alternative-directory" target="_blank" rel="external">Storing Git data in an alternative directory</a></li>
+</ul>
+<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><ul>
+<li>2016年04月14日 首次发布</li>
+<li>2016年04月18日 新增数据迁移&amp;监听IPv6配置</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h1&gt;&lt;p&gt;在跟网络中心的老师沟通成立镜像站的相关事宜的时候，意外地接下来搭建一套校内的 Git 服务的任务。&lt;br&gt;&lt;a href=&quot;https://imnerd.org/&quot;&gt;@怡红公子&lt;/a&gt; 曾经搭建过一套类似的服务，但由于服务器端没有开启 VT 虚拟化导致不能安装 64 位的操作系统，再加上 Gitlab 不提供 32 位的安装包，所以长期以来怡红公子一直都是自行编译并配置 Gitlab 。考虑到后续维护的方便，我们决定趁着这个机会使用另一台支持安装 64 位操作系统的服务器，一劳永逸地解决这个问题。&lt;br&gt;我们的服务器环境是 &lt;strong&gt;CentOS 7.2 64bit&lt;/strong&gt; ，以下所有操作均以此为基准。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="博客" scheme="http://zhaoy875.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="运维" scheme="http://zhaoy875.github.io/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="CUGBLUG" scheme="http://zhaoy875.github.io/tags/CUGBLUG/"/>
+    
+      <category term="Gitlab" scheme="http://zhaoy875.github.io/tags/Gitlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用SSH免密简化Hexo deploy部署</title>
+    <link href="http://zhaoy875.github.io/2016/03/07/hexo-deploy-blog-use-ssh-link/"/>
+    <id>http://zhaoy875.github.io/2016/03/07/hexo-deploy-blog-use-ssh-link/</id>
+    <published>2016-03-07T06:40:16.000Z</published>
+    <updated>2016-09-08T05:10:24.712Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>hexo 使用自带的hexo-deploy-git插件实现自动部署到远程remote时，repository仓库链接使用ssh要比使用https快，也可以避免每次都要登录输入密码的步骤</p>
+<a id="more"></a>
+<h1 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h1><h2 id="修改站点配置-config-yml文件里面的deploy配置"><a href="#修改站点配置-config-yml文件里面的deploy配置" class="headerlink" title="修改站点配置 _config.yml文件里面的deploy配置"></a>修改站点配置 _config.yml文件里面的deploy配置</h2><pre><code>deploy:
+  type: git
+  repository: git@github.com:zhaoy875/zhaoy875.github.io.git  
+</code></pre><h2 id="列出已存在的SSH-Key"><a href="#列出已存在的SSH-Key" class="headerlink" title="列出已存在的SSH Key"></a>列出已存在的SSH Key</h2><p>打开Git Bash，并且输入：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ls</span> -<span class="keyword">al</span> ~/.ssh</div></pre></td></tr></table></figure></p>
+<p>这个命令会列出你<code>.ssh</code>账户中已经存在的SSH key，如果之前没有设置过，一般都是没有。那么就需要下面的生成密钥的步骤</p>
+<h2 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h2><p>然后输入：<br><code>ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code><br>这个命令将会生成一个以你邮箱为标签的ssh key，然后bash中会显示：</p>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Generating <span class="keyword">public</span>/<span class="keyword">private</span> rsa <span class="keyword">key</span> pair.</div><div class="line">Enter file <span class="keyword">in</span> which <span class="keyword">to</span> save the <span class="keyword">key</span> (/c/Users/you/.ssh/id_rsa): [Press enter]</div></pre></td></tr></table></figure>
+<p>回车，保存密钥文件到本地<br>复制密钥粘贴到远程仓库，这里以github为例，粘贴到github ssh key</p>
+<p>这样，你本地git bash就有了一个可用的SSH key。</p>
+<h2 id="将SSH-Key添加到Github中"><a href="#将SSH-Key添加到Github中" class="headerlink" title="将SSH Key添加到Github中"></a>将SSH Key添加到Github中</h2><p>下面将这个key添加到github网站。<br>打开<a href="https://github.com/settings/ssh" target="_blank" rel="external">https://github.com/settings/ssh</a>，点击<code>Add SSH Key</code>，复制<code>id_rsa.pub</code>中的所有内容到<code>Key</code>框中，在<code>Title</code>框中输入方便自己记忆的名字（建议输入能让自己明白是哪台电脑的名字，方便以后管理）。<br>当网页显示添加成功后，就已经完成了全部的操作。<br>下面进行一些测试，同样是打开Git Bash，输入：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ssh</span> <span class="selector-tag">-T</span> <span class="selector-tag">git</span>@<span class="keyword">github</span>.<span class="keyword">com</span></div></pre></td></tr></table></figure></p>
+<p>bash中会显示如下字样：</p>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">The authenticity <span class="keyword">of</span> host <span class="comment">'github.com (207.97.227.239)' can't be established.</span></div><div class="line">RSA <span class="keyword">key</span> fingerprint <span class="keyword">is</span> <span class="number">16</span>:<span class="number">27</span>:ac:a5:<span class="number">76</span>:<span class="number">28</span>:<span class="number">2</span>d:<span class="number">36</span>:<span class="number">63</span>:<span class="number">1</span>b:<span class="number">56</span>:<span class="number">4</span>d:eb:df:a6:<span class="number">48.</span></div><div class="line">Are you sure you want <span class="keyword">to</span> <span class="keyword">continue</span> connecting (yes/no)?</div></pre></td></tr></table></figure>
+<p>输入yes之后，计算机会自动将<code>github.com</code>列入已知的host，然后会出现如下提示：</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Hi username! You<span class="symbol">'ve</span> successfully authenticated, but GitHub does <span class="keyword">not</span></div><div class="line">provide shell <span class="keyword">access</span>.</div></pre></td></tr></table></figure>
+<p>over!</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;hexo 使用自带的hexo-deploy-git插件实现自动部署到远程remote时，repository仓库链接使用ssh要比使用https快，也可以避免每次都要登录输入密码的步骤&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="博客" scheme="http://zhaoy875.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Hexo" scheme="http://zhaoy875.github.io/tags/Hexo/"/>
+    
+      <category term="Github-Pages" scheme="http://zhaoy875.github.io/tags/Github-Pages/"/>
+    
+      <category term="Blog" scheme="http://zhaoy875.github.io/tags/Blog/"/>
+    
+      <category term="SSH" scheme="http://zhaoy875.github.io/tags/SSH/"/>
     
   </entry>
   
@@ -82,10 +249,10 @@
     <link href="http://zhaoy875.github.io/2015/09/06/console%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/"/>
     <id>http://zhaoy875.github.io/2015/09/06/console高级用法/</id>
     <published>2015-09-06T15:06:24.000Z</published>
-    <updated>2016-09-07T06:56:10.132Z</updated>
+    <updated>2016-09-07T09:27:52.997Z</updated>
     
     <content type="html"><![CDATA[<h2 id="概述console"><a href="#概述console" class="headerlink" title="概述console"></a>概述console</h2><p>大家平常写console最多的就是用来打印信息，console.log(obj or str)，console可以自定义打印字符的css样式，<br>console.trace()踪函数的调用轨迹，<br>计时功能console.time()；性能分析console.profile等。。</p>
-<!-- moreinfo -->
+<a id="more"></a>
 <h2 id="console高级用法"><a href="#console高级用法" class="headerlink" title="console高级用法"></a>console高级用法</h2><pre><code>console.log()
 console.info(&quot;这是info&quot;);
 console.debug(&quot;这是debug&quot;);
@@ -156,7 +323,7 @@ console.profileEnd();
     
     <summary type="html">
     
-      &lt;h2 id=&quot;概述console&quot;&gt;&lt;a href=&quot;#概述console&quot; class=&quot;headerlink&quot; title=&quot;概述console&quot;&gt;&lt;/a&gt;概述console&lt;/h2&gt;&lt;p&gt;大家平常写console最多的就是用来打印信息，console.log(obj or
+      &lt;h2 id=&quot;概述console&quot;&gt;&lt;a href=&quot;#概述console&quot; class=&quot;headerlink&quot; title=&quot;概述console&quot;&gt;&lt;/a&gt;概述console&lt;/h2&gt;&lt;p&gt;大家平常写console最多的就是用来打印信息，console.log(obj or str)，console可以自定义打印字符的css样式，&lt;br&gt;console.trace()踪函数的调用轨迹，&lt;br&gt;计时功能console.time()；性能分析console.profile等。。&lt;/p&gt;
     
     </summary>
     

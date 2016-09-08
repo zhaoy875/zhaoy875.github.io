@@ -1,0 +1,852 @@
+
+<!-- 
+     _                       
+ ___| |__   __ _  ___  _   _ 
+|_  / '_ \ / _` |/ _ \| | | |
+ / /| | | | (_| | (_) | |_| |
+/___|_| |_|\__,_|\___/ \__, |
+                       |___/  
+
+  一入前端深似海
+  勤有功，戏无益。戒之哉，宜勉力。---《三字经》
+-->
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="运维,CUGBLUG,Gitlab," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="zhaoy" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="起因在跟网络中心的老师沟通成立镜像站的相关事宜的时候，意外地接下来搭建一套校内的 Git 服务的任务。@怡红公子 曾经搭建过一套类似的服务，但由于服务器端没有开启 VT 虚拟化导致不能安装 64 位的操作系统，再加上 Gitlab 不提供 32 位的安装包，所以长期以来怡红公子一直都是自行编译并配置 Gitlab 。考虑到后续维护的方便，我们决定趁着这个机会使用另一台支持安装 64 位操作系统的服">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gitlab部署和汉化以及简单运维">
+<meta property="og:url" content="http://zhaoy875.github.io/2016/04/13/gitlab-install-intro/index.html">
+<meta property="og:site_name" content="zhaoy">
+<meta property="og:description" content="起因在跟网络中心的老师沟通成立镜像站的相关事宜的时候，意外地接下来搭建一套校内的 Git 服务的任务。@怡红公子 曾经搭建过一套类似的服务，但由于服务器端没有开启 VT 虚拟化导致不能安装 64 位的操作系统，再加上 Gitlab 不提供 32 位的安装包，所以长期以来怡红公子一直都是自行编译并配置 Gitlab 。考虑到后续维护的方便，我们决定趁着这个机会使用另一台支持安装 64 位操作系统的服">
+<meta property="og:updated_time" content="2016-09-08T05:11:31.426Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gitlab部署和汉化以及简单运维">
+<meta name="twitter:description" content="起因在跟网络中心的老师沟通成立镜像站的相关事宜的时候，意外地接下来搭建一套校内的 Git 服务的任务。@怡红公子 曾经搭建过一套类似的服务，但由于服务器端没有开启 VT 虚拟化导致不能安装 64 位的操作系统，再加上 Gitlab 不提供 32 位的安装包，所以长期以来怡红公子一直都是自行编译并配置 Gitlab 。考虑到后续维护的方便，我们决定趁着这个机会使用另一台支持安装 64 位操作系统的服">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: undefined,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://zhaoy875.github.io/2016/04/13/gitlab-install-intro/"/>
+
+  <title> Gitlab部署和汉化以及简单运维 | zhaoy </title>
+  
+  <meta name="baidu-site-verification" content="k0UgqisIfE" />
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+  <!--[if lte IE 8]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://www.goody.com.cn/2014/updatebrowser/"><img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820" alt="
+ 您正在使用的陈旧ie浏览器不支持，请更新浏览器以获得更好的浏览体验" style='margin-left:auto;margin-right:auto;display: block;'/></a></div> <![endif]-->
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+  
+
+
+  
+
+
+
+	
+	<canvas id="yyx"></canvas>
+	<script>
+		(function(){
+		    document.addEventListener('touchmove', function(e) {
+		        e.preventDefault()
+		    })
+		    var c = document.getElementById('yyx'),
+		        x = c.getContext('2d'),
+		        pr = window.devicePixelRatio || 1,
+		        w = window.innerWidth,
+		        h = window.innerHeight,
+		        f = 90,
+		        q,
+		        m = Math,
+		        r = 0,
+		        u = m.PI * 2,
+		        v = m.cos,
+		        z = m.random
+		    c.width = w * pr
+		    c.height = h * pr
+		    x.scale(pr, pr)
+		    x.globalAlpha = 0.6
+		    c.style.cssText ='position: fixed;top: 0;left: 0;z-index: 0;width: 100%;height: 100%;pointer-events: none;';
+		    function i() {
+		        x.clearRect(0, 0, w, h)
+		        q = [{
+		            x: 0,
+		            y: h * .7 + f
+		        }, {
+		            x: 0,
+		            y: h * .7 - f
+		        }]
+		        while (q[1].x < w + f) d(q[0], q[1])
+		    }
+
+		    function d(i, j) {
+		        x.beginPath()
+		        x.moveTo(i.x, i.y)
+		        x.lineTo(j.x, j.y)
+		        var k = j.x + (z() * 2 - 0.25) * f,
+		            n = y(j.y)
+		        x.lineTo(k, n)
+		        x.closePath()
+		        r -= u / -50
+		        x.fillStyle = '#' + (v(r) * 127 + 128 << 16 | v(r + u / 3) * 127 + 128 << 8 | v(r + u / 3 * 2) * 127 + 128).toString(16)
+		        x.fill()
+		        q[0] = q[1]
+		        q[1] = {
+		            x: k,
+		            y: n
+		        }
+		    }
+
+		    function y(p) {
+		        var t = p + (z() * 2 - 1.1) * f
+		        return (t > h || t < 0) ? y(p) : t
+		    }
+		    document.onclick = i
+		    document.ontouchstart = i
+		    i()
+		})();  
+	        
+	</script>
+
+
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">zhaoy</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            按分类找
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            我是谁？
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            按标签找
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-user_set">
+          <a href="/palette/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            自定义
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Gitlab部署和汉化以及简单运维
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-13T23:20:00+08:00" content="2016-04-13">
+              2016-04-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/博客/" itemprop="url" rel="index">
+                    <span itemprop="name">博客</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>在跟网络中心的老师沟通成立镜像站的相关事宜的时候，意外地接下来搭建一套校内的 Git 服务的任务。<br><a href="https://imnerd.org/" target="_blank" rel="external">@怡红公子</a> 曾经搭建过一套类似的服务，但由于服务器端没有开启 VT 虚拟化导致不能安装 64 位的操作系统，再加上 Gitlab 不提供 32 位的安装包，所以长期以来怡红公子一直都是自行编译并配置 Gitlab 。考虑到后续维护的方便，我们决定趁着这个机会使用另一台支持安装 64 位操作系统的服务器，一劳永逸地解决这个问题。<br>我们的服务器环境是 <strong>CentOS 7.2 64bit</strong> ，以下所有操作均以此为基准。</p>
+<a id="more"></a>
+<h1 id="Gitlab-安装"><a href="#Gitlab-安装" class="headerlink" title="Gitlab 安装"></a>Gitlab 安装</h1><p>推荐使用 <a href="https://about.gitlab.com/downloads" target="_blank" rel="external">Install a GitLab CE Omnibus package</a> 安装 ，其他发行版可以点选对应版本，不再赘述。</p>
+<h2 id="安装和配置依赖"><a href="#安装和配置依赖" class="headerlink" title="安装和配置依赖"></a>安装和配置依赖</h2><p>如果需要安装 Postfix 来发送邮件，则需要在安装过程中选择 <code>Internet Site</code>。你也可以使用 Sendmail 之类的第三方发信服务或者使用自行配制的 SMTP 服务器。<br>除此以外，下列命令将会在防火墙中打开 HTTP(80) 和 SSH(22) 对应端口。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">sudo yum install curl policycoreutils openssh-server openssh-clients</div><div class="line">sudo systemctl <span class="built_in">enable</span> sshd</div><div class="line">sudo systemctl start sshd</div><div class="line">sudo yum install postfix</div><div class="line">sudo systemctl <span class="built_in">enable</span> postfix</div><div class="line">sudo systemctl start postfix</div><div class="line">sudo firewall-cmd --permanent --add-service=http</div><div class="line">sudo systemctl reload firewalld</div></pre></td></tr></table></figure>
+<h2 id="添加-Gitlab-源并安装"><a href="#添加-Gitlab-源并安装" class="headerlink" title="添加 Gitlab 源并安装"></a>添加 Gitlab 源并安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl <span class="_">-s</span>S https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash</div><div class="line">sudo yum install gitlab-ce</div></pre></td></tr></table></figure>
+<p>这个脚本会在源中添加 Gitlab-CE ，并自动执行<code>yum makecache</code>，然后安装<code>gitlab-ce</code>。由于源在国外，可能速度较慢，也可以手动添加来自 清华tuna 的源： <a href="https://mirrors.tuna.tsinghua.edu.cn/help/gitlab-ce/" target="_blank" rel="external">https://mirrors.tuna.tsinghua.edu.cn/help/gitlab-ce/</a> ， 链接中为各发行版下的教程，感谢 清华tuna 提供镜像。</p>
+<h2 id="配置并启动-Gitlab"><a href="#配置并启动-Gitlab" class="headerlink" title="配置并启动 Gitlab"></a>配置并启动 Gitlab</h2><p>此时已经可以启动服务了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl reconfigure</div></pre></td></tr></table></figure>
+<p>进行一长串复杂的启动流程之后， gitlab 就已经可以通过 <code>localhost</code> 进行访问了。</p>
+<h1 id="Gitlab-配置"><a href="#Gitlab-配置" class="headerlink" title="Gitlab 配置"></a>Gitlab 配置</h1><h2 id="修改域名"><a href="#修改域名" class="headerlink" title="修改域名"></a>修改域名</h2><p>默认的配置文件保存在 <code>/etc/gitlab/gitlab.rb</code> ，执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vim /etc/gitlab/gitlab.rb</div></pre></td></tr></table></figure>
+<p>打开文件，并修改：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">external_url <span class="string">'http://your.domain'</span></div></pre></td></tr></table></figure>
+<p>再次执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl reconfigure</div></pre></td></tr></table></figure>
+<p>即可。</p>
+<p>有一定概率出现 502 错误，刷新浏览器或者再次更新配置即可。</p>
+<h2 id="Gitlab-汉化"><a href="#Gitlab-汉化" class="headerlink" title="Gitlab 汉化"></a>Gitlab 汉化</h2><p>由于服务对象是广大师生，为了降低新手上手的难度，所有进行汉化也是非常有必要的。好在国内有人已经进行了这方面的工作，我们只需要共享其成果即可（欢迎向<a href="https://gitlab.com/larryli/gitlab" target="_blank" rel="external">原项目</a>提交高质量翻译）。</p>
+<p>首先确认版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo cat /opt/gitlab/embedded/service/gitlab-rails/VERSION</div></pre></td></tr></table></figure>
+<p>并确认当前汉化版本的 VERSION 是否相同，当前最新的汉化版本为 8.6 。<br>如果安装版本小于当前汉化版本，请先升级。如果安装版本大于当前汉化版本，请在本项目中提交新的 issue。<br>如果版本相同，首先在本地 clone 仓库。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># GitLab.com 仓库</span></div><div class="line">git <span class="built_in">clone</span> https://gitlab.com/larryli/gitlab.git</div><div class="line"></div><div class="line"><span class="comment"># 或 Coding.net 镜像</span></div><div class="line">git <span class="built_in">clone</span> https://git.coding.net/larryli/gitlab.git</div></pre></td></tr></table></figure>
+<blockquote>
+<p>根据我的测试， Coding.net 的镜像不完整，clone 之后无法 checkout</p>
+</blockquote>
+<p>然后比较汉化分支和原分支，导出 patch 用的 diff 文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 8.1 版本的汉化补丁</span></div><div class="line">git diff origin/8-6-stable..8-6-zh &gt; ../8.6.diff</div></pre></td></tr></table></figure>
+<p>然后上传 <code>8.6.diff</code> 文件到服务器。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 停止 gitlab</span></div><div class="line">sudo gitlab-ctl stop</div><div class="line">sudo patch <span class="_">-d</span> /opt/gitlab/embedded/service/gitlab-rails -p1 &lt; 8.6.diff</div></pre></td></tr></table></figure>
+<p>确定没有 .rej 文件，重启 GitLab 即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl start</div></pre></td></tr></table></figure>
+<p>如果汉化中出现问题，请重新安装 GitLab（<strong>注意备份数据</strong>）。</p>
+<h1 id="Gitlab-运维"><a href="#Gitlab-运维" class="headerlink" title="Gitlab 运维"></a>Gitlab 运维</h1><h2 id="管理"><a href="#管理" class="headerlink" title="管理"></a>管理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 启动所有 gitlab 组件：</span></div><div class="line">sudo gitlab-ctl start</div><div class="line"></div><div class="line"><span class="comment"># 停止所有 gitlab 组件：</span></div><div class="line">sudo gitlab-ctl stop</div><div class="line"></div><div class="line"><span class="comment"># 重启所有 gitlab 组件：</span></div><div class="line">sudo gitlab-ctl restart</div></pre></td></tr></table></figure>
+<h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><p>备份GitLab repositories and GitLab metadata<br>在 crontab 中加入如下命令：<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">0 </span><span class="number">2</span> * * * /<span class="keyword">usr</span>/bin/gitlab-rake gitlab:backup:create</div></pre></td></tr></table></figure></p>
+<h2 id="恢复"><a href="#恢复" class="headerlink" title="恢复"></a>恢复</h2><p>首先进入备份 gitlab 的目录，这个目录是配置文件中的<code>gitlab_rails[&#39;backup_path&#39;]</code>，默认为<code>/var/opt/gitlab/backups</code>。</p>
+<p>然后停止 unicorn 和 sidekiq ，保证数据库没有新的连接，不会有写数据情况。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl stop unicorn</div><div class="line"><span class="comment"># ok: down: unicorn: 0s, normally up</span></div><div class="line">sudo gitlab-ctl stop sidekiq</div><div class="line"><span class="comment"># ok: down: sidekiq: 0s, normally up</span></div></pre></td></tr></table></figure>
+<p>然后恢复数据，1406691018为备份文件的时间戳</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gitlab-rake gitlab:backup:restore BACKUP=1406691018</div></pre></td></tr></table></figure>
+<h2 id="修改数据存储地址"><a href="#修改数据存储地址" class="headerlink" title="修改数据存储地址"></a>修改数据存储地址</h2><p>默认情况下，gitlab 将数据存储在<code>/var/opt/gitlab/git-data</code>目录下，受限于分区情况&amp;方便管理，我们需要将数据迁移到别的目录下。</p>
+<h3 id="无需数据迁移"><a href="#无需数据迁移" class="headerlink" title="无需数据迁移"></a>无需数据迁移</h3><p>如果还没有投入使用，则可以直接在配置文件中添加：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git_data_dir <span class="string">"/path/to/git-data"</span></div></pre></td></tr></table></figure>
+<p>然后执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl reconfigure</div></pre></td></tr></table></figure>
+<p>就可以生效了。</p>
+<h3 id="进行数据迁移"><a href="#进行数据迁移" class="headerlink" title="进行数据迁移"></a>进行数据迁移</h3><p>如果已经有数据了，则需要进行迁移。</p>
+<p>首先需要暂停服务，避免用户在迁移期间读写数据：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl stop</div></pre></td></tr></table></figure>
+<p>然后使用rsync数据进行迁移：</p>
+<blockquote>
+<p>注意前一个地址不需要<code>/</code>，后一个地址需要<code>/</code>，且只需要迁移<code>repositories</code>目录即可</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo rsync -av /var/opt/gitlab/git-data/repositories /path/to/git-data/</div></pre></td></tr></table></figure>
+<p>然后运行配置工具以更新并重启服务：</p>
+<blockquote>
+<p>官网文档是先更新配置再启动服务，但我在使用中发现先更新配置会提示无法连接上服务器，出现这种问题时可以先启动服务再更新配置。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl reconfigure</div><div class="line">sudo gitlab-ctl start</div></pre></td></tr></table></figure>
+<p>最后不要忘了在网页端确认数据的地址是否正确。</p>
+<blockquote>
+<p>关于权限问题<br>在使用中，我一开始创建了一个<code>gitlabhq</code>用户并创建了一个文件夹，然后修改地址，服务正常启动后提示500。<br>后来使用<code>root</code>账户在<code>/home</code>下直接创建文件夹解决了这个问题。<br>如果有遇到类似问题的，可以尝试用<code>root</code>创建目录。</p>
+</blockquote>
+<h2 id="监听IPv6"><a href="#监听IPv6" class="headerlink" title="监听IPv6"></a>监听IPv6</h2><p>教育网拥有得天独厚的IPv6资源，所以为我们的gitlab服务添加IPv6支持很有必要。</p>
+<p>修改<code>/etc/gitlab/gitlab.rb</code>文件中的：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># nginx['listen_addresses'] = ['*']</span></div></pre></td></tr></table></figure>
+<p>为</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nginx[<span class="string">'listen_addresses'</span>] = [<span class="string">'*'</span>, <span class="string">'[::]'</span>]</div></pre></td></tr></table></figure>
+<p>然后执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl reconfigure</div></pre></td></tr></table></figure>
+<p>然后就可以通过IPv6访问了。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><a href="https://about.gitlab.com/downloads/" target="_blank" rel="external">Gitlab 下载</a></li>
+<li><a href="https://gitlab.com/larryli/gitlab/wikis/home" target="_blank" rel="external">GitLab Community Edition · Wiki</a></li>
+<li><a href="http://linuxtools-rst.readthedocs.org/zh_CN/latest/tool/crontab.html" target="_blank" rel="external">crontab 定时任务</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/raketasks/backup_restore.md" target="_blank" rel="external">Backup restore</a></li>
+<li><a href="https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/doc/settings/configuration.md#storing-git-data-in-an-alternative-directory" target="_blank" rel="external">Storing Git data in an alternative directory</a></li>
+</ul>
+<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><ul>
+<li>2016年04月14日 首次发布</li>
+<li>2016年04月18日 新增数据迁移&amp;监听IPv6配置</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="" alt="zhaoy875 wechat" style="width: 200px; max-width: 100%;"/>
+    <div></div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/运维/" rel="tag">#运维</a>
+          
+            <a href="/tags/CUGBLUG/" rel="tag">#CUGBLUG</a>
+          
+            <a href="/tags/Gitlab/" rel="tag">#Gitlab</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/07/hexo-deploy-blog-use-ssh-link/" rel="next" title="使用SSH免密简化Hexo deploy部署">
+                <i class="fa fa-chevron-left"></i> 使用SSH免密简化Hexo deploy部署
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/06/收藏网址/" rel="prev" title="站点收藏">
+                站点收藏 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/zhaoy875_icon.jpg"
+               alt="zhaoy875" />
+          <p class="site-author-name" itemprop="name">zhaoy875</p>
+          <p class="site-description motion-element" itemprop="description">zhaoy的前端开发学习站点，前端开发，前端框架,bootstrap,前端自动化，前端 frontend，Javascript,css3,js,node.js,canvas, gulp,webpack,amd ,cmd,react, react native,angular,vue,vue.js</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友链
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://alan725.com/" title="alan725" target="_blank">alan725</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhaoy.site" title="zhaoy" target="_blank">zhaoy</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.baidu.com" title="百度" target="_blank">百度</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhaoy875</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">访客数：<i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv">访问量：<i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+
+
+<div class="includejs">
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  
+</div>
+</body>
+</html>

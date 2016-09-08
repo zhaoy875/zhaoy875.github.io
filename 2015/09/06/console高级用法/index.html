@@ -7,7 +7,7 @@
 /___|_| |_|\__,_|\___/ \__, |
                        |___/  
 
-  一入前端深似海,不会游泳的切图仔不是好前端
+  一入前端深似海
   勤有功，戏无益。戒之哉，宜勉力。---《三字经》
 -->
 <!doctype html>
@@ -72,25 +72,16 @@
 
 
 
-<meta name="description" content="概述console大家平常写console最多的就是用来打印信息，console.log(obj or str)，console可以自定义打印字符的css样式，console.trace()踪函数的调用轨迹，计时功能console.time()；性能分析console.profile等。。
-
-console高级用法console.log()
-console.info(&amp;quot;这是info&amp;qu">
+<meta name="description" content="概述console大家平常写console最多的就是用来打印信息，console.log(obj or str)，console可以自定义打印字符的css样式，console.trace()踪函数的调用轨迹，计时功能console.time()；性能分析console.profile等。。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="console的一些高级用法">
 <meta property="og:url" content="http://zhaoy875.github.io/2015/09/06/console高级用法/index.html">
 <meta property="og:site_name" content="zhaoy">
-<meta property="og:description" content="概述console大家平常写console最多的就是用来打印信息，console.log(obj or str)，console可以自定义打印字符的css样式，console.trace()踪函数的调用轨迹，计时功能console.time()；性能分析console.profile等。。
-
-console高级用法console.log()
-console.info(&amp;quot;这是info&amp;qu">
-<meta property="og:updated_time" content="2016-09-07T06:56:10.132Z">
+<meta property="og:description" content="概述console大家平常写console最多的就是用来打印信息，console.log(obj or str)，console可以自定义打印字符的css样式，console.trace()踪函数的调用轨迹，计时功能console.time()；性能分析console.profile等。。">
+<meta property="og:updated_time" content="2016-09-07T09:27:52.997Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="console的一些高级用法">
-<meta name="twitter:description" content="概述console大家平常写console最多的就是用来打印信息，console.log(obj or str)，console可以自定义打印字符的css样式，console.trace()踪函数的调用轨迹，计时功能console.time()；性能分析console.profile等。。
-
-console高级用法console.log()
-console.info(&amp;quot;这是info&amp;qu">
+<meta name="twitter:description" content="概述console大家平常写console最多的就是用来打印信息，console.log(obj or str)，console可以自定义打印字符的css样式，console.trace()踪函数的调用轨迹，计时功能console.time()；性能分析console.profile等。。">
 
 
 
@@ -137,6 +128,81 @@ console.info(&amp;quot;这是info&amp;qu">
   
     
   
+  
+
+  
+
+
+  
+
+
+
+	
+	<canvas id="yyx"></canvas>
+	<script>
+		(function(){
+		    document.addEventListener('touchmove', function(e) {
+		        e.preventDefault()
+		    })
+		    var c = document.getElementById('yyx'),
+		        x = c.getContext('2d'),
+		        pr = window.devicePixelRatio || 1,
+		        w = window.innerWidth,
+		        h = window.innerHeight,
+		        f = 90,
+		        q,
+		        m = Math,
+		        r = 0,
+		        u = m.PI * 2,
+		        v = m.cos,
+		        z = m.random
+		    c.width = w * pr
+		    c.height = h * pr
+		    x.scale(pr, pr)
+		    x.globalAlpha = 0.6
+		    c.style.cssText ='position: fixed;top: 0;left: 0;z-index: 0;width: 100%;height: 100%;pointer-events: none;';
+		    function i() {
+		        x.clearRect(0, 0, w, h)
+		        q = [{
+		            x: 0,
+		            y: h * .7 + f
+		        }, {
+		            x: 0,
+		            y: h * .7 - f
+		        }]
+		        while (q[1].x < w + f) d(q[0], q[1])
+		    }
+
+		    function d(i, j) {
+		        x.beginPath()
+		        x.moveTo(i.x, i.y)
+		        x.lineTo(j.x, j.y)
+		        var k = j.x + (z() * 2 - 0.25) * f,
+		            n = y(j.y)
+		        x.lineTo(k, n)
+		        x.closePath()
+		        r -= u / -50
+		        x.fillStyle = '#' + (v(r) * 127 + 128 << 16 | v(r + u / 3) * 127 + 128 << 8 | v(r + u / 3 * 2) * 127 + 128).toString(16)
+		        x.fill()
+		        q[0] = q[1]
+		        q[1] = {
+		            x: k,
+		            y: n
+		        }
+		    }
+
+		    function y(p) {
+		        var t = p + (z() * 2 - 1.1) * f
+		        return (t > h || t < 0) ? y(p) : t
+		    }
+		    document.onclick = i
+		    document.ontouchstart = i
+		    i()
+		})();  
+	        
+	</script>
+
+
 
   <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
@@ -323,7 +389,7 @@ console.info(&amp;quot;这是info&amp;qu">
 
       
         <h2 id="概述console"><a href="#概述console" class="headerlink" title="概述console"></a>概述console</h2><p>大家平常写console最多的就是用来打印信息，console.log(obj or str)，console可以自定义打印字符的css样式，<br>console.trace()踪函数的调用轨迹，<br>计时功能console.time()；性能分析console.profile等。。</p>
-<!-- moreinfo -->
+<a id="more"></a>
 <h2 id="console高级用法"><a href="#console高级用法" class="headerlink" title="console高级用法"></a>console高级用法</h2><pre><code>console.log()
 console.info(&quot;这是info&quot;);
 console.debug(&quot;这是debug&quot;);
@@ -430,8 +496,8 @@ console.profileEnd();
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/09/07/my fed/" rel="prev" title="my fav website">
-                my fav website <i class="fa fa-chevron-right"></i>
+              <a href="/2016/03/07/hexo-deploy-blog-use-ssh-link/" rel="prev" title="使用SSH免密简化Hexo deploy部署">
+                使用SSH免密简化Hexo deploy部署 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -507,17 +573,8 @@ console.profileEnd();
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/zhaoy875_icon.jpg"
@@ -528,17 +585,24 @@ console.profileEnd();
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -589,17 +653,6 @@ console.profileEnd();
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述console"><span class="nav-number">1.</span> <span class="nav-text">概述console</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#console高级用法"><span class="nav-number">2.</span> <span class="nav-text">console高级用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#占位符"><span class="nav-number">2.1.</span> <span class="nav-text">占位符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分组group"><span class="nav-number">2.2.</span> <span class="nav-text">分组group</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-dir"><span class="nav-number">2.3.</span> <span class="nav-text">console.dir()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-dirxml-用来显示网页的某个节点（node）所包含的节点html-xml代码。"><span class="nav-number">2.4.</span> <span class="nav-text">console.dirxml()用来显示网页的某个节点（node）所包含的节点html/xml代码。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-asset"><span class="nav-number">2.5.</span> <span class="nav-text">console.asset()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-trace"><span class="nav-number">2.6.</span> <span class="nav-text">console.trace()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计时功能"><span class="nav-number">2.7.</span> <span class="nav-text">计时功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性能分析"><span class="nav-number">2.8.</span> <span class="nav-text">性能分析</span></a></li></ol></li></ol></div>
-            
-          </div>
-        </section>
       
 
     </div>
