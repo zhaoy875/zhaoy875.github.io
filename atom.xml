@@ -174,12 +174,10 @@
     <link href="http://zhaoy875.github.io/2015/09/06/console%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/"/>
     <id>http://zhaoy875.github.io/2015/09/06/console高级用法/</id>
     <published>2015-09-06T15:06:24.000Z</published>
-    <updated>2016-09-08T15:57:51.654Z</updated>
+    <updated>2016-09-08T16:03:25.892Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>没有特殊声明下，基本都是以chrome为例</p>
-<h2 id="概述console"><a href="#概述console" class="headerlink" title="概述console"></a>概述console</h2><p>大家平常写console最多的就是用来打印信息，console.log(obj or str)，<br>但console能干的事可比这多了，比如console可以自定义打印字符的css样式，<br>console.trace()踪函数的调用轨迹，<br>计时功能console.time()；性能分析console.profile等。。</p>
-<p><strong>让我们来console.log(console)看看</strong><br><img src="http://od6ri688q.bkt.clouddn.com/consoleQQ%E6%88%AA%E5%9B%BE20160908200956.png" alt=""></p>
-<a id="more"></a>
+<h2 id="概述console"><a href="#概述console" class="headerlink" title="概述console"></a>概述console</h2><p>大家平常写console最多的就是用来打印信息，console.log(obj or str)，<br>但console能干的事可比这多了，比如console可以自定义打印字符的css样式，<br>console.trace()踪函数的调用轨迹，<br>计时功能console.time()；性能分析console.profile等。。。<br><a id="more"></a><br><strong>让我们来console.log(console)看看</strong><br><img src="http://od6ri688q.bkt.clouddn.com/consoleQQ%E6%88%AA%E5%9B%BE20160908200956.png" alt=""></p>
 <h2 id="console打印类型"><a href="#console打印类型" class="headerlink" title="console打印类型"></a>console打印类型</h2><pre><code>console.log(&quot;str or obj&quot;)
 console.info(&quot;这是info&quot;);
 console.debug(&quot;这是debug&quot;);
@@ -259,8 +257,7 @@ console.profileEnd();
     <summary type="html">
     
       &lt;h3 id=&quot;前提&quot;&gt;&lt;a href=&quot;#前提&quot; class=&quot;headerlink&quot; title=&quot;前提&quot;&gt;&lt;/a&gt;前提&lt;/h3&gt;&lt;p&gt;没有特殊声明下，基本都是以chrome为例&lt;/p&gt;
-&lt;h2 id=&quot;概述console&quot;&gt;&lt;a href=&quot;#概述console&quot; class=&quot;headerlink&quot; title=&quot;概述console&quot;&gt;&lt;/a&gt;概述console&lt;/h2&gt;&lt;p&gt;大家平常写console最多的就是用来打印信息，console.log(obj or str)，&lt;br&gt;但console能干的事可比这多了，比如console可以自定义打印字符的css样式，&lt;br&gt;console.trace()踪函数的调用轨迹，&lt;br&gt;计时功能console.time()；性能分析console.profile等。。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;让我们来console.log(console)看看&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;http://od6ri688q.bkt.clouddn.com/consoleQQ%E6%88%AA%E5%9B%BE20160908200956.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;概述console&quot;&gt;&lt;a href=&quot;#概述console&quot; class=&quot;headerlink&quot; title=&quot;概述console&quot;&gt;&lt;/a&gt;概述console&lt;/h2&gt;&lt;p&gt;大家平常写console最多的就是用来打印信息，console.log(obj or str)，&lt;br&gt;但console能干的事可比这多了，比如console可以自定义打印字符的css样式，&lt;br&gt;console.trace()踪函数的调用轨迹，&lt;br&gt;计时功能console.time()；性能分析console.profile等。。。&lt;br&gt;
     
     </summary>
     
