@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhaoy875.github.io/"/>
-  <updated>2016-09-07T09:27:49.370Z</updated>
+  <updated>2016-09-08T10:18:37.110Z</updated>
   <id>http://zhaoy875.github.io/</id>
   
   <author>
@@ -16,20 +16,45 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>git常用命令</title>
-    <link href="http://zhaoy875.github.io/2016/09/07/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>http://zhaoy875.github.io/2016/09/07/git常用命令/</id>
-    <published>2016-09-07T07:16:43.000Z</published>
-    <updated>2016-09-07T09:27:49.370Z</updated>
+    <title></title>
+    <link href="http://zhaoy875.github.io/2016/09/08/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3hexo%E4%B8%BB%E9%A2%98/"/>
+    <id>http://zhaoy875.github.io/2016/09/08/深入了解hexo主题/</id>
+    <published>2016-09-08T10:17:32.533Z</published>
+    <updated>2016-09-08T10:18:37.110Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="git示意图"><a href="#git示意图" class="headerlink" title="git示意图"></a>git示意图</h2><p>！<a href="git_articlex.png">图解git</a><br><a id="more"></a></p>
-<p>git常用命令行</p>
-<p>！<a href="Git常用命令.jpg">git命令</a></p>
+    <content type="html"><![CDATA[<h1 id="深入hexo主题"><a href="#深入hexo主题" class="headerlink" title="深入hexo主题"></a>深入hexo主题</h1><h2 id="准备自制hexo主题"><a href="#准备自制hexo主题" class="headerlink" title="准备自制hexo主题"></a>准备自制hexo主题</h2><p>  所需相关技术：<br>   默认你已经掌握了解基本的html5 css3 javascript</p>
+<ul>
+<li>你还需要了解一些JS模板引擎（ejs ,jade,swig等）</li>
+<li>css预编译语言如less/sass styl样式模板</li>
+<li>基于nodejs的前端自动化gulp、webpack，bowel等构建工具的使用</li>
+<li>模块化开发的思想</li>
+</ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;git示意图&quot;&gt;&lt;a href=&quot;#git示意图&quot; class=&quot;headerlink&quot; title=&quot;git示意图&quot;&gt;&lt;/a&gt;git示意图&lt;/h2&gt;&lt;p&gt;！&lt;a href=&quot;git_articlex.png&quot;&gt;图解git&lt;/a&gt;&lt;br&gt;
+      &lt;h1 id=&quot;深入hexo主题&quot;&gt;&lt;a href=&quot;#深入hexo主题&quot; class=&quot;headerlink&quot; title=&quot;深入hexo主题&quot;&gt;&lt;/a&gt;深入hexo主题&lt;/h1&gt;&lt;h2 id=&quot;准备自制hexo主题&quot;&gt;&lt;a href=&quot;#准备自制hexo主题&quot; class=&quot;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>git常用命令</title>
+    <link href="http://zhaoy875.github.io/2016/09/07/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://zhaoy875.github.io/2016/09/07/git常用命令/</id>
+    <published>2016-09-07T07:16:43.000Z</published>
+    <updated>2016-09-08T14:17:48.029Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="git示意图"><a href="#git示意图" class="headerlink" title="git示意图"></a>git示意图</h2><p><img src="http://od6ri688q.bkt.clouddn.com/git_articlex.png" alt="图解git"><br><a id="more"></a></p>
+<p>git常用命令行</p>
+<p><img src="http://od6ri688q.bkt.clouddn.com/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.jpg" alt="git命令"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;git示意图&quot;&gt;&lt;a href=&quot;#git示意图&quot; class=&quot;headerlink&quot; title=&quot;git示意图&quot;&gt;&lt;/a&gt;git示意图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://od6ri688q.bkt.clouddn.com/git_articlex.png&quot; alt=&quot;图解git&quot;&gt;&lt;br&gt;
     
     </summary>
     
@@ -249,11 +274,13 @@
     <link href="http://zhaoy875.github.io/2015/09/06/console%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/"/>
     <id>http://zhaoy875.github.io/2015/09/06/console高级用法/</id>
     <published>2015-09-06T15:06:24.000Z</published>
-    <updated>2016-09-07T09:27:52.997Z</updated>
+    <updated>2016-09-08T14:17:11.194Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="概述console"><a href="#概述console" class="headerlink" title="概述console"></a>概述console</h2><p>大家平常写console最多的就是用来打印信息，console.log(obj or str)，console可以自定义打印字符的css样式，<br>console.trace()踪函数的调用轨迹，<br>计时功能console.time()；性能分析console.profile等。。</p>
+    <content type="html"><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>没有特殊声明下，基本都是以chrome为例</p>
+<h2 id="概述console"><a href="#概述console" class="headerlink" title="概述console"></a>概述console</h2><p>大家平常写console最多的就是用来打印信息，console.log(obj or str)，<br>但console能干的事可比这多了，比如console可以自定义打印字符的css样式，<br>console.trace()踪函数的调用轨迹，<br>计时功能console.time()；性能分析console.profile等。。</p>
+<p><strong>让我们来console.log(console)看看</strong><br><img src="http://od6ri688q.bkt.clouddn.com/consoleQQ%E6%88%AA%E5%9B%BE20160908200956.png" alt=""></p>
 <a id="more"></a>
-<h2 id="console高级用法"><a href="#console高级用法" class="headerlink" title="console高级用法"></a>console高级用法</h2><pre><code>console.log()
+<h2 id="console打印类型"><a href="#console打印类型" class="headerlink" title="console打印类型"></a>console打印类型</h2><pre><code>console.log(&quot;str or obj&quot;)
 console.info(&quot;这是info&quot;);
 console.debug(&quot;这是debug&quot;);
 console.warn(&quot;这是warn&quot;);
@@ -263,10 +290,18 @@ console.error(&quot;这是error&quot;);
 console.log(&quot;圆周率是%f&quot;,3.1415926);
 console.warn(&quot;圆周率是%f&quot;,3.1415926);
 </code></pre><h3 id="分组group"><a href="#分组group" class="headerlink" title="分组group"></a>分组group</h3><pre><code>console.group(&quot;第一组信息&quot;);
-console.log(&quot;第一组第一条&quot;);
-console.log(&quot;第一组第二条&quot;);
+console.log(&quot; 第一条&quot;);
+console.log(&quot; 第二条&quot;);
+console.log(&quot; 第三条&quot;);
+console.log(&quot; 第四条&quot;);
 console.groupEnd();
-</code></pre><h3 id="console-dir"><a href="#console-dir" class="headerlink" title="console.dir()"></a>console.dir()</h3><p>console.dir()可以显示一个对象所有的属性和方法</p>
+console.group(&quot;第2组信息&quot;);
+console.log(&quot; 第1条&quot;);
+console.log(&quot; 第2条&quot;);
+console.log(&quot; 第3条&quot;);
+console.groupEnd();
+</code></pre><p><img src="http://od6ri688q.bkt.clouddn.com/console.groupQQ%E6%88%AA%E5%9B%BE20160908205931.png" alt="console.group"></p>
+<h3 id="console-dir"><a href="#console-dir" class="headerlink" title="console.dir()"></a>console.dir()</h3><p>console.dir()可以显示一个对象所有的属性和方法</p>
 <pre><code>console.dir(obj);
 </code></pre><h3 id="console-dirxml-用来显示网页的某个节点（node）所包含的节点html-xml代码。"><a href="#console-dirxml-用来显示网页的某个节点（node）所包含的节点html-xml代码。" class="headerlink" title="console.dirxml()用来显示网页的某个节点（node）所包含的节点html/xml代码。"></a>console.dirxml()用来显示网页的某个节点（node）所包含的节点html/xml代码。</h3><pre><code>var div= document.getElementById(&quot;foot&quot;);
 console.dirxml(div);
@@ -323,7 +358,9 @@ console.profileEnd();
     
     <summary type="html">
     
-      &lt;h2 id=&quot;概述console&quot;&gt;&lt;a href=&quot;#概述console&quot; class=&quot;headerlink&quot; title=&quot;概述console&quot;&gt;&lt;/a&gt;概述console&lt;/h2&gt;&lt;p&gt;大家平常写console最多的就是用来打印信息，console.log(obj or str)，console可以自定义打印字符的css样式，&lt;br&gt;console.trace()踪函数的调用轨迹，&lt;br&gt;计时功能console.time()；性能分析console.profile等。。&lt;/p&gt;
+      &lt;h3 id=&quot;前提&quot;&gt;&lt;a href=&quot;#前提&quot; class=&quot;headerlink&quot; title=&quot;前提&quot;&gt;&lt;/a&gt;前提&lt;/h3&gt;&lt;p&gt;没有特殊声明下，基本都是以chrome为例&lt;/p&gt;
+&lt;h2 id=&quot;概述console&quot;&gt;&lt;a href=&quot;#概述console&quot; class=&quot;headerlink&quot; title=&quot;概述console&quot;&gt;&lt;/a&gt;概述console&lt;/h2&gt;&lt;p&gt;大家平常写console最多的就是用来打印信息，console.log(obj or str)，&lt;br&gt;但console能干的事可比这多了，比如console可以自定义打印字符的css样式，&lt;br&gt;console.trace()踪函数的调用轨迹，&lt;br&gt;计时功能console.time()；性能分析console.profile等。。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;让我们来console.log(console)看看&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;http://od6ri688q.bkt.clouddn.com/consoleQQ%E6%88%AA%E5%9B%BE20160908200956.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
     
     </summary>
     

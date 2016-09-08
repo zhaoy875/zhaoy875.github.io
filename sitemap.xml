@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zhaoy875.github.io/2016/09/07/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    
+    <lastmod>2016-09-08T14:17:48.029Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhaoy875.github.io/2015/09/06/console%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</loc>
+    
+    <lastmod>2016-09-08T14:17:11.194Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhaoy875.github.io/2016/09/08/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3hexo%E4%B8%BB%E9%A2%98/</loc>
+    
+    <lastmod>2016-09-08T10:18:37.110Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zhaoy875.github.io/2016/09/06/%E6%94%B6%E8%97%8F%E7%BD%91%E5%9D%80/</loc>
     
     <lastmod>2016-09-08T05:12:11.958Z</lastmod>
@@ -26,20 +47,6 @@
     <loc>http://zhaoy875.github.io/tags/index.html</loc>
     
     <lastmod>2016-09-08T04:43:39.426Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhaoy875.github.io/2015/09/06/console%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</loc>
-    
-    <lastmod>2016-09-07T09:27:52.997Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhaoy875.github.io/2016/09/07/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-    
-    <lastmod>2016-09-07T09:27:49.370Z</lastmod>
     
   </url>
   
