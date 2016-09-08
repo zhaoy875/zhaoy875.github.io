@@ -50,7 +50,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Hexo,Github-Pages,Blog,SSH," />
 
 
 
@@ -68,15 +68,16 @@
 
 
 
-<meta name="description" content="zhaoy的前端开发学习站点，前端开发，前端框架,bootstrap,前端自动化，前端 frontend，Javascript,css3,js,node.js,canvas, gulp,webpack,amd ,cmd,react, react native,angular,vue,vue.js">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhaoy">
-<meta property="og:url" content="http://zhaoy875.github.io/tags/Gitlab/index.html">
+<meta name="description" content="前言hexo 使用自带的hexo-deploy-git插件实现自动部署到远程remote时，repository仓库链接使用ssh要比使用https快，也可以避免每次都要登录输入密码的步骤">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用SSH免密简化Hexo deploy部署">
+<meta property="og:url" content="http://zhaoy875.github.io/2016/09/05/hexo-deploy-blog-use-ssh-link/index.html">
 <meta property="og:site_name" content="zhaoy">
-<meta property="og:description" content="zhaoy的前端开发学习站点，前端开发，前端框架,bootstrap,前端自动化，前端 frontend，Javascript,css3,js,node.js,canvas, gulp,webpack,amd ,cmd,react, react native,angular,vue,vue.js">
+<meta property="og:description" content="前言hexo 使用自带的hexo-deploy-git插件实现自动部署到远程remote时，repository仓库链接使用ssh要比使用https快，也可以避免每次都要登录输入密码的步骤">
+<meta property="og:updated_time" content="2016-09-08T15:58:19.008Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhaoy">
-<meta name="twitter:description" content="zhaoy的前端开发学习站点，前端开发，前端框架,bootstrap,前端自动化，前端 frontend，Javascript,css3,js,node.js,canvas, gulp,webpack,amd ,cmd,react, react native,angular,vue,vue.js">
+<meta name="twitter:title" content="使用SSH免密简化Hexo deploy部署">
+<meta name="twitter:description" content="前言hexo 使用自带的hexo-deploy-git插件实现自动部署到远程remote时，repository仓库链接使用ssh要比使用https快，也可以避免每次都要登录输入密码的步骤">
 
 
 
@@ -88,7 +89,7 @@
     fancybox: false,
     motion: true,
     duoshuo: {
-      userId: zhaoy875,
+      userId: 'zhaoy875',
       author: '(╯‵□′)╯︵┻━┻'
     }
   };
@@ -97,9 +98,9 @@
 
 
 
-  <link rel="canonical" href="http://zhaoy875.github.io/tags/Gitlab/"/>
+  <link rel="canonical" href="http://zhaoy875.github.io/2016/09/05/hexo-deploy-blog-use-ssh-link/"/>
 
-  <title> 标签: Gitlab | zhaoy </title>
+  <title> 使用SSH免密简化Hexo deploy部署 | zhaoy </title>
   
   <meta name="baidu-site-verification" content="k0UgqisIfE" />
 </head>
@@ -198,7 +199,7 @@
 
 
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -296,49 +297,207 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        Gitlab
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                使用SSH免密简化Hexo deploy部署
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-05T14:40:16+08:00" content="2016-09-05">
+              2016-09-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/博客/" itemprop="url" rel="index">
+                    <span itemprop="name">博客</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/05/hexo-deploy-blog-use-ssh-link/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/05/hexo-deploy-blog-use-ssh-link/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>hexo 使用自带的hexo-deploy-git插件实现自动部署到远程remote时，repository仓库链接使用ssh要比使用https快，也可以避免每次都要登录输入密码的步骤</p>
+<a id="more"></a>
+<h1 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h1><h2 id="修改站点配置-config-yml文件里面的deploy配置"><a href="#修改站点配置-config-yml文件里面的deploy配置" class="headerlink" title="修改站点配置 _config.yml文件里面的deploy配置"></a>修改站点配置 _config.yml文件里面的deploy配置</h2><pre><code>deploy:
+  type: git
+  repository: git@github.com:zhaoy875/zhaoy875.github.io.git  
+</code></pre><h2 id="列出已存在的SSH-Key"><a href="#列出已存在的SSH-Key" class="headerlink" title="列出已存在的SSH Key"></a>列出已存在的SSH Key</h2><p>打开Git Bash，并且输入：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ls</span> -<span class="keyword">al</span> ~/.ssh</div></pre></td></tr></table></figure></p>
+<p>这个命令会列出你<code>.ssh</code>账户中已经存在的SSH key，如果之前没有设置过，一般都是没有。那么就需要下面的生成密钥的步骤</p>
+<h2 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h2><p>然后输入：<br><code>ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code><br>这个命令将会生成一个以你邮箱为标签的ssh key，然后bash中会显示：</p>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Generating <span class="keyword">public</span>/<span class="keyword">private</span> rsa <span class="keyword">key</span> pair.</div><div class="line">Enter file <span class="keyword">in</span> which <span class="keyword">to</span> save the <span class="keyword">key</span> (/c/Users/you/.ssh/id_rsa): [Press enter]</div></pre></td></tr></table></figure>
+<p>回车，保存密钥文件到本地<br>复制密钥粘贴到远程仓库，这里以github为例，粘贴到github ssh key</p>
+<p>这样，你本地git bash就有了一个可用的SSH key。</p>
+<h2 id="将SSH-Key添加到Github中"><a href="#将SSH-Key添加到Github中" class="headerlink" title="将SSH Key添加到Github中"></a>将SSH Key添加到Github中</h2><p>下面将这个key添加到github网站。<br>打开<a href="https://github.com/settings/ssh" target="_blank" rel="external">https://github.com/settings/ssh</a>，点击<code>Add SSH Key</code>，复制<code>id_rsa.pub</code>中的所有内容到<code>Key</code>框中，在<code>Title</code>框中输入方便自己记忆的名字（建议输入能让自己明白是哪台电脑的名字，方便以后管理）。<br>当网页显示添加成功后，就已经完成了全部的操作。<br>下面进行一些测试，同样是打开Git Bash，输入：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ssh</span> <span class="selector-tag">-T</span> <span class="selector-tag">git</span>@<span class="keyword">github</span>.<span class="keyword">com</span></div></pre></td></tr></table></figure></p>
+<p>bash中会显示如下字样：</p>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">The authenticity <span class="keyword">of</span> host <span class="comment">'github.com (207.97.227.239)' can't be established.</span></div><div class="line">RSA <span class="keyword">key</span> fingerprint <span class="keyword">is</span> <span class="number">16</span>:<span class="number">27</span>:ac:a5:<span class="number">76</span>:<span class="number">28</span>:<span class="number">2</span>d:<span class="number">36</span>:<span class="number">63</span>:<span class="number">1</span>b:<span class="number">56</span>:<span class="number">4</span>d:eb:df:a6:<span class="number">48.</span></div><div class="line">Are you sure you want <span class="keyword">to</span> <span class="keyword">continue</span> connecting (yes/no)?</div></pre></td></tr></table></figure>
+<p>输入yes之后，计算机会自动将<code>github.com</code>列入已知的host，然后会出现如下提示：</p>
+<figure class="highlight irpf90"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Hi username<span class="comment">! You've successfully authenticated, but GitHub does not</span></div><div class="line"><span class="keyword">provide</span> shell <span class="keyword">access</span>.</div></pre></td></tr></table></figure>
+<p>over!</p>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/04/13/gitlab-install-intro/" itemprop="url">
-              
-                <span itemprop="name">Gitlab部署和汉化以及简单运维</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-04-13T23:20:00+08:00"
-              content="2016-04-13" >
-          04-13
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+          
+            <a href="/tags/Github-Pages/" rel="tag">#Github-Pages</a>
+          
+            <a href="/tags/Blog/" rel="tag">#Blog</a>
+          
+            <a href="/tags/SSH/" rel="tag">#SSH</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/09/06/console高级用法/" rel="next" title="console你不知道的一些高级用法">
+                <i class="fa fa-chevron-left"></i> console你不知道的一些高级用法
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/06/收藏网址/" rel="prev" title="站点收藏">
+                站点收藏 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
+
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+
+      
+    </div>
   </div>
-
-  
-  
-
-
 
 
           </div>
@@ -346,6 +505,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/05/hexo-deploy-blog-use-ssh-link/"
+           data-title="使用SSH免密简化Hexo deploy部署" data-url="http://zhaoy875.github.io/2016/09/05/hexo-deploy-blog-use-ssh-link/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -377,7 +544,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -394,7 +561,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -563,6 +730,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
