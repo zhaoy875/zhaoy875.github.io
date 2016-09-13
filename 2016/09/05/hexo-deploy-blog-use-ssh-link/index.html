@@ -6,9 +6,8 @@
  / /| | | | (_| | (_) | |_| |
 /___|_| |_|\__,_|\___/ \__, |
                        |___/  
-
-  一入前端深似海
-  勤有功，戏无益。戒之哉，宜勉力。---《三字经》
+  勤有功，戏无益。戒之哉，宜勉力。--- 喝了这碗"三字汤"
+  一入前端深似海,我要掀桌了，(╯‵□′)╯ ︵┻━┻
 -->
 <!doctype html>
 
@@ -74,7 +73,7 @@
 <meta property="og:url" content="http://zhaoy875.github.io/2016/09/05/hexo-deploy-blog-use-ssh-link/index.html">
 <meta property="og:site_name" content="zhaoy">
 <meta property="og:description" content="前言hexo 使用自带的hexo-deploy-git插件实现自动部署到远程remote时，repository仓库链接使用ssh要比使用https快，也可以避免每次都要登录输入密码的步骤">
-<meta property="og:updated_time" content="2016-09-08T15:58:19.008Z">
+<meta property="og:updated_time" content="2016-09-12T14:41:51.264Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用SSH免密简化Hexo deploy部署">
 <meta name="twitter:description" content="前言hexo 使用自带的hexo-deploy-git插件实现自动部署到远程remote时，repository仓库链接使用ssh要比使用https快，也可以避免每次都要登录输入密码的步骤">
@@ -89,7 +88,7 @@
     fancybox: false,
     motion: true,
     duoshuo: {
-      userId: 'zhaoy875',
+      userId: '29d8156512c03f70255ee67893440b54',
       author: '(╯‵□′)╯︵┻━┻'
     }
   };
@@ -106,8 +105,14 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-  <!--[if lte IE 8]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://www.goody.com.cn/2014/updatebrowser/"><img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820" alt="
- 您正在使用的陈旧ie浏览器不支持，请更新浏览器以获得更好的浏览体验" style='margin-left:auto;margin-right:auto;display: block;'/></a></div> <![endif]-->
+  <!--[if lte IE 9]>
+  <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://www.goody.com.cn/2014/updatebrowser/"><img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820" alt="
+ 您正在使用的ie浏览器版本过低，为了保障您的访问安全，以及更友好的浏览体验，强烈建议您升级最新的浏览器。" style='margin-left:auto;margin-right:auto;display: block;'/></a></div> 
+  <![endif]-->
+  
+
   
   
   
@@ -129,7 +134,6 @@
   
 
   
-
 
 
 	
@@ -213,7 +217,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle"></p>
+  <p class="site-subtitle">沉迷前端日渐消瘦</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -307,7 +311,7 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
 
     
       <header class="post-header">
@@ -413,6 +417,11 @@
     <div>
       
         
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/weixinicon.png" alt="zhaoy875 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>微信扫一扫</div>
+</div>
+
 
       
     </div>
@@ -427,6 +436,7 @@
     <footer class="post-footer">
       
         <div class="post-tags">
+          Tag标签:
           
             <a href="/tags/Hexo/" rel="tag">#Hexo</a>
           
@@ -443,7 +453,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/09/06/console高级用法/" rel="next" title="console你不知道的一些高级用法">
+              <a href="/2016/09/04/console/console/" rel="next" title="console你不知道的一些高级用法">
                 <i class="fa fa-chevron-left"></i> console你不知道的一些高级用法
               </a>
             
@@ -462,6 +472,8 @@
       
       
     </footer>
+
+
   </article>
 
 
@@ -532,8 +544,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/zhaoy875_icon.jpg"
@@ -544,7 +565,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -552,7 +573,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -561,7 +582,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -612,6 +633,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#操作"><span class="nav-number">2.</span> <span class="nav-text">操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改站点配置-config-yml文件里面的deploy配置"><span class="nav-number">2.1.</span> <span class="nav-text">修改站点配置 _config.yml文件里面的deploy配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列出已存在的SSH-Key"><span class="nav-number">2.2.</span> <span class="nav-text">列出已存在的SSH Key</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成密钥"><span class="nav-number">2.3.</span> <span class="nav-text">生成密钥</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将SSH-Key添加到Github中"><span class="nav-number">2.4.</span> <span class="nav-text">将SSH Key添加到Github中</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -761,6 +793,10 @@
     })();
   </script>
 
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 

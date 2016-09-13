@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>zhaoy</title>
-  
+  <subtitle>沉迷前端日渐消瘦</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhaoy875.github.io/"/>
-  <updated>2016-09-08T14:17:48.029Z</updated>
+  <updated>2016-09-13T09:20:35.000Z</updated>
   <id>http://zhaoy875.github.io/</id>
   
   <author>
@@ -16,14 +16,201 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>中文</title>
+    <link href="http://zhaoy875.github.io/2016/09/13/md%E6%8F%92%E5%85%A5iframe/"/>
+    <id>http://zhaoy875.github.io/2016/09/13/md插入iframe/</id>
+    <published>2016-09-13T09:20:35.000Z</published>
+    <updated>2016-09-13T09:20:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="插入iframe"><a href="#插入iframe" class="headerlink" title="插入iframe"></a>插入iframe</h2><figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">iframe</span> https://www.baidu.com  100%   300px  %&#125;</span><span class="xml"></span></div></pre></td></tr></table></figure>
+<iframe src="https://www.baidu.com" width="100%" height="300px" frameborder="0" allowfullscreen></iframe>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;插入iframe&quot;&gt;&lt;a href=&quot;#插入iframe&quot; class=&quot;headerlink&quot; title=&quot;插入iframe&quot;&gt;&lt;/a&gt;插入iframe&lt;/h2&gt;&lt;figure class=&quot;highlight django&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td c
+    
+    </summary>
+    
+      <category term="categories" scheme="http://zhaoy875.github.io/categories/categories/"/>
+    
+    
+      <category term="tags" scheme="http://zhaoy875.github.io/tags/tags/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js</title>
+    <link href="http://zhaoy875.github.io/2016/09/13/js/"/>
+    <id>http://zhaoy875.github.io/2016/09/13/js/</id>
+    <published>2016-09-13T09:20:23.000Z</published>
+    <updated>2016-09-13T09:20:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>#　内容空</p>
+<p>嘎嘎嘎嘎嘎嘎嘎嘎嘎嘎嘎嘎</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#　内容空&lt;/p&gt;
+&lt;p&gt;嘎嘎嘎嘎嘎嘎嘎嘎嘎嘎嘎嘎&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="其他" scheme="http://zhaoy875.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+      <category term="js" scheme="http://zhaoy875.github.io/categories/%E5%85%B6%E4%BB%96/js/"/>
+    
+    
+      <category term="tags" scheme="http://zhaoy875.github.io/tags/tags/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://zhaoy875.github.io/2016/09/13/json%E6%96%B9%E5%BC%8F%E5%86%99md%E6%96%87%E7%AB%A0%E5%A4%B4%E9%83%A8/"/>
+    <id>http://zhaoy875.github.io/2016/09/13/json方式写md文章头部/</id>
+    <published>2016-09-12T16:16:07.159Z</published>
+    <updated>2016-09-13T09:40:49.348Z</updated>
+    
+    <content type="html"><![CDATA[<p>“title”: “add”,<br>“date”: “2016-09-13 00:16:07”<br>“tags”: “fff”<br>“categories”: “dir”<br>;;;</p>
+<h2 id="add"><a href="#add" class="headerlink" title="add"></a>add</h2><p>内容为add模块</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">"title"</span>: <span class="string">"add"</span>,</div><div class="line"><span class="string">"date"</span>: <span class="string">"2016-09-13 00:16:07"</span></div><div class="line"><span class="string">"tags"</span>: <span class="string">"fff"</span></div><div class="line"><span class="string">"categories"</span>: <span class="string">"dir"</span></div><div class="line"><span class="comment">;;;</span></div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;“title”: “add”,&lt;br&gt;“date”: “2016-09-13 00:16:07”&lt;br&gt;“tags”: “fff”&lt;br&gt;“categories”: “dir”&lt;br&gt;;;;&lt;/p&gt;
+&lt;h2 id=&quot;add&quot;&gt;&lt;a href=&quot;#add&quot; class=&quot;he
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>My Gallery</title>
+    <link href="http://zhaoy875.github.io/2016/09/13/My-Gallery/"/>
+    <id>http://zhaoy875.github.io/2016/09/13/My-Gallery/</id>
+    <published>2016-09-12T16:12:22.000Z</published>
+    <updated>2016-09-13T07:44:45.484Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="相册"><a href="#相册" class="headerlink" title="相册"></a>相册</h3><p>demo</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;相册&quot;&gt;&lt;a href=&quot;#相册&quot; class=&quot;headerlink&quot; title=&quot;相册&quot;&gt;&lt;/a&gt;相册&lt;/h3&gt;&lt;p&gt;demo&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="Diary" scheme="http://zhaoy875.github.io/categories/Diary/"/>
+    
+    
+      <category term="PS3" scheme="http://zhaoy875.github.io/tags/PS3/"/>
+    
+      <category term="Games" scheme="http://zhaoy875.github.io/tags/Games/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>提高效率-Focus,Just do one thing</title>
+    <link href="http://zhaoy875.github.io/2016/09/09/%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87-Focus-Just-do-one-thing/"/>
+    <id>http://zhaoy875.github.io/2016/09/09/提高效率-Focus-Just-do-one-thing/</id>
+    <published>2016-09-08T18:50:43.000Z</published>
+    <updated>2016-09-13T09:40:22.234Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p> 当我在学习某个知识点的时候总是容易被其他相关东西带走，一会看这个，一会看别的，结果什么都没精，没能深入，都是跑马观花</p>
+<p>迫切需要一种专注的学习方式，计算机最擅长的就是按照既定的程序去计算和执行任务，因为多线程和多核，计算机擅长多任务并行。<br>但我们不是计算机，我们的大脑需要专注，focus！<br>为了避免拖延和高效利用时间，可以尝试番茄工作法，在先预定的时间段内完成事先预定的某个任务，然后间隔时间休息，劳逸结合。<br>一个简单的番茄工作法webapp：<br><a href="http://alloyteam.github.io/AlloyTimer/" target="_blank" rel="external">http://alloyteam.github.io/AlloyTimer/</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h2&gt;&lt;p&gt; 当我在学习某个知识点的时候总是容易被其他相关东西带走，一会看这个，一会看别的，结果什么都没精，没能深入，都是跑马观花&lt;/p&gt;
+&lt;p&gt;迫切需
+    
+    </summary>
+    
+    
+      <category term="学习效率" scheme="http://zhaoy875.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%95%88%E7%8E%87/"/>
+    
+      <category term="思考" scheme="http://zhaoy875.github.io/tags/%E6%80%9D%E8%80%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为什么要使用Virtual DOM</title>
+    <link href="http://zhaoy875.github.io/2016/09/08/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8Virtual-DOM/"/>
+    <id>http://zhaoy875.github.io/2016/09/08/为什么要使用Virtual-DOM/</id>
+    <published>2016-09-08T05:30:23.000Z</published>
+    <updated>2016-09-13T09:40:46.188Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://mmbiz.qpic.cn/mmbiz_gif/Ng7bJHbt4kGIyic3jN3fK7hnGbJNIAkxdRtb9HwQCrEjfkjQq5BELBTBBQy76ia5A2wC6y02UkAObraYGlSJSg8g/0?wx_fmt=gif&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""></p>
+<h1 id="React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM"><a href="#React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM" class="headerlink" title="React中很少有人能解释清楚的问题——为什么要使用Virtual DOM"></a>React中很少有人能解释清楚的问题——为什么要使用Virtual DOM</h1><p><strong> 这也是我在思考的问题，大家都在跟风学RN ,VUE,Ag2,却很少看见有人用数据来量化实际项目应用中dom操作对性能的影响。。。</strong></p>
+<p><em>下面看到野狗微信平台的一篇文章,先介绍下文章内容再说说我的理解：</em></p>
+<p>原文链接：<a href="https://mp.weixin.qq.com/s?__biz=MzI0ODA2ODU2NQ==&amp;mid=2651130413&amp;idx=1&amp;sn=56a1cc3ac225a09982fc0c4a508222c7&amp;chksm=f257ca97c5204381b559763f4af839ab72eda009c47b0f0a4d47492852b87211c601dee8987a&amp;scene=0#rd" target="_blank" rel="external">React中一个没人能解释清楚的问题——为什么要使用Virtual DOM</a></p>
+<h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><p> 有一天，我的朋友向我提了一个有关React的问题：</p>
+<p>组件化， 单向数据绑定，这些我都懂了。但是React为什么要用Virtual DOM呢？</p>
+<p>我的回答非常套路，“因为直接操作DOM比较低效，比较慢。”。</p>
+<p>“但是现在的js引擎总是搞个大新闻，说自己的性能比之前又要不知道高到哪里去了。既然如此，为什么还会说直接操作DOM比较慢呢？”</p>
+<p>好吧… 这确实是一个好问题。</p>
+<p>惊人的是，我找了半天，发现并没有任何一篇文章可以给出坚如磐石的证明，来完满地解释Virtual DOM的必要性。 其实，使得整个流程变得低效的，并不只有直接操作DOM，还包括了操作DOM之后发生的事情。</p>
+<p>为了能让你更好地理解Virtual DOM的必要性，我们先来个急转弯，从宏观上来看浏览器的工作流。以及，一次DOM更新后，到底会发生什么事呢？</p>
+<hr>
+<p>##浏览器工作流</p>
+<p>NOTE：在下面这张图中，配图文字使用的是Webkit引擎的术语。现代的浏览器都是遵循类似的工作流，仅在细节处略有不同。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz_png/Ng7bJHbt4kGIyic3jN3fK7hnGbJNIAkxdBlEhmHdk9xLl6M1JoAUNA52YdjhgbX7mUbg7FGjkgwd5P5cL2evQ4g/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""></p>
+<h3 id="1-创建DOM树"><a href="#1-创建DOM树" class="headerlink" title="1  创建DOM树"></a>1  创建DOM树</h3><p>一旦浏览器接收到一个HTML文件，渲染引擎（render engine）就开始解析它，并根据HTML元素（elements）一一对应地生成DOM 节点（nodes），组成一棵DOM树。</p>
+<h3 id="2-创建渲染树"><a href="#2-创建渲染树" class="headerlink" title="2   创建渲染树"></a>2   创建渲染树</h3><p>同时，浏览器也会解析来自外部CSS文件和元素上的inline样式。通常浏览器会为这些样式信息，连同包含样式信息的DOM树上的节点，再创建另外一个树，一般被称作渲染树（render tree）</p>
+<h3 id="3-创建渲染树背后的故事"><a href="#3-创建渲染树背后的故事" class="headerlink" title="3   创建渲染树背后的故事"></a>3   创建渲染树背后的故事</h3><p>WebKit内核的浏览器上，处理一个节点的样式的过程称为attachment。DOM树上的每个节点都有一个attach方法，它接收计算好的样式信息，返回一个render对象（又名renderer）</p>
+<p>Attachment的过程是同步的，新节点插入DOM树时，会调用新节点的attach方法。</p>
+<p>构建渲染树时，由于包含了这些render对象，每个render对象都需要计算视觉属性（visual properties）；这个过程通过计算每个元素的样式属性来完成。</p>
+<h3 id="4-布局-Layout"><a href="#4-布局-Layout" class="headerlink" title="4   布局 Layout"></a>4   布局 Layout</h3><p>又被简称为Reflow[2]</p>
+<p>构造了渲染树以后，浏览器引擎开始着手布局（layout）。布局时，渲染树上的每个节点根据其在屏幕上应该出现的精确位置，分配一组屏幕坐标值。</p>
+<h3 id="5-绘制-Painting"><a href="#5-绘制-Painting" class="headerlink" title="5   绘制 Painting"></a>5   绘制 Painting</h3><p>接着，浏览器将会通过遍历渲染树，调用每个节点的paint方法来绘制这些render对象。paint方法根据浏览器平台，使用不同的UI后端API（agnostic UI backend API）。 通过绘制，最终将在屏幕上展示内容。<br>再来看Virtual DOM</p>
+<p>好啦，现在你已经简单过了一遍浏览器引擎的渲染流程，你可以看到，从创建渲染树，到布局，一直到绘制，只要你在这过程中进行一次DOM更新，整个渲染流程都会重做一遍。尤其是创建渲染树，它需要重新计算所有元素上的所有样式。</p>
+<p>在一个复杂的单页面应用中，经常会涉及到大量的DOM操作，这将引起多次计算，使得整个流程变得低效，这应该尽量避免。</p>
+<p>Virtual DOM这个抽象层真正的闪光点正在于此：每当你想对视图进行一次更新，那些本该直接作用于真实DOM的改动，都会先作用于Virtual DOM，然后再将要改动的部分通知到真实DOM。这样可以大幅减少DOM操作带来的重计算步骤。</p>
+<p> Update: Reddit上的 ugwe43to874nf4 对Virtual DOM的重要性做了更客观的评价。</p>
+<blockquote>
+<p>DOM 操作 真正的问题在于每次操作都会触发布局的改变、DOM树的修改和渲染。所以，当你一个接一个地去修改30个节点的时候，就会引起30次（潜在的）布局重算，30次（潜在的）重绘，等等。<br>Virtual DOM 实际上没有使用什么全新的技术，仅仅是把 “ 双缓冲（double buffering）” 技术应用到了DOM上面。 这样一来，当你在这个单独的虚拟的DOM树上也一个接一个地修改30个节点的时候，它不会每次都去触发重绘，所以修改节点的开销就变小了。 之后，一旦你要把这些改动传递给真实DOM，之前所有的改动就会整合成一次DOM操作。这一次DOM操作引起的布局计算和重绘可能会更大，但是相比而言，整合起来的改动只做一次，减少了（多次）计算。<br>不过，实际上不借助Virtual DOM也可以做到这一点。你可以自己手动地整合所有的DOM操作到一个DOM 碎片（DOM fragment） 里，然后再传递给DOM树。</p>
+<p>既然如此，我们再来看看Virtual DOM到底解决了什么问题。 首先，它把管理DOM碎片这件事情自动化、抽象化了，使得你无需再去手动处理。另外，当你要手动去做这件事情的时候，你还得记得哪些部分变化了，哪些部分没变，毕竟之后重绘时，DOM树上的大量细节你都不需要重新刷新。这时候Virtual DOM的自动化对你来说就非常有用了，如果它的实现是正确的，那么它就会知道到底哪些地方应该需要刷新，哪些地方不要。</p>
+<p>最后，Virtual DOM通过各种组件和你写的一些代码来请求对它进行操作，而不是直接对它本身进行操作，使你不必非要跟Virtual DOM交互，也不必非要去了解Virtual DOM修改DOM树的原理，也就不用再想着去修改DOM了。（译注：对开发者来说，Virtual DOM几乎是完全透明的）。这样你就不用在 修改DOM 和 整合DOM操作为一次 之间做同步处理了。</p>
+</blockquote>
+<h3 id="进一步阅读"><a href="#进一步阅读" class="headerlink" title="进一步阅读"></a>进一步阅读</h3><p>以上关于浏览器工作流的内容摘录自这篇文档中关于浏览器内部行为的章节。这篇文章还深入解释了浏览器引擎的hood部分的一切细节。毋庸置疑，这篇文章值得你花时间从头到尾好好读一遍。它会帮你很好地理解为什么我们需要Virtual DOM这样一个额外的抽象层</p>
+<p>原文：<br><a href="http://www.zcfy.cc/article/the-one-thing-that-no-one-properly-explains-about-react-why-virtual-dom-hashnode-1211.html" target="_blank" rel="external">http://www.zcfy.cc/article/the-one-thing-that-no-one-properly-explains-about-react-why-virtual-dom-hashnode-1211.html</a></p>
+<h2 id="我的理解"><a href="#我的理解" class="headerlink" title="我的理解"></a>我的理解</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://mmbiz.qpic.cn/mmbiz_gif/Ng7bJHbt4kGIyic3jN3fK7hnGbJNIAkxdRtb9HwQCrEjfkjQq5BELBTBBQy76ia5A2wC6y02UkAObraYGlSJSg8g/0?wx_fm
+    
+    </summary>
+    
+      <category term="前端框架" scheme="http://zhaoy875.github.io/categories/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="框架" scheme="http://zhaoy875.github.io/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="react" scheme="http://zhaoy875.github.io/tags/react/"/>
+    
+      <category term="virtualDom" scheme="http://zhaoy875.github.io/tags/virtualDom/"/>
+    
+  </entry>
+  
+  <entry>
     <title>git常用命令</title>
     <link href="http://zhaoy875.github.io/2016/09/07/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>http://zhaoy875.github.io/2016/09/07/git常用命令/</id>
     <published>2016-09-07T07:16:43.000Z</published>
-    <updated>2016-09-08T14:17:48.029Z</updated>
+    <updated>2016-09-12T16:13:04.033Z</updated>
     
     <content type="html"><![CDATA[<h2 id="git示意图"><a href="#git示意图" class="headerlink" title="git示意图"></a>git示意图</h2><p><img src="http://od6ri688q.bkt.clouddn.com/git_articlex.png" alt="图解git"><br><a id="more"></a></p>
-<p>git常用命令行</p>
+<blockquote>
+<p>参考<a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="external">http://www.bootcss.com/p/git-guide/</a></p>
+</blockquote>
+<h2 id="附录git命令图"><a href="#附录git命令图" class="headerlink" title="附录git命令图"></a>附录git命令图</h2><p>git常用命令行</p>
 <p><img src="http://od6ri688q.bkt.clouddn.com/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.jpg" alt="git命令"></p>
 ]]></content>
     
@@ -33,6 +220,12 @@
     
     </summary>
     
+      <category term="git" scheme="http://zhaoy875.github.io/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://zhaoy875.github.io/tags/git/"/>
+    
+      <category term="github" scheme="http://zhaoy875.github.io/tags/github/"/>
     
   </entry>
   
@@ -41,7 +234,7 @@
     <link href="http://zhaoy875.github.io/2016/09/06/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3hexo%E4%B8%BB%E9%A2%98/"/>
     <id>http://zhaoy875.github.io/2016/09/06/深入了解hexo主题/</id>
     <published>2016-09-06T15:26:24.000Z</published>
-    <updated>2016-09-08T15:58:12.275Z</updated>
+    <updated>2016-09-12T14:42:35.570Z</updated>
     
     <content type="html"><![CDATA[<h1 id="深入hexo主题"><a href="#深入hexo主题" class="headerlink" title="深入hexo主题"></a>深入hexo主题</h1><h2 id="准备自制hexo主题"><a href="#准备自制hexo主题" class="headerlink" title="准备自制hexo主题"></a>准备自制hexo主题</h2><p>  所需相关技术：<br>   默认你已经掌握了解基本的html5 css3 javascript</p>
 <ul>
@@ -64,6 +257,8 @@
     
     </summary>
     
+      <category term="博客主题" scheme="http://zhaoy875.github.io/categories/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"/>
+    
     
       <category term="javascript" scheme="http://zhaoy875.github.io/tags/javascript/"/>
     
@@ -74,7 +269,7 @@
     <link href="http://zhaoy875.github.io/2016/09/06/%E6%94%B6%E8%97%8F%E7%BD%91%E5%9D%80/"/>
     <id>http://zhaoy875.github.io/2016/09/06/收藏网址/</id>
     <published>2016-09-06T14:16:12.000Z</published>
-    <updated>2016-09-08T15:58:26.014Z</updated>
+    <updated>2016-09-12T14:43:31.053Z</updated>
     
     <content type="html"><![CDATA[<h1 id="个人站点收藏夹"><a href="#个人站点收藏夹" class="headerlink" title="个人站点收藏夹"></a>个人站点收藏夹</h1><!-- 我的前端学习工作 -->
 <h2 id="每日必逛系列"><a href="#每日必逛系列" class="headerlink" title="每日必逛系列"></a>每日必逛系列</h2><ul>
@@ -129,7 +324,7 @@
     <link href="http://zhaoy875.github.io/2016/09/05/hexo-deploy-blog-use-ssh-link/"/>
     <id>http://zhaoy875.github.io/2016/09/05/hexo-deploy-blog-use-ssh-link/</id>
     <published>2016-09-05T06:40:16.000Z</published>
-    <updated>2016-09-08T15:58:19.008Z</updated>
+    <updated>2016-09-12T14:41:51.264Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>hexo 使用自带的hexo-deploy-git插件实现自动部署到远程remote时，repository仓库链接使用ssh要比使用https快，也可以避免每次都要登录输入密码的步骤</p>
 <a id="more"></a>
@@ -171,10 +366,10 @@
   
   <entry>
     <title>console你不知道的一些高级用法</title>
-    <link href="http://zhaoy875.github.io/2015/09/06/console%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/"/>
-    <id>http://zhaoy875.github.io/2015/09/06/console高级用法/</id>
-    <published>2015-09-06T15:06:24.000Z</published>
-    <updated>2016-09-08T16:03:25.892Z</updated>
+    <link href="http://zhaoy875.github.io/2016/09/04/console/console/"/>
+    <id>http://zhaoy875.github.io/2016/09/04/console/console/</id>
+    <published>2016-09-04T15:06:24.000Z</published>
+    <updated>2016-09-12T14:39:03.044Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>没有特殊声明下，基本都是以chrome为例</p>
 <h2 id="概述console"><a href="#概述console" class="headerlink" title="概述console"></a>概述console</h2><p>大家平常写console最多的就是用来打印信息，console.log(obj or str)，<br>但console能干的事可比这多了，比如console可以自定义打印字符的css样式，<br>console.trace()踪函数的调用轨迹，<br>计时功能console.time()；性能分析console.profile等。。。<br><a id="more"></a><br><strong>让我们来console.log(console)看看</strong><br><img src="http://od6ri688q.bkt.clouddn.com/consoleQQ%E6%88%AA%E5%9B%BE20160908200956.png" alt=""></p>
@@ -263,6 +458,41 @@ console.profileEnd();
     
     
       <category term="javascript" scheme="http://zhaoy875.github.io/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>客户端使用less</title>
+    <link href="http://zhaoy875.github.io/2016/01/07/%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8less/"/>
+    <id>http://zhaoy875.github.io/2016/01/07/客户端使用less/</id>
+    <published>2016-01-07T11:16:43.000Z</published>
+    <updated>2016-09-13T07:38:49.877Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="在客户端使用less"><a href="#在客户端使用less" class="headerlink" title="在客户端使用less"></a>在客户端使用less</h2><h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><p>引入你的 .less 样式文件的时候要设置 rel 属性值为 “stylesheet/less”:</p>
+<pre><code>&lt;link rel=&quot;stylesheet/less&quot; type=&quot;text/css&quot; href=&quot;styles.less&quot;&gt;
+</code></pre><p>然后点击页面顶部download按钮下载 less.js, 在<head> 中引入:</head></p>
+<pre><code>&lt;script src=&quot;less.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+</code></pre><p>注意你的less样式文件一定要在引入less.js前先引入。</p>
+<blockquote>
+<p>备注：请在服务器环境下使用！本地直接打开可能会报错！推荐使用anywhere这款npm i anywhere -g</p>
+</blockquote>
+<h3 id="监视模式"><a href="#监视模式" class="headerlink" title="监视模式"></a>监视模式</h3><p>监视模式是客户端的一个功能，这个功能允许你当你改变样式的时候，客户端将自动刷新。<br>开发阶段可以不使用browsersync或liveload</p>
+<p>要使用它，只要在URL后面加上’#!watch’，然后刷新页面就可以了。<br>另外，你也可以通过在终端运行less.watch()来启动监视模式。</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;less.watch();&lt;/script&gt;
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;在客户端使用less&quot;&gt;&lt;a href=&quot;#在客户端使用less&quot; class=&quot;headerlink&quot; title=&quot;在客户端使用less&quot;&gt;&lt;/a&gt;在客户端使用less&lt;/h2&gt;&lt;h3 id=&quot;引入&quot;&gt;&lt;a href=&quot;#引入&quot; class=&quot;headerli
+    
+    </summary>
+    
+      <category term="sass/less" scheme="http://zhaoy875.github.io/categories/sass-less/"/>
+    
+    
+      <category term="git" scheme="http://zhaoy875.github.io/tags/git/"/>
+    
+      <category term="github" scheme="http://zhaoy875.github.io/tags/github/"/>
     
   </entry>
   

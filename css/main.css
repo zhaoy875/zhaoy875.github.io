@@ -1318,7 +1318,7 @@ pre .javascript .function {
 }
 .posts-expand .post-tags {
   margin-top: 40px;
-  text-align: center;
+  text-align: left;
 }
 .posts-expand .post-tags a {
   display: inline-block;
@@ -1341,13 +1341,18 @@ pre .javascript .function {
   position: relative;
   display: inline-block;
   line-height: 25px;
-  font-size: 14px;
+  font-size: 16px;
   color: #555;
   border-bottom: none;
+  background: rgba(252,148,96,0.7);
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.5s;
 }
 .post-nav-item a:hover {
-  color: #222;
   border-bottom: none;
+  background: #fc9460;
 }
 .post-nav-item a:active {
   top: 2px;
@@ -1550,7 +1555,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e8ff5c;
+  background: #b5ffd2;
 }
 .links-of-blogroll {
   font-size: 13px;

@@ -1,0 +1,35 @@
+<p><img src="http://mmbiz.qpic.cn/mmbiz_gif/Ng7bJHbt4kGIyic3jN3fK7hnGbJNIAkxdRtb9HwQCrEjfkjQq5BELBTBBQy76ia5A2wC6y02UkAObraYGlSJSg8g/0?wx_fmt=gif&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""></p>
+<h1 id="React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM"><a href="#React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM" class="headerlink" title="React中很少有人能解释清楚的问题——为什么要使用Virtual DOM"></a>React中很少有人能解释清楚的问题——为什么要使用Virtual DOM</h1><p><strong> 这也是我在思考的问题，大家都在跟风学RN ,VUE,Ag2,却很少看见有人用数据来量化实际项目应用中dom操作对性能的影响。。。</strong></p>
+<p><em>下面看到野狗微信平台的一篇文章,先介绍下文章内容再说说我的理解：</em></p>
+<p>原文链接：<a href="https://mp.weixin.qq.com/s?__biz=MzI0ODA2ODU2NQ==&amp;mid=2651130413&amp;idx=1&amp;sn=56a1cc3ac225a09982fc0c4a508222c7&amp;chksm=f257ca97c5204381b559763f4af839ab72eda009c47b0f0a4d47492852b87211c601dee8987a&amp;scene=0#rd" target="_blank" rel="external">React中一个没人能解释清楚的问题——为什么要使用Virtual DOM</a></p>
+<h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><p> 有一天，我的朋友向我提了一个有关React的问题：</p>
+<p>组件化， 单向数据绑定，这些我都懂了。但是React为什么要用Virtual DOM呢？</p>
+<p>我的回答非常套路，“因为直接操作DOM比较低效，比较慢。”。</p>
+<p>“但是现在的js引擎总是搞个大新闻，说自己的性能比之前又要不知道高到哪里去了。既然如此，为什么还会说直接操作DOM比较慢呢？”</p>
+<p>好吧… 这确实是一个好问题。</p>
+<p>惊人的是，我找了半天，发现并没有任何一篇文章可以给出坚如磐石的证明，来完满地解释Virtual DOM的必要性。 其实，使得整个流程变得低效的，并不只有直接操作DOM，还包括了操作DOM之后发生的事情。</p>
+<p>为了能让你更好地理解Virtual DOM的必要性，我们先来个急转弯，从宏观上来看浏览器的工作流。以及，一次DOM更新后，到底会发生什么事呢？</p>
+<hr>
+<p>##浏览器工作流</p>
+<p>NOTE：在下面这张图中，配图文字使用的是Webkit引擎的术语。现代的浏览器都是遵循类似的工作流，仅在细节处略有不同。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz_png/Ng7bJHbt4kGIyic3jN3fK7hnGbJNIAkxdBlEhmHdk9xLl6M1JoAUNA52YdjhgbX7mUbg7FGjkgwd5P5cL2evQ4g/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""></p>
+<h3 id="1-创建DOM树"><a href="#1-创建DOM树" class="headerlink" title="1  创建DOM树"></a>1  创建DOM树</h3><p>一旦浏览器接收到一个HTML文件，渲染引擎（render engine）就开始解析它，并根据HTML元素（elements）一一对应地生成DOM 节点（nodes），组成一棵DOM树。</p>
+<h3 id="2-创建渲染树"><a href="#2-创建渲染树" class="headerlink" title="2   创建渲染树"></a>2   创建渲染树</h3><p>同时，浏览器也会解析来自外部CSS文件和元素上的inline样式。通常浏览器会为这些样式信息，连同包含样式信息的DOM树上的节点，再创建另外一个树，一般被称作渲染树（render tree）</p>
+<h3 id="3-创建渲染树背后的故事"><a href="#3-创建渲染树背后的故事" class="headerlink" title="3   创建渲染树背后的故事"></a>3   创建渲染树背后的故事</h3><p>WebKit内核的浏览器上，处理一个节点的样式的过程称为attachment。DOM树上的每个节点都有一个attach方法，它接收计算好的样式信息，返回一个render对象（又名renderer）</p>
+<p>Attachment的过程是同步的，新节点插入DOM树时，会调用新节点的attach方法。</p>
+<p>构建渲染树时，由于包含了这些render对象，每个render对象都需要计算视觉属性（visual properties）；这个过程通过计算每个元素的样式属性来完成。</p>
+<h3 id="4-布局-Layout"><a href="#4-布局-Layout" class="headerlink" title="4   布局 Layout"></a>4   布局 Layout</h3><p>又被简称为Reflow[2]</p>
+<p>构造了渲染树以后，浏览器引擎开始着手布局（layout）。布局时，渲染树上的每个节点根据其在屏幕上应该出现的精确位置，分配一组屏幕坐标值。</p>
+<h3 id="5-绘制-Painting"><a href="#5-绘制-Painting" class="headerlink" title="5   绘制 Painting"></a>5   绘制 Painting</h3><p>接着，浏览器将会通过遍历渲染树，调用每个节点的paint方法来绘制这些render对象。paint方法根据浏览器平台，使用不同的UI后端API（agnostic UI backend API）。 通过绘制，最终将在屏幕上展示内容。<br>再来看Virtual DOM</p>
+<p>好啦，现在你已经简单过了一遍浏览器引擎的渲染流程，你可以看到，从创建渲染树，到布局，一直到绘制，只要你在这过程中进行一次DOM更新，整个渲染流程都会重做一遍。尤其是创建渲染树，它需要重新计算所有元素上的所有样式。</p>
+<p>在一个复杂的单页面应用中，经常会涉及到大量的DOM操作，这将引起多次计算，使得整个流程变得低效，这应该尽量避免。</p>
+<p>Virtual DOM这个抽象层真正的闪光点正在于此：每当你想对视图进行一次更新，那些本该直接作用于真实DOM的改动，都会先作用于Virtual DOM，然后再将要改动的部分通知到真实DOM。这样可以大幅减少DOM操作带来的重计算步骤。</p>
+<p> Update: Reddit上的 ugwe43to874nf4 对Virtual DOM的重要性做了更客观的评价。</p>
+<blockquote>
+<p>DOM 操作 真正的问题在于每次操作都会触发布局的改变、DOM树的修改和渲染。所以，当你一个接一个地去修改30个节点的时候，就会引起30次（潜在的）布局重算，30次（潜在的）重绘，等等。<br>Virtual DOM 实际上没有使用什么全新的技术，仅仅是把 “ 双缓冲（double buffering）” 技术应用到了DOM上面。 这样一来，当你在这个单独的虚拟的DOM树上也一个接一个地修改30个节点的时候，它不会每次都去触发重绘，所以修改节点的开销就变小了。 之后，一旦你要把这些改动传递给真实DOM，之前所有的改动就会整合成一次DOM操作。这一次DOM操作引起的布局计算和重绘可能会更大，但是相比而言，整合起来的改动只做一次，减少了（多次）计算。<br>不过，实际上不借助Virtual DOM也可以做到这一点。你可以自己手动地整合所有的DOM操作到一个DOM 碎片（DOM fragment） 里，然后再传递给DOM树。</p>
+<p>既然如此，我们再来看看Virtual DOM到底解决了什么问题。 首先，它把管理DOM碎片这件事情自动化、抽象化了，使得你无需再去手动处理。另外，当你要手动去做这件事情的时候，你还得记得哪些部分变化了，哪些部分没变，毕竟之后重绘时，DOM树上的大量细节你都不需要重新刷新。这时候Virtual DOM的自动化对你来说就非常有用了，如果它的实现是正确的，那么它就会知道到底哪些地方应该需要刷新，哪些地方不要。</p>
+<p>最后，Virtual DOM通过各种组件和你写的一些代码来请求对它进行操作，而不是直接对它本身进行操作，使你不必非要跟Virtual DOM交互，也不必非要去了解Virtual DOM修改DOM树的原理，也就不用再想着去修改DOM了。（译注：对开发者来说，Virtual DOM几乎是完全透明的）。这样你就不用在 修改DOM 和 整合DOM操作为一次 之间做同步处理了。</p>
+</blockquote>
+<h3 id="进一步阅读"><a href="#进一步阅读" class="headerlink" title="进一步阅读"></a>进一步阅读</h3><p>以上关于浏览器工作流的内容摘录自这篇文档中关于浏览器内部行为的章节。这篇文章还深入解释了浏览器引擎的hood部分的一切细节。毋庸置疑，这篇文章值得你花时间从头到尾好好读一遍。它会帮你很好地理解为什么我们需要Virtual DOM这样一个额外的抽象层</p>
+<p>原文：<br><a href="http://www.zcfy.cc/article/the-one-thing-that-no-one-properly-explains-about-react-why-virtual-dom-hashnode-1211.html" target="_blank" rel="external">http://www.zcfy.cc/article/the-one-thing-that-no-one-properly-explains-about-react-why-virtual-dom-hashnode-1211.html</a></p>
+<h2 id="我的理解"><a href="#我的理解" class="headerlink" title="我的理解"></a>我的理解</h2>
