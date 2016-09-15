@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>zhaoy</title>
-  <subtitle>沉迷前端日渐消瘦</subtitle>
+  <subtitle>一入前端深似海</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhaoy875.github.io/"/>
-  <updated>2016-09-13T09:20:35.000Z</updated>
+  <updated>2016-09-13T09:20:23.000Z</updated>
   <id>http://zhaoy875.github.io/</id>
   
   <author>
@@ -16,110 +16,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>中文</title>
-    <link href="http://zhaoy875.github.io/2016/09/13/md%E6%8F%92%E5%85%A5iframe/"/>
-    <id>http://zhaoy875.github.io/2016/09/13/md插入iframe/</id>
-    <published>2016-09-13T09:20:35.000Z</published>
-    <updated>2016-09-13T09:20:35.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="插入iframe"><a href="#插入iframe" class="headerlink" title="插入iframe"></a>插入iframe</h2><figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">iframe</span> https://www.baidu.com  100%   300px  %&#125;</span><span class="xml"></span></div></pre></td></tr></table></figure>
-<iframe src="https://www.baidu.com" width="100%" height="300px" frameborder="0" allowfullscreen></iframe>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;插入iframe&quot;&gt;&lt;a href=&quot;#插入iframe&quot; class=&quot;headerlink&quot; title=&quot;插入iframe&quot;&gt;&lt;/a&gt;插入iframe&lt;/h2&gt;&lt;figure class=&quot;highlight django&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td c
-    
-    </summary>
-    
-      <category term="categories" scheme="http://zhaoy875.github.io/categories/categories/"/>
-    
-    
-      <category term="tags" scheme="http://zhaoy875.github.io/tags/tags/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js</title>
+    <title>Js</title>
     <link href="http://zhaoy875.github.io/2016/09/13/js/"/>
     <id>http://zhaoy875.github.io/2016/09/13/js/</id>
     <published>2016-09-13T09:20:23.000Z</published>
     <updated>2016-09-13T09:20:23.000Z</updated>
     
     <content type="html"><![CDATA[<p>#　内容空</p>
-<p>嘎嘎嘎嘎嘎嘎嘎嘎嘎嘎嘎嘎</p>
+<h2 id="插入iframe"><a href="#插入iframe" class="headerlink" title="插入iframe"></a>插入iframe</h2><figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">iframe</span> https://www.baidu.com  100%   300px  %&#125;</span><span class="xml"></span></div></pre></td></tr></table></figure>
+<iframe src="https://www.baidu.com" width="100%" height="300px" frameborder="0" allowfullscreen></iframe>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;#　内容空&lt;/p&gt;
-&lt;p&gt;嘎嘎嘎嘎嘎嘎嘎嘎嘎嘎嘎嘎&lt;/p&gt;
-
-    
-    </summary>
-    
-      <category term="其他" scheme="http://zhaoy875.github.io/categories/%E5%85%B6%E4%BB%96/"/>
-    
-      <category term="js" scheme="http://zhaoy875.github.io/categories/%E5%85%B6%E4%BB%96/js/"/>
-    
-    
-      <category term="tags" scheme="http://zhaoy875.github.io/tags/tags/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://zhaoy875.github.io/2016/09/13/json%E6%96%B9%E5%BC%8F%E5%86%99md%E6%96%87%E7%AB%A0%E5%A4%B4%E9%83%A8/"/>
-    <id>http://zhaoy875.github.io/2016/09/13/json方式写md文章头部/</id>
-    <published>2016-09-12T16:16:07.159Z</published>
-    <updated>2016-09-13T09:40:49.348Z</updated>
-    
-    <content type="html"><![CDATA[<p>“title”: “add”,<br>“date”: “2016-09-13 00:16:07”<br>“tags”: “fff”<br>“categories”: “dir”<br>;;;</p>
-<h2 id="add"><a href="#add" class="headerlink" title="add"></a>add</h2><p>内容为add模块</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">"title"</span>: <span class="string">"add"</span>,</div><div class="line"><span class="string">"date"</span>: <span class="string">"2016-09-13 00:16:07"</span></div><div class="line"><span class="string">"tags"</span>: <span class="string">"fff"</span></div><div class="line"><span class="string">"categories"</span>: <span class="string">"dir"</span></div><div class="line"><span class="comment">;;;</span></div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;“title”: “add”,&lt;br&gt;“date”: “2016-09-13 00:16:07”&lt;br&gt;“tags”: “fff”&lt;br&gt;“categories”: “dir”&lt;br&gt;;;;&lt;/p&gt;
-&lt;h2 id=&quot;add&quot;&gt;&lt;a href=&quot;#add&quot; class=&quot;he
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>My Gallery</title>
-    <link href="http://zhaoy875.github.io/2016/09/13/My-Gallery/"/>
-    <id>http://zhaoy875.github.io/2016/09/13/My-Gallery/</id>
-    <published>2016-09-12T16:12:22.000Z</published>
-    <updated>2016-09-13T07:44:45.484Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="相册"><a href="#相册" class="headerlink" title="相册"></a>相册</h3><p>demo</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;相册&quot;&gt;&lt;a href=&quot;#相册&quot; class=&quot;headerlink&quot; title=&quot;相册&quot;&gt;&lt;/a&gt;相册&lt;/h3&gt;&lt;p&gt;demo&lt;/p&gt;
-
+&lt;h2 id=&quot;插入iframe&quot;&gt;&lt;a href=&quot;#插入iframe&quot; class=&quot;headerlink&quot; title=&quot;插入iframe&quot;&gt;&lt;/a&gt;插入iframe&lt;/h2&gt;&lt;figure class=&quot;highlight django&quot;&gt;&lt;ta
     
     </summary>
     
       <category term="Diary" scheme="http://zhaoy875.github.io/categories/Diary/"/>
     
     
-      <category term="PS3" scheme="http://zhaoy875.github.io/tags/PS3/"/>
+      <category term="其他" scheme="http://zhaoy875.github.io/tags/%E5%85%B6%E4%BB%96/"/>
     
-      <category term="Games" scheme="http://zhaoy875.github.io/tags/Games/"/>
+      <category term="js" scheme="http://zhaoy875.github.io/tags/js/"/>
     
   </entry>
   
   <entry>
-    <title>提高效率-Focus,Just do one thing</title>
+    <title>提高效率-Focus,Just Do One Thing</title>
     <link href="http://zhaoy875.github.io/2016/09/09/%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87-Focus-Just-do-one-thing/"/>
     <id>http://zhaoy875.github.io/2016/09/09/提高效率-Focus-Just-do-one-thing/</id>
     <published>2016-09-08T18:50:43.000Z</published>
-    <updated>2016-09-13T09:40:22.234Z</updated>
+    <updated>2016-09-15T14:13:44.565Z</updated>
     
     <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p> 当我在学习某个知识点的时候总是容易被其他相关东西带走，一会看这个，一会看别的，结果什么都没精，没能深入，都是跑马观花</p>
 <p>迫切需要一种专注的学习方式，计算机最擅长的就是按照既定的程序去计算和执行任务，因为多线程和多核，计算机擅长多任务并行。<br>但我们不是计算机，我们的大脑需要专注，focus！<br>为了避免拖延和高效利用时间，可以尝试番茄工作法，在先预定的时间段内完成事先预定的某个任务，然后间隔时间休息，劳逸结合。<br>一个简单的番茄工作法webapp：<br><a href="http://alloyteam.github.io/AlloyTimer/" target="_blank" rel="external">http://alloyteam.github.io/AlloyTimer/</a></p>
@@ -200,7 +129,7 @@
   </entry>
   
   <entry>
-    <title>git常用命令</title>
+    <title>Git常用命令</title>
     <link href="http://zhaoy875.github.io/2016/09/07/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>http://zhaoy875.github.io/2016/09/07/git常用命令/</id>
     <published>2016-09-07T07:16:43.000Z</published>
@@ -230,7 +159,7 @@
   </entry>
   
   <entry>
-    <title>深入hexo主题</title>
+    <title>深入Hexo主题</title>
     <link href="http://zhaoy875.github.io/2016/09/06/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3hexo%E4%B8%BB%E9%A2%98/"/>
     <id>http://zhaoy875.github.io/2016/09/06/深入了解hexo主题/</id>
     <published>2016-09-06T15:26:24.000Z</published>
@@ -320,7 +249,7 @@
   </entry>
   
   <entry>
-    <title>使用SSH免密简化Hexo deploy部署</title>
+    <title>使用SSH免密简化Hexo Deploy部署</title>
     <link href="http://zhaoy875.github.io/2016/09/05/hexo-deploy-blog-use-ssh-link/"/>
     <id>http://zhaoy875.github.io/2016/09/05/hexo-deploy-blog-use-ssh-link/</id>
     <published>2016-09-05T06:40:16.000Z</published>
@@ -365,11 +294,11 @@
   </entry>
   
   <entry>
-    <title>console你不知道的一些高级用法</title>
-    <link href="http://zhaoy875.github.io/2016/09/04/console/console/"/>
-    <id>http://zhaoy875.github.io/2016/09/04/console/console/</id>
+    <title>Console你不知道的一些高级用法</title>
+    <link href="http://zhaoy875.github.io/2016/09/04/console-console/"/>
+    <id>http://zhaoy875.github.io/2016/09/04/console-console/</id>
     <published>2016-09-04T15:06:24.000Z</published>
-    <updated>2016-09-12T14:39:03.044Z</updated>
+    <updated>2016-09-15T14:15:03.237Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>没有特殊声明下，基本都是以chrome为例</p>
 <h2 id="概述console"><a href="#概述console" class="headerlink" title="概述console"></a>概述console</h2><p>大家平常写console最多的就是用来打印信息，console.log(obj or str)，<br>但console能干的事可比这多了，比如console可以自定义打印字符的css样式，<br>console.trace()踪函数的调用轨迹，<br>计时功能console.time()；性能分析console.profile等。。。<br><a id="more"></a><br><strong>让我们来console.log(console)看看</strong><br><img src="http://od6ri688q.bkt.clouddn.com/consoleQQ%E6%88%AA%E5%9B%BE20160908200956.png" alt=""></p>
@@ -462,11 +391,11 @@ console.profileEnd();
   </entry>
   
   <entry>
-    <title>客户端使用less</title>
+    <title>客户端使用Less</title>
     <link href="http://zhaoy875.github.io/2016/01/07/%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8less/"/>
     <id>http://zhaoy875.github.io/2016/01/07/客户端使用less/</id>
     <published>2016-01-07T11:16:43.000Z</published>
-    <updated>2016-09-13T07:38:49.877Z</updated>
+    <updated>2016-09-15T14:13:49.994Z</updated>
     
     <content type="html"><![CDATA[<h2 id="在客户端使用less"><a href="#在客户端使用less" class="headerlink" title="在客户端使用less"></a>在客户端使用less</h2><h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><p>引入你的 .less 样式文件的时候要设置 rel 属性值为 “stylesheet/less”:</p>
 <pre><code>&lt;link rel=&quot;stylesheet/less&quot; type=&quot;text/css&quot; href=&quot;styles.less&quot;&gt;
@@ -487,7 +416,7 @@ console.profileEnd();
     
     </summary>
     
-      <category term="sass/less" scheme="http://zhaoy875.github.io/categories/sass-less/"/>
+      <category term="css预处理器" scheme="http://zhaoy875.github.io/categories/css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/"/>
     
     
       <category term="git" scheme="http://zhaoy875.github.io/tags/git/"/>
