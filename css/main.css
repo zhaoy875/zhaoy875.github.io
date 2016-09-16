@@ -1670,7 +1670,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1ca138;
+  background: #ffff4d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2130,11 +2130,12 @@ a.search-result {
 .popoverlay {
   position: fixed;
   width: 100%;
+  box-sizing: border-box;
   height: 100%;
   top: 0px;
   left: 0px;
   z-index: 2080;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.4);
 }
 #local-search-input {
   margin-bottom: 10px;
@@ -2340,7 +2341,7 @@ body {
   box-sizing: border-box;
   padding: 40px;
   width: 700px;
-  background: rgba(255,255,255,0.85);
+  background: #fff;
   min-height: 700px;
 }
 @media (min-width: 768px) and (max-width: 991px) {

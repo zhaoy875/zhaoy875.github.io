@@ -943,6 +943,7 @@ v2ex">
     function proceedsearch() {
       $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
       $('.popup').toggle();
+      //toggle方法jq从1.9版本删除了?
 
     }
     // search function;
@@ -1037,7 +1038,7 @@ v2ex">
         }
     });}
 
-    // handle and trigger popup window;
+    // handle and trigger popup window;搜一下按钮点击弹窗
     $('.popup-trigger').click(function(e) {
       e.stopPropagation();
       if (isfetched == false) {
@@ -1050,8 +1051,9 @@ v2ex">
 
     // 关闭搜索
     $('.popup-btn-close').click(function(e){
+        // 此处修改为fade渐隐而不是show hide
       $('.popup').fadeOut('slow');
-      // 遮罩层
+      // 修改遮罩层
       $(".popoverlay").remove();
       $('body').css('overflow', '');
     });
