@@ -1439,15 +1439,25 @@ pre .javascript .function {
   display: inline-block;
   margin: 0.8em 2em 0 2em;
 }
-#wechat:hover p {
-  animation: roll 0.1s infinite linear;
-  -webkit-animation: roll 0.1s infinite linear;
-  -moz-animation: roll 0.1s infinite linear;
+#wechat11:hover p {
+  animation: roll 2s infinite linear alternate;
+  -webkit-animation: roll 2s infinite linear alternate;
+  -moz-animation: roll 2s infinite linear alternate;
 }
+#alipay11:hover p {
+  animation: roll 0.1s infinite linear alternate;
+  -webkit-animation: roll 2s infinite linear alternate;
+  -moz-animation: roll 2s infinite linear alternate;
+}
+#wechat:hover p,
 #alipay:hover p {
-  animation: roll 0.1s infinite linear;
-  -webkit-animation: roll 0.1s infinite linear;
-  -moz-animation: roll 0.1s infinite linear;
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  transform: scale(1.25);
+  color: #333;
+  transition: all 0.3s;
 }
 @-moz-keyframes roll {
   from {
@@ -1670,7 +1680,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #7cffbb;
+  background: #69f109;
 }
 .links-of-blogroll {
   font-size: 13px;
