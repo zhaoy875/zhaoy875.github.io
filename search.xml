@@ -14,10 +14,10 @@
     <entry>
       <title><![CDATA[为什么要使用Virtual DOM]]></title>
       <url>https://zhaoy875.github.io/2016/09/08/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8Virtual-DOM/</url>
-      <content type="html"><![CDATA[<p><img src="http://mmbiz.qpic.cn/mmbiz_gif/Ng7bJHbt4kGIyic3jN3fK7hnGbJNIAkxdRtb9HwQCrEjfkjQq5BELBTBBQy76ia5A2wC6y02UkAObraYGlSJSg8g/0?wx_fmt=gif&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="http://od6ri688q.bkt.clouddn.com/VirtualDOM.gif" alt=""></p>
 <h1 id="React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM"><a href="#React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM" class="headerlink" title="React中很少有人能解释清楚的问题——为什么要使用Virtual DOM"></a>React中很少有人能解释清楚的问题——为什么要使用Virtual DOM</h1><p>  这也是我在思考的问题，大家都在跟风学RN ,VUE,Ag2,却很少看见有人用数据来量化实际项目应用中dom操作对性能的影响 </p>
 <p> 下面看到野狗微信平台的一篇文章,先介绍下文章内容再说说我的理解： </p>
-<p>原文链接：<a href="https://mp.weixin.qq.com/s?__biz=MzI0ODA2ODU2NQ==&amp;mid=2651130413&amp;idx=1&amp;sn=56a1cc3ac225a09982fc0c4a508222c7&amp;chksm=f257ca97c5204381b559763f4af839ab72eda009c47b0f0a4d47492852b87211c601dee8987a&amp;scene=0#rd" target="_blank" rel="external">React中一个没人能解释清楚的问题——为什么要使用Virtual DOM</a></p>
+<p>原文链接：<a href="http://mp.weixin.qq.com/s?__biz=MzI0ODA2ODU2NQ==&amp;mid=2651130413&amp;idx=1&amp;sn=56a1cc3ac225a09982fc0c4a508222c7" target="_blank" rel="external">React中一个没人能解释清楚的问题——为什么要使用Virtual DOM</a></p>
 <h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><p> 有一天，我的朋友向我提了一个有关React的问题：</p>
 <p>组件化， 单向数据绑定，这些我都懂了。但是React为什么要用Virtual DOM呢？</p>
 <p>我的回答非常套路，“因为直接操作DOM比较低效，比较慢。”。</p>
@@ -28,7 +28,7 @@
 <hr>
 <p>##浏览器工作流</p>
 <p>NOTE：在下面这张图中，配图文字使用的是Webkit引擎的术语。现代的浏览器都是遵循类似的工作流，仅在细节处略有不同。</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz_png/Ng7bJHbt4kGIyic3jN3fK7hnGbJNIAkxdBlEhmHdk9xLl6M1JoAUNA52YdjhgbX7mUbg7FGjkgwd5P5cL2evQ4g/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""></p>
+<p><img src="http://od6ri688q.bkt.clouddn.com/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%A7%A3%E6%9E%90%E5%9B%BE.png" alt=""></p>
 <h3 id="1-创建DOM树"><a href="#1-创建DOM树" class="headerlink" title="1  创建DOM树"></a>1  创建DOM树</h3><p>一旦浏览器接收到一个HTML文件，渲染引擎（render engine）就开始解析它，并根据HTML元素（elements）一一对应地生成DOM 节点（nodes），组成一棵DOM树。</p>
 <h3 id="2-创建渲染树"><a href="#2-创建渲染树" class="headerlink" title="2   创建渲染树"></a>2   创建渲染树</h3><p>同时，浏览器也会解析来自外部CSS文件和元素上的inline样式。通常浏览器会为这些样式信息，连同包含样式信息的DOM树上的节点，再创建另外一个树，一般被称作渲染树（render tree）</p>
 <h3 id="3-创建渲染树背后的故事"><a href="#3-创建渲染树背后的故事" class="headerlink" title="3   创建渲染树背后的故事"></a>3   创建渲染树背后的故事</h3><p>WebKit内核的浏览器上，处理一个节点的样式的过程称为attachment。DOM树上的每个节点都有一个attach方法，它接收计算好的样式信息，返回一个render对象（又名renderer）</p>
