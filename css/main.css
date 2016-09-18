@@ -1670,7 +1670,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff47a7;
+  background: #ffd5ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2095,8 +2095,10 @@ a.search-result {
   text-overflow: ellipsis;
 }
 .search-keyword {
-  border-bottom: 1px dashed #4088b8;
   font-weight: bold;
+  background: #d83908;
+  color: #fff;
+  padding: 0 2px;
 }
 #local-search-result {
   height: 90%;
@@ -2115,6 +2117,7 @@ a.search-result {
   color: #333;
   z-index: 9999;
   border-radius: 5px;
+  box-shadow: 1px 1px 10px 0px #d6e0e0;
 }
 @media (max-width: 767px) {
   .popup {
@@ -2130,7 +2133,6 @@ a.search-result {
 .popoverlay {
   position: fixed;
   width: 100%;
-  box-sizing: border-box;
   height: 100%;
   top: 0px;
   left: 0px;
@@ -2655,5 +2657,5 @@ body {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   background-color: #555;
-  background-image: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#555), to(#555), color-stop(0.5, #fff));
+  background-image: -webkit-gradient(linear, 0% 100%, 0% 0%, from(#555), to(#555), color-stop(0.5, #b6b6b6));
 }

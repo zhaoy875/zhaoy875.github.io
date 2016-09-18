@@ -57,7 +57,7 @@
 概述console大家平常写console最多的就是用来打印信息，console.log(obj or str)，但console能干的事可比这多了，比如console可以自定义打印字符的css样式，console.trace()踪函数的调用轨迹，计时功能console.time()；性能分析console.profile等。。。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Console你不知道的一些高级用法">
-<meta property="og:url" content="http://zhaoy875.github.io/2016/09/04/console-console/index.html">
+<meta property="og:url" content="https://zhaoy875.github.io/2016/09/04/console-console/index.html">
 <meta property="og:site_name" content="zhaoy">
 <meta property="og:description" content="前提没有特殊声明下，基本都是以chrome为例
 概述console大家平常写console最多的就是用来打印信息，console.log(obj or str)，但console能干的事可比这多了，比如console可以自定义打印字符的css样式，console.trace()踪函数的调用轨迹，计时功能console.time()；性能分析console.profile等。。。">
@@ -87,7 +87,7 @@
 
 
 
-  <link rel="canonical" href="http://zhaoy875.github.io/2016/09/04/console-console/"/>
+  <link rel="canonical" href="https://zhaoy875.github.io/2016/09/04/console-console/"/>
 
   <title> Console你不知道的一些高级用法 | zhaoy </title>
   
@@ -130,7 +130,6 @@
   
   
   
-
   
 
 
@@ -606,7 +605,7 @@ console.profileEnd();
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/09/04/console-console/"
-           data-title="Console你不知道的一些高级用法" data-url="http://zhaoy875.github.io/2016/09/04/console-console/">
+           data-title="Console你不知道的一些高级用法" data-url="https://zhaoy875.github.io/2016/09/04/console-console/">
       </div>
     
   </div>
@@ -651,7 +650,7 @@ console.profileEnd();
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -659,7 +658,7 @@ console.profileEnd();
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -668,7 +667,7 @@ console.profileEnd();
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -803,21 +802,24 @@ console.profileEnd();
   &copy; 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    
+    <i class="menu-item-icon fa fa-fw fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">zhaoy875</span>
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 驱动
+   <a class="theme-link" href="https://hexo.io">Hexo</a> 驱动
 </div>
 
 <div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
+ 
+  Theme by <a class="theme-link" href="https://github.com/zhaoy875/hexo-theme-zhaoy">zhaoy</a> based on Next
+  
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">Next</a>
 </div>
+
+
 
         
 
@@ -950,6 +952,9 @@ console.profileEnd();
 
 
 
+
+<div class="popoverlay" style="display:none"></div>
+
   <script type="text/javascript">
     // Popup Window;
     var isfetched = false;
@@ -961,8 +966,13 @@ console.profileEnd();
     var path = "/" + search_path;
     // monitor main search box;
 
+// 修改 弹窗时造成网站右边侧栏消失和出现时的背景页面布局重绘的抖动 
     function proceedsearch() {
-      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+        // 作者这里标签忘记闭合了？
+      // $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+
+      // 将上一行dom操作改为css操作 .popoverlay遮罩层样式在localsearch.styl中
+      $(".popoverlay").fadeIn('fast');
       $('.popup').toggle();
       //toggle方法jq从1.9版本删除了?
 
@@ -1073,10 +1083,13 @@ console.profileEnd();
     // 关闭搜索
     $('.popup-btn-close').click(function(e){
         // 此处修改为fade渐隐而不是show hide
-      $('.popup').fadeOut('slow');
-      // 修改遮罩层
-      $(".popoverlay").remove();
-      $('body').css('overflow', '');
+      $('.popup').fadeOut('fast');
+      // 将此处的dom操作改为样式操作
+      // $(".popoverlay").remove();
+      $(".popoverlay").fadeOut();
+
+      // 修改 弹窗时造成网站右边侧栏消失和出现时的背景页面布局重绘的抖动 
+      // $('body').css('overflow', '');
     });
     $('.popup').click(function(e){
       e.stopPropagation();
@@ -1088,6 +1101,12 @@ console.profileEnd();
 
   
 
+  
+
+  
+  
+  
+    <script type="text/javascript" src="/js/zhaoy.js"></script> 
   
   
 </div>

@@ -56,7 +56,7 @@
 <meta name="description" content="zhaoy的前端开发学习站点，前端开发，前端框架,bootstrap,前端自动化，前端 frontend，Javascript,css3,js,node.js,canvas, gulp,webpack,amd ,cmd,react, react native,angular,vue,vue.js">
 <meta property="og:type" content="website">
 <meta property="og:title" content="zhaoy">
-<meta property="og:url" content="http://zhaoy875.github.io/archives/2016/09/index.html">
+<meta property="og:url" content="https://zhaoy875.github.io/archives/2016/09/index.html">
 <meta property="og:site_name" content="zhaoy">
 <meta property="og:description" content="zhaoy的前端开发学习站点，前端开发，前端框架,bootstrap,前端自动化，前端 frontend，Javascript,css3,js,node.js,canvas, gulp,webpack,amd ,cmd,react, react native,angular,vue,vue.js">
 <meta name="twitter:card" content="summary">
@@ -80,7 +80,7 @@
 
 
 
-  <link rel="canonical" href="http://zhaoy875.github.io/archives/2016/09/"/>
+  <link rel="canonical" href="https://zhaoy875.github.io/archives/2016/09/"/>
 
   <title> 归档 | zhaoy </title>
   
@@ -123,7 +123,6 @@
   
   
   
-
   
 
 
@@ -334,7 +333,7 @@
       
         
       
-      嗯..! 目前共计 9 篇日志。 继续努力。
+      嗯..! 目前共计 8 篇日志。 继续努力。
     </span>
 
     
@@ -348,43 +347,6 @@
         <div class="collection-title">
           <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
         </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/13/js/" itemprop="url">
-              
-                <span itemprop="name">Js</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-13T17:20:23+08:00"
-              content="2016-09-13" >
-          09-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
       
       
 
@@ -684,7 +646,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -692,7 +654,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -701,7 +663,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -825,21 +787,24 @@
   &copy; 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    
+    <i class="menu-item-icon fa fa-fw fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">zhaoy875</span>
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 驱动
+   <a class="theme-link" href="https://hexo.io">Hexo</a> 驱动
 </div>
 
 <div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
+ 
+  Theme by <a class="theme-link" href="https://github.com/zhaoy875/hexo-theme-zhaoy">zhaoy</a> based on Next
+  
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">Next</a>
 </div>
+
+
 
         
 
@@ -974,6 +939,9 @@
 
 
 
+
+<div class="popoverlay" style="display:none"></div>
+
   <script type="text/javascript">
     // Popup Window;
     var isfetched = false;
@@ -985,8 +953,13 @@
     var path = "/" + search_path;
     // monitor main search box;
 
+// 修改 弹窗时造成网站右边侧栏消失和出现时的背景页面布局重绘的抖动 
     function proceedsearch() {
-      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+        // 作者这里标签忘记闭合了？
+      // $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+
+      // 将上一行dom操作改为css操作 .popoverlay遮罩层样式在localsearch.styl中
+      $(".popoverlay").fadeIn('fast');
       $('.popup').toggle();
       //toggle方法jq从1.9版本删除了?
 
@@ -1097,10 +1070,13 @@
     // 关闭搜索
     $('.popup-btn-close').click(function(e){
         // 此处修改为fade渐隐而不是show hide
-      $('.popup').fadeOut('slow');
-      // 修改遮罩层
-      $(".popoverlay").remove();
-      $('body').css('overflow', '');
+      $('.popup').fadeOut('fast');
+      // 将此处的dom操作改为样式操作
+      // $(".popoverlay").remove();
+      $(".popoverlay").fadeOut();
+
+      // 修改 弹窗时造成网站右边侧栏消失和出现时的背景页面布局重绘的抖动 
+      // $('body').css('overflow', '');
     });
     $('.popup').click(function(e){
       e.stopPropagation();
@@ -1112,6 +1088,12 @@
 
   
 
+  
+
+  
+  
+  
+    <script type="text/javascript" src="/js/zhaoy.js"></script> 
   
   
 </div>

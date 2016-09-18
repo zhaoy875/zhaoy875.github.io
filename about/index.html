@@ -43,6 +43,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="zhaoy" type="application/atom+xml" />
 
@@ -56,7 +58,7 @@
 <meta name="description" content="这个作者暂时很忙没时间写，还没想好写什么what ?  裤子都脱了你给我看这个？掀桌  (╯‵□′)╯︵┻━┻">
 <meta property="og:type" content="website">
 <meta property="og:title" content="zhaoy">
-<meta property="og:url" content="http://zhaoy875.github.io/about/index.html">
+<meta property="og:url" content="https://zhaoy875.github.io/about/index.html">
 <meta property="og:site_name" content="zhaoy">
 <meta property="og:description" content="这个作者暂时很忙没时间写，还没想好写什么what ?  裤子都脱了你给我看这个？掀桌  (╯‵□′)╯︵┻━┻">
 <meta property="og:updated_time" content="2016-09-08T16:10:57.188Z">
@@ -81,7 +83,7 @@
 
 
 
-  <link rel="canonical" href="http://zhaoy875.github.io/about/"/>
+  <link rel="canonical" href="https://zhaoy875.github.io/about/"/>
 
   <title>
   
@@ -130,7 +132,6 @@
   
   
   
-
   
 
 
@@ -349,7 +350,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="about/index.html"
-           data-title="" data-url="http://zhaoy875.github.io/about/index.html">
+           data-title="" data-url="https://zhaoy875.github.io/about/index.html">
       </div>
     
   </div>
@@ -385,7 +386,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -393,7 +394,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -402,7 +403,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -526,21 +527,24 @@
   &copy; 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    
+    <i class="menu-item-icon fa fa-fw fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">zhaoy875</span>
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 驱动
+   <a class="theme-link" href="https://hexo.io">Hexo</a> 驱动
 </div>
 
 <div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
+ 
+  Theme by <a class="theme-link" href="https://github.com/zhaoy875/hexo-theme-zhaoy">zhaoy</a> based on Next
+  
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">Next</a>
 </div>
+
+
 
         
 
@@ -669,6 +673,9 @@
 
 
 
+
+<div class="popoverlay" style="display:none"></div>
+
   <script type="text/javascript">
     // Popup Window;
     var isfetched = false;
@@ -680,8 +687,13 @@
     var path = "/" + search_path;
     // monitor main search box;
 
+// 修改 弹窗时造成网站右边侧栏消失和出现时的背景页面布局重绘的抖动 
     function proceedsearch() {
-      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+        // 作者这里标签忘记闭合了？
+      // $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+
+      // 将上一行dom操作改为css操作 .popoverlay遮罩层样式在localsearch.styl中
+      $(".popoverlay").fadeIn('fast');
       $('.popup').toggle();
       //toggle方法jq从1.9版本删除了?
 
@@ -792,10 +804,13 @@
     // 关闭搜索
     $('.popup-btn-close').click(function(e){
         // 此处修改为fade渐隐而不是show hide
-      $('.popup').fadeOut('slow');
-      // 修改遮罩层
-      $(".popoverlay").remove();
-      $('body').css('overflow', '');
+      $('.popup').fadeOut('fast');
+      // 将此处的dom操作改为样式操作
+      // $(".popoverlay").remove();
+      $(".popoverlay").fadeOut();
+
+      // 修改 弹窗时造成网站右边侧栏消失和出现时的背景页面布局重绘的抖动 
+      // $('body').css('overflow', '');
     });
     $('.popup').click(function(e){
       e.stopPropagation();
@@ -807,6 +822,12 @@
 
   
 
+  
+
+  
+  
+  
+    <script type="text/javascript" src="/js/zhaoy.js"></script> 
   
   
 </div>

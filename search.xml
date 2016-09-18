@@ -4,17 +4,8 @@
   
     
     <entry>
-      <title><![CDATA[Js]]></title>
-      <url>http://zhaoy875.github.io/2016/09/13/js/</url>
-      <content type="html"><![CDATA[<p>#　内容空</p>
-<h2 id="插入iframe"><a href="#插入iframe" class="headerlink" title="插入iframe"></a>插入iframe</h2><figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">iframe</span> https://www.baidu.com  100%   300px  %&#125;</span><span class="xml"></span></div></pre></td></tr></table></figure>
-<iframe src="https://www.baidu.com" width="100%" height="300px" frameborder="0" allowfullscreen></iframe>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[提高效率-Focus,Just Do One Thing]]></title>
-      <url>http://zhaoy875.github.io/2016/09/09/%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87-Focus-Just-do-one-thing/</url>
+      <url>https://zhaoy875.github.io/2016/09/09/%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87-Focus-Just-do-one-thing/</url>
       <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p> 当我在学习某个知识点的时候总是容易被其他相关东西带走，一会看这个，一会看别的，结果什么都没精，没能深入，都是跑马观花</p>
 <p>迫切需要一种专注的学习方式，计算机最擅长的就是按照既定的程序去计算和执行任务，因为多线程和多核，计算机擅长多任务并行。<br>但我们不是计算机，我们的大脑需要专注，focus！<br>为了避免拖延和高效利用时间，可以尝试番茄工作法，在先预定的时间段内完成事先预定的某个任务，然后间隔时间休息，劳逸结合。<br>一个简单的番茄工作法webapp：<br><a href="http://alloyteam.github.io/AlloyTimer/" target="_blank" rel="external">http://alloyteam.github.io/AlloyTimer/</a></p>
 ]]></content>
@@ -22,7 +13,7 @@
     
     <entry>
       <title><![CDATA[为什么要使用Virtual DOM]]></title>
-      <url>http://zhaoy875.github.io/2016/09/08/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8Virtual-DOM/</url>
+      <url>https://zhaoy875.github.io/2016/09/08/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8Virtual-DOM/</url>
       <content type="html"><![CDATA[<p><img src="http://mmbiz.qpic.cn/mmbiz_gif/Ng7bJHbt4kGIyic3jN3fK7hnGbJNIAkxdRtb9HwQCrEjfkjQq5BELBTBBQy76ia5A2wC6y02UkAObraYGlSJSg8g/0?wx_fmt=gif&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""></p>
 <h1 id="React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM"><a href="#React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM" class="headerlink" title="React中很少有人能解释清楚的问题——为什么要使用Virtual DOM"></a>React中很少有人能解释清楚的问题——为什么要使用Virtual DOM</h1><p><strong> 这也是我在思考的问题，大家都在跟风学RN ,VUE,Ag2,却很少看见有人用数据来量化实际项目应用中dom操作对性能的影响。。。</strong></p>
 <p><em>下面看到野狗微信平台的一篇文章,先介绍下文章内容再说说我的理解：</em></p>
@@ -62,7 +53,7 @@
     
     <entry>
       <title><![CDATA[Git常用命令]]></title>
-      <url>http://zhaoy875.github.io/2016/09/07/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+      <url>https://zhaoy875.github.io/2016/09/07/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
       <content type="html"><![CDATA[<h2 id="git示意图"><a href="#git示意图" class="headerlink" title="git示意图"></a>git示意图</h2><p><img src="http://od6ri688q.bkt.clouddn.com/git_articlex.png" alt="图解git"><br><a id="more"></a></p>
 <blockquote>
 <p>参考<a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="external">http://www.bootcss.com/p/git-guide/</a></p>
@@ -74,7 +65,7 @@
     
     <entry>
       <title><![CDATA[深入Hexo主题]]></title>
-      <url>http://zhaoy875.github.io/2016/09/06/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3hexo%E4%B8%BB%E9%A2%98/</url>
+      <url>https://zhaoy875.github.io/2016/09/06/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3hexo%E4%B8%BB%E9%A2%98/</url>
       <content type="html"><![CDATA[<h1 id="深入hexo主题"><a href="#深入hexo主题" class="headerlink" title="深入hexo主题"></a>深入hexo主题</h1><h2 id="准备自制hexo主题"><a href="#准备自制hexo主题" class="headerlink" title="准备自制hexo主题"></a>准备自制hexo主题</h2><p>  所需相关技术：<br>   默认你已经掌握了解基本的html5 css3 javascript</p>
 <ul>
 <li>你还需要了解一些JS模板引擎（ejs ,jade,swig等）</li>
@@ -88,7 +79,7 @@
     
     <entry>
       <title><![CDATA[站点收藏]]></title>
-      <url>http://zhaoy875.github.io/2016/09/06/%E6%94%B6%E8%97%8F%E7%BD%91%E5%9D%80/</url>
+      <url>https://zhaoy875.github.io/2016/09/06/%E6%94%B6%E8%97%8F%E7%BD%91%E5%9D%80/</url>
       <content type="html"><![CDATA[<h1 id="个人站点收藏夹"><a href="#个人站点收藏夹" class="headerlink" title="个人站点收藏夹"></a>个人站点收藏夹</h1><!-- 我的前端学习工作 -->
 <h2 id="每日必逛系列"><a href="#每日必逛系列" class="headerlink" title="每日必逛系列"></a>每日必逛系列</h2><ul>
 <li><a href="http://gold.xitu.io" target="_blank" rel="external">掘金</a></li>
@@ -115,7 +106,7 @@
     
     <entry>
       <title><![CDATA[使用SSH免密简化Hexo Deploy部署]]></title>
-      <url>http://zhaoy875.github.io/2016/09/05/hexo-deploy-blog-use-ssh-link/</url>
+      <url>https://zhaoy875.github.io/2016/09/05/hexo-deploy-blog-use-ssh-link/</url>
       <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>hexo 使用自带的hexo-deploy-git插件实现自动部署到远程remote时，repository仓库链接使用ssh要比使用https快，也可以避免每次都要登录输入密码的步骤</p>
 <a id="more"></a>
 <h1 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h1><h2 id="修改站点配置-config-yml文件里面的deploy配置"><a href="#修改站点配置-config-yml文件里面的deploy配置" class="headerlink" title="修改站点配置 _config.yml文件里面的deploy配置"></a>修改站点配置 _config.yml文件里面的deploy配置</h2><pre><code>deploy:
@@ -138,7 +129,7 @@
     
     <entry>
       <title><![CDATA[Console你不知道的一些高级用法]]></title>
-      <url>http://zhaoy875.github.io/2016/09/04/console-console/</url>
+      <url>https://zhaoy875.github.io/2016/09/04/console-console/</url>
       <content type="html"><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>没有特殊声明下，基本都是以chrome为例</p>
 <h2 id="概述console"><a href="#概述console" class="headerlink" title="概述console"></a>概述console</h2><p>大家平常写console最多的就是用来打印信息，console.log(obj or str)，<br>但console能干的事可比这多了，比如console可以自定义打印字符的css样式，<br>console.trace()踪函数的调用轨迹，<br>计时功能console.time()；性能分析console.profile等。。。<br><a id="more"></a><br><strong>让我们来console.log(console)看看</strong><br><img src="http://od6ri688q.bkt.clouddn.com/consoleQQ%E6%88%AA%E5%9B%BE20160908200956.png" alt=""></p>
 <h2 id="console打印类型"><a href="#console打印类型" class="headerlink" title="console打印类型"></a>console打印类型</h2><pre><code>console.log(&quot;str or obj&quot;)
@@ -220,7 +211,7 @@ console.profileEnd();
     
     <entry>
       <title><![CDATA[客户端使用Less]]></title>
-      <url>http://zhaoy875.github.io/2016/01/07/%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8less/</url>
+      <url>https://zhaoy875.github.io/2016/01/07/%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8less/</url>
       <content type="html"><![CDATA[<h2 id="在客户端使用less"><a href="#在客户端使用less" class="headerlink" title="在客户端使用less"></a>在客户端使用less</h2><h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><p>引入你的 .less 样式文件的时候要设置 rel 属性值为 “stylesheet/less”:</p>
 <pre><code>&lt;link rel=&quot;stylesheet/less&quot; type=&quot;text/css&quot; href=&quot;styles.less&quot;&gt;
 </code></pre><p>然后点击页面顶部download按钮下载 less.js, 在<head> 中引入:</head></p>
