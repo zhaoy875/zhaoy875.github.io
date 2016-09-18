@@ -62,7 +62,7 @@ console.groupEnd();
         }
         // 生成随机颜色
         function s() {
-        	// ~是按位取反运算（经过位运算的都会自动变成整数，去除小数点），~~是取反两次
+        	// 2次位运算取整
             return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
         }
 
