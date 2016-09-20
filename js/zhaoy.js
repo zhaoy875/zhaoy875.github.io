@@ -4,7 +4,7 @@
 
 (function(){
 console.group();
-	console.log('%c I found!  | ू•ૅ㉨•́)ᵎᵎᵎ ','font-size:30px;text-shadow:0 0 10px #fff;color:#795548;padding:0 2em');
+	console.log('%c I found!  | ू•ૅ㉨•́)ᵎᵎᵎ ','font-size:30px;text-shadow:0 0 10px #fff;color:#795548;padding:0 0 0 1em');
 	console.log('%c╭( ′• o •′ )╭☞要找此人请拨“ MTU1NTEwNjA2NTU= ”或扣扣:“ MTE3NDQ5OTYwMg== ”  http://zhaoy.site','font-size:16px;color:#111;text-shadow:0 0 5px #333;padding:0 2em');
 console.groupEnd();
 
