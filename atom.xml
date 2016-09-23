@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhaoy875.github.io/"/>
-  <updated>2016-09-23T16:08:24.134Z</updated>
+  <updated>2016-09-23T16:04:23.152Z</updated>
   <id>https://zhaoy875.github.io/</id>
   
   <author>
@@ -16,15 +16,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://zhaoy875.github.io/2016/09/23/%E4%BF%AE%E6%94%B9hexo-s%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
-    <id>https://zhaoy875.github.io/2016/09/23/修改hexo-s自动打开浏览器/</id>
-    <published>2016-09-23T15:54:29.619Z</published>
-    <updated>2016-09-23T16:08:24.134Z</updated>
+    <title>Music Time歌单分享</title>
+    <link href="https://zhaoy875.github.io/2016/09/20/music/"/>
+    <id>https://zhaoy875.github.io/2016/09/20/music/</id>
+    <published>2016-09-20T14:39:43.000Z</published>
+    <updated>2016-09-23T16:04:23.152Z</updated>
     
-    <content type="html"><![CDATA[<hr>
-<p>title: ‘提高效率-Focus,Just do one thing’<br>date: 2016-09-15 19:50:20<br>tags: [学习效率,思考]<br>comments: true<br>categories: other</p>
-<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc: true"></a>toc: true</h2><p>##　缘起<br>每次修改博客后 ，hexo s去启动本地服务器，hexo 不会自动打开，每次要点开浏览器，点开地址，我再</p>
+    <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=1&max_width=500px&narrow=0" width="100%" frameborder="0" scrolling="no"></iframe>
+
+
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;网易云-基于163APlayer&quot;&gt;&lt;a href=&quot;#网易云-基于163APlayer&quot; class=&quot;headerlink&quot; title=&quot;网易云 基于163APlayer&quot;&gt;&lt;/a&gt;网易云 基于&lt;a href=&quot;https://github.com/YUX-
+    
+    </summary>
+    
+    
+      <category term="音乐" scheme="https://zhaoy875.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>修改Hexo S后自动打开浏览器</title>
+    <link href="https://zhaoy875.github.io/2016/09/15/%E4%BF%AE%E6%94%B9hexo-s%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    <id>https://zhaoy875.github.io/2016/09/15/修改hexo-s自动打开浏览器/</id>
+    <published>2016-09-15T11:50:20.000Z</published>
+    <updated>2016-09-23T16:11:19.165Z</updated>
+    
+    <content type="html"><![CDATA[<p>##　缘起<br>每次修改博客后 ，hexo s去启动本地服务器，hexo 不会自动打开，每次要点开浏览器，点开地址，我再</p>
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h2 id="检查npm包依赖"><a href="#检查npm包依赖" class="headerlink" title="检查npm包依赖"></a>检查npm包依赖</h2><blockquote>
 <p>npm ls -g 查看全局安装的模块及依赖</p>
 </blockquote>
@@ -1430,35 +1451,17 @@
     
     <summary type="html">
     
-      &lt;hr&gt;
-&lt;p&gt;title: ‘提高效率-Focus,Just do one thing’&lt;br&gt;date: 2016-09-15 19:50:20&lt;br&gt;tags: [学习效率,思考]&lt;br&gt;comments: true&lt;br&gt;categories: other&lt;/p&gt;
-&lt;h2
+      &lt;p&gt;##　缘起&lt;br&gt;每次修改博客后 ，hexo s去启动本地服务器，hexo 不会自动打开，每次要点开浏览器，点开地址，我再&lt;/p&gt;
+&lt;h2 id=&quot;步骤&quot;&gt;&lt;a href=&quot;#步骤&quot; class=&quot;headerlink&quot; title=&quot;步骤&quot;&gt;&lt;/a&gt;步骤&lt;/h2&gt;&lt;h2 
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Music Time歌单分享</title>
-    <link href="https://zhaoy875.github.io/2016/09/20/music/"/>
-    <id>https://zhaoy875.github.io/2016/09/20/music/</id>
-    <published>2016-09-20T14:39:43.000Z</published>
-    <updated>2016-09-23T16:04:23.152Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=1&max_width=500px&narrow=0" width="100%" frameborder="0" scrolling="no"></iframe>
-
-
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;网易云-基于163APlayer&quot;&gt;&lt;a href=&quot;#网易云-基于163APlayer&quot; class=&quot;headerlink&quot; title=&quot;网易云 基于163APlayer&quot;&gt;&lt;/a&gt;网易云 基于&lt;a href=&quot;https://github.com/YUX-
-    
-    </summary>
+      <category term="other" scheme="https://zhaoy875.github.io/categories/other/"/>
     
     
-      <category term="音乐" scheme="https://zhaoy875.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
+      <category term="学习效率" scheme="https://zhaoy875.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%95%88%E7%8E%87/"/>
+    
+      <category term="思考" scheme="https://zhaoy875.github.io/tags/%E6%80%9D%E8%80%83/"/>
     
   </entry>
   
