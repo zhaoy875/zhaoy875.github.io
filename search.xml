@@ -6,7 +6,9 @@
     <entry>
       <title></title>
       <url>https://zhaoy875.github.io/2016/09/23/%E4%BF%AE%E6%94%B9hexo-s%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E6%B5%8F%E8%A7%88%E5%99%A8/</url>
-      <content type="html"><![CDATA[<p>##　缘起<br>每次修改博客后 ，hexo s去启动本地服务器，hexo 不会自动打开，每次要点开浏览器，点开地址，我再</p>
+      <content type="html"><![CDATA[<hr>
+<p>title: ‘提高效率-Focus,Just do one thing’<br>date: 2016-09-15 19:50:20<br>tags: [学习效率,思考]<br>comments: true<br>categories: other</p>
+<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc: true"></a>toc: true</h2><p>##　缘起<br>每次修改博客后 ，hexo s去启动本地服务器，hexo 不会自动打开，每次要点开浏览器，点开地址，我再</p>
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h2 id="检查npm包依赖"><a href="#检查npm包依赖" class="headerlink" title="检查npm包依赖"></a>检查npm包依赖</h2><blockquote>
 <p>npm ls -g 查看全局安装的模块及依赖</p>
 </blockquote>

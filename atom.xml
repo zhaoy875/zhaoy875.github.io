@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhaoy875.github.io/"/>
-  <updated>2016-09-23T15:54:29.622Z</updated>
+  <updated>2016-09-23T16:08:24.134Z</updated>
   <id>https://zhaoy875.github.io/</id>
   
   <author>
@@ -20,9 +20,11 @@
     <link href="https://zhaoy875.github.io/2016/09/23/%E4%BF%AE%E6%94%B9hexo-s%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
     <id>https://zhaoy875.github.io/2016/09/23/修改hexo-s自动打开浏览器/</id>
     <published>2016-09-23T15:54:29.619Z</published>
-    <updated>2016-09-23T15:54:29.622Z</updated>
+    <updated>2016-09-23T16:08:24.134Z</updated>
     
-    <content type="html"><![CDATA[<p>##　缘起<br>每次修改博客后 ，hexo s去启动本地服务器，hexo 不会自动打开，每次要点开浏览器，点开地址，我再</p>
+    <content type="html"><![CDATA[<hr>
+<p>title: ‘提高效率-Focus,Just do one thing’<br>date: 2016-09-15 19:50:20<br>tags: [学习效率,思考]<br>comments: true<br>categories: other</p>
+<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc: true"></a>toc: true</h2><p>##　缘起<br>每次修改博客后 ，hexo s去启动本地服务器，hexo 不会自动打开，每次要点开浏览器，点开地址，我再</p>
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h2 id="检查npm包依赖"><a href="#检查npm包依赖" class="headerlink" title="检查npm包依赖"></a>检查npm包依赖</h2><blockquote>
 <p>npm ls -g 查看全局安装的模块及依赖</p>
 </blockquote>
@@ -1428,8 +1430,9 @@
     
     <summary type="html">
     
-      &lt;p&gt;##　缘起&lt;br&gt;每次修改博客后 ，hexo s去启动本地服务器，hexo 不会自动打开，每次要点开浏览器，点开地址，我再&lt;/p&gt;
-&lt;h2 id=&quot;步骤&quot;&gt;&lt;a href=&quot;#步骤&quot; class=&quot;headerlink&quot; title=&quot;步骤&quot;&gt;&lt;/a&gt;步骤&lt;/h2&gt;&lt;h2 
+      &lt;hr&gt;
+&lt;p&gt;title: ‘提高效率-Focus,Just do one thing’&lt;br&gt;date: 2016-09-15 19:50:20&lt;br&gt;tags: [学习效率,思考]&lt;br&gt;comments: true&lt;br&gt;categories: other&lt;/p&gt;
+&lt;h2
     
     </summary>
     
@@ -1600,7 +1603,7 @@
     <link href="https://zhaoy875.github.io/2016/09/06/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3hexo%E4%B8%BB%E9%A2%98/"/>
     <id>https://zhaoy875.github.io/2016/09/06/深入了解hexo主题/</id>
     <published>2016-09-06T15:26:24.000Z</published>
-    <updated>2016-09-12T14:42:35.570Z</updated>
+    <updated>2016-09-23T16:07:07.752Z</updated>
     
     <content type="html"><![CDATA[<h1 id="深入hexo主题"><a href="#深入hexo主题" class="headerlink" title="深入hexo主题"></a>深入hexo主题</h1><h2 id="准备自制hexo主题"><a href="#准备自制hexo主题" class="headerlink" title="准备自制hexo主题"></a>准备自制hexo主题</h2><p>  所需相关技术：<br>   默认你已经掌握了解基本的html5 css3 javascript</p>
 <ul>
