@@ -1,12 +1,356 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search>
+<!-- 
+     _                       
+ ___| |__   __ _  ___  _   _ 
+|_  / '_ \ / _` |/ _ \| | | |
+ / /| | | | (_| | (_) | |_| |
+/___|_| |_|\__,_|\___/ \__, |
+                       |___/  
+  勤有功，戏无益。戒之哉，宜勉力。--- 喝了这碗鸡汤还有3碗
+  做一个好前端真的好难   (╯‵□′)╯ ︵┻━┻ 
+-->
+<!doctype html>
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="zhaoy" type="application/atom+xml" />
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.1" />
+
+
+
+
+<meta name="description" content="##　缘起每次修改博客后 ，hexo s去启动本地服务器，hexo 不会自动打开，每次要点开浏览器，点开地址，我再
+步骤检查npm包依赖
+npm ls -g 查看全局安装的模块及依赖
+
++-- bower@1.7.9
++-- cnpm@4.2.0
+| +-- auto-correct@1.0.0
+| +-- bagpipe@0.3.5
+| +-- colors@1.1.2
+| +-- comman">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zhaoy">
+<meta property="og:url" content="https://zhaoy875.github.io/2016/09/23/修改hexo-s自动打开浏览器/index.html">
+<meta property="og:site_name" content="zhaoy">
+<meta property="og:description" content="##　缘起每次修改博客后 ，hexo s去启动本地服务器，hexo 不会自动打开，每次要点开浏览器，点开地址，我再
+步骤检查npm包依赖
+npm ls -g 查看全局安装的模块及依赖
+
++-- bower@1.7.9
++-- cnpm@4.2.0
+| +-- auto-correct@1.0.0
+| +-- bagpipe@0.3.5
+| +-- colors@1.1.2
+| +-- comman">
+<meta property="og:updated_time" content="2016-09-23T15:54:29.622Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="zhaoy">
+<meta name="twitter:description" content="##　缘起每次修改博客后 ，hexo s去启动本地服务器，hexo 不会自动打开，每次要点开浏览器，点开地址，我再
+步骤检查npm包依赖
+npm ls -g 查看全局安装的模块及依赖
+
++-- bower@1.7.9
++-- cnpm@4.2.0
+| +-- auto-correct@1.0.0
+| +-- bagpipe@0.3.5
+| +-- colors@1.1.2
+| +-- comman">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: false,
+    motion: true,
+    duoshuo: {
+      userId: 'zhaoy875',
+      author: '(╯‵□′)╯'
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://zhaoy875.github.io/2016/09/23/修改hexo-s自动打开浏览器/"/>
+
+  <title>  | zhaoy </title>
+  
+  <meta name="baidu-site-verification" content="k0UgqisIfE" />
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+  <!--[if lte IE 9]>
+  <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://www.goody.com.cn/2014/updatebrowser/"><img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820" alt="
+ 您正在使用的ie浏览器版本过低，为了保障您的访问安全，以及更友好的浏览体验，强烈建议您升级最新的浏览器。" style='margin-left:auto;margin-right:auto;display: block;'/></a></div> 
+  <![endif]-->
+  
+  
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?672e23e6a7cfc50fb1a00e13b7789303";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
   
   
     
-    <entry>
-      <title></title>
-      <url>https://zhaoy875.github.io/2016/09/23/%E4%BF%AE%E6%94%B9hexo-s%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E6%B5%8F%E8%A7%88%E5%99%A8/</url>
-      <content type="html"><![CDATA[<p>##　缘起<br>每次修改博客后 ，hexo s去启动本地服务器，hexo 不会自动打开，每次要点开浏览器，点开地址，我再</p>
+  
+  
+  
+  
+
+
+
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">zhaoy</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Your time is limited, so don't waste it living someone else's life</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            按分类找
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            我是谁？
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            按标签找
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜一下
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-23T23:54:29+08:00" content="2016-09-23">
+              2016-09-23
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/23/修改hexo-s自动打开浏览器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/23/修改hexo-s自动打开浏览器/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>##　缘起<br>每次修改博客后 ，hexo s去启动本地服务器，hexo 不会自动打开，每次要点开浏览器，点开地址，我再</p>
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h2 id="检查npm包依赖"><a href="#检查npm包依赖" class="headerlink" title="检查npm包依赖"></a>检查npm包依赖</h2><blockquote>
 <p>npm ls -g 查看全局安装的模块及依赖</p>
 </blockquote>
@@ -1408,261 +1752,613 @@
   | `-- isexe@1.1.2
   +-- wrappy@1.0.2
   `-- write-file-atomic@1.1.4
-</code></pre>]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Music Time歌单分享]]></title>
-      <url>https://zhaoy875.github.io/2016/09/20/music/</url>
-      <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&autoplay=1&max_width=500px&narrow=0" width="100%" frameborder="0" scrolling="no"></iframe>
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixinicon.png" alt="zhaoy875 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/weixinicon.png" alt="zhaoy875 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
 
 
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[提高效率-Focus,Just Do One Thing]]></title>
-      <url>https://zhaoy875.github.io/2016/09/09/%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87-Focus-Just-do-one-thing/</url>
-      <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p> 当我在学习某个知识点的时候总是容易被其他相关东西带走，一会看这个，一会看别的，结果什么都没精，没能深入，都是跑马观花</p>
-<p>迫切需要一种专注的学习方式，计算机最擅长的就是按照既定的程序去计算和执行任务，因为多线程和多核，计算机擅长多任务并行。<br>但我们不是计算机，我们的大脑需要专注，focus！<br>为了避免拖延和高效利用时间，可以尝试番茄工作法，在先预定的时间段内完成事先预定的某个任务，然后间隔时间休息，劳逸结合。<br>一个简单的番茄工作法webapp：<br><a href="http://alloyteam.github.io/AlloyTimer/" target="_blank" rel="external">http://alloyteam.github.io/AlloyTimer/</a></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[为什么要使用Virtual DOM]]></title>
-      <url>https://zhaoy875.github.io/2016/09/08/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8Virtual-DOM/</url>
-      <content type="html"><![CDATA[<p><img src="http://od6ri688q.bkt.clouddn.com/VirtualDOM.gif" alt=""></p>
-<h1 id="React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM"><a href="#React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM" class="headerlink" title="React中很少有人能解释清楚的问题——为什么要使用Virtual DOM"></a>React中很少有人能解释清楚的问题——为什么要使用Virtual DOM</h1><p>  这也是我在思考的问题，大家都在跟风学RN ,VUE,Ag2,却很少看见有人用数据来量化实际项目应用中dom操作对性能的影响 </p>
-<p> 下面看到野狗微信平台的一篇文章,先介绍下文章内容再说说我的理解： </p>
-<p>原文链接：<a href="http://mp.weixin.qq.com/s?__biz=MzI0ODA2ODU2NQ==&amp;mid=2651130413&amp;idx=1&amp;sn=56a1cc3ac225a09982fc0c4a508222c7" target="_blank" rel="external">React中一个没人能解释清楚的问题——为什么要使用Virtual DOM</a></p>
-<h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><p> 有一天，我的朋友向我提了一个有关React的问题：</p>
-<p>组件化， 单向数据绑定，这些我都懂了。但是React为什么要用Virtual DOM呢？</p>
-<p>我的回答非常套路，“因为直接操作DOM比较低效，比较慢。”。</p>
-<p>“但是现在的js引擎总是搞个大新闻，说自己的性能比之前又要不知道高到哪里去了。既然如此，为什么还会说直接操作DOM比较慢呢？”</p>
-<p>好吧… 这确实是一个好问题。</p>
-<p>惊人的是，我找了半天，发现并没有任何一篇文章可以给出坚如磐石的证明，来完满地解释Virtual DOM的必要性。 其实，使得整个流程变得低效的，并不只有直接操作DOM，还包括了操作DOM之后发生的事情。</p>
-<p>为了能让你更好地理解Virtual DOM的必要性，我们先来个急转弯，从宏观上来看浏览器的工作流。以及，一次DOM更新后，到底会发生什么事呢？</p>
-<hr>
-<p>##浏览器工作流</p>
-<p>NOTE：在下面这张图中，配图文字使用的是Webkit引擎的术语。现代的浏览器都是遵循类似的工作流，仅在细节处略有不同。</p>
-<p><img src="http://od6ri688q.bkt.clouddn.com/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%A7%A3%E6%9E%90%E5%9B%BE.png" alt=""></p>
-<h3 id="1-创建DOM树"><a href="#1-创建DOM树" class="headerlink" title="1  创建DOM树"></a>1  创建DOM树</h3><p>一旦浏览器接收到一个HTML文件，渲染引擎（render engine）就开始解析它，并根据HTML元素（elements）一一对应地生成DOM 节点（nodes），组成一棵DOM树。</p>
-<h3 id="2-创建渲染树"><a href="#2-创建渲染树" class="headerlink" title="2   创建渲染树"></a>2   创建渲染树</h3><p>同时，浏览器也会解析来自外部CSS文件和元素上的inline样式。通常浏览器会为这些样式信息，连同包含样式信息的DOM树上的节点，再创建另外一个树，一般被称作渲染树（render tree）</p>
-<h3 id="3-创建渲染树背后的故事"><a href="#3-创建渲染树背后的故事" class="headerlink" title="3   创建渲染树背后的故事"></a>3   创建渲染树背后的故事</h3><p>WebKit内核的浏览器上，处理一个节点的样式的过程称为attachment。DOM树上的每个节点都有一个attach方法，它接收计算好的样式信息，返回一个render对象（又名renderer）</p>
-<p>Attachment的过程是同步的，新节点插入DOM树时，会调用新节点的attach方法。</p>
-<p>构建渲染树时，由于包含了这些render对象，每个render对象都需要计算视觉属性（visual properties）；这个过程通过计算每个元素的样式属性来完成。</p>
-<h3 id="4-布局-Layout"><a href="#4-布局-Layout" class="headerlink" title="4   布局 Layout"></a>4   布局 Layout</h3><p>又被简称为Reflow[2]</p>
-<p>构造了渲染树以后，浏览器引擎开始着手布局（layout）。布局时，渲染树上的每个节点根据其在屏幕上应该出现的精确位置，分配一组屏幕坐标值。</p>
-<h3 id="5-绘制-Painting"><a href="#5-绘制-Painting" class="headerlink" title="5   绘制 Painting"></a>5   绘制 Painting</h3><p>接着，浏览器将会通过遍历渲染树，调用每个节点的paint方法来绘制这些render对象。paint方法根据浏览器平台，使用不同的UI后端API（agnostic UI backend API）。 通过绘制，最终将在屏幕上展示内容。<br>再来看Virtual DOM</p>
-<p>好啦，现在你已经简单过了一遍浏览器引擎的渲染流程，你可以看到，从创建渲染树，到布局，一直到绘制，只要你在这过程中进行一次DOM更新，整个渲染流程都会重做一遍。尤其是创建渲染树，它需要重新计算所有元素上的所有样式。</p>
-<p>在一个复杂的单页面应用中，经常会涉及到大量的DOM操作，这将引起多次计算，使得整个流程变得低效，这应该尽量避免。</p>
-<p>Virtual DOM这个抽象层真正的闪光点正在于此：每当你想对视图进行一次更新，那些本该直接作用于真实DOM的改动，都会先作用于Virtual DOM，然后再将要改动的部分通知到真实DOM。这样可以大幅减少DOM操作带来的重计算步骤。</p>
-<p> Update: Reddit上的 ugwe43to874nf4 对Virtual DOM的重要性做了更客观的评价。</p>
-<blockquote>
-<p>DOM 操作 真正的问题在于每次操作都会触发布局的改变、DOM树的修改和渲染。所以，当你一个接一个地去修改30个节点的时候，就会引起30次（潜在的）布局重算，30次（潜在的）重绘，等等。<br>Virtual DOM 实际上没有使用什么全新的技术，仅仅是把 “ 双缓冲（double buffering）” 技术应用到了DOM上面。 这样一来，当你在这个单独的虚拟的DOM树上也一个接一个地修改30个节点的时候，它不会每次都去触发重绘，所以修改节点的开销就变小了。 之后，一旦你要把这些改动传递给真实DOM，之前所有的改动就会整合成一次DOM操作。这一次DOM操作引起的布局计算和重绘可能会更大，但是相比而言，整合起来的改动只做一次，减少了（多次）计算。<br>不过，实际上不借助Virtual DOM也可以做到这一点。你可以自己手动地整合所有的DOM操作到一个DOM 碎片（DOM fragment） 里，然后再传递给DOM树。</p>
-<p>既然如此，我们再来看看Virtual DOM到底解决了什么问题。 首先，它把管理DOM碎片这件事情自动化、抽象化了，使得你无需再去手动处理。另外，当你要手动去做这件事情的时候，你还得记得哪些部分变化了，哪些部分没变，毕竟之后重绘时，DOM树上的大量细节你都不需要重新刷新。这时候Virtual DOM的自动化对你来说就非常有用了，如果它的实现是正确的，那么它就会知道到底哪些地方应该需要刷新，哪些地方不要。</p>
-<p>最后，Virtual DOM通过各种组件和你写的一些代码来请求对它进行操作，而不是直接对它本身进行操作，使你不必非要跟Virtual DOM交互，也不必非要去了解Virtual DOM修改DOM树的原理，也就不用再想着去修改DOM了。（译注：对开发者来说，Virtual DOM几乎是完全透明的）。这样你就不用在 修改DOM 和 整合DOM操作为一次 之间做同步处理了。</p>
-</blockquote>
-<h3 id="进一步阅读"><a href="#进一步阅读" class="headerlink" title="进一步阅读"></a>进一步阅读</h3><p>以上关于浏览器工作流的内容摘录自这篇文档中关于浏览器内部行为的章节。这篇文章还深入解释了浏览器引擎的hood部分的一切细节。毋庸置疑，这篇文章值得你花时间从头到尾好好读一遍。它会帮你很好地理解为什么我们需要Virtual DOM这样一个额外的抽象层</p>
-<p>原文：<br><a href="http://www.zcfy.cc/article/the-one-thing-that-no-one-properly-explains-about-react-why-virtual-dom-hashnode-1211.html" target="_blank" rel="external">http://www.zcfy.cc/article/the-one-thing-that-no-one-properly-explains-about-react-why-virtual-dom-hashnode-1211.html</a></p>
-<h2 id="我的理解"><a href="#我的理解" class="headerlink" title="我的理解"></a>我的理解</h2>]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Git管中窥豹]]></title>
-      <url>https://zhaoy875.github.io/2016/09/07/Git%E7%AE%A1%E4%B8%AD%E7%AA%A5%E8%B1%B9/</url>
-      <content type="html"><![CDATA[<h2 id="git简单示意图"><a href="#git简单示意图" class="headerlink" title="git简单示意图"></a>git简单示意图</h2><p><img src="http://od6ri688q.bkt.clouddn.com/git_articlex.png" alt="图解git"></p>
-<a id="more"></a>
-<blockquote>
-<p>参考<a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="external">http://www.bootcss.com/p/git-guide/</a></p>
-</blockquote>
-<h2 id="花20分钟写的-大白话讲解如何给github上项目贡献代码"><a href="#花20分钟写的-大白话讲解如何给github上项目贡献代码" class="headerlink" title="花20分钟写的-大白话讲解如何给github上项目贡献代码"></a>花20分钟写的-大白话讲解如何给github上项目贡献代码</h2><blockquote>
-<p>转自 <a href="https://site.douban.com/196781/widget/notes/12161495/note/269163206/" target="_blank" rel="external">https://site.douban.com/196781/widget/notes/12161495/note/269163206/</a></p>
-</blockquote>
-<p>  本文献给对git很迷茫的新手，注意是新手，但至少会点基本操作，有点基本概念的新手，我不会从怎么用github和git是什么开始讲的。如果作为新手你看书又看不进去，原理又太复杂，有没有直接了当告诉我们怎么给项目贡献代码，并和项目同步代码的大体流程。于是我快速写了这么个东西。一来整理下自己混乱的思路，二来想号召大家一起用git开发点东西，可是好几个同鞋只会寂寞的给自己push。</p>
-<p>我先说下 我之前对github操作的一些迷茫历程，然后之后是怎么解惑的。</p>
-<ol>
-<li><p>最最开始，我以为git clone ［项目地址］，也就是把代码clone下来 然后修改，然后push到项目里就可以了。<br>后来发现，这种情况只适合该项目属于你自己的情况，如果你git clone别人的项目代码，你想push都push不上去，因为 git push 不是需要你输入github帐号密码么。</p>
-</li>
-<li><p>然后 我就知道了 github上 不是有个fork么， 好，那么给别人的项目提交代码的方式就有了，先fork下别人的代码，于是你的github上就出现了同名的项目，这个项目就属于你自己了，你把这个自己的项目git clone到本地，修修改改，然后push到你自己的项目里，那么你如何把你对自己项目的改动，给发到之前fork的那个原项目呢，看见了没，在github上你的项目页面有个按钮，叫Pull request，对 你点它就会把你的修改发到对方的项目里，人还会收到邮件呢，由原项目主人决定是否接受你的修改。<br>但是，这样问题就出来了，在你fork他的项目之后，如果他又更新了代码，你自己fork的项目怎么做到和原项目同步呢？<br>我就想啊，是不是 我还得重新git clone原项目的代码，然后手动合并到我fork的项目里呢。。。<br>梁老师说，你丫这太蛋疼了，肯定不是这么麻烦，我细想，也是啊，这不2么。。。</p>
-</li>
-</ol>
-<p>3，然后，从《Pro git》上看到一个知识点，我擦，github居然可以给项目添加合作者，也就是说，假如你，对，说你呢，戴眼镜那个，你想参与我的项目，你跟我说一声，我就把你添加到我的项目里作为合作者，这个选项在项目的设置里面有，只要我添加你了，你就可以git clone我的代码然后修修改改，然后直接push上来就行了，就不用fork那么麻烦了，如果你要更新服务器代码，只要git pull就行了，看 合作者这东西多方便，就像我们在公司用svn似的。</p>
-<p>4.然后我就想啊，有了合作者还需要你丫fork这个功能干啥？仔细一想，你写个好项目，不能随便加合作者啊，加了个熊孩子把你代码改废了可咋整，这年头熊孩子很多，我自己不就是一个么。所以fork肯定还是需要，fork就是专门预防熊孩子的，这就是真相！那么前面说道到fork之后如何与原项目同步的问题还在啊，没有得到解决。</p>
-<p>5.于是《Pro git》再次给了我一个解答，具体流程是你啊想给我的项目做贡献，你先git clone我的代码到本地，然后修修改改，然后你不是不能push到我的项目里么，你可以先在github页面上fork我的项目，有了你自己的项目地址（url）之后呢，你在本地操作git remote add [sort name] [your url]，意思就是添加第二个远程仓库地址，这个仓库的“昵称”就是你刚指定的[sort name]，然后，你之后push文件呢 就通过指定这个［sort name］来push到这个你自己的仓库里。等你觉得想要把你改的发给原项目同步，就在你的项目上点Pull request按钮.说下另一种情况，如果是，原项目发生了改动，你要想同步到本地，就直接从git fetch origin 从原项目的地址同步代码，然后再merge就好了。当然，如《Pro git》上所写，你可以通过新建分支的方式往自己的项目上push，这样同步的时候直接fetch就行了。这块如果我没写明白或者你想知道怎么新建分支的方式push到自己的项目里，可以直接参考《Pro git》的“公开的小型项目”一节，那我的贡献就是指点你如何从这本书里快速的找到你想要的。= =。</p>
-<p>好了，时间有限，我写的快不一定讲明白，欢迎跟我讨论。<br>感谢linus，感谢git，感谢github，感谢kindle，感谢《Pro git》，感谢梁老师，感谢我自己，感谢所有的熊孩子们。</p>
-<h2 id="git详解-教程"><a href="#git详解-教程" class="headerlink" title="git详解 教程"></a>git详解 教程</h2><blockquote>
-<p><a href="http://blog.jobbole.com/?s=Git%E8%AF%A6%E8%A7%A3%E4%B9%8B" target="_blank" rel="external">http://blog.jobbole.com/?s=Git%E8%AF%A6%E8%A7%A3%E4%B9%8B</a></p>
-<p><a href="https://github.com/geeeeeeeeek/git-recipes/wiki/2.1-%E5%BF%AB%E9%80%9F%E6%8C%87%E5%8D%97" target="_blank" rel="external">https://github.com/geeeeeeeeek/git-recipes/wiki/2.1-%E5%BF%AB%E9%80%9F%E6%8C%87%E5%8D%97</a></p>
-</blockquote>
-<h2 id="附录git命令图"><a href="#附录git命令图" class="headerlink" title="附录git命令图"></a>附录git命令图</h2><p>git常用命令行</p>
-<p><img src="http://od6ri688q.bkt.clouddn.com/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.jpg" alt="git命令"></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[深入Hexo主题]]></title>
-      <url>https://zhaoy875.github.io/2016/09/06/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3hexo%E4%B8%BB%E9%A2%98/</url>
-      <content type="html"><![CDATA[<h1 id="深入hexo主题"><a href="#深入hexo主题" class="headerlink" title="深入hexo主题"></a>深入hexo主题</h1><h2 id="准备自制hexo主题"><a href="#准备自制hexo主题" class="headerlink" title="准备自制hexo主题"></a>准备自制hexo主题</h2><p>  所需相关技术：<br>   默认你已经掌握了解基本的html5 css3 javascript</p>
-<ul>
-<li>你还需要了解一些JS模板引擎（ejs ,jade,swig等）</li>
-<li>css预编译语言如less/sass styl样式模板</li>
-<li>基于nodejs的前端自动化gulp、webpack，bowel等构建工具的使用</li>
-<li>模块化开发的思想<a id="more"></a>
-</li>
-</ul>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[站点收藏]]></title>
-      <url>https://zhaoy875.github.io/2016/09/06/%E6%94%B6%E8%97%8F%E7%BD%91%E5%9D%80/</url>
-      <content type="html"><![CDATA[<h1 id="个人站点收藏夹"><a href="#个人站点收藏夹" class="headerlink" title="个人站点收藏夹"></a>个人站点收藏夹</h1><!-- 我的前端学习工作 -->
-<h2 id="每日必逛系列"><a href="#每日必逛系列" class="headerlink" title="每日必逛系列"></a>每日必逛系列</h2><ul>
-<li><a href="http://gold.xitu.io" target="_blank" rel="external">掘金</a></li>
-<li><a href="https://github.com/zhaoy875" target="_blank" rel="external">github</a></li>
-<li><a href="https://segmentfault.com" target="_blank" rel="external">segmentfault</a></li>
-<li><a href="weibo.com/123zhaoy">微博</a></li>
-<li><a href="http://www.jianshu.com" target="_blank" rel="external">简书</a></li>
-<li>cnblogs </li>
-<li>知乎</li>
-<li>v2ex</li>
-</ul>
-<a id="more"></a>
-<h2 id="前端站点"><a href="#前端站点" class="headerlink" title="前端站点"></a>前端站点</h2><h2 id="我的工作流"><a href="#我的工作流" class="headerlink" title="我的工作流"></a>我的工作流</h2><blockquote>
-<p>信息爆炸的年代，靠死记硬背知识注定被淘汰，我们需要的是一种高效的学习方式，自主的能习的能力。<br>借助工具：搜索引擎是最好的老师，如果你能在搜索引擎上找到答案的问题通常都不是很难的大问题，学会搜索，学会与人交流沟通，学会怎么问问题很重要，毕竟很多人真的不会问问题！ </p>
-</blockquote>
-<h3 id="学习记录工具"><a href="#学习记录工具" class="headerlink" title="学习记录工具"></a>学习记录工具</h3><h4 id="知识管理工具-如为知笔记-印象笔记-有道笔记等"><a href="#知识管理工具-如为知笔记-印象笔记-有道笔记等" class="headerlink" title="知识管理工具 如为知笔记 印象笔记 有道笔记等"></a>知识管理工具 如为知笔记 印象笔记 有道笔记等</h4><p> 好记性不如烂笔头，一个分类合理有体系的知识管理软件能让自己效率大大提高。<br>习惯了各种分散零碎的学习模式，难免会忘记，记录，合理分门别类管理会大大帮助自己整理归纳知识库，等等，，，还有其他各种好处呀等你用过后就知道了</p>
-<h4 id="学习技术的教程网站"><a href="#学习技术的教程网站" class="headerlink" title="学习技术的教程网站"></a>学习技术的教程网站</h4><p>  这个就需要收藏和斟酌了，一个优秀的站点总会吸引优秀的来访者，或者因为高质量的内容或非凡的体验设计或是强大的功能等等总有它出众的地方，而你需要自己斟酌去筛选，下面是我自己学习前端过程中常逛的站点：</p>
-<p> 精品总是不多见的：<br>下面是我收藏的一些 前端博客、教程、前端技术、学习分享的站点：</p>
-<h2 id="前端技能"><a href="#前端技能" class="headerlink" title="前端技能"></a>前端技能</h2><p>  html(5) 、css(3 and 4?) 、javascript(es6 and more?)<br> <strong> 这三大基础，前几年nodejs横空出世，前端变得无限可能 </strong></p>
-<p> 。。。各种新的框架技术雨后春笋般的冒出来，<br> 前端，后端（nodejs server），桌面端(nw.js electron等)，移动端（angular，react native,vue）,重量级的前端自动化工程化（grunt,yo?,webpack,gulp等等）  如何去分辨糟粕与精华，不盲目跟风，学一样东西之前一定要明白他是干什么的，解决了什么问题？应用场景，对工作效率的影响，，，等等</p>
-<h3 id="分享下我的前端导航页"><a href="#分享下我的前端导航页" class="headerlink" title="分享下我的前端导航页"></a>分享下我的前端导航页</h3><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>今晚累了明天接着写，先睡了。。。<br>2016-9-4 04:19:43</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[使用SSH免密简化Hexo Deploy部署]]></title>
-      <url>https://zhaoy875.github.io/2016/09/05/hexo-deploy-blog-use-ssh-link/</url>
-      <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>hexo 使用自带的hexo-deploy-git插件实现自动部署到远程remote时，repository仓库链接使用ssh要比使用https快，也可以避免每次都要登录输入密码的步骤</p>
-<a id="more"></a>
-<h1 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h1><h2 id="修改站点配置-config-yml文件里面的deploy配置"><a href="#修改站点配置-config-yml文件里面的deploy配置" class="headerlink" title="修改站点配置 _config.yml文件里面的deploy配置"></a>修改站点配置 _config.yml文件里面的deploy配置</h2><pre><code>deploy:
-  type: git
-  repository: git@github.com:zhaoy875/zhaoy875.github.io.git  
-</code></pre><h2 id="列出已存在的SSH-Key"><a href="#列出已存在的SSH-Key" class="headerlink" title="列出已存在的SSH Key"></a>列出已存在的SSH Key</h2><p>打开Git Bash，并且输入：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ls</span> -<span class="keyword">al</span> ~/.ssh</div></pre></td></tr></table></figure></p>
-<p>这个命令会列出你<code>.ssh</code>账户中已经存在的SSH key，如果之前没有设置过，一般都是没有。那么就需要下面的生成密钥的步骤</p>
-<h2 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h2><p>然后输入：<br><code>ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code><br>这个命令将会生成一个以你邮箱为标签的ssh key，然后bash中会显示：</p>
-<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Generating <span class="keyword">public</span>/<span class="keyword">private</span> rsa <span class="keyword">key</span> pair.</div><div class="line">Enter file <span class="keyword">in</span> which <span class="keyword">to</span> save the <span class="keyword">key</span> (/c/Users/you/.ssh/id_rsa): [Press enter]</div></pre></td></tr></table></figure>
-<p>回车，保存密钥文件到本地<br>复制密钥粘贴到远程仓库，这里以github为例，粘贴到github ssh key</p>
-<p>这样，你本地git bash就有了一个可用的SSH key。</p>
-<h2 id="将SSH-Key添加到Github中"><a href="#将SSH-Key添加到Github中" class="headerlink" title="将SSH Key添加到Github中"></a>将SSH Key添加到Github中</h2><p>下面将这个key添加到github网站。<br>打开<a href="https://github.com/settings/ssh" target="_blank" rel="external">https://github.com/settings/ssh</a>，点击<code>Add SSH Key</code>，复制<code>id_rsa.pub</code>中的所有内容到<code>Key</code>框中，在<code>Title</code>框中输入方便自己记忆的名字（建议输入能让自己明白是哪台电脑的名字，方便以后管理）。<br>当网页显示添加成功后，就已经完成了全部的操作。<br>下面进行一些测试，同样是打开Git Bash，输入：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ssh</span> <span class="selector-tag">-T</span> <span class="selector-tag">git</span>@<span class="keyword">github</span>.<span class="keyword">com</span></div></pre></td></tr></table></figure></p>
-<p>bash中会显示如下字样：</p>
-<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">The authenticity <span class="keyword">of</span> host <span class="comment">'github.com (207.97.227.239)' can't be established.</span></div><div class="line">RSA <span class="keyword">key</span> fingerprint <span class="keyword">is</span> <span class="number">16</span>:<span class="number">27</span>:ac:a5:<span class="number">76</span>:<span class="number">28</span>:<span class="number">2</span>d:<span class="number">36</span>:<span class="number">63</span>:<span class="number">1</span>b:<span class="number">56</span>:<span class="number">4</span>d:eb:df:a6:<span class="number">48.</span></div><div class="line">Are you sure you want <span class="keyword">to</span> <span class="keyword">continue</span> connecting (yes/no)?</div></pre></td></tr></table></figure>
-<p>输入yes之后，计算机会自动将<code>github.com</code>列入已知的host，然后会出现如下提示：</p>
-<figure class="highlight irpf90"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Hi username<span class="comment">! You've successfully authenticated, but GitHub does not</span></div><div class="line"><span class="keyword">provide</span> shell <span class="keyword">access</span>.</div></pre></td></tr></table></figure>
-<p>over!</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Console你不知道的一些高级用法]]></title>
-      <url>https://zhaoy875.github.io/2016/09/04/console-console/</url>
-      <content type="html"><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>没有特殊声明下，基本都是以chrome为例</p>
-<h2 id="概述console"><a href="#概述console" class="headerlink" title="概述console"></a>概述console</h2><p>大家平常写console最多的就是用来打印信息，console.log(obj or str)，<br>但console能干的事可比这多了，比如console可以自定义打印字符的css样式，<br>console.trace()踪函数的调用轨迹，<br>计时功能console.time()；性能分析console.profile等。。。<br><a id="more"></a><br><strong>让我们来console.log(console)看看</strong><br><img src="http://od6ri688q.bkt.clouddn.com/consoleQQ%E6%88%AA%E5%9B%BE20160908200956.png" alt=""></p>
-<h2 id="console打印类型"><a href="#console打印类型" class="headerlink" title="console打印类型"></a>console打印类型</h2><pre><code>console.log(&quot;str or obj&quot;)
-console.info(&quot;这是info&quot;);
-console.debug(&quot;这是debug&quot;);
-console.warn(&quot;这是warn&quot;);
-console.error(&quot;这是error&quot;);
-</code></pre><h3 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h3><p>console对象的上面5种方法，都可以使用printf风格的占位符。不过，占位符的种类比较少，只支持字符（%s）、整数（%d或%i）、浮点数（%f）和对象（%o）四种。</p>
-<pre><code>console.log(&quot;%d年%d月%d日&quot;,2011,3,26);
-console.log(&quot;圆周率是%f&quot;,3.1415926);
-console.warn(&quot;圆周率是%f&quot;,3.1415926);
-</code></pre><h3 id="分组group"><a href="#分组group" class="headerlink" title="分组group"></a>分组group</h3><pre><code>console.group(&quot;第一组信息&quot;);
-console.log(&quot; 第一条&quot;);
-console.log(&quot; 第二条&quot;);
-console.log(&quot; 第三条&quot;);
-console.log(&quot; 第四条&quot;);
-console.groupEnd();
-console.group(&quot;第2组信息&quot;);
-console.log(&quot; 第1条&quot;);
-console.log(&quot; 第2条&quot;);
-console.log(&quot; 第3条&quot;);
-console.groupEnd();
-</code></pre><p><img src="http://od6ri688q.bkt.clouddn.com/console.groupQQ%E6%88%AA%E5%9B%BE20160908205931.png" alt="console.group"></p>
-<h3 id="console-dir"><a href="#console-dir" class="headerlink" title="console.dir()"></a>console.dir()</h3><p>console.dir()可以显示一个对象所有的属性和方法</p>
-<pre><code>console.dir(obj);
-</code></pre><h3 id="console-dirxml-用来显示网页的某个节点（node）所包含的节点html-xml代码。"><a href="#console-dirxml-用来显示网页的某个节点（node）所包含的节点html-xml代码。" class="headerlink" title="console.dirxml()用来显示网页的某个节点（node）所包含的节点html/xml代码。"></a>console.dirxml()用来显示网页的某个节点（node）所包含的节点html/xml代码。</h3><pre><code>var div= document.getElementById(&quot;foot&quot;);
-console.dirxml(div);
-</code></pre><h3 id="console-asset"><a href="#console-asset" class="headerlink" title="console.asset()"></a>console.asset()</h3><p>  console.assert()用来判断一个表达式或变量是否为真。如果结果为否，则在控制台输出一条相应信息，并且抛出一个异常。<br>比如，下面两个判断的结果都为否。</p>
-<pre><code>var result = 0;
-console.assert( result );    
-var year = 2000;
-console.assert(year == 2011 );
-</code></pre><h3 id="console-trace"><a href="#console-trace" class="headerlink" title="console.trace()"></a>console.trace()</h3><p>用来追踪函数的调用轨迹。</p>
-<p>比如，有一个加法器函数。    　</p>
-<pre><code>function add(a,b){
-    return a+b;
-}
-</code></pre><p>想知道这个函数是如何被调用的，在其中加入console.trace()方法就可以了</p>
-<pre><code>function add(a,b){
-　　console.trace();
-　　return a+b;
-}
+      
+    </div>
 
-var x = add3(1,1);
-　　function add3(a,b){return add2(a,b);}
-　　function add2(a,b){return add1(a,b);}
-　　function add1(a,b){return add(a,b);}
-</code></pre><h3 id="计时功能"><a href="#计时功能" class="headerlink" title="计时功能"></a>计时功能</h3><p>console.time()和console.timeEnd()，用来显示之间代码的运行时间</p>
-<pre><code>console.time(&quot;计时器一&quot;);
-    var k=0; //内部循环体k次数
-　　for(var i=0;i&lt;1000;i++){
-　　　　for(var j=0;j&lt;1000;j++){
-            k++;
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/20/music/" rel="next" title="Music Time歌单分享">
+                <i class="fa fa-chevron-left"></i> Music Time歌单分享
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+
+
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/09/23/修改hexo-s自动打开浏览器/"
+     data-title=""
+     data-content=""
+     data-url="https://zhaoy875.github.io/2016/09/23/修改hexo-s自动打开浏览器/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/23/修改hexo-s自动打开浏览器/"
+           data-title="" data-url="https://zhaoy875.github.io/2016/09/23/修改hexo-s自动打开浏览器/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/zhaoy875_icon.jpg"
+               alt="zhaoy875" />
+          <p class="site-author-name" itemprop="name">zhaoy875</p>
+          <p class="site-description motion-element" itemprop="description">zhaoy的前端开发学习站点，前端开发，前端框架,bootstrap,前端自动化，前端 frontend，Javascript,css3,js,node.js,canvas, gulp,webpack,amd ,cmd,react, react native,angular,vue,vue.js</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/zhaoy875" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/users/08dc89984d49" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://gold.xitu.io/user/5795c11c8ac247005f2fb90b" target="_blank" title="掘金">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  掘金
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/123zhaoy" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/zhaoy875" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/zhaoy875" target="_blank" title="segmentfault">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  segmentfault
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友链
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://alan725.com/" title="alan725" target="_blank">alan725</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhaoy.site" title="zhaoy" target="_blank">zhaoy</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.baidu.com" title="百度" target="_blank">百度</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤"><span class="nav-number">1.</span> <span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检查npm包依赖"><span class="nav-number">2.</span> <span class="nav-text">检查npm包依赖</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    
+    <i class="menu-item-icon fa fa-fw fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhaoy875</span>
+</div>
+
+<div class="powered-by">
+   <a class="theme-link" href="https://hexo.io">Hexo</a> 驱动
+</div>
+
+<div class="theme-info">
+ 
+  Theme by <a class="theme-link" href="https://github.com/zhaoy875/hexo-theme-zhaoy">zhaoy</a> based on
+  
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">Next</a>
+</div>
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">访客数：<i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv">访问量：<i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+
+<div class="includejs">
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+  
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"zhaoy875"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+
+
+
+<div class="popoverlay" style="display:none"></div>
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+// 修改 弹窗时造成网站右边侧栏消失和出现时的背景页面布局重绘的抖动 
+    function proceedsearch() {
+        // 作者这里标签忘记闭合了？
+      // $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+
+      // 将上一行dom操作改为css操作 .popoverlay遮罩层样式在localsearch.styl中
+      $(".popoverlay").fadeIn('fast');
+      $('.popup').toggle();
+      //toggle方法jq从1.9版本删除了?
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
         }
-　　}
-console.log(k)
-console.timeEnd(&quot;计时器一&quot;);
-</code></pre><h3 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h3><p>性能分析（Profiler）就是分析程序各个部分的运行时间，找出瓶颈所在，使用的方法是console.profile()。</p>
-<p>假定有一个函数Foo()，里面调用了另外两个函数funcA()和funcB()，其中funcA()调用10次，funcB()调用1次。</p>
-<pre><code>function Foo() {　　　　
-    for (var i = 0; i &lt; 10; i++) {
-        funcA(1000);
-    }　　　　
-    funcB(10000);　　
-}　　
-function funcA(count) {　　　　
-    for (var i = 0; i &lt; count; i++) {}　　
-}　　
-function funcB(count) {　　　　
-    for (var i = 0; i &lt; count; i++) {}　　
-}
-//然后就可以分析Foo()的运行性能了。
+    });}
 
-console.profile(&apos;性能分析器一&apos;);
-Foo();
-console.profileEnd();
-</code></pre>]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[客户端使用Less]]></title>
-      <url>https://zhaoy875.github.io/2016/01/07/%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8less/</url>
-      <content type="html"><![CDATA[<h2 id="在客户端使用less"><a href="#在客户端使用less" class="headerlink" title="在客户端使用less"></a>在客户端使用less</h2><h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><p>引入你的 .less 样式文件的时候要设置 rel 属性值为 “stylesheet/less”:</p>
-<pre><code>&lt;link rel=&quot;stylesheet/less&quot; type=&quot;text/css&quot; href=&quot;styles.less&quot;&gt;
-</code></pre><p>然后点击页面顶部download按钮下载 less.js, 在<head> 中引入:</head></p>
-<pre><code>&lt;script src=&quot;less.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-</code></pre><p>注意你的less样式文件一定要在引入less.js前先引入。</p>
-<blockquote>
-<p>备注：请在服务器环境下使用！本地直接打开可能会报错！推荐使用anywhere这款npm i anywhere -g</p>
-</blockquote>
-<h3 id="监视模式"><a href="#监视模式" class="headerlink" title="监视模式"></a>监视模式</h3><p>监视模式是客户端的一个功能，这个功能允许你当你改变样式的时候，客户端将自动刷新。<br>开发阶段可以不使用browsersync或liveload</p>
-<p>要使用它，只要在URL后面加上’#!watch’，然后刷新页面就可以了。<br>另外，你也可以通过在终端运行less.watch()来启动监视模式。</p>
-<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;less.watch();&lt;/script&gt;
-</code></pre>]]></content>
-    </entry>
-    
+    // handle and trigger popup window;搜一下按钮点击弹窗
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    // 关闭搜索
+    $('.popup-btn-close').click(function(e){
+        // 此处修改为fade渐隐而不是show hide
+      $('.popup').fadeOut('fast');
+      // 将此处的dom操作改为样式操作
+      // $(".popoverlay").remove();
+      $(".popoverlay").fadeOut();
+
+      // 修改 弹窗时造成网站右边侧栏消失和出现时的背景页面布局重绘的抖动 
+      // $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+
   
   
-</search>
+  
+    <script type="text/javascript" src="/js/zhaoy.js"></script> 
+  
+  
+</div>
+</body>
+</html>

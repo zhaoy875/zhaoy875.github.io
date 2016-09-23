@@ -61,7 +61,7 @@
 <meta property="og:description" content="git简单示意图">
 <meta property="og:image" content="http://od6ri688q.bkt.clouddn.com/git_articlex.png">
 <meta property="og:image" content="http://od6ri688q.bkt.clouddn.com/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.jpg">
-<meta property="og:updated_time" content="2016-09-20T13:01:53.054Z">
+<meta property="og:updated_time" content="2016-09-20T17:35:41.447Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git管中窥豹">
 <meta name="twitter:description" content="git简单示意图">
@@ -130,71 +130,6 @@
   
 
 
-	
-	<canvas id="yyx"></canvas>
-	<script>
-		(function(){
-		    // document.addEventListener('touchmove', function(e) {
-		    //     e.preventDefault()
-		    // })
-		    var c = document.getElementById('yyx'),
-		        x = c.getContext('2d'),
-		        pr = window.devicePixelRatio || 1,
-		        w = window.innerWidth,
-		        h = window.innerHeight,
-		        f = 90,
-		        q,
-		        m = Math,
-		        r = 0,
-		        u = m.PI * 2,
-		        v = m.cos,
-		        z = m.random
-		    c.width = w * pr
-		    c.height = h * pr
-		    x.scale(pr, pr)
-		    x.globalAlpha = 0.6
-		    c.style.cssText ='position: fixed;top: 0;left: 0;z-index: 0;width: 100%;height: 100%;pointer-events: none;';
-		    function i() {
-		        x.clearRect(0, 0, w, h)
-		        q = [{
-		            x: 0,
-		            y: h * .7 + f
-		        }, {
-		            x: 0,
-		            y: h * .7 - f
-		        }]
-		        while (q[1].x < w + f) d(q[0], q[1])
-		    }
-
-		    function d(i, j) {
-		        x.beginPath()
-		        x.moveTo(i.x, i.y)
-		        x.lineTo(j.x, j.y)
-		        var k = j.x + (z() * 2 - 0.25) * f,
-		            n = y(j.y)
-		        x.lineTo(k, n)
-		        x.closePath()
-		        r -= u / -50
-		        x.fillStyle = '#' + (v(r) * 127 + 128 << 16 | v(r + u / 3) * 127 + 128 << 8 | v(r + u / 3 * 2) * 127 + 128).toString(16)
-		        x.fill()
-		        q[0] = q[1]
-		        q[1] = {
-		            x: k,
-		            y: n
-		        }
-		    }
-
-		    function y(p) {
-		        var t = p + (z() * 2 - 1.1) * f
-		        return (t > h || t < 0) ? y(p) : t
-		    }
-		    document.onclick = i
-		    document.ontouchstart = i
-		    i()
-		})();  
-	        
-	</script>
-
 
 
   <div class="container one-collumn sidebar-position-left page-post-detail ">
@@ -211,7 +146,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">一入前端深似海</p>
+  <p class="site-subtitle">Your time is limited, so don't waste it living someone else's life</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -410,7 +345,8 @@
       
 
       
-        <h2 id="git简单示意图"><a href="#git简单示意图" class="headerlink" title="git简单示意图"></a>git简单示意图</h2><p><img src="http://od6ri688q.bkt.clouddn.com/git_articlex.png" alt="图解git"><br><a id="more"></a></p>
+        <h2 id="git简单示意图"><a href="#git简单示意图" class="headerlink" title="git简单示意图"></a>git简单示意图</h2><p><img src="http://od6ri688q.bkt.clouddn.com/git_articlex.png" alt="图解git"></p>
+<a id="more"></a>
 <blockquote>
 <p>参考<a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="external">http://www.bootcss.com/p/git-guide/</a></p>
 </blockquote>
@@ -431,6 +367,7 @@
 <p>好了，时间有限，我写的快不一定讲明白，欢迎跟我讨论。<br>感谢linus，感谢git，感谢github，感谢kindle，感谢《Pro git》，感谢梁老师，感谢我自己，感谢所有的熊孩子们。</p>
 <h2 id="git详解-教程"><a href="#git详解-教程" class="headerlink" title="git详解 教程"></a>git详解 教程</h2><blockquote>
 <p><a href="http://blog.jobbole.com/?s=Git%E8%AF%A6%E8%A7%A3%E4%B9%8B" target="_blank" rel="external">http://blog.jobbole.com/?s=Git%E8%AF%A6%E8%A7%A3%E4%B9%8B</a></p>
+<p><a href="https://github.com/geeeeeeeeek/git-recipes/wiki/2.1-%E5%BF%AB%E9%80%9F%E6%8C%87%E5%8D%97" target="_blank" rel="external">https://github.com/geeeeeeeeek/git-recipes/wiki/2.1-%E5%BF%AB%E9%80%9F%E6%8C%87%E5%8D%97</a></p>
 </blockquote>
 <h2 id="附录git命令图"><a href="#附录git命令图" class="headerlink" title="附录git命令图"></a>附录git命令图</h2><p>git常用命令行</p>
 <p><img src="http://od6ri688q.bkt.clouddn.com/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.jpg" alt="git命令"></p>
@@ -592,7 +529,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -609,7 +546,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

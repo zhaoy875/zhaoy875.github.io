@@ -133,71 +133,6 @@
   
 
 
-	
-	<canvas id="yyx"></canvas>
-	<script>
-		(function(){
-		    // document.addEventListener('touchmove', function(e) {
-		    //     e.preventDefault()
-		    // })
-		    var c = document.getElementById('yyx'),
-		        x = c.getContext('2d'),
-		        pr = window.devicePixelRatio || 1,
-		        w = window.innerWidth,
-		        h = window.innerHeight,
-		        f = 90,
-		        q,
-		        m = Math,
-		        r = 0,
-		        u = m.PI * 2,
-		        v = m.cos,
-		        z = m.random
-		    c.width = w * pr
-		    c.height = h * pr
-		    x.scale(pr, pr)
-		    x.globalAlpha = 0.6
-		    c.style.cssText ='position: fixed;top: 0;left: 0;z-index: 0;width: 100%;height: 100%;pointer-events: none;';
-		    function i() {
-		        x.clearRect(0, 0, w, h)
-		        q = [{
-		            x: 0,
-		            y: h * .7 + f
-		        }, {
-		            x: 0,
-		            y: h * .7 - f
-		        }]
-		        while (q[1].x < w + f) d(q[0], q[1])
-		    }
-
-		    function d(i, j) {
-		        x.beginPath()
-		        x.moveTo(i.x, i.y)
-		        x.lineTo(j.x, j.y)
-		        var k = j.x + (z() * 2 - 0.25) * f,
-		            n = y(j.y)
-		        x.lineTo(k, n)
-		        x.closePath()
-		        r -= u / -50
-		        x.fillStyle = '#' + (v(r) * 127 + 128 << 16 | v(r + u / 3) * 127 + 128 << 8 | v(r + u / 3 * 2) * 127 + 128).toString(16)
-		        x.fill()
-		        q[0] = q[1]
-		        q[1] = {
-		            x: k,
-		            y: n
-		        }
-		    }
-
-		    function y(p) {
-		        var t = p + (z() * 2 - 1.1) * f
-		        return (t > h || t < 0) ? y(p) : t
-		    }
-		    document.onclick = i
-		    document.ontouchstart = i
-		    i()
-		})();  
-	        
-	</script>
-
 
 
   <div class="container one-collumn sidebar-position-left  ">
@@ -214,7 +149,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">一入前端深似海</p>
+  <p class="site-subtitle">Your time is limited, so don't waste it living someone else's life</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -326,10 +261,10 @@
     
       <div class="tag-cloud">
         <div class="tag-cloud-title">
-            目前共计 14 个标签
+            目前共计 15 个标签
         </div>
         <div class="tag-cloud-tags">
-          <a href="/tags/Blog/" style="font-size: 12px; color: #ccc">Blog</a> <a href="/tags/Github-Pages/" style="font-size: 12px; color: #ccc">Github-Pages</a> <a href="/tags/Hexo/" style="font-size: 12px; color: #ccc">Hexo</a> <a href="/tags/SSH/" style="font-size: 12px; color: #ccc">SSH</a> <a href="/tags/git/" style="font-size: 30px; color: #111">git</a> <a href="/tags/github/" style="font-size: 30px; color: #111">github</a> <a href="/tags/javascript/" style="font-size: 30px; color: #111">javascript</a> <a href="/tags/react/" style="font-size: 12px; color: #ccc">react</a> <a href="/tags/virtualDom/" style="font-size: 12px; color: #ccc">virtualDom</a> <a href="/tags/前端学习/" style="font-size: 12px; color: #ccc">前端学习</a> <a href="/tags/学习效率/" style="font-size: 12px; color: #ccc">学习效率</a> <a href="/tags/思考/" style="font-size: 12px; color: #ccc">思考</a> <a href="/tags/框架/" style="font-size: 12px; color: #ccc">框架</a> <a href="/tags/网站收藏/" style="font-size: 12px; color: #ccc">网站收藏</a>
+          <a href="/tags/Blog/" style="font-size: 12px; color: #ccc">Blog</a> <a href="/tags/Github-Pages/" style="font-size: 12px; color: #ccc">Github-Pages</a> <a href="/tags/Hexo/" style="font-size: 12px; color: #ccc">Hexo</a> <a href="/tags/SSH/" style="font-size: 12px; color: #ccc">SSH</a> <a href="/tags/git/" style="font-size: 30px; color: #111">git</a> <a href="/tags/github/" style="font-size: 30px; color: #111">github</a> <a href="/tags/javascript/" style="font-size: 30px; color: #111">javascript</a> <a href="/tags/react/" style="font-size: 12px; color: #ccc">react</a> <a href="/tags/virtualDom/" style="font-size: 12px; color: #ccc">virtualDom</a> <a href="/tags/前端学习/" style="font-size: 12px; color: #ccc">前端学习</a> <a href="/tags/学习效率/" style="font-size: 12px; color: #ccc">学习效率</a> <a href="/tags/思考/" style="font-size: 12px; color: #ccc">思考</a> <a href="/tags/框架/" style="font-size: 12px; color: #ccc">框架</a> <a href="/tags/网站收藏/" style="font-size: 12px; color: #ccc">网站收藏</a> <a href="/tags/音乐/" style="font-size: 12px; color: #ccc">音乐</a>
         </div>
       </div>
     
@@ -380,7 +315,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -397,7 +332,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
