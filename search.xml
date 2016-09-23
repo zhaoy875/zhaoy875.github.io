@@ -1414,7 +1414,7 @@
     <entry>
       <title><![CDATA[Music Time歌单分享]]></title>
       <url>https://zhaoy875.github.io/2016/09/20/music/</url>
-      <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&autoplay=1&max_width=500px&narrow=0" width="100%" frameborder="0" scrolling="no"></iframe>
+      <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=1&max_width=500px&narrow=0" width="100%" frameborder="0" scrolling="no"></iframe>
 
 
 ]]></content>
