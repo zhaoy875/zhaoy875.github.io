@@ -6,9 +6,10 @@
     <entry>
       <title><![CDATA[Music Time歌单分享]]></title>
       <url>https://zhaoy875.github.io/2016/09/20/music/</url>
-      <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=1&max_width=500px&narrow=0" width="100%" frameborder="0" scrolling="no"></iframe>
+      <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=1&narrow=0" width="100%" frameborder="0" scrolling="no"></iframe>
 
-
+<h1 id="Interface-usage"><a href="#Interface-usage" class="headerlink" title="Interface usage"></a>Interface usage</h1><p>歌单：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=1&amp;narrow=0"</span>  <span class="attribute">width</span>=<span class="string">"100%"</span>  frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
+<p>单首：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?song=408332757&amp;qssl=1&amp;qlrc=1&amp;autoplay=0"</span> <span class="attribute">width</span>=<span class="string">"100%"</span> frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
 ]]></content>
     </entry>
     
