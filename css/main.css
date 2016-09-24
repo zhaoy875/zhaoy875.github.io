@@ -2,7 +2,6 @@ body {
   background: url("http://od6ri688q.bkt.clouddn.com/polygenpattern.png") !important;
   background-size: cover !important;
   background-attachment: fixed !important;
-  animation: bg_translation 240s 0.3s ease infinite alternate;
 }
 html,
 body {
@@ -1738,7 +1737,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffffe3;
+  background: #fff9eb;
 }
 .links-of-blogroll {
   font-size: 13px;
