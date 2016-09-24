@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhaoy875.github.io/"/>
-  <updated>2016-09-23T19:02:42.221Z</updated>
+  <updated>2016-09-23T19:11:09.688Z</updated>
   <id>https://zhaoy875.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://zhaoy875.github.io/2016/09/20/music/"/>
     <id>https://zhaoy875.github.io/2016/09/20/music/</id>
     <published>2016-09-20T14:39:43.000Z</published>
-    <updated>2016-09-23T19:02:42.221Z</updated>
+    <updated>2016-09-23T19:11:09.688Z</updated>
     
     <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe style="width:100%;min-height:260px;max-height:400px" id="musiciframe" src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=0&narrow=0" frameborder="0" scrolling="no"></iframe>
 
