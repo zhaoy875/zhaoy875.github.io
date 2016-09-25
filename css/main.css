@@ -20,8 +20,10 @@ a.theme-link:hover {
   color: #fff !important;
 }
 .footer-inner:before {
-  min-height: 110px;
+  width: 80px !important;
+  height: 80px;
   background: url("http://od6ri688q.bkt.clouddn.com/20160918223554.gif") no-repeat;
+  background-size: cover;
 }
 @-moz-keyframes bg_translation {
   from {
@@ -1737,7 +1739,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff9eb;
+  background: #2b7a99;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2257,13 +2259,6 @@ a.search-result {
 .site-pv .busuanzi-value,
 .page-pv .busuanzi-value {
   margin: 0 5px;
-}
-.site-uv {
-  margin-right: 10px;
-}
-.site-uv::after {
-  content: "|";
-  padding-left: 10px;
 }
 .use-motion .post {
   opacity: 0;
