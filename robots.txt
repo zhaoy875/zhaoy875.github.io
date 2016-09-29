@@ -1,0 +1,16 @@
+# hexo robots.txt
+User-agent:*
+Allow: /
+Allow: /archives/
+
+Disallow: /vendors/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /img/
+
+Sitemap: http://zhaoy.site/sitemap.xml
+Sitemap: http://zhaoy.site/baidusitemap.xml
+
+
