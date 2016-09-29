@@ -126,16 +126,18 @@ var openURL = function (url) {
     <link href="https://zhaoy875.github.io/2016/09/09/%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87-Focus-Just-do-one-thing/"/>
     <id>https://zhaoy875.github.io/2016/09/09/提高效率-Focus-Just-do-one-thing/</id>
     <published>2016-09-08T18:50:43.000Z</published>
-    <updated>2016-09-15T14:13:44.565Z</updated>
+    <updated>2016-09-29T19:06:53.521Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p> 当我在学习某个知识点的时候总是容易被其他相关东西带走，一会看这个，一会看别的，结果什么都没精，没能深入，都是跑马观花</p>
-<p>迫切需要一种专注的学习方式，计算机最擅长的就是按照既定的程序去计算和执行任务，因为多线程和多核，计算机擅长多任务并行。<br>但我们不是计算机，我们的大脑需要专注，focus！<br>为了避免拖延和高效利用时间，可以尝试番茄工作法，在先预定的时间段内完成事先预定的某个任务，然后间隔时间休息，劳逸结合。<br>一个简单的番茄工作法webapp：<br><a href="http://alloyteam.github.io/AlloyTimer/" target="_blank" rel="external">http://alloyteam.github.io/AlloyTimer/</a></p>
+    <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><h3 id="学习工具和方式上："><a href="#学习工具和方式上：" class="headerlink" title="学习工具和方式上："></a>学习工具和方式上：</h3><p> 当我在学习某个知识点的时候总是容易被其他相关东西带走，一会看这个，一会看别的，结果什么都没精，没能深入，都是跑马观花，并且记忆力也是有限的，好记性不如烂笔头，一个好的知识管理软件对巩固知识体系一定会大有帮助。我正在使用为知笔记，通过浏览器插件，移动端客户端，pc端客户端，web端都可以同步将知识快速保存下来，分门别类。<br><img src="http://od6ri688q.bkt.clouddn.com/%E4%B8%BA%E7%9F%A5%E7%AC%94%E8%AE%B0QQ%E6%88%AA%E5%9B%BE20160930025356.png" alt="我的为之笔记"></p>
+<blockquote>
+<p>（为知笔记倾向于个人知识管理和团队分享，但是不太方便大众分享和讨论，后面我将逐步将一些文章从为知笔记转移到博客）</p>
+</blockquote>
+<h3 id="时间管理："><a href="#时间管理：" class="headerlink" title="时间管理："></a>时间管理：</h3><p>迫切需要一种专注的学习方式，计算机最擅长的就是按照既定的程序去计算和执行任务，因为多线程和多核，计算机擅长多任务并行。<br>但我们不是计算机，我们的大脑需要专注，focus！<br>为了避免拖延和高效利用时间，可以尝试番茄工作法，在先预定的时间段内完成事先预定的某个任务，然后间隔时间休息，劳逸结合。<br>一个简单的番茄工作法webapp：<br><a href="http://alloyteam.github.io/AlloyTimer/" target="_blank" rel="external">http://alloyteam.github.io/AlloyTimer/</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h2&gt;&lt;p&gt; 当我在学习某个知识点的时候总是容易被其他相关东西带走，一会看这个，一会看别的，结果什么都没精，没能深入，都是跑马观花&lt;/p&gt;
-&lt;p&gt;迫切需
+      &lt;h2 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h2&gt;&lt;h3 id=&quot;学习工具和方式上：&quot;&gt;&lt;a href=&quot;#学习工具和方式上：&quot; class=&quot;headerlink&quot; title=&quot;学习工具和方式
     
     </summary>
     
