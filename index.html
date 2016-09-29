@@ -523,14 +523,9 @@ Interface usage歌单：1&lt;iframe src="https://music.daoapp.io/iframe?playlist
       
         
           
-          ##　缘起每次修改博客后 ，hexo s去启动本地服务器，hexo 不会自动打开，每次要点开浏览器，点开地址，我再
-步骤检查npm包依赖
-npm ls -g 查看全局安装的模块及依赖
-
-+-- bower@1.7.9
-+-- cnpm@4.2.0
-| +-- auto-correct@1.0.0
-|
+          ##　缘起每次修改博客后 ，hexo s启动本地服务器后不会自动打开浏览器，每次要点开地址。不爽！搞起
+browsersync或者anywhere(随时随地启动当前目录服务器，真的很好用^_^)都有这个功能，从搜了下anywhere的源码实现,移植到hexo 的模块
+打开 \node_modules
           ...
 
           <div class="post-more-link text-center">
