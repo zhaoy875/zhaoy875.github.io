@@ -4,6 +4,18 @@
   
     
     <entry>
+      <title></title>
+      <url>https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/</url>
+      <content type="html"><![CDATA[<h1 id="ubuntu-hexo博客教程简介"><a href="#ubuntu-hexo博客教程简介" class="headerlink" title="ubuntu hexo博客教程简介"></a>ubuntu hexo博客教程简介</h1><h2 id="搭建nodejs-环境"><a href="#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><p>sudo apt install nodejs<br>sudo apt install npm<br>安装git<br>sudo apt-get install git-core</p>
+<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>sudo su 切换到root用户</p>
+<p>sudo npm install -g hexo-cli</p>
+<p>sudo npm install   hexo-cli  –save</p>
+<p>使用hexo init blog  新建初始化博客</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Music Time歌单分享]]></title>
       <url>https://zhaoy875.github.io/2016/09/20/music/</url>
       <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe style="width:100%;min-height:260px;max-height:400px" id="musiciframe" src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=0&narrow=0" frameborder="0" scrolling="no"></iframe>
@@ -306,16 +318,6 @@ console.profileEnd();
     </entry>
     
     <entry>
-      <title><![CDATA[Clone-Stats]]></title>
-      <url>https://zhaoy875.github.io/2016/01/07/README/</url>
-      <content type="html"><![CDATA[<h1 id="clone-stats"><a href="#clone-stats" class="headerlink" title="clone-stats "></a>clone-stats <a href="https://flattr.com/submit/auto?user_id=hughskennedy&amp;url=http://github.com/hughsk/clone-stats&amp;title=clone-stats&amp;description=hughsk/clone-stats%20on%20GitHub&amp;language=en_GB&amp;tags=flattr,github,javascript&amp;category=software" target="_blank" rel="external"><img src="https://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this!"></a><a href="http://github.com/hughsk/stability-badges" target="_blank" rel="external"><img src="http://hughsk.github.io/stability-badges/dist/experimental.svg" alt="experimental"></a></h1><p>Safely clone node’s<br><a href="http://nodejs.org/api/fs.html#fs_class_fs_stats" target="_blank" rel="external"><code>fs.Stats</code></a> instances without<br>losing their class methods, i.e. <code>stat.isDirectory()</code> and co.</p>
-<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p><a href="https://nodei.co/npm/clone-stats" target="_blank" rel="external"><img src="https://nodei.co/npm/clone-stats.png?mini=true" alt="clone-stats"></a></p>
-<h3 id="copy-require-39-clone-stats-39-stat"><a href="#copy-require-39-clone-stats-39-stat" class="headerlink" title="copy = require(&#39;clone-stats&#39;)(stat)"></a><code>copy = require(&#39;clone-stats&#39;)(stat)</code></h3><p>Returns a clone of the original <code>fs.Stats</code> instance (<code>stat</code>).</p>
-<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>MIT. See <a href="http://github.com/hughsk/clone-stats/blob/master/LICENSE.md" target="_blank" rel="external">LICENSE.md</a> for details.</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[客户端使用Less]]></title>
       <url>https://zhaoy875.github.io/2016/01/07/%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8less/</url>
       <content type="html"><![CDATA[<h2 id="在客户端使用less"><a href="#在客户端使用less" class="headerlink" title="在客户端使用less"></a>在客户端使用less</h2><h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><p>引入你的 .less 样式文件的时候要设置 rel 属性值为 “stylesheet/less”:</p>
@@ -330,6 +332,16 @@ console.profileEnd();
 <p>要使用它，只要在URL后面加上’#!watch’，然后刷新页面就可以了。<br>另外，你也可以通过在终端运行less.watch()来启动监视模式。</p>
 <pre><code>&lt;script type=&quot;text/javascript&quot;&gt;less.watch();&lt;/script&gt;
 </code></pre>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Clone-Stats]]></title>
+      <url>https://zhaoy875.github.io/2016/01/07/README/</url>
+      <content type="html"><![CDATA[<h1 id="clone-stats"><a href="#clone-stats" class="headerlink" title="clone-stats "></a>clone-stats <a href="https://flattr.com/submit/auto?user_id=hughskennedy&amp;url=http://github.com/hughsk/clone-stats&amp;title=clone-stats&amp;description=hughsk/clone-stats%20on%20GitHub&amp;language=en_GB&amp;tags=flattr,github,javascript&amp;category=software" target="_blank" rel="external"><img src="https://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this!"></a><a href="http://github.com/hughsk/stability-badges" target="_blank" rel="external"><img src="http://hughsk.github.io/stability-badges/dist/experimental.svg" alt="experimental"></a></h1><p>Safely clone node’s<br><a href="http://nodejs.org/api/fs.html#fs_class_fs_stats" target="_blank" rel="external"><code>fs.Stats</code></a> instances without<br>losing their class methods, i.e. <code>stat.isDirectory()</code> and co.</p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p><a href="https://nodei.co/npm/clone-stats" target="_blank" rel="external"><img src="https://nodei.co/npm/clone-stats.png?mini=true" alt="clone-stats"></a></p>
+<h3 id="copy-require-39-clone-stats-39-stat"><a href="#copy-require-39-clone-stats-39-stat" class="headerlink" title="copy = require(&#39;clone-stats&#39;)(stat)"></a><code>copy = require(&#39;clone-stats&#39;)(stat)</code></h3><p>Returns a clone of the original <code>fs.Stats</code> instance (<code>stat</code>).</p>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>MIT. See <a href="http://github.com/hughsk/clone-stats/blob/master/LICENSE.md" target="_blank" rel="external">LICENSE.md</a> for details.</p>
+]]></content>
     </entry>
     
   
