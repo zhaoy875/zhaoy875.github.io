@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhaoy875.github.io/"/>
-  <updated>2016-10-11T06:33:45.000Z</updated>
+  <updated>2016-10-11T15:28:34.811Z</updated>
   <id>https://zhaoy875.github.io/</id>
   
   <author>
@@ -16,26 +16,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>Ubuntu 安装Hexo博客</title>
     <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
     <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
-    <published>2016-10-11T15:23:15.984Z</published>
-    <updated>2016-10-11T06:33:45.000Z</updated>
+    <published>2016-10-11T05:50:43.000Z</published>
+    <updated>2016-10-11T15:28:34.811Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="ubuntu-hexo博客教程简介"><a href="#ubuntu-hexo博客教程简介" class="headerlink" title="ubuntu hexo博客教程简介"></a>ubuntu hexo博客教程简介</h1><h2 id="搭建nodejs-环境"><a href="#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><p>sudo apt install nodejs<br>sudo apt install npm<br>安装git<br>sudo apt-get install git-core</p>
+    <content type="html"><![CDATA[<h1 id="ubuntu-安装hexo博客"><a href="#ubuntu-安装hexo博客" class="headerlink" title="ubuntu 安装hexo博客"></a>ubuntu 安装hexo博客</h1><h2 id="搭建nodejs-环境"><a href="#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt <span class="keyword">install</span> nodejs</div><div class="line">sudo apt <span class="keyword">install</span> npm</div></pre></td></tr></table></figure>
+<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
 <p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
-<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>sudo su 切换到root用户</p>
-<p>sudo npm install -g hexo-cli</p>
-<p>sudo npm install   hexo-cli  –save</p>
-<p>使用hexo init blog  新建初始化博客</p>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
+<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
+<p>hexo s 本地预览–over</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;ubuntu-hexo博客教程简介&quot;&gt;&lt;a href=&quot;#ubuntu-hexo博客教程简介&quot; class=&quot;headerlink&quot; title=&quot;ubuntu hexo博客教程简介&quot;&gt;&lt;/a&gt;ubuntu hexo博客教程简介&lt;/h1&gt;&lt;h2 id=&quot;搭建nod
+      &lt;h1 id=&quot;ubuntu-安装hexo博客&quot;&gt;&lt;a href=&quot;#ubuntu-安装hexo博客&quot; class=&quot;headerlink&quot; title=&quot;ubuntu 安装hexo博客&quot;&gt;&lt;/a&gt;ubuntu 安装hexo博客&lt;/h1&gt;&lt;h2 id=&quot;搭建nodejs-环境&quot;&gt;
     
     </summary>
     
+    
+      <category term="ubuntu" scheme="https://zhaoy875.github.io/tags/ubuntu/"/>
+    
+      <category term="hexo" scheme="https://zhaoy875.github.io/tags/hexo/"/>
     
   </entry>
   
@@ -516,6 +521,30 @@ console.profileEnd();
   </entry>
   
   <entry>
+    <title>Clone-Stats</title>
+    <link href="https://zhaoy875.github.io/2016/01/07/README/"/>
+    <id>https://zhaoy875.github.io/2016/01/07/README/</id>
+    <published>2016-01-07T11:16:43.000Z</published>
+    <updated>2016-09-30T04:51:48.171Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="clone-stats"><a href="#clone-stats" class="headerlink" title="clone-stats "></a>clone-stats <a href="https://flattr.com/submit/auto?user_id=hughskennedy&amp;url=http://github.com/hughsk/clone-stats&amp;title=clone-stats&amp;description=hughsk/clone-stats%20on%20GitHub&amp;language=en_GB&amp;tags=flattr,github,javascript&amp;category=software" target="_blank" rel="external"><img src="https://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this!"></a><a href="http://github.com/hughsk/stability-badges" target="_blank" rel="external"><img src="http://hughsk.github.io/stability-badges/dist/experimental.svg" alt="experimental"></a></h1><p>Safely clone node’s<br><a href="http://nodejs.org/api/fs.html#fs_class_fs_stats" target="_blank" rel="external"><code>fs.Stats</code></a> instances without<br>losing their class methods, i.e. <code>stat.isDirectory()</code> and co.</p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p><a href="https://nodei.co/npm/clone-stats" target="_blank" rel="external"><img src="https://nodei.co/npm/clone-stats.png?mini=true" alt="clone-stats"></a></p>
+<h3 id="copy-require-39-clone-stats-39-stat"><a href="#copy-require-39-clone-stats-39-stat" class="headerlink" title="copy = require(&#39;clone-stats&#39;)(stat)"></a><code>copy = require(&#39;clone-stats&#39;)(stat)</code></h3><p>Returns a clone of the original <code>fs.Stats</code> instance (<code>stat</code>).</p>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>MIT. See <a href="http://github.com/hughsk/clone-stats/blob/master/LICENSE.md" target="_blank" rel="external">LICENSE.md</a> for details.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;clone-stats&quot;&gt;&lt;a href=&quot;#clone-stats&quot; class=&quot;headerlink&quot; title=&quot;clone-stats &quot;&gt;&lt;/a&gt;clone-stats &lt;a href=&quot;https://flattr.com/submit/auto?
+    
+    </summary>
+    
+    
+      <category term="clone-stats" scheme="https://zhaoy875.github.io/tags/clone-stats/"/>
+    
+  </entry>
+  
+  <entry>
     <title>客户端使用Less</title>
     <link href="https://zhaoy875.github.io/2016/01/07/%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8less/"/>
     <id>https://zhaoy875.github.io/2016/01/07/客户端使用less/</id>
@@ -547,30 +576,6 @@ console.profileEnd();
       <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
     
       <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Clone-Stats</title>
-    <link href="https://zhaoy875.github.io/2016/01/07/README/"/>
-    <id>https://zhaoy875.github.io/2016/01/07/README/</id>
-    <published>2016-01-07T11:16:43.000Z</published>
-    <updated>2016-09-30T04:51:48.171Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="clone-stats"><a href="#clone-stats" class="headerlink" title="clone-stats "></a>clone-stats <a href="https://flattr.com/submit/auto?user_id=hughskennedy&amp;url=http://github.com/hughsk/clone-stats&amp;title=clone-stats&amp;description=hughsk/clone-stats%20on%20GitHub&amp;language=en_GB&amp;tags=flattr,github,javascript&amp;category=software" target="_blank" rel="external"><img src="https://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this!"></a><a href="http://github.com/hughsk/stability-badges" target="_blank" rel="external"><img src="http://hughsk.github.io/stability-badges/dist/experimental.svg" alt="experimental"></a></h1><p>Safely clone node’s<br><a href="http://nodejs.org/api/fs.html#fs_class_fs_stats" target="_blank" rel="external"><code>fs.Stats</code></a> instances without<br>losing their class methods, i.e. <code>stat.isDirectory()</code> and co.</p>
-<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p><a href="https://nodei.co/npm/clone-stats" target="_blank" rel="external"><img src="https://nodei.co/npm/clone-stats.png?mini=true" alt="clone-stats"></a></p>
-<h3 id="copy-require-39-clone-stats-39-stat"><a href="#copy-require-39-clone-stats-39-stat" class="headerlink" title="copy = require(&#39;clone-stats&#39;)(stat)"></a><code>copy = require(&#39;clone-stats&#39;)(stat)</code></h3><p>Returns a clone of the original <code>fs.Stats</code> instance (<code>stat</code>).</p>
-<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>MIT. See <a href="http://github.com/hughsk/clone-stats/blob/master/LICENSE.md" target="_blank" rel="external">LICENSE.md</a> for details.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;clone-stats&quot;&gt;&lt;a href=&quot;#clone-stats&quot; class=&quot;headerlink&quot; title=&quot;clone-stats &quot;&gt;&lt;/a&gt;clone-stats &lt;a href=&quot;https://flattr.com/submit/auto?
-    
-    </summary>
-    
-    
-      <category term="clone-stats" scheme="https://zhaoy875.github.io/tags/clone-stats/"/>
     
   </entry>
   
