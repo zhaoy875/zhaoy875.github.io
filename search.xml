@@ -21,7 +21,7 @@
       <url>https://zhaoy875.github.io/2016/09/20/music/</url>
       <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe style="width:100%;min-height:260px;max-height:400px" id="musiciframe" src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=0&narrow=0" frameborder="0" scrolling="no"></iframe>
 
-
+<a id="more"></a>
 <h2 id="Interface-usage"><a href="#Interface-usage" class="headerlink" title="Interface usage"></a>Interface usage</h2><p>歌单：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=1&amp;narrow=0"</span>  <span class="attribute">width</span>=<span class="string">"100%"</span>  frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
 <p>单首：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?song=408332757&amp;qssl=1&amp;qlrc=1&amp;autoplay=0"</span> <span class="attribute">width</span>=<span class="string">"100%"</span> frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
 <h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><p>使用iframe内嵌页面<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Demos:</span></div><div class="line"><span class="symbol"></span></div><div class="line">https:<span class="comment">//music.daoapp.io/iframe?song=287749&amp;qssl=1&amp;qlrc=1&amp;qnarrow=0&amp;max_width=50%&amp;autoplay=1</span></div><div class="line"><span class="symbol">https:</span><span class="comment">//music.daoapp.io/iframe?song=287749&amp;qnarrow=1&amp;qssl=1</span></div><div class="line"><span class="symbol">URL:</span> http(s):<span class="comment">//music.daoapp.io/ Donot use HTTPS if it's not necessary. But if you do, don't forget set qssl to 1. Method: GET The arguments are:</span></div><div class="line"></div><div class="line">album=album_id  		<span class="comment">//专辑id</span></div><div class="line">playlist=playlist_id    <span class="comment">//歌单id</span></div><div class="line">song=song_id            <span class="comment">//单首id</span></div><div class="line">program=program_id</div><div class="line">radio=radio_id</div><div class="line">mv=mv_id 				</div><div class="line">qssl=[<span class="number">0</span>|<span class="number">1</span>]            </div><div class="line">qlrc=[<span class="number">0</span>|<span class="number">1</span>]             <span class="comment">//歌词</span></div><div class="line">qnarrow=[<span class="number">0</span>|<span class="number">1</span>]</div><div class="line">max_width=[<span class="number">100</span>%|<span class="number">32</span>rem|<span class="number">400</span>px|something else]</div><div class="line">autoplay=[<span class="number">0</span>|<span class="number">1</span>]         <span class="comment">//自动播放</span></div></pre></td></tr></table></figure></p>
@@ -92,7 +92,7 @@ var openURL = function (url) {
     <entry>
       <title><![CDATA[提高效率-Focus,Just Do One Thing]]></title>
       <url>https://zhaoy875.github.io/2016/09/09/%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87-Focus-Just-do-one-thing/</url>
-      <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><h3 id="学习工具和方式上："><a href="#学习工具和方式上：" class="headerlink" title="学习工具和方式上："></a>学习工具和方式上：</h3><p> 当我在学习某个知识点的时候总是容易被其他相关东西带走，一会看这个，一会看别的，结果什么都没精，没能深入，都是跑马观花，并且记忆力也是有限的，好记性不如烂笔头，一个好的知识管理软件对巩固知识体系一定会大有帮助。我正在使用为知笔记，通过浏览器插件，移动端客户端，pc端客户端，web端都可以同步将知识快速保存下来，分门别类。<br><img src="http://od6ri688q.bkt.clouddn.com/%E4%B8%BA%E7%9F%A5%E7%AC%94%E8%AE%B0QQ%E6%88%AA%E5%9B%BE20160930025356.png" alt="我的为之笔记"></p>
+      <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><h3 id="学习工具和方式上："><a href="#学习工具和方式上：" class="headerlink" title="学习工具和方式上："></a>学习工具和方式上：</h3><p> 当我在学习某个知识点的时候总是容易被其他相关东西带走，一会看这个，一会看别的，结果什么都没精，没能深入，都是跑马观花，并且记忆力也是有限的，好记性不如烂笔头，一个好的知识管理软件对巩固知识体系一定会大有帮助。我正在使用为知笔记，通过浏览器插件，移动端客户端，pc端客户端，web端都可以同步将知识快速保存下来，分门别类。<br><img src="http://od6ri688q.bkt.clouddn.com/%E4%B8%BA%E7%9F%A5%E7%AC%94%E8%AE%B0QQ%E6%88%AA%E5%9B%BE20160930025356.png" alt="我的为之笔记"><br><a id="more"></a></p>
 <blockquote>
 <p>（为知笔记倾向于个人知识管理和团队分享，但是不太方便大众分享和讨论，后面我将逐步将一些文章从为知笔记转移到博客）</p>
 </blockquote>
@@ -105,8 +105,7 @@ var openURL = function (url) {
       <url>https://zhaoy875.github.io/2016/09/08/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8Virtual-DOM/</url>
       <content type="html"><![CDATA[<p><img src="http://od6ri688q.bkt.clouddn.com/VirtualDOM.gif" alt=""></p>
 <h1 id="React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM"><a href="#React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM" class="headerlink" title="React中很少有人能解释清楚的问题——为什么要使用Virtual DOM"></a>React中很少有人能解释清楚的问题——为什么要使用Virtual DOM</h1><p>  这也是我在思考的问题，大家都在跟风学RN ,VUE,Ag2,却很少看见有人用数据来量化实际项目应用中dom操作对性能的影响 </p>
-<p> 下面看到野狗微信平台的一篇文章,先介绍下文章内容再说说我的理解： </p>
-<p>原文链接：<a href="http://mp.weixin.qq.com/s?__biz=MzI0ODA2ODU2NQ==&amp;mid=2651130413&amp;idx=1&amp;sn=56a1cc3ac225a09982fc0c4a508222c7" target="_blank" rel="external">React中一个没人能解释清楚的问题——为什么要使用Virtual DOM</a></p>
+<p> 下面看到野狗微信平台的一篇文章,先介绍下文章内容再说说我的理解：<br><a id="more"></a><br>原文链接：<a href="http://mp.weixin.qq.com/s?__biz=MzI0ODA2ODU2NQ==&amp;mid=2651130413&amp;idx=1&amp;sn=56a1cc3ac225a09982fc0c4a508222c7" target="_blank" rel="external">React中一个没人能解释清楚的问题——为什么要使用Virtual DOM</a></p>
 <h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><p> 有一天，我的朋友向我提了一个有关React的问题：</p>
 <p>组件化， 单向数据绑定，这些我都懂了。但是React为什么要用Virtual DOM呢？</p>
 <p>我的回答非常套路，“因为直接操作DOM比较低效，比较慢。”。</p>
@@ -143,7 +142,7 @@ var openURL = function (url) {
     <entry>
       <title><![CDATA[Git管中窥豹]]></title>
       <url>https://zhaoy875.github.io/2016/09/07/Git%E7%AE%A1%E4%B8%AD%E7%AA%A5%E8%B1%B9/</url>
-      <content type="html"><![CDATA[<h2 id="git简单示意图"><a href="#git简单示意图" class="headerlink" title="git简单示意图"></a>git简单示意图</h2><p><img src="http://od6ri688q.bkt.clouddn.com/git_articlex.png" alt="图解git"></p>
+      <content type="html"><![CDATA[<h2 id="git简单示意图"><a href="#git简单示意图" class="headerlink" title="git简单示意图"></a>git简单示意图</h2><p><img src="http://od6ri688q.bkt.clouddn.com/git%E4%BB%93%E5%BA%93%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="图解git"></p>
 <a id="more"></a>
 <blockquote>
 <p>参考<a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="external">http://www.bootcss.com/p/git-guide/</a></p>
@@ -316,6 +315,20 @@ console.profile(&apos;性能分析器一&apos;);
 Foo();
 console.profileEnd();
 </code></pre>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[移动端前端开发之Viewport详解]]></title>
+      <url>https://zhaoy875.github.io/2016/03/09/%E7%A7%BB%E5%8A%A8%E7%AB%AFviewport%E8%AF%A6%E8%A7%A3/</url>
+      <content type="html"><![CDATA[<h1 id="移动端前端开发之viewport的深入理解"><a href="#移动端前端开发之viewport的深入理解" class="headerlink" title="移动端前端开发之viewport的深入理解"></a>移动端前端开发之viewport的深入理解</h1><p>在移动设备上进行网页的重构或开发，需要响应各种不同分辨率的移动设备，明白了viewport的概念以及弄清楚了跟viewport有关的meta标签的使用，才能更好地让我们的网页适配或响应各种不同分辨率的移动设备。</p>
+<a id="more"></a>
+<h3 id="本文主要转载自无双博客"><a href="#本文主要转载自无双博客" class="headerlink" title="本文主要转载自无双博客"></a>本文主要转载自无双博客</h3><blockquote>
+<p><a href="http://www.cnblogs.com/2050/p/3877280.html" target="_blank" rel="external">移动前端开发之viewport的深入理解</a></p>
+</blockquote>
+<h2 id="一、viewport的概念"><a href="#一、viewport的概念" class="headerlink" title="一、viewport的概念"></a>一、viewport的概念</h2><p>通俗的讲，移动设备上的viewport就是设备屏幕上能用来显示网页的那一块区域，更具体一点就是浏览器上(也可能是一个app中的webview)用来显示网页的那部分区域。</p>
+<p>但viewport又不局限于浏览器可视区域的大小，它可能比浏览器的可视区域要大，也可能比浏览器的可视区域要小。</p>
+<p>在默认情况下，一般来讲，移动设备上的viewport都是要大于浏览器可视区域的，这是因为考虑到移动设备的分辨率相对于桌面电脑来说都比较小，所以为了能在移动设备上正常显示那些传统的为桌面浏览器设计的网站，移动设备上的浏览器都会把自己默认的viewport设为980px或1024px（也可能是其它值，这个是由设备自己决定的），但带来的后果就是浏览器会出现横向滚动条，因为浏览器可视区域的宽度是比这个默认的viewport的宽度要小的。下图列出了一些设备上浏览器的默认viewport的宽度。</p>
+]]></content>
     </entry>
     
     <entry>
