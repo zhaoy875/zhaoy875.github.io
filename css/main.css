@@ -5,7 +5,7 @@ body {
 }
 html,
 body {
-  cursor: url("http://od6ri688q.bkt.clouddn.com/cursor.ico"), auto;
+  cursor: url("/images/cursor.cur"), auto;
 }
 .footer-inner {
   text-shadow: 0 0 2px #000;
@@ -1747,7 +1747,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #7d2d9d;
+  background: #ad3213;
 }
 .links-of-blogroll {
   font-size: 13px;
