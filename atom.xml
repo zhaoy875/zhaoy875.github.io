@@ -46,8 +46,8 @@
   
   <entry>
     <title>Music Time歌单分享</title>
-    <link href="https://zhaoy875.github.io/2016/09/20/music/"/>
-    <id>https://zhaoy875.github.io/2016/09/20/music/</id>
+    <link href="https://zhaoy875.github.io/2016/09/20/music%E6%AD%8C%E5%8D%95/"/>
+    <id>https://zhaoy875.github.io/2016/09/20/music歌单/</id>
     <published>2016-09-20T14:39:43.000Z</published>
     <updated>2016-10-15T07:17:16.052Z</updated>
     
@@ -347,9 +347,9 @@
       <category term="GitHub" scheme="https://zhaoy875.github.io/categories/GitHub/"/>
     
     
-      <category term="Awesome" scheme="https://zhaoy875.github.io/tags/Awesome/"/>
-    
       <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
+    
+      <category term="Awesome" scheme="https://zhaoy875.github.io/tags/Awesome/"/>
     
   </entry>
   
@@ -564,9 +564,9 @@ var openURL = function (url) {
       <category term="git" scheme="https://zhaoy875.github.io/categories/git/"/>
     
     
-      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
-    
       <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
+    
+      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
     
   </entry>
   
@@ -861,9 +861,9 @@ console.profileEnd();
       <category term="css预处理器" scheme="https://zhaoy875.github.io/categories/css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/"/>
     
     
-      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
-    
       <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
+    
+      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
     
   </entry>
   
