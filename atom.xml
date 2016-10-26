@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhaoy875.github.io/"/>
-  <updated>2016-10-26T10:25:41.895Z</updated>
+  <updated>2016-10-26T12:55:42.426Z</updated>
   <id>https://zhaoy875.github.io/</id>
   
   <author>
@@ -14,6 +14,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://zhaoy875.github.io/2016/10/26/css%E7%AC%94%E5%BD%95/"/>
+    <id>https://zhaoy875.github.io/2016/10/26/css笔录/</id>
+    <published>2016-10-26T12:55:42.330Z</published>
+    <updated>2016-10-26T12:55:42.426Z</updated>
+    
+    <content type="html"><![CDATA[<p>css笔录</p>
+<p>背景</p>
+<p>background属性的值的书写顺序官方并没有强制标准的。<br>为了可读性，定一个CSS书写规范，规则2.1：background的值的顺序是background-color，<br>background-image，<br>background-repeat，<br>background-attachment，<br>background-position。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;css笔录&lt;/p&gt;
+&lt;p&gt;背景&lt;/p&gt;
+&lt;p&gt;background属性的值的书写顺序官方并没有强制标准的。&lt;br&gt;为了可读性，定一个CSS书写规范，规则2.1：background的值的顺序是background-color，&lt;br&gt;background-image，&lt;br
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://zhaoy875.github.io/2016/10/26/jquery%E7%89%87%E6%AE%B5/"/>
+    <id>https://zhaoy875.github.io/2016/10/26/jquery片段/</id>
+    <published>2016-10-26T12:54:49.860Z</published>
+    <updated>2016-10-26T12:54:49.967Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="jquery常用片段"><a href="#jquery常用片段" class="headerlink" title="jquery常用片段"></a>jquery常用片段</h2><blockquote>
+<p>JQuery是继prototype之后又一个优秀的Javascript库。它是轻量级的js库 ，它兼容CSS3，还兼容各种浏览器（IE 6.0+, FF 1.5+, Safari 2.0+, Opera 9.0+），jQuery2.0及后续版本将不再支持IE6/7/8浏览器。jQuery使用户能更方便地处理HTML（标准通用标记语言下的一个应用）、events、实现动画效果，并且方便地为网站提供AJAX交互。jQuery还有一个比较大的优势是，它的文档说明很全，而且各种应用也说得很详细，同时还有许多成熟的插件可供选择。</p>
+</blockquote>
+<h2 id="检测IE浏览器"><a href="#检测IE浏览器" class="headerlink" title="检测IE浏览器"></a>检测IE浏览器</h2><p>在进行CSS设计时，IE浏览器对开发者及设计师而言无疑是个麻烦。尽管IE6的黑暗时代已经过去，IE浏览器家族的人气亦在不断下滑，但我们仍然有必要对其进行检测。当然，以下片段亦可用于检测其它浏览器。</p>
+<pre><code>$(document).ready(function() { 
+  if (navigator.userAgent.match(/msie/i) ){ 
+    console.log(&apos;This is Internet Explorer&apos;); 
+  } 
+}); 
+</code></pre><p>来源:<a href="http://stackoverflow.com/questions/14365725/easiest-lightest-replacement-for-browser-detection-jquery-1-9" target="_blank" rel="external">Stack Overflow</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;jquery常用片段&quot;&gt;&lt;a href=&quot;#jquery常用片段&quot; class=&quot;headerlink&quot; title=&quot;jquery常用片段&quot;&gt;&lt;/a&gt;jquery常用片段&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;JQuery是继prototype之后又一个优秀的
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Ubuntu 安装Hexo博客</title>
@@ -458,9 +510,9 @@
       <category term="GitHub" scheme="https://zhaoy875.github.io/categories/GitHub/"/>
     
     
-      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
-    
       <category term="Awesome" scheme="https://zhaoy875.github.io/tags/Awesome/"/>
+    
+      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
     
   </entry>
   
@@ -675,9 +727,9 @@ var openURL = function (url) {
       <category term="git" scheme="https://zhaoy875.github.io/categories/git/"/>
     
     
-      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
-    
       <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
+    
+      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
     
   </entry>
   
@@ -972,9 +1024,9 @@ console.profileEnd();
       <category term="css预处理器" scheme="https://zhaoy875.github.io/categories/css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/"/>
     
     
-      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
-    
       <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
+    
+      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
     
   </entry>
   
