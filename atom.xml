@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhaoy875.github.io/"/>
-  <updated>2016-10-11T15:28:34.811Z</updated>
+  <updated>2016-10-26T10:25:41.895Z</updated>
   <id>https://zhaoy875.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
     <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
     <published>2016-10-11T05:50:43.000Z</published>
-    <updated>2016-10-11T15:28:34.811Z</updated>
+    <updated>2016-10-26T10:25:41.895Z</updated>
     
     <content type="html"><![CDATA[<h1 id="ubuntu-安装hexo博客"><a href="#ubuntu-安装hexo博客" class="headerlink" title="ubuntu 安装hexo博客"></a>ubuntu 安装hexo博客</h1><h2 id="搭建nodejs-环境"><a href="#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt <span class="keyword">install</span> nodejs</div><div class="line">sudo apt <span class="keyword">install</span> npm</div></pre></td></tr></table></figure>
 <p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
@@ -49,7 +49,7 @@
     <link href="https://zhaoy875.github.io/2016/09/20/music%E6%AD%8C%E5%8D%95/"/>
     <id>https://zhaoy875.github.io/2016/09/20/music歌单/</id>
     <published>2016-09-20T14:39:43.000Z</published>
-    <updated>2016-10-15T07:17:16.052Z</updated>
+    <updated>2016-10-26T10:25:29.246Z</updated>
     
     <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe style="width:100%;min-height:260px;max-height:400px" id="musiciframe" src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=0&narrow=0" frameborder="0" scrolling="no"></iframe>
 
@@ -76,10 +76,10 @@
     <link href="https://zhaoy875.github.io/2016/09/20/%E7%82%92%E9%B8%A1%E5%85%A8%E7%9A%84%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86%E6%B1%87%E9%9B%86/"/>
     <id>https://zhaoy875.github.io/2016/09/20/炒鸡全的前端资源整理汇集/</id>
     <published>2016-09-20T09:43:20.000Z</published>
-    <updated>2016-10-26T09:43:55.848Z</updated>
+    <updated>2016-10-26T10:25:55.725Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前端资源汇集"><a href="#前端资源汇集" class="headerlink" title="前端资源汇集"></a>前端资源汇集</h1><p>参考自 <a href="https://segmentfault.com/a/1190000004978770" target="_blank" rel="external">https://segmentfault.com/a/1190000004978770</a><br>不过原文 到中间和后面就很乱了，我又重新整理了分类了如下，好累。。。</p>
-<p>真的炒鸡多超级全的前端资源啊！可是我蓝瘦香菇/(ㄒoㄒ)/~~</p>
+    <content type="html"><![CDATA[<h1 id="前端资源汇集"><a href="#前端资源汇集" class="headerlink" title="前端资源汇集"></a>前端资源汇集</h1><p>参考自 <a href="https://segmentfault.com/a/1190000004978770" target="_blank" rel="external">https://segmentfault.com/a/1190000004978770</a><br>原文 到中间和后面就很乱了，我又重新整理了分类了下</p>
+<p>真的炒鸡多超级全的前端资源啊！蓝瘦香菇/(ㄒoㄒ)/~~</p>
 <h2 id="综合类"><a href="#综合类" class="headerlink" title="综合类"></a>综合类</h2><h3 id="综合类-地址"><a href="#综合类-地址" class="headerlink" title="综合类 地址"></a>综合类 地址</h3><p>前端知识体系 <a href="http://www.cnblogs.com/sb19871023/p/3894452.html" target="_blank" rel="external">http://www.cnblogs.com/sb19871023/p/3894452.html</a><br>前端知识结构 <a href="https://github.com/JacksonTian/fks" target="_blank" rel="external">https://github.com/JacksonTian/fks</a><br>前端知识体系 <a href="http://www.cnblogs.com/sb19871023/p/3894452.html" target="_blank" rel="external">http://www.cnblogs.com/sb19871023/p/3894452.html</a><br>Web前端在线开发网站 <a href="http://www.hubwiz.com/course/?type=web" target="_blank" rel="external">http://www.hubwiz.com/course/?type=web</a><br>Web前端开发大系概览-中文版 <a href="http://www.cnblogs.com/unruledboy/p/WebFrontEndStack.html" target="_blank" rel="external">http://www.cnblogs.com/unruledboy/p/WebFrontEndStack.html</a><br>免费的编程中文书籍索引 <a href="https://github.com/justjavac/free-programming-books-zh_CN" target="_blank" rel="external">https://github.com/justjavac/free-programming-books-zh_CN</a><br>前端书籍 <a href="https://github.com/dypsilon/frontend-dev-bookmarks" target="_blank" rel="external">https://github.com/dypsilon/frontend-dev-bookmarks</a><br>前端免费书籍大全 <a href="https://github.com/vhf/free-programming-books" target="_blank" rel="external">https://github.com/vhf/free-programming-books</a><br>前端知识体系 <a href="http://www.cnblogs.com/sb19871023/p/3894452.html" target="_blank" rel="external">http://www.cnblogs.com/sb19871023/p/3894452.html</a><br>免费的编程中文书籍索引 <a href="https://github.com/justjavac/free-programming-books-zh_CN" target="_blank" rel="external">https://github.com/justjavac/free-programming-books-zh_CN</a><br>智能社 - 精通JavaScript开发 <a href="http://study.163.com/course/introduction/224014.htm" target="_blank" rel="external">http://study.163.com/course/introduction/224014.htm</a><br>重新介绍 JavaScript（JS 教程） <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript</a><br>麻省理工学院公开课：计算机科学及编程导论 <a href="http://v.163.com/special/opencourse/bianchengdaolun.html" target="_blank" rel="external">http://v.163.com/special/opencourse/bianchengdaolun.html</a><br>JavaScript中的this陷阱的最全收集—没有之一 <a href="http://segmentfault.com/a/1190000002640298" target="_blank" rel="external">http://segmentfault.com/a/1190000002640298</a><br>JS函数式编程指南 <a href="https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/ch1.html" target="_blank" rel="external">https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/ch1.html</a><br>JavaScript Promise迷你书（中文版） <a href="http://liubin.github.io/promises-book" target="_blank" rel="external">http://liubin.github.io/promises-book</a><br>腾讯移动Web前端知识库 <a href="https://github.com/AlloyTeam/Mars" target="_blank" rel="external">https://github.com/AlloyTeam/Mars</a><br>Front-End-Develop-Guide 前端开发指南 <a href="https://github.com/Front-End-Developers-Hunan/Front-End-Develop-Guide" target="_blank" rel="external">https://github.com/Front-End-Developers-Hunan/Front-End-Develop-Guide</a><br>前端开发笔记本 <a href="https://li-xinyang.gitbooks.io/frontend-notebook/content" target="_blank" rel="external">https://li-xinyang.gitbooks.io/frontend-notebook/content</a><br>大前端工具集 - 聂微东 <a href="https://github.com/nieweidong/fetool" target="_blank" rel="external">https://github.com/nieweidong/fetool</a><br>前端开发者手册 <a href="https://dwqs.gitbooks.io/frontenddevhandbook/content" target="_blank" rel="external">https://dwqs.gitbooks.io/frontenddevhandbook/content</a></p>
 <h2 id="入门类"><a href="#入门类" class="headerlink" title="入门类"></a>入门类</h2><h3 id="入门类-地址"><a href="#入门类-地址" class="headerlink" title="入门类 地址"></a>入门类 地址</h3><p>前端入门教程 <a href="http://www.cnblogs.com/jikey/p/3613082.html" target="_blank" rel="external">http://www.cnblogs.com/jikey/p/3613082.html</a><br>瘳雪峰的Javascript教程 <a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank" rel="external">http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000</a><br>在线入门开发教程 <a href="http://www.hubwiz.com/course/?type=&quot;入门" target="_blank" rel="external">http://www.hubwiz.com/course/?type=&quot;入门</a>“<br>jQuery基础教程 <a href="http://www.imooc.com/view/11" target="_blank" rel="external">http://www.imooc.com/view/11</a><br>前端工程师必备的PS技能——切图篇 <a href="http://www.imooc.com/view/506" target="_blank" rel="external">http://www.imooc.com/view/506</a><br>结合个人经历总结的前端入门方法 <a href="https://github.com/qiu-deqing/FE-learning" target="_blank" rel="external">https://github.com/qiu-deqing/FE-learning</a></p>
 <h3 id="工具类"><a href="#工具类" class="headerlink" title="工具类"></a>工具类</h3><p>工具类 地址<br>前端人的俱乐部 <a href="http://f2er.club/" target="_blank" rel="external">http://f2er.club/</a> 真可以解放你的收藏夹<br>如何优雅地使用Sublime Text <a href="http://www.jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/#" target="_blank" rel="external">http://www.jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/#</a><br>新编码神器Atom使用纪要 <a href="http://www.jeffjade.com/2016/03/03/2016-03-02-how-to-use-atom/" target="_blank" rel="external">http://www.jeffjade.com/2016/03/03/2016-03-02-how-to-use-atom/</a><br>css sprite 雪碧图制作 <a href="http://www.imooc.com/learn/93" target="_blank" rel="external">http://www.imooc.com/learn/93</a><br>版本控制入门 – 搬进 Github <a href="http://www.imooc.com/learn/390" target="_blank" rel="external">http://www.imooc.com/learn/390</a><br>Grunt-beginner前端自动化工具 <a href="http://www.imooc.com/learn/30" target="_blank" rel="external">http://www.imooc.com/learn/30</a><br>IntelliJ IDEA 简体中文专题教程 <a href="https://github.com/judasn/IntelliJ-IDEA-Tutorial" target="_blank" rel="external">https://github.com/judasn/IntelliJ-IDEA-Tutorial</a><br>Webstorm,InterllIdea,Phpstorm <a href="http://t.cn/8kZZ1Uy" target="_blank" rel="external">http://t.cn/8kZZ1Uy</a><br>SublimeText <a href="https://github.com/jikeytang/sublime-text" target="_blank" rel="external">https://github.com/jikeytang/sublime-text</a><br>Atom <a href="https://atom.io" target="_blank" rel="external">https://atom.io</a><br>visual studio code <a href="https://code.visualstudio.com" target="_blank" rel="external">https://code.visualstudio.com</a></p>
@@ -187,7 +187,7 @@
     <link href="https://zhaoy875.github.io/2016/09/20/Awesome-browser-extensions-for-GitHub/"/>
     <id>https://zhaoy875.github.io/2016/09/20/Awesome-browser-extensions-for-GitHub/</id>
     <published>2016-09-20T02:51:43.000Z</published>
-    <updated>2016-10-20T03:32:45.131Z</updated>
+    <updated>2016-10-26T10:24:57.160Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Awesome-browser-extensions-for-GitHub"><a href="#Awesome-browser-extensions-for-GitHub" class="headerlink" title="Awesome browser extensions for GitHub "></a>Awesome browser extensions for GitHub <a href="https://github.com/sindresorhus/awesome" target="_blank" rel="external"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome"></a></h1><blockquote>
 <p>A collection of awesome browser extensions for GitHub.</p>
@@ -458,9 +458,9 @@
       <category term="GitHub" scheme="https://zhaoy875.github.io/categories/GitHub/"/>
     
     
-      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
-    
       <category term="Awesome" scheme="https://zhaoy875.github.io/tags/Awesome/"/>
+    
+      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
     
   </entry>
   
@@ -548,7 +548,7 @@ var openURL = function (url) {
     <link href="https://zhaoy875.github.io/2016/09/09/%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87-Focus-Just-do-one-thing/"/>
     <id>https://zhaoy875.github.io/2016/09/09/提高效率-Focus-Just-do-one-thing/</id>
     <published>2016-09-08T18:50:43.000Z</published>
-    <updated>2016-10-15T07:16:47.856Z</updated>
+    <updated>2016-10-26T10:26:39.029Z</updated>
     
     <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><h3 id="学习工具和方式上："><a href="#学习工具和方式上：" class="headerlink" title="学习工具和方式上："></a>学习工具和方式上：</h3><p> 当我在学习某个知识点的时候总是容易被其他相关东西带走，一会看这个，一会看别的，结果什么都没精，没能深入，都是跑马观花，并且记忆力也是有限的，好记性不如烂笔头，一个好的知识管理软件对巩固知识体系一定会大有帮助。我正在使用为知笔记，通过浏览器插件，移动端客户端，pc端客户端，web端都可以同步将知识快速保存下来，分门别类。<br><img src="http://od6ri688q.bkt.clouddn.com/%E4%B8%BA%E7%9F%A5%E7%AC%94%E8%AE%B0QQ%E6%88%AA%E5%9B%BE20160930025356.png" alt="我的为之笔记"><br><a id="more"></a></p>
 <blockquote>
@@ -575,7 +575,7 @@ var openURL = function (url) {
     <link href="https://zhaoy875.github.io/2016/09/08/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8Virtual-DOM/"/>
     <id>https://zhaoy875.github.io/2016/09/08/为什么要使用Virtual-DOM/</id>
     <published>2016-09-08T05:30:23.000Z</published>
-    <updated>2016-10-15T07:16:56.582Z</updated>
+    <updated>2016-10-26T10:26:49.272Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://od6ri688q.bkt.clouddn.com/VirtualDOM.gif" alt=""></p>
 <h1 id="React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM"><a href="#React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM" class="headerlink" title="React中很少有人能解释清楚的问题——为什么要使用Virtual DOM"></a>React中很少有人能解释清楚的问题——为什么要使用Virtual DOM</h1><p>  这也是我在思考的问题，大家都在跟风学RN ,VUE,Ag2,却很少看见有人用数据来量化实际项目应用中dom操作对性能的影响 </p>
@@ -636,7 +636,7 @@ var openURL = function (url) {
     <link href="https://zhaoy875.github.io/2016/09/07/Git%E7%AE%A1%E4%B8%AD%E7%AA%A5%E8%B1%B9/"/>
     <id>https://zhaoy875.github.io/2016/09/07/Git管中窥豹/</id>
     <published>2016-09-07T07:16:43.000Z</published>
-    <updated>2016-10-15T06:57:33.863Z</updated>
+    <updated>2016-10-26T10:25:32.154Z</updated>
     
     <content type="html"><![CDATA[<h2 id="git简单示意图"><a href="#git简单示意图" class="headerlink" title="git简单示意图"></a>git简单示意图</h2><p><img src="http://od6ri688q.bkt.clouddn.com/git%E4%BB%93%E5%BA%93%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="图解git"></p>
 <a id="more"></a>
@@ -675,9 +675,9 @@ var openURL = function (url) {
       <category term="git" scheme="https://zhaoy875.github.io/categories/git/"/>
     
     
-      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
-    
       <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
+    
+      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
     
   </entry>
   
@@ -686,7 +686,7 @@ var openURL = function (url) {
     <link href="https://zhaoy875.github.io/2016/09/06/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3hexo%E4%B8%BB%E9%A2%98/"/>
     <id>https://zhaoy875.github.io/2016/09/06/深入了解hexo主题/</id>
     <published>2016-09-06T15:26:24.000Z</published>
-    <updated>2016-09-23T16:07:07.752Z</updated>
+    <updated>2016-10-26T10:26:15.764Z</updated>
     
     <content type="html"><![CDATA[<h1 id="深入hexo主题"><a href="#深入hexo主题" class="headerlink" title="深入hexo主题"></a>深入hexo主题</h1><h2 id="准备自制hexo主题"><a href="#准备自制hexo主题" class="headerlink" title="准备自制hexo主题"></a>准备自制hexo主题</h2><p>  所需相关技术：<br>   默认你已经掌握了解基本的html5 css3 javascript</p>
 <ul>
@@ -721,7 +721,7 @@ var openURL = function (url) {
     <link href="https://zhaoy875.github.io/2016/09/06/%E6%94%B6%E8%97%8F%E7%BD%91%E5%9D%80/"/>
     <id>https://zhaoy875.github.io/2016/09/06/收藏网址/</id>
     <published>2016-09-06T14:16:12.000Z</published>
-    <updated>2016-09-12T14:43:31.053Z</updated>
+    <updated>2016-10-26T10:26:28.095Z</updated>
     
     <content type="html"><![CDATA[<h1 id="个人站点收藏夹"><a href="#个人站点收藏夹" class="headerlink" title="个人站点收藏夹"></a>个人站点收藏夹</h1><!-- 我的前端学习工作 -->
 <h2 id="每日必逛系列"><a href="#每日必逛系列" class="headerlink" title="每日必逛系列"></a>每日必逛系列</h2><ul>
@@ -776,7 +776,7 @@ var openURL = function (url) {
     <link href="https://zhaoy875.github.io/2016/09/05/hexo-deploy-blog-use-ssh-link/"/>
     <id>https://zhaoy875.github.io/2016/09/05/hexo-deploy-blog-use-ssh-link/</id>
     <published>2016-09-05T06:40:16.000Z</published>
-    <updated>2016-09-12T14:41:51.264Z</updated>
+    <updated>2016-10-26T10:25:18.355Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>hexo 使用自带的hexo-deploy-git插件实现自动部署到远程remote时，repository仓库链接使用ssh要比使用https快，也可以避免每次都要登录输入密码的步骤</p>
 <a id="more"></a>
@@ -821,7 +821,7 @@ var openURL = function (url) {
     <link href="https://zhaoy875.github.io/2016/09/04/console-console/"/>
     <id>https://zhaoy875.github.io/2016/09/04/console-console/</id>
     <published>2016-09-04T15:06:24.000Z</published>
-    <updated>2016-09-15T14:15:03.237Z</updated>
+    <updated>2016-10-26T10:24:28.529Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>没有特殊声明下，基本都是以chrome为例</p>
 <h2 id="概述console"><a href="#概述console" class="headerlink" title="概述console"></a>概述console</h2><p>大家平常写console最多的就是用来打印信息，console.log(obj or str)，<br>但console能干的事可比这多了，比如console可以自定义打印字符的css样式，<br>console.trace()踪函数的调用轨迹，<br>计时功能console.time()；性能分析console.profile等。。。<br><a id="more"></a><br><strong>让我们来console.log(console)看看</strong><br><img src="http://od6ri688q.bkt.clouddn.com/consoleQQ%E6%88%AA%E5%9B%BE20160908200956.png" alt=""></p>
@@ -918,7 +918,7 @@ console.profileEnd();
     <link href="https://zhaoy875.github.io/2016/03/09/%E7%A7%BB%E5%8A%A8%E7%AB%AFviewport%E8%AF%A6%E8%A7%A3/"/>
     <id>https://zhaoy875.github.io/2016/03/09/移动端viewport详解/</id>
     <published>2016-03-09T07:50:43.000Z</published>
-    <updated>2016-10-15T07:19:12.108Z</updated>
+    <updated>2016-10-26T10:27:01.257Z</updated>
     
     <content type="html"><![CDATA[<h1 id="移动端前端开发之viewport的深入理解"><a href="#移动端前端开发之viewport的深入理解" class="headerlink" title="移动端前端开发之viewport的深入理解"></a>移动端前端开发之viewport的深入理解</h1><p>在移动设备上进行网页的重构或开发，需要响应各种不同分辨率的移动设备，明白了viewport的概念以及弄清楚了跟viewport有关的meta标签的使用，才能更好地让我们的网页适配或响应各种不同分辨率的移动设备。</p>
 <a id="more"></a>
@@ -948,7 +948,7 @@ console.profileEnd();
     <link href="https://zhaoy875.github.io/2016/01/07/%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8less/"/>
     <id>https://zhaoy875.github.io/2016/01/07/客户端使用less/</id>
     <published>2016-01-07T11:16:43.000Z</published>
-    <updated>2016-09-15T14:13:49.994Z</updated>
+    <updated>2016-10-26T10:26:06.855Z</updated>
     
     <content type="html"><![CDATA[<h2 id="在客户端使用less"><a href="#在客户端使用less" class="headerlink" title="在客户端使用less"></a>在客户端使用less</h2><h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><p>引入你的 .less 样式文件的时候要设置 rel 属性值为 “stylesheet/less”:</p>
 <pre><code>&lt;link rel=&quot;stylesheet/less&quot; type=&quot;text/css&quot; href=&quot;styles.less&quot;&gt;
@@ -972,9 +972,9 @@ console.profileEnd();
       <category term="css预处理器" scheme="https://zhaoy875.github.io/categories/css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/"/>
     
     
-      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
-    
       <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
+    
+      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
     
   </entry>
   
