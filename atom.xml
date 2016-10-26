@@ -458,9 +458,9 @@
       <category term="GitHub" scheme="https://zhaoy875.github.io/categories/GitHub/"/>
     
     
-      <category term="Awesome" scheme="https://zhaoy875.github.io/tags/Awesome/"/>
-    
       <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
+    
+      <category term="Awesome" scheme="https://zhaoy875.github.io/tags/Awesome/"/>
     
   </entry>
   
@@ -675,9 +675,9 @@ var openURL = function (url) {
       <category term="git" scheme="https://zhaoy875.github.io/categories/git/"/>
     
     
-      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
-    
       <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
+    
+      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
     
   </entry>
   
@@ -972,9 +972,9 @@ console.profileEnd();
       <category term="css预处理器" scheme="https://zhaoy875.github.io/categories/css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/"/>
     
     
-      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
-    
       <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
+    
+      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
     
   </entry>
   
