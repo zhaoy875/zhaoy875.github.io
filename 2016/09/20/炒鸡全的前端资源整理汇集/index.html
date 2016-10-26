@@ -1,84 +1,443 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>zhaoy</title>
-  <subtitle>Your time is limited, so don&#39;t waste it living someone else&#39;s life</subtitle>
-  <link href="/atom.xml" rel="self"/>
-  
-  <link href="https://zhaoy875.github.io/"/>
-  <updated>2016-10-11T15:28:34.811Z</updated>
-  <id>https://zhaoy875.github.io/</id>
-  
-  <author>
-    <name>zhaoy875</name>
-    
-  </author>
-  
-  <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Ubuntu 安装Hexo博客</title>
-    <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
-    <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
-    <published>2016-10-11T05:50:43.000Z</published>
-    <updated>2016-10-11T15:28:34.811Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="ubuntu-安装hexo博客"><a href="#ubuntu-安装hexo博客" class="headerlink" title="ubuntu 安装hexo博客"></a>ubuntu 安装hexo博客</h1><h2 id="搭建nodejs-环境"><a href="#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt <span class="keyword">install</span> nodejs</div><div class="line">sudo apt <span class="keyword">install</span> npm</div></pre></td></tr></table></figure>
-<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
-<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
-<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
-<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
-<p>hexo s 本地预览–over</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;ubuntu-安装hexo博客&quot;&gt;&lt;a href=&quot;#ubuntu-安装hexo博客&quot; class=&quot;headerlink&quot; title=&quot;ubuntu 安装hexo博客&quot;&gt;&lt;/a&gt;ubuntu 安装hexo博客&lt;/h1&gt;&lt;h2 id=&quot;搭建nodejs-环境&quot;&gt;
-    
-    </summary>
-    
-    
-      <category term="ubuntu" scheme="https://zhaoy875.github.io/tags/ubuntu/"/>
-    
-      <category term="hexo" scheme="https://zhaoy875.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Music Time歌单分享</title>
-    <link href="https://zhaoy875.github.io/2016/09/20/music%E6%AD%8C%E5%8D%95/"/>
-    <id>https://zhaoy875.github.io/2016/09/20/music歌单/</id>
-    <published>2016-09-20T14:39:43.000Z</published>
-    <updated>2016-10-15T07:17:16.052Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe style="width:100%;min-height:260px;max-height:400px" id="musiciframe" src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=0&narrow=0" frameborder="0" scrolling="no"></iframe>
+<!-- 
+     _                       
+ ___| |__   __ _  ___  _   _ 
+|_  / '_ \ / _` |/ _ \| | | |
+ / /| | | | (_| | (_) | |_| |
+/___|_| |_|\__,_|\___/ \__, |
+                       |___/  
+  勤有功，戏无益。戒之哉，宜勉力。--- 喝了这碗鸡汤还有3碗
+  做一个好前端真的好难   (╯‵□′)╯ ︵┻━┻ 
+-->
+<!doctype html>
 
-<a id="more"></a>
-<h2 id="Interface-usage"><a href="#Interface-usage" class="headerlink" title="Interface usage"></a>Interface usage</h2><p>歌单：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=1&amp;narrow=0"</span>  <span class="attribute">width</span>=<span class="string">"100%"</span>  frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
-<p>单首：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?song=408332757&amp;qssl=1&amp;qlrc=1&amp;autoplay=0"</span> <span class="attribute">width</span>=<span class="string">"100%"</span> frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
-<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><p>使用iframe内嵌页面<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Demos:</span></div><div class="line"><span class="symbol"></span></div><div class="line">https:<span class="comment">//music.daoapp.io/iframe?song=287749&amp;qssl=1&amp;qlrc=1&amp;qnarrow=0&amp;max_width=50%&amp;autoplay=1</span></div><div class="line"><span class="symbol">https:</span><span class="comment">//music.daoapp.io/iframe?song=287749&amp;qnarrow=1&amp;qssl=1</span></div><div class="line"><span class="symbol">URL:</span> http(s):<span class="comment">//music.daoapp.io/ Donot use HTTPS if it's not necessary. But if you do, don't forget set qssl to 1. Method: GET The arguments are:</span></div><div class="line"></div><div class="line">album=album_id  		<span class="comment">//专辑id</span></div><div class="line">playlist=playlist_id    <span class="comment">//歌单id</span></div><div class="line">song=song_id            <span class="comment">//单首id</span></div><div class="line">program=program_id</div><div class="line">radio=radio_id</div><div class="line">mv=mv_id 				</div><div class="line">qssl=[<span class="number">0</span>|<span class="number">1</span>]            </div><div class="line">qlrc=[<span class="number">0</span>|<span class="number">1</span>]             <span class="comment">//歌词</span></div><div class="line">qnarrow=[<span class="number">0</span>|<span class="number">1</span>]</div><div class="line">max_width=[<span class="number">100</span>%|<span class="number">32</span>rem|<span class="number">400</span>px|something else]</div><div class="line">autoplay=[<span class="number">0</span>|<span class="number">1</span>]         <span class="comment">//自动播放</span></div></pre></td></tr></table></figure></p>
-<p>You must choose ONE of those six ids. And it means nothing if you choose more than one of them. You may use <a href="https://music.daoapp.io/" target="_blank" rel="external">The web interface</a> to find the id or use 163Music.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;网易云-基于163APlayer&quot;&gt;&lt;a href=&quot;#网易云-基于163APlayer&quot; class=&quot;headerlink&quot; title=&quot;网易云 基于163APlayer&quot;&gt;&lt;/a&gt;网易云 基于&lt;a href=&quot;https://github.com/YUX-IO/163music-APlayer-you-get-docker&quot;&gt;163APlayer&lt;/a&gt;&lt;/h2&gt;&lt;iframe style=&quot;width:100%;min-height:260px;max-height:400px&quot; id=&quot;musiciframe&quot; src=&quot;https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=0&amp;narrow=0&quot;  frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
-    
-    </summary>
-    
-    
-      <category term="音乐" scheme="https://zhaoy875.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
-    
-  </entry>
+
   
-  <entry>
-    <title>炒鸡全的前端资源汇集，来一份吧</title>
-    <link href="https://zhaoy875.github.io/2016/09/20/%E7%82%92%E9%B8%A1%E5%85%A8%E7%9A%84%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86%E6%B1%87%E9%9B%86/"/>
-    <id>https://zhaoy875.github.io/2016/09/20/炒鸡全的前端资源整理汇集/</id>
-    <published>2016-09-20T09:43:20.000Z</published>
-    <updated>2016-10-26T09:43:55.848Z</updated>
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="前端资源,前端收藏夹," />
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="zhaoy" type="application/atom+xml" />
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.1" />
+
+
+
+
+<meta name="description" content="前端资源汇集参考自 https://segmentfault.com/a/1190000004978770不过原文 到中间和后面就很乱了，我又重新整理了分类了如下，好累。。。
+真的炒鸡多超级全的前端资源啊！可是我蓝瘦香菇/(ㄒoㄒ)/~~
+综合类综合类 地址前端知识体系 http://www.cnblogs.com/sb19871023/p/3894452.html前端知识结构 https://g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="炒鸡全的前端资源汇集，来一份吧">
+<meta property="og:url" content="https://zhaoy875.github.io/2016/09/20/炒鸡全的前端资源整理汇集/index.html">
+<meta property="og:site_name" content="zhaoy">
+<meta property="og:description" content="前端资源汇集参考自 https://segmentfault.com/a/1190000004978770不过原文 到中间和后面就很乱了，我又重新整理了分类了如下，好累。。。
+真的炒鸡多超级全的前端资源啊！可是我蓝瘦香菇/(ㄒoㄒ)/~~
+综合类综合类 地址前端知识体系 http://www.cnblogs.com/sb19871023/p/3894452.html前端知识结构 https://g">
+<meta property="og:updated_time" content="2016-10-26T09:43:55.848Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="炒鸡全的前端资源汇集，来一份吧">
+<meta name="twitter:description" content="前端资源汇集参考自 https://segmentfault.com/a/1190000004978770不过原文 到中间和后面就很乱了，我又重新整理了分类了如下，好累。。。
+真的炒鸡多超级全的前端资源啊！可是我蓝瘦香菇/(ㄒoㄒ)/~~
+综合类综合类 地址前端知识体系 http://www.cnblogs.com/sb19871023/p/3894452.html前端知识结构 https://g">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'zhaoy875',
+      author: '博主大人(╯‵□′)╯'
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://zhaoy875.github.io/2016/09/20/炒鸡全的前端资源整理汇集/"/>
+
+  <title> 炒鸡全的前端资源汇集，来一份吧 | zhaoy </title>
+  
+  <meta name="baidu-site-verification" content="k0UgqisIfE" />
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+  <!--[if lte IE 9]>
+  <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://www.goody.com.cn/2014/updatebrowser/"><img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820" alt="
+ 您正在使用的ie浏览器版本过低，为了保障您的访问安全，以及更友好的浏览体验，强烈建议您升级最新的浏览器。" style='margin-left:auto;margin-right:auto;display: block;'/></a></div> 
+  <![endif]-->
+  
+  
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?672e23e6a7cfc50fb1a00e13b7789303";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
     
-    <content type="html"><![CDATA[<h1 id="前端资源汇集"><a href="#前端资源汇集" class="headerlink" title="前端资源汇集"></a>前端资源汇集</h1><p>参考自 <a href="https://segmentfault.com/a/1190000004978770" target="_blank" rel="external">https://segmentfault.com/a/1190000004978770</a><br>不过原文 到中间和后面就很乱了，我又重新整理了分类了如下，好累。。。</p>
+  
+  
+  
+  
+
+
+	
+	<canvas id="yyx"></canvas>
+	<script>
+		(function(){
+		    // document.addEventListener('touchmove', function(e) {
+		    //     e.preventDefault()
+		    // })
+		    var c = document.getElementById('yyx'),
+		        x = c.getContext('2d'),
+		        pr = window.devicePixelRatio || 1,
+		        w = window.innerWidth,
+		        h = window.innerHeight,
+		        f = 90,
+		        q,
+		        m = Math,
+		        r = 0,
+		        u = m.PI * 2,
+		        v = m.cos,
+		        z = m.random
+		    c.width = w * pr
+		    c.height = h * pr
+		    x.scale(pr, pr)
+		    x.globalAlpha = 0.6
+		    c.style.cssText ='position: fixed;top: 0;left: 0;z-index: 0;width: 100%;height: 100%;pointer-events: none;';
+		    function i() {
+		        x.clearRect(0, 0, w, h)
+		        q = [{
+		            x: 0,
+		            y: h * .7 + f
+		        }, {
+		            x: 0,
+		            y: h * .7 - f
+		        }]
+		        while (q[1].x < w + f) d(q[0], q[1])
+		    }
+
+		    function d(i, j) {
+		        x.beginPath()
+		        x.moveTo(i.x, i.y)
+		        x.lineTo(j.x, j.y)
+		        var k = j.x + (z() * 2 - 0.25) * f,
+		            n = y(j.y)
+		        x.lineTo(k, n)
+		        x.closePath()
+		        r -= u / -50
+		        x.fillStyle = '#' + (v(r) * 127 + 128 << 16 | v(r + u / 3) * 127 + 128 << 8 | v(r + u / 3 * 2) * 127 + 128).toString(16)
+		        x.fill()
+		        q[0] = q[1]
+		        q[1] = {
+		            x: k,
+		            y: n
+		        }
+		    }
+
+		    function y(p) {
+		        var t = p + (z() * 2 - 1.1) * f
+		        return (t > h || t < 0) ? y(p) : t
+		    }
+		    document.onclick = i
+		    document.ontouchstart = i
+		    i()
+		})();  
+	        
+	</script>
+
+
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">zhaoy</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Your time is limited, so don't waste it living someone else's life</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            按分类找
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            我是谁？
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            按标签找
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-demo">
+          <a href="/ddd" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            自定义html页面
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-fe_demo">
+          <a href="/zhaoy" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            前端demo
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜一下
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                炒鸡全的前端资源汇集，来一份吧
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-20T17:43:20+08:00" content="2016-09-20">
+              2016-09-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端资源导航/" itemprop="url" rel="index">
+                    <span itemprop="name">前端资源导航</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/20/炒鸡全的前端资源整理汇集/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/20/炒鸡全的前端资源整理汇集/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前端资源汇集"><a href="#前端资源汇集" class="headerlink" title="前端资源汇集"></a>前端资源汇集</h1><p>参考自 <a href="https://segmentfault.com/a/1190000004978770" target="_blank" rel="external">https://segmentfault.com/a/1190000004978770</a><br>不过原文 到中间和后面就很乱了，我又重新整理了分类了如下，好累。。。</p>
 <p>真的炒鸡多超级全的前端资源啊！可是我蓝瘦香菇/(ㄒoㄒ)/~~</p>
 <h2 id="综合类"><a href="#综合类" class="headerlink" title="综合类"></a>综合类</h2><h3 id="综合类-地址"><a href="#综合类-地址" class="headerlink" title="综合类 地址"></a>综合类 地址</h3><p>前端知识体系 <a href="http://www.cnblogs.com/sb19871023/p/3894452.html" target="_blank" rel="external">http://www.cnblogs.com/sb19871023/p/3894452.html</a><br>前端知识结构 <a href="https://github.com/JacksonTian/fks" target="_blank" rel="external">https://github.com/JacksonTian/fks</a><br>前端知识体系 <a href="http://www.cnblogs.com/sb19871023/p/3894452.html" target="_blank" rel="external">http://www.cnblogs.com/sb19871023/p/3894452.html</a><br>Web前端在线开发网站 <a href="http://www.hubwiz.com/course/?type=web" target="_blank" rel="external">http://www.hubwiz.com/course/?type=web</a><br>Web前端开发大系概览-中文版 <a href="http://www.cnblogs.com/unruledboy/p/WebFrontEndStack.html" target="_blank" rel="external">http://www.cnblogs.com/unruledboy/p/WebFrontEndStack.html</a><br>免费的编程中文书籍索引 <a href="https://github.com/justjavac/free-programming-books-zh_CN" target="_blank" rel="external">https://github.com/justjavac/free-programming-books-zh_CN</a><br>前端书籍 <a href="https://github.com/dypsilon/frontend-dev-bookmarks" target="_blank" rel="external">https://github.com/dypsilon/frontend-dev-bookmarks</a><br>前端免费书籍大全 <a href="https://github.com/vhf/free-programming-books" target="_blank" rel="external">https://github.com/vhf/free-programming-books</a><br>前端知识体系 <a href="http://www.cnblogs.com/sb19871023/p/3894452.html" target="_blank" rel="external">http://www.cnblogs.com/sb19871023/p/3894452.html</a><br>免费的编程中文书籍索引 <a href="https://github.com/justjavac/free-programming-books-zh_CN" target="_blank" rel="external">https://github.com/justjavac/free-programming-books-zh_CN</a><br>智能社 - 精通JavaScript开发 <a href="http://study.163.com/course/introduction/224014.htm" target="_blank" rel="external">http://study.163.com/course/introduction/224014.htm</a><br>重新介绍 JavaScript（JS 教程） <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript</a><br>麻省理工学院公开课：计算机科学及编程导论 <a href="http://v.163.com/special/opencourse/bianchengdaolun.html" target="_blank" rel="external">http://v.163.com/special/opencourse/bianchengdaolun.html</a><br>JavaScript中的this陷阱的最全收集—没有之一 <a href="http://segmentfault.com/a/1190000002640298" target="_blank" rel="external">http://segmentfault.com/a/1190000002640298</a><br>JS函数式编程指南 <a href="https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/ch1.html" target="_blank" rel="external">https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/ch1.html</a><br>JavaScript Promise迷你书（中文版） <a href="http://liubin.github.io/promises-book" target="_blank" rel="external">http://liubin.github.io/promises-book</a><br>腾讯移动Web前端知识库 <a href="https://github.com/AlloyTeam/Mars" target="_blank" rel="external">https://github.com/AlloyTeam/Mars</a><br>Front-End-Develop-Guide 前端开发指南 <a href="https://github.com/Front-End-Developers-Hunan/Front-End-Develop-Guide" target="_blank" rel="external">https://github.com/Front-End-Developers-Hunan/Front-End-Develop-Guide</a><br>前端开发笔记本 <a href="https://li-xinyang.gitbooks.io/frontend-notebook/content" target="_blank" rel="external">https://li-xinyang.gitbooks.io/frontend-notebook/content</a><br>大前端工具集 - 聂微东 <a href="https://github.com/nieweidong/fetool" target="_blank" rel="external">https://github.com/nieweidong/fetool</a><br>前端开发者手册 <a href="https://dwqs.gitbooks.io/frontenddevhandbook/content" target="_blank" rel="external">https://dwqs.gitbooks.io/frontenddevhandbook/content</a></p>
 <h2 id="入门类"><a href="#入门类" class="headerlink" title="入门类"></a>入门类</h2><h3 id="入门类-地址"><a href="#入门类-地址" class="headerlink" title="入门类 地址"></a>入门类 地址</h3><p>前端入门教程 <a href="http://www.cnblogs.com/jikey/p/3613082.html" target="_blank" rel="external">http://www.cnblogs.com/jikey/p/3613082.html</a><br>瘳雪峰的Javascript教程 <a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank" rel="external">http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000</a><br>在线入门开发教程 <a href="http://www.hubwiz.com/course/?type=&quot;入门" target="_blank" rel="external">http://www.hubwiz.com/course/?type=&quot;入门</a>“<br>jQuery基础教程 <a href="http://www.imooc.com/view/11" target="_blank" rel="external">http://www.imooc.com/view/11</a><br>前端工程师必备的PS技能——切图篇 <a href="http://www.imooc.com/view/506" target="_blank" rel="external">http://www.imooc.com/view/506</a><br>结合个人经历总结的前端入门方法 <a href="https://github.com/qiu-deqing/FE-learning" target="_blank" rel="external">https://github.com/qiu-deqing/FE-learning</a></p>
@@ -165,817 +524,640 @@
 <h4 id="弹出层-地址"><a href="#弹出层-地址" class="headerlink" title="弹出层 地址"></a>弹出层 地址</h4><p>artDialog 最新版 <a href="https://github.com/aui/artDialog" target="_blank" rel="external">https://github.com/aui/artDialog</a><br>artDialog 文档 <a href="http://aui.github.io/artDialog/doc/index.html" target="_blank" rel="external">http://aui.github.io/artDialog/doc/index.html</a><br>google code 下载地址 <a href="https://code.google.com/p/artdialog/downloads/list" target="_blank" rel="external">https://code.google.com/p/artdialog/downloads/list</a><br>贤心弹出层 <a href="http://layer.layui.com" target="_blank" rel="external">http://layer.layui.com</a><br>响应式用户交互组件库 <a href="https://github.com/bh-lay/UI" target="_blank" rel="external">https://github.com/bh-lay/UI</a><br>sweetalert-有css3动画弹出层 <a href="http://t4t5.github.io/sweetalert" target="_blank" rel="external">http://t4t5.github.io/sweetalert</a></p>
 <h4 id="优秀JavaScript项目"><a href="#优秀JavaScript项目" class="headerlink" title="优秀JavaScript项目"></a>优秀JavaScript项目</h4><p>Angular和Webpack种子文件 <a href="https://github.com/AngularClass/angular2-webpack-starter" target="_blank" rel="external">https://github.com/AngularClass/angular2-webpack-starter</a><br>Fis3面向前端的工程构建系统 <a href="https://github.com/fex-team/fis3" target="_blank" rel="external">https://github.com/fex-team/fis3</a><br>Fis3 DEMO <a href="https://github.com/fex-team/fis3-demo" target="_blank" rel="external">https://github.com/fex-team/fis3-demo</a><br>前端JQuery系列:源码剖析 <a href="https://github.com/JsAaron/jQuery" target="_blank" rel="external">https://github.com/JsAaron/jQuery</a><br>avalon框架 <a href="https://github.com/RubyLouvre/avalon" target="_blank" rel="external">https://github.com/RubyLouvre/avalon</a><br>Microsoft ChakraCore 微软的Chakra引擎 <a href="https://github.com/Microsoft/ChakraCore" target="_blank" rel="external">https://github.com/Microsoft/ChakraCore</a><br>Quintus HTML游戏引擎 <a href="https://github.com/cykod/Quintus" target="_blank" rel="external">https://github.com/cykod/Quintus</a><br>一个用node.js搭建的网站 <a href="http://www.hubwiz.com/" target="_blank" rel="external">http://www.hubwiz.com/</a><br>Web前端助手—FeHelper（Chrome扩展） <a href="https://github.com/zxlie/FeHelper" target="_blank" rel="external">https://github.com/zxlie/FeHelper</a><br>百度前端技术学院 <a href="https://github.com/baidu-ife/ife" target="_blank" rel="external">https://github.com/baidu-ife/ife</a><br>Cheerio（node.js中的jQuery） <a href="https://github.com/cheeriojs/cheerio" target="_blank" rel="external">https://github.com/cheeriojs/cheerio</a><br>nodejs的一个聊天软件 类似微信 <a href="https://github.com/BryanYang/freechat" target="_blank" rel="external">https://github.com/BryanYang/freechat</a><br>使用html5和node.js构建的网易云音乐 <a href="https://github.com/stkevintan/Cube" target="_blank" rel="external">https://github.com/stkevintan/Cube</a><br>babel ES6转换为ES5 <a href="https://github.com/babel/babel" target="_blank" rel="external">https://github.com/babel/babel</a><br>一个JS富文本编辑器 <a href="https://github.com/fex-team/ueditor" target="_blank" rel="external">https://github.com/fex-team/ueditor</a><br>一个JS脑图可视化工具 <a href="https://github.com/fex-team/kityminder-core" target="_blank" rel="external">https://github.com/fex-team/kityminder-core</a><br>一个JS写的Flappy Bird Game <a href="https://github.com/ellisonleao/clumsy-bird" target="_blank" rel="external">https://github.com/ellisonleao/clumsy-bird</a><br>一个JS写的GBA模拟器 <a href="https://github.com/taisel/IodineGBA" target="_blank" rel="external">https://github.com/taisel/IodineGBA</a><br>SegmentFault写的Markdown解析器 <a href="https://github.com/SegmentFault/HyperDown.js" target="_blank" rel="external">https://github.com/SegmentFault/HyperDown.js</a><br>基于node.js的Ghost博客 <a href="https://github.com/TryGhost/Ghost" target="_blank" rel="external">https://github.com/TryGhost/Ghost</a><br>学习react的demos <a href="https://github.com/ruanyf/react-demos" target="_blank" rel="external">https://github.com/ruanyf/react-demos</a></p>
 <p>转自：<a href="http://my.oschina.net/u/2275217/blog/662734" target="_blank" rel="external">http://my.oschina.net/u/2275217/blog/662734</a></p>
-]]></content>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixinicon.png" alt="zhaoy875 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/weixinicon.png" alt="zhaoy875 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          Tag标签:
+          
+            <a href="/tags/前端资源/" rel="tag">#前端资源</a>
+          
+            <a href="/tags/前端收藏夹/" rel="tag">#前端收藏夹</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/20/Awesome-browser-extensions-for-GitHub/" rel="next" title="Awesome Browser Extensions for GitHub">
+                <i class="fa fa-chevron-left"></i> Awesome Browser Extensions for GitHub
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/20/music歌单/" rel="prev" title="Music Time歌单分享">
+                Music Time歌单分享 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+
+
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/09/20/炒鸡全的前端资源整理汇集/"
+     data-title="炒鸡全的前端资源汇集，来一份吧"
+     data-content=""
+     data-url="https://zhaoy875.github.io/2016/09/20/炒鸡全的前端资源整理汇集/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
     
-    <summary type="html">
+      <div class="ds-thread" data-thread-key="2016/09/20/炒鸡全的前端资源整理汇集/"
+           data-title="炒鸡全的前端资源汇集，来一份吧" data-url="https://zhaoy875.github.io/2016/09/20/炒鸡全的前端资源整理汇集/">
+      </div>
     
-      &lt;h1 id=&quot;前端资源汇集&quot;&gt;&lt;a href=&quot;#前端资源汇集&quot; class=&quot;headerlink&quot; title=&quot;前端资源汇集&quot;&gt;&lt;/a&gt;前端资源汇集&lt;/h1&gt;&lt;p&gt;参考自 &lt;a href=&quot;https://segmentfault.com/a/11900000049787
-    
-    </summary>
-    
-      <category term="前端资源导航" scheme="https://zhaoy875.github.io/categories/%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90%E5%AF%BC%E8%88%AA/"/>
-    
-    
-      <category term="前端资源" scheme="https://zhaoy875.github.io/tags/%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90/"/>
-    
-      <category term="前端收藏夹" scheme="https://zhaoy875.github.io/tags/%E5%89%8D%E7%AB%AF%E6%94%B6%E8%97%8F%E5%A4%B9/"/>
-    
-  </entry>
+  </div>
+
+
+        </div>
+        
+          
   
-  <entry>
-    <title>Awesome Browser Extensions for GitHub</title>
-    <link href="https://zhaoy875.github.io/2016/09/20/Awesome-browser-extensions-for-GitHub/"/>
-    <id>https://zhaoy875.github.io/2016/09/20/Awesome-browser-extensions-for-GitHub/</id>
-    <published>2016-09-20T02:51:43.000Z</published>
-    <updated>2016-10-20T03:32:45.131Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Awesome-browser-extensions-for-GitHub"><a href="#Awesome-browser-extensions-for-GitHub" class="headerlink" title="Awesome browser extensions for GitHub "></a>Awesome browser extensions for GitHub <a href="https://github.com/sindresorhus/awesome" target="_blank" rel="external"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome"></a></h1><blockquote>
-<p>A collection of awesome browser extensions for GitHub.</p>
-</blockquote>
-<a id="more"></a>
-<h2 id="Table-of-Content"><a href="#Table-of-Content" class="headerlink" title="Table of Content"></a>Table of Content</h2><ul>
-<li><a href="#codecov-code-coverage-overlay">Codecov: Code Coverage Overlay</a></li>
-<li><a href="#coderstats-link-for-github">CoderStats link for GitHub</a></li>
-<li><a href="#contributors-on-github">Contributors on GitHub</a></li>
-<li><a href="#follow-me-or-not">Follow Me or Not</a></li>
-<li><a href="#gifhub">GifHub</a></li>
-<li><a href="#github-ast-viewer">GitHub AST Viewer</a></li>
-<li><a href="#github-awesome-autocomplete">GitHub Awesome Autocomplete</a></li>
-<li><a href="#github-categoric">GitHub Categoric</a></li>
-<li><a href="#github-email-extractor">GitHub Email Extractor</a></li>
-<li><a href="#github-extended">GitHub Extended</a></li>
-<li><a href="#github-grouped-news">GitHub Grouped News</a></li>
-<li><a href="#github-highlight-selected">GitHub Highlight Selected</a></li>
-<li><a href="#github-hovercard">GitHub Hovercard</a></li>
-<li><a href="#github-markdown-outline-extension">GitHub Markdown Outline Extension</a></li>
-<li><a href="#github-omnibar">GitHub Omnibar</a></li>
-<li><a href="#github-plus">Github Plus</a></li>
-<li><a href="#github-pr-filter">GitHub Pr Filter</a></li>
-<li><a href="#github-repo-size">Github Repo Size</a></li>
-<li><a href="#github-travis-stat">Github Travis Stat</a></li>
-<li><a href="#github.expandinizr">github.expandinizr</a></li>
-<li><a href="#gitter-helper">Gitter Helper</a></li>
-<li><a href="#hide-files-on-github">Hide files on GitHub</a></li>
-<li><a href="#isometric-contributions">Isometric Contributions</a></li>
-<li><a href="#lovely-forks">Lovely forks</a></li>
-<li><a href="#minigithub">MiniGitHub</a></li>
-<li><a href="#news-feed-for-github">News Feed for GitHub</a></li>
-<li><a href="#notifier-for-github">Notifier for GitHub</a></li>
-<li><a href="#npm-hub">npm-hub</a></li>
-<li><a href="#octo-mate">Octo Mate</a></li>
-<li><a href="#octolinker">OctoLinker</a></li>
-<li><a href="#octomerge">Octomerge</a></li>
-<li><a href="#octopreview">OctoPreview</a></li>
-<li><a href="#octotree">Octotree</a></li>
-<li><a href="#pages2repo">Pages2Repo</a></li>
-<li><a href="#pr-file-filter-for-github">PR file filter for Github</a></li>
-<li><a href="#refined-github">Refined GitHub</a></li>
-<li><a href="#review-on-github">Review on GitHub</a></li>
-<li><a href="#show-all-github-issues">Show All GitHub Issues</a></li>
-<li><a href="#tab-size-on-github">Tab Size on GitHub</a></li>
-<li><a href="#twitter-for-github">Twitter for GitHub</a></li>
-<li><a href="#where-is-it">Where is it?</a></li>
-<li><a href="#zenhub">ZenHub</a></li>
-</ul>
-<h2 id="Codecov-Code-Coverage-Overlay"><a href="#Codecov-Code-Coverage-Overlay" class="headerlink" title="Codecov: Code Coverage Overlay"></a><a href="https://codecov.io" target="_blank" rel="external">Codecov: Code Coverage Overlay</a></h2><p><a href="https://chrome.google.com/webstore/detail/codecov-extension/keefkhehidemnokodkdkejapdgfjmijf" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br><a href="https://addons.mozilla.org/en-US/firefox/addon/codecov-extension/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_48x48.png" width="24"></a><br><a href="https://addons.opera.com/en/extensions/details/codecov-extension/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/opera/opera_48x48.png" width="24"></a></p>
-<p>Overlay code coverage in Github and Bitbucket. Supporting commits, blobs, blame, compare, pulls and more.<br>Free for open source repositories.</p>
-<details><summary>Screenshots</summary><br><img src="https://cloud.githubusercontent.com/assets/2041757/10658044/5a971f60-7893-11e5-8e89-a51cac2b21cf.png" alt="Codecov"><br></details>
-
-
-<h2 id="CoderStats-link-for-GitHub"><a href="#CoderStats-link-for-GitHub" class="headerlink" title="CoderStats link for GitHub"></a><a href="https://github.com/coderstats/cxt_coderstats" target="_blank" rel="external">CoderStats link for GitHub</a></h2><p><a href="https://chrome.google.com/webstore/detail/coderstats-link-for-githu/necogepejonacpphmlmcagmbjaogpbng" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br><a href="https://addons.mozilla.org/en-US/firefox/addon/coderstats/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_48x48.png" width="24"></a></p>
-<p>The CoderStats link for Github Chrome extension displays a link to the CoderStats page for the currently displayed user or organization profile page on Github.</p>
-<details><summary>Screenshots</summary><br><img src="https://raw.githubusercontent.com/coderstats/cxt_coderstats/master/Screenshot_Github_Coderstats_yaph.png" alt="GitHub Profile"><br><img src="https://raw.githubusercontent.com/coderstats/cxt_coderstats/master/Screenshot_Coderstats_yaph.png" alt="CoderStats Profile"><br></details>
-
-
-<h2 id="Contributors-on-GitHub"><a href="#Contributors-on-GitHub" class="headerlink" title="Contributors on GitHub"></a><a href="https://github.com/hzoo/contributors-on-github" target="_blank" rel="external">Contributors on GitHub</a></h2><p><a href="https://chrome.google.com/webstore/detail/contributors-on-github/cjbacdldhllelehomkmlniifaojgaeph" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>Show the # of PRs and other contributors stats in the Issues/PRs tab. Can be helpful for maintainers that want to know if it’s a contributor’s first PR.</p>
-<details><summary>Screenshots</summary><br> <img src="https://github.com/hzoo/contributors-on-github/blob/master/firstpr.gif" alt="Contributors on GitHub"><br></details>
-
-
-<h2 id="Follow-Me-or-Not"><a href="#Follow-Me-or-Not" class="headerlink" title="Follow Me or Not"></a><a href="https://github.com/mkstn/follow-me-or-not" target="_blank" rel="external">Follow Me or Not</a></h2><p><a href="https://chrome.google.com/webstore/detail/follow-me-or-not/mjfndaiehjlhhdcbafamkgieeljffngj" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>Chrome extension to check if the GitHub profile you are visiting, follows you or not in a Twitter-like UI</p>
-<details><summary>Screenshots</summary><br> <img src="https://raw.githubusercontent.com/mkstn/follow-me-or-not/master/assets/images/Screenshot%20from%202016-08-14%2003%3A07%3A39.png" alt="Follow Me or Not"><br></details>
-
-
-<h2 id="GifHub"><a href="#GifHub" class="headerlink" title="GifHub"></a><a href="https://github.com/DrewML/GifHub" target="_blank" rel="external">GifHub</a></h2><p><a href="https://chrome.google.com/webstore/detail/gifhub/lponagpckglibniamicamklhfkoebpeb/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>A Chrome extension that adds a button on GitHub comment toolbars, allowing you to search for (and include) GIFs in comments.</p>
-<details><summary>Screenshots</summary><br> <img src="https://cloud.githubusercontent.com/assets/1393946/13860430/911b4ce6-ec88-11e5-9952-11f19baa0190.gif" alt="GifHub"><br></details>
-
-
-<h2 id="GitHub-AST-Viewer"><a href="#GitHub-AST-Viewer" class="headerlink" title="GitHub AST Viewer"></a><a href="https://github.com/lukehorvat/github-ast-viewer" target="_blank" rel="external">GitHub AST Viewer</a></h2><p><a href="https://chrome.google.com/webstore/detail/github-ast-viewer/kgncjlmmhhmhbiiacajdmpnhplahelkh" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>View the abstract syntax tree (AST) of code on GitHub.</p>
-<details><summary>Screenshots</summary><br> <img src="http://i.imgur.com/jumGRMd.gif" alt="GitHub AST Viewer"><br></details>
-
-
-<h2 id="GitHub-Awesome-Autocomplete"><a href="#GitHub-Awesome-Autocomplete" class="headerlink" title="GitHub Awesome Autocomplete"></a><a href="https://github.com/algolia/github-awesome-autocomplete" target="_blank" rel="external">GitHub Awesome Autocomplete</a></h2><p><a href="https://chrome.google.com/webstore/detail/github-awesome-autocomple/djkfdjpoelphhdclfjhnffmnlnoknfnd" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br><a href="https://addons.mozilla.org/en-US/firefox/addon/github-awesome-autocomplete/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_48x48.png" width="24"></a></p>
-<p>Simple and discreet extension that enhances GitHub’s search, letting you search for repositories and people faster than ever.</p>
-<details><summary>Screenshots</summary><br> <img src="https://dl.dropboxusercontent.com/s/zg3cblx3q8fhbkl/github-awesome-autocomplete.jpg" alt="Pages2Repo"><br></details>
-
-
-<h2 id="GitHub-Categoric"><a href="#GitHub-Categoric" class="headerlink" title="GitHub Categoric"></a><a href="https://github.com/ozlerhakan/categoric" target="_blank" rel="external">GitHub Categoric</a></h2><p><a href="https://chrome.google.com/webstore/detail/github-categoric/gbfpmfhnfmobaichcfnhdobencecomhg" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>Categorize your mixed GitHub notifications</p>
-<details><summary>Screenshots</summary><br> <img src="https://dl.dropboxusercontent.com/u/15056258/screeen.png" alt="GitHub Categoric"><br></details>
-
-
-<h2 id="GitHub-Email-Extractor"><a href="#GitHub-Email-Extractor" class="headerlink" title="GitHub Email Extractor"></a><a href="https://github.com/prabhakar267/github-email-extractor" target="_blank" rel="external">GitHub Email Extractor</a></h2><p><a href="https://chrome.google.com/webstore/detail/github-show-email/pndebicblkfcinlcedagfhjfkkkecibn" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>Chrome extension to fetch the email ID of a user even if they haven’t made it public on their GitHub profile</p>
-<details><summary>Screenshots</summary><br>| Before | After |<br>| — | — |<br>| <img src="https://raw.githubusercontent.com/prabhakar267/github-email-extractor/master/screenshots/Screenshot%20from%202016-08-16%2000-09-33.png" alt="GitHub Email Extractor"> | <img src="https://raw.githubusercontent.com/prabhakar267/github-email-extractor/master/screenshots/Screenshot%20from%202016-08-16%2000-05-54.png" alt="GitHub Email Extractor"> |<br></details>
-
-
-<h2 id="GitHub-Extended"><a href="#GitHub-Extended" class="headerlink" title="GitHub Extended"></a><a href="https://github.com/onmyway133/github-extended" target="_blank" rel="external">GitHub Extended</a></h2><p><a href="https://chrome.google.com/webstore/detail/github-extended/doidfnmbfadacpcjkekkgofkmnkljnhi/related" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>A Chrome extension to discover more repositories</p>
-<h2 id="GitHub-Grouped-News"><a href="#GitHub-Grouped-News" class="headerlink" title="GitHub Grouped News"></a><a href="https://github.com/bfred-it/GitHub-Grouped-News" target="_blank" rel="external">GitHub Grouped News</a></h2><p><a href="https://chrome.google.com/webstore/detail/github-grouped-news/failppjoidijbialknplliogdmabniaf" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>Group stars, forks, and other events in your dashboard/news feed.</p>
-<details><summary>Screenshots</summary><br>  <img src="https://raw.githubusercontent.com/bfred-it/GitHub-Grouped-News/master/screenshot.png"><br></details>
-
-
-<h2 id="GitHub-Highlight-Selected"><a href="#GitHub-Highlight-Selected" class="headerlink" title="GitHub Highlight Selected"></a><a href="https://github.com/Nuclides/github-highlight-selected" target="_blank" rel="external">GitHub Highlight Selected</a></h2><p><a href="https://chrome.google.com/webstore/detail/github-highlight-selected/lhiklbgjcblimmjjflobpncgihagcmbj" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br><a href="https://github.com/Nuclides/github-highlight-selected/blob/master/README.md" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/safari/safari_48x48.png" width="24"></a></p>
-<p>Highlight selected word in GitHub source view like Sublime Text.</p>
-<details><summary>Screenshots</summary><br> <img src="https://dl.dropboxusercontent.com/s/2un7ezpdipunn70/github-highlight-selected.jpg" alt="GitHub Highlight Selected"><br></details>
-
-
-<h2 id="GitHub-Hovercard"><a href="#GitHub-Hovercard" class="headerlink" title="GitHub Hovercard"></a><a href="https://github.com/Justineo/github-hovercard" target="_blank" rel="external">GitHub Hovercard</a></h2><p><a href="https://chrome.google.com/webstore/detail/github-hovercard/mmoahbbnojgkclgceahhakhnccimnplk" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br><a href="https://addons.mozilla.org/en-US/firefox/addon/github-hovercard/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_48x48.png" width="24"></a><br><a href="https://addons.opera.com/en/extensions/details/github-hovercard/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/opera/opera_48x48.png" width="24"></a></p>
-<p>Neat user/repo/issue hovercard for GitHub.</p>
-<details><summary>Screenshots</summary><br> <img src="https://raw.githubusercontent.com/Justineo/github-hovercard/master/screenshots/2.png" alt="GitHub Hovercard"><br></details>
-
-
-<h2 id="GitHub-Markdown-Outline-Extension"><a href="#GitHub-Markdown-Outline-Extension" class="headerlink" title="GitHub Markdown Outline Extension"></a><a href="https://github.com/dbkaplun/github-markdown-outline-extension" target="_blank" rel="external">GitHub Markdown Outline Extension</a></h2><p><a href="https://chrome.google.com/webstore/detail/github-markdown-outline-e/gccinjjdbfdkkkebfbeipopijjfohfgj" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>Displays a clickable outline of all topic headers for markdown documents on GitHub</p>
-<details><summary>Screenshots</summary><br> <img src="https://raw.githubusercontent.com/dbkaplun/github-markdown-outline-extension/master/screenshot.png" alt="GitHub Markdown Outline Extension"><br></details>
-
-
-<h2 id="GitHub-Omnibar"><a href="#GitHub-Omnibar" class="headerlink" title="GitHub Omnibar"></a><a href="https://github.com/jcouyang/gh-omnibar" target="_blank" rel="external">GitHub Omnibar</a></h2><p><a href="https://chrome.google.com/webstore/detail/github-omnibar/njccjmmakcbdpnlbodllfgiloenfpocb" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br><a href="https://github.com/jcouyang/gh-omnibar#firefox" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_48x48.png" width="24"></a></p>
-<p>Omnibar for GitHub just like <a href="https://developer.atlassian.com/blog/2016/02/6-secret-bitbucket-features/?categories=git#omnibar" target="_blank" rel="external">bitbucket’s</a></p>
-<details><summary>Screenshots</summary><br> <img src="https://cloud.githubusercontent.com/assets/1235045/13912608/00623f8a-ef7a-11e5-92dc-20cd9815007d.png" alt=""><br></details>
-
-
-<h2 id="Github-Plus"><a href="#Github-Plus" class="headerlink" title="Github Plus"></a><a href="https://github.com/softvar/github-plus" target="_blank" rel="external">Github Plus</a></h2><p><a href="https://chrome.google.com/webstore/detail/github-plus/anlikcnbgdeidpacdbdljnabclhahhmd" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>Displays size of each file, download link and an option of copying file contents directly to clipboard</p>
-<details><summary>Screenshots</summary><br>  <img src="https://raw.githubusercontent.com/softvar/github-plus/master/screenshots/screenshot-home.png"><br>  <img src="https://raw.githubusercontent.com/softvar/github-plus/master/screenshots/screenshot-file.png"><br></details>
-
-
-<h2 id="GitHub-Pr-Filter"><a href="#GitHub-Pr-Filter" class="headerlink" title="GitHub Pr Filter"></a><a href="https://github.com/danielhusar/github-pr-filter" target="_blank" rel="external">GitHub Pr Filter</a></h2><p><a href="https://chrome.google.com/webstore/detail/github-pr-filter/fjmalelcdgindphooaabcgmmnmoclpee" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>Add ability to filter files in pull requests.</p>
-<details><summary>Screenshots</summary><br> <img src="https://raw.githubusercontent.com/danielhusar/github-pr-filter/master/demo.png" alt="GitHub Pr Filter"><br></details>
-
-
-<h2 id="Github-Repo-Size"><a href="#Github-Repo-Size" class="headerlink" title="Github Repo Size"></a><a href="https://github.com/harshjv/github-repo-size" target="_blank" rel="external">Github Repo Size</a></h2><p><a href="https://chrome.google.com/webstore/detail/github-repository-size/apnjnioapinblneaedefcnopcjepgkci" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br>Automatically adds repository size to GitHub’s repository summary.</p>
-<details><summary>Screenshots</summary><br>  <img src="https://raw.githubusercontent.com/harshjv/github-repo-size/master/screenshot.png"><br></details>
-
-
-<h2 id="Github-Travis-Stat"><a href="#Github-Travis-Stat" class="headerlink" title="Github Travis Stat"></a><a href="https://github.com/Yaowenjie/travis-github-chrome-extension" target="_blank" rel="external">Github Travis Stat</a></h2><p><a href="https://chrome.google.com/webstore/detail/github-travis-stat/ekkfhiophiaakmeppcnkblpbbjlnlnmh" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>This extension is to display travis-ci status for repos in github. There is a visual chart which shows build status and duration changes for recent 10 times.</p>
-<details><summary>Screenshots</summary><br>  <img src="http://yaowenjie.github.io/images/2016/travis0.png"><br></details>
-
-
-<h2 id="github-expandinizr"><a href="#github-expandinizr" class="headerlink" title="github.expandinizr"></a><a href="https://github.com/thecodejunkie/github.expandinizr" target="_blank" rel="external">github.expandinizr</a></h2><p><a href="https://chrome.google.com/webstore/detail/githubexpandinizr/cbehdjjcilgnejbpnjhobkiiggkedfib" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>Add breakpoints at 1400px, 1600px and 1800px for full GitHub experience on large screens. Also removes the truncating of file and directory names in the repository browser.</p>
-<details><summary>Screenshots</summary><br> <img src="https://dl.dropboxusercontent.com/s/7e9g9g0l445j90m/github-expandinizr.jpg" alt="github.expandinizr"><br></details>
-
-
-<h2 id="Gitter-Helper"><a href="#Gitter-Helper" class="headerlink" title="Gitter Helper"></a><a href="https://github.com/svincent/gitter-chrome" target="_blank" rel="external">Gitter Helper</a></h2><p><a href="https://chrome.google.com/webstore/detail/gitter-helper-for-github/apahfabdianobklhejoojcpmoegaolpi" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>Makes it easy to see if a GitHub project has a <a href="https://gitter.im" target="_blank" rel="external">Gitter</a> room.</p>
-<details><summary>Screenshots</summary><br> <img src="https://lh3.googleusercontent.com/sRRg2KsBhOnu3RFfLZYDWFEn52hngmM9ygdc-gBvjmY4l8a4moFjgXJTVUVNNj-oIUCplfVwHgQ=s1280-h800-e365-rw" alt="Gitter Helper"><br></details>
-
-
-<h2 id="Hide-files-on-GitHub"><a href="#Hide-files-on-GitHub" class="headerlink" title="Hide files on GitHub"></a><a href="https://github.com/sindresorhus/hide-files-on-github" target="_blank" rel="external">Hide files on GitHub</a></h2><p><a href="https://chrome.google.com/webstore/detail/hide-files-on-github/lpnakhpaodhdkleejaehlapdhbgjbddp" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br><a href="https://addons.opera.com/en/extensions/details/github-hide-files/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/opera/opera_48x48.png" width="24"></a></p>
-<p>Hide dotfiles from the GitHub file browser.</p>
-<details><summary>Screenshots</summary><br> <img src="https://dl.dropboxusercontent.com/s/80jpb795dckfel7/github-hide-files.jpg" alt="Hide files on GitHub"><br></details>
-
-
-<h2 id="Isometric-Contributions"><a href="#Isometric-Contributions" class="headerlink" title="Isometric Contributions"></a><a href="https://github.com/jasonlong/isometric-contributions" target="_blank" rel="external">Isometric Contributions</a></h2><p><a href="https://chrome.google.com/webstore/detail/isometric-contributions/mjoedlfflcchnleknnceiplgaeoegien" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br><a href="https://github.com/jasonlong/isometric-contributions#safari" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/safari/safari_48x48.png" width="24"></a></p>
-<p>Allows you to toggle between the normal GitHub contribution chart and an isometric pixel art version.</p>
-<details><summary>Screenshots</summary><br> <img src="https://dl.dropboxusercontent.com/s/kc1qxqitixx0hfp/isometric-contributions.jpg" alt="Isometric Contributions"><br></details>
-
-
-<h2 id="Lovely-forks"><a href="#Lovely-forks" class="headerlink" title="Lovely forks"></a><a href="https://github.com/musically-ut/lovely-forks" target="_blank" rel="external">Lovely forks</a></h2><p><a href="https://chrome.google.com/webstore/detail/lovely-forks/ialbpcipalajnakfondkflpkagbkdoib" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br><a href="https://addons.mozilla.org/en-US/firefox/addon/lovely-forks/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_48x48.png" width="24"></a></p>
-<p>See forks with the most stars under the names of repositories.</p>
-<details><summary>Screenshots</summary><br> <img src="https://musicallyut.in/docs/lovely-forks/slate-fork-80.png" alt="Slate fork"><br></details>
-
-
-<h2 id="MiniGitHub"><a href="#MiniGitHub" class="headerlink" title="MiniGitHub"></a><a href="https://github.com/mbad0la/MiniGitHub" target="_blank" rel="external">MiniGitHub</a></h2><p><a href="https://addons.mozilla.org/en-us/firefox/addon/minigithub/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_48x48.png" width="24"></a></p>
-<p>An add-on for a quick gist of Github.</p>
-<details><summary>Screenshots</summary><br><img src="https://raw.githubusercontent.com/mbad0la/MiniGitHub/master/screenshots/minigithub.gif" alt="Trend Screen"><br></details>
-
-
-<h2 id="News-Feed-for-GitHub"><a href="#News-Feed-for-GitHub" class="headerlink" title="News Feed for GitHub"></a><a href="https://github.com/julmot/news-feed-for-github" target="_blank" rel="external">News Feed for GitHub</a></h2><p><a href="https://chrome.google.com/webstore/detail/news-feed-for-github/gbpajmknkcgjeinfbmfeiafhogbhgkjh" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br><a href="https://addons.mozilla.org/en-US/firefox/addon/news-feed-for-github/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_48x48.png" width="24"></a></p>
-<p>A Chrome and Firefox extension that shows notifications when something happens in your GitHub news feed.</p>
-<details><summary>Screenshots</summary><br> <img src="https://raw.githubusercontent.com/julmot/news-feed-for-github/master/screenshots/chrome.png" alt="News Feed for GitHub"><br></details>
-
-
-<h2 id="Notifier-for-GitHub"><a href="#Notifier-for-GitHub" class="headerlink" title="Notifier for GitHub"></a><a href="https://github.com/sindresorhus/notifier-for-github" target="_blank" rel="external">Notifier for GitHub</a></h2><p><a href="https://chrome.google.com/webstore/detail/notifier-for-github/lmjdlojahmbbcodnpecnjnmlddbkjhnn" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br><a href="https://addons.mozilla.org/en-US/firefox/addon/notifier-for-github/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_48x48.png" width="24"></a><br><a href="https://addons.opera.com/en/extensions/details/github-notifier/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/opera/opera_48x48.png" width="24"></a><br><a href="https://github.com/sindresorhus/notifier-for-github-safari/releases" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/safari/safari_48x48.png" width="24"></a></p>
-<p>Displays your GitHub notifications unread count. Supports GitHub Enterprise and an option to only show unread count for issues you’re participating in. You can click the icon to quickly see your unread notifications.</p>
-<details><summary>Screenshots</summary><br> <img src="https://dl.dropboxusercontent.com/s/c7egcrhq1wvff5r/github-notifier.jpg" alt="Notifier for GitHub"><br></details>
-
-
-<h2 id="npm-hub"><a href="#npm-hub" class="headerlink" title="npm-hub"></a><a href="https://github.com/zeke/npm-hub" target="_blank" rel="external">npm-hub</a></h2><p><a href="https://chrome.google.com/webstore/detail/npm-hub/kbbbjimdjbjclaebffknlabpogocablj" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br><a href="http://crossrider.com/install/36212-npm-hub" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_48x48.png" width="24"></a></p>
-<p>When viewing a repository on github.com that has a package.json file, this extension will introspect the dependencies in package.json and display links and description for each dependency, just below the repo’s README.</p>
-<details><summary>Screenshots</summary><br>  <img width="531" src="https://cloud.githubusercontent.com/assets/1393946/15631842/9dfd38f6-257d-11e6-96b8-f7008937e1ad.png"><br></details>
-
-
-<h2 id="Octo-Mate"><a href="#Octo-Mate" class="headerlink" title="Octo Mate"></a><a href="https://github.com/camsong/chrome-github-mate" target="_blank" rel="external">Octo Mate</a></h2><p><a href="https://chrome.google.com/webstore/detail/octo-mate/baggcehellihkglakjnmnhpnjmkbmpkf?utm_source=chrome-ntp-icon" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>Adds various useful features to GitHub:</p>
-<ol>
-<li>Download any file by clicking the file icon.</li>
-<li>Show tooltip of your unread notifications.</li>
-<li>Show Repo size.</li>
-<li>Show ‘GH Page’ link button if it has GitHub Pages.</li>
-<li>Tab size customising between 2/4/8 whitespace.</li>
-</ol>
-<details><summary>Screenshots</summary><br> <img src="https://lh3.googleusercontent.com/kTEhmep4hM1Mknr1ILHgFVIzS8a-WszsdKjV0qH8Qjp7M-rbYA-yNR-WA6voWY7gtG9DIBn7Uw=s640-h400-e365-rw" alt="Download file"><br></details>
-
-
-<h2 id="OctoLinker"><a href="#OctoLinker" class="headerlink" title="OctoLinker"></a><a href="https://github.com/OctoLinker/browser-extension" target="_blank" rel="external">OctoLinker</a></h2><p><a href="https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br><a href="https://addons.mozilla.org/en-US/firefox/addon/octolinker/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_48x48.png" width="24"></a><br><a href="https://addons.opera.com/en/extensions/details/octolinker/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/opera/opera_48x48.png" width="24"></a></p>
-<p>Octo-Linker is a Browser Extension which links NPM, bower, Composer &amp; Duo dependencies to their GitHub repository page. It also solve require() statments in a .js, .jsx, .coffee or .md file.</p>
-<details><summary>Screenshots</summary><br> <img src="https://dl.dropboxusercontent.com/s/wl0s1rishc4e8lu/github-linker.jpg" alt="OctoLinker"><br></details>
-
-
-<h2 id="Octomerge"><a href="#Octomerge" class="headerlink" title="Octomerge"></a><a href="https://github.com/tennisonchan/octomerge" target="_blank" rel="external">Octomerge</a></h2><p><a href="https://chrome.google.com/webstore/detail/octomerge/bcfdlpkdamkbcidkenogbahohlnonebo" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>A missing button for automatic merge on build succeeds on Github. If you’ve reviewed a merge request, but the CI builds are still running, it can be annoying to have to wait for them to finish. This way, you don’t have to wait for the builds to finish and remember to merge the request manually. Less waiting, more reviewing!</p>
-<details><summary>Screenshots</summary><br>  <img src="https://raw.githubusercontent.com/tennisonchan/octomerge/master/screenshots/screenshot-1.png"><br></details>
-
-
-<h2 id="OctoPreview"><a href="#OctoPreview" class="headerlink" title="OctoPreview"></a><a href="https://github.com/DrewML/octo-preview" target="_blank" rel="external">OctoPreview</a></h2><p><a href="https://chrome.google.com/webstore/detail/octo-preview/elomekmlfonmdhmpmdfldcjgdoacjcba" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>Displays live previews of Markdown comments while you type. Works with Issues + Pull Requests.</p>
-<details><summary>Screenshots</summary><br> <img src="https://raw.githubusercontent.com/DrewML/octo-preview/master/example.gif" alt="GitHub OctoPreview Extension"><br></details>
-
-
-<h2 id="Octotree"><a href="#Octotree" class="headerlink" title="Octotree"></a><a href="https://github.com/buunguyen/octotree" target="_blank" rel="external">Octotree</a></h2><p><a href="https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br><a href="https://addons.mozilla.org/en-US/firefox/addon/octotree/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_48x48.png" width="24"></a><br><a href="https://github.com/buunguyen/octotree/#install-on-safari" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/safari/safari_48x48.png" width="24"></a><br><a href="https://addons.opera.com/en/extensions/details/octotree/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/opera/opera_48x48.png" width="24"></a></p>
-<p>Useful for developers who frequently read source in GitHub and do not want to download or checkout too many repositories.</p>
-<details><summary>Screenshots</summary><br> <img src="https://dl.dropboxusercontent.com/s/87zbki7vvkucphr/octotree.jpg" alt="Octotree"><br></details>
-
-
-<h2 id="Pages2Repo"><a href="#Pages2Repo" class="headerlink" title="Pages2Repo"></a><a href="https://github.com/Frozenfire92/Pages2Repo" target="_blank" rel="external">Pages2Repo</a></h2><p><a href="https://chrome.google.com/webstore/detail/pages2repo/afnogakjnebbgcbjkgmhaccljfejeflh" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>Makes it easy to access repository info from a GitHub pages website.</p>
-<details><summary>Screenshots</summary><br> <img src="https://cloud.githubusercontent.com/assets/1393946/11908410/4027dc66-a5dc-11e5-9bce-b028aa884c9a.png" alt="Pages2Repo"><br></details>
-
-
-<h2 id="PR-file-filter-for-Github"><a href="#PR-file-filter-for-Github" class="headerlink" title="PR file filter for Github"></a><a href="https://github.com/siggysamson/pr-file-filter-for-github#pr-file-filter-for-github" target="_blank" rel="external">PR file filter for Github</a></h2><p><a href="https://chrome.google.com/webstore/detail/pr-file-filter-for-github/jahafomboikfnemnncinlmohmbbbnbkn" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>This Chrome extension extends the file search of a pull request to allow for actual filtering with globs.</p>
-<details><summary>Screenshots</summary><br>  <img src="https://raw.githubusercontent.com/siggysamson/pr-file-filter-for-github/master/assets/demo.gif"><br></details>
-
-
-<h2 id="Refined-GitHub"><a href="#Refined-GitHub" class="headerlink" title="Refined GitHub"></a><a href="https://github.com/sindresorhus/refined-github" target="_blank" rel="external">Refined GitHub</a></h2><p><a href="https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br><a href="https://github.com/fantattitude/refined-github-safari" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/safari/safari_48x48.png" width="24"></a></p>
-<p>Extension that simplifies the GitHub interface and adds useful features.</p>
-<details><summary>Screenshots</summary><br> <img src="https://raw.githubusercontent.com/sindresorhus/refined-github/master/screenshot-dashboard.png" alt="Refined GitHub"><br></details>
-
-
-<h2 id="Review-on-Github"><a href="#Review-on-Github" class="headerlink" title="Review on Github"></a><a href="https://github.com/bastilian/ReviewOnGitHub" target="_blank" rel="external">Review on Github</a></h2><p><a href="https://chrome.google.com/webstore/detail/review-on-github/eenlonmglmdookfbknbmcgjkpomndjdp" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>Review repositories on GitHub like a Pull Request. This extension adds the ability to github.com to make notes in files and add them as a compiled list to an issue.</p>
-<h2 id="Show-All-GitHub-Issues"><a href="#Show-All-GitHub-Issues" class="headerlink" title="Show All GitHub Issues"></a><a href="https://github.com/sindresorhus/show-all-github-issues" target="_blank" rel="external">Show All GitHub Issues</a></h2><p><a href="https://chrome.google.com/webstore/detail/show-all-github-issues/ahkcgmpcfiijldaijfjekdffckpidieb" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br><a href="https://addons.opera.com/en/extensions/details/github-issues-all/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/opera/opera_48x48.png" width="24"></a></p>
-<p>Show both Issues and Pull Requests in the Issues tab by default. As it previously did.</p>
-<details><summary>Screenshots</summary><br> <img src="https://raw.githubusercontent.com/sindresorhus/show-all-github-issues/master/screenshot.png" alt="Show All GitHub Issues"><br></details>
-
-
-<h2 id="Tab-Size-on-GitHub"><a href="#Tab-Size-on-GitHub" class="headerlink" title="Tab Size on GitHub"></a><a href="https://github.com/sindresorhus/tab-size-on-github" target="_blank" rel="external">Tab Size on GitHub</a></h2><p><a href="https://chrome.google.com/webstore/detail/tab-size-on-github/ofjbgncegkdemndciafljngjbdpfmbkn" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br><a href="https://addons.opera.com/en/extensions/details/github-tab-size/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/opera/opera_48x48.png" width="24"></a></p>
-<p>Make tab indented code more readable by forcing the tab size to 4 instead of 8.</p>
-<details><summary>Screenshots</summary><br> <img src="https://dl.dropboxusercontent.com/s/srd0ik8tbpjzi0v/github-tab-size.jpg" alt="Tab Size on GitHub"><br></details>
-
-
-<h2 id="Twitter-for-GitHub"><a href="#Twitter-for-GitHub" class="headerlink" title="Twitter for GitHub"></a><a href="https://github.com/bevacqua/twitter-for-github" target="_blank" rel="external">Twitter for GitHub</a></h2><p><a href="https://chrome.google.com/webstore/detail/twitter-for-github/joalalcafnlmimkfkihjbdgmphgedojc" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>Infers or tries to find GitHub users’ Twitter handles and present them to you in the GitHub interface.</p>
-<details><summary>Screenshots</summary><br> <img src="https://cloud.githubusercontent.com/assets/1393946/14272254/9a83b0a2-fb01-11e5-8d04-52687ae367f8.png" alt=""><br></details>
-
-
-<h2 id="Where-is-it"><a href="#Where-is-it" class="headerlink" title="Where is it?"></a><a href="https://github.com/WhereIsItDev/whereisit" target="_blank" rel="external">Where is it?</a></h2><p><a href="https://chrome.google.com/webstore/detail/where-is-it/cdgnplmebagbialenimejpokfcodlkdm" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a></p>
-<p>Whereisit makes code navigation on GitHub easier. Look up and jump around class/method definitions with a single click.</p>
-<details><summary>Screenshots</summary><br> <img src="https://cloud.githubusercontent.com/assets/1393946/15090769/d0472958-1433-11e6-8af0-c5294aae94d6.png" alt=""><br></details>
-
-
-<h2 id="ZenHub"><a href="#ZenHub" class="headerlink" title="ZenHub"></a>ZenHub</h2><p><a href="https://chrome.google.com/webstore/detail/zenhub-for-github/ogcgkffhplmphkaahpmffcafajaocjbd" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png" width="24"></a><br><a href="https://www.zenhub.com/" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_48x48.png" width="24"></a></p>
-<p>ZenHub is the first and only project management suite that works natively within GitHub; enhancing your workflow with features built specifically for startups, fast-moving engineering teams, and the open-source community. The product is a browser extension that injects advanced functionality including real-time drag-and-drop Issue Task Boards, peer feedback via a +1 button, and support for uploading any file type directly into the GitHub interface. ZenHub makes it easy to centralize all processes into GitHub, keeping your team lean and agile.</p>
-<details><summary>Screenshots</summary><br> <img src="https://dl.dropboxusercontent.com/s/yosmyg8zsl5tyc5/zenhub.jpg" alt="ZenHub"><br></details>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Awesome-browser-extensions-for-GitHub&quot;&gt;&lt;a href=&quot;#Awesome-browser-extensions-for-GitHub&quot; class=&quot;headerlink&quot; title=&quot;Awesome browser extensions for GitHub &quot;&gt;&lt;/a&gt;Awesome browser extensions for GitHub &lt;a href=&quot;https://github.com/sindresorhus/awesome&quot;&gt;&lt;img src=&quot;https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg&quot; alt=&quot;Awesome&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;A collection of awesome browser extensions for GitHub.&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="GitHub" scheme="https://zhaoy875.github.io/categories/GitHub/"/>
-    
-    
-      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
-    
-      <category term="Awesome" scheme="https://zhaoy875.github.io/tags/Awesome/"/>
-    
-  </entry>
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/zhaoy875_icon.jpg"
+               alt="zhaoy875" />
+          <p class="site-author-name" itemprop="name">zhaoy875</p>
+          <p class="site-description motion-element" itemprop="description">zhaoy的前端开发学习站点，前端开发，前端框架,bootstrap,前端自动化，前端 frontend，Javascript,css3,js,node.js,canvas, gulp,webpack,amd ,cmd,react, react native,angular,vue,vue.js</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/zhaoy875" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/users/08dc89984d49" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://gold.xitu.io/user/5795c11c8ac247005f2fb90b" target="_blank" title="掘金">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  掘金
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/123zhaoy" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/zhaoy875" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/zhaoy875" target="_blank" title="segmentfault">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  segmentfault
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友链
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://alan725.com/" title="alan725" target="_blank">alan725</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhaoy.site" title="zhaoy" target="_blank">zhaoy</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.baidu.com" title="百度" target="_blank">百度</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+         
+       
+        <div class="duoshuoviews">
+          <h3>最近访客</h3>
+           <div class="ds-recent-visitors" data-num-items="24" data-avatar-size="42" id="ds-recent-visitors">
+           </div>  
+        </div>
+       
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前端资源汇集"><span class="nav-number">1.</span> <span class="nav-text">前端资源汇集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#综合类"><span class="nav-number">1.1.</span> <span class="nav-text">综合类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#综合类-地址"><span class="nav-number">1.1.1.</span> <span class="nav-text">综合类 地址</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#入门类"><span class="nav-number">1.2.</span> <span class="nav-text">入门类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#入门类-地址"><span class="nav-number">1.2.1.</span> <span class="nav-text">入门类 地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工具类"><span class="nav-number">1.2.2.</span> <span class="nav-text">工具类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#综合效果搜索平台"><span class="nav-number">1.2.3.</span> <span class="nav-text">综合效果搜索平台</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#周报类"><span class="nav-number">1.2.4.</span> <span class="nav-text">周报类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发中心"><span class="nav-number">1.2.5.</span> <span class="nav-text">开发中心</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nodejs-地址"><span class="nav-number">1.2.6.</span> <span class="nav-text">Nodejs 地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#综合API"><span class="nav-number">1.2.7.</span> <span class="nav-text">综合API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS"><span class="nav-number">1.2.8.</span> <span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#iconfont"><span class="nav-number">1.2.8.1.</span> <span class="nav-text">iconfont</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#css预处理器Less-sass"><span class="nav-number">1.2.8.2.</span> <span class="nav-text">css预处理器Less,sass</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#框架"><span class="nav-number">1.2.9.</span> <span class="nav-text">框架</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Angularjs"><span class="nav-number">1.2.9.1.</span> <span class="nav-text">Angularjs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue"><span class="nav-number">1.2.9.2.</span> <span class="nav-text">vue</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动端应用开发"><span class="nav-number">1.2.10.</span> <span class="nav-text">移动端应用开发</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#jQuery"><span class="nav-number">1.2.10.1.</span> <span class="nav-text">jQuery</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Requriejs"><span class="nav-number">1.2.10.2.</span> <span class="nav-text">Requriejs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Seajs"><span class="nav-number">1.2.10.3.</span> <span class="nav-text">Seajs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Markdown"><span class="nav-number">1.2.10.4.</span> <span class="nav-text">Markdown</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#兼容性"><span class="nav-number">1.2.11.</span> <span class="nav-text">兼容性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端UI相关"><span class="nav-number">1.2.12.</span> <span class="nav-text">前端UI相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其它API"><span class="nav-number">1.2.13.</span> <span class="nav-text">其它API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图表类"><span class="nav-number">1.2.14.</span> <span class="nav-text">图表类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则"><span class="nav-number">1.2.15.</span> <span class="nav-text">正则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端规范等"><span class="nav-number">1.2.16.</span> <span class="nav-text">前端规范等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP"><span class="nav-number">1.2.17.</span> <span class="nav-text">PHP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#各大公司开源项目"><span class="nav-number">1.2.18.</span> <span class="nav-text">各大公司开源项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用-地址"><span class="nav-number">1.2.19.</span> <span class="nav-text">常用 地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法"><span class="nav-number">1.2.20.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS场景应用"><span class="nav-number">1.2.21.</span> <span class="nav-text">JS场景应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JSON"><span class="nav-number">1.2.21.1.</span> <span class="nav-text">JSON</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#焦点图"><span class="nav-number">1.2.21.2.</span> <span class="nav-text">焦点图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#页面-社会化-分享功能"><span class="nav-number">1.2.21.3.</span> <span class="nav-text">页面 社会化 分享功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#富文本编辑器"><span class="nav-number">1.2.21.4.</span> <span class="nav-text">富文本编辑器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端概述"><span class="nav-number">1.2.22.</span> <span class="nav-text">前端概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端工程化"><span class="nav-number">1.2.23.</span> <span class="nav-text">前端工程化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常规优化"><span class="nav-number">1.2.24.</span> <span class="nav-text">常规优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#优化工具"><span class="nav-number">1.2.24.1.</span> <span class="nav-text">优化工具</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在线工具-地址"><span class="nav-number">1.2.24.2.</span> <span class="nav-text">在线工具 地址</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端架构"><span class="nav-number">1.2.25.</span> <span class="nav-text">前端架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐作品"><span class="nav-number">1.2.26.</span> <span class="nav-text">推荐作品</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求职工作"><span class="nav-number">1.2.27.</span> <span class="nav-text">求职工作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简历模板-地址"><span class="nav-number">1.2.27.1.</span> <span class="nav-text">简历模板 地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#面试题"><span class="nav-number">1.2.27.2.</span> <span class="nav-text">面试题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Fiddler网络分析"><span class="nav-number">1.2.27.3.</span> <span class="nav-text">Fiddler网络分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chrome"><span class="nav-number">1.2.27.4.</span> <span class="nav-text">Chrome</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Firebug"><span class="nav-number">1.2.27.5.</span> <span class="nav-text">Firebug</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动-微信调试"><span class="nav-number">1.2.28.</span> <span class="nav-text">移动,微信调试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#图片应用img"><span class="nav-number">1.2.28.1.</span> <span class="nav-text">图片应用img</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器同步开发"><span class="nav-number">1.2.29.</span> <span class="nav-text">浏览器同步开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在线PPT制作"><span class="nav-number">1.2.30.</span> <span class="nav-text">在线PPT制作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端导航网站"><span class="nav-number">1.2.31.</span> <span class="nav-text">前端导航网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用CDN"><span class="nav-number">1.2.32.</span> <span class="nav-text">常用CDN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git"><span class="nav-number">1.2.33.</span> <span class="nav-text">Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#各种日期日历"><span class="nav-number">1.2.33.1.</span> <span class="nav-text">各种日期日历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Date-library-地址"><span class="nav-number">1.2.33.2.</span> <span class="nav-text">Date library 地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其它-地址"><span class="nav-number">1.2.33.3.</span> <span class="nav-text">其它 地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#效果类-地址"><span class="nav-number">1.2.33.4.</span> <span class="nav-text">效果类 地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#弹出层-地址"><span class="nav-number">1.2.33.5.</span> <span class="nav-text">弹出层 地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优秀JavaScript项目"><span class="nav-number">1.2.33.6.</span> <span class="nav-text">优秀JavaScript项目</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
   
-  <entry>
-    <title>修改Hexo S后自动打开浏览器</title>
-    <link href="https://zhaoy875.github.io/2016/09/15/%E4%BF%AE%E6%94%B9hexo-s%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
-    <id>https://zhaoy875.github.io/2016/09/15/修改hexo-s自动打开浏览器/</id>
-    <published>2016-09-15T11:50:20.000Z</published>
-    <updated>2016-09-29T18:00:21.086Z</updated>
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
     
-    <content type="html"><![CDATA[<p>##　缘起<br>每次修改博客后 ，hexo s启动本地服务器后不会自动打开浏览器，每次要点开地址。不爽！搞起</p>
-<p>browsersync或者anywhere(随时随地启动当前目录服务器，真的很好用^_^)都有这个功能，从搜了下anywhere的源码实现,移植到hexo 的模块</p>
-<p>打开 \node_modules\hexo-server\lib\server.js这个文件<br>在</p>
-<pre><code>self.log.info(&apos;Hexo is running at %s. Press Ctrl+C to stop.&apos;, chalk.underline(addr));
-self.emit(&apos;server&apos;);
+    <i class="menu-item-icon fa fa-fw fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhaoy875</span>
+</div>
 
-if (args.o || args.open) {
-  open(addr);
-}    
-</code></pre><p>的后面粘贴，新增openURL方法：</p>
-<pre><code>var exec = require(&apos;child_process&apos;).exec;
-var spawn = require(&apos;child_process&apos;).spawn;
+<div class="powered-by">
+   <a class="theme-link" href="https://hexo.io">Hexo</a> 驱动
+</div>
 
-var openURL = function (url) {
-  switch (process.platform) {
-    case &quot;darwin&quot;:
-      exec(&apos;open &apos; + url);
-      break;
-    case &quot;win32&quot;:
-      exec(&apos;start &apos; + url);
-      break;
-    default:
-      spawn(&apos;xdg-open&apos;, [url]);
+<div class="theme-info">
+ 
+  Theme by <a class="theme-link" href="https://github.com/zhaoy875/hexo-theme-zhaoy">zhaoy</a> based on
+  
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">Next</a>
+</div>
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">访客数：<i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv">访问量：<i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+
+<div class="includejs">
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
   }
-};
+</script>
 
- openURL(addr);
- console.log(&apos;open success!&apos;);
-</code></pre><p>保存，hexo clean ， hexo s测试一下吧</p>
-<h2 id="other"><a href="#other" class="headerlink" title="other"></a>other</h2><p>暂时没花时间去独立提取模块，就整个把anywhere的模块安装进来了，<br>依赖文件太恐怖了。。。<br>想起来再折腾吧</p>
-<blockquote>
-<p>npm ls -g 查看全局安装的模块及依赖</p>
-</blockquote>
-<pre><code>+-- bower@1.7.9
-+-- cnpm@4.2.0
-| +-- auto-correct@1.0.0
-| +-- bagpipe@0.3.5
-| +-- colors@1.1.2
-| +-- commander@2.7.1
-| | `-- graceful-readlink@1.0.1
-| +-- cross-spawn@0.2.9
-| | `-- lru-cache@2.7.3
-| +-- debug@2.2.0
-| | `-- ms@0.7.1
-| +-- giturl@1.0.0
-| +-- npm@3.8.9
-| | +-- abbrev@1.0.7
-| | +-- ansi-regex@2.0.0
-| | +-- ansicolors@0.3.2
-| | +-- ansistyles@0.1.3
-| | +-- aproba@1.0.1
-。。。。
-此处省略一万行
-。。。。
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;##　缘起&lt;br&gt;每次修改博客后 ，hexo s启动本地服务器后不会自动打开浏览器，每次要点开地址。不爽！搞起&lt;/p&gt;
-&lt;p&gt;browsersync或者anywhere(随时随地启动当前目录服务器，真的很好用^_^)都有这个功能，从搜了下anywhere的源码实现,移植到h
-    
-    </summary>
-    
-      <category term="other" scheme="https://zhaoy875.github.io/categories/other/"/>
-    
-    
-      <category term="学习效率" scheme="https://zhaoy875.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%95%88%E7%8E%87/"/>
-    
-      <category term="思考" scheme="https://zhaoy875.github.io/tags/%E6%80%9D%E8%80%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>提高效率-Focus,Just Do One Thing</title>
-    <link href="https://zhaoy875.github.io/2016/09/09/%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87-Focus-Just-do-one-thing/"/>
-    <id>https://zhaoy875.github.io/2016/09/09/提高效率-Focus-Just-do-one-thing/</id>
-    <published>2016-09-08T18:50:43.000Z</published>
-    <updated>2016-10-15T07:16:47.856Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><h3 id="学习工具和方式上："><a href="#学习工具和方式上：" class="headerlink" title="学习工具和方式上："></a>学习工具和方式上：</h3><p> 当我在学习某个知识点的时候总是容易被其他相关东西带走，一会看这个，一会看别的，结果什么都没精，没能深入，都是跑马观花，并且记忆力也是有限的，好记性不如烂笔头，一个好的知识管理软件对巩固知识体系一定会大有帮助。我正在使用为知笔记，通过浏览器插件，移动端客户端，pc端客户端，web端都可以同步将知识快速保存下来，分门别类。<br><img src="http://od6ri688q.bkt.clouddn.com/%E4%B8%BA%E7%9F%A5%E7%AC%94%E8%AE%B0QQ%E6%88%AA%E5%9B%BE20160930025356.png" alt="我的为之笔记"><br><a id="more"></a></p>
-<blockquote>
-<p>（为知笔记倾向于个人知识管理和团队分享，但是不太方便大众分享和讨论，后面我将逐步将一些文章从为知笔记转移到博客）</p>
-</blockquote>
-<h3 id="时间管理："><a href="#时间管理：" class="headerlink" title="时间管理："></a>时间管理：</h3><p>迫切需要一种专注的学习方式，计算机最擅长的就是按照既定的程序去计算和执行任务，因为多线程和多核，计算机擅长多任务并行。<br>但我们不是计算机，我们的大脑需要专注，focus！<br>为了避免拖延和高效利用时间，可以尝试番茄工作法，在先预定的时间段内完成事先预定的某个任务，然后间隔时间休息，劳逸结合。<br>一个简单的番茄工作法webapp：<br><a href="http://alloyteam.github.io/AlloyTimer/" target="_blank" rel="external">http://alloyteam.github.io/AlloyTimer/</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h2&gt;&lt;h3 id=&quot;学习工具和方式上：&quot;&gt;&lt;a href=&quot;#学习工具和方式上：&quot; class=&quot;headerlink&quot; title=&quot;学习工具和方式上：&quot;&gt;&lt;/a&gt;学习工具和方式上：&lt;/h3&gt;&lt;p&gt; 当我在学习某个知识点的时候总是容易被其他相关东西带走，一会看这个，一会看别的，结果什么都没精，没能深入，都是跑马观花，并且记忆力也是有限的，好记性不如烂笔头，一个好的知识管理软件对巩固知识体系一定会大有帮助。我正在使用为知笔记，通过浏览器插件，移动端客户端，pc端客户端，web端都可以同步将知识快速保存下来，分门别类。&lt;br&gt;&lt;img src=&quot;http://od6ri688q.bkt.clouddn.com/%E4%B8%BA%E7%9F%A5%E7%AC%94%E8%AE%B0QQ%E6%88%AA%E5%9B%BE20160930025356.png&quot; alt=&quot;我的为之笔记&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="学习效率" scheme="https://zhaoy875.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%95%88%E7%8E%87/"/>
-    
-      <category term="思考" scheme="https://zhaoy875.github.io/tags/%E6%80%9D%E8%80%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为什么要使用Virtual DOM</title>
-    <link href="https://zhaoy875.github.io/2016/09/08/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8Virtual-DOM/"/>
-    <id>https://zhaoy875.github.io/2016/09/08/为什么要使用Virtual-DOM/</id>
-    <published>2016-09-08T05:30:23.000Z</published>
-    <updated>2016-10-15T07:16:56.582Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://od6ri688q.bkt.clouddn.com/VirtualDOM.gif" alt=""></p>
-<h1 id="React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM"><a href="#React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM" class="headerlink" title="React中很少有人能解释清楚的问题——为什么要使用Virtual DOM"></a>React中很少有人能解释清楚的问题——为什么要使用Virtual DOM</h1><p>  这也是我在思考的问题，大家都在跟风学RN ,VUE,Ag2,却很少看见有人用数据来量化实际项目应用中dom操作对性能的影响 </p>
-<p> 下面看到野狗微信平台的一篇文章,先介绍下文章内容再说说我的理解：<br><a id="more"></a><br>原文链接：<a href="http://mp.weixin.qq.com/s?__biz=MzI0ODA2ODU2NQ==&amp;mid=2651130413&amp;idx=1&amp;sn=56a1cc3ac225a09982fc0c4a508222c7" target="_blank" rel="external">React中一个没人能解释清楚的问题——为什么要使用Virtual DOM</a></p>
-<h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><p> 有一天，我的朋友向我提了一个有关React的问题：</p>
-<p>组件化， 单向数据绑定，这些我都懂了。但是React为什么要用Virtual DOM呢？</p>
-<p>我的回答非常套路，“因为直接操作DOM比较低效，比较慢。”。</p>
-<p>“但是现在的js引擎总是搞个大新闻，说自己的性能比之前又要不知道高到哪里去了。既然如此，为什么还会说直接操作DOM比较慢呢？”</p>
-<p>好吧… 这确实是一个好问题。</p>
-<p>惊人的是，我找了半天，发现并没有任何一篇文章可以给出坚如磐石的证明，来完满地解释Virtual DOM的必要性。 其实，使得整个流程变得低效的，并不只有直接操作DOM，还包括了操作DOM之后发生的事情。</p>
-<p>为了能让你更好地理解Virtual DOM的必要性，我们先来个急转弯，从宏观上来看浏览器的工作流。以及，一次DOM更新后，到底会发生什么事呢？</p>
-<hr>
-<p>##浏览器工作流</p>
-<p>NOTE：在下面这张图中，配图文字使用的是Webkit引擎的术语。现代的浏览器都是遵循类似的工作流，仅在细节处略有不同。</p>
-<p><img src="http://od6ri688q.bkt.clouddn.com/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%A7%A3%E6%9E%90%E5%9B%BE.png" alt=""></p>
-<h3 id="1-创建DOM树"><a href="#1-创建DOM树" class="headerlink" title="1  创建DOM树"></a>1  创建DOM树</h3><p>一旦浏览器接收到一个HTML文件，渲染引擎（render engine）就开始解析它，并根据HTML元素（elements）一一对应地生成DOM 节点（nodes），组成一棵DOM树。</p>
-<h3 id="2-创建渲染树"><a href="#2-创建渲染树" class="headerlink" title="2   创建渲染树"></a>2   创建渲染树</h3><p>同时，浏览器也会解析来自外部CSS文件和元素上的inline样式。通常浏览器会为这些样式信息，连同包含样式信息的DOM树上的节点，再创建另外一个树，一般被称作渲染树（render tree）</p>
-<h3 id="3-创建渲染树背后的故事"><a href="#3-创建渲染树背后的故事" class="headerlink" title="3   创建渲染树背后的故事"></a>3   创建渲染树背后的故事</h3><p>WebKit内核的浏览器上，处理一个节点的样式的过程称为attachment。DOM树上的每个节点都有一个attach方法，它接收计算好的样式信息，返回一个render对象（又名renderer）</p>
-<p>Attachment的过程是同步的，新节点插入DOM树时，会调用新节点的attach方法。</p>
-<p>构建渲染树时，由于包含了这些render对象，每个render对象都需要计算视觉属性（visual properties）；这个过程通过计算每个元素的样式属性来完成。</p>
-<h3 id="4-布局-Layout"><a href="#4-布局-Layout" class="headerlink" title="4   布局 Layout"></a>4   布局 Layout</h3><p>又被简称为Reflow[2]</p>
-<p>构造了渲染树以后，浏览器引擎开始着手布局（layout）。布局时，渲染树上的每个节点根据其在屏幕上应该出现的精确位置，分配一组屏幕坐标值。</p>
-<h3 id="5-绘制-Painting"><a href="#5-绘制-Painting" class="headerlink" title="5   绘制 Painting"></a>5   绘制 Painting</h3><p>接着，浏览器将会通过遍历渲染树，调用每个节点的paint方法来绘制这些render对象。paint方法根据浏览器平台，使用不同的UI后端API（agnostic UI backend API）。 通过绘制，最终将在屏幕上展示内容。<br>再来看Virtual DOM</p>
-<p>好啦，现在你已经简单过了一遍浏览器引擎的渲染流程，你可以看到，从创建渲染树，到布局，一直到绘制，只要你在这过程中进行一次DOM更新，整个渲染流程都会重做一遍。尤其是创建渲染树，它需要重新计算所有元素上的所有样式。</p>
-<p>在一个复杂的单页面应用中，经常会涉及到大量的DOM操作，这将引起多次计算，使得整个流程变得低效，这应该尽量避免。</p>
-<p>Virtual DOM这个抽象层真正的闪光点正在于此：每当你想对视图进行一次更新，那些本该直接作用于真实DOM的改动，都会先作用于Virtual DOM，然后再将要改动的部分通知到真实DOM。这样可以大幅减少DOM操作带来的重计算步骤。</p>
-<p> Update: Reddit上的 ugwe43to874nf4 对Virtual DOM的重要性做了更客观的评价。</p>
-<blockquote>
-<p>DOM 操作 真正的问题在于每次操作都会触发布局的改变、DOM树的修改和渲染。所以，当你一个接一个地去修改30个节点的时候，就会引起30次（潜在的）布局重算，30次（潜在的）重绘，等等。<br>Virtual DOM 实际上没有使用什么全新的技术，仅仅是把 “ 双缓冲（double buffering）” 技术应用到了DOM上面。 这样一来，当你在这个单独的虚拟的DOM树上也一个接一个地修改30个节点的时候，它不会每次都去触发重绘，所以修改节点的开销就变小了。 之后，一旦你要把这些改动传递给真实DOM，之前所有的改动就会整合成一次DOM操作。这一次DOM操作引起的布局计算和重绘可能会更大，但是相比而言，整合起来的改动只做一次，减少了（多次）计算。<br>不过，实际上不借助Virtual DOM也可以做到这一点。你可以自己手动地整合所有的DOM操作到一个DOM 碎片（DOM fragment） 里，然后再传递给DOM树。</p>
-<p>既然如此，我们再来看看Virtual DOM到底解决了什么问题。 首先，它把管理DOM碎片这件事情自动化、抽象化了，使得你无需再去手动处理。另外，当你要手动去做这件事情的时候，你还得记得哪些部分变化了，哪些部分没变，毕竟之后重绘时，DOM树上的大量细节你都不需要重新刷新。这时候Virtual DOM的自动化对你来说就非常有用了，如果它的实现是正确的，那么它就会知道到底哪些地方应该需要刷新，哪些地方不要。</p>
-<p>最后，Virtual DOM通过各种组件和你写的一些代码来请求对它进行操作，而不是直接对它本身进行操作，使你不必非要跟Virtual DOM交互，也不必非要去了解Virtual DOM修改DOM树的原理，也就不用再想着去修改DOM了。（译注：对开发者来说，Virtual DOM几乎是完全透明的）。这样你就不用在 修改DOM 和 整合DOM操作为一次 之间做同步处理了。</p>
-</blockquote>
-<h3 id="进一步阅读"><a href="#进一步阅读" class="headerlink" title="进一步阅读"></a>进一步阅读</h3><p>以上关于浏览器工作流的内容摘录自这篇文档中关于浏览器内部行为的章节。这篇文章还深入解释了浏览器引擎的hood部分的一切细节。毋庸置疑，这篇文章值得你花时间从头到尾好好读一遍。它会帮你很好地理解为什么我们需要Virtual DOM这样一个额外的抽象层</p>
-<p>原文：<br><a href="http://www.zcfy.cc/article/the-one-thing-that-no-one-properly-explains-about-react-why-virtual-dom-hashnode-1211.html" target="_blank" rel="external">http://www.zcfy.cc/article/the-one-thing-that-no-one-properly-explains-about-react-why-virtual-dom-hashnode-1211.html</a></p>
-<h2 id="我的理解"><a href="#我的理解" class="headerlink" title="我的理解"></a>我的理解</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://od6ri688q.bkt.clouddn.com/VirtualDOM.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM&quot;&gt;&lt;a href=&quot;#React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM&quot; class=&quot;headerlink&quot; title=&quot;React中很少有人能解释清楚的问题——为什么要使用Virtual DOM&quot;&gt;&lt;/a&gt;React中很少有人能解释清楚的问题——为什么要使用Virtual DOM&lt;/h1&gt;&lt;p&gt;  这也是我在思考的问题，大家都在跟风学RN ,VUE,Ag2,却很少看见有人用数据来量化实际项目应用中dom操作对性能的影响 &lt;/p&gt;
-&lt;p&gt; 下面看到野狗微信平台的一篇文章,先介绍下文章内容再说说我的理解：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="前端框架" scheme="https://zhaoy875.github.io/categories/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/"/>
-    
-    
-      <category term="框架" scheme="https://zhaoy875.github.io/tags/%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="react" scheme="https://zhaoy875.github.io/tags/react/"/>
-    
-      <category term="virtualDom" scheme="https://zhaoy875.github.io/tags/virtualDom/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git管中窥豹</title>
-    <link href="https://zhaoy875.github.io/2016/09/07/Git%E7%AE%A1%E4%B8%AD%E7%AA%A5%E8%B1%B9/"/>
-    <id>https://zhaoy875.github.io/2016/09/07/Git管中窥豹/</id>
-    <published>2016-09-07T07:16:43.000Z</published>
-    <updated>2016-10-15T06:57:33.863Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="git简单示意图"><a href="#git简单示意图" class="headerlink" title="git简单示意图"></a>git简单示意图</h2><p><img src="http://od6ri688q.bkt.clouddn.com/git%E4%BB%93%E5%BA%93%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="图解git"></p>
-<a id="more"></a>
-<blockquote>
-<p>参考<a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="external">http://www.bootcss.com/p/git-guide/</a></p>
-</blockquote>
-<h2 id="花20分钟写的-大白话讲解如何给github上项目贡献代码"><a href="#花20分钟写的-大白话讲解如何给github上项目贡献代码" class="headerlink" title="花20分钟写的-大白话讲解如何给github上项目贡献代码"></a>花20分钟写的-大白话讲解如何给github上项目贡献代码</h2><blockquote>
-<p>转自 <a href="https://site.douban.com/196781/widget/notes/12161495/note/269163206/" target="_blank" rel="external">https://site.douban.com/196781/widget/notes/12161495/note/269163206/</a></p>
-</blockquote>
-<p>  本文献给对git很迷茫的新手，注意是新手，但至少会点基本操作，有点基本概念的新手，我不会从怎么用github和git是什么开始讲的。如果作为新手你看书又看不进去，原理又太复杂，有没有直接了当告诉我们怎么给项目贡献代码，并和项目同步代码的大体流程。于是我快速写了这么个东西。一来整理下自己混乱的思路，二来想号召大家一起用git开发点东西，可是好几个同鞋只会寂寞的给自己push。</p>
-<p>我先说下 我之前对github操作的一些迷茫历程，然后之后是怎么解惑的。</p>
-<ol>
-<li><p>最最开始，我以为git clone ［项目地址］，也就是把代码clone下来 然后修改，然后push到项目里就可以了。<br>后来发现，这种情况只适合该项目属于你自己的情况，如果你git clone别人的项目代码，你想push都push不上去，因为 git push 不是需要你输入github帐号密码么。</p>
-</li>
-<li><p>然后 我就知道了 github上 不是有个fork么， 好，那么给别人的项目提交代码的方式就有了，先fork下别人的代码，于是你的github上就出现了同名的项目，这个项目就属于你自己了，你把这个自己的项目git clone到本地，修修改改，然后push到你自己的项目里，那么你如何把你对自己项目的改动，给发到之前fork的那个原项目呢，看见了没，在github上你的项目页面有个按钮，叫Pull request，对 你点它就会把你的修改发到对方的项目里，人还会收到邮件呢，由原项目主人决定是否接受你的修改。<br>但是，这样问题就出来了，在你fork他的项目之后，如果他又更新了代码，你自己fork的项目怎么做到和原项目同步呢？<br>我就想啊，是不是 我还得重新git clone原项目的代码，然后手动合并到我fork的项目里呢。。。<br>梁老师说，你丫这太蛋疼了，肯定不是这么麻烦，我细想，也是啊，这不2么。。。</p>
-</li>
-</ol>
-<p>3，然后，从《Pro git》上看到一个知识点，我擦，github居然可以给项目添加合作者，也就是说，假如你，对，说你呢，戴眼镜那个，你想参与我的项目，你跟我说一声，我就把你添加到我的项目里作为合作者，这个选项在项目的设置里面有，只要我添加你了，你就可以git clone我的代码然后修修改改，然后直接push上来就行了，就不用fork那么麻烦了，如果你要更新服务器代码，只要git pull就行了，看 合作者这东西多方便，就像我们在公司用svn似的。</p>
-<p>4.然后我就想啊，有了合作者还需要你丫fork这个功能干啥？仔细一想，你写个好项目，不能随便加合作者啊，加了个熊孩子把你代码改废了可咋整，这年头熊孩子很多，我自己不就是一个么。所以fork肯定还是需要，fork就是专门预防熊孩子的，这就是真相！那么前面说道到fork之后如何与原项目同步的问题还在啊，没有得到解决。</p>
-<p>5.于是《Pro git》再次给了我一个解答，具体流程是你啊想给我的项目做贡献，你先git clone我的代码到本地，然后修修改改，然后你不是不能push到我的项目里么，你可以先在github页面上fork我的项目，有了你自己的项目地址（url）之后呢，你在本地操作git remote add [sort name] [your url]，意思就是添加第二个远程仓库地址，这个仓库的“昵称”就是你刚指定的[sort name]，然后，你之后push文件呢 就通过指定这个［sort name］来push到这个你自己的仓库里。等你觉得想要把你改的发给原项目同步，就在你的项目上点Pull request按钮.说下另一种情况，如果是，原项目发生了改动，你要想同步到本地，就直接从git fetch origin 从原项目的地址同步代码，然后再merge就好了。当然，如《Pro git》上所写，你可以通过新建分支的方式往自己的项目上push，这样同步的时候直接fetch就行了。这块如果我没写明白或者你想知道怎么新建分支的方式push到自己的项目里，可以直接参考《Pro git》的“公开的小型项目”一节，那我的贡献就是指点你如何从这本书里快速的找到你想要的。= =。</p>
-<p>好了，时间有限，我写的快不一定讲明白，欢迎跟我讨论。<br>感谢linus，感谢git，感谢github，感谢kindle，感谢《Pro git》，感谢梁老师，感谢我自己，感谢所有的熊孩子们。</p>
-<h2 id="git详解-教程"><a href="#git详解-教程" class="headerlink" title="git详解 教程"></a>git详解 教程</h2><blockquote>
-<p><a href="http://blog.jobbole.com/?s=Git%E8%AF%A6%E8%A7%A3%E4%B9%8B" target="_blank" rel="external">http://blog.jobbole.com/?s=Git%E8%AF%A6%E8%A7%A3%E4%B9%8B</a></p>
-<p><a href="https://github.com/geeeeeeeeek/git-recipes/wiki/2.1-%E5%BF%AB%E9%80%9F%E6%8C%87%E5%8D%97" target="_blank" rel="external">https://github.com/geeeeeeeeek/git-recipes/wiki/2.1-%E5%BF%AB%E9%80%9F%E6%8C%87%E5%8D%97</a></p>
-</blockquote>
-<h2 id="附录git命令图"><a href="#附录git命令图" class="headerlink" title="附录git命令图"></a>附录git命令图</h2><p>git常用命令行</p>
-<p><img src="http://od6ri688q.bkt.clouddn.com/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.jpg" alt="git命令"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;git简单示意图&quot;&gt;&lt;a href=&quot;#git简单示意图&quot; class=&quot;headerlink&quot; title=&quot;git简单示意图&quot;&gt;&lt;/a&gt;git简单示意图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://od6ri688q.bkt.clouddn.com/git%E4%BB%93%E5%BA%93%E7%A4%BA%E6%84%8F%E5%9B%BE.png&quot; alt=&quot;图解git&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="git" scheme="https://zhaoy875.github.io/categories/git/"/>
-    
-    
-      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
-    
-      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深入Hexo主题</title>
-    <link href="https://zhaoy875.github.io/2016/09/06/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3hexo%E4%B8%BB%E9%A2%98/"/>
-    <id>https://zhaoy875.github.io/2016/09/06/深入了解hexo主题/</id>
-    <published>2016-09-06T15:26:24.000Z</published>
-    <updated>2016-09-23T16:07:07.752Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="深入hexo主题"><a href="#深入hexo主题" class="headerlink" title="深入hexo主题"></a>深入hexo主题</h1><h2 id="准备自制hexo主题"><a href="#准备自制hexo主题" class="headerlink" title="准备自制hexo主题"></a>准备自制hexo主题</h2><p>  所需相关技术：<br>   默认你已经掌握了解基本的html5 css3 javascript</p>
-<ul>
-<li>你还需要了解一些JS模板引擎（ejs ,jade,swig等）</li>
-<li>css预编译语言如less/sass styl样式模板</li>
-<li>基于nodejs的前端自动化gulp、webpack，bowel等构建工具的使用</li>
-<li>模块化开发的思想<a id="more"></a>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;深入hexo主题&quot;&gt;&lt;a href=&quot;#深入hexo主题&quot; class=&quot;headerlink&quot; title=&quot;深入hexo主题&quot;&gt;&lt;/a&gt;深入hexo主题&lt;/h1&gt;&lt;h2 id=&quot;准备自制hexo主题&quot;&gt;&lt;a href=&quot;#准备自制hexo主题&quot; class=&quot;headerlink&quot; title=&quot;准备自制hexo主题&quot;&gt;&lt;/a&gt;准备自制hexo主题&lt;/h2&gt;&lt;p&gt;  所需相关技术：&lt;br&gt;   默认你已经掌握了解基本的html5 css3 javascript&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;你还需要了解一些JS模板引擎（ejs ,jade,swig等）&lt;/li&gt;
-&lt;li&gt;css预编译语言如less/sass styl样式模板&lt;/li&gt;
-&lt;li&gt;基于nodejs的前端自动化gulp、webpack，bowel等构建工具的使用&lt;/li&gt;
-&lt;li&gt;模块化开发的思想
-    
-    </summary>
-    
-      <category term="博客主题" scheme="https://zhaoy875.github.io/categories/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"/>
-    
-    
-      <category term="javascript" scheme="https://zhaoy875.github.io/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>站点收藏</title>
-    <link href="https://zhaoy875.github.io/2016/09/06/%E6%94%B6%E8%97%8F%E7%BD%91%E5%9D%80/"/>
-    <id>https://zhaoy875.github.io/2016/09/06/收藏网址/</id>
-    <published>2016-09-06T14:16:12.000Z</published>
-    <updated>2016-09-12T14:43:31.053Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="个人站点收藏夹"><a href="#个人站点收藏夹" class="headerlink" title="个人站点收藏夹"></a>个人站点收藏夹</h1><!-- 我的前端学习工作 -->
-<h2 id="每日必逛系列"><a href="#每日必逛系列" class="headerlink" title="每日必逛系列"></a>每日必逛系列</h2><ul>
-<li><a href="http://gold.xitu.io" target="_blank" rel="external">掘金</a></li>
-<li><a href="https://github.com/zhaoy875" target="_blank" rel="external">github</a></li>
-<li><a href="https://segmentfault.com" target="_blank" rel="external">segmentfault</a></li>
-<li><a href="weibo.com/123zhaoy">微博</a></li>
-<li><a href="http://www.jianshu.com" target="_blank" rel="external">简书</a></li>
-<li>cnblogs </li>
-<li>知乎</li>
-<li>v2ex</li>
-</ul>
-<a id="more"></a>
-<h2 id="前端站点"><a href="#前端站点" class="headerlink" title="前端站点"></a>前端站点</h2><h2 id="我的工作流"><a href="#我的工作流" class="headerlink" title="我的工作流"></a>我的工作流</h2><blockquote>
-<p>信息爆炸的年代，靠死记硬背知识注定被淘汰，我们需要的是一种高效的学习方式，自主的能习的能力。<br>借助工具：搜索引擎是最好的老师，如果你能在搜索引擎上找到答案的问题通常都不是很难的大问题，学会搜索，学会与人交流沟通，学会怎么问问题很重要，毕竟很多人真的不会问问题！ </p>
-</blockquote>
-<h3 id="学习记录工具"><a href="#学习记录工具" class="headerlink" title="学习记录工具"></a>学习记录工具</h3><h4 id="知识管理工具-如为知笔记-印象笔记-有道笔记等"><a href="#知识管理工具-如为知笔记-印象笔记-有道笔记等" class="headerlink" title="知识管理工具 如为知笔记 印象笔记 有道笔记等"></a>知识管理工具 如为知笔记 印象笔记 有道笔记等</h4><p> 好记性不如烂笔头，一个分类合理有体系的知识管理软件能让自己效率大大提高。<br>习惯了各种分散零碎的学习模式，难免会忘记，记录，合理分门别类管理会大大帮助自己整理归纳知识库，等等，，，还有其他各种好处呀等你用过后就知道了</p>
-<h4 id="学习技术的教程网站"><a href="#学习技术的教程网站" class="headerlink" title="学习技术的教程网站"></a>学习技术的教程网站</h4><p>  这个就需要收藏和斟酌了，一个优秀的站点总会吸引优秀的来访者，或者因为高质量的内容或非凡的体验设计或是强大的功能等等总有它出众的地方，而你需要自己斟酌去筛选，下面是我自己学习前端过程中常逛的站点：</p>
-<p> 精品总是不多见的：<br>下面是我收藏的一些 前端博客、教程、前端技术、学习分享的站点：</p>
-<h2 id="前端技能"><a href="#前端技能" class="headerlink" title="前端技能"></a>前端技能</h2><p>  html(5) 、css(3 and 4?) 、javascript(es6 and more?)<br> <strong> 这三大基础，前几年nodejs横空出世，前端变得无限可能 </strong></p>
-<p> 。。。各种新的框架技术雨后春笋般的冒出来，<br> 前端，后端（nodejs server），桌面端(nw.js electron等)，移动端（angular，react native,vue）,重量级的前端自动化工程化（grunt,yo?,webpack,gulp等等）  如何去分辨糟粕与精华，不盲目跟风，学一样东西之前一定要明白他是干什么的，解决了什么问题？应用场景，对工作效率的影响，，，等等</p>
-<h3 id="分享下我的前端导航页"><a href="#分享下我的前端导航页" class="headerlink" title="分享下我的前端导航页"></a>分享下我的前端导航页</h3><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>今晚累了明天接着写，先睡了。。。<br>2016-9-4 04:19:43</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;个人站点收藏夹&quot;&gt;&lt;a href=&quot;#个人站点收藏夹&quot; class=&quot;headerlink&quot; title=&quot;个人站点收藏夹&quot;&gt;&lt;/a&gt;个人站点收藏夹&lt;/h1&gt;&lt;!-- 我的前端学习工作 --&gt;
-&lt;h2 id=&quot;每日必逛系列&quot;&gt;&lt;a href=&quot;#每日必逛系列&quot; class=&quot;headerlink&quot; title=&quot;每日必逛系列&quot;&gt;&lt;/a&gt;每日必逛系列&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://gold.xitu.io&quot;&gt;掘金&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/zhaoy875&quot;&gt;github&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://segmentfault.com&quot;&gt;segmentfault&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;weibo.com/123zhaoy&quot;&gt;微博&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.jianshu.com&quot;&gt;简书&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;cnblogs &lt;/li&gt;
-&lt;li&gt;知乎&lt;/li&gt;
-&lt;li&gt;v2ex&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="博客" scheme="https://zhaoy875.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="网站收藏" scheme="https://zhaoy875.github.io/tags/%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/"/>
-    
-      <category term="前端学习" scheme="https://zhaoy875.github.io/tags/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用SSH免密简化Hexo Deploy部署</title>
-    <link href="https://zhaoy875.github.io/2016/09/05/hexo-deploy-blog-use-ssh-link/"/>
-    <id>https://zhaoy875.github.io/2016/09/05/hexo-deploy-blog-use-ssh-link/</id>
-    <published>2016-09-05T06:40:16.000Z</published>
-    <updated>2016-09-12T14:41:51.264Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>hexo 使用自带的hexo-deploy-git插件实现自动部署到远程remote时，repository仓库链接使用ssh要比使用https快，也可以避免每次都要登录输入密码的步骤</p>
-<a id="more"></a>
-<h1 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h1><h2 id="修改站点配置-config-yml文件里面的deploy配置"><a href="#修改站点配置-config-yml文件里面的deploy配置" class="headerlink" title="修改站点配置 _config.yml文件里面的deploy配置"></a>修改站点配置 _config.yml文件里面的deploy配置</h2><pre><code>deploy:
-  type: git
-  repository: git@github.com:zhaoy875/zhaoy875.github.io.git  
-</code></pre><h2 id="列出已存在的SSH-Key"><a href="#列出已存在的SSH-Key" class="headerlink" title="列出已存在的SSH Key"></a>列出已存在的SSH Key</h2><p>打开Git Bash，并且输入：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ls</span> -<span class="keyword">al</span> ~/.ssh</div></pre></td></tr></table></figure></p>
-<p>这个命令会列出你<code>.ssh</code>账户中已经存在的SSH key，如果之前没有设置过，一般都是没有。那么就需要下面的生成密钥的步骤</p>
-<h2 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h2><p>然后输入：<br><code>ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code><br>这个命令将会生成一个以你邮箱为标签的ssh key，然后bash中会显示：</p>
-<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Generating <span class="keyword">public</span>/<span class="keyword">private</span> rsa <span class="keyword">key</span> pair.</div><div class="line">Enter file <span class="keyword">in</span> which <span class="keyword">to</span> save the <span class="keyword">key</span> (/c/Users/you/.ssh/id_rsa): [Press enter]</div></pre></td></tr></table></figure>
-<p>回车，保存密钥文件到本地<br>复制密钥粘贴到远程仓库，这里以github为例，粘贴到github ssh key</p>
-<p>这样，你本地git bash就有了一个可用的SSH key。</p>
-<h2 id="将SSH-Key添加到Github中"><a href="#将SSH-Key添加到Github中" class="headerlink" title="将SSH Key添加到Github中"></a>将SSH Key添加到Github中</h2><p>下面将这个key添加到github网站。<br>打开<a href="https://github.com/settings/ssh" target="_blank" rel="external">https://github.com/settings/ssh</a>，点击<code>Add SSH Key</code>，复制<code>id_rsa.pub</code>中的所有内容到<code>Key</code>框中，在<code>Title</code>框中输入方便自己记忆的名字（建议输入能让自己明白是哪台电脑的名字，方便以后管理）。<br>当网页显示添加成功后，就已经完成了全部的操作。<br>下面进行一些测试，同样是打开Git Bash，输入：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ssh</span> <span class="selector-tag">-T</span> <span class="selector-tag">git</span>@<span class="keyword">github</span>.<span class="keyword">com</span></div></pre></td></tr></table></figure></p>
-<p>bash中会显示如下字样：</p>
-<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">The authenticity <span class="keyword">of</span> host <span class="comment">'github.com (207.97.227.239)' can't be established.</span></div><div class="line">RSA <span class="keyword">key</span> fingerprint <span class="keyword">is</span> <span class="number">16</span>:<span class="number">27</span>:ac:a5:<span class="number">76</span>:<span class="number">28</span>:<span class="number">2</span>d:<span class="number">36</span>:<span class="number">63</span>:<span class="number">1</span>b:<span class="number">56</span>:<span class="number">4</span>d:eb:df:a6:<span class="number">48.</span></div><div class="line">Are you sure you want <span class="keyword">to</span> <span class="keyword">continue</span> connecting (yes/no)?</div></pre></td></tr></table></figure>
-<p>输入yes之后，计算机会自动将<code>github.com</code>列入已知的host，然后会出现如下提示：</p>
-<figure class="highlight irpf90"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Hi username<span class="comment">! You've successfully authenticated, but GitHub does not</span></div><div class="line"><span class="keyword">provide</span> shell <span class="keyword">access</span>.</div></pre></td></tr></table></figure>
-<p>over!</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;hexo 使用自带的hexo-deploy-git插件实现自动部署到远程remote时，repository仓库链接使用ssh要比使用https快，也可以避免每次都要登录输入密码的步骤&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="博客" scheme="https://zhaoy875.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="Hexo" scheme="https://zhaoy875.github.io/tags/Hexo/"/>
-    
-      <category term="Github-Pages" scheme="https://zhaoy875.github.io/tags/Github-Pages/"/>
-    
-      <category term="Blog" scheme="https://zhaoy875.github.io/tags/Blog/"/>
-    
-      <category term="SSH" scheme="https://zhaoy875.github.io/tags/SSH/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Console你不知道的一些高级用法</title>
-    <link href="https://zhaoy875.github.io/2016/09/04/console-console/"/>
-    <id>https://zhaoy875.github.io/2016/09/04/console-console/</id>
-    <published>2016-09-04T15:06:24.000Z</published>
-    <updated>2016-09-15T14:15:03.237Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>没有特殊声明下，基本都是以chrome为例</p>
-<h2 id="概述console"><a href="#概述console" class="headerlink" title="概述console"></a>概述console</h2><p>大家平常写console最多的就是用来打印信息，console.log(obj or str)，<br>但console能干的事可比这多了，比如console可以自定义打印字符的css样式，<br>console.trace()踪函数的调用轨迹，<br>计时功能console.time()；性能分析console.profile等。。。<br><a id="more"></a><br><strong>让我们来console.log(console)看看</strong><br><img src="http://od6ri688q.bkt.clouddn.com/consoleQQ%E6%88%AA%E5%9B%BE20160908200956.png" alt=""></p>
-<h2 id="console打印类型"><a href="#console打印类型" class="headerlink" title="console打印类型"></a>console打印类型</h2><pre><code>console.log(&quot;str or obj&quot;)
-console.info(&quot;这是info&quot;);
-console.debug(&quot;这是debug&quot;);
-console.warn(&quot;这是warn&quot;);
-console.error(&quot;这是error&quot;);
-</code></pre><h3 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h3><p>console对象的上面5种方法，都可以使用printf风格的占位符。不过，占位符的种类比较少，只支持字符（%s）、整数（%d或%i）、浮点数（%f）和对象（%o）四种。</p>
-<pre><code>console.log(&quot;%d年%d月%d日&quot;,2011,3,26);
-console.log(&quot;圆周率是%f&quot;,3.1415926);
-console.warn(&quot;圆周率是%f&quot;,3.1415926);
-</code></pre><h3 id="分组group"><a href="#分组group" class="headerlink" title="分组group"></a>分组group</h3><pre><code>console.group(&quot;第一组信息&quot;);
-console.log(&quot; 第一条&quot;);
-console.log(&quot; 第二条&quot;);
-console.log(&quot; 第三条&quot;);
-console.log(&quot; 第四条&quot;);
-console.groupEnd();
-console.group(&quot;第2组信息&quot;);
-console.log(&quot; 第1条&quot;);
-console.log(&quot; 第2条&quot;);
-console.log(&quot; 第3条&quot;);
-console.groupEnd();
-</code></pre><p><img src="http://od6ri688q.bkt.clouddn.com/console.groupQQ%E6%88%AA%E5%9B%BE20160908205931.png" alt="console.group"></p>
-<h3 id="console-dir"><a href="#console-dir" class="headerlink" title="console.dir()"></a>console.dir()</h3><p>console.dir()可以显示一个对象所有的属性和方法</p>
-<pre><code>console.dir(obj);
-</code></pre><h3 id="console-dirxml-用来显示网页的某个节点（node）所包含的节点html-xml代码。"><a href="#console-dirxml-用来显示网页的某个节点（node）所包含的节点html-xml代码。" class="headerlink" title="console.dirxml()用来显示网页的某个节点（node）所包含的节点html/xml代码。"></a>console.dirxml()用来显示网页的某个节点（node）所包含的节点html/xml代码。</h3><pre><code>var div= document.getElementById(&quot;foot&quot;);
-console.dirxml(div);
-</code></pre><h3 id="console-asset"><a href="#console-asset" class="headerlink" title="console.asset()"></a>console.asset()</h3><p>  console.assert()用来判断一个表达式或变量是否为真。如果结果为否，则在控制台输出一条相应信息，并且抛出一个异常。<br>比如，下面两个判断的结果都为否。</p>
-<pre><code>var result = 0;
-console.assert( result );    
-var year = 2000;
-console.assert(year == 2011 );
-</code></pre><h3 id="console-trace"><a href="#console-trace" class="headerlink" title="console.trace()"></a>console.trace()</h3><p>用来追踪函数的调用轨迹。</p>
-<p>比如，有一个加法器函数。    　</p>
-<pre><code>function add(a,b){
-    return a+b;
-}
-</code></pre><p>想知道这个函数是如何被调用的，在其中加入console.trace()方法就可以了</p>
-<pre><code>function add(a,b){
-　　console.trace();
-　　return a+b;
-}
 
-var x = add3(1,1);
-　　function add3(a,b){return add2(a,b);}
-　　function add2(a,b){return add1(a,b);}
-　　function add1(a,b){return add(a,b);}
-</code></pre><h3 id="计时功能"><a href="#计时功能" class="headerlink" title="计时功能"></a>计时功能</h3><p>console.time()和console.timeEnd()，用来显示之间代码的运行时间</p>
-<pre><code>console.time(&quot;计时器一&quot;);
-    var k=0; //内部循环体k次数
-　　for(var i=0;i&lt;1000;i++){
-　　　　for(var j=0;j&lt;1000;j++){
-            k++;
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+  
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"zhaoy875"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+
+
+
+<div class="popoverlay" style="display:none"></div>
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+// 修改 弹窗时造成网站右边侧栏消失和出现时的背景页面布局重绘的抖动 
+    function proceedsearch() {
+        // 作者这里标签忘记闭合了？
+      // $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+
+      // 将上一行dom操作改为css操作 .popoverlay遮罩层样式在localsearch.styl中
+      $(".popoverlay").fadeIn('fast');
+      $('.popup').toggle();
+      //toggle方法jq从1.9版本删除了?
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
         }
-　　}
-console.log(k)
-console.timeEnd(&quot;计时器一&quot;);
-</code></pre><h3 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h3><p>性能分析（Profiler）就是分析程序各个部分的运行时间，找出瓶颈所在，使用的方法是console.profile()。</p>
-<p>假定有一个函数Foo()，里面调用了另外两个函数funcA()和funcB()，其中funcA()调用10次，funcB()调用1次。</p>
-<pre><code>function Foo() {　　　　
-    for (var i = 0; i &lt; 10; i++) {
-        funcA(1000);
-    }　　　　
-    funcB(10000);　　
-}　　
-function funcA(count) {　　　　
-    for (var i = 0; i &lt; count; i++) {}　　
-}　　
-function funcB(count) {　　　　
-    for (var i = 0; i &lt; count; i++) {}　　
-}
-//然后就可以分析Foo()的运行性能了。
+    });}
 
-console.profile(&apos;性能分析器一&apos;);
-Foo();
-console.profileEnd();
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;前提&quot;&gt;&lt;a href=&quot;#前提&quot; class=&quot;headerlink&quot; title=&quot;前提&quot;&gt;&lt;/a&gt;前提&lt;/h3&gt;&lt;p&gt;没有特殊声明下，基本都是以chrome为例&lt;/p&gt;
-&lt;h2 id=&quot;概述console&quot;&gt;&lt;a href=&quot;#概述console&quot; class=&quot;headerlink&quot; title=&quot;概述console&quot;&gt;&lt;/a&gt;概述console&lt;/h2&gt;&lt;p&gt;大家平常写console最多的就是用来打印信息，console.log(obj or str)，&lt;br&gt;但console能干的事可比这多了，比如console可以自定义打印字符的css样式，&lt;br&gt;console.trace()踪函数的调用轨迹，&lt;br&gt;计时功能console.time()；性能分析console.profile等。。。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="javascript" scheme="https://zhaoy875.github.io/tags/javascript/"/>
-    
-  </entry>
+    // handle and trigger popup window;搜一下按钮点击弹窗
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    // 关闭搜索
+    $('.popup-btn-close').click(function(e){
+        // 此处修改为fade渐隐而不是show hide
+      $('.popup').fadeOut('fast');
+      // 将此处的dom操作改为样式操作
+      // $(".popoverlay").remove();
+      $(".popoverlay").fadeOut();
+
+      // 修改 弹窗时造成网站右边侧栏消失和出现时的背景页面布局重绘的抖动 
+      // $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
   
-  <entry>
-    <title>移动端前端开发之Viewport详解</title>
-    <link href="https://zhaoy875.github.io/2016/03/09/%E7%A7%BB%E5%8A%A8%E7%AB%AFviewport%E8%AF%A6%E8%A7%A3/"/>
-    <id>https://zhaoy875.github.io/2016/03/09/移动端viewport详解/</id>
-    <published>2016-03-09T07:50:43.000Z</published>
-    <updated>2016-10-15T07:19:12.108Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="移动端前端开发之viewport的深入理解"><a href="#移动端前端开发之viewport的深入理解" class="headerlink" title="移动端前端开发之viewport的深入理解"></a>移动端前端开发之viewport的深入理解</h1><p>在移动设备上进行网页的重构或开发，需要响应各种不同分辨率的移动设备，明白了viewport的概念以及弄清楚了跟viewport有关的meta标签的使用，才能更好地让我们的网页适配或响应各种不同分辨率的移动设备。</p>
-<a id="more"></a>
-<h3 id="本文主要转载自无双博客"><a href="#本文主要转载自无双博客" class="headerlink" title="本文主要转载自无双博客"></a>本文主要转载自无双博客</h3><blockquote>
-<p><a href="http://www.cnblogs.com/2050/p/3877280.html" target="_blank" rel="external">移动前端开发之viewport的深入理解</a></p>
-</blockquote>
-<h2 id="一、viewport的概念"><a href="#一、viewport的概念" class="headerlink" title="一、viewport的概念"></a>一、viewport的概念</h2><p>通俗的讲，移动设备上的viewport就是设备屏幕上能用来显示网页的那一块区域，更具体一点就是浏览器上(也可能是一个app中的webview)用来显示网页的那部分区域。</p>
-<p>但viewport又不局限于浏览器可视区域的大小，它可能比浏览器的可视区域要大，也可能比浏览器的可视区域要小。</p>
-<p>在默认情况下，一般来讲，移动设备上的viewport都是要大于浏览器可视区域的，这是因为考虑到移动设备的分辨率相对于桌面电脑来说都比较小，所以为了能在移动设备上正常显示那些传统的为桌面浏览器设计的网站，移动设备上的浏览器都会把自己默认的viewport设为980px或1024px（也可能是其它值，这个是由设备自己决定的），但带来的后果就是浏览器会出现横向滚动条，因为浏览器可视区域的宽度是比这个默认的viewport的宽度要小的。下图列出了一些设备上浏览器的默认viewport的宽度。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;移动端前端开发之viewport的深入理解&quot;&gt;&lt;a href=&quot;#移动端前端开发之viewport的深入理解&quot; class=&quot;headerlink&quot; title=&quot;移动端前端开发之viewport的深入理解&quot;&gt;&lt;/a&gt;移动端前端开发之viewport的深入理解&lt;/h1&gt;&lt;p&gt;在移动设备上进行网页的重构或开发，需要响应各种不同分辨率的移动设备，明白了viewport的概念以及弄清楚了跟viewport有关的meta标签的使用，才能更好地让我们的网页适配或响应各种不同分辨率的移动设备。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="移动端" scheme="https://zhaoy875.github.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
-    
-      <category term="viewport" scheme="https://zhaoy875.github.io/tags/viewport/"/>
-    
-  </entry>
+
   
-  <entry>
-    <title>客户端使用Less</title>
-    <link href="https://zhaoy875.github.io/2016/01/07/%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8less/"/>
-    <id>https://zhaoy875.github.io/2016/01/07/客户端使用less/</id>
-    <published>2016-01-07T11:16:43.000Z</published>
-    <updated>2016-09-15T14:13:49.994Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="在客户端使用less"><a href="#在客户端使用less" class="headerlink" title="在客户端使用less"></a>在客户端使用less</h2><h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><p>引入你的 .less 样式文件的时候要设置 rel 属性值为 “stylesheet/less”:</p>
-<pre><code>&lt;link rel=&quot;stylesheet/less&quot; type=&quot;text/css&quot; href=&quot;styles.less&quot;&gt;
-</code></pre><p>然后点击页面顶部download按钮下载 less.js, 在<head> 中引入:</head></p>
-<pre><code>&lt;script src=&quot;less.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-</code></pre><p>注意你的less样式文件一定要在引入less.js前先引入。</p>
-<blockquote>
-<p>备注：请在服务器环境下使用！本地直接打开可能会报错！推荐使用anywhere这款npm i anywhere -g</p>
-</blockquote>
-<h3 id="监视模式"><a href="#监视模式" class="headerlink" title="监视模式"></a>监视模式</h3><p>监视模式是客户端的一个功能，这个功能允许你当你改变样式的时候，客户端将自动刷新。<br>开发阶段可以不使用browsersync或liveload</p>
-<p>要使用它，只要在URL后面加上’#!watch’，然后刷新页面就可以了。<br>另外，你也可以通过在终端运行less.watch()来启动监视模式。</p>
-<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;less.watch();&lt;/script&gt;
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;在客户端使用less&quot;&gt;&lt;a href=&quot;#在客户端使用less&quot; class=&quot;headerlink&quot; title=&quot;在客户端使用less&quot;&gt;&lt;/a&gt;在客户端使用less&lt;/h2&gt;&lt;h3 id=&quot;引入&quot;&gt;&lt;a href=&quot;#引入&quot; class=&quot;headerli
-    
-    </summary>
-    
-      <category term="css预处理器" scheme="https://zhaoy875.github.io/categories/css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/"/>
-    
-    
-      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
-    
-      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
-    
-  </entry>
+
   
-</feed>
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+
+  
+  
+  
+    <script type="text/javascript" src="/js/zhaoy.js"></script> 
+  
+  
+</div>
+</body>
+</html>
