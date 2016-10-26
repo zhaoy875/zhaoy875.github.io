@@ -7,10 +7,6 @@ html,
 body {
   cursor: url("/images/cursor.cur"), auto;
 }
-div,
-a {
-  cursor: url("/images/cursor.cur"), auto;
-}
 .footer-inner {
   text-shadow: 0 0 2px #000;
 }
@@ -1751,7 +1747,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ed5bcd;
+  background: #ff227a;
 }
 .links-of-blogroll {
   font-size: 13px;

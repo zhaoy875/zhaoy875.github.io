@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhaoy875.github.io/"/>
-  <updated>2016-10-26T12:55:42.426Z</updated>
+  <updated>2016-10-26T17:57:49.843Z</updated>
   <id>https://zhaoy875.github.io/</id>
   
   <author>
@@ -16,119 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://zhaoy875.github.io/2016/10/26/css%E7%AC%94%E5%BD%95/"/>
-    <id>https://zhaoy875.github.io/2016/10/26/css笔录/</id>
-    <published>2016-10-26T12:55:42.330Z</published>
-    <updated>2016-10-26T12:55:42.426Z</updated>
-    
-    <content type="html"><![CDATA[<p>css笔录</p>
-<p>背景</p>
-<p>background属性的值的书写顺序官方并没有强制标准的。<br>为了可读性，定一个CSS书写规范，规则2.1：background的值的顺序是background-color，<br>background-image，<br>background-repeat，<br>background-attachment，<br>background-position。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;css笔录&lt;/p&gt;
-&lt;p&gt;背景&lt;/p&gt;
-&lt;p&gt;background属性的值的书写顺序官方并没有强制标准的。&lt;br&gt;为了可读性，定一个CSS书写规范，规则2.1：background的值的顺序是background-color，&lt;br&gt;background-image，&lt;br
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://zhaoy875.github.io/2016/10/26/jquery%E7%89%87%E6%AE%B5/"/>
-    <id>https://zhaoy875.github.io/2016/10/26/jquery片段/</id>
-    <published>2016-10-26T12:54:49.860Z</published>
-    <updated>2016-10-26T12:54:49.967Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="jquery常用片段"><a href="#jquery常用片段" class="headerlink" title="jquery常用片段"></a>jquery常用片段</h2><blockquote>
-<p>JQuery是继prototype之后又一个优秀的Javascript库。它是轻量级的js库 ，它兼容CSS3，还兼容各种浏览器（IE 6.0+, FF 1.5+, Safari 2.0+, Opera 9.0+），jQuery2.0及后续版本将不再支持IE6/7/8浏览器。jQuery使用户能更方便地处理HTML（标准通用标记语言下的一个应用）、events、实现动画效果，并且方便地为网站提供AJAX交互。jQuery还有一个比较大的优势是，它的文档说明很全，而且各种应用也说得很详细，同时还有许多成熟的插件可供选择。</p>
-</blockquote>
-<h2 id="检测IE浏览器"><a href="#检测IE浏览器" class="headerlink" title="检测IE浏览器"></a>检测IE浏览器</h2><p>在进行CSS设计时，IE浏览器对开发者及设计师而言无疑是个麻烦。尽管IE6的黑暗时代已经过去，IE浏览器家族的人气亦在不断下滑，但我们仍然有必要对其进行检测。当然，以下片段亦可用于检测其它浏览器。</p>
-<pre><code>$(document).ready(function() { 
-  if (navigator.userAgent.match(/msie/i) ){ 
-    console.log(&apos;This is Internet Explorer&apos;); 
-  } 
-}); 
-</code></pre><p>来源:<a href="http://stackoverflow.com/questions/14365725/easiest-lightest-replacement-for-browser-detection-jquery-1-9" target="_blank" rel="external">Stack Overflow</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;jquery常用片段&quot;&gt;&lt;a href=&quot;#jquery常用片段&quot; class=&quot;headerlink&quot; title=&quot;jquery常用片段&quot;&gt;&lt;/a&gt;jquery常用片段&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;JQuery是继prototype之后又一个优秀的
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu 安装Hexo博客</title>
-    <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
-    <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
-    <published>2016-10-11T05:50:43.000Z</published>
-    <updated>2016-10-26T10:25:41.895Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="ubuntu-安装hexo博客"><a href="#ubuntu-安装hexo博客" class="headerlink" title="ubuntu 安装hexo博客"></a>ubuntu 安装hexo博客</h1><h2 id="搭建nodejs-环境"><a href="#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt <span class="keyword">install</span> nodejs</div><div class="line">sudo apt <span class="keyword">install</span> npm</div></pre></td></tr></table></figure>
-<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
-<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
-<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
-<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
-<p>hexo s 本地预览–over</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;ubuntu-安装hexo博客&quot;&gt;&lt;a href=&quot;#ubuntu-安装hexo博客&quot; class=&quot;headerlink&quot; title=&quot;ubuntu 安装hexo博客&quot;&gt;&lt;/a&gt;ubuntu 安装hexo博客&lt;/h1&gt;&lt;h2 id=&quot;搭建nodejs-环境&quot;&gt;
-    
-    </summary>
-    
-    
-      <category term="ubuntu" scheme="https://zhaoy875.github.io/tags/ubuntu/"/>
-    
-      <category term="hexo" scheme="https://zhaoy875.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Music Time歌单分享</title>
-    <link href="https://zhaoy875.github.io/2016/09/20/music%E6%AD%8C%E5%8D%95/"/>
-    <id>https://zhaoy875.github.io/2016/09/20/music歌单/</id>
-    <published>2016-09-20T14:39:43.000Z</published>
-    <updated>2016-10-26T10:25:29.246Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe style="width:100%;min-height:260px;max-height:400px" id="musiciframe" src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=0&narrow=0" frameborder="0" scrolling="no"></iframe>
-
-<a id="more"></a>
-<h2 id="Interface-usage"><a href="#Interface-usage" class="headerlink" title="Interface usage"></a>Interface usage</h2><p>歌单：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=1&amp;narrow=0"</span>  <span class="attribute">width</span>=<span class="string">"100%"</span>  frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
-<p>单首：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?song=408332757&amp;qssl=1&amp;qlrc=1&amp;autoplay=0"</span> <span class="attribute">width</span>=<span class="string">"100%"</span> frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
-<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><p>使用iframe内嵌页面<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Demos:</span></div><div class="line"><span class="symbol"></span></div><div class="line">https:<span class="comment">//music.daoapp.io/iframe?song=287749&amp;qssl=1&amp;qlrc=1&amp;qnarrow=0&amp;max_width=50%&amp;autoplay=1</span></div><div class="line"><span class="symbol">https:</span><span class="comment">//music.daoapp.io/iframe?song=287749&amp;qnarrow=1&amp;qssl=1</span></div><div class="line"><span class="symbol">URL:</span> http(s):<span class="comment">//music.daoapp.io/ Donot use HTTPS if it's not necessary. But if you do, don't forget set qssl to 1. Method: GET The arguments are:</span></div><div class="line"></div><div class="line">album=album_id  		<span class="comment">//专辑id</span></div><div class="line">playlist=playlist_id    <span class="comment">//歌单id</span></div><div class="line">song=song_id            <span class="comment">//单首id</span></div><div class="line">program=program_id</div><div class="line">radio=radio_id</div><div class="line">mv=mv_id 				</div><div class="line">qssl=[<span class="number">0</span>|<span class="number">1</span>]            </div><div class="line">qlrc=[<span class="number">0</span>|<span class="number">1</span>]             <span class="comment">//歌词</span></div><div class="line">qnarrow=[<span class="number">0</span>|<span class="number">1</span>]</div><div class="line">max_width=[<span class="number">100</span>%|<span class="number">32</span>rem|<span class="number">400</span>px|something else]</div><div class="line">autoplay=[<span class="number">0</span>|<span class="number">1</span>]         <span class="comment">//自动播放</span></div></pre></td></tr></table></figure></p>
-<p>You must choose ONE of those six ids. And it means nothing if you choose more than one of them. You may use <a href="https://music.daoapp.io/" target="_blank" rel="external">The web interface</a> to find the id or use 163Music.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;网易云-基于163APlayer&quot;&gt;&lt;a href=&quot;#网易云-基于163APlayer&quot; class=&quot;headerlink&quot; title=&quot;网易云 基于163APlayer&quot;&gt;&lt;/a&gt;网易云 基于&lt;a href=&quot;https://github.com/YUX-IO/163music-APlayer-you-get-docker&quot;&gt;163APlayer&lt;/a&gt;&lt;/h2&gt;&lt;iframe style=&quot;width:100%;min-height:260px;max-height:400px&quot; id=&quot;musiciframe&quot; src=&quot;https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=0&amp;narrow=0&quot;  frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
-    
-    </summary>
-    
-    
-      <category term="音乐" scheme="https://zhaoy875.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
-    
-  </entry>
-  
-  <entry>
     <title>炒鸡全的前端资源汇集，来一份吧</title>
-    <link href="https://zhaoy875.github.io/2016/09/20/%E7%82%92%E9%B8%A1%E5%85%A8%E7%9A%84%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86%E6%B1%87%E9%9B%86/"/>
-    <id>https://zhaoy875.github.io/2016/09/20/炒鸡全的前端资源整理汇集/</id>
-    <published>2016-09-20T09:43:20.000Z</published>
-    <updated>2016-10-26T10:25:55.725Z</updated>
+    <link href="https://zhaoy875.github.io/2016/10/20/%E7%82%92%E9%B8%A1%E5%85%A8%E7%9A%84%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86%E6%B1%87%E9%9B%86/"/>
+    <id>https://zhaoy875.github.io/2016/10/20/炒鸡全的前端资源整理汇集/</id>
+    <published>2016-10-20T09:43:20.000Z</published>
+    <updated>2016-10-26T17:57:49.843Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前端资源汇集"><a href="#前端资源汇集" class="headerlink" title="前端资源汇集"></a>前端资源汇集</h1><p>参考自 <a href="https://segmentfault.com/a/1190000004978770" target="_blank" rel="external">https://segmentfault.com/a/1190000004978770</a><br>原文 到中间和后面就很乱了，我又重新整理了分类了下</p>
 <p>真的炒鸡多超级全的前端资源啊！蓝瘦香菇/(ㄒoㄒ)/~~</p>
@@ -231,6 +123,62 @@
       <category term="前端资源" scheme="https://zhaoy875.github.io/tags/%E5%89%8D%E7%AB%AF%E8%B5%84%E6%BA%90/"/>
     
       <category term="前端收藏夹" scheme="https://zhaoy875.github.io/tags/%E5%89%8D%E7%AB%AF%E6%94%B6%E8%97%8F%E5%A4%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu 安装Hexo博客</title>
+    <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
+    <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
+    <published>2016-10-11T05:50:43.000Z</published>
+    <updated>2016-10-26T10:25:41.895Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ubuntu-安装hexo博客"><a href="#ubuntu-安装hexo博客" class="headerlink" title="ubuntu 安装hexo博客"></a>ubuntu 安装hexo博客</h1><h2 id="搭建nodejs-环境"><a href="#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt <span class="keyword">install</span> nodejs</div><div class="line">sudo apt <span class="keyword">install</span> npm</div></pre></td></tr></table></figure>
+<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
+<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
+<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
+<p>hexo s 本地预览–over</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;ubuntu-安装hexo博客&quot;&gt;&lt;a href=&quot;#ubuntu-安装hexo博客&quot; class=&quot;headerlink&quot; title=&quot;ubuntu 安装hexo博客&quot;&gt;&lt;/a&gt;ubuntu 安装hexo博客&lt;/h1&gt;&lt;h2 id=&quot;搭建nodejs-环境&quot;&gt;
+    
+    </summary>
+    
+    
+      <category term="ubuntu" scheme="https://zhaoy875.github.io/tags/ubuntu/"/>
+    
+      <category term="hexo" scheme="https://zhaoy875.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Music Time歌单分享</title>
+    <link href="https://zhaoy875.github.io/2016/09/20/music%E6%AD%8C%E5%8D%95/"/>
+    <id>https://zhaoy875.github.io/2016/09/20/music歌单/</id>
+    <published>2016-09-20T14:39:43.000Z</published>
+    <updated>2016-10-26T10:25:29.246Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe style="width:100%;min-height:260px;max-height:400px" id="musiciframe" src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=0&narrow=0" frameborder="0" scrolling="no"></iframe>
+
+<a id="more"></a>
+<h2 id="Interface-usage"><a href="#Interface-usage" class="headerlink" title="Interface usage"></a>Interface usage</h2><p>歌单：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=1&amp;narrow=0"</span>  <span class="attribute">width</span>=<span class="string">"100%"</span>  frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
+<p>单首：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?song=408332757&amp;qssl=1&amp;qlrc=1&amp;autoplay=0"</span> <span class="attribute">width</span>=<span class="string">"100%"</span> frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><p>使用iframe内嵌页面<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Demos:</span></div><div class="line"><span class="symbol"></span></div><div class="line">https:<span class="comment">//music.daoapp.io/iframe?song=287749&amp;qssl=1&amp;qlrc=1&amp;qnarrow=0&amp;max_width=50%&amp;autoplay=1</span></div><div class="line"><span class="symbol">https:</span><span class="comment">//music.daoapp.io/iframe?song=287749&amp;qnarrow=1&amp;qssl=1</span></div><div class="line"><span class="symbol">URL:</span> http(s):<span class="comment">//music.daoapp.io/ Donot use HTTPS if it's not necessary. But if you do, don't forget set qssl to 1. Method: GET The arguments are:</span></div><div class="line"></div><div class="line">album=album_id  		<span class="comment">//专辑id</span></div><div class="line">playlist=playlist_id    <span class="comment">//歌单id</span></div><div class="line">song=song_id            <span class="comment">//单首id</span></div><div class="line">program=program_id</div><div class="line">radio=radio_id</div><div class="line">mv=mv_id 				</div><div class="line">qssl=[<span class="number">0</span>|<span class="number">1</span>]            </div><div class="line">qlrc=[<span class="number">0</span>|<span class="number">1</span>]             <span class="comment">//歌词</span></div><div class="line">qnarrow=[<span class="number">0</span>|<span class="number">1</span>]</div><div class="line">max_width=[<span class="number">100</span>%|<span class="number">32</span>rem|<span class="number">400</span>px|something else]</div><div class="line">autoplay=[<span class="number">0</span>|<span class="number">1</span>]         <span class="comment">//自动播放</span></div></pre></td></tr></table></figure></p>
+<p>You must choose ONE of those six ids. And it means nothing if you choose more than one of them. You may use <a href="https://music.daoapp.io/" target="_blank" rel="external">The web interface</a> to find the id or use 163Music.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;网易云-基于163APlayer&quot;&gt;&lt;a href=&quot;#网易云-基于163APlayer&quot; class=&quot;headerlink&quot; title=&quot;网易云 基于163APlayer&quot;&gt;&lt;/a&gt;网易云 基于&lt;a href=&quot;https://github.com/YUX-IO/163music-APlayer-you-get-docker&quot;&gt;163APlayer&lt;/a&gt;&lt;/h2&gt;&lt;iframe style=&quot;width:100%;min-height:260px;max-height:400px&quot; id=&quot;musiciframe&quot; src=&quot;https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=0&amp;narrow=0&quot;  frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+    
+    </summary>
+    
+    
+      <category term="音乐" scheme="https://zhaoy875.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
     
   </entry>
   
@@ -510,9 +458,9 @@
       <category term="GitHub" scheme="https://zhaoy875.github.io/categories/GitHub/"/>
     
     
-      <category term="Awesome" scheme="https://zhaoy875.github.io/tags/Awesome/"/>
-    
       <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
+    
+      <category term="Awesome" scheme="https://zhaoy875.github.io/tags/Awesome/"/>
     
   </entry>
   
@@ -727,9 +675,9 @@ var openURL = function (url) {
       <category term="git" scheme="https://zhaoy875.github.io/categories/git/"/>
     
     
-      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
-    
       <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
+    
+      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
     
   </entry>
   
@@ -966,6 +914,64 @@ console.profileEnd();
   </entry>
   
   <entry>
+    <title> Css笔录</title>
+    <link href="https://zhaoy875.github.io/2016/08/21/css%E7%AC%94%E5%BD%95/"/>
+    <id>https://zhaoy875.github.io/2016/08/21/css笔录/</id>
+    <published>2016-08-21T09:33:20.000Z</published>
+    <updated>2016-10-26T18:00:23.443Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="css笔录"><a href="#css笔录" class="headerlink" title="css笔录"></a>css笔录</h2><p>背景</p>
+<p>background属性的值的书写顺序官方并没有强制标准的。<br>为了可读性，定一个CSS书写规范，规则2.1：background的值的顺序是background-color，<br>background-image，<br>background-repeat，<br>background-attachment，<br>background-position。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;css笔录&quot;&gt;&lt;a href=&quot;#css笔录&quot; class=&quot;headerlink&quot; title=&quot;css笔录&quot;&gt;&lt;/a&gt;css笔录&lt;/h2&gt;&lt;p&gt;背景&lt;/p&gt;
+&lt;p&gt;background属性的值的书写顺序官方并没有强制标准的。&lt;br&gt;为了可读性，定一个CSS书写
+    
+    </summary>
+    
+    
+      <category term="jquery" scheme="https://zhaoy875.github.io/tags/jquery/"/>
+    
+      <category term="javascript" scheme="https://zhaoy875.github.io/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title> Jquery常用片段</title>
+    <link href="https://zhaoy875.github.io/2016/08/20/jquery%E7%89%87%E6%AE%B5/"/>
+    <id>https://zhaoy875.github.io/2016/08/20/jquery片段/</id>
+    <published>2016-08-20T09:43:20.000Z</published>
+    <updated>2016-10-26T17:59:23.027Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="jquery常用片段"><a href="#jquery常用片段" class="headerlink" title="jquery常用片段"></a>jquery常用片段</h2><blockquote>
+<p>JQuery是继prototype之后又一个优秀的Javascript库。它是轻量级的js库 ，它兼容CSS3，还兼容各种浏览器（IE 6.0+, FF 1.5+, Safari 2.0+, Opera 9.0+），jQuery2.0及后续版本将不再支持IE6/7/8浏览器。jQuery使用户能更方便地处理HTML（标准通用标记语言下的一个应用）、events、实现动画效果，并且方便地为网站提供AJAX交互。jQuery还有一个比较大的优势是，它的文档说明很全，而且各种应用也说得很详细，同时还有许多成熟的插件可供选择。</p>
+</blockquote>
+<h2 id="检测IE浏览器"><a href="#检测IE浏览器" class="headerlink" title="检测IE浏览器"></a>检测IE浏览器</h2><p>在进行CSS设计时，IE浏览器对开发者及设计师而言无疑是个麻烦。尽管IE6的黑暗时代已经过去，IE浏览器家族的人气亦在不断下滑，但我们仍然有必要对其进行检测。当然，以下片段亦可用于检测其它浏览器。</p>
+<pre><code>$(document).ready(function() { 
+  if (navigator.userAgent.match(/msie/i) ){ 
+    console.log(&apos;This is Internet Explorer&apos;); 
+  } 
+}); 
+</code></pre><p>来源:<a href="http://stackoverflow.com/questions/14365725/easiest-lightest-replacement-for-browser-detection-jquery-1-9" target="_blank" rel="external">Stack Overflow</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;jquery常用片段&quot;&gt;&lt;a href=&quot;#jquery常用片段&quot; class=&quot;headerlink&quot; title=&quot;jquery常用片段&quot;&gt;&lt;/a&gt;jquery常用片段&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;JQuery是继prototype之后又一个优秀的
+    
+    </summary>
+    
+    
+      <category term="jquery" scheme="https://zhaoy875.github.io/tags/jquery/"/>
+    
+      <category term="javascript" scheme="https://zhaoy875.github.io/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>移动端前端开发之Viewport详解</title>
     <link href="https://zhaoy875.github.io/2016/03/09/%E7%A7%BB%E5%8A%A8%E7%AB%AFviewport%E8%AF%A6%E8%A7%A3/"/>
     <id>https://zhaoy875.github.io/2016/03/09/移动端viewport详解/</id>
@@ -1024,9 +1030,9 @@ console.profileEnd();
       <category term="css预处理器" scheme="https://zhaoy875.github.io/categories/css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/"/>
     
     
-      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
-    
       <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
+    
+      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
     
   </entry>
   
