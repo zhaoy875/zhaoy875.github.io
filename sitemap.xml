@@ -2,9 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zhaoy875.github.io/2016/09/06/npm%E5%A2%9E%E5%BC%BA%E7%89%88-yarn/</loc>
+    <loc>https://zhaoy875.github.io/2016/09/06/%E6%94%B6%E8%97%8F%E7%BD%91%E5%9D%80/</loc>
     
-    <lastmod>2016-10-26T19:04:08.079Z</lastmod>
+    <lastmod>2016-10-28T18:45:03.347Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/2016/03/21/SublimeText3%E9%85%8D%E7%BD%AELive%E2%80%8BReload%E5%AE%9E%E6%97%B6%E5%88%B7%E6%96%B0%E7%BD%91%E9%A1%B5/</loc>
+    
+    <lastmod>2016-10-28T18:29:18.968Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/2016/08/20/jquery%E7%89%87%E6%AE%B5/</loc>
+    
+    <lastmod>2016-10-28T14:56:01.136Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/2016/09/20/json/</loc>
+    
+    <lastmod>2016-10-27T09:34:02.471Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/2016/10/13/npm%E5%A2%9E%E5%BC%BA%E7%89%88-yarn/</loc>
+    
+    <lastmod>2016-10-27T07:31:37.230Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/2016/10/11/npm/</loc>
+    
+    <lastmod>2016-10-26T19:16:15.189Z</lastmod>
     
   </url>
   
@@ -12,13 +47,6 @@
     <loc>https://zhaoy875.github.io/2016/08/21/css%E7%AC%94%E5%BD%95/</loc>
     
     <lastmod>2016-10-26T18:00:23.443Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhaoy875.github.io/2016/08/20/jquery%E7%89%87%E6%AE%B5/</loc>
-    
-    <lastmod>2016-10-26T17:59:23.027Z</lastmod>
     
   </url>
   
@@ -47,13 +75,6 @@
     <loc>https://zhaoy875.github.io/2016/09/08/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8Virtual-DOM/</loc>
     
     <lastmod>2016-10-26T10:26:49.272Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhaoy875.github.io/2016/09/06/%E6%94%B6%E8%97%8F%E7%BD%91%E5%9D%80/</loc>
-    
-    <lastmod>2016-10-26T10:26:28.095Z</lastmod>
     
   </url>
   

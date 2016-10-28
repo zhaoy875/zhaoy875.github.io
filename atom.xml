@@ -127,6 +127,69 @@
   </entry>
   
   <entry>
+    <title>增强版Npm包管理工具--Yarn</title>
+    <link href="https://zhaoy875.github.io/2016/10/13/npm%E5%A2%9E%E5%BC%BA%E7%89%88-yarn/"/>
+    <id>https://zhaoy875.github.io/2016/10/13/npm增强版-yarn/</id>
+    <published>2016-10-13T14:16:12.000Z</published>
+    <updated>2016-10-27T07:31:37.230Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>参考 <a href="http://www.jb51.net/article/95199.htm" target="_blank" rel="external">http://www.jb51.net/article/95199.htm</a></p>
+<p>官方文档：<a href="https://yarnpkg.com/en/docs/cli/" target="_blank" rel="external">https://yarnpkg.com/en/docs/cli/</a></p>
+</blockquote>
+<p>最近新出的JavaScript包管理工具yarn大家已经有所耳闻，<br>并已通过npm i -g yarn进行了安装，<br>现在想知道怎么样使用吗？如果你了解 npm，你已经会很大一部分啦！<br>下面是这篇文章从npm切换到yarn的一些简洁笔记。</p>
+<p>yarn add: add a package to use in your current package.<br>yarn init: initialize for the development of a package.<br>yarn install: install all dependencies defined in a package.json file.<br>yarn publish: publish a package to a package manager.<br>yarn remove: remove a package that will no longer be used in your current package.</p>
+<p>仅仅一夜，却也是无数个日夜，FaceBook 开源了 yarn 这个新的 JavaScript 包管理工具，这个和 Exponent, Google, 以及 Tilde 合作完成的项目。</p>
+<p>FaceBook 提供了一种看起来和 npm 无关的安装方式 (mac):</p>
+<p>curl -o- -L <a href="https://yarnpkg.com/install.sh" target="_blank" rel="external">https://yarnpkg.com/install.sh</a> | bash<br>在其它平台也可以通过安装文件或者其它包管理系统安装，这样看起来不那么 npm-ish 的方式让我觉得这是有取代 npm 的想法的，虽然我们都爱 npm ;)</p>
+<p>当然真正的原因不是这样，这只是因为如果你用 npm 安装 yarn 不就会产生 yarn 想解决的那些问题吗，比如速度、semantic versioning 的不足等等</p>
+<p>那 yarn 解决了哪些 npm 的问题呢？yarn:</p>
+<p>非常快，非常非常快</p>
+<p>yarn 缓存了每次你下载的模块，所以同样模块同样的版本不会发送第二次下载请求，对于没有缓存的模块， yarn 也可以通过并行的网络请求最大限度利用网络资源。现在真的是没有什么几十秒安装不完的依赖的。一个 50 个依赖的 webpack + babel 项目可以在 20 秒左右安装完成。</p>
+<p>安全</p>
+<p>yarn 在开始安装一个包之前会先用 checksums 来验证，你不用担心本地的缓存的包被破坏了导致安装失败。</p>
+<p>可靠</p>
+<p>被一群喜欢喵星人的开发者维护，以及有 FaceBook 在 production 环境中使用。完善的测试和基于 flow type 的 code base。</p>
+<p>以及很多令人感动的小改进</p>
+<ol>
+<li><p>有些 npm 包会抛出 warning 提示信息，在一起 npm install 的时候只有一个名字你完全不知道是哪个包的哪个包的哪个包抛出的这个信息，而 yarn 改善了这一点。</p>
+</li>
+<li><p><code>yarn ls</code> 会高亮出所有在 package.json 的 dependencies 里的依赖，增强可读性。</p>
+</li>
+<li><p>每一条命令都会显示执行的时间。</p>
+</li>
+<li><p>默认生成 lockfile . 保证 yarn 每次安装相同版本的依赖，npm shrinkwrap 会丧失掉同步性如果你忘了生成它。</p>
+</li>
+<li><p><code>yarn why &lt;name&gt;</code> 这条命令可以告诉你为什么一个依赖会被安装到你的项目中。</p>
+</li>
+<li><p>……countless…</p>
+</li>
+</ol>
+<p>Fork?</p>
+<p>那么问题就来了，yarn 有许多令人激动的特性，但这些为什么不能通过改进 npm 的方式加入而是要重新开发一个客户端呢？</p>
+<p>简言之， 兼容性。 这些改进在现在的 npm 中看起来就像是 breaking changes。</p>
+<p>npm</p>
+<p>有人开始担心 npm，有人甚至说出了终于可以死掉了, npm！其实 npm 在更早的时候已经参与了 yarn 项目，并且鼓励这一行为，因为对于 npm 这样大范围使用的系统来说直接做出这些可能带来兼容性问题的改进很难。（不要以为 npm 比你制杖）</p>
+<p>This is how open source works.</p>
+<p>一、首先需要了解的命令<br>    npm install === yarn —— install 安装是默认行为。<br>    npm install taco –save === yarn add taco —— taco 包立即被保存到 package.json 中。<br>    npm uninstall taco –save === yarn remove taco</p>
+<p>在 npm 中，可以使用 npm config set save true 设置 — -save 为默认行为，但这对多数开发者而言并非显而易见的。在 yarn 中，在package.json 中添加（add）和移除（remove）等行为是默认的。<br>     npm install taco –save-dev === yarn add taco –dev<br>     npm update –save === yarn upgrade<br>update（更新） vs upgrade（升级）， 赞！upgrade 才是实际做的事！版本号提升时，发生的正是upgrade！<br>注意： npm update –save 在版本 3.11 中似乎有点问题。<br>     npm install taco@latest –save === yarn add taco<br>     npm install taco –global === yarn global add taco —— 一如既往，请谨慎使用 global 标记。<br>二、已知悉的命令<br>包和 npm registry 上是一样的。大致而言，Yarn 只是一个新的安装工具，npm 结构和 registry 还是一样的。<br>     npm init === yarn init<br>     npm link === yarn link<br>     npm outdated === yarn outdated<br>     npm publish === yarn publish<br>     npm run === yarn run<br>     npm cache clean === yarn cache clean<br>     npm login === yarn login (logout 同理)<br>     npm test === yarn test<br>三、Yarn 独有的命令<br>我跳过了一些提醒我们不要使用的内容，如 yarn clean。<br>     yarn licenses ls —— 允许你检查依赖的许可信息。<br>     yarn licenses generate —— 自动创建依赖免责声明 license。<br>     yarn why taco —— 检查为什么会安装 taco，详细列出依赖它的其他包（鸣谢 Olivier Combe）。<br>     Emojis<br>     速度<br>     通过 yarn lockfile 自动实现 shrinkwrap 功能<br>     以安全为中心的设计<br>四、Npm 独有的命令<br>     npm xmas === NO EQUIVALENT<br>     npm visnup === NO EQUIVALENT<br>总结<br>在写这篇文章的时候发现， yarn的run 命令似乎出了点问题，应该会在0.15.2中修复。在这一点上， npm 好多了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;参考 &lt;a href=&quot;http://www.jb51.net/article/95199.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jb51.net/article/95199.htm&lt;/a&gt;&lt;
+    
+    </summary>
+    
+    
+      <category term="npm" scheme="https://zhaoy875.github.io/tags/npm/"/>
+    
+      <category term="js包管理工具" scheme="https://zhaoy875.github.io/tags/js%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Ubuntu 安装Hexo博客</title>
     <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
     <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
@@ -156,6 +219,47 @@
   </entry>
   
   <entry>
+    <title>Npm</title>
+    <link href="https://zhaoy875.github.io/2016/10/11/npm/"/>
+    <id>https://zhaoy875.github.io/2016/10/11/npm/</id>
+    <published>2016-10-11T05:50:43.000Z</published>
+    <updated>2016-10-26T19:16:15.189Z</updated>
+    
+    <content type="html"><![CDATA[<p>升级node.js的方法。node有一个模块叫n，专门用来管理node.js的版本的。<br>首先安装n模块：</p>
+<pre><code>npm install -g n
+</code></pre><p>第二步：<br>升级node.js到最新稳定版:</p>
+<pre><code>n stable
+</code></pre><p>几个npm的常用命令</p>
+<pre><code>npm install npm #即可安装最新版npm
+
+npm -v          #显示版本，检查npm 是否正确安装。 
+npm install express   #安装express模块 
+npm install -g express  #全局安装express模块 
+npm list         #列出已安装模块 
+npm show express     #显示模块详情 
+npm update        #升级当前目录下的项目的所有模块 
+npm update express    #升级当前目录下的项目的指定模块 
+npm update -g express  #升级全局安装的express模块 
+npm uninstall express  #删除指定的模块
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;升级node.js的方法。node有一个模块叫n，专门用来管理node.js的版本的。&lt;br&gt;首先安装n模块：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g n
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;第二步：&lt;br&gt;升级node.js到最新稳定版:&lt;/p&gt;
+&lt;pre
+    
+    </summary>
+    
+    
+      <category term="npm" scheme="https://zhaoy875.github.io/tags/npm/"/>
+    
+      <category term="nodejs" scheme="https://zhaoy875.github.io/tags/nodejs/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Music Time歌单分享</title>
     <link href="https://zhaoy875.github.io/2016/09/20/music%E6%AD%8C%E5%8D%95/"/>
     <id>https://zhaoy875.github.io/2016/09/20/music歌单/</id>
@@ -179,6 +283,44 @@
     
     
       <category term="音乐" scheme="https://zhaoy875.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Json</title>
+    <link href="https://zhaoy875.github.io/2016/09/20/json/"/>
+    <id>https://zhaoy875.github.io/2016/09/20/json/</id>
+    <published>2016-09-20T14:39:43.000Z</published>
+    <updated>2016-10-27T09:34:02.471Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Json数组、对象赋值时，最后一个元素后面是否可以带逗号？"><a href="#Json数组、对象赋值时，最后一个元素后面是否可以带逗号？" class="headerlink" title="Json数组、对象赋值时，最后一个元素后面是否可以带逗号？"></a>Json数组、对象赋值时，最后一个元素后面是否可以带逗号？</h2><h3 id="1-C-C-Java-PHP都能容忍末尾的逗号"><a href="#1-C-C-Java-PHP都能容忍末尾的逗号" class="headerlink" title="1 C,C++,Java,PHP都能容忍末尾的逗号"></a>1 C,C++,Java,PHP都能容忍末尾的逗号</h3><p>C，C++，Java中对数组赋值时，最后一个元素末尾的逗号可有可无。下面两行代码对这些语言来说是等效的。</p>
+<pre><code>[code]int a[] = {1,2,3};      /* 正确 */
+int a[] = {1,2,3,};     /* 正确 */
+</code></pre><p>PHP这一点也继承了C的特点，下面的两行代码等效。</p>
+<pre><code>[code]$a = array(1,2,3); /* 正确 */
+$a = array(1,2,3,); /* 正确 */
+</code></pre><h3 id="2-JavaScript视末尾逗号为语法错误！"><a href="#2-JavaScript视末尾逗号为语法错误！" class="headerlink" title="2 JavaScript视末尾逗号为语法错误！"></a>2 JavaScript视末尾逗号为语法错误！</h3><p>然而到了JavaScript，情况大不相同了，最后一个元素末尾一定不能有逗号，否则就是语法错误。</p>
+<pre><code>[code]var a = new Array(1,2,3); //正确
+var a = new Array(1,2,3,); //报错
+</code></pre><p>对于对象，同样不能有末尾的逗号。</p>
+<pre><code>[code]var o = { name:&apos;赵&apos;, age:12 }; // 正确
+var o = { name:&apos;赵&apos;, age:12,}; // 报错
+</code></pre><p>尽管有些浏览器在检测到这种错误后，最大容忍地去执行，但这不是统一的行为。IE系列浏览器统统不能容忍这种错误。</p>
+<h3 id="3-JSON同样不能容忍末尾的逗号"><a href="#3-JSON同样不能容忍末尾的逗号" class="headerlink" title="3 JSON同样不能容忍末尾的逗号"></a>3 JSON同样不能容忍末尾的逗号</h3><pre><code>[code]{&quot;name&quot;:&quot;zhao&quot;, &quot;age&quot;:12}   // 正确的JSON格式
+{&quot;name&quot;:&quot;zhao&quot;, &quot;age&quot;:12,}  // 错误的JSON格式
+</code></pre><p>需要注意的是，JSON是一种通用数据格式，与具体编程语言无关。各种语言在解码JSON时，也会采用不同的容忍程度。PHP的json_decode()就不能容忍末尾的逗号。</p>
+<pre><code>[code]json_decode({&quot;name&quot;:&quot;zhao&quot;, &quot;age&quot;:12,}); // 解析会发生错误
+</code></pre><p>来源： <a href="http://www.aichengxu.com/view/3462172" target="_blank" rel="external">http://www.aichengxu.com/view/3462172</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Json数组、对象赋值时，最后一个元素后面是否可以带逗号？&quot;&gt;&lt;a href=&quot;#Json数组、对象赋值时，最后一个元素后面是否可以带逗号？&quot; class=&quot;headerlink&quot; title=&quot;Json数组、对象赋值时，最后一个元素后面是否可以带逗号？&quot;&gt;&lt;/a
+    
+    </summary>
+    
+    
+      <category term="json" scheme="https://zhaoy875.github.io/tags/json/"/>
     
   </entry>
   
@@ -458,9 +600,9 @@
       <category term="GitHub" scheme="https://zhaoy875.github.io/categories/GitHub/"/>
     
     
-      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
-    
       <category term="Awesome" scheme="https://zhaoy875.github.io/tags/Awesome/"/>
+    
+      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
     
   </entry>
   
@@ -675,9 +817,9 @@ var openURL = function (url) {
       <category term="git" scheme="https://zhaoy875.github.io/categories/git/"/>
     
     
-      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
-    
       <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
+    
+      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
     
   </entry>
   
@@ -721,9 +863,13 @@ var openURL = function (url) {
     <link href="https://zhaoy875.github.io/2016/09/06/%E6%94%B6%E8%97%8F%E7%BD%91%E5%9D%80/"/>
     <id>https://zhaoy875.github.io/2016/09/06/收藏网址/</id>
     <published>2016-09-06T14:16:12.000Z</published>
-    <updated>2016-10-26T10:26:28.095Z</updated>
+    <updated>2016-10-28T18:45:03.347Z</updated>
     
     <content type="html"><![CDATA[<h1 id="个人站点收藏夹"><a href="#个人站点收藏夹" class="headerlink" title="个人站点收藏夹"></a>个人站点收藏夹</h1><!-- 我的前端学习工作 -->
+<p>参考chrome扩展开发文档自己写了个chrome浏览器插件，<br>主要功能包括：<br>浏览器新建的空白页改为个人定制的主页（导航常用快捷链接页）；</p>
+<p>工作计划表，记事本；</p>
+<p>页面注入器（一系列dom操作，如广告屏蔽，隐藏dom元素，提取页面有用的一些字段和数据，等应用）；</p>
+<p>密码本功能（开发中，安全性问题暂不考虑），</p>
 <h2 id="每日必逛系列"><a href="#每日必逛系列" class="headerlink" title="每日必逛系列"></a>每日必逛系列</h2><ul>
 <li><a href="http://gold.xitu.io" target="_blank" rel="external">掘金</a></li>
 <li><a href="https://github.com/zhaoy875" target="_blank" rel="external">github</a></li>
@@ -749,6 +895,10 @@ var openURL = function (url) {
     <summary type="html">
     
       &lt;h1 id=&quot;个人站点收藏夹&quot;&gt;&lt;a href=&quot;#个人站点收藏夹&quot; class=&quot;headerlink&quot; title=&quot;个人站点收藏夹&quot;&gt;&lt;/a&gt;个人站点收藏夹&lt;/h1&gt;&lt;!-- 我的前端学习工作 --&gt;
+&lt;p&gt;参考chrome扩展开发文档自己写了个chrome浏览器插件，&lt;br&gt;主要功能包括：&lt;br&gt;浏览器新建的空白页改为个人定制的主页（导航常用快捷链接页）；&lt;/p&gt;
+&lt;p&gt;工作计划表，记事本；&lt;/p&gt;
+&lt;p&gt;页面注入器（一系列dom操作，如广告屏蔽，隐藏dom元素，提取页面有用的一些字段和数据，等应用）；&lt;/p&gt;
+&lt;p&gt;密码本功能（开发中，安全性问题暂不考虑），&lt;/p&gt;
 &lt;h2 id=&quot;每日必逛系列&quot;&gt;&lt;a href=&quot;#每日必逛系列&quot; class=&quot;headerlink&quot; title=&quot;每日必逛系列&quot;&gt;&lt;/a&gt;每日必逛系列&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://gold.xitu.io&quot;&gt;掘金&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/zhaoy875&quot;&gt;github&lt;/a&gt;&lt;/li&gt;
@@ -768,36 +918,6 @@ var openURL = function (url) {
       <category term="网站收藏" scheme="https://zhaoy875.github.io/tags/%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/"/>
     
       <category term="前端学习" scheme="https://zhaoy875.github.io/tags/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>增强版Npm包管理工具--Yarn</title>
-    <link href="https://zhaoy875.github.io/2016/09/06/npm%E5%A2%9E%E5%BC%BA%E7%89%88-yarn/"/>
-    <id>https://zhaoy875.github.io/2016/09/06/npm增强版-yarn/</id>
-    <published>2016-09-06T14:16:12.000Z</published>
-    <updated>2016-10-26T19:04:08.079Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>参考 <a href="http://www.jb51.net/article/95199.htm" target="_blank" rel="external">http://www.jb51.net/article/95199.htm</a></p>
-<p>最近新出的JavaScript包管理工具yarn大家已经有所耳闻，<br>并已通过npm i -g yarn进行了安装，<br>现在想知道怎么样使用吗？如果你了解 npm，你已经会很大一部分啦！<br>下面是这篇文章从npm切换到yarn的一些简洁笔记。</p>
-</blockquote>
-<p>yarn add: add a package to use in your current package.<br>yarn init: initialize for the development of a package.<br>yarn install: install all dependencies defined in a package.json file.<br>yarn publish: publish a package to a package manager.<br>yarn remove: remove a package that will no longer be used in your current package.</p>
-<p>一、首先需要了解的命令<br>    npm install === yarn —— install 安装是默认行为。<br>    npm install taco –save === yarn add taco —— taco 包立即被保存到 package.json 中。<br>    npm uninstall taco –save === yarn remove taco</p>
-<p>在 npm 中，可以使用 npm config set save true 设置 — -save 为默认行为，但这对多数开发者而言并非显而易见的。在 yarn 中，在package.json 中添加（add）和移除（remove）等行为是默认的。<br>     npm install taco –save-dev === yarn add taco –dev<br>     npm update –save === yarn upgrade<br>update（更新） vs upgrade（升级）， 赞！upgrade 才是实际做的事！版本号提升时，发生的正是upgrade！<br>注意： npm update –save 在版本 3.11 中似乎有点问题。<br>     npm install taco@latest –save === yarn add taco<br>     npm install taco –global === yarn global add taco —— 一如既往，请谨慎使用 global 标记。<br>二、已知悉的命令<br>包和 npm registry 上是一样的。大致而言，Yarn 只是一个新的安装工具，npm 结构和 registry 还是一样的。<br>     npm init === yarn init<br>     npm link === yarn link<br>     npm outdated === yarn outdated<br>     npm publish === yarn publish<br>     npm run === yarn run<br>     npm cache clean === yarn cache clean<br>     npm login === yarn login (logout 同理)<br>     npm test === yarn test<br>三、Yarn 独有的命令<br>我跳过了一些提醒我们不要使用的内容，如 yarn clean。<br>     yarn licenses ls —— 允许你检查依赖的许可信息。<br>     yarn licenses generate —— 自动创建依赖免责声明 license。<br>     yarn why taco —— 检查为什么会安装 taco，详细列出依赖它的其他包（鸣谢 Olivier Combe）。<br>     Emojis<br>     速度<br>     通过 yarn lockfile 自动实现 shrinkwrap 功能<br>     以安全为中心的设计<br>四、Npm 独有的命令<br>     npm xmas === NO EQUIVALENT<br>     npm visnup === NO EQUIVALENT<br>总结<br>在写这篇文章的时候发现， yarn的run 命令似乎出了点问题，应该会在0.15.2中修复。在这一点上， npm 好多了。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;参考 &lt;a href=&quot;http://www.jb51.net/article/95199.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jb51.net/article/95199.htm&lt;/a&gt;&lt;
-    
-    </summary>
-    
-    
-      <category term="npm" scheme="https://zhaoy875.github.io/tags/npm/"/>
-    
-      <category term="js包管理工具" scheme="https://zhaoy875.github.io/tags/js%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -973,9 +1093,9 @@ console.profileEnd();
     <link href="https://zhaoy875.github.io/2016/08/20/jquery%E7%89%87%E6%AE%B5/"/>
     <id>https://zhaoy875.github.io/2016/08/20/jquery片段/</id>
     <published>2016-08-20T09:43:20.000Z</published>
-    <updated>2016-10-26T17:59:23.027Z</updated>
+    <updated>2016-10-28T14:56:01.136Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="jquery常用片段"><a href="#jquery常用片段" class="headerlink" title="jquery常用片段"></a>jquery常用片段</h2><blockquote>
+    <content type="html"><![CDATA[<h1 id="js-jquery常用片段"><a href="#js-jquery常用片段" class="headerlink" title="js/jquery常用片段"></a>js/jquery常用片段</h1><blockquote>
 <p>JQuery是继prototype之后又一个优秀的Javascript库。它是轻量级的js库 ，它兼容CSS3，还兼容各种浏览器（IE 6.0+, FF 1.5+, Safari 2.0+, Opera 9.0+），jQuery2.0及后续版本将不再支持IE6/7/8浏览器。jQuery使用户能更方便地处理HTML（标准通用标记语言下的一个应用）、events、实现动画效果，并且方便地为网站提供AJAX交互。jQuery还有一个比较大的优势是，它的文档说明很全，而且各种应用也说得很详细，同时还有许多成熟的插件可供选择。</p>
 </blockquote>
 <h2 id="检测IE浏览器"><a href="#检测IE浏览器" class="headerlink" title="检测IE浏览器"></a>检测IE浏览器</h2><p>在进行CSS设计时，IE浏览器对开发者及设计师而言无疑是个麻烦。尽管IE6的黑暗时代已经过去，IE浏览器家族的人气亦在不断下滑，但我们仍然有必要对其进行检测。当然，以下片段亦可用于检测其它浏览器。</p>
@@ -984,13 +1104,31 @@ console.profileEnd();
     console.log(&apos;This is Internet Explorer&apos;); 
   } 
 }); 
+
+//js
+(function (){
+    if (/android/i.test(navigator.userAgent)) {
+        //code
+    }
+    if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {}
+    if (/MicroMessenger/i.test(navigator.userAgent)) {}
+})
 </code></pre><p>来源:<a href="http://stackoverflow.com/questions/14365725/easiest-lightest-replacement-for-browser-detection-jquery-1-9" target="_blank" rel="external">Stack Overflow</a></p>
+<h2 id="平滑滚动至页面顶部"><a href="#平滑滚动至页面顶部" class="headerlink" title="平滑滚动至页面顶部"></a>平滑滚动至页面顶部</h2><p>　　以下是jQuery最为常见的一种实现效果：点击一条链接以平滑滚动至页面顶部。虽然没什么新鲜感可言，但每位开发者几乎都用得上。</p>
+<pre><code>$(&quot;a[href=&apos;#top&apos;]&quot;).click(function() {
+    $(&quot;html, body&quot;).animate({
+        scrollTop: 0
+    }, &quot;slow&quot;);
+    return false;
+});
+</code></pre><p>　　来源: <a href="http://stackoverflow.com/questions/1144805/how-do-i-scroll-to-the-top-of-the-page-with-jquery/1145297#1145297" target="_blank" rel="external">Stack Overflow</a></p>
+<h2 id="保持始终处于顶部"><a href="#保持始终处于顶部" class="headerlink" title="保持始终处于顶部"></a>保持始终处于顶部</h2><p>　　以下代码片段允许某一元素始终处于页面顶部。可以想见，其非常适合处理导航菜单、工具栏或者其它重要信息。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;jquery常用片段&quot;&gt;&lt;a href=&quot;#jquery常用片段&quot; class=&quot;headerlink&quot; title=&quot;jquery常用片段&quot;&gt;&lt;/a&gt;jquery常用片段&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;JQuery是继prototype之后又一个优秀的
+      &lt;h1 id=&quot;js-jquery常用片段&quot;&gt;&lt;a href=&quot;#js-jquery常用片段&quot; class=&quot;headerlink&quot; title=&quot;js/jquery常用片段&quot;&gt;&lt;/a&gt;js/jquery常用片段&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;JQuery是继proto
     
     </summary>
     
@@ -998,6 +1136,49 @@ console.profileEnd();
       <category term="jquery" scheme="https://zhaoy875.github.io/tags/jquery/"/>
     
       <category term="javascript" scheme="https://zhaoy875.github.io/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SublimeText配置Live​Reload实时刷新</title>
+    <link href="https://zhaoy875.github.io/2016/03/21/SublimeText3%E9%85%8D%E7%BD%AELive%E2%80%8BReload%E5%AE%9E%E6%97%B6%E5%88%B7%E6%96%B0%E7%BD%91%E9%A1%B5/"/>
+    <id>https://zhaoy875.github.io/2016/03/21/SublimeText3配置Live​Reload实时刷新网页/</id>
+    <published>2016-03-21T09:33:20.000Z</published>
+    <updated>2016-10-28T18:29:18.968Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Sublime-Text-3-配置Live​Reload实时刷新网页"><a href="#Sublime-Text-3-配置Live​Reload实时刷新网页" class="headerlink" title="Sublime Text 3 配置Live​Reload实时刷新网页"></a>Sublime Text 3 配置Live​Reload实时刷新网页</h1><p>参考：<a href="http://www.jianshu.com/p/f4ec41257206" target="_blank" rel="external">http://www.jianshu.com/p/f4ec41257206</a></p>
+<p>LiveReload是一款非常棒的插件，可以在浏览器中实时刷新页面，这样就可以做到保存就能立马看到效果。想想用着两块屏幕开发时的场景，可以做到实时刷新，再也不用F5。<br><a id="more"></a></p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>开始之前我们需要准备下面这两个插件</p>
+<p>1、下载Sublime Text 3这款编辑器，然后在Sublime安装LiveReload插件。</p>
+<p>2、在Chrome浏览器安装LiveReload插件。</p>
+<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p>在Sublime安装LiveReload插件时需要注意下，通过Package Control: Install Package安装的发现后来不能用。所以通过Github下载LiveReload</p>
+<p>LiveReload<br>然后在Sublime工具栏Preferences &gt; Browser Packages…打开Packages目录，解压下载的插件到Packages目录并重命名为LiveReload。</p>
+<p>接着安装Chrome上的LiveReload，安装好以后可以在地址栏旁边看到如下按钮。</p>
+<h3 id="未开启监听"><a href="#未开启监听" class="headerlink" title="未开启监听"></a>未开启监听</h3><p>接着右键单击选择管理扩展程序，把允许访问网址文件这一选项勾选上。</p>
+<p>勾选允许访问网址文件<br>在Sublime中配置LiveReload<br>方法1：过用户自定义配置来开启。</p>
+<p>Preferences &gt; Package Settings &gt; LiveReload &gt; Settings User</p>
+<p>{“enabled_plugins”: [“SimpleReloadPlugin”,”SimpleRefresh”]}</p>
+<p>方法2：通过控制台命令来开启。</p>
+<ol>
+<li><p>Ctrl+Shift+P</p>
+</li>
+<li><p>LiveReload: Enable/disableplugins</p>
+</li>
+<li><p>Enable - Simple Reload<br>完成配置后打开一个静态HTML文件，并点击浏览器地址栏旁边的LiveReload按钮，这时看到按钮变成实心的了。</p>
+</li>
+</ol>
+<p>已经开始监听<br>接着修改一下HTML内容就能实时看到效果了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Sublime-Text-3-配置Live​Reload实时刷新网页&quot;&gt;&lt;a href=&quot;#Sublime-Text-3-配置Live​Reload实时刷新网页&quot; class=&quot;headerlink&quot; title=&quot;Sublime Text 3 配置Live​Reload实时刷新网页&quot;&gt;&lt;/a&gt;Sublime Text 3 配置Live​Reload实时刷新网页&lt;/h1&gt;&lt;p&gt;参考：&lt;a href=&quot;http://www.jianshu.com/p/f4ec41257206&quot;&gt;http://www.jianshu.com/p/f4ec41257206&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;LiveReload是一款非常棒的插件，可以在浏览器中实时刷新页面，这样就可以做到保存就能立马看到效果。想想用着两块屏幕开发时的场景，可以做到实时刷新，再也不用F5。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="sublimeText" scheme="https://zhaoy875.github.io/tags/sublimeText/"/>
     
   </entry>
   
@@ -1060,9 +1241,9 @@ console.profileEnd();
       <category term="css预处理器" scheme="https://zhaoy875.github.io/categories/css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/"/>
     
     
-      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
-    
       <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
+    
+      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
     
   </entry>
   
