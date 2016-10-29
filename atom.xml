@@ -190,6 +190,35 @@
   </entry>
   
   <entry>
+    <title>Ubuntu 安装Hexo博客</title>
+    <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
+    <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
+    <published>2016-10-11T05:50:43.000Z</published>
+    <updated>2016-10-26T10:25:41.895Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ubuntu-安装hexo博客"><a href="#ubuntu-安装hexo博客" class="headerlink" title="ubuntu 安装hexo博客"></a>ubuntu 安装hexo博客</h1><h2 id="搭建nodejs-环境"><a href="#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt <span class="keyword">install</span> nodejs</div><div class="line">sudo apt <span class="keyword">install</span> npm</div></pre></td></tr></table></figure>
+<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
+<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
+<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
+<p>hexo s 本地预览–over</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;ubuntu-安装hexo博客&quot;&gt;&lt;a href=&quot;#ubuntu-安装hexo博客&quot; class=&quot;headerlink&quot; title=&quot;ubuntu 安装hexo博客&quot;&gt;&lt;/a&gt;ubuntu 安装hexo博客&lt;/h1&gt;&lt;h2 id=&quot;搭建nodejs-环境&quot;&gt;
+    
+    </summary>
+    
+    
+      <category term="ubuntu" scheme="https://zhaoy875.github.io/tags/ubuntu/"/>
+    
+      <category term="hexo" scheme="https://zhaoy875.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Npm</title>
     <link href="https://zhaoy875.github.io/2016/10/11/npm/"/>
     <id>https://zhaoy875.github.io/2016/10/11/npm/</id>
@@ -227,35 +256,6 @@ npm uninstall express  #删除指定的模块
       <category term="npm" scheme="https://zhaoy875.github.io/tags/npm/"/>
     
       <category term="nodejs" scheme="https://zhaoy875.github.io/tags/nodejs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu 安装Hexo博客</title>
-    <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
-    <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
-    <published>2016-10-11T05:50:43.000Z</published>
-    <updated>2016-10-26T10:25:41.895Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="ubuntu-安装hexo博客"><a href="#ubuntu-安装hexo博客" class="headerlink" title="ubuntu 安装hexo博客"></a>ubuntu 安装hexo博客</h1><h2 id="搭建nodejs-环境"><a href="#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt <span class="keyword">install</span> nodejs</div><div class="line">sudo apt <span class="keyword">install</span> npm</div></pre></td></tr></table></figure>
-<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
-<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
-<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
-<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
-<p>hexo s 本地预览–over</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;ubuntu-安装hexo博客&quot;&gt;&lt;a href=&quot;#ubuntu-安装hexo博客&quot; class=&quot;headerlink&quot; title=&quot;ubuntu 安装hexo博客&quot;&gt;&lt;/a&gt;ubuntu 安装hexo博客&lt;/h1&gt;&lt;h2 id=&quot;搭建nodejs-环境&quot;&gt;
-    
-    </summary>
-    
-    
-      <category term="ubuntu" scheme="https://zhaoy875.github.io/tags/ubuntu/"/>
-    
-      <category term="hexo" scheme="https://zhaoy875.github.io/tags/hexo/"/>
     
   </entry>
   
@@ -600,9 +600,9 @@ var o = { name:&apos;赵&apos;, age:12,}; // 报错
       <category term="GitHub" scheme="https://zhaoy875.github.io/categories/GitHub/"/>
     
     
-      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
-    
       <category term="Awesome" scheme="https://zhaoy875.github.io/tags/Awesome/"/>
+    
+      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
     
   </entry>
   
@@ -817,9 +817,9 @@ var openURL = function (url) {
       <category term="git" scheme="https://zhaoy875.github.io/categories/git/"/>
     
     
-      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
-    
       <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
+    
+      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
     
   </entry>
   
@@ -1241,9 +1241,9 @@ console.profileEnd();
       <category term="css预处理器" scheme="https://zhaoy875.github.io/categories/css%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8/"/>
     
     
-      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
-    
       <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
+    
+      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
     
   </entry>
   
