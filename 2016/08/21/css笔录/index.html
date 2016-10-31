@@ -698,13 +698,20 @@ background属性的值的书写顺序官方并没有强制标准的。为了可�
         
 
          
-       
-        <div class="duoshuoviews">
-          <h3>最近访客</h3>
+        
+        <h3 class="duoshuoview_btn">访客</h3>
+        <div class="duoshuoviews" style="display:none">
            <div class="ds-recent-visitors" data-num-items="24" data-avatar-size="42" id="ds-recent-visitors">
            </div>  
         </div>
-       
+        <script type="text/javascript">
+        $(function() {
+          $('.duoshuoview_btn').click(function() {
+            $('.duoshuoviews').slideToggle();
+          });
+        });
+        </script>
+        
 
       </section>
 

@@ -745,13 +745,20 @@ Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利�
         
 
          
-       
-        <div class="duoshuoviews">
-          <h3>最近访客</h3>
+        
+        <h3 class="duoshuoview_btn">访客</h3>
+        <div class="duoshuoviews" style="display:none">
            <div class="ds-recent-visitors" data-num-items="24" data-avatar-size="42" id="ds-recent-visitors">
            </div>  
         </div>
-       
+        <script type="text/javascript">
+        $(function() {
+          $('.duoshuoview_btn').click(function() {
+            $('.duoshuoviews').slideToggle();
+          });
+        });
+        </script>
+        
 
       </section>
 
