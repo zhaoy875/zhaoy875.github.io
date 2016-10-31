@@ -65,7 +65,7 @@ JQuery是继prototype之后又一个优秀的Javascript库。它是轻量级的j
 <meta property="og:site_name" content="zhaoy">
 <meta property="og:description" content="js/jquery常用片段
 JQuery是继prototype之后又一个优秀的Javascript库。它是轻量级的js库 ，它兼容CSS3，还兼容各种浏览器（IE 6.0+, FF 1.5+, Safari 2.0+, Opera 9.0+），jQuery2.0及后续版本将不再支持IE6/7/8浏览器。jQuery使用户能更方便地处理HTML（标准通用标记语言下的一个应用）、events、实现动画">
-<meta property="og:updated_time" content="2016-10-28T14:56:01.136Z">
+<meta property="og:updated_time" content="2016-10-31T05:27:38.892Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" Jquery常用片段">
 <meta name="twitter:description" content="js/jquery常用片段
@@ -90,6 +90,9 @@ JQuery是继prototype之后又一个优秀的Javascript库。它是轻量级的j
 
   <link rel="canonical" href="https://zhaoy875.github.io/2016/08/20/jquery片段/"/>
 
+
+
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <title>  Jquery常用片段 | zhaoy </title>
   
   <meta name="baidu-site-verification" content="k0UgqisIfE" />
@@ -418,7 +421,12 @@ JQuery是继prototype之后又一个优秀的Javascript库。它是轻量级的j
         <h1 id="js-jquery常用片段"><a href="#js-jquery常用片段" class="headerlink" title="js/jquery常用片段"></a>js/jquery常用片段</h1><blockquote>
 <p>JQuery是继prototype之后又一个优秀的Javascript库。它是轻量级的js库 ，它兼容CSS3，还兼容各种浏览器（IE 6.0+, FF 1.5+, Safari 2.0+, Opera 9.0+），jQuery2.0及后续版本将不再支持IE6/7/8浏览器。jQuery使用户能更方便地处理HTML（标准通用标记语言下的一个应用）、events、实现动画效果，并且方便地为网站提供AJAX交互。jQuery还有一个比较大的优势是，它的文档说明很全，而且各种应用也说得很详细，同时还有许多成熟的插件可供选择。</p>
 </blockquote>
-<h2 id="检测IE浏览器"><a href="#检测IE浏览器" class="headerlink" title="检测IE浏览器"></a>检测IE浏览器</h2><p>在进行CSS设计时，IE浏览器对开发者及设计师而言无疑是个麻烦。尽管IE6的黑暗时代已经过去，IE浏览器家族的人气亦在不断下滑，但我们仍然有必要对其进行检测。当然，以下片段亦可用于检测其它浏览器。</p>
+<h2 id="检测jquery库是否加载"><a href="#检测jquery库是否加载" class="headerlink" title="检测jquery库是否加载"></a>检测jquery库是否加载</h2><pre><code>if(typeof jQuery!=&apos;undefined&apos;){
+console.log(&quot;jQuery已加载!&quot;);
+} else{
+console.log(&quot;jQuery未找到&quot;);
+}
+</code></pre><h2 id="检测IE浏览器"><a href="#检测IE浏览器" class="headerlink" title="检测IE浏览器"></a>检测IE浏览器</h2><p>在进行CSS设计时，IE浏览器对开发者及设计师而言无疑是个麻烦。尽管IE6的黑暗时代已经过去，IE浏览器家族的人气亦在不断下滑，但我们仍然有必要对其进行检测。当然，以下片段亦可用于检测其它浏览器。</p>
 <pre><code>$(document).ready(function() { 
   if (navigator.userAgent.match(/msie/i) ){ 
     console.log(&apos;This is Internet Explorer&apos;); 
@@ -723,11 +731,14 @@ JQuery是继prototype之后又一个优秀的Javascript库。它是轻量级的j
           </div>
         
 
+
+
+        
          
         
         <h3 class="duoshuoview_btn">访客</h3>
         <div class="duoshuoviews" style="display:none">
-           <div class="ds-recent-visitors" data-num-items="24" data-avatar-size="42" id="ds-recent-visitors">
+           <div class="ds-recent-visitors" data-num-items="16" data-avatar-size="42" id="ds-recent-visitors">
            </div>  
         </div>
         <script type="text/javascript">
@@ -739,6 +750,10 @@ JQuery是继prototype之后又一个优秀的Javascript库。它是轻量级的j
         </script>
         
 
+        
+
+
+
       </section>
 
       
@@ -748,7 +763,7 @@ JQuery是继prototype之后又一个优秀的Javascript库。它是轻量级的j
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#js-jquery常用片段"><span class="nav-number">1.</span> <span class="nav-text">js/jquery常用片段</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#检测IE浏览器"><span class="nav-number">1.1.</span> <span class="nav-text">检测IE浏览器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平滑滚动至页面顶部"><span class="nav-number">1.2.</span> <span class="nav-text">平滑滚动至页面顶部</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#保持始终处于顶部"><span class="nav-number">1.3.</span> <span class="nav-text">保持始终处于顶部</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#js-jquery常用片段"><span class="nav-number">1.</span> <span class="nav-text">js/jquery常用片段</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#检测jquery库是否加载"><span class="nav-number">1.1.</span> <span class="nav-text">检测jquery库是否加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检测IE浏览器"><span class="nav-number">1.2.</span> <span class="nav-text">检测IE浏览器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平滑滚动至页面顶部"><span class="nav-number">1.3.</span> <span class="nav-text">平滑滚动至页面顶部</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#保持始终处于顶部"><span class="nav-number">1.4.</span> <span class="nav-text">保持始终处于顶部</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
