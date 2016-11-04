@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zhaoy875.github.io/2016/09/04/console-console/</loc>
+    
+    <lastmod>2016-11-04T11:25:32.769Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/about/index.html</loc>
+    
+    <lastmod>2016-10-31T06:36:11.738Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zhaoy875.github.io/2016/08/20/jquery%E7%89%87%E6%AE%B5/</loc>
     
     <lastmod>2016-10-31T05:27:38.892Z</lastmod>
@@ -191,13 +205,6 @@
   </url>
   
   <url>
-    <loc>https://zhaoy875.github.io/2016/09/04/console-console/</loc>
-    
-    <lastmod>2016-10-26T10:24:28.529Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://zhaoy875.github.io/changelog/index.html</loc>
     
     <lastmod>2016-10-17T10:00:45.406Z</lastmod>
@@ -222,13 +229,6 @@
     <loc>https://zhaoy875.github.io/tags/index.html</loc>
     
     <lastmod>2016-09-16T16:15:33.506Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhaoy875.github.io/about/index.html</loc>
-    
-    <lastmod>2016-09-08T16:10:57.188Z</lastmod>
     
   </url>
   

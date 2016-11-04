@@ -1222,6 +1222,14 @@ console.dirxml(div);
 console.assert( result );    
 var year = 2000;
 console.assert(year == 2011 );
+</code></pre><h3 id="console-count"><a href="#console-count" class="headerlink" title="console.count"></a>console.count</h3><p>除了条件输出的场景，还有常见的场景是计数。<br>当你想统计某段代码执行了多少次时也大可不必自己去写相关逻辑，内置的console.count可以很地胜任这样的任务。</p>
+<pre><code>function foo(){
+        //其他函数逻辑blah blah。。。
+    console.count(&apos;foo 被执行的次数：&apos;);
+}
+foo();
+foo();
+foo();
 </code></pre><h3 id="console-trace"><a href="#console-trace" class="headerlink" title="console.trace()"></a>console.trace()</h3><p>用来追踪函数的调用轨迹。</p>
 <p>比如，有一个加法器函数。    　</p>
 <pre><code>function add(a,b){

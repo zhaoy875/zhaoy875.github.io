@@ -67,7 +67,7 @@
 概述console大家平常写console最多的就是用来打印信息，console.log(obj or str)，但console能干的事可比这多了，比如console可以自定义打印字符的css样式，console.trace()踪函数的调用轨迹，计时功能console.time()；性能分析console.profile等。。。">
 <meta property="og:image" content="http://od6ri688q.bkt.clouddn.com/consoleQQ%E6%88%AA%E5%9B%BE20160908200956.png">
 <meta property="og:image" content="http://od6ri688q.bkt.clouddn.com/console.groupQQ%E6%88%AA%E5%9B%BE20160908205931.png">
-<meta property="og:updated_time" content="2016-10-26T10:24:28.529Z">
+<meta property="og:updated_time" content="2016-11-04T11:25:32.769Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Console你不知道的一些高级用法">
 <meta name="twitter:description" content="前提没有特殊声明下，基本都是以chrome为例
@@ -139,71 +139,6 @@
   
   
 
-
-	
-	<canvas id="yyx"></canvas>
-	<script>
-		(function(){
-		    // document.addEventListener('touchmove', function(e) {
-		    //     e.preventDefault()
-		    // })
-		    var c = document.getElementById('yyx'),
-		        x = c.getContext('2d'),
-		        pr = window.devicePixelRatio || 1,
-		        w = window.innerWidth,
-		        h = window.innerHeight,
-		        f = 90,
-		        q,
-		        m = Math,
-		        r = 0,
-		        u = m.PI * 2,
-		        v = m.cos,
-		        z = m.random
-		    c.width = w * pr
-		    c.height = h * pr
-		    x.scale(pr, pr)
-		    x.globalAlpha = 0.6
-		    c.style.cssText ='position: fixed;top: 0;left: 0;z-index: 0;width: 100%;height: 100%;pointer-events: none;';
-		    function i() {
-		        x.clearRect(0, 0, w, h)
-		        q = [{
-		            x: 0,
-		            y: h * .7 + f
-		        }, {
-		            x: 0,
-		            y: h * .7 - f
-		        }]
-		        while (q[1].x < w + f) d(q[0], q[1])
-		    }
-
-		    function d(i, j) {
-		        x.beginPath()
-		        x.moveTo(i.x, i.y)
-		        x.lineTo(j.x, j.y)
-		        var k = j.x + (z() * 2 - 0.25) * f,
-		            n = y(j.y)
-		        x.lineTo(k, n)
-		        x.closePath()
-		        r -= u / -50
-		        x.fillStyle = '#' + (v(r) * 127 + 128 << 16 | v(r + u / 3) * 127 + 128 << 8 | v(r + u / 3 * 2) * 127 + 128).toString(16)
-		        x.fill()
-		        q[0] = q[1]
-		        q[1] = {
-		            x: k,
-		            y: n
-		        }
-		    }
-
-		    function y(p) {
-		        var t = p + (z() * 2 - 1.1) * f
-		        return (t > h || t < 0) ? y(p) : t
-		    }
-		    document.onclick = i
-		    document.ontouchstart = i
-		    i()
-		})();  
-	        
-	</script>
 
 
 
@@ -453,6 +388,14 @@ console.dirxml(div);
 console.assert( result );    
 var year = 2000;
 console.assert(year == 2011 );
+</code></pre><h3 id="console-count"><a href="#console-count" class="headerlink" title="console.count"></a>console.count</h3><p>除了条件输出的场景，还有常见的场景是计数。<br>当你想统计某段代码执行了多少次时也大可不必自己去写相关逻辑，内置的console.count可以很地胜任这样的任务。</p>
+<pre><code>function foo(){
+        //其他函数逻辑blah blah。。。
+    console.count(&apos;foo 被执行的次数：&apos;);
+}
+foo();
+foo();
+foo();
 </code></pre><h3 id="console-trace"><a href="#console-trace" class="headerlink" title="console.trace()"></a>console.trace()</h3><p>用来追踪函数的调用轨迹。</p>
 <p>比如，有一个加法器函数。    　</p>
 <pre><code>function add(a,b){
@@ -648,7 +591,7 @@ console.profileEnd();
                src="/images/zhaoy875_icon.jpg"
                alt="zhaoy875" />
           <p class="site-author-name" itemprop="name">zhaoy875</p>
-          <p class="site-description motion-element" itemprop="description">zhaoy的前端开发学习站点，前端开发，前端框架,bootstrap,前端自动化，前端 frontend，Javascript,css3,js,node.js,canvas, gulp,webpack,amd ,cmd,react, react native,angular,vue,vue.js</p>
+          <p class="site-description motion-element" itemprop="description">个人前端开发学习站点，记录生活学习，关于前端开发，前端框架,bootstrap,前端自动化，前端 frontend，Javascript,css3,js,node.js,canvas, gulp,webpack,amd ,cmd,react, react native,angular,vue,vue.js</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
@@ -807,7 +750,7 @@ console.profileEnd();
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前提"><span class="nav-number">1.</span> <span class="nav-text">前提</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概述console"><span class="nav-number"></span> <span class="nav-text">概述console</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#console打印类型"><span class="nav-number"></span> <span class="nav-text">console打印类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#占位符"><span class="nav-number">1.</span> <span class="nav-text">占位符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分组group"><span class="nav-number">2.</span> <span class="nav-text">分组group</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-dir"><span class="nav-number">3.</span> <span class="nav-text">console.dir()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-dirxml-用来显示网页的某个节点（node）所包含的节点html-xml代码。"><span class="nav-number">4.</span> <span class="nav-text">console.dirxml()用来显示网页的某个节点（node）所包含的节点html/xml代码。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-asset"><span class="nav-number">5.</span> <span class="nav-text">console.asset()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-trace"><span class="nav-number">6.</span> <span class="nav-text">console.trace()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计时功能"><span class="nav-number">7.</span> <span class="nav-text">计时功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性能分析"><span class="nav-number">8.</span> <span class="nav-text">性能分析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前提"><span class="nav-number">1.</span> <span class="nav-text">前提</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概述console"><span class="nav-number"></span> <span class="nav-text">概述console</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#console打印类型"><span class="nav-number"></span> <span class="nav-text">console打印类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#占位符"><span class="nav-number">1.</span> <span class="nav-text">占位符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分组group"><span class="nav-number">2.</span> <span class="nav-text">分组group</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-dir"><span class="nav-number">3.</span> <span class="nav-text">console.dir()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-dirxml-用来显示网页的某个节点（node）所包含的节点html-xml代码。"><span class="nav-number">4.</span> <span class="nav-text">console.dirxml()用来显示网页的某个节点（node）所包含的节点html/xml代码。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-asset"><span class="nav-number">5.</span> <span class="nav-text">console.asset()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-count"><span class="nav-number">6.</span> <span class="nav-text">console.count</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-trace"><span class="nav-number">7.</span> <span class="nav-text">console.trace()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计时功能"><span class="nav-number">8.</span> <span class="nav-text">计时功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性能分析"><span class="nav-number">9.</span> <span class="nav-text">性能分析</span></a></li></ol></div>
             
           </div>
         </section>
