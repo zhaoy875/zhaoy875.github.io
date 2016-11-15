@@ -3,10 +3,11 @@
 
 "use strict";
 (function(){
-console.group('o_o');
+// console.group('o_o');
+    console.log('%c Life needs passion','background:#111;color:#fff;border-radius:5px;padding:0.5em');
 	console.log('%c found it! | ू•ૅ㉨•́)ᵎᵎᵎ ','font-size:30px;text-shadow:0 0 10px #fff;color:#795548;padding:0 0 0 1em');
 	console.log('%c╭( ′• o •′ )╭☞找此人请拨“ MTU1NTEwNjA2NTU= ”扣扣:“ MTE3NDQ5OTYwMg== ”  http://zhaoy.site','font-size:16px;color:#111;text-shadow:0 0 5px #333;padding:0 2em');
-console.groupEnd();
+// console.groupEnd();
 
 	! function(e, t, a) {
     	// 定义任务
@@ -35,7 +36,7 @@ console.groupEnd();
                     i(e)
             }
         }
-
+        
         function i(e) {
             var a = t.createElement("div");
             a.className = "heart",

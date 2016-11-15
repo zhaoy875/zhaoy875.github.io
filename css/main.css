@@ -1,5 +1,5 @@
 body {
-  background: url("http://od6ri688q.bkt.clouddn.com/polygenpattern.png") !important;
+  background: url("http://od6ri688q.bkt.clouddn.com/bg_body.jpg") !important;
   background-size: cover !important;
   background-attachment: fixed !important;
   transition: background 1.4s;
@@ -1748,7 +1748,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8345ff;
+  background: #e8b02e;
 }
 .links-of-blogroll {
   font-size: 13px;
