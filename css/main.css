@@ -1,6 +1,5 @@
 body {
   background: url("http://od6ri688q.bkt.clouddn.com/bg_body.jpg") !important;
-  background-size: cover !important;
   background-attachment: fixed !important;
   transition: background 1.4s;
 }
@@ -1748,7 +1747,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e8b02e;
+  background: #958773;
 }
 .links-of-blogroll {
   font-size: 13px;
