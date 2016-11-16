@@ -4,20 +4,6 @@
   
     
     <entry>
-      <title><![CDATA[带封面的Md文章示例]]></title>
-      <url>https://zhaoy875.github.io/2016/11/02/md%E5%B8%A6%E5%B0%81%E9%9D%A2%E7%A4%BA%E4%BE%8B-%E5%B8%A6%E5%B0%81%E9%9D%A2%E7%9A%84md%E6%96%87%E7%AB%A0%E7%A4%BA%E4%BE%8B/</url>
-      <content type="html"><![CDATA[<h1 id="带封面的文章"><a href="/2016/11/02/md带封面示例-带封面的md文章示例/#带封面的文章" class="headerlink" title="带封面的文章"></a>带封面的文章</h1><p>这是一篇带封面的文章，封面将作为标题的背景展示在首页，显示成一个卡片。<br>可以通过在markdown文件顶部指定cover属性来显示封面。</p>
-<pre><code>title: 带封面的md文章示例
-toc: true
-date: 2016-11-02 11:17:10
-cover: PolyGen.png #指定图片资源
-categories:
-tags:
-</code></pre><p>一般地，如果开启了hexo的post_asset_folder: true设置项，我们只需要将相应图片放到与文章一起生成的存放资源的文件夹里，即可简单方便地通过直接写图片名来指定封面了。参见本示例站点。</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[避免使用 document.write，尤其是脚本注入]]></title>
       <url>https://zhaoy875.github.io/2016/10/29/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E9%81%BF%E5%85%8D%E4%BD%BF%E7%94%A8document-write-%E5%B0%A4%E5%85%B6%E6%98%AF%E8%84%9A%E6%9C%AC%E6%B3%A8%E5%85%A5/</url>
       <content type="html"><![CDATA[<h1 id="为什么要避免使用-document-write，尤其是脚本注入"><a href="/2016/10/29/为什么要避免使用document-write-尤其是脚本注入/#为什么要避免使用-document-write，尤其是脚本注入" class="headerlink" title="为什么要避免使用 document.write，尤其是脚本注入"></a>为什么要避免使用 document.write，尤其是脚本注入</h1><blockquote>
@@ -658,6 +644,19 @@ tags:
     </entry>
     
     <entry>
+      <title><![CDATA[Ubuntu 安装Hexo博客]]></title>
+      <url>https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/</url>
+      <content type="html"><![CDATA[<h1 id="ubuntu-安装hexo博客"><a href="/2016/10/11/ubuntu安装hexo教程/#ubuntu-安装hexo博客" class="headerlink" title="ubuntu 安装hexo博客"></a>ubuntu 安装hexo博客</h1><h2 id="搭建nodejs-环境"><a href="/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt <span class="keyword">install</span> nodejs</div><div class="line">sudo apt <span class="keyword">install</span> npm</div></pre></td></tr></table></figure>
+<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
+<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
+<h3 id="安装hexo"><a href="/2016/10/11/ubuntu安装hexo教程/#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
+<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
+<p>hexo s 本地预览–over</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Npm]]></title>
       <url>https://zhaoy875.github.io/2016/10/11/npm/</url>
       <content type="html"><![CDATA[<p>升级node.js的方法。node有一个模块叫n，专门用来管理node.js的版本的。<br>首先安装n模块：</p>
@@ -677,32 +676,6 @@ npm update express    #升级当前目录下的项目的指定模块
 npm update -g express  #升级全局安装的express模块 
 npm uninstall express  #删除指定的模块
 </code></pre>]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Ubuntu 安装Hexo博客]]></title>
-      <url>https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/</url>
-      <content type="html"><![CDATA[<h1 id="ubuntu-安装hexo博客"><a href="/2016/10/11/ubuntu安装hexo教程/#ubuntu-安装hexo博客" class="headerlink" title="ubuntu 安装hexo博客"></a>ubuntu 安装hexo博客</h1><h2 id="搭建nodejs-环境"><a href="/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt <span class="keyword">install</span> nodejs</div><div class="line">sudo apt <span class="keyword">install</span> npm</div></pre></td></tr></table></figure>
-<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
-<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
-<h3 id="安装hexo"><a href="/2016/10/11/ubuntu安装hexo教程/#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
-<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
-<p>hexo s 本地预览–over</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Music Time歌单分享]]></title>
-      <url>https://zhaoy875.github.io/2016/09/20/music%E6%AD%8C%E5%8D%95/</url>
-      <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="/2016/09/20/music歌单/#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe style="width:100%;min-height:260px;max-height:400px" id="musiciframe" src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=0&narrow=0" frameborder="0" scrolling="no"></iframe>
-
-<a id="more"></a>
-<h2 id="Interface-usage"><a href="/2016/09/20/music歌单/#Interface-usage" class="headerlink" title="Interface usage"></a>Interface usage</h2><p>歌单：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=1&amp;narrow=0"</span>  <span class="attribute">width</span>=<span class="string">"100%"</span>  frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
-<p>单首：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?song=408332757&amp;qssl=1&amp;qlrc=1&amp;autoplay=0"</span> <span class="attribute">width</span>=<span class="string">"100%"</span> frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
-<h2 id="API"><a href="/2016/09/20/music歌单/#API" class="headerlink" title="API"></a>API</h2><p>使用iframe内嵌页面<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Demos:</span></div><div class="line"><span class="symbol"></span></div><div class="line">https:<span class="comment">//music.daoapp.io/iframe?song=287749&amp;qssl=1&amp;qlrc=1&amp;qnarrow=0&amp;max_width=50%&amp;autoplay=1</span></div><div class="line"><span class="symbol">https:</span><span class="comment">//music.daoapp.io/iframe?song=287749&amp;qnarrow=1&amp;qssl=1</span></div><div class="line"><span class="symbol">URL:</span> http(s):<span class="comment">//music.daoapp.io/ Donot use HTTPS if it's not necessary. But if you do, don't forget set qssl to 1. Method: GET The arguments are:</span></div><div class="line"></div><div class="line">album=album_id  		<span class="comment">//专辑id</span></div><div class="line">playlist=playlist_id    <span class="comment">//歌单id</span></div><div class="line">song=song_id            <span class="comment">//单首id</span></div><div class="line">program=program_id</div><div class="line">radio=radio_id</div><div class="line">mv=mv_id 				</div><div class="line">qssl=[<span class="number">0</span>|<span class="number">1</span>]            </div><div class="line">qlrc=[<span class="number">0</span>|<span class="number">1</span>]             <span class="comment">//歌词</span></div><div class="line">qnarrow=[<span class="number">0</span>|<span class="number">1</span>]</div><div class="line">max_width=[<span class="number">100</span>%|<span class="number">32</span>rem|<span class="number">400</span>px|something else]</div><div class="line">autoplay=[<span class="number">0</span>|<span class="number">1</span>]         <span class="comment">//自动播放</span></div></pre></td></tr></table></figure></p>
-<p>You must choose ONE of those six ids. And it means nothing if you choose more than one of them. You may use <a href="https://music.daoapp.io/" target="_blank" rel="external">The web interface</a> to find the id or use 163Music.</p>
-]]></content>
     </entry>
     
     <entry>
@@ -726,6 +699,19 @@ var o = { name:&apos;赵&apos;, age:12,}; // 报错
 </code></pre><p>需要注意的是，JSON是一种通用数据格式，与具体编程语言无关。各种语言在解码JSON时，也会采用不同的容忍程度。PHP的json_decode()就不能容忍末尾的逗号。</p>
 <pre><code>[code]json_decode({&quot;name&quot;:&quot;zhao&quot;, &quot;age&quot;:12,}); // 解析会发生错误
 </code></pre><p>来源： <a href="http://www.aichengxu.com/view/3462172" target="_blank" rel="external">http://www.aichengxu.com/view/3462172</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Music Time歌单分享]]></title>
+      <url>https://zhaoy875.github.io/2016/09/20/music%E6%AD%8C%E5%8D%95/</url>
+      <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="/2016/09/20/music歌单/#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe style="width:100%;min-height:260px;max-height:400px" id="musiciframe" src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=0&narrow=0" frameborder="0" scrolling="no"></iframe>
+
+<a id="more"></a>
+<h2 id="Interface-usage"><a href="/2016/09/20/music歌单/#Interface-usage" class="headerlink" title="Interface usage"></a>Interface usage</h2><p>歌单：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=1&amp;narrow=0"</span>  <span class="attribute">width</span>=<span class="string">"100%"</span>  frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
+<p>单首：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?song=408332757&amp;qssl=1&amp;qlrc=1&amp;autoplay=0"</span> <span class="attribute">width</span>=<span class="string">"100%"</span> frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="API"><a href="/2016/09/20/music歌单/#API" class="headerlink" title="API"></a>API</h2><p>使用iframe内嵌页面<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Demos:</span></div><div class="line"><span class="symbol"></span></div><div class="line">https:<span class="comment">//music.daoapp.io/iframe?song=287749&amp;qssl=1&amp;qlrc=1&amp;qnarrow=0&amp;max_width=50%&amp;autoplay=1</span></div><div class="line"><span class="symbol">https:</span><span class="comment">//music.daoapp.io/iframe?song=287749&amp;qnarrow=1&amp;qssl=1</span></div><div class="line"><span class="symbol">URL:</span> http(s):<span class="comment">//music.daoapp.io/ Donot use HTTPS if it's not necessary. But if you do, don't forget set qssl to 1. Method: GET The arguments are:</span></div><div class="line"></div><div class="line">album=album_id  		<span class="comment">//专辑id</span></div><div class="line">playlist=playlist_id    <span class="comment">//歌单id</span></div><div class="line">song=song_id            <span class="comment">//单首id</span></div><div class="line">program=program_id</div><div class="line">radio=radio_id</div><div class="line">mv=mv_id 				</div><div class="line">qssl=[<span class="number">0</span>|<span class="number">1</span>]            </div><div class="line">qlrc=[<span class="number">0</span>|<span class="number">1</span>]             <span class="comment">//歌词</span></div><div class="line">qnarrow=[<span class="number">0</span>|<span class="number">1</span>]</div><div class="line">max_width=[<span class="number">100</span>%|<span class="number">32</span>rem|<span class="number">400</span>px|something else]</div><div class="line">autoplay=[<span class="number">0</span>|<span class="number">1</span>]         <span class="comment">//自动播放</span></div></pre></td></tr></table></figure></p>
+<p>You must choose ONE of those six ids. And it means nothing if you choose more than one of them. You may use <a href="https://music.daoapp.io/" target="_blank" rel="external">The web interface</a> to find the id or use 163Music.</p>
 ]]></content>
     </entry>
     
