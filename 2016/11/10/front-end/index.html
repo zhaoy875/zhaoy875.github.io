@@ -1,0 +1,1107 @@
+<!-- 
+     _                       
+ ___| |__   __ _  ___  _   _ 
+|_  / '_ \ / _` |/ _ \| | | |
+ / /| | | | (_| | (_) | |_| |
+/___|_| |_|\__,_|\___/ \__, |
+                       |___/  
+  勤有功，戏无益。戒之哉，宜勉力。--- 喝了这碗鸡汤还有3碗
+  做一个好前端真的好难   (╯‵□′)╯ ︵┻━┻ 
+-->
+<!doctype html>
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="前端开发," />
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="zhaoy" type="application/atom+xml" />
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.1" />
+
+
+
+
+<meta name="description" content="一个健壮且可扩展的 CSS 架构所需的 8 个简单规则 (llp0574 翻译)
+使用 React.js 的渐进式 Web 应用程序：第 1 部分 - 介绍 (markzhai 翻译)
+无障碍网站开发工具 (Romeo0906 翻译)
+全方位提升网站打开速度：前端、后端、新的技术) (luoyaqifei 翻译)
+准备充分了嘛就想学函数式编程？(Part 5) (luoyaqifei 翻译)
+实">
+<meta property="og:type" content="article">
+<meta property="og:title" content="掘金翻译文章--前端">
+<meta property="og:url" content="https://zhaoy875.github.io/2016/11/10/front-end/index.html">
+<meta property="og:site_name" content="zhaoy">
+<meta property="og:description" content="一个健壮且可扩展的 CSS 架构所需的 8 个简单规则 (llp0574 翻译)
+使用 React.js 的渐进式 Web 应用程序：第 1 部分 - 介绍 (markzhai 翻译)
+无障碍网站开发工具 (Romeo0906 翻译)
+全方位提升网站打开速度：前端、后端、新的技术) (luoyaqifei 翻译)
+准备充分了嘛就想学函数式编程？(Part 5) (luoyaqifei 翻译)
+实">
+<meta property="og:updated_time" content="2016-11-19T17:59:17.479Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="掘金翻译文章--前端">
+<meta name="twitter:description" content="一个健壮且可扩展的 CSS 架构所需的 8 个简单规则 (llp0574 翻译)
+使用 React.js 的渐进式 Web 应用程序：第 1 部分 - 介绍 (markzhai 翻译)
+无障碍网站开发工具 (Romeo0906 翻译)
+全方位提升网站打开速度：前端、后端、新的技术) (luoyaqifei 翻译)
+准备充分了嘛就想学函数式编程？(Part 5) (luoyaqifei 翻译)
+实">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'zhaoy875',
+      author: '博主大人(╯‵□′)╯'
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://zhaoy875.github.io/2016/11/10/front-end/"/>
+
+
+
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <title> 掘金翻译文章--前端 | zhaoy </title>
+  
+  <meta name="baidu-site-verification" content="k0UgqisIfE" />
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+  <!--[if lte IE 9]>
+  <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://www.goody.com.cn/2014/updatebrowser/"><img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820" alt="
+ 您正在使用的ie浏览器版本过低，为了保障您的访问安全，以及更友好的浏览体验，强烈建议您升级最新的浏览器。" style='margin-left:auto;margin-right:auto;display: block;'/></a></div> 
+  <![endif]-->
+  
+  
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?672e23e6a7cfc50fb1a00e13b7789303";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+  
+  
+
+
+
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">zhaoy</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Your time is limited, so don't waste it living someone else's life</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            按分类找
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            我是谁？
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            按标签找
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-fe_demo">
+          <a href="/zhaoy" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            demo
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-fe_nav">
+          <a href="/fe_nav" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            前端资源导航
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜一下
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-other " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                掘金翻译文章--前端
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-10T16:39:43+08:00" content="2016-11-10">
+              2016-11-10
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/10/front-end/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/10/front-end/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ul>
+<li><a href="http://gold.xitu.io/post/582d137d128fe1006952b12c?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">一个健壮且可扩展的 CSS 架构所需的 8 个简单规则</a> (<a href="https://github.com/llp0574" target="_blank" rel="external">llp0574</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/post/582a64dd2e958a0069a507f8?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用 React.js 的渐进式 Web 应用程序：第 1 部分 - 介绍</a> (<a href="https://github.com/markzhai" target="_blank" rel="external">markzhai</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58294b222f301e00585ae000?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">无障碍网站开发工具</a> (<a href="https://github.com/Romeo0906" target="_blank" rel="external">Romeo0906</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/582492025bbb5000590ef04d?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">全方位提升网站打开速度：前端、后端、新的技术)</a> (<a href="https://github.com/luoyaqifei" target="_blank" rel="external">luoyaqifei</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/582490c3bf22ec0068f9935e?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">准备充分了嘛就想学函数式编程？(Part 5)</a> (<a href="https://github.com/luoyaqifei" target="_blank" rel="external">luoyaqifei</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58249792a0bb9f0058dd30ab?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">实践 Redux，第 1 部分： Redux-ORM 基础</a> (<a href="https://github.com/luoyaqifei" target="_blank" rel="external">luoyaqifei</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/582343555bbb500059056d4b?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">成为一个编译器之「使用 JavaScript 来制作编译器」</a> (<a href="https://github.com/luoyaqifei" target="_blank" rel="external">luoyaqifei</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/581fedca2f301e005c2260a0?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">准备充分了嘛就想学函数式编程？(Part 3)</a> (<a href="https://github.com/Airmacho" target="_blank" rel="external">Airmacho</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/581fed565bbb500059ec1184?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">准备充分了嘛就想学函数式编程？(Part 2)</a> (<a href="https://github.com/Airmacho" target="_blank" rel="external">Airmacho</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58217e288ac247004f1d1b02?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用多背景来提高感知性能</a> (<a href="https://github.com/cyseria" target="_blank" rel="external">cyseria</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/582019f5a0bb9f0058bb5f14?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">Yarn 更快更可靠的 CI 创建工具</a> (<a href="https://github.com/Romeo0906" target="_blank" rel="external">Romeo0906</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/582185608ac247004f1d63a3?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">用 Yarn 你还能做这 5 件事</a> (<a href="https://github.com/jiakeqi" target="_blank" rel="external">jiakeqi</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58209780570c350060b75a93?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">准备充分了嘛就想学函数式编程？(Part 6)</a> (<a href="https://github.com/DeadLion" target="_blank" rel="external">DeadLion</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/5820552eda2f60005d09c33c?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">实践 Redux，第 0 部分：简介</a> (<a href="https://github.com/luoyaqifei" target="_blank" rel="external">luoyaqifei</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58200ec367f3560058a6f8fc?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">写了六个相同功能的函数之后，我学到了什么</a> (<a href="https://github.com/Romeo0906" target="_blank" rel="external">Romeo0906</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/581fe399d20309005507371c?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">准备充分了嘛就想学函数式编程？（第一部分）</a> (<a href="https://github.com/cdpath" target="_blank" rel="external">cdpath</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/581f3bd9da2f60005d02f561?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">你怎么找到好工作，我在 Stack Overflow &amp; GitHub 学电脑</a> (<a href="https://github.com/jiaowoyongqi" target="_blank" rel="external">jiaowoyongqi</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/581bf0a62e958a0054d783e1?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">准备充分了嘛就想学函数式编程？(第四部分)</a> (<a href="https://github.com/llp0574" target="_blank" rel="external">llp0574</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/5819d6f4a22b9d0067a5b394?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">CSS 遮罩的过渡效果</a> (<a href="https://github.com/luoyaqifei" target="_blank" rel="external">luoyaqifei</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58189177128fe100559efd51?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">JavaScript ES6 核心功能一览</a> (<a href="https://github.com/L9m" target="_blank" rel="external">L9m</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58130dcbbf22ec0068824bd2?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">与时俱进的 Reactivity</a> (<a href="https://github.com/lizwangying" target="_blank" rel="external">Liz</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/581066dc8ac247005b6b3d4f?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">重构，不要积压！</a> (<a href="https://github.com/rottenpen" target="_blank" rel="external">rottenpen</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57fe2f2b128fe1005483131b?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">Facebook 发布了新的 Node 模块管理器 Yarn，或取代 npm 客户端</a> (<a href="https://github.com/Zhangjd" target="_blank" rel="external">Zhangjd</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58044c2a0e3dd900571475fa?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">构建应用状态时，你应该避免不必要的复杂性</a> (<a href="https://github.com/chemzqm" target="_blank" rel="external">chemzqm</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58025536bf22ec0064d5f3d9?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">开发 Electron app 必知的 4 个 tips</a> (<a href="https://github.com/huanglizhuo" target="_blank" rel="external">huanglizhuo</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58007bcf0bd1d00058eefe69?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">VUE 和 VUEX 中的数据流</a> (<a href="https://github.com/llp0574" target="_blank" rel="external">llp0574</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57ea26f5da2f600060e59c5e?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用 Cordova 和 Vue.js 创建移动应用</a> (<a href="https://github.com/circlelove" target="_blank" rel="external">circlelove</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57eb30bebf22ec0058898ee7?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用 currentColor 属性写出更好的 CSS 代码</a> (<a href="http://qcyoung.com" target="_blank" rel="external">yangzj1992</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57ea0bc2a3413100624e62ff?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">快速构建原型最好用的 10 个 ReactJS UI 框架</a> (<a href="https://github.com/cyseria" target="_blank" rel="external">cyseria</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57d909170e3dd900694dc072?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">响应式设计的真正挑战：RSS</a> (<a href="https://github.com/cdpath" target="_blank" rel="external">cdpath</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57ce68bf2e958a00543a7df9?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">3 分钟掌握 CSS Flexbox</a> (<a href="https://github.com/Graning" target="_blank" rel="external">Graning</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57cd7b9c8ac24700645b052b?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">基于浏览器的 MapReduce</a> (<a href="https://github.com/mypchas6fans" target="_blank" rel="external">mypchas6fans</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57c6adc7a633bd005d8f2584?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">如何编写更少的代码</a> (<a href="https://github.com/circlelove" target="_blank" rel="external">circlelove</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57b923225bbb50005b794943?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">如何用 React 完成图片上传功能？</a> (<a href="https://github.com/DeadLion" target="_blank" rel="external">DeadLion</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57b67315a34131005f82d244?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">你考虑清楚了吗就决定用 Bootstrap ？</a> (<a href="https://github.com/MAYDAY1993" target="_blank" rel="external">MAYDAY1993</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57b3f7928d2a3b0069605c2c?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">如何运用最新的技术提升网页速度和性能</a> (<a href="https://github.com/hpoenixf" target="_blank" rel="external">hpoenixf</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57b06a1b6be3ff006bab2030?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">Medium 内部使用 css/less 的代码风格指南</a> (<a href="https://github.com/Graning" target="_blank" rel="external">Gran</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57b08227165abd005426657b?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">CSS writing-mode 的特别技巧</a> (<a href="https://github.com/huanglizhuo" target="_blank" rel="external">huanglizhuo</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/579b2d6ea633bd0060eb965f?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">如何搭建自动化、跨浏览器的 JavaScript 单元测试</a> (<a href="https://github.com/owenlyn" target="_blank" rel="external">owenlyn</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57962ef22e958a00651f7387?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">ES6 中 的 var、let 和 const 应该如何选择？</a> (<a href="https://github.com/Graning" target="_blank" rel="external">Graning</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/578e3a34c4c971005e059ee9?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用 Zopfli 优化 PNG 图片</a> (<a href="https://github.com/cyseria" target="_blank" rel="external">cyseria</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/576917c0d342d30058097229?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">jQuery 终于发布了</a> (<a href="https://github.com/ldhlfzysys" target="_blank" rel="external">Dwight</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57890b881532bc0061d5ac52?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">如何理解 JavaScript 中的 Promise 机制</a> (<a href="https://github.com/huanglizhuo" target="_blank" rel="external">huanglizhuo</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5787048a165abd0067f7e476?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">懒加载图片？不要依赖 JavaScript ！</a> (<a href="https://github.com/jk77me" target="_blank" rel="external">jk77</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57834783d342d30057db3f93?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">用 Javascript 编写λ演算解释器</a> (<a href="https://github.com/joddiy" target="_blank" rel="external">zhangzhaoqi</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/577f402b79bc4400329db962?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">让你的网站更炫酷的一些小 tips</a> (<a href="https://github.com/zhangjd" target="_blank" rel="external">达仔</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/577bacc92e958a00549106dc?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">较为完整的 React.js / Vue.js 的性能比较 Part 1</a> (<a href="https://github.com/circlelove" target="_blank" rel="external">circlelove</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57691d5d6be3ff006a438e09?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">较为完整的 React.js / Vue.js 的性能比较 Part 2</a> (<a href="https://github.com/wild-flame" target="_blank" rel="external">wild-flame</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/5767a975df0eea0062ffe193?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">让 Webpack 来帮你打包吧</a> (<a href="https://github.com/Zhangjd" target="_blank" rel="external">达仔</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57635cdda341310064c5910a?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">关于 PostCSS 普及的一点微小的工作</a> (<a href="https://github.com/Zheaoli" target="_blank" rel="external">Zheaoli</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57621f7980dda4005f7332f3?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">React 应用的性能优化之路</a> (<a href="https://github.com/woota" target="_blank" rel="external">woota</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/575d14937db2a2005437df32?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">如何编写避免垃圾开销的实时 Javascript 代码</a> (<a href="http://www.qcyoung.com/" target="_blank" rel="external">yangzj1992</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57580e885bbb500053bc70c4?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">如何用 Flexbox 构建一个新闻网站布局</a> (<a href="https://github.com/joddiy" target="_blank" rel="external">zhangzhaoqi</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5757ce7b7db2a200540d51eb?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用 BEM 来模块化你的 CSS 代码</a> (<a href="https://github.com/yllziv" target="_blank" rel="external">杨龙龙</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/574fe1aa79bc440052f698de?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">减少 JPG 文件大小</a> (<a href="https://github.com/shenxn" target="_blank" rel="external">shenxn</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/574e49662e958a005e00f543?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用重构件（Codemod）加速 JavaScript 开发和重构</a> (<a href="https://github.com/hikerpig" target="_blank" rel="external">Hikerpig</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/574445d579bc44005c63265b?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">如何用 Babel 和 Rollup 来构建和发布 ES6 模块</a> (<a href="https://github.com/L9m" target="_blank" rel="external">L9m</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5739f5dc71cfe400570ea59f?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">10 个你可能不知道的事，关于 Facebook 内部开发环境是如何使用 JavaScript 和 GraphQL 的</a> (<a href="https://github.com/Jack-Kingdom" target="_blank" rel="external">Jack</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/573e7ef91ea49300601c7332?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用 ES6 写更好的 JavaScript part III：好用的集合和反引号</a> (<a href="https://github.com/godofchina" target="_blank" rel="external">godofchina</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/573969b91ea4930060f3e31a?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用 ES6 编写更好的 JavaScript Part II：深入探究 [类]</a> (<a href="https://github.com/malcolmyu" target="_blank" rel="external">Malcolm</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5736e4f41532bc006545106e?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用 ES6 写更好的 JavaScript part I：广受欢迎的新特性</a> (<a href="https://github.com/huanglizhuo" target="_blank" rel="external">huanglizhuo</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5732936d49830c0061c7ec72?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">网页端字体加载优化</a> (<a href="https://github.com/shenxn" target="_blank" rel="external">shenxn</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/572d5f132e958a0066873e2c?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">怎样在不使用框架的基础上开发一个 Javascript 组件</a> (<a href="https://github.com/L9m" target="_blank" rel="external">L9m</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/572c0b2d2e958a00667a081d?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">ECMAScript 6 里面的私有变量</a> (<a href="https://github.com/CommanderXL" target="_blank" rel="external">XRene</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5729a76479df5400608d1f9f?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">10 步带你做一个棒棒的 Hybrid 应用</a> (<a href="https://github.com/Yves-X" target="_blank" rel="external">Yves-X</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5722c838128fe100601dc3a8?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">JavaScript 姿势提升简略</a> (<a href="https://github.com/hikerpig" target="_blank" rel="external">Hikerpig</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5719907eebcb7d005cc6acca?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">Starlight - 在网页中运行 Lua</a> (<a href="https://github.com/narcotics726" target="_blank" rel="external">narcotics726</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5719b6acebcb7d006a007d9b?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">React.js 新手村教程</a> (<a href="https://github.com/markzhai" target="_blank" rel="external">markzhai</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57160c4b8ac2470062601b1f?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用 CSS 和 jQuery 来做一个墨水晕开的效果</a> (<a href="https://github.com/L9m" target="_blank" rel="external">L9m</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5705e71ed342d3005418ea66?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">JavaScript 生态之乱象</a> (<a href="https://github.com/woota" target="_blank" rel="external">woota</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/570b2b671ea493005c024ee3?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">在网站 Logo 上右击时提示下载网站的 Logo 素材下载</a> (<a href="https://github.com/rainyear" target="_blank" rel="external">Yushneng</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5704e12771cfe4005dc85868?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">揭秘 IIFE 语法</a> (<a href="https://github.com/Huxpro" target="_blank" rel="external">huxpro</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56de3c291532bc005620b320?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">利用 :placeholder-shown 选择器实现 label 浮动效果</a> (<a href="https://github.com/zhangjd" target="_blank" rel="external">Zhangjd</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56de66fe731956005c46782a?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">响应式 GraphQL 结构</a> (<a href="https://github.com/shenxn" target="_blank" rel="external">shenxn</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56ce82cbc24aa800520f4215?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">[译] 在 BigCommerce 我们如何编写 CSS</a> (<a href="https://github.com/shenxn" target="_blank" rel="external">shenxn</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56d3bd6a1ea493005c1eddfa?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">无缝迁移 Angular 1 项目到 Angular 2</a> (<a href="https://github.com/CoderBOBO" target="_blank" rel="external">BOBO</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56d3cfea6be3ff005c5f9b89?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">在 chrome 的开发者工具里 debug node.js 代码</a> (<a href="https://github.com/sqrthree" target="_blank" rel="external">sqrthree</a> 翻译)</li>
+<li><a href="https://github.com/xitu/gold-miner/blob/master/TODO/es6.md" target="_blank" rel="external">350 个特性看透 ES6</a> (<a href="https://github.com/dyygtfx" target="_blank" rel="external">Go7hic</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56cee8afc24aa800545f73bb?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">2015 年底 JS 必备工具集</a> (<a href="https://github.com/zxc0328" target="_blank" rel="external">赵鑫晖</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56cc0bcf8ac2470053b7c5ab?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">[译] Promise 是如何工作的?</a> (<a href="https://github.com/Zhangjd" target="_blank" rel="external">Zhangjd</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56ca985071cfe40054d98994?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">JavaScript 开发者年度调查报告</a> (<a href="https://github.com/sqrthree" target="_blank" rel="external">sqrthree</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56d4e8b57db2a200556c64cb?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">Functional JavaScript 教程（一）</a>  (<a href="https://github.com/zhangjd" target="_blank" rel="external">Zhangjd</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56e1a95b731956005da35c24?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">人人须知的 jQuery 技巧</a>  (<a href="https://github.com/Yves-X" target="_blank" rel="external">Yves-X</a> 翻译)</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixinicon.png" alt="zhaoy875 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/weixinicon.png" alt="zhaoy875 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          Tag标签:
+          
+            <a href="/tags/前端开发/" rel="tag">#前端开发</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/29/为什么要避免使用document-write-尤其是脚本注入/" rel="next" title="避免使用 document.write，尤其是脚本注入">
+                <i class="fa fa-chevron-left"></i> 避免使用 document.write，尤其是脚本注入
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+
+
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/11/10/front-end/"
+     data-title="掘金翻译文章--前端"
+     data-content=""
+     data-url="https://zhaoy875.github.io/2016/11/10/front-end/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/10/front-end/"
+           data-title="掘金翻译文章--前端" data-url="https://zhaoy875.github.io/2016/11/10/front-end/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/zhaoy875_icon.jpg"
+               alt="zhaoy875" />
+          <p class="site-author-name" itemprop="name">zhaoy875</p>
+          <p class="site-description motion-element" itemprop="description">个人前端开发学习站点，记录生活学习，关于前端开发，前端框架,bootstrap,前端自动化，前端 frontend，Javascript,css3,js,node.js,canvas, gulp,webpack,amd ,cmd,react, react native,angular,vue,vue.js</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">32</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/zhaoy875" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/users/08dc89984d49" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://gold.xitu.io/user/5795c11c8ac247005f2fb90b" target="_blank" title="掘金">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  掘金
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/123zhaoy" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/zhaoy875" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://segmentfault.com/u/zhaoy875" target="_blank" title="segmentfault">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  segmentfault
+                </a>
+              </span>
+            
+          
+        </div>
+
+
+
+        
+        
+        
+        
+        <div class="netease_music">
+          <h3 class="netease_h3">耳膜地震</h3>
+          <p>Eardrum earthquake</p>
+          <iframe style="width:100%;min-height:260px;max-height:400px" id="musiciframe" src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=0&narrow=0"  frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友链
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://alan725.com/" title="alan725" target="_blank">alan725</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhaoy.site" title="zhaoy" target="_blank">zhaoy</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.baidu.com" title="百度" target="_blank">百度</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+
+        
+         
+        
+        <h3 class="duoshuoview_btn">访客</h3>
+        <div class="duoshuoviews" style="display:none">
+           <div class="ds-recent-visitors" data-num-items="16" data-avatar-size="42" id="ds-recent-visitors">
+           </div>  
+        </div>
+        <script type="text/javascript">
+        $(function() {
+          $('.duoshuoview_btn').click(function() {
+            $('.duoshuoviews').slideToggle();
+          });
+        });
+        </script>
+        
+
+        
+        
+
+        
+        <script type="text/javascript" src="//rc.revolvermaps.com/0/0/6.js?i=2hyeddq8q9w&amp;m=1&amp;s=230&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    
+    <i class="menu-item-icon fa fa-fw fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhaoy875</span>
+</div>
+
+<div class="powered-by">
+   <a class="theme-link" href="https://hexo.io">Hexo</a> 驱动
+</div>
+
+<div class="theme-info">
+ 
+  Theme by <a class="theme-link" href="https://github.com/zhaoy875/hexo-theme-zhaoy">zhaoy</a> based on
+  
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">Next</a>
+</div>
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">访客数：<i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv">访问量：<i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+
+<div class="includejs">
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+  
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"zhaoy875"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+
+
+
+<div class="popoverlay" style="display:none"></div>
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+// 修改 弹窗时造成网站右边侧栏消失和出现时的背景页面布局重绘的抖动 
+    function proceedsearch() {
+        // 作者这里标签忘记闭合了？
+      // $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+
+      // 将上一行dom操作改为css操作 .popoverlay遮罩层样式在localsearch.styl中
+      $(".popoverlay").fadeIn('fast');
+      $('.popup').toggle();
+      //toggle方法jq从1.9版本删除了?
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;搜一下按钮点击弹窗
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    // 关闭搜索
+    $('.popup-btn-close').click(function(e){
+        // 此处修改为fade渐隐而不是show hide
+      $('.popup').fadeOut('fast');
+      // 将此处的dom操作改为样式操作
+      // $(".popoverlay").remove();
+      $(".popoverlay").fadeOut();
+
+      // 修改 弹窗时造成网站右边侧栏消失和出现时的背景页面布局重绘的抖动 
+      // $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+
+  
+  
+  
+    <script type="text/javascript" src="/js/zhaoy.js"></script> 
+  
+  
+</div>
+</body>
+</html>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhaoy875.github.io/"/>
-  <updated>2016-10-30T08:22:41.360Z</updated>
+  <updated>2016-11-19T17:59:17.479Z</updated>
   <id>https://zhaoy875.github.io/</id>
   
   <author>
@@ -14,6 +14,112 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>掘金翻译文章--前端</title>
+    <link href="https://zhaoy875.github.io/2016/11/10/front-end/"/>
+    <id>https://zhaoy875.github.io/2016/11/10/front-end/</id>
+    <published>2016-11-10T08:39:43.000Z</published>
+    <updated>2016-11-19T17:59:17.479Z</updated>
+    
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://gold.xitu.io/post/582d137d128fe1006952b12c?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">一个健壮且可扩展的 CSS 架构所需的 8 个简单规则</a> (<a href="https://github.com/llp0574" target="_blank" rel="external">llp0574</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/post/582a64dd2e958a0069a507f8?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用 React.js 的渐进式 Web 应用程序：第 1 部分 - 介绍</a> (<a href="https://github.com/markzhai" target="_blank" rel="external">markzhai</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58294b222f301e00585ae000?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">无障碍网站开发工具</a> (<a href="https://github.com/Romeo0906" target="_blank" rel="external">Romeo0906</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/582492025bbb5000590ef04d?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">全方位提升网站打开速度：前端、后端、新的技术)</a> (<a href="https://github.com/luoyaqifei" target="_blank" rel="external">luoyaqifei</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/582490c3bf22ec0068f9935e?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">准备充分了嘛就想学函数式编程？(Part 5)</a> (<a href="https://github.com/luoyaqifei" target="_blank" rel="external">luoyaqifei</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58249792a0bb9f0058dd30ab?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">实践 Redux，第 1 部分： Redux-ORM 基础</a> (<a href="https://github.com/luoyaqifei" target="_blank" rel="external">luoyaqifei</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/582343555bbb500059056d4b?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">成为一个编译器之「使用 JavaScript 来制作编译器」</a> (<a href="https://github.com/luoyaqifei" target="_blank" rel="external">luoyaqifei</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/581fedca2f301e005c2260a0?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">准备充分了嘛就想学函数式编程？(Part 3)</a> (<a href="https://github.com/Airmacho" target="_blank" rel="external">Airmacho</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/581fed565bbb500059ec1184?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">准备充分了嘛就想学函数式编程？(Part 2)</a> (<a href="https://github.com/Airmacho" target="_blank" rel="external">Airmacho</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58217e288ac247004f1d1b02?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用多背景来提高感知性能</a> (<a href="https://github.com/cyseria" target="_blank" rel="external">cyseria</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/582019f5a0bb9f0058bb5f14?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">Yarn 更快更可靠的 CI 创建工具</a> (<a href="https://github.com/Romeo0906" target="_blank" rel="external">Romeo0906</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/582185608ac247004f1d63a3?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">用 Yarn 你还能做这 5 件事</a> (<a href="https://github.com/jiakeqi" target="_blank" rel="external">jiakeqi</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58209780570c350060b75a93?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">准备充分了嘛就想学函数式编程？(Part 6)</a> (<a href="https://github.com/DeadLion" target="_blank" rel="external">DeadLion</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/5820552eda2f60005d09c33c?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">实践 Redux，第 0 部分：简介</a> (<a href="https://github.com/luoyaqifei" target="_blank" rel="external">luoyaqifei</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58200ec367f3560058a6f8fc?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">写了六个相同功能的函数之后，我学到了什么</a> (<a href="https://github.com/Romeo0906" target="_blank" rel="external">Romeo0906</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/581fe399d20309005507371c?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">准备充分了嘛就想学函数式编程？（第一部分）</a> (<a href="https://github.com/cdpath" target="_blank" rel="external">cdpath</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/581f3bd9da2f60005d02f561?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">你怎么找到好工作，我在 Stack Overflow &amp; GitHub 学电脑</a> (<a href="https://github.com/jiaowoyongqi" target="_blank" rel="external">jiaowoyongqi</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/581bf0a62e958a0054d783e1?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">准备充分了嘛就想学函数式编程？(第四部分)</a> (<a href="https://github.com/llp0574" target="_blank" rel="external">llp0574</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/5819d6f4a22b9d0067a5b394?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">CSS 遮罩的过渡效果</a> (<a href="https://github.com/luoyaqifei" target="_blank" rel="external">luoyaqifei</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58189177128fe100559efd51?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">JavaScript ES6 核心功能一览</a> (<a href="https://github.com/L9m" target="_blank" rel="external">L9m</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58130dcbbf22ec0068824bd2?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">与时俱进的 Reactivity</a> (<a href="https://github.com/lizwangying" target="_blank" rel="external">Liz</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/581066dc8ac247005b6b3d4f?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">重构，不要积压！</a> (<a href="https://github.com/rottenpen" target="_blank" rel="external">rottenpen</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57fe2f2b128fe1005483131b?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">Facebook 发布了新的 Node 模块管理器 Yarn，或取代 npm 客户端</a> (<a href="https://github.com/Zhangjd" target="_blank" rel="external">Zhangjd</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58044c2a0e3dd900571475fa?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">构建应用状态时，你应该避免不必要的复杂性</a> (<a href="https://github.com/chemzqm" target="_blank" rel="external">chemzqm</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58025536bf22ec0064d5f3d9?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">开发 Electron app 必知的 4 个 tips</a> (<a href="https://github.com/huanglizhuo" target="_blank" rel="external">huanglizhuo</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/58007bcf0bd1d00058eefe69?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">VUE 和 VUEX 中的数据流</a> (<a href="https://github.com/llp0574" target="_blank" rel="external">llp0574</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57ea26f5da2f600060e59c5e?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用 Cordova 和 Vue.js 创建移动应用</a> (<a href="https://github.com/circlelove" target="_blank" rel="external">circlelove</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57eb30bebf22ec0058898ee7?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用 currentColor 属性写出更好的 CSS 代码</a> (<a href="http://qcyoung.com" target="_blank" rel="external">yangzj1992</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57ea0bc2a3413100624e62ff?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">快速构建原型最好用的 10 个 ReactJS UI 框架</a> (<a href="https://github.com/cyseria" target="_blank" rel="external">cyseria</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57d909170e3dd900694dc072?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">响应式设计的真正挑战：RSS</a> (<a href="https://github.com/cdpath" target="_blank" rel="external">cdpath</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57ce68bf2e958a00543a7df9?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">3 分钟掌握 CSS Flexbox</a> (<a href="https://github.com/Graning" target="_blank" rel="external">Graning</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57cd7b9c8ac24700645b052b?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">基于浏览器的 MapReduce</a> (<a href="https://github.com/mypchas6fans" target="_blank" rel="external">mypchas6fans</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57c6adc7a633bd005d8f2584?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">如何编写更少的代码</a> (<a href="https://github.com/circlelove" target="_blank" rel="external">circlelove</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57b923225bbb50005b794943?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">如何用 React 完成图片上传功能？</a> (<a href="https://github.com/DeadLion" target="_blank" rel="external">DeadLion</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57b67315a34131005f82d244?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">你考虑清楚了吗就决定用 Bootstrap ？</a> (<a href="https://github.com/MAYDAY1993" target="_blank" rel="external">MAYDAY1993</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57b3f7928d2a3b0069605c2c?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">如何运用最新的技术提升网页速度和性能</a> (<a href="https://github.com/hpoenixf" target="_blank" rel="external">hpoenixf</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57b06a1b6be3ff006bab2030?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">Medium 内部使用 css/less 的代码风格指南</a> (<a href="https://github.com/Graning" target="_blank" rel="external">Gran</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57b08227165abd005426657b?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">CSS writing-mode 的特别技巧</a> (<a href="https://github.com/huanglizhuo" target="_blank" rel="external">huanglizhuo</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/579b2d6ea633bd0060eb965f?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">如何搭建自动化、跨浏览器的 JavaScript 单元测试</a> (<a href="https://github.com/owenlyn" target="_blank" rel="external">owenlyn</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57962ef22e958a00651f7387?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">ES6 中 的 var、let 和 const 应该如何选择？</a> (<a href="https://github.com/Graning" target="_blank" rel="external">Graning</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/578e3a34c4c971005e059ee9?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用 Zopfli 优化 PNG 图片</a> (<a href="https://github.com/cyseria" target="_blank" rel="external">cyseria</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/576917c0d342d30058097229?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">jQuery 终于发布了</a> (<a href="https://github.com/ldhlfzysys" target="_blank" rel="external">Dwight</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57890b881532bc0061d5ac52?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">如何理解 JavaScript 中的 Promise 机制</a> (<a href="https://github.com/huanglizhuo" target="_blank" rel="external">huanglizhuo</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5787048a165abd0067f7e476?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">懒加载图片？不要依赖 JavaScript ！</a> (<a href="https://github.com/jk77me" target="_blank" rel="external">jk77</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57834783d342d30057db3f93?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">用 Javascript 编写λ演算解释器</a> (<a href="https://github.com/joddiy" target="_blank" rel="external">zhangzhaoqi</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/577f402b79bc4400329db962?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">让你的网站更炫酷的一些小 tips</a> (<a href="https://github.com/zhangjd" target="_blank" rel="external">达仔</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/577bacc92e958a00549106dc?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">较为完整的 React.js / Vue.js 的性能比较 Part 1</a> (<a href="https://github.com/circlelove" target="_blank" rel="external">circlelove</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57691d5d6be3ff006a438e09?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">较为完整的 React.js / Vue.js 的性能比较 Part 2</a> (<a href="https://github.com/wild-flame" target="_blank" rel="external">wild-flame</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/5767a975df0eea0062ffe193?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">让 Webpack 来帮你打包吧</a> (<a href="https://github.com/Zhangjd" target="_blank" rel="external">达仔</a> 翻译)</li>
+<li><a href="https://gold.xitu.io/entry/57635cdda341310064c5910a?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">关于 PostCSS 普及的一点微小的工作</a> (<a href="https://github.com/Zheaoli" target="_blank" rel="external">Zheaoli</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57621f7980dda4005f7332f3?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">React 应用的性能优化之路</a> (<a href="https://github.com/woota" target="_blank" rel="external">woota</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/575d14937db2a2005437df32?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">如何编写避免垃圾开销的实时 Javascript 代码</a> (<a href="http://www.qcyoung.com/" target="_blank" rel="external">yangzj1992</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57580e885bbb500053bc70c4?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">如何用 Flexbox 构建一个新闻网站布局</a> (<a href="https://github.com/joddiy" target="_blank" rel="external">zhangzhaoqi</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5757ce7b7db2a200540d51eb?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用 BEM 来模块化你的 CSS 代码</a> (<a href="https://github.com/yllziv" target="_blank" rel="external">杨龙龙</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/574fe1aa79bc440052f698de?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">减少 JPG 文件大小</a> (<a href="https://github.com/shenxn" target="_blank" rel="external">shenxn</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/574e49662e958a005e00f543?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用重构件（Codemod）加速 JavaScript 开发和重构</a> (<a href="https://github.com/hikerpig" target="_blank" rel="external">Hikerpig</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/574445d579bc44005c63265b?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">如何用 Babel 和 Rollup 来构建和发布 ES6 模块</a> (<a href="https://github.com/L9m" target="_blank" rel="external">L9m</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5739f5dc71cfe400570ea59f?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">10 个你可能不知道的事，关于 Facebook 内部开发环境是如何使用 JavaScript 和 GraphQL 的</a> (<a href="https://github.com/Jack-Kingdom" target="_blank" rel="external">Jack</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/573e7ef91ea49300601c7332?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用 ES6 写更好的 JavaScript part III：好用的集合和反引号</a> (<a href="https://github.com/godofchina" target="_blank" rel="external">godofchina</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/573969b91ea4930060f3e31a?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用 ES6 编写更好的 JavaScript Part II：深入探究 [类]</a> (<a href="https://github.com/malcolmyu" target="_blank" rel="external">Malcolm</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5736e4f41532bc006545106e?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用 ES6 写更好的 JavaScript part I：广受欢迎的新特性</a> (<a href="https://github.com/huanglizhuo" target="_blank" rel="external">huanglizhuo</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5732936d49830c0061c7ec72?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">网页端字体加载优化</a> (<a href="https://github.com/shenxn" target="_blank" rel="external">shenxn</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/572d5f132e958a0066873e2c?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">怎样在不使用框架的基础上开发一个 Javascript 组件</a> (<a href="https://github.com/L9m" target="_blank" rel="external">L9m</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/572c0b2d2e958a00667a081d?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">ECMAScript 6 里面的私有变量</a> (<a href="https://github.com/CommanderXL" target="_blank" rel="external">XRene</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5729a76479df5400608d1f9f?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">10 步带你做一个棒棒的 Hybrid 应用</a> (<a href="https://github.com/Yves-X" target="_blank" rel="external">Yves-X</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5722c838128fe100601dc3a8?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">JavaScript 姿势提升简略</a> (<a href="https://github.com/hikerpig" target="_blank" rel="external">Hikerpig</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5719907eebcb7d005cc6acca?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">Starlight - 在网页中运行 Lua</a> (<a href="https://github.com/narcotics726" target="_blank" rel="external">narcotics726</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5719b6acebcb7d006a007d9b?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">React.js 新手村教程</a> (<a href="https://github.com/markzhai" target="_blank" rel="external">markzhai</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/57160c4b8ac2470062601b1f?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">使用 CSS 和 jQuery 来做一个墨水晕开的效果</a> (<a href="https://github.com/L9m" target="_blank" rel="external">L9m</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5705e71ed342d3005418ea66?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">JavaScript 生态之乱象</a> (<a href="https://github.com/woota" target="_blank" rel="external">woota</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/570b2b671ea493005c024ee3?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">在网站 Logo 上右击时提示下载网站的 Logo 素材下载</a> (<a href="https://github.com/rainyear" target="_blank" rel="external">Yushneng</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/5704e12771cfe4005dc85868?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">揭秘 IIFE 语法</a> (<a href="https://github.com/Huxpro" target="_blank" rel="external">huxpro</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56de3c291532bc005620b320?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">利用 :placeholder-shown 选择器实现 label 浮动效果</a> (<a href="https://github.com/zhangjd" target="_blank" rel="external">Zhangjd</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56de66fe731956005c46782a?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">响应式 GraphQL 结构</a> (<a href="https://github.com/shenxn" target="_blank" rel="external">shenxn</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56ce82cbc24aa800520f4215?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">[译] 在 BigCommerce 我们如何编写 CSS</a> (<a href="https://github.com/shenxn" target="_blank" rel="external">shenxn</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56d3bd6a1ea493005c1eddfa?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">无缝迁移 Angular 1 项目到 Angular 2</a> (<a href="https://github.com/CoderBOBO" target="_blank" rel="external">BOBO</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56d3cfea6be3ff005c5f9b89?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">在 chrome 的开发者工具里 debug node.js 代码</a> (<a href="https://github.com/sqrthree" target="_blank" rel="external">sqrthree</a> 翻译)</li>
+<li><a href="https://github.com/xitu/gold-miner/blob/master/TODO/es6.md" target="_blank" rel="external">350 个特性看透 ES6</a> (<a href="https://github.com/dyygtfx" target="_blank" rel="external">Go7hic</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56cee8afc24aa800545f73bb?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">2015 年底 JS 必备工具集</a> (<a href="https://github.com/zxc0328" target="_blank" rel="external">赵鑫晖</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56cc0bcf8ac2470053b7c5ab?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">[译] Promise 是如何工作的?</a> (<a href="https://github.com/Zhangjd" target="_blank" rel="external">Zhangjd</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56ca985071cfe40054d98994?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">JavaScript 开发者年度调查报告</a> (<a href="https://github.com/sqrthree" target="_blank" rel="external">sqrthree</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56d4e8b57db2a200556c64cb?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">Functional JavaScript 教程（一）</a>  (<a href="https://github.com/zhangjd" target="_blank" rel="external">Zhangjd</a> 翻译)</li>
+<li><a href="http://gold.xitu.io/entry/56e1a95b731956005da35c24?utm_source=gold-miner&amp;utm_medium=readme&amp;utm_campaign=github" target="_blank" rel="external">人人须知的 jQuery 技巧</a>  (<a href="https://github.com/Yves-X" target="_blank" rel="external">Yves-X</a> 翻译)</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://gold.xitu.io/post/582d137d128fe1006952b12c?utm_source=gold-miner&amp;amp;utm_medium=readme&amp;amp;utm_campaign=github&quot; tar
+    
+    </summary>
+    
+    
+      <category term="前端开发" scheme="https://zhaoy875.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title>避免使用 document.write，尤其是脚本注入</title>
@@ -174,7 +280,7 @@
   </entry>
   
   <entry>
-    <title> Gulp入门系列7--构建一个项目</title>
+    <title> gulp入门系列7--构建一个项目</title>
     <link href="https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%977-%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE/"/>
     <id>https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/</id>
     <published>2016-10-20T09:42:20.000Z</published>
@@ -321,7 +427,7 @@
   </entry>
   
   <entry>
-    <title> Gulp入门系列6--编译 Sass</title>
+    <title> gulp入门系列6--编译 Sass</title>
     <link href="https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%976-%E7%BC%96%E8%AF%91-Sass/"/>
     <id>https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列6-编译-Sass/</id>
     <published>2016-10-20T09:40:23.000Z</published>
@@ -371,7 +477,7 @@
   </entry>
   
   <entry>
-    <title> Gulp入门系列5--编译 LESS</title>
+    <title> gulp入门系列5--编译 LESS</title>
     <link href="https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%975-%E7%BC%96%E8%AF%91-LESS/"/>
     <id>https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列5-编译-LESS/</id>
     <published>2016-10-20T09:37:00.000Z</published>
@@ -417,7 +523,7 @@
   </entry>
   
   <entry>
-    <title> Gulp入门系列4--压缩图片</title>
+    <title> gulp入门系列4--压缩图片</title>
     <link href="https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%974-%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87/"/>
     <id>https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列4-压缩图片/</id>
     <published>2016-10-20T09:36:23.000Z</published>
@@ -470,7 +576,7 @@
   </entry>
   
   <entry>
-    <title> Gulp入门系列3--压缩 CSS</title>
+    <title> gulp入门系列3--压缩 CSS</title>
     <link href="https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%973-%E5%8E%8B%E7%BC%A9-CSS/"/>
     <id>https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列3-压缩-CSS/</id>
     <published>2016-10-20T09:34:20.000Z</published>
@@ -527,7 +633,7 @@
   </entry>
   
   <entry>
-    <title> Gulp入门系列2--压缩 JS</title>
+    <title> gulp入门系列2--压缩 JS</title>
     <link href="https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%972-%E5%8E%8B%E7%BC%A9-JS/"/>
     <id>https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列2-压缩-JS/</id>
     <published>2016-10-20T09:33:20.000Z</published>
@@ -641,7 +747,7 @@
   </entry>
   
   <entry>
-    <title> Gulp入门系列1--安装 Node 和 Gulp</title>
+    <title> gulp入门系列1--安装 Node 和 gulp</title>
     <link href="https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%971-%E5%AE%89%E8%A3%85-Node-%E5%92%8C-gulp/"/>
     <id>https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/</id>
     <published>2016-10-20T09:33:20.000Z</published>
@@ -694,7 +800,7 @@
   </entry>
   
   <entry>
-    <title> Gulp 入门指南</title>
+    <title> gulp 入门指南</title>
     <link href="https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97/"/>
     <id>https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列/</id>
     <published>2016-10-20T08:53:20.000Z</published>
@@ -770,7 +876,7 @@
   </entry>
   
   <entry>
-    <title>增强版Npm包管理工具--Yarn</title>
+    <title>增强版npm包管理工具--yarn</title>
     <link href="https://zhaoy875.github.io/2016/10/13/npm%E5%A2%9E%E5%BC%BA%E7%89%88-yarn/"/>
     <id>https://zhaoy875.github.io/2016/10/13/npm增强版-yarn/</id>
     <published>2016-10-13T14:16:12.000Z</published>
@@ -833,7 +939,36 @@
   </entry>
   
   <entry>
-    <title>Npm</title>
+    <title>ubuntu 安装hexo博客</title>
+    <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
+    <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
+    <published>2016-10-11T05:50:43.000Z</published>
+    <updated>2016-10-26T10:25:41.895Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ubuntu-安装hexo博客"><a href="/2016/10/11/ubuntu安装hexo教程/#ubuntu-安装hexo博客" class="headerlink" title="ubuntu 安装hexo博客"></a>ubuntu 安装hexo博客</h1><h2 id="搭建nodejs-环境"><a href="/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt <span class="keyword">install</span> nodejs</div><div class="line">sudo apt <span class="keyword">install</span> npm</div></pre></td></tr></table></figure>
+<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
+<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
+<h3 id="安装hexo"><a href="/2016/10/11/ubuntu安装hexo教程/#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
+<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
+<p>hexo s 本地预览–over</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;ubuntu-安装hexo博客&quot;&gt;&lt;a href=&quot;/2016/10/11/ubuntu安装hexo教程/#ubuntu-安装hexo博客&quot; class=&quot;headerlink&quot; title=&quot;ubuntu 安装hexo博客&quot;&gt;&lt;/a&gt;ubuntu 安装hexo博
+    
+    </summary>
+    
+    
+      <category term="ubuntu" scheme="https://zhaoy875.github.io/tags/ubuntu/"/>
+    
+      <category term="hexo" scheme="https://zhaoy875.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>npm</title>
     <link href="https://zhaoy875.github.io/2016/10/11/npm/"/>
     <id>https://zhaoy875.github.io/2016/10/11/npm/</id>
     <published>2016-10-11T05:50:43.000Z</published>
@@ -874,63 +1009,7 @@ npm uninstall express  #删除指定的模块
   </entry>
   
   <entry>
-    <title>Ubuntu 安装Hexo博客</title>
-    <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
-    <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
-    <published>2016-10-11T05:50:43.000Z</published>
-    <updated>2016-10-26T10:25:41.895Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="ubuntu-安装hexo博客"><a href="/2016/10/11/ubuntu安装hexo教程/#ubuntu-安装hexo博客" class="headerlink" title="ubuntu 安装hexo博客"></a>ubuntu 安装hexo博客</h1><h2 id="搭建nodejs-环境"><a href="/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt <span class="keyword">install</span> nodejs</div><div class="line">sudo apt <span class="keyword">install</span> npm</div></pre></td></tr></table></figure>
-<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
-<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
-<h3 id="安装hexo"><a href="/2016/10/11/ubuntu安装hexo教程/#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
-<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
-<p>hexo s 本地预览–over</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;ubuntu-安装hexo博客&quot;&gt;&lt;a href=&quot;/2016/10/11/ubuntu安装hexo教程/#ubuntu-安装hexo博客&quot; class=&quot;headerlink&quot; title=&quot;ubuntu 安装hexo博客&quot;&gt;&lt;/a&gt;ubuntu 安装hexo博
-    
-    </summary>
-    
-    
-      <category term="ubuntu" scheme="https://zhaoy875.github.io/tags/ubuntu/"/>
-    
-      <category term="hexo" scheme="https://zhaoy875.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Music Time歌单分享</title>
-    <link href="https://zhaoy875.github.io/2016/09/20/music%E6%AD%8C%E5%8D%95/"/>
-    <id>https://zhaoy875.github.io/2016/09/20/music歌单/</id>
-    <published>2016-09-20T14:39:43.000Z</published>
-    <updated>2016-10-26T10:25:29.246Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="/2016/09/20/music歌单/#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe style="width:100%;min-height:260px;max-height:400px" id="musiciframe" src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=0&narrow=0" frameborder="0" scrolling="no"></iframe>
-
-<a id="more"></a>
-<h2 id="Interface-usage"><a href="/2016/09/20/music歌单/#Interface-usage" class="headerlink" title="Interface usage"></a>Interface usage</h2><p>歌单：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=1&amp;narrow=0"</span>  <span class="attribute">width</span>=<span class="string">"100%"</span>  frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
-<p>单首：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?song=408332757&amp;qssl=1&amp;qlrc=1&amp;autoplay=0"</span> <span class="attribute">width</span>=<span class="string">"100%"</span> frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
-<h2 id="API"><a href="/2016/09/20/music歌单/#API" class="headerlink" title="API"></a>API</h2><p>使用iframe内嵌页面<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Demos:</span></div><div class="line"><span class="symbol"></span></div><div class="line">https:<span class="comment">//music.daoapp.io/iframe?song=287749&amp;qssl=1&amp;qlrc=1&amp;qnarrow=0&amp;max_width=50%&amp;autoplay=1</span></div><div class="line"><span class="symbol">https:</span><span class="comment">//music.daoapp.io/iframe?song=287749&amp;qnarrow=1&amp;qssl=1</span></div><div class="line"><span class="symbol">URL:</span> http(s):<span class="comment">//music.daoapp.io/ Donot use HTTPS if it's not necessary. But if you do, don't forget set qssl to 1. Method: GET The arguments are:</span></div><div class="line"></div><div class="line">album=album_id  		<span class="comment">//专辑id</span></div><div class="line">playlist=playlist_id    <span class="comment">//歌单id</span></div><div class="line">song=song_id            <span class="comment">//单首id</span></div><div class="line">program=program_id</div><div class="line">radio=radio_id</div><div class="line">mv=mv_id 				</div><div class="line">qssl=[<span class="number">0</span>|<span class="number">1</span>]            </div><div class="line">qlrc=[<span class="number">0</span>|<span class="number">1</span>]             <span class="comment">//歌词</span></div><div class="line">qnarrow=[<span class="number">0</span>|<span class="number">1</span>]</div><div class="line">max_width=[<span class="number">100</span>%|<span class="number">32</span>rem|<span class="number">400</span>px|something else]</div><div class="line">autoplay=[<span class="number">0</span>|<span class="number">1</span>]         <span class="comment">//自动播放</span></div></pre></td></tr></table></figure></p>
-<p>You must choose ONE of those six ids. And it means nothing if you choose more than one of them. You may use <a href="https://music.daoapp.io/" target="_blank" rel="external">The web interface</a> to find the id or use 163Music.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;网易云-基于163APlayer&quot;&gt;&lt;a href=&quot;#网易云-基于163APlayer&quot; class=&quot;headerlink&quot; title=&quot;网易云 基于163APlayer&quot;&gt;&lt;/a&gt;网易云 基于&lt;a href=&quot;https://github.com/YUX-IO/163music-APlayer-you-get-docker&quot;&gt;163APlayer&lt;/a&gt;&lt;/h2&gt;&lt;iframe style=&quot;width:100%;min-height:260px;max-height:400px&quot; id=&quot;musiciframe&quot; src=&quot;https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=0&amp;narrow=0&quot;  frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
-    
-    </summary>
-    
-    
-      <category term="音乐" scheme="https://zhaoy875.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Json</title>
+    <title>json</title>
     <link href="https://zhaoy875.github.io/2016/09/20/json/"/>
     <id>https://zhaoy875.github.io/2016/09/20/json/</id>
     <published>2016-09-20T14:39:43.000Z</published>
@@ -968,7 +1047,34 @@ var o = { name:&apos;赵&apos;, age:12,}; // 报错
   </entry>
   
   <entry>
-    <title>Awesome Browser Extensions for GitHub</title>
+    <title>Music Time歌单分享</title>
+    <link href="https://zhaoy875.github.io/2016/09/20/music%E6%AD%8C%E5%8D%95/"/>
+    <id>https://zhaoy875.github.io/2016/09/20/music歌单/</id>
+    <published>2016-09-20T14:39:43.000Z</published>
+    <updated>2016-10-26T10:25:29.246Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="/2016/09/20/music歌单/#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe style="width:100%;min-height:260px;max-height:400px" id="musiciframe" src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=0&narrow=0" frameborder="0" scrolling="no"></iframe>
+
+<a id="more"></a>
+<h2 id="Interface-usage"><a href="/2016/09/20/music歌单/#Interface-usage" class="headerlink" title="Interface usage"></a>Interface usage</h2><p>歌单：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=1&amp;narrow=0"</span>  <span class="attribute">width</span>=<span class="string">"100%"</span>  frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
+<p>单首：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?song=408332757&amp;qssl=1&amp;qlrc=1&amp;autoplay=0"</span> <span class="attribute">width</span>=<span class="string">"100%"</span> frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="API"><a href="/2016/09/20/music歌单/#API" class="headerlink" title="API"></a>API</h2><p>使用iframe内嵌页面<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Demos:</span></div><div class="line"><span class="symbol"></span></div><div class="line">https:<span class="comment">//music.daoapp.io/iframe?song=287749&amp;qssl=1&amp;qlrc=1&amp;qnarrow=0&amp;max_width=50%&amp;autoplay=1</span></div><div class="line"><span class="symbol">https:</span><span class="comment">//music.daoapp.io/iframe?song=287749&amp;qnarrow=1&amp;qssl=1</span></div><div class="line"><span class="symbol">URL:</span> http(s):<span class="comment">//music.daoapp.io/ Donot use HTTPS if it's not necessary. But if you do, don't forget set qssl to 1. Method: GET The arguments are:</span></div><div class="line"></div><div class="line">album=album_id  		<span class="comment">//专辑id</span></div><div class="line">playlist=playlist_id    <span class="comment">//歌单id</span></div><div class="line">song=song_id            <span class="comment">//单首id</span></div><div class="line">program=program_id</div><div class="line">radio=radio_id</div><div class="line">mv=mv_id 				</div><div class="line">qssl=[<span class="number">0</span>|<span class="number">1</span>]            </div><div class="line">qlrc=[<span class="number">0</span>|<span class="number">1</span>]             <span class="comment">//歌词</span></div><div class="line">qnarrow=[<span class="number">0</span>|<span class="number">1</span>]</div><div class="line">max_width=[<span class="number">100</span>%|<span class="number">32</span>rem|<span class="number">400</span>px|something else]</div><div class="line">autoplay=[<span class="number">0</span>|<span class="number">1</span>]         <span class="comment">//自动播放</span></div></pre></td></tr></table></figure></p>
+<p>You must choose ONE of those six ids. And it means nothing if you choose more than one of them. You may use <a href="https://music.daoapp.io/" target="_blank" rel="external">The web interface</a> to find the id or use 163Music.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;网易云-基于163APlayer&quot;&gt;&lt;a href=&quot;#网易云-基于163APlayer&quot; class=&quot;headerlink&quot; title=&quot;网易云 基于163APlayer&quot;&gt;&lt;/a&gt;网易云 基于&lt;a href=&quot;https://github.com/YUX-IO/163music-APlayer-you-get-docker&quot;&gt;163APlayer&lt;/a&gt;&lt;/h2&gt;&lt;iframe style=&quot;width:100%;min-height:260px;max-height:400px&quot; id=&quot;musiciframe&quot; src=&quot;https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=0&amp;narrow=0&quot;  frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+    
+    </summary>
+    
+    
+      <category term="音乐" scheme="https://zhaoy875.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Awesome browser extensions for GitHub</title>
     <link href="https://zhaoy875.github.io/2016/09/20/Awesome-browser-extensions-for-GitHub/"/>
     <id>https://zhaoy875.github.io/2016/09/20/Awesome-browser-extensions-for-GitHub/</id>
     <published>2016-09-20T02:51:43.000Z</published>
@@ -1250,7 +1356,7 @@ var o = { name:&apos;赵&apos;, age:12,}; // 报错
   </entry>
   
   <entry>
-    <title>修改Hexo S后自动打开浏览器</title>
+    <title>修改hexo s后自动打开浏览器</title>
     <link href="https://zhaoy875.github.io/2016/09/15/%E4%BF%AE%E6%94%B9hexo-s%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
     <id>https://zhaoy875.github.io/2016/09/15/修改hexo-s自动打开浏览器/</id>
     <published>2016-09-15T11:50:20.000Z</published>
@@ -1329,7 +1435,7 @@ var openURL = function (url) {
   </entry>
   
   <entry>
-    <title>提高效率-Focus,Just Do One Thing</title>
+    <title>提高效率-Focus,Just do one thing</title>
     <link href="https://zhaoy875.github.io/2016/09/09/%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87-Focus-Just-do-one-thing/"/>
     <id>https://zhaoy875.github.io/2016/09/09/提高效率-Focus-Just-do-one-thing/</id>
     <published>2016-09-08T18:50:43.000Z</published>
@@ -1413,56 +1519,6 @@ var openURL = function (url) {
       <category term="react" scheme="https://zhaoy875.github.io/tags/react/"/>
     
       <category term="virtualDom" scheme="https://zhaoy875.github.io/tags/virtualDom/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git管中窥豹</title>
-    <link href="https://zhaoy875.github.io/2016/09/07/Git%E7%AE%A1%E4%B8%AD%E7%AA%A5%E8%B1%B9/"/>
-    <id>https://zhaoy875.github.io/2016/09/07/Git管中窥豹/</id>
-    <published>2016-09-07T07:16:43.000Z</published>
-    <updated>2016-10-26T10:25:32.154Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="git简单示意图"><a href="/2016/09/07/Git管中窥豹/#git简单示意图" class="headerlink" title="git简单示意图"></a>git简单示意图</h2><p><img src="http://od6ri688q.bkt.clouddn.com/git%E4%BB%93%E5%BA%93%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="图解git"></p>
-<a id="more"></a>
-<blockquote>
-<p>参考<a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="external">http://www.bootcss.com/p/git-guide/</a></p>
-</blockquote>
-<h2 id="花20分钟写的-大白话讲解如何给github上项目贡献代码"><a href="/2016/09/07/Git管中窥豹/#花20分钟写的-大白话讲解如何给github上项目贡献代码" class="headerlink" title="花20分钟写的-大白话讲解如何给github上项目贡献代码"></a>花20分钟写的-大白话讲解如何给github上项目贡献代码</h2><blockquote>
-<p>转自 <a href="https://site.douban.com/196781/widget/notes/12161495/note/269163206/" target="_blank" rel="external">https://site.douban.com/196781/widget/notes/12161495/note/269163206/</a></p>
-</blockquote>
-<p>  本文献给对git很迷茫的新手，注意是新手，但至少会点基本操作，有点基本概念的新手，我不会从怎么用github和git是什么开始讲的。如果作为新手你看书又看不进去，原理又太复杂，有没有直接了当告诉我们怎么给项目贡献代码，并和项目同步代码的大体流程。于是我快速写了这么个东西。一来整理下自己混乱的思路，二来想号召大家一起用git开发点东西，可是好几个同鞋只会寂寞的给自己push。</p>
-<p>我先说下 我之前对github操作的一些迷茫历程，然后之后是怎么解惑的。</p>
-<ol>
-<li><p>最最开始，我以为git clone ［项目地址］，也就是把代码clone下来 然后修改，然后push到项目里就可以了。<br>后来发现，这种情况只适合该项目属于你自己的情况，如果你git clone别人的项目代码，你想push都push不上去，因为 git push 不是需要你输入github帐号密码么。</p>
-</li>
-<li><p>然后 我就知道了 github上 不是有个fork么， 好，那么给别人的项目提交代码的方式就有了，先fork下别人的代码，于是你的github上就出现了同名的项目，这个项目就属于你自己了，你把这个自己的项目git clone到本地，修修改改，然后push到你自己的项目里，那么你如何把你对自己项目的改动，给发到之前fork的那个原项目呢，看见了没，在github上你的项目页面有个按钮，叫Pull request，对 你点它就会把你的修改发到对方的项目里，人还会收到邮件呢，由原项目主人决定是否接受你的修改。<br>但是，这样问题就出来了，在你fork他的项目之后，如果他又更新了代码，你自己fork的项目怎么做到和原项目同步呢？<br>我就想啊，是不是 我还得重新git clone原项目的代码，然后手动合并到我fork的项目里呢。。。<br>梁老师说，你丫这太蛋疼了，肯定不是这么麻烦，我细想，也是啊，这不2么。。。</p>
-</li>
-</ol>
-<p>3，然后，从《Pro git》上看到一个知识点，我擦，github居然可以给项目添加合作者，也就是说，假如你，对，说你呢，戴眼镜那个，你想参与我的项目，你跟我说一声，我就把你添加到我的项目里作为合作者，这个选项在项目的设置里面有，只要我添加你了，你就可以git clone我的代码然后修修改改，然后直接push上来就行了，就不用fork那么麻烦了，如果你要更新服务器代码，只要git pull就行了，看 合作者这东西多方便，就像我们在公司用svn似的。</p>
-<p>4.然后我就想啊，有了合作者还需要你丫fork这个功能干啥？仔细一想，你写个好项目，不能随便加合作者啊，加了个熊孩子把你代码改废了可咋整，这年头熊孩子很多，我自己不就是一个么。所以fork肯定还是需要，fork就是专门预防熊孩子的，这就是真相！那么前面说道到fork之后如何与原项目同步的问题还在啊，没有得到解决。</p>
-<p>5.于是《Pro git》再次给了我一个解答，具体流程是你啊想给我的项目做贡献，你先git clone我的代码到本地，然后修修改改，然后你不是不能push到我的项目里么，你可以先在github页面上fork我的项目，有了你自己的项目地址（url）之后呢，你在本地操作git remote add [sort name] [your url]，意思就是添加第二个远程仓库地址，这个仓库的“昵称”就是你刚指定的[sort name]，然后，你之后push文件呢 就通过指定这个［sort name］来push到这个你自己的仓库里。等你觉得想要把你改的发给原项目同步，就在你的项目上点Pull request按钮.说下另一种情况，如果是，原项目发生了改动，你要想同步到本地，就直接从git fetch origin 从原项目的地址同步代码，然后再merge就好了。当然，如《Pro git》上所写，你可以通过新建分支的方式往自己的项目上push，这样同步的时候直接fetch就行了。这块如果我没写明白或者你想知道怎么新建分支的方式push到自己的项目里，可以直接参考《Pro git》的“公开的小型项目”一节，那我的贡献就是指点你如何从这本书里快速的找到你想要的。= =。</p>
-<p>好了，时间有限，我写的快不一定讲明白，欢迎跟我讨论。<br>感谢linus，感谢git，感谢github，感谢kindle，感谢《Pro git》，感谢梁老师，感谢我自己，感谢所有的熊孩子们。</p>
-<h2 id="git详解-教程"><a href="/2016/09/07/Git管中窥豹/#git详解-教程" class="headerlink" title="git详解 教程"></a>git详解 教程</h2><blockquote>
-<p><a href="http://blog.jobbole.com/?s=Git%E8%AF%A6%E8%A7%A3%E4%B9%8B" target="_blank" rel="external">http://blog.jobbole.com/?s=Git%E8%AF%A6%E8%A7%A3%E4%B9%8B</a></p>
-<p><a href="https://github.com/geeeeeeeeek/git-recipes/wiki/2.1-%E5%BF%AB%E9%80%9F%E6%8C%87%E5%8D%97" target="_blank" rel="external">https://github.com/geeeeeeeeek/git-recipes/wiki/2.1-%E5%BF%AB%E9%80%9F%E6%8C%87%E5%8D%97</a></p>
-</blockquote>
-<h2 id="附录git命令图"><a href="/2016/09/07/Git管中窥豹/#附录git命令图" class="headerlink" title="附录git命令图"></a>附录git命令图</h2><p>git常用命令行</p>
-<p><img src="http://od6ri688q.bkt.clouddn.com/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.jpg" alt="git命令"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;git简单示意图&quot;&gt;&lt;a href=&quot;#git简单示意图&quot; class=&quot;headerlink&quot; title=&quot;git简单示意图&quot;&gt;&lt;/a&gt;git简单示意图&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://od6ri688q.bkt.clouddn.com/git%E4%BB%93%E5%BA%93%E7%A4%BA%E6%84%8F%E5%9B%BE.png&quot; alt=&quot;图解git&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="git" scheme="https://zhaoy875.github.io/categories/git/"/>
-    
-    
-      <category term="git" scheme="https://zhaoy875.github.io/tags/git/"/>
-    
-      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
     
   </entry>
   
