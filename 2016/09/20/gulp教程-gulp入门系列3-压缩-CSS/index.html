@@ -57,37 +57,46 @@
 
 
 
-<meta name="description" content="安装 Node 和 gulpgulp 是基于 node 实现的，那么我们就需要先安装 node。
+<meta name="description" content="使用 gulp 压缩 CSS请务必理解如下章节后阅读此章节：
 
-Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利用它实现 Web服务，做类似PHP的事。
+安装 Node 和 gulp
+使用 gulp 压缩 JS
 
-打开 https://nodejs.org/ 点击绿色的 INSTALL 按钮下载安装 node。
 访问论坛获取帮助
 
-使用终端/命令行命令行在 Windows 中可按">
+压缩 css 代码可降低 css 文件大小，提高页面打开速度。
+我们接着将规律转换为 gulp 代码
+规律找到 css/ 目录下的所有 css 文件，压缩它们，将压缩后的文件存放在 dist/css/ 目录下。
+gulp 代码你可以 下载所有示例代码 或">
 <meta property="og:type" content="article">
-<meta property="og:title" content=" gulp入门系列1--安装 Node 和 gulp">
-<meta property="og:url" content="https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/index.html">
+<meta property="og:title" content=" gulp入门系列3--压缩 CSS">
+<meta property="og:url" content="https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/index.html">
 <meta property="og:site_name" content="zhaoy">
-<meta property="og:description" content="安装 Node 和 gulpgulp 是基于 node 实现的，那么我们就需要先安装 node。
+<meta property="og:description" content="使用 gulp 压缩 CSS请务必理解如下章节后阅读此章节：
 
-Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利用它实现 Web服务，做类似PHP的事。
+安装 Node 和 gulp
+使用 gulp 压缩 JS
 
-打开 https://nodejs.org/ 点击绿色的 INSTALL 按钮下载安装 node。
 访问论坛获取帮助
 
-使用终端/命令行命令行在 Windows 中可按">
-<meta property="og:updated_time" content="2016-10-29T09:14:21.659Z">
+压缩 css 代码可降低 css 文件大小，提高页面打开速度。
+我们接着将规律转换为 gulp 代码
+规律找到 css/ 目录下的所有 css 文件，压缩它们，将压缩后的文件存放在 dist/css/ 目录下。
+gulp 代码你可以 下载所有示例代码 或">
+<meta property="og:updated_time" content="2016-12-07T12:27:17.653Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content=" gulp入门系列1--安装 Node 和 gulp">
-<meta name="twitter:description" content="安装 Node 和 gulpgulp 是基于 node 实现的，那么我们就需要先安装 node。
+<meta name="twitter:title" content=" gulp入门系列3--压缩 CSS">
+<meta name="twitter:description" content="使用 gulp 压缩 CSS请务必理解如下章节后阅读此章节：
 
-Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利用它实现 Web服务，做类似PHP的事。
+安装 Node 和 gulp
+使用 gulp 压缩 JS
 
-打开 https://nodejs.org/ 点击绿色的 INSTALL 按钮下载安装 node。
 访问论坛获取帮助
 
-使用终端/命令行命令行在 Windows 中可按">
+压缩 css 代码可降低 css 文件大小，提高页面打开速度。
+我们接着将规律转换为 gulp 代码
+规律找到 css/ 目录下的所有 css 文件，压缩它们，将压缩后的文件存放在 dist/css/ 目录下。
+gulp 代码你可以 下载所有示例代码 或">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -106,12 +115,12 @@ Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利�
 
 
 
-  <link rel="canonical" href="https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/"/>
+  <link rel="canonical" href="https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/"/>
 
 
 
 <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-  <title>  gulp入门系列1--安装 Node 和 gulp | zhaoy </title>
+  <title>  gulp入门系列3--压缩 CSS | zhaoy </title>
   
   <meta name="baidu-site-verification" content="k0UgqisIfE" />
 </head>
@@ -319,7 +328,7 @@ Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利�
             
             
               
-                 gulp入门系列1--安装 Node 和 gulp
+                 gulp入门系列3--压缩 CSS
               
             
           </h1>
@@ -331,8 +340,8 @@ Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利�
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-20T17:33:20+08:00" content="2016-10-20">
-              2016-10-20
+            <time itemprop="dateCreated" datetime="2016-09-20T17:34:20+08:00" content="2016-09-20">
+              2016-09-20
             </time>
           </span>
 
@@ -342,8 +351,8 @@ Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利�
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/" itemprop="commentsCount"></span>
+                <a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -371,37 +380,41 @@ Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利�
       
 
       
-        <h1 id="安装-Node-和-gulp"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-Node-和-gulp" class="headerlink" title="安装 Node 和 gulp"></a>安装 Node 和 gulp</h1><p>gulp 是基于 node 实现的，那么我们就需要先安装 node。</p>
-<blockquote>
-<p>Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利用它实现 Web服务，做类似PHP的事。</p>
-</blockquote>
-<p>打开 <a href="https://nodejs.org/" target="_blank" rel="external">https://nodejs.org/</a> 点击绿色的 <strong>INSTALL</strong> 按钮下载安装 node。</p>
-<p><a href="https://github.com/nimojs/gulp-book/issues/10" target="_blank" rel="external">访问论坛获取帮助</a></p>
-<p><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#hash_cli" name="hash_cli"></a></p>
-<h2 id="使用终端-命令行"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#使用终端-命令行" class="headerlink" title="使用终端/命令行"></a>使用终端/命令行</h2><h3 id="命令行"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>在 Windows 中可按 <kbd>徽标键</kbd>（alt键左边）+ <kbd>R</kbd> 打开输入 <code>cmd</code> + <kbd>Enter</kbd> 打开命令行。</p>
-<h3 id="终端-Mac"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#终端-Mac" class="headerlink" title="终端(Mac)"></a>终端(Mac)</h3><p>打开 Launchpad（像火箭一样的图标），在屏幕上方搜索框中输入 <code>终端</code> + <kbd>Enter</kbd> 打开终端。</p>
-<h3 id="查看-node-版本号"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#查看-node-版本号" class="headerlink" title="查看 node 版本号"></a>查看 node 版本号</h3><p>在终端/命令行中输入 <code>node -v</code> 检测node是否安装成功，安装成功会显示出 node 的版本号。</p>
-<h3 id="跳转目录"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#跳转目录" class="headerlink" title="跳转目录"></a>跳转目录</h3><p>终端/命令行 中可使用 <code>cd 目录名</code> 跳转至指定目录，Mac 中还可以使用 <code>ls</code> 查看当前目录下的文件列表。</p>
-<h4 id="Windows"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#Windows" class="headerlink" title="Windows"></a>Windows</h4><p>Windows 下可使用如下命令跳转至指定目录：</p>
-<figure class="highlight scilab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跳转至 C 盘根目录</span></div><div class="line"><span class="built_in">cd</span> c:\</div><div class="line"><span class="comment">// 跳转至当前目录的 demo 文件夹</span></div><div class="line"><span class="built_in">cd</span> demo</div><div class="line"><span class="comment">// 跳转至上一级</span></div><div class="line"><span class="built_in">cd</span> ..</div></pre></td></tr></table></figure>
-<h4 id="Mac"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#Mac" class="headerlink" title="Mac"></a>Mac</h4><p>Mac 中建议只在 Documents 目录下进行文件操作。</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跳转至文档目录</span></div><div class="line"><span class="keyword">cd</span> /Users/你的用户名/Documents/</div><div class="line"><span class="comment">// 或第一次打开终端时直接输入</span></div><div class="line"><span class="keyword">cd</span> Documents</div><div class="line"><span class="comment">// 查看目录下文件列表</span></div><div class="line"><span class="keyword">ls</span></div><div class="line"><span class="comment">// 创建文件夹</span></div><div class="line"><span class="keyword">mkdir</span> demo</div><div class="line"><span class="comment">// 跳转至当前目录下的 demo 文件夹</span></div><div class="line"><span class="keyword">cd</span> demo</div><div class="line"><span class="comment">// 跳转至上级目录</span></div><div class="line"><span class="keyword">cd</span> ..</div></pre></td></tr></table></figure>
-<h3 id="退出运行状态"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#退出运行状态" class="headerlink" title="退出运行状态"></a>退出运行状态</h3><p>如果你在命令行中启动了一些一直运行的命令，你的命令行会进入“运行”状态，此时你不可以在命令行进行其他操作。可通过 <code>Ctrl + C</code> 停止 gulp。（Mac 中使用 <code>control + C</code>）</p>
-<p>后面的章节中如果代码中存在 <code>gulp.watch</code> 并在命令行运行了 <code>gulp</code> 则需要使用 <code>Ctrl + C</code> 退出任务。</p>
-<h2 id="npm-模块管理器"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#npm-模块管理器" class="headerlink" title="npm 模块管理器"></a>npm 模块管理器</h2><p>如果你了解 npm 则跳过此章节</p>
-<p>若你不了解npm 请阅读 <a href="http://javascript.ruanyifeng.com/nodejs/npm.html" target="_blank" rel="external">npm模块管理器</a></p>
-<h2 id="安装-gulp"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-gulp" class="headerlink" title="安装 gulp"></a>安装 gulp</h2><p>npm 是 node 的包管理工具，可以利用它安装 gulp 所需的包。（在安装 node 时已经自动安装了 npm）</p>
+        <h1 id="使用-gulp-压缩-CSS"><a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/#使用-gulp-压缩-CSS" class="headerlink" title="使用 gulp 压缩 CSS"></a>使用 gulp 压缩 CSS</h1><p>请务必理解如下章节后阅读此章节：</p>
+<ol>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/chapter1.md">安装 Node 和 gulp</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/chapter2.md">使用 gulp 压缩 JS</a></li>
+</ol>
+<p><a href="https://github.com/nimojs/gulp-book/issues/12" target="_blank" rel="external">访问论坛获取帮助</a></p>
+<hr>
+<p>压缩 css 代码可降低 css 文件大小，提高页面打开速度。</p>
+<p>我们接着将规律转换为 gulp 代码</p>
+<h2 id="规律"><a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/#规律" class="headerlink" title="规律"></a>规律</h2><p>找到 <code>css/</code> 目录下的所有 css 文件，压缩它们，将压缩后的文件存放在 <code>dist/css/</code> 目录下。</p>
+<h2 id="gulp-代码"><a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/#gulp-代码" class="headerlink" title="gulp 代码"></a>gulp 代码</h2><p>你可以 <a href="https://github.com/nimojs/gulp-book/archive/master.zip" target="_blank" rel="external">下载所有示例代码</a> 或 <a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter3" target="_blank" rel="external">在线查看代码</a></p>
+<p>当熟悉 <a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/chapter2.md">使用 gulp 压缩 JS</a> 的方法后，配置压缩 CSS 的 gulp 代码就变得很轻松。</p>
+<p><strong>一、安装 gulp-minify-css</strong> 模块</p>
+<p>提示：你需要使用命令行的 <code>cd</code> 切换到对应目录后进行安装操作。</p>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/chapter1.md">学习使用命令行</a></p>
 <p>在命令行输入</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> -g gulp</div></pre></td></tr></table></figure>
-<p>若一直没安装成功，请<a href="https://github.com/nimojs/blog/issues/20" target="_blank" rel="external">使用 cnpm 安装</a>(npm的国内加速镜像)</p>
-<p>意思是：使用 npm 安装全局性的(<code>-g</code>) gulp 包。</p>
-<blockquote>
-<p>如果你安装失败，请输入<code>sudo npm install -g gulp</code>使用管理员权限安装。（可能会要求输入密码）</p>
-</blockquote>
-<p>安装时请注意命令行的提示信息，安装完成后可在命令行输入 <code>gulp -v</code> 以确认安装成功。</p>
-<p>至此，我们完成了准备工作。接着让 gulp 开始帮我们干活吧！</p>
-<p><a href="https://github.com/nimojs/gulp-book/issues/10" target="_blank" rel="external">访问论坛获取帮助</a></p>
-<p><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/chapter2.md">阅读下一章节：使用 gulp 压缩JS</a></p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> gulp-minify-css</div></pre></td></tr></table></figure>
+<p>安装成功后你会看到如下信息：(安装时间可能会比较长)</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">gulp-minify-css<span class="variable">@1</span>.<span class="number">0.0</span> node_modules/gulp-minify-css</div><div class="line">├── object-assign<span class="variable">@2</span>.<span class="number">0.0</span></div><div class="line">├── vinyl-sourcemaps-apply<span class="variable">@0</span>.<span class="number">1.4</span> (source-map<span class="variable">@0</span>.<span class="number">1.43</span>)</div><div class="line">├── clean-css<span class="variable">@3</span>.<span class="number">1.8</span> (commander<span class="variable">@2</span>.<span class="number">6.0</span>, source-map<span class="variable">@0</span>.<span class="number">1.43</span>)</div><div class="line">├── through2<span class="variable">@0</span>.<span class="number">6.3</span> (xtend<span class="variable">@4</span>.<span class="number">0.0</span>, readable-stream<span class="variable">@1</span>.<span class="number">0.33</span>)</div><div class="line">├── vinyl-bufferstream<span class="variable">@1</span>.<span class="number">0.1</span> (bufferstreams<span class="variable">@1</span>.<span class="number">0.1</span>)</div><div class="line">└── gulp-util<span class="variable">@3</span>.<span class="number">0.4</span> (array-differ<span class="variable">@1</span>.<span class="number">0.0</span>, beeper<span class="variable">@1</span>.<span class="number">0.0</span>, array-uniq<span class="variable">@1</span>.<span class="number">0.2</span>, lodash._reescape<span class="variable">@3</span>.<span class="number">0.0</span>, lodash._reinterpolate<span class="variable">@3</span>.<span class="number">0.0</span>, lodash._reevaluate<span class="variable">@3</span>.<span class="number">0.0</span>, replace-ext<span class="variable">@0</span>.<span class="number">0.1</span>, minimist<span class="variable">@1</span>.<span class="number">1.1</span>, multipipe<span class="variable">@0</span>.<span class="number">1.2</span>, vinyl<span class="variable">@0</span>.<span class="number">4.6</span>, chalk<span class="variable">@1</span>.<span class="number">0.0</span>, lodash.template<span class="variable">@3</span>.<span class="number">3.2</span>, dateformat<span class="variable">@1</span>.<span class="number">0.11</span>)</div></pre></td></tr></table></figure>
+<p><strong>二、参照 <a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/chapter2.md">使用 gulp 压缩 JS</a> 创建 <code>gulpfile.js</code> 文件编写代码</strong></p>
+<p>在对应目录创建 <code>gulpfile.js</code> 文件并写入如下内容：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取 gulp</span></div><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 获取 minify-css 模块（用于压缩 CSS）</span></div><div class="line"><span class="keyword">var</span> minifyCSS = <span class="built_in">require</span>(<span class="string">'gulp-minify-css'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 压缩 css 文件</span></div><div class="line"><span class="comment">// 在命令行使用 gulp css 启动此任务</span></div><div class="line">gulp.task(<span class="string">'css'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 1. 找到文件</span></div><div class="line">    gulp.src(<span class="string">'css/*.css'</span>)</div><div class="line">    <span class="comment">// 2. 压缩文件</span></div><div class="line">        .pipe(minifyCSS())</div><div class="line">    <span class="comment">// 3. 另存为压缩文件</span></div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/css'</span>))</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 在命令行使用 gulp auto 启动此任务</span></div><div class="line">gulp.task(<span class="string">'auto'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 监听文件修改，当文件被修改则执行 css 任务</span></div><div class="line">    gulp.watch(<span class="string">'css/*.css'</span>, [<span class="string">'css'</span>])</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 使用 gulp.task('default') 定义默认任务</span></div><div class="line"><span class="comment">// 在命令行使用 gulp 启动 css 任务和 auto 任务</span></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'css'</span>, <span class="string">'auto'</span>])</div></pre></td></tr></table></figure>
+<p>你可以访问 <a href="https://github.com/jonathanepollack/gulp-minify-css" target="_blank" rel="external">gulp-minify-css</a> 以查看更多用法。</p>
+<hr>
+<p><strong>三、创建 css 文件</strong></p>
+<p>在 <code>gulpfile.js</code> 对应目录创建 <code>css</code> 文件夹，并在 <code>css/</code> 目录下创建 <code>a.css</code> 文件。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* a.css */</span></div><div class="line"><span class="selector-tag">body</span> <span class="selector-tag">a</span>&#123;</div><div class="line">    <span class="attribute">color</span>:pink;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p><strong>四、运行 gulp 查看效果</strong></p>
+<p>在命令行输入 <code>gulp</code> +回车</p>
+<p>你将看到命令行出现如下提示</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">gulp</div><div class="line">[<span class="number">17</span>:<span class="number">01</span>:<span class="number">19</span>] <span class="symbol">Using</span> gulpfile ~/<span class="symbol">Documents</span>/code/gulp-book/demo/chapter3/gulpfile.js</div><div class="line">[<span class="number">17</span>:<span class="number">01</span>:<span class="number">19</span>] <span class="symbol">Starting</span> <span class="string">'css'</span>...</div><div class="line">[<span class="number">17</span>:<span class="number">01</span>:<span class="number">19</span>] <span class="symbol">Finished</span> <span class="string">'css'</span> after <span class="number">6.21</span> ms</div><div class="line">[<span class="number">17</span>:<span class="number">01</span>:<span class="number">19</span>] <span class="symbol">Starting</span> <span class="string">'auto'</span>...</div><div class="line">[<span class="number">17</span>:<span class="number">01</span>:<span class="number">19</span>] <span class="symbol">Finished</span> <span class="string">'auto'</span> after <span class="number">5.42</span> ms</div><div class="line">[<span class="number">17</span>:<span class="number">01</span>:<span class="number">19</span>] <span class="symbol">Starting</span> <span class="string">'default'</span>...</div><div class="line">[<span class="number">17</span>:<span class="number">01</span>:<span class="number">19</span>] <span class="symbol">Finished</span> <span class="string">'default'</span> after <span class="number">5.71</span> μs</div></pre></td></tr></table></figure>
+<p>gulp 会创建 <code>dist/css</code> 目录，并创建 <code>a.css</code> 文件，此文件存放压缩后的 css 代码。<br><a href="https://github.com/nimojs/gulp-book/blob/master/demo/chapter3/dist/css/a.css" target="_blank" rel="external">dist/css/a.css</a></p>
+<p><a href="https://github.com/nimojs/gulp-book/issues/12" target="_blank" rel="external">访问论坛获取帮助</a></p>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/chapter4.md">接着阅读：使用 gulp 压缩图片</a></p>
 
       
     </div>
@@ -457,16 +470,16 @@ Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/20/gulp教程-gulp入门系列/" rel="next" title=" gulp 入门指南">
-                <i class="fa fa-chevron-left"></i>  gulp 入门指南
+              <a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/" rel="next" title=" gulp入门系列1--安装 Node 和 gulp">
+                <i class="fa fa-chevron-left"></i>  gulp入门系列1--安装 Node 和 gulp
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/10/20/gulp教程-gulp入门系列2-压缩-JS/" rel="prev" title=" gulp入门系列2--压缩 JS">
-                 gulp入门系列2--压缩 JS <i class="fa fa-chevron-right"></i>
+              <a href="/2016/09/20/gulp教程-gulp入门系列4-压缩图片/" rel="prev" title=" gulp入门系列4--压缩图片">
+                 gulp入门系列4--压缩图片 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -484,10 +497,10 @@ Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利�
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/"
-     data-title=" gulp入门系列1--安装 Node 和 gulp"
+        <div class="ds-share flat" data-thread-key="2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/"
+     data-title=" gulp入门系列3--压缩 CSS"
      data-content=""
-     data-url="https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/">
+     data-url="https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -514,8 +527,8 @@ Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利�
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/"
-           data-title=" gulp入门系列1--安装 Node 和 gulp" data-url="https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/">
+      <div class="ds-thread" data-thread-key="2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/"
+           data-title=" gulp入门系列3--压缩 CSS" data-url="https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/">
       </div>
     
   </div>
@@ -560,7 +573,7 @@ Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">32</span>
+              <span class="site-state-item-count">36</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -577,7 +590,7 @@ Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利�
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">32</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -724,7 +737,7 @@ Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利�
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装-Node-和-gulp"><span class="nav-number">1.</span> <span class="nav-text">安装 Node 和 gulp</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用终端-命令行"><span class="nav-number">1.1.</span> <span class="nav-text">使用终端/命令行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令行"><span class="nav-number">1.1.1.</span> <span class="nav-text">命令行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#终端-Mac"><span class="nav-number">1.1.2.</span> <span class="nav-text">终端(Mac)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看-node-版本号"><span class="nav-number">1.1.3.</span> <span class="nav-text">查看 node 版本号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#跳转目录"><span class="nav-number">1.1.4.</span> <span class="nav-text">跳转目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Windows"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">Windows</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mac"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">Mac</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#退出运行状态"><span class="nav-number">1.1.5.</span> <span class="nav-text">退出运行状态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-模块管理器"><span class="nav-number">1.2.</span> <span class="nav-text">npm 模块管理器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-gulp"><span class="nav-number">1.3.</span> <span class="nav-text">安装 gulp</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用-gulp-压缩-CSS"><span class="nav-number">1.</span> <span class="nav-text">使用 gulp 压缩 CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#规律"><span class="nav-number">1.1.</span> <span class="nav-text">规律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gulp-代码"><span class="nav-number">1.2.</span> <span class="nav-text">gulp 代码</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

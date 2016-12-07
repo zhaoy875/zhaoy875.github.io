@@ -280,13 +280,232 @@
   </entry>
   
   <entry>
-    <title> gulp入门系列7--构建一个项目</title>
-    <link href="https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%977-%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE/"/>
-    <id>https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/</id>
-    <published>2016-10-20T09:42:20.000Z</published>
-    <updated>2016-11-10T06:40:53.925Z</updated>
+    <title>增强版npm包管理工具--yarn</title>
+    <link href="https://zhaoy875.github.io/2016/10/13/npm%E5%A2%9E%E5%BC%BA%E7%89%88-yarn/"/>
+    <id>https://zhaoy875.github.io/2016/10/13/npm增强版-yarn/</id>
+    <published>2016-10-13T14:16:12.000Z</published>
+    <updated>2016-10-27T07:31:37.230Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="使用-gulp-构建一个项目"><a href="/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#使用-gulp-构建一个项目" class="headerlink" title="使用 gulp 构建一个项目"></a>使用 gulp 构建一个项目</h1><p>请务必理解前面的章节后阅读此章节：</p>
+    <content type="html"><![CDATA[<blockquote>
+<p>参考 <a href="http://www.jb51.net/article/95199.htm" target="_blank" rel="external">http://www.jb51.net/article/95199.htm</a></p>
+<p>官方文档：<a href="https://yarnpkg.com/en/docs/cli/" target="_blank" rel="external">https://yarnpkg.com/en/docs/cli/</a></p>
+</blockquote>
+<p>最近新出的JavaScript包管理工具yarn大家已经有所耳闻，<br>并已通过npm i -g yarn进行了安装，<br>现在想知道怎么样使用吗？如果你了解 npm，你已经会很大一部分啦！<br>下面是这篇文章从npm切换到yarn的一些简洁笔记。</p>
+<p>yarn add: add a package to use in your current package.<br>yarn init: initialize for the development of a package.<br>yarn install: install all dependencies defined in a package.json file.<br>yarn publish: publish a package to a package manager.<br>yarn remove: remove a package that will no longer be used in your current package.</p>
+<p>仅仅一夜，却也是无数个日夜，FaceBook 开源了 yarn 这个新的 JavaScript 包管理工具，这个和 Exponent, Google, 以及 Tilde 合作完成的项目。</p>
+<p>FaceBook 提供了一种看起来和 npm 无关的安装方式 (mac):</p>
+<p>curl -o- -L <a href="https://yarnpkg.com/install.sh" target="_blank" rel="external">https://yarnpkg.com/install.sh</a> | bash<br>在其它平台也可以通过安装文件或者其它包管理系统安装，这样看起来不那么 npm-ish 的方式让我觉得这是有取代 npm 的想法的，虽然我们都爱 npm ;)</p>
+<p>当然真正的原因不是这样，这只是因为如果你用 npm 安装 yarn 不就会产生 yarn 想解决的那些问题吗，比如速度、semantic versioning 的不足等等</p>
+<p>那 yarn 解决了哪些 npm 的问题呢？yarn:</p>
+<p>非常快，非常非常快</p>
+<p>yarn 缓存了每次你下载的模块，所以同样模块同样的版本不会发送第二次下载请求，对于没有缓存的模块， yarn 也可以通过并行的网络请求最大限度利用网络资源。现在真的是没有什么几十秒安装不完的依赖的。一个 50 个依赖的 webpack + babel 项目可以在 20 秒左右安装完成。</p>
+<p>安全</p>
+<p>yarn 在开始安装一个包之前会先用 checksums 来验证，你不用担心本地的缓存的包被破坏了导致安装失败。</p>
+<p>可靠</p>
+<p>被一群喜欢喵星人的开发者维护，以及有 FaceBook 在 production 环境中使用。完善的测试和基于 flow type 的 code base。</p>
+<p>以及很多令人感动的小改进</p>
+<ol>
+<li><p>有些 npm 包会抛出 warning 提示信息，在一起 npm install 的时候只有一个名字你完全不知道是哪个包的哪个包的哪个包抛出的这个信息，而 yarn 改善了这一点。</p>
+</li>
+<li><p><code>yarn ls</code> 会高亮出所有在 package.json 的 dependencies 里的依赖，增强可读性。</p>
+</li>
+<li><p>每一条命令都会显示执行的时间。</p>
+</li>
+<li><p>默认生成 lockfile . 保证 yarn 每次安装相同版本的依赖，npm shrinkwrap 会丧失掉同步性如果你忘了生成它。</p>
+</li>
+<li><p><code>yarn why &lt;name&gt;</code> 这条命令可以告诉你为什么一个依赖会被安装到你的项目中。</p>
+</li>
+<li><p>……countless…</p>
+</li>
+</ol>
+<p>Fork?</p>
+<p>那么问题就来了，yarn 有许多令人激动的特性，但这些为什么不能通过改进 npm 的方式加入而是要重新开发一个客户端呢？</p>
+<p>简言之， 兼容性。 这些改进在现在的 npm 中看起来就像是 breaking changes。</p>
+<p>npm</p>
+<p>有人开始担心 npm，有人甚至说出了终于可以死掉了, npm！其实 npm 在更早的时候已经参与了 yarn 项目，并且鼓励这一行为，因为对于 npm 这样大范围使用的系统来说直接做出这些可能带来兼容性问题的改进很难。（不要以为 npm 比你制杖）</p>
+<p>This is how open source works.</p>
+<p>一、首先需要了解的命令<br>    npm install === yarn —— install 安装是默认行为。<br>    npm install taco –save === yarn add taco —— taco 包立即被保存到 package.json 中。<br>    npm uninstall taco –save === yarn remove taco</p>
+<p>在 npm 中，可以使用 npm config set save true 设置 — -save 为默认行为，但这对多数开发者而言并非显而易见的。在 yarn 中，在package.json 中添加（add）和移除（remove）等行为是默认的。<br>     npm install taco –save-dev === yarn add taco –dev<br>     npm update –save === yarn upgrade<br>update（更新） vs upgrade（升级）， 赞！upgrade 才是实际做的事！版本号提升时，发生的正是upgrade！<br>注意： npm update –save 在版本 3.11 中似乎有点问题。<br>     npm install taco@latest –save === yarn add taco<br>     npm install taco –global === yarn global add taco —— 一如既往，请谨慎使用 global 标记。<br>二、已知悉的命令<br>包和 npm registry 上是一样的。大致而言，Yarn 只是一个新的安装工具，npm 结构和 registry 还是一样的。<br>     npm init === yarn init<br>     npm link === yarn link<br>     npm outdated === yarn outdated<br>     npm publish === yarn publish<br>     npm run === yarn run<br>     npm cache clean === yarn cache clean<br>     npm login === yarn login (logout 同理)<br>     npm test === yarn test<br>三、Yarn 独有的命令<br>我跳过了一些提醒我们不要使用的内容，如 yarn clean。<br>     yarn licenses ls —— 允许你检查依赖的许可信息。<br>     yarn licenses generate —— 自动创建依赖免责声明 license。<br>     yarn why taco —— 检查为什么会安装 taco，详细列出依赖它的其他包（鸣谢 Olivier Combe）。<br>     Emojis<br>     速度<br>     通过 yarn lockfile 自动实现 shrinkwrap 功能<br>     以安全为中心的设计<br>四、Npm 独有的命令<br>     npm xmas === NO EQUIVALENT<br>     npm visnup === NO EQUIVALENT<br>总结<br>在写这篇文章的时候发现， yarn的run 命令似乎出了点问题，应该会在0.15.2中修复。在这一点上， npm 好多了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;参考 &lt;a href=&quot;http://www.jb51.net/article/95199.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jb51.net/article/95199.htm&lt;/a&gt;&lt;
+    
+    </summary>
+    
+    
+      <category term="npm" scheme="https://zhaoy875.github.io/tags/npm/"/>
+    
+      <category term="js包管理工具" scheme="https://zhaoy875.github.io/tags/js%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title> Gulp插件收藏</title>
+    <link href="https://zhaoy875.github.io/2016/10/11/Gulp%E6%8F%92%E4%BB%B6%E6%94%B6%E8%97%8F/"/>
+    <id>https://zhaoy875.github.io/2016/10/11/Gulp插件收藏/</id>
+    <published>2016-10-11T07:16:43.000Z</published>
+    <updated>2016-12-07T12:13:47.760Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Gulp插件收藏"><a href="/2016/10/11/Gulp插件收藏/#Gulp插件收藏" class="headerlink" title="Gulp插件收藏"></a>Gulp插件收藏</h2><article><br>    <h2 id="articleHeader0">HTML&amp;CSS </h2><br>    <p><a href="https://github.com/postcss/autoprefixer" target="_blank" rel="external">autoprefixer</a> - parse CSS and add vendor prefixes to rules by Can I Use. </p><br>    <p><a href="https://github.com/BrowserSync/gulp-browser-sync" target="_blank" rel="external">gulp-browser-sync</a> - keep multiple browsers &amp; devices in sync when building websites. </p><br>    <p><a href="https://github.com/jonkemp/gulp-useref" target="_blank" rel="external">gulp-useref</a> - parse build blocks in HTML files to replace references to non-optimized scripts or stylesheets. </p><br>    <p><a href="https://github.com/alexshk/gulp-email-design" target="_blank" rel="external">gulp-email-design</a> - a workflow for designing and testing HTML email templates. </p><br>    <p><a href="https://github.com/addyosmani/gulp-uncss-task" target="_blank" rel="external">gulp-uncss</a> - remove unused CSS from your projects. </p><br>    <p><a href="https://github.com/ben-eb/gulp-csso" target="_blank" rel="external">gulp-csso</a> - very cool CSS minificator. In addition, there are many CSS optimizers and <a href="http://goalsmashers.github.io/css-minification-benchmark/" target="_blank" rel="external">benchmark tests</a> (<a href="https://github.com/GoalSmashers/css-minification-benchmark" target="_blank" rel="external">GitHub</a>) for them. But recently I saw most powerful <a href="https://github.com/frankmarineau/shorthand" target="_blank" rel="external">Shorthand</a> utility without Gulp, which does folowing: </p><br>    <pre>a {<br>    font-family: Arial;<br>    font-style: italic;<br>    font-size: 14px;<br>    line-height: 18px;<br>    font-weight: bold;<br>    background-image: url(‘example.png’);<br>    background-color: red;<br>    background-size: cover;<br>    background-repeat: no-repeat;<br>}<br><br>=&gt;<br><br>a {<br>  font: italic bold 14px/18px Arial;<br>  background: red url(‘example.png’) no-repeat / cover;<br>}</pre><br>    <p><a href="https://github.com/jonschlinkert/gulp-htmlmin" target="_blank" rel="external">gulp-htmlmin</a> - neat HTML minificator. </p><br>    <p><a href="https://github.com/koistya/gulp-csscomb" target="_blank" rel="external">gulp-csscomb</a> - refines the structure of your CSS. </p><br>    <p><a href="https://www.npmjs.com/package/gulp-csslint" target="_blank" rel="external">gulp-csslint</a> - CSS linter. </p><br>    <p><a href="https://github.com/bezoerb/gulp-htmlhint" target="_blank" rel="external">gulp-htmlhint</a> - HTML validator. </p><br>    <p><a href="https://www.npmjs.com/package/gulp-processhtml" target="_blank" rel="external">gulp-processhtml</a> - Process html files at build time to modify them as you wish. </p><br>    <h2 id="articleHeader1">JavaScript </h2><br>    <p><a href="https://github.com/azproduction/gulp-autopolyfiller" target="_blank" rel="external">gulp-autopolyfiller</a> - precise polyfills. This is like Autoprefixer, but for JavaScript polyfills. </p><br>    <p><a href="https://github.com/babel/gulp-babel" target="_blank" rel="external">gulp-babel</a> - transpiler for writing next generation JavaScript. </p><br>    <p><a href="https://www.npmjs.com/package/gulp-jsfmt" target="_blank" rel="external">gulp-jsfmt</a> - for formatting, searching, and rewriting JavaScript. </p><br>    <p><a href="https://github.com/jscs-dev/gulp-jscs" target="_blank" rel="external">gulp-jscs</a> - for checking JavaScript Code Style. </p><br>    <p><a href="https://github.com/doctyper/gulp-modernizr" target="_blank" rel="external">gulp-modernizr</a> - build out a lean, mean Modernizr machine. </p><br>    <p><a href="https://github.com/gimm/gulp-express" target="_blank" rel="external">gulp-express</a> — start (and supervise) an Express.js web server using, works well with socket.io </p><br>    <p><a href="https://github.com/robinthrift/gulp-requirejs" target="_blank" rel="external">gulp-requirejs</a> and <a href="https://github.com/deepak1556/gulp-browserify" target="_blank" rel="external">gulp-browserify</a> - optimize the work with RequireJS and Browserify respectively. </p><br>    <p><a href="https://github.com/sindresorhus/gulp-plato" target="_blank" rel="external">gulp-plato</a> - generate static analysis reports. </p><br>    <p><a href="https://github.com/alexeyraspopov/gulp-complexity" target="_blank" rel="external">gulp-complexity</a> - evaluates code maintainability using Halstead and Cyclomatic metrics. </p><br>    <p><a href="https://github.com/kirjs/gulp-fixmyjs" target="_blank" rel="external">fixmyjs</a> - automatically fix silly lint errors with help of <a href="http://jshint.com/" target="_blank" rel="external">JSHint</a> (<a href="https://github.com/spalger/gulp-jshint" target="_blank" rel="external">gulp-jshint</a>). </p><br>    <p><a href="https://github.com/yannickcr/gulp-jscpd" target="_blank" rel="external">gulp-jscpd</a> — copy/paste detector for programming source code. </p><br>    <p><a href="https://github.com/Semigradsky/gulp-buddy.js" target="_blank" rel="external">gulp-buddy.js</a> - magic number detection for javascript. </p><br>    <p><a href="https://github.com/rogeriopvl/gulp-jsonlint" target="_blank" rel="external">gulp-jsonlint</a> - JSON validator. </p><br>    <p><a href="https://github.com/terinjokes/gulp-uglify" target="_blank" rel="external">gulp-uglify</a> - JavaScript compressor. </p><br>    <p><a href="https://github.com/wearefractal/gulp-concat" target="_blank" rel="external">gulp-concat</a> - concatenate files. </p><br>    <h3 id="articleHeader2">Unit Tests </h3><br>    <ul><br>        <li><a href="https://github.com/kjvalencik/gulp-nodeunit" target="_blank" rel="external">gulp-nodeunit</a> </li><br>        <li><a href="https://github.com/sindresorhus/gulp-jasmine" target="_blank" rel="external">gulp-jasmine</a> </li><br>        <li><a href="https://github.com/jonkemp/gulp-qunit" target="_blank" rel="external">gulp-qunit</a> </li><br>        <li><a href="https://github.com/sindresorhus/gulp-mocha" target="_blank" rel="external">gulp-mocha</a> </li><br>        <li><a href="https://github.com/karma-runner/gulp-karma" target="_blank" rel="external">gulp-karma</a> </li><br>    </ul><br>    <h2 id="articleHeader3">Graphics </h2><br>    <p><a href="https://github.com/wakayama-io/gulpicon/" target="_blank" rel="external">gulpicon</a> - mystical CSS icon solution. </p><br>    <p><a href="https://github.com/nfroidure/gulp-iconfont" target="_blank" rel="external">gulp-iconfont</a> - SVG to webfont converter. </p><br>    <p><a href="https://github.com/mahnunchik/gulp-responsive" target="_blank" rel="external">gulp-responsive</a> - produce images at different sizes for responsive websites. </p><br>    <p><a href="https://github.com/rizalp/gulp-sharp" target="_blank" rel="external">gulp-sharp</a> - fastest module for work JPEG, PNG, WebP and TIFF images. </p><br>    <p><a href="https://github.com/w0rm/gulp-svgstore" target="_blank" rel="external">gulp-svgstore</a> - merge SVGs from a folder. </p><br>    <p><a href="https://github.com/akoenig/imacss" target="_blank" rel="external">gulp-imacss</a> - application and library that transforms image files to data URIs. </p><br>    <p><a href="https://github.com/sindresorhus/gulp-imagemin" target="_blank" rel="external">gulp-imagemin</a> и <a href="https://github.com/creativeaura/gulp-tinypng" target="_blank" rel="external">gulp-tinypng</a> or fimage compression. </p><br>    <p><a href="https://github.com/otouto/gulp-spritesmith" target="_blank" rel="external">gulp-spritesmith</a> - converting a set of images into a spritesheet and corresponding CSS variables. </p><br>    <h2 id="articleHeader4">Others </h2><br>    <p><a href="https://github.com/gratimax/gulp-grunt" target="_blank" rel="external">gulp-grunt</a> - able to run Grunt tasks from Gulp. </p><br>    <p><a href="https://github.com/floatdrop/gulp-watch" target="_blank" rel="external">gulp-watch</a> — run tasks whenever watched files change. </p><br>    <p><a href="https://github.com/mikaelbr/gulp-notify" target="_blank" rel="external">gulp-notify</a> - automatic error messages in system notifications center when Gulp tasks fail. </p><br>    <p><a href="https://github.com/stevelacy/gulp-git" target="_blank" rel="external">gulp-git</a> - able to use Git commands. </p><br>    <p><a href="https://github.com/jsBoot/gulp-jsdoc" target="_blank" rel="external">gulp-jsdoc</a> - generate JavaScript documentation by running JSDoc3. </p><br>    <p><a href="https://github.com/sindresorhus/gulp-rev" target="_blank" rel="external">gulp-rev</a> - static file asset revisioning through content hashing. </p><br>    <p><a href="https://github.com/stevelacy/gulp-bump" target="_blank" rel="external">gulp-bump</a> - increments versions in package JSON and <a href="https://github.com/tounano/gulp-update" target="_blank" rel="external">gulp-update</a>, which automatically updates packages. </p><br>    <p><a href="https://github.com/ck86/gulp-bower-files" target="_blank" rel="external">gulp-bower-files</a> - inject Bower packages. </p><br>    <p><a href="https://github.com/hemanth/gulp-removelogs" target="_blank" rel="external">gulp-removelogs</a> - remove console logging statements. </p><br>    <p><a href="https://github.com/jas/gulp-preprocess" target="_blank" rel="external">gulp-preprocess</a> - preprocess files based off environment configuration. </p><br>    <p><a href="https://github.com/hughsk/gulp-duration" target="_blank" rel="external">gulp-duration</a> — displays the elapsed execution time of Gulp tasks. </p><br>    <p><a href="https://github.com/sindresorhus/gulp-changed" target="_blank" rel="external">gulp-changed</a> and <a href="https://www.npmjs.com/package/gulp-newer" target="_blank" rel="external">gulp-newer</a> — run Gulp tasks with only those source files modified since the last successful run. </p><br>    <p><a href="https://github.com/avevlad/gulp-connect" target="_blank" rel="external">gulp-connect</a> - simple static web server. </p><br>    <p><a href="https://github.com/sun-zheng-an/gulp-shell" target="_blank" rel="external">gulp-shell</a> - run Shell commands. </p><br>    <p><a href="https://github.com/teambition/gulp-ssh" target="_blank" rel="external">gulp-ssh</a> - provides the ability to connect via SSH and SFTP. </p><br>    <p><a href="https://www.npmjs.com/package/gulp-zip" target="_blank" rel="external">gulp-zip</a> - compress files and folders.. </p><br>    <p><a href="https://github.com/peter-vilja/gulp-clean" target="_blank" rel="external">gulp-clean</a> and <a href="https://github.com/klaascuvelier/gulp-copy" target="_blank" rel="external">gulp-copy</a> - respectively remove and copy sources. </p><br>    <p><a href="https://www.npmjs.com/package/gulp-replace" target="_blank" rel="external">gulp-replace</a> - Search and replace strings in text files. </p><br>    <p><a href="https://github.com/Metrime/gulp-filesize" target="_blank" rel="external">gulp-filesize</a> - displays sizes of files in a readable format. </p><br>    <p><a href="https://github.com/gulpjs/gulp-util" target="_blank" rel="external">gulp-util</a> - utilities for developing Gulp plugins. </p><br>    <h2 id="articleHeader5">Compilers </h2><br>    <ul><br>        <li><a href="https://github.com/plus3network/gulp-less" target="_blank" rel="external">gulp-less</a> - LESS in CSS. </li><br>        <li><a href="https://github.com/dlmanning/gulp-sass" target="_blank" rel="external">gulp-sass</a> - SASS/SCSS in СSS. </li><br>        <li><a href="https://github.com/appleboy/gulp-compass" target="_blank" rel="external">gulp-compass</a> - SASS with Compass in CSS. </li><br>        <li><a href="https://github.com/LearnBoost/stylus" target="_blank" rel="external">gulp-stylus</a> - Stylus in CSS. </li><br>        <li><a href="https://github.com/wearefractal/gulp-coffee" target="_blank" rel="external">gulp-coffee</a> - CoffeeScript in JavaScript. </li><br>        <li><a href="https://github.com/ivogabe/gulp-typescript" target="_blank" rel="external">gulp-typescript</a> - TypeScript in JavaScript. </li><br>        <li><a href="https://github.com/phated/gulp-jade" target="_blank" rel="external">gulp-jade</a> - Jade in HTML. </li><br>        <li><a href="https://github.com/lazd/gulp-handlebars" target="_blank" rel="external">gulp-handlebars</a> - Handlebars templates in JST. </li><br>        <li><a href="https://github.com/rdmurphy/gulp-jst" target="_blank" rel="external">gulp-jst</a> - Underscore templates in JST. </li><br>        <li><a href="https://github.com/sindresorhus/gulp-react" target="_blank" rel="external">gulp-react</a> - Facebook React’s JSX templates in JST. </li><br>        <li><a href="https://github.com/sindresorhus/gulp-nunjucks" target="_blank" rel="external">gulp-nunjucks</a> - Nunjucks templates in JST. </li><br>        <li><a href="https://github.com/sindresorhus/gulp-dust" target="_blank" rel="external">gulp-dustjs</a> - Dust templates in JST. </li><br>        <li><a href="https://github.com/miickel/gulp-angular-templatecache" target="_blank" rel="external">gulp-angular-templatecache</a> - AngularJS templates in JST. </li><br>    </ul><br>    <h2 id="articleHeader6">Finally </h2><br>    <ul><br>        <li><a href="https://github.com/addyosmani/psi" target="_blank" rel="external">psi</a> - PageSpeed Insights with reporting. </li><br>        <li><a href="https://github.com/addyosmani/tmi" target="_blank" rel="external">tmi</a> - TMI (Too Many Images) - discover your image weight on the web. </li><br>        <li><a href="https://ngrok.com/" target="_blank" rel="external">ngrok</a> - Introspected tunnels to localhost. </li><br>        <li><a href="https://github.com/sindresorhus/pageres" target="_blank" rel="external">pageres</a> - responsive website screenshots. </li><br>        <li><a href="https://github.com/tkellen/node-matchdep" target="_blank" rel="external">matchdep</a> - filter npm module dependencies. </li><br>        <li>Maybe some automatization methods you want to use directly in the editor, so look at the <a href="http://ipestov.com/the-best-plugins-for-sublime-text/" target="_blank" rel="external">The Best Plugins for Sublime Text</a>. </li><br>    </ul><br>    <a href="https://github.com/Pestov/essential-gulp-plugins" target="_blank" rel="external">https://github.com/Pestov/essential-gulp-plugins</a><br></article>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Gulp插件收藏&quot;&gt;&lt;a href=&quot;/2016/10/11/Gulp插件收藏/#Gulp插件收藏&quot; class=&quot;headerlink&quot; title=&quot;Gulp插件收藏&quot;&gt;&lt;/a&gt;Gulp插件收藏&lt;/h2&gt;&lt;article&gt;&lt;br&gt;    &lt;h2 id=&quot;art
+    
+    </summary>
+    
+    
+      <category term="gulp插件" scheme="https://zhaoy875.github.io/tags/gulp%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu 安装hexo博客</title>
+    <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
+    <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
+    <published>2016-10-11T05:50:43.000Z</published>
+    <updated>2016-10-26T10:25:41.895Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ubuntu-安装hexo博客"><a href="/2016/10/11/ubuntu安装hexo教程/#ubuntu-安装hexo博客" class="headerlink" title="ubuntu 安装hexo博客"></a>ubuntu 安装hexo博客</h1><h2 id="搭建nodejs-环境"><a href="/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt <span class="keyword">install</span> nodejs</div><div class="line">sudo apt <span class="keyword">install</span> npm</div></pre></td></tr></table></figure>
+<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
+<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
+<h3 id="安装hexo"><a href="/2016/10/11/ubuntu安装hexo教程/#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
+<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
+<p>hexo s 本地预览–over</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;ubuntu-安装hexo博客&quot;&gt;&lt;a href=&quot;/2016/10/11/ubuntu安装hexo教程/#ubuntu-安装hexo博客&quot; class=&quot;headerlink&quot; title=&quot;ubuntu 安装hexo博客&quot;&gt;&lt;/a&gt;ubuntu 安装hexo博
+    
+    </summary>
+    
+    
+      <category term="ubuntu" scheme="https://zhaoy875.github.io/tags/ubuntu/"/>
+    
+      <category term="hexo" scheme="https://zhaoy875.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>npm</title>
+    <link href="https://zhaoy875.github.io/2016/10/11/npm/"/>
+    <id>https://zhaoy875.github.io/2016/10/11/npm/</id>
+    <published>2016-10-11T05:50:43.000Z</published>
+    <updated>2016-10-26T19:16:15.189Z</updated>
+    
+    <content type="html"><![CDATA[<p>升级node.js的方法。node有一个模块叫n，专门用来管理node.js的版本的。<br>首先安装n模块：</p>
+<pre><code>npm install -g n
+</code></pre><p>第二步：<br>升级node.js到最新稳定版:</p>
+<pre><code>n stable
+</code></pre><p>几个npm的常用命令</p>
+<pre><code>npm install npm #即可安装最新版npm
+
+npm -v          #显示版本，检查npm 是否正确安装。 
+npm install express   #安装express模块 
+npm install -g express  #全局安装express模块 
+npm list         #列出已安装模块 
+npm show express     #显示模块详情 
+npm update        #升级当前目录下的项目的所有模块 
+npm update express    #升级当前目录下的项目的指定模块 
+npm update -g express  #升级全局安装的express模块 
+npm uninstall express  #删除指定的模块
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;升级node.js的方法。node有一个模块叫n，专门用来管理node.js的版本的。&lt;br&gt;首先安装n模块：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g n
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;第二步：&lt;br&gt;升级node.js到最新稳定版:&lt;/p&gt;
+&lt;pre
+    
+    </summary>
+    
+    
+      <category term="npm" scheme="https://zhaoy875.github.io/tags/npm/"/>
+    
+      <category term="nodejs" scheme="https://zhaoy875.github.io/tags/nodejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Music Time歌单分享</title>
+    <link href="https://zhaoy875.github.io/2016/09/20/music%E6%AD%8C%E5%8D%95/"/>
+    <id>https://zhaoy875.github.io/2016/09/20/music歌单/</id>
+    <published>2016-09-20T14:39:43.000Z</published>
+    <updated>2016-10-26T10:25:29.246Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="/2016/09/20/music歌单/#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe style="width:100%;min-height:260px;max-height:400px" id="musiciframe" src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=0&narrow=0" frameborder="0" scrolling="no"></iframe>
+
+<a id="more"></a>
+<h2 id="Interface-usage"><a href="/2016/09/20/music歌单/#Interface-usage" class="headerlink" title="Interface usage"></a>Interface usage</h2><p>歌单：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=1&amp;narrow=0"</span>  <span class="attribute">width</span>=<span class="string">"100%"</span>  frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
+<p>单首：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?song=408332757&amp;qssl=1&amp;qlrc=1&amp;autoplay=0"</span> <span class="attribute">width</span>=<span class="string">"100%"</span> frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="API"><a href="/2016/09/20/music歌单/#API" class="headerlink" title="API"></a>API</h2><p>使用iframe内嵌页面<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Demos:</span></div><div class="line"><span class="symbol"></span></div><div class="line">https:<span class="comment">//music.daoapp.io/iframe?song=287749&amp;qssl=1&amp;qlrc=1&amp;qnarrow=0&amp;max_width=50%&amp;autoplay=1</span></div><div class="line"><span class="symbol">https:</span><span class="comment">//music.daoapp.io/iframe?song=287749&amp;qnarrow=1&amp;qssl=1</span></div><div class="line"><span class="symbol">URL:</span> http(s):<span class="comment">//music.daoapp.io/ Donot use HTTPS if it's not necessary. But if you do, don't forget set qssl to 1. Method: GET The arguments are:</span></div><div class="line"></div><div class="line">album=album_id  		<span class="comment">//专辑id</span></div><div class="line">playlist=playlist_id    <span class="comment">//歌单id</span></div><div class="line">song=song_id            <span class="comment">//单首id</span></div><div class="line">program=program_id</div><div class="line">radio=radio_id</div><div class="line">mv=mv_id 				</div><div class="line">qssl=[<span class="number">0</span>|<span class="number">1</span>]            </div><div class="line">qlrc=[<span class="number">0</span>|<span class="number">1</span>]             <span class="comment">//歌词</span></div><div class="line">qnarrow=[<span class="number">0</span>|<span class="number">1</span>]</div><div class="line">max_width=[<span class="number">100</span>%|<span class="number">32</span>rem|<span class="number">400</span>px|something else]</div><div class="line">autoplay=[<span class="number">0</span>|<span class="number">1</span>]         <span class="comment">//自动播放</span></div></pre></td></tr></table></figure></p>
+<p>You must choose ONE of those six ids. And it means nothing if you choose more than one of them. You may use <a href="https://music.daoapp.io/" target="_blank" rel="external">The web interface</a> to find the id or use 163Music.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;网易云-基于163APlayer&quot;&gt;&lt;a href=&quot;#网易云-基于163APlayer&quot; class=&quot;headerlink&quot; title=&quot;网易云 基于163APlayer&quot;&gt;&lt;/a&gt;网易云 基于&lt;a href=&quot;https://github.com/YUX-IO/163music-APlayer-you-get-docker&quot;&gt;163APlayer&lt;/a&gt;&lt;/h2&gt;&lt;iframe style=&quot;width:100%;min-height:260px;max-height:400px&quot; id=&quot;musiciframe&quot; src=&quot;https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=0&amp;narrow=0&quot;  frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+    
+    </summary>
+    
+    
+      <category term="音乐" scheme="https://zhaoy875.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>json</title>
+    <link href="https://zhaoy875.github.io/2016/09/20/json/"/>
+    <id>https://zhaoy875.github.io/2016/09/20/json/</id>
+    <published>2016-09-20T14:39:43.000Z</published>
+    <updated>2016-12-04T17:00:39.889Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Json数组、对象赋值时，最后一个元素后面是否可以带逗号？"><a href="/2016/09/20/json/#Json数组、对象赋值时，最后一个元素后面是否可以带逗号？" class="headerlink" title="Json数组、对象赋值时，最后一个元素后面是否可以带逗号？"></a>Json数组、对象赋值时，最后一个元素后面是否可以带逗号？</h2><h3 id="1-C-C-Java-PHP都能容忍末尾的逗号"><a href="/2016/09/20/json/#1-C-C-Java-PHP都能容忍末尾的逗号" class="headerlink" title="1 C,C++,Java,PHP都能容忍末尾的逗号"></a>1 C,C++,Java,PHP都能容忍末尾的逗号</h3><p>C，C++，Java中对数组赋值时，最后一个元素末尾的逗号可有可无。下面两行代码对这些语言来说是等效的。</p>
+<pre><code>[code]int a[] = {1,2,3};      /* 正确 */
+int a[] = {1,2,3,};     /* 正确 */
+</code></pre><p>PHP这一点也继承了C的特点，下面的两行代码等效。</p>
+<pre><code>[code]$a = array(1,2,3); /* 正确 */
+$a = array(1,2,3,); /* 正确 */
+</code></pre><h3 id="2-JavaScript视末尾逗号为语法错误！"><a href="/2016/09/20/json/#2-JavaScript视末尾逗号为语法错误！" class="headerlink" title="2 JavaScript视末尾逗号为语法错误！"></a>2 JavaScript视末尾逗号为语法错误！</h3><p>然而到了JavaScript，情况大不相同了，最后一个元素末尾一定不能有逗号，否则就是语法错误。</p>
+<pre><code>[code]var a = new Array(1,2,3); //正确
+var a = new Array(1,2,3,); //报错
+</code></pre><p>对于对象，同样不能有末尾的逗号。</p>
+<pre><code>[code]var o = { name:&apos;赵&apos;, age:12 }; // 正确
+var o = { name:&apos;赵&apos;, age:12,}; // 报错
+</code></pre><p>尽管有些浏览器在检测到这种错误后，最大容忍地去执行，但这不是统一的行为。IE系列浏览器统统不能容忍这种错误。</p>
+<h3 id="3-JSON同样不能容忍末尾的逗号"><a href="/2016/09/20/json/#3-JSON同样不能容忍末尾的逗号" class="headerlink" title="3 JSON同样不能容忍末尾的逗号"></a>3 JSON同样不能容忍末尾的逗号</h3><pre><code>[code]{&quot;name&quot;:&quot;zhao&quot;, &quot;age&quot;:12}   // 正确的JSON格式
+{&quot;name&quot;:&quot;zhao&quot;, &quot;age&quot;:12,}  // 错误的JSON格式
+</code></pre><p>需要注意的是，JSON是一种通用数据格式，与具体编程语言无关。各种语言在解码JSON时，也会采用不同的容忍程度。PHP的json_decode()就不能容忍末尾的逗号。</p>
+<pre><code>[code]json_decode({&quot;name&quot;:&quot;zhao&quot;, &quot;age&quot;:12,}); // 解析会发生错误
+</code></pre><p>来源： <a href="http://www.aichengxu.com/view/3462172" target="_blank" rel="external">http://www.aichengxu.com/view/3462172</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Json数组、对象赋值时，最后一个元素后面是否可以带逗号？&quot;&gt;&lt;a href=&quot;/2016/09/20/json/#Json数组、对象赋值时，最后一个元素后面是否可以带逗号？&quot; class=&quot;headerlink&quot; title=&quot;Json数组、对象赋值时，最后一个
+    
+    </summary>
+    
+    
+      <category term="json" scheme="https://zhaoy875.github.io/tags/json/"/>
+    
+  </entry>
+  
+  <entry>
+    <title> gulp入门系列7--构建一个项目</title>
+    <link href="https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%977-%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE/"/>
+    <id>https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/</id>
+    <published>2016-09-20T09:42:20.000Z</published>
+    <updated>2016-12-07T12:27:49.818Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="使用-gulp-构建一个项目"><a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#使用-gulp-构建一个项目" class="headerlink" title="使用 gulp 构建一个项目"></a>使用 gulp 构建一个项目</h1><p>请务必理解前面的章节后阅读此章节：</p>
 <p><a href="https://github.com/nimojs/gulp-book/issues/16" target="_blank" rel="external">访问论坛获取帮助</a></p>
 <hr>
 <p>本章将介绍</p>
@@ -299,12 +518,12 @@
 <p>并将之前所有章节的内容组合起来编写一个前端项目所需的 gulp 代码。</p>
 <p>你可以在 <a href="https://github.com/nimojs/gulp-demo" target="_blank" rel="external">nimojs/gulp-demo</a> 查看完整代码。</p>
 <p>若你不了解npm 请务必阅读 <a href="http://javascript.ruanyifeng.com/nodejs/npm.html" target="_blank" rel="external">npm模块管理器</a></p>
-<h2 id="package-json"><a href="/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#package-json" class="headerlink" title="package.json"></a>package.json</h2><p>如果你熟悉 npm 则可以利用 <code>package.json</code> 保存所有 <code>npm install --save-dev gulp-xxx</code> 模块依赖和模块版本。</p>
+<h2 id="package-json"><a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#package-json" class="headerlink" title="package.json"></a>package.json</h2><p>如果你熟悉 npm 则可以利用 <code>package.json</code> 保存所有 <code>npm install --save-dev gulp-xxx</code> 模块依赖和模块版本。</p>
 <p>在命令行输入</p>
 <figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">npm</span> init</div></pre></td></tr></table></figure>
 <p>会依次要求补全项目信息，不清楚的可以直接回车跳过<br><figure class="highlight subunit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">name: (gulp-demo) </div><div class="line">version: (1.0.0) </div><div class="line">description: </div><div class="line">entry point: (index.js) </div><div class="line"><span class="keyword">test </span>command: </div><div class="line">...</div><div class="line">...</div><div class="line">Is this ok? (yes)</div></pre></td></tr></table></figure></p>
 <p>最终会在当前目录中创建 <code>package.json</code> 文件并生成类似如下代码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"name"</span>: <span class="string">"gulp-demo"</span>,</div><div class="line">  <span class="string">"version"</span>: <span class="string">"0.0.0"</span>,</div><div class="line">  <span class="string">"description"</span>: <span class="string">""</span>,</div><div class="line">  <span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="string">"repository"</span>: &#123;</div><div class="line">    <span class="string">"type"</span>: <span class="string">"git"</span>,</div><div class="line">    <span class="string">"url"</span>: <span class="string">"https://github.com/nimojs/gulp-demo.git"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="string">"keywords"</span>: [</div><div class="line">    <span class="string">"gulp"</span>,</div><div class="line">  ],</div><div class="line">  <span class="string">"author"</span>: <span class="string">"nimojs &lt;nimo.jser@gmail.com&gt;"</span>,</div><div class="line">  <span class="string">"license"</span>: <span class="string">"MIT"</span>,</div><div class="line">  <span class="string">"bugs"</span>: &#123;</div><div class="line">    <span class="string">"url"</span>: <span class="string">"https://github.com/nimojs/gulp-demo/issues"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="string">"homepage"</span>: <span class="string">"https://github.com/nimojs/gulp-demo"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="安装依赖"><a href="/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><p>安装 gulp 到项目（防止全局 gulp 升级后与此项目 <code>gulpfile.js</code> 代码不兼容）<br><figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install gulp --<span class="built_in">save</span>-<span class="built_in">dev</span></div></pre></td></tr></table></figure></p>
+<h3 id="安装依赖"><a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><p>安装 gulp 到项目（防止全局 gulp 升级后与此项目 <code>gulpfile.js</code> 代码不兼容）<br><figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install gulp --<span class="built_in">save</span>-<span class="built_in">dev</span></div></pre></td></tr></table></figure></p>
 <p>此时打开 <code>package.json</code> 会发现多了如下代码</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">"devDependencies"</span>: &#123;</div><div class="line">	<span class="string">"gulp"</span>: <span class="string">"^3.8.11"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>声明此项目的开发依赖 gulp</p>
@@ -316,22 +535,22 @@
 <p>此时，<a href="https://github.com/nimojs/gulp-demo/blob/master/package.json" target="_blank" rel="external">package.json</a> 将会更新<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="string">"devDependencies"</span>: &#123;</div><div class="line">    <span class="string">"colors"</span>: <span class="string">"^1.0.3"</span>,</div><div class="line">    <span class="string">"gulp"</span>: <span class="string">"^3.8.11"</span>,</div><div class="line">    <span class="string">"gulp-autoprefixer"</span>: <span class="string">"^2.1.0"</span>,</div><div class="line">    <span class="string">"gulp-imagemin"</span>: <span class="string">"^2.2.1"</span>,</div><div class="line">    <span class="string">"gulp-less"</span>: <span class="string">"^3.0.2"</span>,</div><div class="line">    <span class="string">"gulp-minify-css"</span>: <span class="string">"^1.0.0"</span>,</div><div class="line">    <span class="string">"gulp-ruby-sass"</span>: <span class="string">"^1.0.1"</span>,</div><div class="line">    <span class="string">"gulp-sourcemaps"</span>: <span class="string">"^1.5.1"</span>,</div><div class="line">    <span class="string">"gulp-uglify"</span>: <span class="string">"^1.1.0"</span>,</div><div class="line">    <span class="string">"gulp-watch-path"</span>: <span class="string">"^0.0.7"</span>,</div><div class="line">    <span class="string">"stream-combiner2"</span>: <span class="string">"^1.0.2"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>当你将这份 gulpfile.js 配置分享给你的朋友时，就不需要将 <code>node_modules/</code> 发送给他，他只需在命令行输入<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span></div></pre></td></tr></table></figure></p>
 <p>就可以检测 <code>package.json</code> 中的 <code>devDependencies</code> 并安装所有依赖。</p>
-<h2 id="设计目录结构"><a href="/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#设计目录结构" class="headerlink" title="设计目录结构"></a>设计目录结构</h2><p>我们将文件分为2类，一类是源码，一类是编译压缩后的版本。文件夹分别为 <code>src</code> 和 <code>dist</code>。(注意区分 <code>dist</code> 和 ·<code>dest</code> 的区别)</p>
+<h2 id="设计目录结构"><a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#设计目录结构" class="headerlink" title="设计目录结构"></a>设计目录结构</h2><p>我们将文件分为2类，一类是源码，一类是编译压缩后的版本。文件夹分别为 <code>src</code> 和 <code>dist</code>。(注意区分 <code>dist</code> 和 ·<code>dest</code> 的区别)</p>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">└── src/</div><div class="line">│</div><div class="line">└── <span class="built_in">dist</span>/</div></pre></td></tr></table></figure>
 <p><code>dist/</code> 目录下的文件都是根据 <code>src/</code> 下所有源码文件构建而成。</p>
 <p>在 <code>src/</code> 下创建前端资源对应的的文件夹</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">└── src/</div><div class="line">	├── less/    *<span class="selector-class">.less</span> 文件</div><div class="line">	├── sass/    *<span class="selector-class">.scss</span> *<span class="selector-class">.sass</span> 文件</div><div class="line">	├── css/     *<span class="selector-class">.css</span>  文件</div><div class="line">	├── js/      *<span class="selector-class">.js</span> 文件</div><div class="line">	├── fonts/   字体文件</div><div class="line">    └── images/   图片</div><div class="line">└── dist/</div></pre></td></tr></table></figure>
 <p>你可以点击 <a href="https://github.com/nimojs/gulp-demo/archive/master.zip" target="_blank" rel="external">nimojs/gulp-demo</a> 下载本章代码。</p>
-<h2 id="让命令行输出的文字带颜色"><a href="/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#让命令行输出的文字带颜色" class="headerlink" title="让命令行输出的文字带颜色"></a>让命令行输出的文字带颜色</h2><p>gulp 自带的输出都带时间和颜色，这样很容易识别。我们利用 <a href="https://github.com/gulpjs/gulp-util" target="_blank" rel="external">gulp-util</a> 实现同样的效果。</p>
+<h2 id="让命令行输出的文字带颜色"><a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#让命令行输出的文字带颜色" class="headerlink" title="让命令行输出的文字带颜色"></a>让命令行输出的文字带颜色</h2><p>gulp 自带的输出都带时间和颜色，这样很容易识别。我们利用 <a href="https://github.com/gulpjs/gulp-util" target="_blank" rel="external">gulp-util</a> 实现同样的效果。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>)</div><div class="line"><span class="keyword">var</span> gutil = <span class="built_in">require</span>(<span class="string">'gulp-util'</span>)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gutil.log(<span class="string">'message'</span>)</div><div class="line">    gutil.log(gutil.colors.red(<span class="string">'error'</span>))</div><div class="line">    gutil.log(gutil.colors.green(<span class="string">'message:'</span>) + <span class="string">"some"</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>使用 <code>gulp</code> 启动默认任务以测试<br><img src="https://cloud.githubusercontent.com/assets/3949015/7137629/a1def1b8-e2ed-11e4-83e0-5a6adb22de6f.png" alt="gulp-util"></p>
-<h2 id="配置-JS-任务"><a href="/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#配置-JS-任务" class="headerlink" title="配置 JS 任务"></a>配置 JS 任务</h2><h3 id="gulp-uglify"><a href="/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#gulp-uglify" class="headerlink" title="gulp-uglify"></a>gulp-uglify</h3><p>检测<code>src/js/</code>目录下的 js 文件修改后，压缩 <code>js/</code> 中所有 js 文件并输出到 <code>dist/js/</code> 中</p>
+<h2 id="配置-JS-任务"><a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#配置-JS-任务" class="headerlink" title="配置 JS 任务"></a>配置 JS 任务</h2><h3 id="gulp-uglify"><a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#gulp-uglify" class="headerlink" title="gulp-uglify"></a>gulp-uglify</h3><p>检测<code>src/js/</code>目录下的 js 文件修改后，压缩 <code>js/</code> 中所有 js 文件并输出到 <code>dist/js/</code> 中</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'uglifyjs'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.src(<span class="string">'src/js/**/*.js'</span>)</div><div class="line">        .pipe(uglify())</div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/js'</span>))</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'src/js/**/*.js'</span>, [<span class="string">'uglifyjs'</span>])</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p><code>src/js/**/*.js</code> 是 glob 语法。<a href="http://baike.baidu.com/view/4019153.htm" target="_blank" rel="external">百度百科：glob模式</a> 、<a href="https://github.com/isaacs/node-glob" target="_blank" rel="external">node-glob</a></p>
 <p>在命令行输入 <code>gulp</code> 后会出现如下消息，表示已经启动。<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[<span class="number">20</span><span class="symbol">:</span><span class="number">39</span><span class="symbol">:</span><span class="number">50</span>] Using gulpfile ~<span class="regexp">/Documents/code</span><span class="regexp">/gulp-book/demo</span><span class="regexp">/chapter7/gulpfile</span>.js</div><div class="line">[<span class="number">20</span><span class="symbol">:</span><span class="number">39</span><span class="symbol">:</span><span class="number">50</span>] Starting <span class="string">'default'</span>...</div><div class="line">[<span class="number">20</span><span class="symbol">:</span><span class="number">39</span><span class="symbol">:</span><span class="number">50</span>] Finished <span class="string">'default'</span> after <span class="number">13</span> ms</div></pre></td></tr></table></figure></p>
 <p>此时编辑 <a href="https://github.com/nimojs/gulp-demo/blob/master/src/js/log.js" target="_blank" rel="external">src/js/log.js</a> 文件并保存，命令行会出现如下消息，表示检测到 <code>src/js/**/*.js</code> 文件修改后重新编译所有 js。</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[<span class="number">20</span><span class="symbol">:</span><span class="number">39</span><span class="symbol">:</span><span class="number">52</span>] Starting <span class="string">'js'</span>...</div><div class="line">[<span class="number">20</span><span class="symbol">:</span><span class="number">39</span><span class="symbol">:</span><span class="number">52</span>] Finished <span class="string">'js'</span> after <span class="number">14</span> ms</div></pre></td></tr></table></figure>
-<h3 id="gulp-watch-path"><a href="/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#gulp-watch-path" class="headerlink" title="gulp-watch-path"></a>gulp-watch-path</h3><p>此配置有个性能问题，当 <code>gulp.watch</code> 检测到  <code>src/js/</code> 目录下的js文件有修改时会将所有文件全部编译。实际上我们只需要重新编译被修改的文件。</p>
+<h3 id="gulp-watch-path"><a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#gulp-watch-path" class="headerlink" title="gulp-watch-path"></a>gulp-watch-path</h3><p>此配置有个性能问题，当 <code>gulp.watch</code> 检测到  <code>src/js/</code> 目录下的js文件有修改时会将所有文件全部编译。实际上我们只需要重新编译被修改的文件。</p>
 <p>简单介绍 <code>gulp.watch</code> 第二个参数为 <code>function</code> 时的用法。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">gulp.watch(<span class="string">'src/js/**/*.js'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(event);</div><div class="line">    <span class="comment">/*</span></div><div class="line">	当修改 src/js/log.js 文件时</div><div class="line">    event &#123;</div><div class="line">		// 发生改变的类型，不管是添加，改变或是删除</div><div class="line">        type: 'changed', </div><div class="line">		// 触发事件的文件路径</div><div class="line">        path: '/Users/nimojs/Documents/code/gulp-book/demo/chapter7/src/js/log.js'</div><div class="line">    &#125;</div><div class="line">    */</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>我们可以利用 <code>event</code> 给到的信息，检测到某个 js 文件被修改时，只编写当前修改的 js 文件。</p>
@@ -368,7 +587,7 @@
 <p>此时编辑 <a href="https://github.com/nimojs/gulp-demo/blob/master/src/js/log.js" target="_blank" rel="external">src/js/log.js</a> 文件并保存，命令行会出现消息，表示检测到 <code>src/js/log.js</code> 文件修改后只重新编译 <code>log.js</code>。</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[<span class="number">21</span><span class="symbol">:</span><span class="number">47</span><span class="symbol">:</span><span class="number">25</span>] changed src/js/log.js</div><div class="line">[<span class="number">21</span><span class="symbol">:</span><span class="number">47</span><span class="symbol">:</span><span class="number">25</span>] Dist dist/js/log.js</div></pre></td></tr></table></figure>
 <p>你可以访问 <a href="https://github.com/nimojs/gulp-watch-path" target="_blank" rel="external">gulp-watch-path</a> 了解更多。</p>
-<h3 id="stream-combiner2"><a href="/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#stream-combiner2" class="headerlink" title="stream-combiner2"></a>stream-combiner2</h3><p>编辑 <code>log.js</code> 文件时，如果文件中有 js 语法错误时，gulp 会终止运行并报错。</p>
+<h3 id="stream-combiner2"><a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#stream-combiner2" class="headerlink" title="stream-combiner2"></a>stream-combiner2</h3><p>编辑 <code>log.js</code> 文件时，如果文件中有 js 语法错误时，gulp 会终止运行并报错。</p>
 <p>当 log.js 缺少 <code>)</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">log(<span class="string">'gulp-book'</span></div></pre></td></tr></table></figure></p>
 <p>并保存文件时出现如下错误，但是错误信息不全面。而且还会让 gulp 停止运行。</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">events.<span class="symbol">js:</span><span class="number">85</span></div><div class="line">      throw er; <span class="regexp">//</span> Unhandled <span class="string">'error'</span> event</div><div class="line">            ^</div><div class="line">Error</div><div class="line">    at new JS_Parse_Error (<span class="regexp">/Users/nimojs</span><span class="regexp">/Documents/code</span><span class="regexp">/gulp-book/demo</span><span class="regexp">/chapter7/node</span>_modules/gulp-uglify/node_modules/uglify-js/<span class="class"><span class="keyword">lib</span>/<span class="title">parse</span>.<span class="title">js</span>:189:18)</span></div><div class="line">...</div><div class="line">...</div><div class="line">js_error (<span class="regexp">/Users/nimojs</span><span class="regexp">/Documents/code</span><span class="regexp">/gulp-book/demo</span><span class="regexp">/chapter7/node</span>_modules/gulp-</div><div class="line">-book/demo/chapter7/node_modules/gulp-uglify/node_modules/uglify-js/<span class="class"><span class="keyword">lib</span>/<span class="title">parse</span>.<span class="title">js</span>:1165:20)</span></div><div class="line">    at maybe_unary (<span class="regexp">/Users/nimojs</span><span class="regexp">/Documents/code</span><span class="regexp">/gulp-book/demo</span><span class="regexp">/chapter7/node</span>_modules/gulp-uglify/node_modules/uglify-js/<span class="class"><span class="keyword">lib</span>/<span class="title">parse</span>.<span class="title">js</span>:1328:19)</span></div></pre></td></tr></table></figure>
@@ -377,7 +596,7 @@
 <p><a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter7/watchjs-1.js" target="_blank" rel="external">watchjs-1 完整代码</a></p>
 <p>此时当编译错误的语法时，命令行会出现错误提示。而且不会让 gulp 停止运行。</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="string">changed:</span>src<span class="regexp">/js/</span>log.js</div><div class="line"><span class="string">dist:</span>dist<span class="regexp">/js/</span>log.js</div><div class="line">--------------</div><div class="line">Error!</div><div class="line"><span class="string">fileName:</span> <span class="regexp">/Users/</span>nimojs<span class="regexp">/Documents/</span>code<span class="regexp">/gulp-book/</span>demo<span class="regexp">/chapter7/</span>src<span class="regexp">/js/</span>log.js</div><div class="line"><span class="string">lineNumber:</span> <span class="number">7</span></div><div class="line"><span class="string">message:</span> <span class="regexp">/Users/</span>nimojs<span class="regexp">/Documents/</span>code<span class="regexp">/gulp-book/</span>demo<span class="regexp">/chapter7/</span>src<span class="regexp">/js/</span>log.<span class="string">js:</span> Unexpected token eof «undefined», expected punc «,»</div><div class="line"><span class="string">plugin:</span> gulp-uglify</div></pre></td></tr></table></figure>
-<h3 id="gulp-sourcemaps"><a href="/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#gulp-sourcemaps" class="headerlink" title="gulp-sourcemaps"></a>gulp-sourcemaps</h3><p>JS 压缩前和压缩后比较<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 压缩前</span></div><div class="line"><span class="keyword">var</span> log = <span class="function"><span class="keyword">function</span> (<span class="params">msg</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'--------'</span>);</div><div class="line">    <span class="built_in">console</span>.log(msg)</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'--------'</span>);</div><div class="line">&#125;</div><div class="line">log(&#123;a:<span class="number">1</span>&#125;)</div><div class="line">log(<span class="string">'gulp-book'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 压缩后</span></div><div class="line"><span class="keyword">var</span> log=<span class="function"><span class="keyword">function</span>(<span class="params">o</span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">"--------"</span>),<span class="built_in">console</span>.log(o),<span class="built_in">console</span>.log(<span class="string">"--------"</span>)&#125;;log(&#123;a:<span class="number">1</span>&#125;),log(<span class="string">"gulp-book"</span>);</div></pre></td></tr></table></figure></p>
+<h3 id="gulp-sourcemaps"><a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#gulp-sourcemaps" class="headerlink" title="gulp-sourcemaps"></a>gulp-sourcemaps</h3><p>JS 压缩前和压缩后比较<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 压缩前</span></div><div class="line"><span class="keyword">var</span> log = <span class="function"><span class="keyword">function</span> (<span class="params">msg</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'--------'</span>);</div><div class="line">    <span class="built_in">console</span>.log(msg)</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'--------'</span>);</div><div class="line">&#125;</div><div class="line">log(&#123;a:<span class="number">1</span>&#125;)</div><div class="line">log(<span class="string">'gulp-book'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 压缩后</span></div><div class="line"><span class="keyword">var</span> log=<span class="function"><span class="keyword">function</span>(<span class="params">o</span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">"--------"</span>),<span class="built_in">console</span>.log(o),<span class="built_in">console</span>.log(<span class="string">"--------"</span>)&#125;;log(&#123;a:<span class="number">1</span>&#125;),log(<span class="string">"gulp-book"</span>);</div></pre></td></tr></table></figure></p>
 <p>压缩后的代码不存在换行符和空白符，导致出错后很难调试，好在我们可以使用 <a href="http://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html" target="_blank" rel="external">sourcemap</a> 帮助调试</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> sourcemaps = <span class="built_in">require</span>(<span class="string">'gulp-sourcemaps'</span>)</div><div class="line"><span class="comment">// ...</span></div><div class="line"><span class="keyword">var</span> combined = combiner.obj([</div><div class="line">    gulp.src(paths.srcPath),</div><div class="line">    sourcemaps.init(),</div><div class="line">    uglify(),</div><div class="line">    sourcemaps.write(<span class="string">'./'</span>),</div><div class="line">    gulp.dest(paths.distDir)</div><div class="line">])</div><div class="line"><span class="comment">// ...</span></div></pre></td></tr></table></figure>
 <p><a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter7/watchjs-1.js" target="_blank" rel="external">watchjs-2 完整代码</a></p>
@@ -387,10 +606,10 @@
 <p>有时我们也需要一次编译所有 js 文件。可以配置 <code>uglifyjs</code> 任务。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'uglifyjs'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> combined = combiner.obj([</div><div class="line">        gulp.src(<span class="string">'src/js/**/*.js'</span>),</div><div class="line">        sourcemaps.init(),</div><div class="line">        uglify(),</div><div class="line">        sourcemaps.write(<span class="string">'./'</span>),</div><div class="line">        gulp.dest(<span class="string">'dist/js/'</span>)</div><div class="line">    ])</div><div class="line">    combined.on(<span class="string">'error'</span>, handleError)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>在命令行输入 <code>gulp uglifyjs</code> 以压缩 <code>src/js/</code> 下的所有 js 文件。</p>
-<h2 id="配置-CSS-任务"><a href="/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#配置-CSS-任务" class="headerlink" title="配置 CSS 任务"></a>配置 CSS 任务</h2><p>有时我们不想使用 LESS 或 SASS而是直接编写 CSS，但我们需要压缩 CSS 以提高页面加载速度。</p>
-<h3 id="gulp-minify-css"><a href="/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#gulp-minify-css" class="headerlink" title="gulp-minify-css"></a>gulp-minify-css</h3><p>按照本章中压缩 JS 的方式，先编写 <code>watchcss</code> 任务</p>
+<h2 id="配置-CSS-任务"><a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#配置-CSS-任务" class="headerlink" title="配置 CSS 任务"></a>配置 CSS 任务</h2><p>有时我们不想使用 LESS 或 SASS而是直接编写 CSS，但我们需要压缩 CSS 以提高页面加载速度。</p>
+<h3 id="gulp-minify-css"><a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#gulp-minify-css" class="headerlink" title="gulp-minify-css"></a>gulp-minify-css</h3><p>按照本章中压缩 JS 的方式，先编写 <code>watchcss</code> 任务</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> minifycss = <span class="built_in">require</span>(<span class="string">'gulp-minify-css'</span>)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'watchcss'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'src/css/**/*.css'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> paths = watchPath(event, <span class="string">'src/'</span>, <span class="string">'dist/'</span>)</div><div class="line"></div><div class="line">		gutil.log(gutil.colors.green(event.type) + <span class="string">' '</span> + paths.srcPath)</div><div class="line">        gutil.log(<span class="string">'Dist '</span> + paths.distPath)</div><div class="line"></div><div class="line">        gulp.src(paths.srcPath)</div><div class="line">            .pipe(sourcemaps.init())</div><div class="line">            .pipe(minifycss())</div><div class="line">            .pipe(sourcemaps.write(<span class="string">'./'</span>))</div><div class="line">            .pipe(gulp.dest(paths.distDir))</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'watchjs'</span>,<span class="string">'watchcss'</span>])</div></pre></td></tr></table></figure>
-<h3 id="gulp-autoprefixer"><a href="/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#gulp-autoprefixer" class="headerlink" title="gulp-autoprefixer"></a>gulp-autoprefixer</h3><p>autoprefixer 解析 CSS 文件并且添加浏览器前缀到CSS规则里。<br>通过示例帮助理解 </p>
+<h3 id="gulp-autoprefixer"><a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#gulp-autoprefixer" class="headerlink" title="gulp-autoprefixer"></a>gulp-autoprefixer</h3><p>autoprefixer 解析 CSS 文件并且添加浏览器前缀到CSS规则里。<br>通过示例帮助理解 </p>
 <p>autoprefixer 处理前：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.demo</span> &#123;</div><div class="line">    <span class="attribute">display</span>:flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>autoprefixer 处理后：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.demo</span> &#123;</div><div class="line">    <span class="attribute">display</span>:-webkit-flex;</div><div class="line">    <span class="attribute">display</span>:-ms-flexbox;</div><div class="line">    <span class="attribute">display</span>:flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>你只需要关心编写标准语法的 css，autoprefixer 会自动补全。</p>
@@ -400,14 +619,14 @@
 <p>有时我们也需要一次编译所有 css 文件。可以配置 <code>minifyss</code> 任务。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'minifycss'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.src(<span class="string">'src/css/**/*.css'</span>)</div><div class="line">        .pipe(sourcemaps.init())</div><div class="line">        .pipe(autoprefixer(&#123;</div><div class="line">          browsers: <span class="string">'last 2 versions'</span></div><div class="line">        &#125;))</div><div class="line">        .pipe(minifycss())</div><div class="line">        .pipe(sourcemaps.write(<span class="string">'./'</span>))</div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/css/'</span>))</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>在命令行输入 <code>gulp minifyss</code> 以压缩 <code>src/css/</code> 下的所有 .css 文件并复制到 <code>dist/css</code> 目录下</p>
-<h2 id="配置-Less-任务"><a href="/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#配置-Less-任务" class="headerlink" title="配置 Less 任务"></a>配置 Less 任务</h2><p>参考配置 JavaScript 任务的方式配置 less 任务</p>
+<h2 id="配置-Less-任务"><a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#配置-Less-任务" class="headerlink" title="配置 Less 任务"></a>配置 Less 任务</h2><p>参考配置 JavaScript 任务的方式配置 less 任务</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> less = <span class="built_in">require</span>(<span class="string">'gulp-less'</span>)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'watchless'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'src/less/**/*.less'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> paths = watchPath(event, <span class="string">'src/less/'</span>, <span class="string">'dist/css/'</span>)</div><div class="line"></div><div class="line">		gutil.log(gutil.colors.green(event.type) + <span class="string">' '</span> + paths.srcPath)</div><div class="line">        gutil.log(<span class="string">'Dist '</span> + paths.distPath)</div><div class="line">        <span class="keyword">var</span> combined = combiner.obj([</div><div class="line">            gulp.src(paths.srcPath),</div><div class="line">            sourcemaps.init(),</div><div class="line">            autoprefixer(&#123;</div><div class="line">              browsers: <span class="string">'last 2 versions'</span></div><div class="line">            &#125;),</div><div class="line">            less(),</div><div class="line">            minifycss(),</div><div class="line">            sourcemaps.write(<span class="string">'./'</span>),</div><div class="line">            gulp.dest(paths.distDir)</div><div class="line">        ])</div><div class="line">        combined.on(<span class="string">'error'</span>, handleError)</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'lesscss'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> combined = combiner.obj([</div><div class="line">            gulp.src(<span class="string">'src/less/**/*.less'</span>),</div><div class="line">            sourcemaps.init(),</div><div class="line">            autoprefixer(&#123;</div><div class="line">              browsers: <span class="string">'last 2 versions'</span></div><div class="line">            &#125;),</div><div class="line">            less(),</div><div class="line">            minifycss(),</div><div class="line">            sourcemaps.write(<span class="string">'./'</span>),</div><div class="line">            gulp.dest(<span class="string">'dist/css/'</span>)</div><div class="line">        ])</div><div class="line">    combined.on(<span class="string">'error'</span>, handleError)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'watchjs'</span>, <span class="string">'watchcss'</span>, <span class="string">'watchless'</span>])</div></pre></td></tr></table></figure>
-<h2 id="配置-Sass-任务"><a href="/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#配置-Sass-任务" class="headerlink" title="配置 Sass 任务"></a>配置 Sass 任务</h2><p>参考配置 JavaScript 任务的方式配置 Sass 任务</p>
+<h2 id="配置-Sass-任务"><a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#配置-Sass-任务" class="headerlink" title="配置 Sass 任务"></a>配置 Sass 任务</h2><p>参考配置 JavaScript 任务的方式配置 Sass 任务</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'watchsass'</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'src/sass/**/*'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> paths = watchPath(event, <span class="string">'src/sass/'</span>, <span class="string">'dist/css/'</span>)</div><div class="line"></div><div class="line">		gutil.log(gutil.colors.green(event.type) + <span class="string">' '</span> + paths.srcPath)</div><div class="line">        gutil.log(<span class="string">'Dist '</span> + paths.distPath)</div><div class="line">        sass(paths.srcPath)</div><div class="line">            .on(<span class="string">'error'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</div><div class="line">                <span class="built_in">console</span>.error(<span class="string">'Error!'</span>, err.message);</div><div class="line">            &#125;)</div><div class="line">            .pipe(sourcemaps.init())</div><div class="line">            .pipe(minifycss())</div><div class="line">            .pipe(autoprefixer(&#123;</div><div class="line">              browsers: <span class="string">'last 2 versions'</span></div><div class="line">            &#125;))</div><div class="line">            .pipe(sourcemaps.write(<span class="string">'./'</span>))</div><div class="line">            .pipe(gulp.dest(paths.distDir))</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'sasscss'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        sass(<span class="string">'src/sass/'</span>)</div><div class="line">        .on(<span class="string">'error'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.error(<span class="string">'Error!'</span>, err.message);</div><div class="line">        &#125;)</div><div class="line">        .pipe(sourcemaps.init())</div><div class="line">        .pipe(minifycss())</div><div class="line">        .pipe(autoprefixer(&#123;</div><div class="line">          browsers: <span class="string">'last 2 versions'</span></div><div class="line">        &#125;))</div><div class="line">        .pipe(sourcemaps.write(<span class="string">'./'</span>))</div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/css'</span>))</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'watchjs'</span>, <span class="string">'watchcss'</span>, <span class="string">'watchless'</span>, <span class="string">'watchsass'</span>, <span class="string">'watchsass'</span>])</div></pre></td></tr></table></figure>
-<h2 id="配置-image-任务"><a href="/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#配置-image-任务" class="headerlink" title="配置 image 任务"></a>配置 image 任务</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> imagemin = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'watchimage'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'src/images/**/*'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> paths = watchPath(event,<span class="string">'src/'</span>,<span class="string">'dist/'</span>)</div><div class="line"></div><div class="line">		gutil.log(gutil.colors.green(event.type) + <span class="string">' '</span> + paths.srcPath)</div><div class="line">        gutil.log(<span class="string">'Dist '</span> + paths.distPath)</div><div class="line"></div><div class="line">        gulp.src(paths.srcPath)</div><div class="line">            .pipe(imagemin(&#123;</div><div class="line">                progressive: <span class="literal">true</span></div><div class="line">            &#125;))</div><div class="line">            .pipe(gulp.dest(paths.distDir))</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'image'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.src(<span class="string">'src/images/**/*'</span>)</div><div class="line">        .pipe(imagemin(&#123;</div><div class="line">            progressive: <span class="literal">true</span></div><div class="line">        &#125;))</div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/images'</span>))</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h2 id="配置文件复制任务"><a href="/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#配置文件复制任务" class="headerlink" title="配置文件复制任务"></a>配置文件复制任务</h2><p>复制 <code>src/fonts/</code> 文件到 <code>dist/</code> 中</p>
+<h2 id="配置-image-任务"><a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#配置-image-任务" class="headerlink" title="配置 image 任务"></a>配置 image 任务</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> imagemin = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'watchimage'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'src/images/**/*'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> paths = watchPath(event,<span class="string">'src/'</span>,<span class="string">'dist/'</span>)</div><div class="line"></div><div class="line">		gutil.log(gutil.colors.green(event.type) + <span class="string">' '</span> + paths.srcPath)</div><div class="line">        gutil.log(<span class="string">'Dist '</span> + paths.distPath)</div><div class="line"></div><div class="line">        gulp.src(paths.srcPath)</div><div class="line">            .pipe(imagemin(&#123;</div><div class="line">                progressive: <span class="literal">true</span></div><div class="line">            &#125;))</div><div class="line">            .pipe(gulp.dest(paths.distDir))</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'image'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.src(<span class="string">'src/images/**/*'</span>)</div><div class="line">        .pipe(imagemin(&#123;</div><div class="line">            progressive: <span class="literal">true</span></div><div class="line">        &#125;))</div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/images'</span>))</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="配置文件复制任务"><a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#配置文件复制任务" class="headerlink" title="配置文件复制任务"></a>配置文件复制任务</h2><p>复制 <code>src/fonts/</code> 文件到 <code>dist/</code> 中</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'watchcopy'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'src/fonts/**/*'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> paths = watchPath(event)</div><div class="line"></div><div class="line">		gutil.log(gutil.colors.green(event.type) + <span class="string">' '</span> + paths.srcPath)</div><div class="line">        gutil.log(<span class="string">'Dist '</span> + paths.distPath)</div><div class="line"></div><div class="line">        gulp.src(paths.srcPath)</div><div class="line">            .pipe(gulp.dest(paths.distDir))</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'copy'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.src(<span class="string">'src/fonts/**/*'</span>)</div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/fonts/'</span>))</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'watchjs'</span>, <span class="string">'watchcss'</span>, <span class="string">'watchless'</span>, <span class="string">'watchsass'</span>, <span class="string">'watchimage'</span>, <span class="string">'watchcopy'</span>])</div></pre></td></tr></table></figure>
-<h2 id="结语"><a href="/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#结语" class="headerlink" title="结语"></a>结语</h2><p><a href="https://github.com/nimojs/gulp-demo/tree/master/gulpfile.js" target="_blank" rel="external">完整代码</a></p>
+<h2 id="结语"><a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#结语" class="headerlink" title="结语"></a>结语</h2><p><a href="https://github.com/nimojs/gulp-demo/tree/master/gulpfile.js" target="_blank" rel="external">完整代码</a></p>
 <p><a href="https://github.com/nimojs/gulp-book/issues/16" target="_blank" rel="external">访问论坛获取帮助</a></p>
 <p>你还想了解什么关于 gulp 的什么知识？ <a href="https://github.com/nimojs/gulp-book/issues/8" target="_blank" rel="external">告诉我们</a></p>
 <p>后续还会又新章节更新。你可以<a href="https://github.com/nimojs/gulp-book/issues/7" target="_blank" rel="external">订阅本书</a> 当有新章节发布时，我们会通过邮件告诉你</p>
@@ -415,7 +634,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;使用-gulp-构建一个项目&quot;&gt;&lt;a href=&quot;/2016/10/20/gulp教程-gulp入门系列7-构建一个项目/#使用-gulp-构建一个项目&quot; class=&quot;headerlink&quot; title=&quot;使用 gulp 构建一个项目&quot;&gt;&lt;/a&gt;使用 gulp 
+      &lt;h1 id=&quot;使用-gulp-构建一个项目&quot;&gt;&lt;a href=&quot;/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#使用-gulp-构建一个项目&quot; class=&quot;headerlink&quot; title=&quot;使用 gulp 构建一个项目&quot;&gt;&lt;/a&gt;使用 gulp 
     
     </summary>
     
@@ -428,19 +647,19 @@
   
   <entry>
     <title> gulp入门系列6--编译 Sass</title>
-    <link href="https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%976-%E7%BC%96%E8%AF%91-Sass/"/>
-    <id>https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列6-编译-Sass/</id>
-    <published>2016-10-20T09:40:23.000Z</published>
-    <updated>2016-10-30T08:25:11.075Z</updated>
+    <link href="https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%976-%E7%BC%96%E8%AF%91-Sass/"/>
+    <id>https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列6-编译-Sass/</id>
+    <published>2016-09-20T09:40:23.000Z</published>
+    <updated>2016-12-07T12:27:41.346Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="使用-gulp-编译-Sass"><a href="/2016/10/20/gulp教程-gulp入门系列6-编译-Sass/#使用-gulp-编译-Sass" class="headerlink" title="使用 gulp 编译 Sass"></a>使用 gulp 编译 Sass</h1><blockquote>
+    <content type="html"><![CDATA[<h1 id="使用-gulp-编译-Sass"><a href="/2016/09/20/gulp教程-gulp入门系列6-编译-Sass/#使用-gulp-编译-Sass" class="headerlink" title="使用 gulp 编译 Sass"></a>使用 gulp 编译 Sass</h1><blockquote>
 <p>无论是 <code>node-sass</code> 还是 <code>ruby-sass</code> 使用 npm 安装都非常的慢，甚至会装不上。及其不利于团队协作。建议使用 less 作为 css 预处理器。<br>如果因为 less 不支持自定义函数选择用 sass 可以使用 <a href="https://github.com/seven-phases-max/less-plugin-functions" target="_blank" rel="external">less-plugin-functions</a> 让 less 支持自定义函数。</p>
 </blockquote>
-<h2 id="gulp-sass"><a href="/2016/10/20/gulp教程-gulp入门系列6-编译-Sass/#gulp-sass" class="headerlink" title="gulp-sass"></a>gulp-sass</h2><p>本章使用的是 ruby-sass 如果你不方便安装 ruby 或编译速度慢，建议使用 <a href="https://github.com/dlmanning/gulp-sass" target="_blank" rel="external">gulp-sass</a></p>
+<h2 id="gulp-sass"><a href="/2016/09/20/gulp教程-gulp入门系列6-编译-Sass/#gulp-sass" class="headerlink" title="gulp-sass"></a>gulp-sass</h2><p>本章使用的是 ruby-sass 如果你不方便安装 ruby 或编译速度慢，建议使用 <a href="https://github.com/dlmanning/gulp-sass" target="_blank" rel="external">gulp-sass</a></p>
 <p>请务必理解如下章节后阅读此章节：</p>
 <ol>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列6-编译-Sass/chapter1.md">安装 Node 和 gulp</a></li>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列6-编译-Sass/chapter2.md">使用 gulp 压缩 JS</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列6-编译-Sass/chapter1.md">安装 Node 和 gulp</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列6-编译-Sass/chapter2.md">使用 gulp 压缩 JS</a></li>
 </ol>
 <p><a href="https://github.com/nimojs/gulp-book/issues/15" target="_blank" rel="external">访问论坛获取帮助</a></p>
 <hr>
@@ -448,10 +667,10 @@
 <p>Sass 是一种 CSS 的开发工具，提供了许多便利的写法，大大节省了开发者的时间，使得 CSS 的开发，变得简单和可维护。</p>
 </blockquote>
 <p>本章使用 <code>ruby-sass</code> 编译 css,若你没有安装 ruby 和 sass 请移步 <a href="https://github.com/nimojs/blog/issues/14" target="_blank" rel="external">使用ruby.taobao安装 Sass</a></p>
-<h2 id="安装"><a href="/2016/10/20/gulp教程-gulp入门系列6-编译-Sass/#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> gulp-ruby-sass</div></pre></td></tr></table></figure>
-<h2 id="基本用法"><a href="/2016/10/20/gulp教程-gulp入门系列6-编译-Sass/#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>你可以 <a href="https://github.com/nimojs/gulp-book/archive/master.zip" target="_blank" rel="external">下载所有示例代码</a> 或 <a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter6" target="_blank" rel="external">在线查看代码</a></p>
+<h2 id="安装"><a href="/2016/09/20/gulp教程-gulp入门系列6-编译-Sass/#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> gulp-ruby-sass</div></pre></td></tr></table></figure>
+<h2 id="基本用法"><a href="/2016/09/20/gulp教程-gulp入门系列6-编译-Sass/#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>你可以 <a href="https://github.com/nimojs/gulp-book/archive/master.zip" target="_blank" rel="external">下载所有示例代码</a> 或 <a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter6" target="_blank" rel="external">在线查看代码</a></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取 gulp</span></div><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>)</div><div class="line"><span class="comment">// 获取 gulp-ruby-sass 模块</span></div><div class="line"><span class="keyword">var</span> sass = <span class="built_in">require</span>(<span class="string">'gulp-ruby-sass'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 编译sass</span></div><div class="line"><span class="comment">// 在命令行输入 gulp sass 启动此任务</span></div><div class="line">gulp.task(<span class="string">'sass'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> sass(<span class="string">'sass/'</span>) </div><div class="line">    .on(<span class="string">'error'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.error(<span class="string">'Error!'</span>, err.message);</div><div class="line">   &#125;)</div><div class="line">    .pipe(gulp.dest(<span class="string">'dist/css'</span>))</div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 在命令行使用 gulp auto 启动此任务</span></div><div class="line">gulp.task(<span class="string">'auto'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 监听文件修改，当文件被修改则执行 images 任务</span></div><div class="line">    gulp.watch(<span class="string">'sass/**/*.scss'</span>, [<span class="string">'sass'</span>])</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 使用 gulp.task('default') 定义默认任务</span></div><div class="line"><span class="comment">// 在命令行使用 gulp 启动 sass 任务和 auto 任务</span></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'sass'</span>, <span class="string">'auto'</span>])</div></pre></td></tr></table></figure>
-<h2 id="Sass-代码和编译后的-CSS-代码"><a href="/2016/10/20/gulp教程-gulp入门系列6-编译-Sass/#Sass-代码和编译后的-CSS-代码" class="headerlink" title="Sass 代码和编译后的 CSS 代码"></a>Sass 代码和编译后的 CSS 代码</h2><p><a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter6/sass/a.scss" target="_blank" rel="external">sass/a.scss</a></p>
+<h2 id="Sass-代码和编译后的-CSS-代码"><a href="/2016/09/20/gulp教程-gulp入门系列6-编译-Sass/#Sass-代码和编译后的-CSS-代码" class="headerlink" title="Sass 代码和编译后的 CSS 代码"></a>Sass 代码和编译后的 CSS 代码</h2><p><a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter6/sass/a.scss" target="_blank" rel="external">sass/a.scss</a></p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.sass&#123;</div><div class="line">	a&#123;</div><div class="line">        color:pink;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter6/sass/import.scss" target="_blank" rel="external">sass/import.scss</a></p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@import "a.scss";</div><div class="line">.import&#123;</div><div class="line">	a&#123;</div><div class="line">		color:red;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -460,12 +679,12 @@
 <p><a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter6/dist/css/import.css" target="_blank" rel="external">sass/import.css</a></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.sass</span> <span class="selector-tag">a</span> &#123;</div><div class="line">  <span class="attribute">color</span>: pink;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.import</span> <span class="selector-tag">a</span>&#123;</div><div class="line">  <span class="attribute">color</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><a href="https://github.com/nimojs/gulp-book/issues/15" target="_blank" rel="external">访问论坛获取帮助</a></p>
-<p><a href="/2016/10/20/gulp教程-gulp入门系列6-编译-Sass/chapter7.md">接着阅读：使用 gulp 开发一个项目</a></p>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列6-编译-Sass/chapter7.md">接着阅读：使用 gulp 开发一个项目</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;使用-gulp-编译-Sass&quot;&gt;&lt;a href=&quot;/2016/10/20/gulp教程-gulp入门系列6-编译-Sass/#使用-gulp-编译-Sass&quot; class=&quot;headerlink&quot; title=&quot;使用 gulp 编译 Sass&quot;&gt;&lt;/a&gt;使用 g
+      &lt;h1 id=&quot;使用-gulp-编译-Sass&quot;&gt;&lt;a href=&quot;/2016/09/20/gulp教程-gulp入门系列6-编译-Sass/#使用-gulp-编译-Sass&quot; class=&quot;headerlink&quot; title=&quot;使用 gulp 编译 Sass&quot;&gt;&lt;/a&gt;使用 g
     
     </summary>
     
@@ -478,26 +697,26 @@
   
   <entry>
     <title> gulp入门系列5--编译 LESS</title>
-    <link href="https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%975-%E7%BC%96%E8%AF%91-LESS/"/>
-    <id>https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列5-编译-LESS/</id>
-    <published>2016-10-20T09:37:00.000Z</published>
-    <updated>2016-10-30T08:24:31.120Z</updated>
+    <link href="https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%975-%E7%BC%96%E8%AF%91-LESS/"/>
+    <id>https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列5-编译-LESS/</id>
+    <published>2016-09-20T09:37:00.000Z</published>
+    <updated>2016-12-07T12:27:34.311Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="使用-gulp-编译-LESS"><a href="/2016/10/20/gulp教程-gulp入门系列5-编译-LESS/#使用-gulp-编译-LESS" class="headerlink" title="使用 gulp 编译 LESS"></a>使用 gulp 编译 LESS</h1><p><a href="https://github.com/nimojs/gulp-book/issues/14" target="_blank" rel="external">访问论坛获取帮助</a></p>
+    <content type="html"><![CDATA[<h1 id="使用-gulp-编译-LESS"><a href="/2016/09/20/gulp教程-gulp入门系列5-编译-LESS/#使用-gulp-编译-LESS" class="headerlink" title="使用 gulp 编译 LESS"></a>使用 gulp 编译 LESS</h1><p><a href="https://github.com/nimojs/gulp-book/issues/14" target="_blank" rel="external">访问论坛获取帮助</a></p>
 <p>请务必理解如下章节后阅读此章节：</p>
 <ol>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列5-编译-LESS/chapter1.md">安装 Node 和 gulp</a></li>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列5-编译-LESS/chapter2.md">使用 gulp 压缩 JS</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列5-编译-LESS/chapter1.md">安装 Node 和 gulp</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列5-编译-LESS/chapter2.md">使用 gulp 压缩 JS</a></li>
 </ol>
 <hr>
 <blockquote>
 <p>Less 是一门 CSS 预处理语言，它扩充了 CSS 语言，增加了诸如变量、混合（mixin）、函数等功能，让 CSS 更易维护。</p>
 </blockquote>
-<h2 id="安装"><a href="/2016/10/20/gulp教程-gulp入门系列5-编译-LESS/#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> gulp-<span class="keyword">less</span></div></pre></td></tr></table></figure>
-<h2 id="基本用法"><a href="/2016/10/20/gulp教程-gulp入门系列5-编译-LESS/#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>你可以 <a href="https://github.com/nimojs/gulp-book/archive/master.zip" target="_blank" rel="external">下载所有示例代码</a> - <a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter5" target="_blank" rel="external">或在线查看代码</a></p>
+<h2 id="安装"><a href="/2016/09/20/gulp教程-gulp入门系列5-编译-LESS/#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> gulp-<span class="keyword">less</span></div></pre></td></tr></table></figure>
+<h2 id="基本用法"><a href="/2016/09/20/gulp教程-gulp入门系列5-编译-LESS/#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>你可以 <a href="https://github.com/nimojs/gulp-book/archive/master.zip" target="_blank" rel="external">下载所有示例代码</a> - <a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter5" target="_blank" rel="external">或在线查看代码</a></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取 gulp</span></div><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>)</div><div class="line"><span class="comment">// 获取 gulp-less 模块</span></div><div class="line"><span class="keyword">var</span> less = <span class="built_in">require</span>(<span class="string">'gulp-less'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 编译less</span></div><div class="line"><span class="comment">// 在命令行输入 gulp less 启动此任务</span></div><div class="line">gulp.task(<span class="string">'less'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 1. 找到 less 文件</span></div><div class="line">    gulp.src(<span class="string">'less/**.less'</span>)</div><div class="line">    <span class="comment">// 2. 编译为css</span></div><div class="line">        .pipe(less())</div><div class="line">    <span class="comment">// 3. 另存文件</span></div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/css'</span>))</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 在命令行使用 gulp auto 启动此任务</span></div><div class="line">gulp.task(<span class="string">'auto'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 监听文件修改，当文件被修改则执行 less 任务</span></div><div class="line">    gulp.watch(<span class="string">'less/**.less'</span>, [<span class="string">'less'</span>])</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 使用 gulp.task('default') 定义默认任务</span></div><div class="line"><span class="comment">// 在命令行使用 gulp 启动 less 任务和 auto 任务</span></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'less'</span>, <span class="string">'auto'</span>])</div></pre></td></tr></table></figure>
 <p>你可以访问 <a href="https://github.com/plus3network/gulp-less" target="_blank" rel="external">gulp-less</a> 以查看更多用法。</p>
-<h2 id="LESS-代码和编译后的CSS代码"><a href="/2016/10/20/gulp教程-gulp入门系列5-编译-LESS/#LESS-代码和编译后的CSS代码" class="headerlink" title="LESS 代码和编译后的CSS代码"></a>LESS 代码和编译后的CSS代码</h2><p><a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter5/less/a.less" target="_blank" rel="external">less/a.less</a></p>
+<h2 id="LESS-代码和编译后的CSS代码"><a href="/2016/09/20/gulp教程-gulp入门系列5-编译-LESS/#LESS-代码和编译后的CSS代码" class="headerlink" title="LESS 代码和编译后的CSS代码"></a>LESS 代码和编译后的CSS代码</h2><p><a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter5/less/a.less" target="_blank" rel="external">less/a.less</a></p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.less&#123;</div><div class="line">	a&#123;</div><div class="line">        color:pink;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter5/less/import.less" target="_blank" rel="external">less/import.less</a></p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@import "a.less";</div><div class="line">.import&#123;</div><div class="line">	a&#123;</div><div class="line">		color:red;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -506,12 +725,12 @@
 <p><a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter5/dist/css/import.css" target="_blank" rel="external">less/import.css</a></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.less</span> <span class="selector-tag">a</span> &#123;</div><div class="line">  <span class="attribute">color</span>: pink;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.import</span> <span class="selector-tag">a</span>&#123;</div><div class="line">  <span class="attribute">color</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><a href="https://github.com/nimojs/gulp-book/issues/14" target="_blank" rel="external">访问论坛获取帮助</a></p>
-<p><a href="/2016/10/20/gulp教程-gulp入门系列5-编译-LESS/chapter6.md">接着阅读：使用 gulp 编译 Sass</a></p>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列5-编译-LESS/chapter6.md">接着阅读：使用 gulp 编译 Sass</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;使用-gulp-编译-LESS&quot;&gt;&lt;a href=&quot;/2016/10/20/gulp教程-gulp入门系列5-编译-LESS/#使用-gulp-编译-LESS&quot; class=&quot;headerlink&quot; title=&quot;使用 gulp 编译 LESS&quot;&gt;&lt;/a&gt;使用 g
+      &lt;h1 id=&quot;使用-gulp-编译-LESS&quot;&gt;&lt;a href=&quot;/2016/09/20/gulp教程-gulp入门系列5-编译-LESS/#使用-gulp-编译-LESS&quot; class=&quot;headerlink&quot; title=&quot;使用 gulp 编译 LESS&quot;&gt;&lt;/a&gt;使用 g
     
     </summary>
     
@@ -524,23 +743,23 @@
   
   <entry>
     <title> gulp入门系列4--压缩图片</title>
-    <link href="https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%974-%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87/"/>
-    <id>https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列4-压缩图片/</id>
-    <published>2016-10-20T09:36:23.000Z</published>
-    <updated>2016-10-30T08:23:57.300Z</updated>
+    <link href="https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%974-%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87/"/>
+    <id>https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列4-压缩图片/</id>
+    <published>2016-09-20T09:36:23.000Z</published>
+    <updated>2016-12-07T12:27:26.436Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="使用-gulp-压缩图片"><a href="/2016/10/20/gulp教程-gulp入门系列4-压缩图片/#使用-gulp-压缩图片" class="headerlink" title="使用 gulp 压缩图片"></a>使用 gulp 压缩图片</h1><p>请务必理解如下章节后阅读此章节：</p>
+    <content type="html"><![CDATA[<h1 id="使用-gulp-压缩图片"><a href="/2016/09/20/gulp教程-gulp入门系列4-压缩图片/#使用-gulp-压缩图片" class="headerlink" title="使用 gulp 压缩图片"></a>使用 gulp 压缩图片</h1><p>请务必理解如下章节后阅读此章节：</p>
 <ol>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列4-压缩图片/chapter1.md">安装 Node 和 gulp</a></li>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列4-压缩图片/chapter2.md">使用 gulp 压缩 JS</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列4-压缩图片/chapter1.md">安装 Node 和 gulp</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列4-压缩图片/chapter2.md">使用 gulp 压缩 JS</a></li>
 </ol>
-<h2 id="访问论坛获取帮助"><a href="/2016/10/20/gulp教程-gulp入门系列4-压缩图片/#访问论坛获取帮助" class="headerlink" title="访问论坛获取帮助"></a><a href="https://github.com/nimojs/gulp-book/issues/13" target="_blank" rel="external">访问论坛获取帮助</a></h2><p>压缩 图片文件可降低文件大小，提高图片加载速度。</p>
+<h2 id="访问论坛获取帮助"><a href="/2016/09/20/gulp教程-gulp入门系列4-压缩图片/#访问论坛获取帮助" class="headerlink" title="访问论坛获取帮助"></a><a href="https://github.com/nimojs/gulp-book/issues/13" target="_blank" rel="external">访问论坛获取帮助</a></h2><p>压缩 图片文件可降低文件大小，提高图片加载速度。</p>
 <p>找到规律转换为 gulp 代码</p>
-<h2 id="规律"><a href="/2016/10/20/gulp教程-gulp入门系列4-压缩图片/#规律" class="headerlink" title="规律"></a>规律</h2><p>找到 <code>images/</code> 目录下的所有文件，压缩它们，将压缩后的文件存放在 <code>dist/images/</code> 目录下。</p>
-<h2 id="gulp-代码"><a href="/2016/10/20/gulp教程-gulp入门系列4-压缩图片/#gulp-代码" class="headerlink" title="gulp 代码"></a>gulp 代码</h2><p>你可以 <a href="https://github.com/nimojs/gulp-book/archive/master.zip" target="_blank" rel="external">下载所有示例代码</a> 或 <a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter4" target="_blank" rel="external">在线查看代码</a></p>
+<h2 id="规律"><a href="/2016/09/20/gulp教程-gulp入门系列4-压缩图片/#规律" class="headerlink" title="规律"></a>规律</h2><p>找到 <code>images/</code> 目录下的所有文件，压缩它们，将压缩后的文件存放在 <code>dist/images/</code> 目录下。</p>
+<h2 id="gulp-代码"><a href="/2016/09/20/gulp教程-gulp入门系列4-压缩图片/#gulp-代码" class="headerlink" title="gulp 代码"></a>gulp 代码</h2><p>你可以 <a href="https://github.com/nimojs/gulp-book/archive/master.zip" target="_blank" rel="external">下载所有示例代码</a> 或 <a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter4" target="_blank" rel="external">在线查看代码</a></p>
 <p><strong>一、安装 gulp-imagemin</strong> 模块</p>
 <p>提示：你需要使用命令行的 <code>cd</code> 切换至对应目录再进行安装操作和 gulp 启动操作。</p>
-<p><a href="/2016/10/20/gulp教程-gulp入门系列4-压缩图片/chapter1.md">学习使用命令行</a></p>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列4-压缩图片/chapter1.md">学习使用命令行</a></p>
 <p>在命令行输入</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> gulp-imagemin</div></pre></td></tr></table></figure>
 <p>安装成功后你会看到如下信息：(安装时间可能会比较长)</p>
@@ -559,12 +778,12 @@
 <p>你将看到命令行出现如下提示</p>
 <figure class="highlight prolog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">gulp</div><div class="line">[<span class="number">18</span>:<span class="number">10</span>:<span class="number">42</span>] <span class="symbol">Using</span> gulpfile ~/<span class="symbol">Documents</span>/code/gulp-book/demo/chapter4/gulpfile.js</div><div class="line">[<span class="number">18</span>:<span class="number">10</span>:<span class="number">42</span>] <span class="symbol">Starting</span> <span class="string">'images'</span>...</div><div class="line">[<span class="number">18</span>:<span class="number">10</span>:<span class="number">42</span>] <span class="symbol">Finished</span> <span class="string">'images'</span> after <span class="number">5.72</span> ms</div><div class="line">[<span class="number">18</span>:<span class="number">10</span>:<span class="number">42</span>] <span class="symbol">Starting</span> <span class="string">'auto'</span>...</div><div class="line">[<span class="number">18</span>:<span class="number">10</span>:<span class="number">42</span>] <span class="symbol">Finished</span> <span class="string">'auto'</span> after <span class="number">6.39</span> ms</div><div class="line">[<span class="number">18</span>:<span class="number">10</span>:<span class="number">42</span>] <span class="symbol">Starting</span> <span class="string">'default'</span>...</div><div class="line">[<span class="number">18</span>:<span class="number">10</span>:<span class="number">42</span>] <span class="symbol">Finished</span> <span class="string">'default'</span> after <span class="number">5.91</span> μs</div><div class="line">[<span class="number">18</span>:<span class="number">10</span>:<span class="number">42</span>] gulp-imagemin: <span class="symbol">Minified</span> <span class="number">3</span> images (saved <span class="number">25.83</span> kB - <span class="number">5.2</span><span class="comment">%)</span></div></pre></td></tr></table></figure>
 <p><a href="https://github.com/nimojs/gulp-book/issues/13" target="_blank" rel="external">访问论坛获取帮助</a></p>
-<p><a href="/2016/10/20/gulp教程-gulp入门系列4-压缩图片/chapter5.md">接着阅读：使用 gulp 编译 LESS</a></p>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列4-压缩图片/chapter5.md">接着阅读：使用 gulp 编译 LESS</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;使用-gulp-压缩图片&quot;&gt;&lt;a href=&quot;/2016/10/20/gulp教程-gulp入门系列4-压缩图片/#使用-gulp-压缩图片&quot; class=&quot;headerlink&quot; title=&quot;使用 gulp 压缩图片&quot;&gt;&lt;/a&gt;使用 gulp 压缩图片&lt;/h1
+      &lt;h1 id=&quot;使用-gulp-压缩图片&quot;&gt;&lt;a href=&quot;/2016/09/20/gulp教程-gulp入门系列4-压缩图片/#使用-gulp-压缩图片&quot; class=&quot;headerlink&quot; title=&quot;使用 gulp 压缩图片&quot;&gt;&lt;/a&gt;使用 gulp 压缩图片&lt;/h1
     
     </summary>
     
@@ -577,31 +796,31 @@
   
   <entry>
     <title> gulp入门系列3--压缩 CSS</title>
-    <link href="https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%973-%E5%8E%8B%E7%BC%A9-CSS/"/>
-    <id>https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列3-压缩-CSS/</id>
-    <published>2016-10-20T09:34:20.000Z</published>
-    <updated>2016-10-30T08:23:26.823Z</updated>
+    <link href="https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%973-%E5%8E%8B%E7%BC%A9-CSS/"/>
+    <id>https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/</id>
+    <published>2016-09-20T09:34:20.000Z</published>
+    <updated>2016-12-07T12:27:17.653Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="使用-gulp-压缩-CSS"><a href="/2016/10/20/gulp教程-gulp入门系列3-压缩-CSS/#使用-gulp-压缩-CSS" class="headerlink" title="使用 gulp 压缩 CSS"></a>使用 gulp 压缩 CSS</h1><p>请务必理解如下章节后阅读此章节：</p>
+    <content type="html"><![CDATA[<h1 id="使用-gulp-压缩-CSS"><a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/#使用-gulp-压缩-CSS" class="headerlink" title="使用 gulp 压缩 CSS"></a>使用 gulp 压缩 CSS</h1><p>请务必理解如下章节后阅读此章节：</p>
 <ol>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列3-压缩-CSS/chapter1.md">安装 Node 和 gulp</a></li>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列3-压缩-CSS/chapter2.md">使用 gulp 压缩 JS</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/chapter1.md">安装 Node 和 gulp</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/chapter2.md">使用 gulp 压缩 JS</a></li>
 </ol>
 <p><a href="https://github.com/nimojs/gulp-book/issues/12" target="_blank" rel="external">访问论坛获取帮助</a></p>
 <hr>
 <p>压缩 css 代码可降低 css 文件大小，提高页面打开速度。</p>
 <p>我们接着将规律转换为 gulp 代码</p>
-<h2 id="规律"><a href="/2016/10/20/gulp教程-gulp入门系列3-压缩-CSS/#规律" class="headerlink" title="规律"></a>规律</h2><p>找到 <code>css/</code> 目录下的所有 css 文件，压缩它们，将压缩后的文件存放在 <code>dist/css/</code> 目录下。</p>
-<h2 id="gulp-代码"><a href="/2016/10/20/gulp教程-gulp入门系列3-压缩-CSS/#gulp-代码" class="headerlink" title="gulp 代码"></a>gulp 代码</h2><p>你可以 <a href="https://github.com/nimojs/gulp-book/archive/master.zip" target="_blank" rel="external">下载所有示例代码</a> 或 <a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter3" target="_blank" rel="external">在线查看代码</a></p>
-<p>当熟悉 <a href="/2016/10/20/gulp教程-gulp入门系列3-压缩-CSS/chapter2.md">使用 gulp 压缩 JS</a> 的方法后，配置压缩 CSS 的 gulp 代码就变得很轻松。</p>
+<h2 id="规律"><a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/#规律" class="headerlink" title="规律"></a>规律</h2><p>找到 <code>css/</code> 目录下的所有 css 文件，压缩它们，将压缩后的文件存放在 <code>dist/css/</code> 目录下。</p>
+<h2 id="gulp-代码"><a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/#gulp-代码" class="headerlink" title="gulp 代码"></a>gulp 代码</h2><p>你可以 <a href="https://github.com/nimojs/gulp-book/archive/master.zip" target="_blank" rel="external">下载所有示例代码</a> 或 <a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter3" target="_blank" rel="external">在线查看代码</a></p>
+<p>当熟悉 <a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/chapter2.md">使用 gulp 压缩 JS</a> 的方法后，配置压缩 CSS 的 gulp 代码就变得很轻松。</p>
 <p><strong>一、安装 gulp-minify-css</strong> 模块</p>
 <p>提示：你需要使用命令行的 <code>cd</code> 切换到对应目录后进行安装操作。</p>
-<p><a href="/2016/10/20/gulp教程-gulp入门系列3-压缩-CSS/chapter1.md">学习使用命令行</a></p>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/chapter1.md">学习使用命令行</a></p>
 <p>在命令行输入</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> gulp-minify-css</div></pre></td></tr></table></figure>
 <p>安装成功后你会看到如下信息：(安装时间可能会比较长)</p>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">gulp-minify-css<span class="variable">@1</span>.<span class="number">0.0</span> node_modules/gulp-minify-css</div><div class="line">├── object-assign<span class="variable">@2</span>.<span class="number">0.0</span></div><div class="line">├── vinyl-sourcemaps-apply<span class="variable">@0</span>.<span class="number">1.4</span> (source-map<span class="variable">@0</span>.<span class="number">1.43</span>)</div><div class="line">├── clean-css<span class="variable">@3</span>.<span class="number">1.8</span> (commander<span class="variable">@2</span>.<span class="number">6.0</span>, source-map<span class="variable">@0</span>.<span class="number">1.43</span>)</div><div class="line">├── through2<span class="variable">@0</span>.<span class="number">6.3</span> (xtend<span class="variable">@4</span>.<span class="number">0.0</span>, readable-stream<span class="variable">@1</span>.<span class="number">0.33</span>)</div><div class="line">├── vinyl-bufferstream<span class="variable">@1</span>.<span class="number">0.1</span> (bufferstreams<span class="variable">@1</span>.<span class="number">0.1</span>)</div><div class="line">└── gulp-util<span class="variable">@3</span>.<span class="number">0.4</span> (array-differ<span class="variable">@1</span>.<span class="number">0.0</span>, beeper<span class="variable">@1</span>.<span class="number">0.0</span>, array-uniq<span class="variable">@1</span>.<span class="number">0.2</span>, lodash._reescape<span class="variable">@3</span>.<span class="number">0.0</span>, lodash._reinterpolate<span class="variable">@3</span>.<span class="number">0.0</span>, lodash._reevaluate<span class="variable">@3</span>.<span class="number">0.0</span>, replace-ext<span class="variable">@0</span>.<span class="number">0.1</span>, minimist<span class="variable">@1</span>.<span class="number">1.1</span>, multipipe<span class="variable">@0</span>.<span class="number">1.2</span>, vinyl<span class="variable">@0</span>.<span class="number">4.6</span>, chalk<span class="variable">@1</span>.<span class="number">0.0</span>, lodash.template<span class="variable">@3</span>.<span class="number">3.2</span>, dateformat<span class="variable">@1</span>.<span class="number">0.11</span>)</div></pre></td></tr></table></figure>
-<p><strong>二、参照 <a href="/2016/10/20/gulp教程-gulp入门系列3-压缩-CSS/chapter2.md">使用 gulp 压缩 JS</a> 创建 <code>gulpfile.js</code> 文件编写代码</strong></p>
+<p><strong>二、参照 <a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/chapter2.md">使用 gulp 压缩 JS</a> 创建 <code>gulpfile.js</code> 文件编写代码</strong></p>
 <p>在对应目录创建 <code>gulpfile.js</code> 文件并写入如下内容：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取 gulp</span></div><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 获取 minify-css 模块（用于压缩 CSS）</span></div><div class="line"><span class="keyword">var</span> minifyCSS = <span class="built_in">require</span>(<span class="string">'gulp-minify-css'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 压缩 css 文件</span></div><div class="line"><span class="comment">// 在命令行使用 gulp css 启动此任务</span></div><div class="line">gulp.task(<span class="string">'css'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 1. 找到文件</span></div><div class="line">    gulp.src(<span class="string">'css/*.css'</span>)</div><div class="line">    <span class="comment">// 2. 压缩文件</span></div><div class="line">        .pipe(minifyCSS())</div><div class="line">    <span class="comment">// 3. 另存为压缩文件</span></div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/css'</span>))</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 在命令行使用 gulp auto 启动此任务</span></div><div class="line">gulp.task(<span class="string">'auto'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 监听文件修改，当文件被修改则执行 css 任务</span></div><div class="line">    gulp.watch(<span class="string">'css/*.css'</span>, [<span class="string">'css'</span>])</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 使用 gulp.task('default') 定义默认任务</span></div><div class="line"><span class="comment">// 在命令行使用 gulp 启动 css 任务和 auto 任务</span></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'css'</span>, <span class="string">'auto'</span>])</div></pre></td></tr></table></figure>
 <p>你可以访问 <a href="https://github.com/jonathanepollack/gulp-minify-css" target="_blank" rel="external">gulp-minify-css</a> 以查看更多用法。</p>
@@ -616,12 +835,65 @@
 <figure class="highlight prolog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">gulp</div><div class="line">[<span class="number">17</span>:<span class="number">01</span>:<span class="number">19</span>] <span class="symbol">Using</span> gulpfile ~/<span class="symbol">Documents</span>/code/gulp-book/demo/chapter3/gulpfile.js</div><div class="line">[<span class="number">17</span>:<span class="number">01</span>:<span class="number">19</span>] <span class="symbol">Starting</span> <span class="string">'css'</span>...</div><div class="line">[<span class="number">17</span>:<span class="number">01</span>:<span class="number">19</span>] <span class="symbol">Finished</span> <span class="string">'css'</span> after <span class="number">6.21</span> ms</div><div class="line">[<span class="number">17</span>:<span class="number">01</span>:<span class="number">19</span>] <span class="symbol">Starting</span> <span class="string">'auto'</span>...</div><div class="line">[<span class="number">17</span>:<span class="number">01</span>:<span class="number">19</span>] <span class="symbol">Finished</span> <span class="string">'auto'</span> after <span class="number">5.42</span> ms</div><div class="line">[<span class="number">17</span>:<span class="number">01</span>:<span class="number">19</span>] <span class="symbol">Starting</span> <span class="string">'default'</span>...</div><div class="line">[<span class="number">17</span>:<span class="number">01</span>:<span class="number">19</span>] <span class="symbol">Finished</span> <span class="string">'default'</span> after <span class="number">5.71</span> μs</div></pre></td></tr></table></figure>
 <p>gulp 会创建 <code>dist/css</code> 目录，并创建 <code>a.css</code> 文件，此文件存放压缩后的 css 代码。<br><a href="https://github.com/nimojs/gulp-book/blob/master/demo/chapter3/dist/css/a.css" target="_blank" rel="external">dist/css/a.css</a></p>
 <p><a href="https://github.com/nimojs/gulp-book/issues/12" target="_blank" rel="external">访问论坛获取帮助</a></p>
-<p><a href="/2016/10/20/gulp教程-gulp入门系列3-压缩-CSS/chapter4.md">接着阅读：使用 gulp 压缩图片</a></p>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/chapter4.md">接着阅读：使用 gulp 压缩图片</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;使用-gulp-压缩-CSS&quot;&gt;&lt;a href=&quot;/2016/10/20/gulp教程-gulp入门系列3-压缩-CSS/#使用-gulp-压缩-CSS&quot; class=&quot;headerlink&quot; title=&quot;使用 gulp 压缩 CSS&quot;&gt;&lt;/a&gt;使用 gulp 
+      &lt;h1 id=&quot;使用-gulp-压缩-CSS&quot;&gt;&lt;a href=&quot;/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/#使用-gulp-压缩-CSS&quot; class=&quot;headerlink&quot; title=&quot;使用 gulp 压缩 CSS&quot;&gt;&lt;/a&gt;使用 gulp 
+    
+    </summary>
+    
+    
+      <category term="gulp" scheme="https://zhaoy875.github.io/tags/gulp/"/>
+    
+      <category term="前端工程自动化" scheme="https://zhaoy875.github.io/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title> gulp入门系列1--安装 Node 和 gulp</title>
+    <link href="https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%971-%E5%AE%89%E8%A3%85-Node-%E5%92%8C-gulp/"/>
+    <id>https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/</id>
+    <published>2016-09-20T09:33:20.000Z</published>
+    <updated>2016-12-07T12:27:03.532Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="安装-Node-和-gulp"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-Node-和-gulp" class="headerlink" title="安装 Node 和 gulp"></a>安装 Node 和 gulp</h1><p>gulp 是基于 node 实现的，那么我们就需要先安装 node。</p>
+<blockquote>
+<p>Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利用它实现 Web服务，做类似PHP的事。</p>
+</blockquote>
+<p>打开 <a href="https://nodejs.org/" target="_blank" rel="external">https://nodejs.org/</a> 点击绿色的 <strong>INSTALL</strong> 按钮下载安装 node。</p>
+<p><a href="https://github.com/nimojs/gulp-book/issues/10" target="_blank" rel="external">访问论坛获取帮助</a></p>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#hash_cli" name="hash_cli"></a></p>
+<h2 id="使用终端-命令行"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#使用终端-命令行" class="headerlink" title="使用终端/命令行"></a>使用终端/命令行</h2><h3 id="命令行"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>在 Windows 中可按 <kbd>徽标键</kbd>（alt键左边）+ <kbd>R</kbd> 打开输入 <code>cmd</code> + <kbd>Enter</kbd> 打开命令行。</p>
+<h3 id="终端-Mac"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#终端-Mac" class="headerlink" title="终端(Mac)"></a>终端(Mac)</h3><p>打开 Launchpad（像火箭一样的图标），在屏幕上方搜索框中输入 <code>终端</code> + <kbd>Enter</kbd> 打开终端。</p>
+<h3 id="查看-node-版本号"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#查看-node-版本号" class="headerlink" title="查看 node 版本号"></a>查看 node 版本号</h3><p>在终端/命令行中输入 <code>node -v</code> 检测node是否安装成功，安装成功会显示出 node 的版本号。</p>
+<h3 id="跳转目录"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#跳转目录" class="headerlink" title="跳转目录"></a>跳转目录</h3><p>终端/命令行 中可使用 <code>cd 目录名</code> 跳转至指定目录，Mac 中还可以使用 <code>ls</code> 查看当前目录下的文件列表。</p>
+<h4 id="Windows"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#Windows" class="headerlink" title="Windows"></a>Windows</h4><p>Windows 下可使用如下命令跳转至指定目录：</p>
+<figure class="highlight scilab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跳转至 C 盘根目录</span></div><div class="line"><span class="built_in">cd</span> c:\</div><div class="line"><span class="comment">// 跳转至当前目录的 demo 文件夹</span></div><div class="line"><span class="built_in">cd</span> demo</div><div class="line"><span class="comment">// 跳转至上一级</span></div><div class="line"><span class="built_in">cd</span> ..</div></pre></td></tr></table></figure>
+<h4 id="Mac"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#Mac" class="headerlink" title="Mac"></a>Mac</h4><p>Mac 中建议只在 Documents 目录下进行文件操作。</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跳转至文档目录</span></div><div class="line"><span class="keyword">cd</span> /Users/你的用户名/Documents/</div><div class="line"><span class="comment">// 或第一次打开终端时直接输入</span></div><div class="line"><span class="keyword">cd</span> Documents</div><div class="line"><span class="comment">// 查看目录下文件列表</span></div><div class="line"><span class="keyword">ls</span></div><div class="line"><span class="comment">// 创建文件夹</span></div><div class="line"><span class="keyword">mkdir</span> demo</div><div class="line"><span class="comment">// 跳转至当前目录下的 demo 文件夹</span></div><div class="line"><span class="keyword">cd</span> demo</div><div class="line"><span class="comment">// 跳转至上级目录</span></div><div class="line"><span class="keyword">cd</span> ..</div></pre></td></tr></table></figure>
+<h3 id="退出运行状态"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#退出运行状态" class="headerlink" title="退出运行状态"></a>退出运行状态</h3><p>如果你在命令行中启动了一些一直运行的命令，你的命令行会进入“运行”状态，此时你不可以在命令行进行其他操作。可通过 <code>Ctrl + C</code> 停止 gulp。（Mac 中使用 <code>control + C</code>）</p>
+<p>后面的章节中如果代码中存在 <code>gulp.watch</code> 并在命令行运行了 <code>gulp</code> 则需要使用 <code>Ctrl + C</code> 退出任务。</p>
+<h2 id="npm-模块管理器"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#npm-模块管理器" class="headerlink" title="npm 模块管理器"></a>npm 模块管理器</h2><p>如果你了解 npm 则跳过此章节</p>
+<p>若你不了解npm 请阅读 <a href="http://javascript.ruanyifeng.com/nodejs/npm.html" target="_blank" rel="external">npm模块管理器</a></p>
+<h2 id="安装-gulp"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-gulp" class="headerlink" title="安装 gulp"></a>安装 gulp</h2><p>npm 是 node 的包管理工具，可以利用它安装 gulp 所需的包。（在安装 node 时已经自动安装了 npm）</p>
+<p>在命令行输入</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> -g gulp</div></pre></td></tr></table></figure>
+<p>若一直没安装成功，请<a href="https://github.com/nimojs/blog/issues/20" target="_blank" rel="external">使用 cnpm 安装</a>(npm的国内加速镜像)</p>
+<p>意思是：使用 npm 安装全局性的(<code>-g</code>) gulp 包。</p>
+<blockquote>
+<p>如果你安装失败，请输入<code>sudo npm install -g gulp</code>使用管理员权限安装。（可能会要求输入密码）</p>
+</blockquote>
+<p>安装时请注意命令行的提示信息，安装完成后可在命令行输入 <code>gulp -v</code> 以确认安装成功。</p>
+<p>至此，我们完成了准备工作。接着让 gulp 开始帮我们干活吧！</p>
+<p><a href="https://github.com/nimojs/gulp-book/issues/10" target="_blank" rel="external">访问论坛获取帮助</a></p>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/chapter2.md">阅读下一章节：使用 gulp 压缩JS</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;安装-Node-和-gulp&quot;&gt;&lt;a href=&quot;/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-Node-和-gulp&quot; class=&quot;headerlink&quot; title=&quot;安装 Node 和 gulp&quot;&gt;&lt;/a&gt;
     
     </summary>
     
@@ -634,21 +906,21 @@
   
   <entry>
     <title> gulp入门系列2--压缩 JS</title>
-    <link href="https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%972-%E5%8E%8B%E7%BC%A9-JS/"/>
-    <id>https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列2-压缩-JS/</id>
-    <published>2016-10-20T09:33:20.000Z</published>
-    <updated>2016-10-29T09:14:42.702Z</updated>
+    <link href="https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%972-%E5%8E%8B%E7%BC%A9-JS/"/>
+    <id>https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列2-压缩-JS/</id>
+    <published>2016-09-20T09:33:20.000Z</published>
+    <updated>2016-12-07T12:27:11.531Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="使用-gulp-压缩-JS"><a href="/2016/10/20/gulp教程-gulp入门系列2-压缩-JS/#使用-gulp-压缩-JS" class="headerlink" title="使用 gulp 压缩 JS"></a>使用 gulp 压缩 JS</h1><p>请务必理解如下章节后阅读此章节：</p>
+    <content type="html"><![CDATA[<h1 id="使用-gulp-压缩-JS"><a href="/2016/09/20/gulp教程-gulp入门系列2-压缩-JS/#使用-gulp-压缩-JS" class="headerlink" title="使用 gulp 压缩 JS"></a>使用 gulp 压缩 JS</h1><p>请务必理解如下章节后阅读此章节：</p>
 <ol>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列2-压缩-JS/chapter1.md">安装 Node 和 gulp</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列2-压缩-JS/chapter1.md">安装 Node 和 gulp</a></li>
 </ol>
 <p><a href="https://github.com/nimojs/gulp-book/issues/11" target="_blank" rel="external">访问论坛获取帮助</a></p>
 <hr>
 <p>压缩 js 代码可降低 js 文件大小，提高页面打开速度。在不利用 gulp 时我们需要通过各种工具手动完成压缩工作。</p>
 <p>所有的 gulp 代码编写都可以看做是将规律转化为代码的过程。</p>
-<h2 id="规律"><a href="/2016/10/20/gulp教程-gulp入门系列2-压缩-JS/#规律" class="headerlink" title="规律"></a>规律</h2><p>找到 <code>js/</code> 目录下的所有 js 文件，压缩它们，将压缩后的文件存放在 <code>dist/js/</code> 目录下。</p>
-<h2 id="gulp-代码"><a href="/2016/10/20/gulp教程-gulp入门系列2-压缩-JS/#gulp-代码" class="headerlink" title="gulp 代码"></a>gulp 代码</h2><p>你可以 <a href="https://github.com/nimojs/gulp-book/archive/master.zip" target="_blank" rel="external">下载所有示例代码</a> 或 <a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter2" target="_blank" rel="external">在线查看代码</a></p>
+<h2 id="规律"><a href="/2016/09/20/gulp教程-gulp入门系列2-压缩-JS/#规律" class="headerlink" title="规律"></a>规律</h2><p>找到 <code>js/</code> 目录下的所有 js 文件，压缩它们，将压缩后的文件存放在 <code>dist/js/</code> 目录下。</p>
+<h2 id="gulp-代码"><a href="/2016/09/20/gulp教程-gulp入门系列2-压缩-JS/#gulp-代码" class="headerlink" title="gulp 代码"></a>gulp 代码</h2><p>你可以 <a href="https://github.com/nimojs/gulp-book/archive/master.zip" target="_blank" rel="external">下载所有示例代码</a> 或 <a href="https://github.com/nimojs/gulp-book/tree/master/demo/chapter2" target="_blank" rel="external">在线查看代码</a></p>
 <p><strong>建议</strong>：你可以只阅读下面的代码与注释或同时阅读代码解释</p>
 <p>gulp 的所有配置代码都写在 <code>gulpfile.js</code> 文件。</p>
 <p><strong>一、新建一个 <code>gulpfile.js</code> 文件</strong><br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">chapter2</span></div><div class="line">└── <span class="selector-tag">gulpfile</span><span class="selector-class">.js</span></div></pre></td></tr></table></figure></p>
@@ -730,65 +1002,12 @@
 <p>去除注释后，你会发现只需要 11 行代码就可以让 gulp 自动监听 js 文件的修改后压缩代码。但是还有还有一些性能问题和缺少容错性，将在后面的章节详细说明。</p>
 <p>你可以访问 <a href="https://github.com/terinjokes/gulp-uglify" target="_blank" rel="external">gulp-uglify</a> 以查看更多用法。</p>
 <p><a href="https://github.com/nimojs/gulp-book/issues/11" target="_blank" rel="external">访问论坛获取帮助</a></p>
-<p><a href="/2016/10/20/gulp教程-gulp入门系列2-压缩-JS/chapter3.md">接着阅读：使用 gulp 压缩 CSS</a></p>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列2-压缩-JS/chapter3.md">接着阅读：使用 gulp 压缩 CSS</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;使用-gulp-压缩-JS&quot;&gt;&lt;a href=&quot;/2016/10/20/gulp教程-gulp入门系列2-压缩-JS/#使用-gulp-压缩-JS&quot; class=&quot;headerlink&quot; title=&quot;使用 gulp 压缩 JS&quot;&gt;&lt;/a&gt;使用 gulp 压缩 J
-    
-    </summary>
-    
-    
-      <category term="gulp" scheme="https://zhaoy875.github.io/tags/gulp/"/>
-    
-      <category term="前端工程自动化" scheme="https://zhaoy875.github.io/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title> gulp入门系列1--安装 Node 和 gulp</title>
-    <link href="https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%971-%E5%AE%89%E8%A3%85-Node-%E5%92%8C-gulp/"/>
-    <id>https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/</id>
-    <published>2016-10-20T09:33:20.000Z</published>
-    <updated>2016-10-29T09:14:21.659Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="安装-Node-和-gulp"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-Node-和-gulp" class="headerlink" title="安装 Node 和 gulp"></a>安装 Node 和 gulp</h1><p>gulp 是基于 node 实现的，那么我们就需要先安装 node。</p>
-<blockquote>
-<p>Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利用它实现 Web服务，做类似PHP的事。</p>
-</blockquote>
-<p>打开 <a href="https://nodejs.org/" target="_blank" rel="external">https://nodejs.org/</a> 点击绿色的 <strong>INSTALL</strong> 按钮下载安装 node。</p>
-<p><a href="https://github.com/nimojs/gulp-book/issues/10" target="_blank" rel="external">访问论坛获取帮助</a></p>
-<p><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#hash_cli" name="hash_cli"></a></p>
-<h2 id="使用终端-命令行"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#使用终端-命令行" class="headerlink" title="使用终端/命令行"></a>使用终端/命令行</h2><h3 id="命令行"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>在 Windows 中可按 <kbd>徽标键</kbd>（alt键左边）+ <kbd>R</kbd> 打开输入 <code>cmd</code> + <kbd>Enter</kbd> 打开命令行。</p>
-<h3 id="终端-Mac"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#终端-Mac" class="headerlink" title="终端(Mac)"></a>终端(Mac)</h3><p>打开 Launchpad（像火箭一样的图标），在屏幕上方搜索框中输入 <code>终端</code> + <kbd>Enter</kbd> 打开终端。</p>
-<h3 id="查看-node-版本号"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#查看-node-版本号" class="headerlink" title="查看 node 版本号"></a>查看 node 版本号</h3><p>在终端/命令行中输入 <code>node -v</code> 检测node是否安装成功，安装成功会显示出 node 的版本号。</p>
-<h3 id="跳转目录"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#跳转目录" class="headerlink" title="跳转目录"></a>跳转目录</h3><p>终端/命令行 中可使用 <code>cd 目录名</code> 跳转至指定目录，Mac 中还可以使用 <code>ls</code> 查看当前目录下的文件列表。</p>
-<h4 id="Windows"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#Windows" class="headerlink" title="Windows"></a>Windows</h4><p>Windows 下可使用如下命令跳转至指定目录：</p>
-<figure class="highlight scilab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跳转至 C 盘根目录</span></div><div class="line"><span class="built_in">cd</span> c:\</div><div class="line"><span class="comment">// 跳转至当前目录的 demo 文件夹</span></div><div class="line"><span class="built_in">cd</span> demo</div><div class="line"><span class="comment">// 跳转至上一级</span></div><div class="line"><span class="built_in">cd</span> ..</div></pre></td></tr></table></figure>
-<h4 id="Mac"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#Mac" class="headerlink" title="Mac"></a>Mac</h4><p>Mac 中建议只在 Documents 目录下进行文件操作。</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跳转至文档目录</span></div><div class="line"><span class="keyword">cd</span> /Users/你的用户名/Documents/</div><div class="line"><span class="comment">// 或第一次打开终端时直接输入</span></div><div class="line"><span class="keyword">cd</span> Documents</div><div class="line"><span class="comment">// 查看目录下文件列表</span></div><div class="line"><span class="keyword">ls</span></div><div class="line"><span class="comment">// 创建文件夹</span></div><div class="line"><span class="keyword">mkdir</span> demo</div><div class="line"><span class="comment">// 跳转至当前目录下的 demo 文件夹</span></div><div class="line"><span class="keyword">cd</span> demo</div><div class="line"><span class="comment">// 跳转至上级目录</span></div><div class="line"><span class="keyword">cd</span> ..</div></pre></td></tr></table></figure>
-<h3 id="退出运行状态"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#退出运行状态" class="headerlink" title="退出运行状态"></a>退出运行状态</h3><p>如果你在命令行中启动了一些一直运行的命令，你的命令行会进入“运行”状态，此时你不可以在命令行进行其他操作。可通过 <code>Ctrl + C</code> 停止 gulp。（Mac 中使用 <code>control + C</code>）</p>
-<p>后面的章节中如果代码中存在 <code>gulp.watch</code> 并在命令行运行了 <code>gulp</code> 则需要使用 <code>Ctrl + C</code> 退出任务。</p>
-<h2 id="npm-模块管理器"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#npm-模块管理器" class="headerlink" title="npm 模块管理器"></a>npm 模块管理器</h2><p>如果你了解 npm 则跳过此章节</p>
-<p>若你不了解npm 请阅读 <a href="http://javascript.ruanyifeng.com/nodejs/npm.html" target="_blank" rel="external">npm模块管理器</a></p>
-<h2 id="安装-gulp"><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-gulp" class="headerlink" title="安装 gulp"></a>安装 gulp</h2><p>npm 是 node 的包管理工具，可以利用它安装 gulp 所需的包。（在安装 node 时已经自动安装了 npm）</p>
-<p>在命令行输入</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> -g gulp</div></pre></td></tr></table></figure>
-<p>若一直没安装成功，请<a href="https://github.com/nimojs/blog/issues/20" target="_blank" rel="external">使用 cnpm 安装</a>(npm的国内加速镜像)</p>
-<p>意思是：使用 npm 安装全局性的(<code>-g</code>) gulp 包。</p>
-<blockquote>
-<p>如果你安装失败，请输入<code>sudo npm install -g gulp</code>使用管理员权限安装。（可能会要求输入密码）</p>
-</blockquote>
-<p>安装时请注意命令行的提示信息，安装完成后可在命令行输入 <code>gulp -v</code> 以确认安装成功。</p>
-<p>至此，我们完成了准备工作。接着让 gulp 开始帮我们干活吧！</p>
-<p><a href="https://github.com/nimojs/gulp-book/issues/10" target="_blank" rel="external">访问论坛获取帮助</a></p>
-<p><a href="/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/chapter2.md">阅读下一章节：使用 gulp 压缩JS</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;安装-Node-和-gulp&quot;&gt;&lt;a href=&quot;/2016/10/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-Node-和-gulp&quot; class=&quot;headerlink&quot; title=&quot;安装 Node 和 gulp&quot;&gt;&lt;/a&gt;
+      &lt;h1 id=&quot;使用-gulp-压缩-JS&quot;&gt;&lt;a href=&quot;/2016/09/20/gulp教程-gulp入门系列2-压缩-JS/#使用-gulp-压缩-JS&quot; class=&quot;headerlink&quot; title=&quot;使用 gulp 压缩 JS&quot;&gt;&lt;/a&gt;使用 gulp 压缩 J
     
     </summary>
     
@@ -801,50 +1020,50 @@
   
   <entry>
     <title> gulp 入门指南</title>
-    <link href="https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97/"/>
-    <id>https://zhaoy875.github.io/2016/10/20/gulp教程-gulp入门系列/</id>
-    <published>2016-10-20T08:53:20.000Z</published>
-    <updated>2016-10-30T08:28:19.322Z</updated>
+    <link href="https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97/"/>
+    <id>https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列/</id>
+    <published>2016-09-20T08:53:20.000Z</published>
+    <updated>2016-12-07T12:26:53.208Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="gulp-入门指南"><a href="/2016/10/20/gulp教程-gulp入门系列/#gulp-入门指南" class="headerlink" title="gulp 入门指南"></a>gulp 入门指南</h1><p>gulp 是基于 node 实现 Web 前端自动化开发的工具，利用它能够极大的提高开发效率。</p>
+    <content type="html"><![CDATA[<h1 id="gulp-入门指南"><a href="/2016/09/20/gulp教程-gulp入门系列/#gulp-入门指南" class="headerlink" title="gulp 入门指南"></a>gulp 入门指南</h1><p>gulp 是基于 node 实现 Web 前端自动化开发的工具，利用它能够极大的提高开发效率。</p>
 <p>在 Web 前端开发工作中有很多“重复工作”，比如压缩CSS/JS文件。而这些工作都是有规律的。找到这些规律，并编写 gulp 配置代码,让 gulp 自动执行这些“重复工作”。</p>
 <p>点击右上角的 <strong><a href="https://github.com/nimojs/gulp-book/subscription" target="_blank" rel="external">Watch</a></strong> 订阅本书，点击 Star 收藏本书。</p>
 <ul>
 <li><a href="https://github.com/nimojs/gulp-book/issues/7" target="_blank" rel="external">订阅本书</a></li>
 <li><a href="https://github.com/nimojs/gulp-book/issues" target="_blank" rel="external">论坛</a></li>
 </ul>
-<h1 id="目录"><a href="/2016/10/20/gulp教程-gulp入门系列/#目录" class="headerlink" title="目录"></a>目录</h1><ol>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列/chapter1.md">安装 Node 和 gulp</a></li>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列/chapter2.md">使用 gulp 压缩 JS</a></li>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列/chapter3.md">使用 gulp 压缩 CSS</a></li>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列/chapter4.md">使用 gulp 压缩图片</a></li>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列/chapter5.md">使用 gulp 编译 LESS</a></li>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列/chapter6.md">使用 gulp 编译 Sass</a></li>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列/chapter7.md">使用 gulp 构建一个项目</a></li>
+<h1 id="目录"><a href="/2016/09/20/gulp教程-gulp入门系列/#目录" class="headerlink" title="目录"></a>目录</h1><ol>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter1.md">安装 Node 和 gulp</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter2.md">使用 gulp 压缩 JS</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter3.md">使用 gulp 压缩 CSS</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter4.md">使用 gulp 压缩图片</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter5.md">使用 gulp 编译 LESS</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter6.md">使用 gulp 编译 Sass</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter7.md">使用 gulp 构建一个项目</a></li>
 <li></li>
 </ol>
 <p><strong>因为 Node 的全局包安装都是在C盘，所有请在C盘使用 gulp 以方便熟悉 gulp </strong></p>
 <blockquote>
 <p>相关教程：<a href="https://github.com/nimojs/webpack-book" target="_blank" rel="external">webpack-book</a></p>
 </blockquote>
-<h2 id="目录-1"><a href="/2016/10/20/gulp教程-gulp入门系列/#目录-1" class="headerlink" title="目录"></a>目录</h2><ul>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列/chapter1.md">安装 Node 和 gulp</a></li>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列/chapter2.md">使用 gulp 压缩 JS</a></li>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列/chapter3.md">使用 gulp 压缩 CSS</a></li>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列/chapter4.md">使用 gulp 压缩图片</a></li>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列/chapter5.md">使用 gulp 编译 LESS</a></li>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列/chapter6.md">使用 gulp 编译 Sass</a></li>
-<li><a href="/2016/10/20/gulp教程-gulp入门系列/chapter7.md">使用 gulp 构建一个项目</a></li>
+<h2 id="目录-1"><a href="/2016/09/20/gulp教程-gulp入门系列/#目录-1" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter1.md">安装 Node 和 gulp</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter2.md">使用 gulp 压缩 JS</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter3.md">使用 gulp 压缩 CSS</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter4.md">使用 gulp 压缩图片</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter5.md">使用 gulp 编译 LESS</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter6.md">使用 gulp 编译 Sass</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter7.md">使用 gulp 构建一个项目</a></li>
 </ul>
-<h2 id="将规律转换为-gulp-代码"><a href="/2016/10/20/gulp教程-gulp入门系列/#将规律转换为-gulp-代码" class="headerlink" title="将规律转换为 gulp 代码"></a>将规律转换为 gulp 代码</h2><p>现有目录结构如下：</p>
+<h2 id="将规律转换为-gulp-代码"><a href="/2016/09/20/gulp教程-gulp入门系列/#将规律转换为-gulp-代码" class="headerlink" title="将规律转换为 gulp 代码"></a>将规律转换为 gulp 代码</h2><p>现有目录结构如下：</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">└── js/</div><div class="line">    └── <span class="selector-tag">a</span>.js</div></pre></td></tr></table></figure>
-<h3 id="规律"><a href="/2016/10/20/gulp教程-gulp入门系列/#规律" class="headerlink" title="规律"></a>规律</h3><ol>
+<h3 id="规律"><a href="/2016/09/20/gulp教程-gulp入门系列/#规律" class="headerlink" title="规律"></a>规律</h3><ol>
 <li>找到 js/目录下的所有 .js 文件</li>
 <li>压缩这些 js 文件</li>
 <li>将压缩后的代码另存在 dist/js/ 目录下</li>
 </ol>
-<h3 id="编写-gulp-代码"><a href="/2016/10/20/gulp教程-gulp入门系列/#编写-gulp-代码" class="headerlink" title="编写 gulp 代码"></a>编写 gulp 代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 压缩 JavaScript 文件</span></div><div class="line">gulp.task(<span class="string">'script'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 1. 找到</span></div><div class="line">    gulp.src(<span class="string">'js/*.js'</span>)</div><div class="line">    <span class="comment">// 2. 压缩</span></div><div class="line">        .pipe(uglify())</div><div class="line">    <span class="comment">// 3. 另存</span></div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/js'</span>));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h3 id="代码执行结果"><a href="/2016/10/20/gulp教程-gulp入门系列/#代码执行结果" class="headerlink" title="代码执行结果"></a>代码执行结果</h3><p>代码执行后文件结构</p>
+<h3 id="编写-gulp-代码"><a href="/2016/09/20/gulp教程-gulp入门系列/#编写-gulp-代码" class="headerlink" title="编写 gulp 代码"></a>编写 gulp 代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 压缩 JavaScript 文件</span></div><div class="line">gulp.task(<span class="string">'script'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 1. 找到</span></div><div class="line">    gulp.src(<span class="string">'js/*.js'</span>)</div><div class="line">    <span class="comment">// 2. 压缩</span></div><div class="line">        .pipe(uglify())</div><div class="line">    <span class="comment">// 3. 另存</span></div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/js'</span>));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="代码执行结果"><a href="/2016/09/20/gulp教程-gulp入门系列/#代码执行结果" class="headerlink" title="代码执行结果"></a>代码执行结果</h3><p>代码执行后文件结构</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">└── js/</div><div class="line">│   └── <span class="selector-tag">a</span><span class="selector-class">.js</span></div><div class="line">└── dist/</div><div class="line">    └── js/</div><div class="line">        └── <span class="selector-tag">a</span>.js</div></pre></td></tr></table></figure>
 <p>a.js 压缩前<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">demo</span> <span class="params">(msg)</span> </span>&#123;</div><div class="line">    alert(<span class="string">'--------\r\n'</span> + msg + <span class="string">'\r\n--------'</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line">demo(<span class="string">'Hi'</span>)</div></pre></td></tr></table></figure></p>
 <p>a.js 压缩后<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">demo</span><span class="params">(n)</span></span>&#123;alert(<span class="string">"--------\r\n"</span>+n+<span class="string">"\r\n--------"</span>)&#125;demo(<span class="string">"Hi"</span>);</div></pre></td></tr></table></figure></p>
@@ -859,12 +1078,12 @@
 <li>编译CoffeeScript</li>
 <li>markdown 转换为 html</li>
 </ol>
-<p><a href="/2016/10/20/gulp教程-gulp入门系列/chapter1.md">开始阅读：安装 Node 和 gulp</a></p>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列/chapter1.md">开始阅读：安装 Node 和 gulp</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;gulp-入门指南&quot;&gt;&lt;a href=&quot;/2016/10/20/gulp教程-gulp入门系列/#gulp-入门指南&quot; class=&quot;headerlink&quot; title=&quot;gulp 入门指南&quot;&gt;&lt;/a&gt;gulp 入门指南&lt;/h1&gt;&lt;p&gt;gulp 是基于 node 
+      &lt;h1 id=&quot;gulp-入门指南&quot;&gt;&lt;a href=&quot;/2016/09/20/gulp教程-gulp入门系列/#gulp-入门指南&quot; class=&quot;headerlink&quot; title=&quot;gulp 入门指南&quot;&gt;&lt;/a&gt;gulp 入门指南&lt;/h1&gt;&lt;p&gt;gulp 是基于 node 
     
     </summary>
     
@@ -872,204 +1091,6 @@
       <category term="gulp" scheme="https://zhaoy875.github.io/tags/gulp/"/>
     
       <category term="前端工程自动化" scheme="https://zhaoy875.github.io/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>增强版npm包管理工具--yarn</title>
-    <link href="https://zhaoy875.github.io/2016/10/13/npm%E5%A2%9E%E5%BC%BA%E7%89%88-yarn/"/>
-    <id>https://zhaoy875.github.io/2016/10/13/npm增强版-yarn/</id>
-    <published>2016-10-13T14:16:12.000Z</published>
-    <updated>2016-10-27T07:31:37.230Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>参考 <a href="http://www.jb51.net/article/95199.htm" target="_blank" rel="external">http://www.jb51.net/article/95199.htm</a></p>
-<p>官方文档：<a href="https://yarnpkg.com/en/docs/cli/" target="_blank" rel="external">https://yarnpkg.com/en/docs/cli/</a></p>
-</blockquote>
-<p>最近新出的JavaScript包管理工具yarn大家已经有所耳闻，<br>并已通过npm i -g yarn进行了安装，<br>现在想知道怎么样使用吗？如果你了解 npm，你已经会很大一部分啦！<br>下面是这篇文章从npm切换到yarn的一些简洁笔记。</p>
-<p>yarn add: add a package to use in your current package.<br>yarn init: initialize for the development of a package.<br>yarn install: install all dependencies defined in a package.json file.<br>yarn publish: publish a package to a package manager.<br>yarn remove: remove a package that will no longer be used in your current package.</p>
-<p>仅仅一夜，却也是无数个日夜，FaceBook 开源了 yarn 这个新的 JavaScript 包管理工具，这个和 Exponent, Google, 以及 Tilde 合作完成的项目。</p>
-<p>FaceBook 提供了一种看起来和 npm 无关的安装方式 (mac):</p>
-<p>curl -o- -L <a href="https://yarnpkg.com/install.sh" target="_blank" rel="external">https://yarnpkg.com/install.sh</a> | bash<br>在其它平台也可以通过安装文件或者其它包管理系统安装，这样看起来不那么 npm-ish 的方式让我觉得这是有取代 npm 的想法的，虽然我们都爱 npm ;)</p>
-<p>当然真正的原因不是这样，这只是因为如果你用 npm 安装 yarn 不就会产生 yarn 想解决的那些问题吗，比如速度、semantic versioning 的不足等等</p>
-<p>那 yarn 解决了哪些 npm 的问题呢？yarn:</p>
-<p>非常快，非常非常快</p>
-<p>yarn 缓存了每次你下载的模块，所以同样模块同样的版本不会发送第二次下载请求，对于没有缓存的模块， yarn 也可以通过并行的网络请求最大限度利用网络资源。现在真的是没有什么几十秒安装不完的依赖的。一个 50 个依赖的 webpack + babel 项目可以在 20 秒左右安装完成。</p>
-<p>安全</p>
-<p>yarn 在开始安装一个包之前会先用 checksums 来验证，你不用担心本地的缓存的包被破坏了导致安装失败。</p>
-<p>可靠</p>
-<p>被一群喜欢喵星人的开发者维护，以及有 FaceBook 在 production 环境中使用。完善的测试和基于 flow type 的 code base。</p>
-<p>以及很多令人感动的小改进</p>
-<ol>
-<li><p>有些 npm 包会抛出 warning 提示信息，在一起 npm install 的时候只有一个名字你完全不知道是哪个包的哪个包的哪个包抛出的这个信息，而 yarn 改善了这一点。</p>
-</li>
-<li><p><code>yarn ls</code> 会高亮出所有在 package.json 的 dependencies 里的依赖，增强可读性。</p>
-</li>
-<li><p>每一条命令都会显示执行的时间。</p>
-</li>
-<li><p>默认生成 lockfile . 保证 yarn 每次安装相同版本的依赖，npm shrinkwrap 会丧失掉同步性如果你忘了生成它。</p>
-</li>
-<li><p><code>yarn why &lt;name&gt;</code> 这条命令可以告诉你为什么一个依赖会被安装到你的项目中。</p>
-</li>
-<li><p>……countless…</p>
-</li>
-</ol>
-<p>Fork?</p>
-<p>那么问题就来了，yarn 有许多令人激动的特性，但这些为什么不能通过改进 npm 的方式加入而是要重新开发一个客户端呢？</p>
-<p>简言之， 兼容性。 这些改进在现在的 npm 中看起来就像是 breaking changes。</p>
-<p>npm</p>
-<p>有人开始担心 npm，有人甚至说出了终于可以死掉了, npm！其实 npm 在更早的时候已经参与了 yarn 项目，并且鼓励这一行为，因为对于 npm 这样大范围使用的系统来说直接做出这些可能带来兼容性问题的改进很难。（不要以为 npm 比你制杖）</p>
-<p>This is how open source works.</p>
-<p>一、首先需要了解的命令<br>    npm install === yarn —— install 安装是默认行为。<br>    npm install taco –save === yarn add taco —— taco 包立即被保存到 package.json 中。<br>    npm uninstall taco –save === yarn remove taco</p>
-<p>在 npm 中，可以使用 npm config set save true 设置 — -save 为默认行为，但这对多数开发者而言并非显而易见的。在 yarn 中，在package.json 中添加（add）和移除（remove）等行为是默认的。<br>     npm install taco –save-dev === yarn add taco –dev<br>     npm update –save === yarn upgrade<br>update（更新） vs upgrade（升级）， 赞！upgrade 才是实际做的事！版本号提升时，发生的正是upgrade！<br>注意： npm update –save 在版本 3.11 中似乎有点问题。<br>     npm install taco@latest –save === yarn add taco<br>     npm install taco –global === yarn global add taco —— 一如既往，请谨慎使用 global 标记。<br>二、已知悉的命令<br>包和 npm registry 上是一样的。大致而言，Yarn 只是一个新的安装工具，npm 结构和 registry 还是一样的。<br>     npm init === yarn init<br>     npm link === yarn link<br>     npm outdated === yarn outdated<br>     npm publish === yarn publish<br>     npm run === yarn run<br>     npm cache clean === yarn cache clean<br>     npm login === yarn login (logout 同理)<br>     npm test === yarn test<br>三、Yarn 独有的命令<br>我跳过了一些提醒我们不要使用的内容，如 yarn clean。<br>     yarn licenses ls —— 允许你检查依赖的许可信息。<br>     yarn licenses generate —— 自动创建依赖免责声明 license。<br>     yarn why taco —— 检查为什么会安装 taco，详细列出依赖它的其他包（鸣谢 Olivier Combe）。<br>     Emojis<br>     速度<br>     通过 yarn lockfile 自动实现 shrinkwrap 功能<br>     以安全为中心的设计<br>四、Npm 独有的命令<br>     npm xmas === NO EQUIVALENT<br>     npm visnup === NO EQUIVALENT<br>总结<br>在写这篇文章的时候发现， yarn的run 命令似乎出了点问题，应该会在0.15.2中修复。在这一点上， npm 好多了。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;参考 &lt;a href=&quot;http://www.jb51.net/article/95199.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.jb51.net/article/95199.htm&lt;/a&gt;&lt;
-    
-    </summary>
-    
-    
-      <category term="npm" scheme="https://zhaoy875.github.io/tags/npm/"/>
-    
-      <category term="js包管理工具" scheme="https://zhaoy875.github.io/tags/js%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ubuntu 安装hexo博客</title>
-    <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
-    <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
-    <published>2016-10-11T05:50:43.000Z</published>
-    <updated>2016-10-26T10:25:41.895Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="ubuntu-安装hexo博客"><a href="/2016/10/11/ubuntu安装hexo教程/#ubuntu-安装hexo博客" class="headerlink" title="ubuntu 安装hexo博客"></a>ubuntu 安装hexo博客</h1><h2 id="搭建nodejs-环境"><a href="/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt <span class="keyword">install</span> nodejs</div><div class="line">sudo apt <span class="keyword">install</span> npm</div></pre></td></tr></table></figure>
-<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
-<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
-<h3 id="安装hexo"><a href="/2016/10/11/ubuntu安装hexo教程/#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
-<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
-<p>hexo s 本地预览–over</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;ubuntu-安装hexo博客&quot;&gt;&lt;a href=&quot;/2016/10/11/ubuntu安装hexo教程/#ubuntu-安装hexo博客&quot; class=&quot;headerlink&quot; title=&quot;ubuntu 安装hexo博客&quot;&gt;&lt;/a&gt;ubuntu 安装hexo博
-    
-    </summary>
-    
-    
-      <category term="ubuntu" scheme="https://zhaoy875.github.io/tags/ubuntu/"/>
-    
-      <category term="hexo" scheme="https://zhaoy875.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>npm</title>
-    <link href="https://zhaoy875.github.io/2016/10/11/npm/"/>
-    <id>https://zhaoy875.github.io/2016/10/11/npm/</id>
-    <published>2016-10-11T05:50:43.000Z</published>
-    <updated>2016-10-26T19:16:15.189Z</updated>
-    
-    <content type="html"><![CDATA[<p>升级node.js的方法。node有一个模块叫n，专门用来管理node.js的版本的。<br>首先安装n模块：</p>
-<pre><code>npm install -g n
-</code></pre><p>第二步：<br>升级node.js到最新稳定版:</p>
-<pre><code>n stable
-</code></pre><p>几个npm的常用命令</p>
-<pre><code>npm install npm #即可安装最新版npm
-
-npm -v          #显示版本，检查npm 是否正确安装。 
-npm install express   #安装express模块 
-npm install -g express  #全局安装express模块 
-npm list         #列出已安装模块 
-npm show express     #显示模块详情 
-npm update        #升级当前目录下的项目的所有模块 
-npm update express    #升级当前目录下的项目的指定模块 
-npm update -g express  #升级全局安装的express模块 
-npm uninstall express  #删除指定的模块
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;升级node.js的方法。node有一个模块叫n，专门用来管理node.js的版本的。&lt;br&gt;首先安装n模块：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;npm install -g n
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;第二步：&lt;br&gt;升级node.js到最新稳定版:&lt;/p&gt;
-&lt;pre
-    
-    </summary>
-    
-    
-      <category term="npm" scheme="https://zhaoy875.github.io/tags/npm/"/>
-    
-      <category term="nodejs" scheme="https://zhaoy875.github.io/tags/nodejs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>json</title>
-    <link href="https://zhaoy875.github.io/2016/09/20/json/"/>
-    <id>https://zhaoy875.github.io/2016/09/20/json/</id>
-    <published>2016-09-20T14:39:43.000Z</published>
-    <updated>2016-10-27T09:34:02.471Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Json数组、对象赋值时，最后一个元素后面是否可以带逗号？"><a href="/2016/09/20/json/#Json数组、对象赋值时，最后一个元素后面是否可以带逗号？" class="headerlink" title="Json数组、对象赋值时，最后一个元素后面是否可以带逗号？"></a>Json数组、对象赋值时，最后一个元素后面是否可以带逗号？</h2><h3 id="1-C-C-Java-PHP都能容忍末尾的逗号"><a href="/2016/09/20/json/#1-C-C-Java-PHP都能容忍末尾的逗号" class="headerlink" title="1 C,C++,Java,PHP都能容忍末尾的逗号"></a>1 C,C++,Java,PHP都能容忍末尾的逗号</h3><p>C，C++，Java中对数组赋值时，最后一个元素末尾的逗号可有可无。下面两行代码对这些语言来说是等效的。</p>
-<pre><code>[code]int a[] = {1,2,3};      /* 正确 */
-int a[] = {1,2,3,};     /* 正确 */
-</code></pre><p>PHP这一点也继承了C的特点，下面的两行代码等效。</p>
-<pre><code>[code]$a = array(1,2,3); /* 正确 */
-$a = array(1,2,3,); /* 正确 */
-</code></pre><h3 id="2-JavaScript视末尾逗号为语法错误！"><a href="/2016/09/20/json/#2-JavaScript视末尾逗号为语法错误！" class="headerlink" title="2 JavaScript视末尾逗号为语法错误！"></a>2 JavaScript视末尾逗号为语法错误！</h3><p>然而到了JavaScript，情况大不相同了，最后一个元素末尾一定不能有逗号，否则就是语法错误。</p>
-<pre><code>[code]var a = new Array(1,2,3); //正确
-var a = new Array(1,2,3,); //报错
-</code></pre><p>对于对象，同样不能有末尾的逗号。</p>
-<pre><code>[code]var o = { name:&apos;赵&apos;, age:12 }; // 正确
-var o = { name:&apos;赵&apos;, age:12,}; // 报错
-</code></pre><p>尽管有些浏览器在检测到这种错误后，最大容忍地去执行，但这不是统一的行为。IE系列浏览器统统不能容忍这种错误。</p>
-<h3 id="3-JSON同样不能容忍末尾的逗号"><a href="/2016/09/20/json/#3-JSON同样不能容忍末尾的逗号" class="headerlink" title="3 JSON同样不能容忍末尾的逗号"></a>3 JSON同样不能容忍末尾的逗号</h3><pre><code>[code]{&quot;name&quot;:&quot;zhao&quot;, &quot;age&quot;:12}   // 正确的JSON格式
-{&quot;name&quot;:&quot;zhao&quot;, &quot;age&quot;:12,}  // 错误的JSON格式
-</code></pre><p>需要注意的是，JSON是一种通用数据格式，与具体编程语言无关。各种语言在解码JSON时，也会采用不同的容忍程度。PHP的json_decode()就不能容忍末尾的逗号。</p>
-<pre><code>[code]json_decode({&quot;name&quot;:&quot;zhao&quot;, &quot;age&quot;:12,}); // 解析会发生错误
-</code></pre><p>来源： <a href="http://www.aichengxu.com/view/3462172" target="_blank" rel="external">http://www.aichengxu.com/view/3462172</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Json数组、对象赋值时，最后一个元素后面是否可以带逗号？&quot;&gt;&lt;a href=&quot;/2016/09/20/json/#Json数组、对象赋值时，最后一个元素后面是否可以带逗号？&quot; class=&quot;headerlink&quot; title=&quot;Json数组、对象赋值时，最后一个
-    
-    </summary>
-    
-    
-      <category term="json" scheme="https://zhaoy875.github.io/tags/json/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Music Time歌单分享</title>
-    <link href="https://zhaoy875.github.io/2016/09/20/music%E6%AD%8C%E5%8D%95/"/>
-    <id>https://zhaoy875.github.io/2016/09/20/music歌单/</id>
-    <published>2016-09-20T14:39:43.000Z</published>
-    <updated>2016-10-26T10:25:29.246Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="/2016/09/20/music歌单/#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe style="width:100%;min-height:260px;max-height:400px" id="musiciframe" src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=0&narrow=0" frameborder="0" scrolling="no"></iframe>
-
-<a id="more"></a>
-<h2 id="Interface-usage"><a href="/2016/09/20/music歌单/#Interface-usage" class="headerlink" title="Interface usage"></a>Interface usage</h2><p>歌单：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=1&amp;narrow=0"</span>  <span class="attribute">width</span>=<span class="string">"100%"</span>  frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
-<p>单首：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?song=408332757&amp;qssl=1&amp;qlrc=1&amp;autoplay=0"</span> <span class="attribute">width</span>=<span class="string">"100%"</span> frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
-<h2 id="API"><a href="/2016/09/20/music歌单/#API" class="headerlink" title="API"></a>API</h2><p>使用iframe内嵌页面<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Demos:</span></div><div class="line"><span class="symbol"></span></div><div class="line">https:<span class="comment">//music.daoapp.io/iframe?song=287749&amp;qssl=1&amp;qlrc=1&amp;qnarrow=0&amp;max_width=50%&amp;autoplay=1</span></div><div class="line"><span class="symbol">https:</span><span class="comment">//music.daoapp.io/iframe?song=287749&amp;qnarrow=1&amp;qssl=1</span></div><div class="line"><span class="symbol">URL:</span> http(s):<span class="comment">//music.daoapp.io/ Donot use HTTPS if it's not necessary. But if you do, don't forget set qssl to 1. Method: GET The arguments are:</span></div><div class="line"></div><div class="line">album=album_id  		<span class="comment">//专辑id</span></div><div class="line">playlist=playlist_id    <span class="comment">//歌单id</span></div><div class="line">song=song_id            <span class="comment">//单首id</span></div><div class="line">program=program_id</div><div class="line">radio=radio_id</div><div class="line">mv=mv_id 				</div><div class="line">qssl=[<span class="number">0</span>|<span class="number">1</span>]            </div><div class="line">qlrc=[<span class="number">0</span>|<span class="number">1</span>]             <span class="comment">//歌词</span></div><div class="line">qnarrow=[<span class="number">0</span>|<span class="number">1</span>]</div><div class="line">max_width=[<span class="number">100</span>%|<span class="number">32</span>rem|<span class="number">400</span>px|something else]</div><div class="line">autoplay=[<span class="number">0</span>|<span class="number">1</span>]         <span class="comment">//自动播放</span></div></pre></td></tr></table></figure></p>
-<p>You must choose ONE of those six ids. And it means nothing if you choose more than one of them. You may use <a href="https://music.daoapp.io/" target="_blank" rel="external">The web interface</a> to find the id or use 163Music.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;网易云-基于163APlayer&quot;&gt;&lt;a href=&quot;#网易云-基于163APlayer&quot; class=&quot;headerlink&quot; title=&quot;网易云 基于163APlayer&quot;&gt;&lt;/a&gt;网易云 基于&lt;a href=&quot;https://github.com/YUX-IO/163music-APlayer-you-get-docker&quot;&gt;163APlayer&lt;/a&gt;&lt;/h2&gt;&lt;iframe style=&quot;width:100%;min-height:260px;max-height:400px&quot; id=&quot;musiciframe&quot; src=&quot;https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=0&amp;narrow=0&quot;  frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
-    
-    </summary>
-    
-    
-      <category term="音乐" scheme="https://zhaoy875.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
     
   </entry>
   
@@ -1349,9 +1370,9 @@ var o = { name:&apos;赵&apos;, age:12,}; // 报错
       <category term="GitHub" scheme="https://zhaoy875.github.io/categories/GitHub/"/>
     
     
-      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
-    
       <category term="Awesome" scheme="https://zhaoy875.github.io/tags/Awesome/"/>
+    
+      <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
     
   </entry>
   
@@ -1458,67 +1479,6 @@ var openURL = function (url) {
       <category term="学习效率" scheme="https://zhaoy875.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%95%88%E7%8E%87/"/>
     
       <category term="思考" scheme="https://zhaoy875.github.io/tags/%E6%80%9D%E8%80%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为什么要使用Virtual DOM</title>
-    <link href="https://zhaoy875.github.io/2016/09/08/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8Virtual-DOM/"/>
-    <id>https://zhaoy875.github.io/2016/09/08/为什么要使用Virtual-DOM/</id>
-    <published>2016-09-08T05:30:23.000Z</published>
-    <updated>2016-10-26T10:26:49.272Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://od6ri688q.bkt.clouddn.com/VirtualDOM.gif" alt=""></p>
-<h1 id="React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM"><a href="/2016/09/08/为什么要使用Virtual-DOM/#React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM" class="headerlink" title="React中很少有人能解释清楚的问题——为什么要使用Virtual DOM"></a>React中很少有人能解释清楚的问题——为什么要使用Virtual DOM</h1><p>  这也是我在思考的问题，大家都在跟风学RN ,VUE,Ag2,却很少看见有人用数据来量化实际项目应用中dom操作对性能的影响 </p>
-<p> 下面看到野狗微信平台的一篇文章,先介绍下文章内容再说说我的理解：<br><a id="more"></a><br>原文链接：<a href="http://mp.weixin.qq.com/s?__biz=MzI0ODA2ODU2NQ==&amp;mid=2651130413&amp;idx=1&amp;sn=56a1cc3ac225a09982fc0c4a508222c7" target="_blank" rel="external">React中一个没人能解释清楚的问题——为什么要使用Virtual DOM</a></p>
-<h2 id="文章"><a href="/2016/09/08/为什么要使用Virtual-DOM/#文章" class="headerlink" title="文章"></a>文章</h2><p> 有一天，我的朋友向我提了一个有关React的问题：</p>
-<p>组件化， 单向数据绑定，这些我都懂了。但是React为什么要用Virtual DOM呢？</p>
-<p>我的回答非常套路，“因为直接操作DOM比较低效，比较慢。”。</p>
-<p>“但是现在的js引擎总是搞个大新闻，说自己的性能比之前又要不知道高到哪里去了。既然如此，为什么还会说直接操作DOM比较慢呢？”</p>
-<p>好吧… 这确实是一个好问题。</p>
-<p>惊人的是，我找了半天，发现并没有任何一篇文章可以给出坚如磐石的证明，来完满地解释Virtual DOM的必要性。 其实，使得整个流程变得低效的，并不只有直接操作DOM，还包括了操作DOM之后发生的事情。</p>
-<p>为了能让你更好地理解Virtual DOM的必要性，我们先来个急转弯，从宏观上来看浏览器的工作流。以及，一次DOM更新后，到底会发生什么事呢？</p>
-<hr>
-<p>##浏览器工作流</p>
-<p>NOTE：在下面这张图中，配图文字使用的是Webkit引擎的术语。现代的浏览器都是遵循类似的工作流，仅在细节处略有不同。</p>
-<p><img src="http://od6ri688q.bkt.clouddn.com/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%A7%A3%E6%9E%90%E5%9B%BE.png" alt=""></p>
-<h3 id="1-创建DOM树"><a href="/2016/09/08/为什么要使用Virtual-DOM/#1-创建DOM树" class="headerlink" title="1  创建DOM树"></a>1  创建DOM树</h3><p>一旦浏览器接收到一个HTML文件，渲染引擎（render engine）就开始解析它，并根据HTML元素（elements）一一对应地生成DOM 节点（nodes），组成一棵DOM树。</p>
-<h3 id="2-创建渲染树"><a href="/2016/09/08/为什么要使用Virtual-DOM/#2-创建渲染树" class="headerlink" title="2   创建渲染树"></a>2   创建渲染树</h3><p>同时，浏览器也会解析来自外部CSS文件和元素上的inline样式。通常浏览器会为这些样式信息，连同包含样式信息的DOM树上的节点，再创建另外一个树，一般被称作渲染树（render tree）</p>
-<h3 id="3-创建渲染树背后的故事"><a href="/2016/09/08/为什么要使用Virtual-DOM/#3-创建渲染树背后的故事" class="headerlink" title="3   创建渲染树背后的故事"></a>3   创建渲染树背后的故事</h3><p>WebKit内核的浏览器上，处理一个节点的样式的过程称为attachment。DOM树上的每个节点都有一个attach方法，它接收计算好的样式信息，返回一个render对象（又名renderer）</p>
-<p>Attachment的过程是同步的，新节点插入DOM树时，会调用新节点的attach方法。</p>
-<p>构建渲染树时，由于包含了这些render对象，每个render对象都需要计算视觉属性（visual properties）；这个过程通过计算每个元素的样式属性来完成。</p>
-<h3 id="4-布局-Layout"><a href="/2016/09/08/为什么要使用Virtual-DOM/#4-布局-Layout" class="headerlink" title="4   布局 Layout"></a>4   布局 Layout</h3><p>又被简称为Reflow[2]</p>
-<p>构造了渲染树以后，浏览器引擎开始着手布局（layout）。布局时，渲染树上的每个节点根据其在屏幕上应该出现的精确位置，分配一组屏幕坐标值。</p>
-<h3 id="5-绘制-Painting"><a href="/2016/09/08/为什么要使用Virtual-DOM/#5-绘制-Painting" class="headerlink" title="5   绘制 Painting"></a>5   绘制 Painting</h3><p>接着，浏览器将会通过遍历渲染树，调用每个节点的paint方法来绘制这些render对象。paint方法根据浏览器平台，使用不同的UI后端API（agnostic UI backend API）。 通过绘制，最终将在屏幕上展示内容。<br>再来看Virtual DOM</p>
-<p>好啦，现在你已经简单过了一遍浏览器引擎的渲染流程，你可以看到，从创建渲染树，到布局，一直到绘制，只要你在这过程中进行一次DOM更新，整个渲染流程都会重做一遍。尤其是创建渲染树，它需要重新计算所有元素上的所有样式。</p>
-<p>在一个复杂的单页面应用中，经常会涉及到大量的DOM操作，这将引起多次计算，使得整个流程变得低效，这应该尽量避免。</p>
-<p>Virtual DOM这个抽象层真正的闪光点正在于此：每当你想对视图进行一次更新，那些本该直接作用于真实DOM的改动，都会先作用于Virtual DOM，然后再将要改动的部分通知到真实DOM。这样可以大幅减少DOM操作带来的重计算步骤。</p>
-<p> Update: Reddit上的 ugwe43to874nf4 对Virtual DOM的重要性做了更客观的评价。</p>
-<blockquote>
-<p>DOM 操作 真正的问题在于每次操作都会触发布局的改变、DOM树的修改和渲染。所以，当你一个接一个地去修改30个节点的时候，就会引起30次（潜在的）布局重算，30次（潜在的）重绘，等等。<br>Virtual DOM 实际上没有使用什么全新的技术，仅仅是把 “ 双缓冲（double buffering）” 技术应用到了DOM上面。 这样一来，当你在这个单独的虚拟的DOM树上也一个接一个地修改30个节点的时候，它不会每次都去触发重绘，所以修改节点的开销就变小了。 之后，一旦你要把这些改动传递给真实DOM，之前所有的改动就会整合成一次DOM操作。这一次DOM操作引起的布局计算和重绘可能会更大，但是相比而言，整合起来的改动只做一次，减少了（多次）计算。<br>不过，实际上不借助Virtual DOM也可以做到这一点。你可以自己手动地整合所有的DOM操作到一个DOM 碎片（DOM fragment） 里，然后再传递给DOM树。</p>
-<p>既然如此，我们再来看看Virtual DOM到底解决了什么问题。 首先，它把管理DOM碎片这件事情自动化、抽象化了，使得你无需再去手动处理。另外，当你要手动去做这件事情的时候，你还得记得哪些部分变化了，哪些部分没变，毕竟之后重绘时，DOM树上的大量细节你都不需要重新刷新。这时候Virtual DOM的自动化对你来说就非常有用了，如果它的实现是正确的，那么它就会知道到底哪些地方应该需要刷新，哪些地方不要。</p>
-<p>最后，Virtual DOM通过各种组件和你写的一些代码来请求对它进行操作，而不是直接对它本身进行操作，使你不必非要跟Virtual DOM交互，也不必非要去了解Virtual DOM修改DOM树的原理，也就不用再想着去修改DOM了。（译注：对开发者来说，Virtual DOM几乎是完全透明的）。这样你就不用在 修改DOM 和 整合DOM操作为一次 之间做同步处理了。</p>
-</blockquote>
-<h3 id="进一步阅读"><a href="/2016/09/08/为什么要使用Virtual-DOM/#进一步阅读" class="headerlink" title="进一步阅读"></a>进一步阅读</h3><p>以上关于浏览器工作流的内容摘录自这篇文档中关于浏览器内部行为的章节。这篇文章还深入解释了浏览器引擎的hood部分的一切细节。毋庸置疑，这篇文章值得你花时间从头到尾好好读一遍。它会帮你很好地理解为什么我们需要Virtual DOM这样一个额外的抽象层</p>
-<p>原文：<br><a href="http://www.zcfy.cc/article/the-one-thing-that-no-one-properly-explains-about-react-why-virtual-dom-hashnode-1211.html" target="_blank" rel="external">http://www.zcfy.cc/article/the-one-thing-that-no-one-properly-explains-about-react-why-virtual-dom-hashnode-1211.html</a></p>
-<h2 id="我的理解"><a href="/2016/09/08/为什么要使用Virtual-DOM/#我的理解" class="headerlink" title="我的理解"></a>我的理解</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://od6ri688q.bkt.clouddn.com/VirtualDOM.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM&quot;&gt;&lt;a href=&quot;#React中很少有人能解释清楚的问题——为什么要使用Virtual-DOM&quot; class=&quot;headerlink&quot; title=&quot;React中很少有人能解释清楚的问题——为什么要使用Virtual DOM&quot;&gt;&lt;/a&gt;React中很少有人能解释清楚的问题——为什么要使用Virtual DOM&lt;/h1&gt;&lt;p&gt;  这也是我在思考的问题，大家都在跟风学RN ,VUE,Ag2,却很少看见有人用数据来量化实际项目应用中dom操作对性能的影响 &lt;/p&gt;
-&lt;p&gt; 下面看到野狗微信平台的一篇文章,先介绍下文章内容再说说我的理解：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="前端框架" scheme="https://zhaoy875.github.io/categories/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/"/>
-    
-    
-      <category term="框架" scheme="https://zhaoy875.github.io/tags/%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="react" scheme="https://zhaoy875.github.io/tags/react/"/>
-    
-      <category term="virtualDom" scheme="https://zhaoy875.github.io/tags/virtualDom/"/>
     
   </entry>
   

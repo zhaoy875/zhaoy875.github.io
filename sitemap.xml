@@ -2,6 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%977-%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE/</loc>
+    
+    <lastmod>2016-12-07T12:27:49.818Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%976-%E7%BC%96%E8%AF%91-Sass/</loc>
+    
+    <lastmod>2016-12-07T12:27:41.346Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%975-%E7%BC%96%E8%AF%91-LESS/</loc>
+    
+    <lastmod>2016-12-07T12:27:34.311Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%974-%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87/</loc>
+    
+    <lastmod>2016-12-07T12:27:26.436Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%973-%E5%8E%8B%E7%BC%A9-CSS/</loc>
+    
+    <lastmod>2016-12-07T12:27:17.653Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%972-%E5%8E%8B%E7%BC%A9-JS/</loc>
+    
+    <lastmod>2016-12-07T12:27:11.531Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%971-%E5%AE%89%E8%A3%85-Node-%E5%92%8C-gulp/</loc>
+    
+    <lastmod>2016-12-07T12:27:03.532Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97/</loc>
+    
+    <lastmod>2016-12-07T12:26:53.208Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/2016/10/11/Gulp%E6%8F%92%E4%BB%B6%E6%94%B6%E8%97%8F/</loc>
+    
+    <lastmod>2016-12-07T12:13:47.760Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/2016/06/10/HTML5%E6%A6%82%E8%A7%88/</loc>
+    
+    <lastmod>2016-12-06T16:14:38.136Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/2016/08/21/git-git%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/</loc>
+    
+    <lastmod>2016-12-04T17:23:49.702Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/2016/09/20/json/</loc>
+    
+    <lastmod>2016-12-04T17:00:39.889Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/2016/03/21/%E7%90%86%E8%A7%A3CSS%E4%B8%ADBFC%E4%B8%8Ehaslayout/</loc>
+    
+    <lastmod>2016-12-02T20:08:06.797Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zhaoy875.github.io/2016/11/10/front-end/</loc>
     
     <lastmod>2016-11-19T17:59:17.479Z</lastmod>
@@ -12,13 +103,6 @@
     <loc>https://zhaoy875.github.io/2016/03/21/linux%E7%9B%AE%E5%BD%95/</loc>
     
     <lastmod>2016-11-18T10:54:17.283Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%977-%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE/</loc>
-    
-    <lastmod>2016-11-10T06:40:53.925Z</lastmod>
     
   </url>
   
@@ -51,58 +135,9 @@
   </url>
   
   <url>
-    <loc>https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97/</loc>
-    
-    <lastmod>2016-10-30T08:28:19.322Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%976-%E7%BC%96%E8%AF%91-Sass/</loc>
-    
-    <lastmod>2016-10-30T08:25:11.075Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%975-%E7%BC%96%E8%AF%91-LESS/</loc>
-    
-    <lastmod>2016-10-30T08:24:31.120Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%974-%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87/</loc>
-    
-    <lastmod>2016-10-30T08:23:57.300Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%973-%E5%8E%8B%E7%BC%A9-CSS/</loc>
-    
-    <lastmod>2016-10-30T08:23:26.823Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://zhaoy875.github.io/2016/10/29/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E9%81%BF%E5%85%8D%E4%BD%BF%E7%94%A8document-write-%E5%B0%A4%E5%85%B6%E6%98%AF%E8%84%9A%E6%9C%AC%E6%B3%A8%E5%85%A5/</loc>
     
     <lastmod>2016-10-30T08:22:41.360Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%972-%E5%8E%8B%E7%BC%A9-JS/</loc>
-    
-    <lastmod>2016-10-29T09:14:42.702Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhaoy875.github.io/2016/10/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%971-%E5%AE%89%E8%A3%85-Node-%E5%92%8C-gulp/</loc>
-    
-    <lastmod>2016-10-29T09:14:21.659Z</lastmod>
     
   </url>
   
@@ -117,13 +152,6 @@
     <loc>https://zhaoy875.github.io/2016/03/21/SublimeText3%E9%85%8D%E7%BD%AELive%E2%80%8BReload%E5%AE%9E%E6%97%B6%E5%88%B7%E6%96%B0%E7%BD%91%E9%A1%B5/</loc>
     
     <lastmod>2016-10-28T18:29:18.968Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhaoy875.github.io/2016/09/20/json/</loc>
-    
-    <lastmod>2016-10-27T09:34:02.471Z</lastmod>
     
   </url>
   
