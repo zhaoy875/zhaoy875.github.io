@@ -623,10 +623,19 @@ background属性的值的书写顺序官方并没有强制标准的。为了可�
         
         
         
-        <div class="netease_music">
+        <div class="netease_music" >
           <h3 class="netease_h3">耳膜地震</h3>
           <p>Eardrum earthquake</p>
+          <div class ="neteasemusic" style="display:none">
           <iframe style="width:100%;min-height:260px;max-height:400px" id="musiciframe" src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=0&narrow=0"  frameborder="0" scrolling="no"></iframe>
+          </div>
+          <script type="text/javascript">
+          $(function() {
+            $('.netease_h3').click(function() {
+              $('.neteasemusic').slideToggle();
+            });
+          });
+          </script>
         </div>
 
         

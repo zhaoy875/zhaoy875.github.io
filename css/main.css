@@ -1743,7 +1743,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #afbb14;
+  background: #873c83;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1792,9 +1792,6 @@ pre .javascript .function {
 }
 .sidebar-panel-active {
   display: block;
-}
-.netease_music {
-  animation: music 2s linear 0.5s 2 alternate;
 }
 @-moz-keyframes music {
   0% {

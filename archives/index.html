@@ -318,43 +318,6 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2016/12/03/music歌单/" itemprop="url">
-              
-                <span itemprop="name">Music Time歌单</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-12-03T22:39:43+08:00"
-              content="2016-12-03" >
-          12-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-other" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
             <a class="post-title-link" href="/2016/11/10/front-end/" itemprop="url">
               
                 <span itemprop="name">掘金翻译文章--前端</span>
@@ -405,6 +368,43 @@
               datetime="2016-10-29T16:33:20+08:00"
               content="2016-10-29" >
           10-29
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+    
+
+      
+      
+      
+
+      
+      
+
+      
+
+  <article class="post post-type-other" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2016/10/23/music歌单/" itemprop="url">
+              
+                <span itemprop="name">Music Time歌单</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-10-23T22:39:43+08:00"
+              content="2016-10-23" >
+          10-23
         </time>
       </div>
 
@@ -896,10 +896,19 @@
         
         
         
-        <div class="netease_music">
+        <div class="netease_music" >
           <h3 class="netease_h3">耳膜地震</h3>
           <p>Eardrum earthquake</p>
+          <div class ="neteasemusic" style="display:none">
           <iframe style="width:100%;min-height:260px;max-height:400px" id="musiciframe" src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=0&narrow=0"  frameborder="0" scrolling="no"></iframe>
+          </div>
+          <script type="text/javascript">
+          $(function() {
+            $('.netease_h3').click(function() {
+              $('.neteasemusic').slideToggle();
+            });
+          });
+          </script>
         </div>
 
         
