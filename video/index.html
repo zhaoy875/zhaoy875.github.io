@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>哔哩萌OL</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="images/favicon.ico" type="image/gif">
+    <meta name="keywords" content="BiliMoe,vip视频解析,爱奇艺vip解析,腾讯vip解析,芒果TVvip解析">
+    <meta name="descriptipn" content="哔哩萌OL">
+   <!--  <link rel="stylesheet" href="images/myreset.css"> -->
+    <link rel="stylesheet" href="images/css.css">
+    <script type="text/javascript">
+    function dihejk() {
+        var diz = document.getElementById("dz").value;
+        var jkdz = document.getElementById("jieko");
+        var jk = document.getElementById("jieko").selectedIndex;
+        var jkv = jkdz.options[jk].value;
+        var cljdz = document.getElementById("bfq");
+        cljdz.src = jkv + diz;
+    }
+
+    function dihejk2() {
+        var diz = document.getElementById("dz").value;
+        var jkdz = document.getElementById("jieko");
+        var jk = document.getElementById("jieko").selectedIndex;
+        var jkv = jkdz.options[jk].value;
+        //var cljdz=document.getElementById("bfq");
+        window.open(jkv + diz);
+    }
+
+    window.onload = function() {
+        var canvas = document.getElementById("tianxian");
+        var context = canvas.getContext("2d");
+        //弧线
+        context.beginPath();
+
+        context.moveTo(55, 20);
+        context.lineTo(155, 150);
+        context.lineTo(255, 20);
+        context.lineJoin = "bevel";
+        context.lineCap = "butt";
+        context.lineWidth = "5";
+        context.strokeStyle = "#fff"
+        context.stroke();
+
+    }
+    </script>
+    <script type="text/javascript">
+        window.onload=function(){
+          document.getElementById('cover').style.opacity="1";
+        }
+    </script>
+</head>
+
+<body>
+<div id="cover" style="opacity:0.1">
+    <div class="bml-header" >
+    <img src="http://activity.hdslb.com/zzjs/20160421bml/img-pc/22_bmlindex_comp.png" alt="" class="pic-people pic-people22">
+    <img src="http://activity.hdslb.com/zzjs/20160421bml/img-pc/33_bmlindex_comp.png" alt="" class="pic-people pic-people33">
+    </div>
+    <div id="container">
+        <canvas id="tianxian">请更新您的浏览器至最新版，如chrome，火狐，ie11,qq浏览器等</canvas>
+        <div class="headtitle">
+            <h1>Video Online</h1>
+        </div>
+        
+        <div id="wbk">
+            <div id="kj">
+                <iframe src="tips.html" id="bfq" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div id="an">
+                <select id="jieko" name="接口">
+                    <option value="http://api.47ks.com/webcloud/?v=">通用接口1</option>
+                    <option value="http://000o.cc/jx/ty.php?url=">通用接口2</option>
+                    <option value="http://ckplayer.duapp.com/?type=ykyun&amp;url=">通用接口3</option>
+                    <option value="http://v.72du.com/api/?url=">通用接口4</option>
+                    <option value="http://yun.mt2t.com/yun?url=">通用接口5</option>
+                    <option value="http://moon.moondown.net/tong.php?url=">通用接口6</option>
+                    <option value="http://www.wmxz.wang/video.php?url=">优酷</option>
+                    <option value="http://v.72du.com/api/?url=">优酷2</option>
+                    <option value="http://api.47ks.com/webcloud/?v=">腾讯视频</option>
+                    <option value="http://jx.71ki.com/index.php?url=">爱奇艺高清接口</option>
+                    <option value="http://qtzr.net/s/?qt=">爱奇艺高清2</option>
+                    <option value="http://v.72du.com/api/?url=">搜狐1</option>
+                    <option value="http://www.wmxz.wang/video.php?url=">芒果TV</option>
+                    <option value="http://apiv.ga/magnet/">磁力链接解析</option>
+                </select>
+                <input type="search" placeholder="输入视频地址：例如(http://www.iqiyi.com/v_19rr9k5h1s.html)" size="50" id="dz">
+                <!-- <a id="bf" href="javascript:return false" onclick="dihejk()">
+                    <img src="images/play.png">
+                </a> -->
+                <button id="bf" class="zy_btn" type="button" onclick="dihejk()">立即播放</button>
+                <button id="bybf" class="zy_btn" type="button" onclick="dihejk2()">备用播放</button>
+            </div>
+        </div>
+
+    </div>
+</div> 
+</body>
+
+</html>

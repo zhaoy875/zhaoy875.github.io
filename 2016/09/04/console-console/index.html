@@ -57,22 +57,20 @@
 
 
 
-<meta name="description" content="前提没有特殊声明下，基本都是以chrome为例
-概述console大家平常写console最多的就是用来打印信息，console.log(obj or str)，但console能干的事可比这多了，比如console可以自定义打印字符的css样式，console.trace()踪函数的调用轨迹，计时功能console.time()；性能分析console.profile等。。。">
+<meta name="description" content="概述console没有单独声明外，本文都是以chrome为例">
 <meta property="og:type" content="article">
 <meta property="og:title" content="console你不知道的一些高级用法">
 <meta property="og:url" content="https://zhaoy875.github.io/2016/09/04/console-console/index.html">
 <meta property="og:site_name" content="zhaoy">
-<meta property="og:description" content="前提没有特殊声明下，基本都是以chrome为例
-概述console大家平常写console最多的就是用来打印信息，console.log(obj or str)，但console能干的事可比这多了，比如console可以自定义打印字符的css样式，console.trace()踪函数的调用轨迹，计时功能console.time()；性能分析console.profile等。。。">
+<meta property="og:description" content="概述console没有单独声明外，本文都是以chrome为例">
+<meta property="og:image" content="http://od6ri688q.bkt.clouddn.com/003.jpg">
 <meta property="og:image" content="http://od6ri688q.bkt.clouddn.com/consoleQQ%E6%88%AA%E5%9B%BE20160908200956.png">
 <meta property="og:image" content="http://od6ri688q.bkt.clouddn.com/console.groupQQ%E6%88%AA%E5%9B%BE20160908205931.png">
-<meta property="og:updated_time" content="2016-11-04T11:25:32.769Z">
+<meta property="og:updated_time" content="2016-12-19T21:30:34.339Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="console你不知道的一些高级用法">
-<meta name="twitter:description" content="前提没有特殊声明下，基本都是以chrome为例
-概述console大家平常写console最多的就是用来打印信息，console.log(obj or str)，但console能干的事可比这多了，比如console可以自定义打印字符的css样式，console.trace()踪函数的调用轨迹，计时功能console.time()；性能分析console.profile等。。。">
-<meta name="twitter:image" content="http://od6ri688q.bkt.clouddn.com/consoleQQ%E6%88%AA%E5%9B%BE20160908200956.png">
+<meta name="twitter:description" content="概述console没有单独声明外，本文都是以chrome为例">
+<meta name="twitter:image" content="http://od6ri688q.bkt.clouddn.com/003.jpg">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -175,7 +173,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/" rel="section" target="_blank">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -185,7 +183,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
+          <a href="/categories" rel="section" target="_blank">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -195,7 +193,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+          <a href="/about" rel="section" target="_blank">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -205,7 +203,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives" rel="section" target="_blank">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -215,7 +213,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags" rel="section" target="_blank">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -225,7 +223,7 @@
       
         
         <li class="menu-item menu-item-fe_demo">
-          <a href="/zhaoy" rel="section">
+          <a href="/zhaoy" rel="section" target="_blank">
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
@@ -235,11 +233,21 @@
       
         
         <li class="menu-item menu-item-fe_nav">
-          <a href="/fe_nav" rel="section">
+          <a href="/fe_nav" rel="section" target="_blank">
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             前端资源导航
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-video">
+          <a href="/video" rel="section" target="_blank">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            在线看视频
           </a>
         </li>
       
@@ -356,8 +364,11 @@
       
 
       
-        <h3 id="前提"><a href="/2016/09/04/console-console/#前提" class="headerlink" title="前提"></a>前提</h3><p>没有特殊声明下，基本都是以chrome为例</p>
-<h2 id="概述console"><a href="/2016/09/04/console-console/#概述console" class="headerlink" title="概述console"></a>概述console</h2><p>大家平常写console最多的就是用来打印信息，console.log(obj or str)，<br>但console能干的事可比这多了，比如console可以自定义打印字符的css样式，<br>console.trace()踪函数的调用轨迹，<br>计时功能console.time()；性能分析console.profile等。。。<br><a id="more"></a><br><strong>让我们来console.log(console)看看</strong><br><img src="http://od6ri688q.bkt.clouddn.com/consoleQQ%E6%88%AA%E5%9B%BE20160908200956.png" alt=""></p>
+        <p><img src="http://od6ri688q.bkt.clouddn.com/003.jpg" alt="console"></p>
+<h2 id="概述console"><a href="/2016/09/04/console-console/#概述console" class="headerlink" title="概述console"></a>概述console</h2><p><strong>没有单独声明外，本文都是以chrome为例</strong><br><a id="more"></a></p>
+<p>大家平常写console最多的就是用来打印信息，console.log(obj or str)，<br>但console能干的事可比这多了，比如console可以自定义打印字符的css样式，<br>console.trace()踪函数的调用轨迹，<br>计时功能console.time()；性能分析console.profile等。。。</p>
+<p><strong>让我们来console.log(console)看看</strong></p>
+<p><img src="http://od6ri688q.bkt.clouddn.com/consoleQQ%E6%88%AA%E5%9B%BE20160908200956.png" alt="console"></p>
 <h2 id="console打印类型"><a href="/2016/09/04/console-console/#console打印类型" class="headerlink" title="console打印类型"></a>console打印类型</h2><pre><code>console.log(&quot;str or obj&quot;)
 console.info(&quot;这是info&quot;);
 console.debug(&quot;这是debug&quot;);
@@ -760,7 +771,7 @@ console.profileEnd();
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前提"><span class="nav-number">1.</span> <span class="nav-text">前提</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概述console"><span class="nav-number"></span> <span class="nav-text">概述console</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#console打印类型"><span class="nav-number"></span> <span class="nav-text">console打印类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#占位符"><span class="nav-number">1.</span> <span class="nav-text">占位符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分组group"><span class="nav-number">2.</span> <span class="nav-text">分组group</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-dir"><span class="nav-number">3.</span> <span class="nav-text">console.dir()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-dirxml-用来显示网页的某个节点（node）所包含的节点html-xml代码。"><span class="nav-number">4.</span> <span class="nav-text">console.dirxml()用来显示网页的某个节点（node）所包含的节点html/xml代码。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-asset"><span class="nav-number">5.</span> <span class="nav-text">console.asset()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-count"><span class="nav-number">6.</span> <span class="nav-text">console.count</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-trace"><span class="nav-number">7.</span> <span class="nav-text">console.trace()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计时功能"><span class="nav-number">8.</span> <span class="nav-text">计时功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性能分析"><span class="nav-number">9.</span> <span class="nav-text">性能分析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述console"><span class="nav-number">1.</span> <span class="nav-text">概述console</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#console打印类型"><span class="nav-number">2.</span> <span class="nav-text">console打印类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#占位符"><span class="nav-number">2.1.</span> <span class="nav-text">占位符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分组group"><span class="nav-number">2.2.</span> <span class="nav-text">分组group</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-dir"><span class="nav-number">2.3.</span> <span class="nav-text">console.dir()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-dirxml-用来显示网页的某个节点（node）所包含的节点html-xml代码。"><span class="nav-number">2.4.</span> <span class="nav-text">console.dirxml()用来显示网页的某个节点（node）所包含的节点html/xml代码。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-asset"><span class="nav-number">2.5.</span> <span class="nav-text">console.asset()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-count"><span class="nav-number">2.6.</span> <span class="nav-text">console.count</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#console-trace"><span class="nav-number">2.7.</span> <span class="nav-text">console.trace()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计时功能"><span class="nav-number">2.8.</span> <span class="nav-text">计时功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性能分析"><span class="nav-number">2.9.</span> <span class="nav-text">性能分析</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

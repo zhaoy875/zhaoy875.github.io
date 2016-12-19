@@ -4,6 +4,20 @@
   
     
     <entry>
+      <title><![CDATA[Music Time歌单]]></title>
+      <url>https://zhaoy875.github.io/2016/12/03/music%E6%AD%8C%E5%8D%95/</url>
+      <content type="html"><![CDATA[<p><img src="http://od6ri688q.bkt.clouddn.com/003.jpg" alt="alan"></p>
+<h2 id="网易云-基于163APlayer"><a href="/2016/12/03/music歌单/#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe style="width:100%;min-height:260px;max-height:400px" id="musiciframe" src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=0&narrow=0" frameborder="0" scrolling="no"></iframe>
+
+<a id="more"></a>
+<h2 id="Interface-usage"><a href="/2016/12/03/music歌单/#Interface-usage" class="headerlink" title="Interface usage"></a>Interface usage</h2><p>歌单：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=1&amp;narrow=0"</span>  <span class="attribute">width</span>=<span class="string">"100%"</span>  frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
+<p>单首：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?song=408332757&amp;qssl=1&amp;qlrc=1&amp;autoplay=0"</span> <span class="attribute">width</span>=<span class="string">"100%"</span> frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="API"><a href="/2016/12/03/music歌单/#API" class="headerlink" title="API"></a>API</h2><p>使用iframe内嵌页面<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Demos:</span></div><div class="line"><span class="symbol"></span></div><div class="line">https:<span class="comment">//music.daoapp.io/iframe?song=287749&amp;qssl=1&amp;qlrc=1&amp;qnarrow=0&amp;max_width=50%&amp;autoplay=1</span></div><div class="line"><span class="symbol">https:</span><span class="comment">//music.daoapp.io/iframe?song=287749&amp;qnarrow=1&amp;qssl=1</span></div><div class="line"><span class="symbol">URL:</span> http(s):<span class="comment">//music.daoapp.io/ Donot use HTTPS if it's not necessary. But if you do, don't forget set qssl to 1. Method: GET The arguments are:</span></div><div class="line"></div><div class="line">album=album_id  		<span class="comment">//专辑id</span></div><div class="line">playlist=playlist_id    <span class="comment">//歌单id</span></div><div class="line">song=song_id            <span class="comment">//单首id</span></div><div class="line">program=program_id</div><div class="line">radio=radio_id</div><div class="line">mv=mv_id 				</div><div class="line">qssl=[<span class="number">0</span>|<span class="number">1</span>]            </div><div class="line">qlrc=[<span class="number">0</span>|<span class="number">1</span>]             <span class="comment">//歌词</span></div><div class="line">qnarrow=[<span class="number">0</span>|<span class="number">1</span>]</div><div class="line">max_width=[<span class="number">100</span>%|<span class="number">32</span>rem|<span class="number">400</span>px|something else]</div><div class="line">autoplay=[<span class="number">0</span>|<span class="number">1</span>]         <span class="comment">//自动播放</span></div></pre></td></tr></table></figure></p>
+<p>You must choose ONE of those six ids. And it means nothing if you choose more than one of them. You may use <a href="https://music.daoapp.io/" target="_blank" rel="external">The web interface</a> to find the id or use 163Music.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[掘金翻译文章--前端]]></title>
       <url>https://zhaoy875.github.io/2016/11/10/front-end/</url>
       <content type="html"><![CDATA[<ul>
@@ -309,19 +323,6 @@ npm uninstall express  #删除指定的模块
     </entry>
     
     <entry>
-      <title><![CDATA[Music Time歌单分享]]></title>
-      <url>https://zhaoy875.github.io/2016/09/20/music%E6%AD%8C%E5%8D%95/</url>
-      <content type="html"><![CDATA[<h2 id="网易云-基于163APlayer"><a href="/2016/09/20/music歌单/#网易云-基于163APlayer" class="headerlink" title="网易云 基于163APlayer"></a>网易云 基于<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">163APlayer</a></h2><iframe style="width:100%;min-height:260px;max-height:400px" id="musiciframe" src="https://music.daoapp.io/iframe?playlist=84803078&qssl=1&qlrc=1&autoplay=0&narrow=0" frameborder="0" scrolling="no"></iframe>
-
-<a id="more"></a>
-<h2 id="Interface-usage"><a href="/2016/09/20/music歌单/#Interface-usage" class="headerlink" title="Interface usage"></a>Interface usage</h2><p>歌单：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=1&amp;narrow=0"</span>  <span class="attribute">width</span>=<span class="string">"100%"</span>  frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
-<p>单首：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?song=408332757&amp;qssl=1&amp;qlrc=1&amp;autoplay=0"</span> <span class="attribute">width</span>=<span class="string">"100%"</span> frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
-<h2 id="API"><a href="/2016/09/20/music歌单/#API" class="headerlink" title="API"></a>API</h2><p>使用iframe内嵌页面<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Demos:</span></div><div class="line"><span class="symbol"></span></div><div class="line">https:<span class="comment">//music.daoapp.io/iframe?song=287749&amp;qssl=1&amp;qlrc=1&amp;qnarrow=0&amp;max_width=50%&amp;autoplay=1</span></div><div class="line"><span class="symbol">https:</span><span class="comment">//music.daoapp.io/iframe?song=287749&amp;qnarrow=1&amp;qssl=1</span></div><div class="line"><span class="symbol">URL:</span> http(s):<span class="comment">//music.daoapp.io/ Donot use HTTPS if it's not necessary. But if you do, don't forget set qssl to 1. Method: GET The arguments are:</span></div><div class="line"></div><div class="line">album=album_id  		<span class="comment">//专辑id</span></div><div class="line">playlist=playlist_id    <span class="comment">//歌单id</span></div><div class="line">song=song_id            <span class="comment">//单首id</span></div><div class="line">program=program_id</div><div class="line">radio=radio_id</div><div class="line">mv=mv_id 				</div><div class="line">qssl=[<span class="number">0</span>|<span class="number">1</span>]            </div><div class="line">qlrc=[<span class="number">0</span>|<span class="number">1</span>]             <span class="comment">//歌词</span></div><div class="line">qnarrow=[<span class="number">0</span>|<span class="number">1</span>]</div><div class="line">max_width=[<span class="number">100</span>%|<span class="number">32</span>rem|<span class="number">400</span>px|something else]</div><div class="line">autoplay=[<span class="number">0</span>|<span class="number">1</span>]         <span class="comment">//自动播放</span></div></pre></td></tr></table></figure></p>
-<p>You must choose ONE of those six ids. And it means nothing if you choose more than one of them. You may use <a href="https://music.daoapp.io/" target="_blank" rel="external">The web interface</a> to find the id or use 163Music.</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[json]]></title>
       <url>https://zhaoy875.github.io/2016/09/20/json/</url>
       <content type="html"><![CDATA[<h2 id="Json数组、对象赋值时，最后一个元素后面是否可以带逗号？"><a href="/2016/09/20/json/#Json数组、对象赋值时，最后一个元素后面是否可以带逗号？" class="headerlink" title="Json数组、对象赋值时，最后一个元素后面是否可以带逗号？"></a>Json数组、对象赋值时，最后一个元素后面是否可以带逗号？</h2><h3 id="1-C-C-Java-PHP都能容忍末尾的逗号"><a href="/2016/09/20/json/#1-C-C-Java-PHP都能容忍末尾的逗号" class="headerlink" title="1 C,C++,Java,PHP都能容忍末尾的逗号"></a>1 C,C++,Java,PHP都能容忍末尾的逗号</h3><p>C，C++，Java中对数组赋值时，最后一个元素末尾的逗号可有可无。下面两行代码对这些语言来说是等效的。</p>
@@ -619,43 +620,6 @@ var o = { name:&apos;赵&apos;, age:12,}; // 报错
     </entry>
     
     <entry>
-      <title><![CDATA[ gulp入门系列1--安装 Node 和 gulp]]></title>
-      <url>https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%971-%E5%AE%89%E8%A3%85-Node-%E5%92%8C-gulp/</url>
-      <content type="html"><![CDATA[<h1 id="安装-Node-和-gulp"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-Node-和-gulp" class="headerlink" title="安装 Node 和 gulp"></a>安装 Node 和 gulp</h1><p>gulp 是基于 node 实现的，那么我们就需要先安装 node。</p>
-<blockquote>
-<p>Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利用它实现 Web服务，做类似PHP的事。</p>
-</blockquote>
-<p>打开 <a href="https://nodejs.org/" target="_blank" rel="external">https://nodejs.org/</a> 点击绿色的 <strong>INSTALL</strong> 按钮下载安装 node。</p>
-<p><a href="https://github.com/nimojs/gulp-book/issues/10" target="_blank" rel="external">访问论坛获取帮助</a></p>
-<p><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#hash_cli" name="hash_cli"></a></p>
-<h2 id="使用终端-命令行"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#使用终端-命令行" class="headerlink" title="使用终端/命令行"></a>使用终端/命令行</h2><h3 id="命令行"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>在 Windows 中可按 <kbd>徽标键</kbd>（alt键左边）+ <kbd>R</kbd> 打开输入 <code>cmd</code> + <kbd>Enter</kbd> 打开命令行。</p>
-<h3 id="终端-Mac"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#终端-Mac" class="headerlink" title="终端(Mac)"></a>终端(Mac)</h3><p>打开 Launchpad（像火箭一样的图标），在屏幕上方搜索框中输入 <code>终端</code> + <kbd>Enter</kbd> 打开终端。</p>
-<h3 id="查看-node-版本号"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#查看-node-版本号" class="headerlink" title="查看 node 版本号"></a>查看 node 版本号</h3><p>在终端/命令行中输入 <code>node -v</code> 检测node是否安装成功，安装成功会显示出 node 的版本号。</p>
-<h3 id="跳转目录"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#跳转目录" class="headerlink" title="跳转目录"></a>跳转目录</h3><p>终端/命令行 中可使用 <code>cd 目录名</code> 跳转至指定目录，Mac 中还可以使用 <code>ls</code> 查看当前目录下的文件列表。</p>
-<h4 id="Windows"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#Windows" class="headerlink" title="Windows"></a>Windows</h4><p>Windows 下可使用如下命令跳转至指定目录：</p>
-<figure class="highlight scilab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跳转至 C 盘根目录</span></div><div class="line"><span class="built_in">cd</span> c:\</div><div class="line"><span class="comment">// 跳转至当前目录的 demo 文件夹</span></div><div class="line"><span class="built_in">cd</span> demo</div><div class="line"><span class="comment">// 跳转至上一级</span></div><div class="line"><span class="built_in">cd</span> ..</div></pre></td></tr></table></figure>
-<h4 id="Mac"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#Mac" class="headerlink" title="Mac"></a>Mac</h4><p>Mac 中建议只在 Documents 目录下进行文件操作。</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跳转至文档目录</span></div><div class="line"><span class="keyword">cd</span> /Users/你的用户名/Documents/</div><div class="line"><span class="comment">// 或第一次打开终端时直接输入</span></div><div class="line"><span class="keyword">cd</span> Documents</div><div class="line"><span class="comment">// 查看目录下文件列表</span></div><div class="line"><span class="keyword">ls</span></div><div class="line"><span class="comment">// 创建文件夹</span></div><div class="line"><span class="keyword">mkdir</span> demo</div><div class="line"><span class="comment">// 跳转至当前目录下的 demo 文件夹</span></div><div class="line"><span class="keyword">cd</span> demo</div><div class="line"><span class="comment">// 跳转至上级目录</span></div><div class="line"><span class="keyword">cd</span> ..</div></pre></td></tr></table></figure>
-<h3 id="退出运行状态"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#退出运行状态" class="headerlink" title="退出运行状态"></a>退出运行状态</h3><p>如果你在命令行中启动了一些一直运行的命令，你的命令行会进入“运行”状态，此时你不可以在命令行进行其他操作。可通过 <code>Ctrl + C</code> 停止 gulp。（Mac 中使用 <code>control + C</code>）</p>
-<p>后面的章节中如果代码中存在 <code>gulp.watch</code> 并在命令行运行了 <code>gulp</code> 则需要使用 <code>Ctrl + C</code> 退出任务。</p>
-<h2 id="npm-模块管理器"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#npm-模块管理器" class="headerlink" title="npm 模块管理器"></a>npm 模块管理器</h2><p>如果你了解 npm 则跳过此章节</p>
-<p>若你不了解npm 请阅读 <a href="http://javascript.ruanyifeng.com/nodejs/npm.html" target="_blank" rel="external">npm模块管理器</a></p>
-<h2 id="安装-gulp"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-gulp" class="headerlink" title="安装 gulp"></a>安装 gulp</h2><p>npm 是 node 的包管理工具，可以利用它安装 gulp 所需的包。（在安装 node 时已经自动安装了 npm）</p>
-<p>在命令行输入</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> -g gulp</div></pre></td></tr></table></figure>
-<p>若一直没安装成功，请<a href="https://github.com/nimojs/blog/issues/20" target="_blank" rel="external">使用 cnpm 安装</a>(npm的国内加速镜像)</p>
-<p>意思是：使用 npm 安装全局性的(<code>-g</code>) gulp 包。</p>
-<blockquote>
-<p>如果你安装失败，请输入<code>sudo npm install -g gulp</code>使用管理员权限安装。（可能会要求输入密码）</p>
-</blockquote>
-<p>安装时请注意命令行的提示信息，安装完成后可在命令行输入 <code>gulp -v</code> 以确认安装成功。</p>
-<p>至此，我们完成了准备工作。接着让 gulp 开始帮我们干活吧！</p>
-<p><a href="https://github.com/nimojs/gulp-book/issues/10" target="_blank" rel="external">访问论坛获取帮助</a></p>
-<p><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/chapter2.md">阅读下一章节：使用 gulp 压缩JS</a></p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[ gulp入门系列2--压缩 JS]]></title>
       <url>https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%972-%E5%8E%8B%E7%BC%A9-JS/</url>
       <content type="html"><![CDATA[<h1 id="使用-gulp-压缩-JS"><a href="/2016/09/20/gulp教程-gulp入门系列2-压缩-JS/#使用-gulp-压缩-JS" class="headerlink" title="使用 gulp 压缩 JS"></a>使用 gulp 压缩 JS</h1><p>请务必理解如下章节后阅读此章节：</p>
@@ -750,6 +714,43 @@ var o = { name:&apos;赵&apos;, age:12,}; // 报错
 <p>你可以访问 <a href="https://github.com/terinjokes/gulp-uglify" target="_blank" rel="external">gulp-uglify</a> 以查看更多用法。</p>
 <p><a href="https://github.com/nimojs/gulp-book/issues/11" target="_blank" rel="external">访问论坛获取帮助</a></p>
 <p><a href="/2016/09/20/gulp教程-gulp入门系列2-压缩-JS/chapter3.md">接着阅读：使用 gulp 压缩 CSS</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[ gulp入门系列1--安装 Node 和 gulp]]></title>
+      <url>https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%971-%E5%AE%89%E8%A3%85-Node-%E5%92%8C-gulp/</url>
+      <content type="html"><![CDATA[<h1 id="安装-Node-和-gulp"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-Node-和-gulp" class="headerlink" title="安装 Node 和 gulp"></a>安装 Node 和 gulp</h1><p>gulp 是基于 node 实现的，那么我们就需要先安装 node。</p>
+<blockquote>
+<p>Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利用它实现 Web服务，做类似PHP的事。</p>
+</blockquote>
+<p>打开 <a href="https://nodejs.org/" target="_blank" rel="external">https://nodejs.org/</a> 点击绿色的 <strong>INSTALL</strong> 按钮下载安装 node。</p>
+<p><a href="https://github.com/nimojs/gulp-book/issues/10" target="_blank" rel="external">访问论坛获取帮助</a></p>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#hash_cli" name="hash_cli"></a></p>
+<h2 id="使用终端-命令行"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#使用终端-命令行" class="headerlink" title="使用终端/命令行"></a>使用终端/命令行</h2><h3 id="命令行"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>在 Windows 中可按 <kbd>徽标键</kbd>（alt键左边）+ <kbd>R</kbd> 打开输入 <code>cmd</code> + <kbd>Enter</kbd> 打开命令行。</p>
+<h3 id="终端-Mac"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#终端-Mac" class="headerlink" title="终端(Mac)"></a>终端(Mac)</h3><p>打开 Launchpad（像火箭一样的图标），在屏幕上方搜索框中输入 <code>终端</code> + <kbd>Enter</kbd> 打开终端。</p>
+<h3 id="查看-node-版本号"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#查看-node-版本号" class="headerlink" title="查看 node 版本号"></a>查看 node 版本号</h3><p>在终端/命令行中输入 <code>node -v</code> 检测node是否安装成功，安装成功会显示出 node 的版本号。</p>
+<h3 id="跳转目录"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#跳转目录" class="headerlink" title="跳转目录"></a>跳转目录</h3><p>终端/命令行 中可使用 <code>cd 目录名</code> 跳转至指定目录，Mac 中还可以使用 <code>ls</code> 查看当前目录下的文件列表。</p>
+<h4 id="Windows"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#Windows" class="headerlink" title="Windows"></a>Windows</h4><p>Windows 下可使用如下命令跳转至指定目录：</p>
+<figure class="highlight scilab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跳转至 C 盘根目录</span></div><div class="line"><span class="built_in">cd</span> c:\</div><div class="line"><span class="comment">// 跳转至当前目录的 demo 文件夹</span></div><div class="line"><span class="built_in">cd</span> demo</div><div class="line"><span class="comment">// 跳转至上一级</span></div><div class="line"><span class="built_in">cd</span> ..</div></pre></td></tr></table></figure>
+<h4 id="Mac"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#Mac" class="headerlink" title="Mac"></a>Mac</h4><p>Mac 中建议只在 Documents 目录下进行文件操作。</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跳转至文档目录</span></div><div class="line"><span class="keyword">cd</span> /Users/你的用户名/Documents/</div><div class="line"><span class="comment">// 或第一次打开终端时直接输入</span></div><div class="line"><span class="keyword">cd</span> Documents</div><div class="line"><span class="comment">// 查看目录下文件列表</span></div><div class="line"><span class="keyword">ls</span></div><div class="line"><span class="comment">// 创建文件夹</span></div><div class="line"><span class="keyword">mkdir</span> demo</div><div class="line"><span class="comment">// 跳转至当前目录下的 demo 文件夹</span></div><div class="line"><span class="keyword">cd</span> demo</div><div class="line"><span class="comment">// 跳转至上级目录</span></div><div class="line"><span class="keyword">cd</span> ..</div></pre></td></tr></table></figure>
+<h3 id="退出运行状态"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#退出运行状态" class="headerlink" title="退出运行状态"></a>退出运行状态</h3><p>如果你在命令行中启动了一些一直运行的命令，你的命令行会进入“运行”状态，此时你不可以在命令行进行其他操作。可通过 <code>Ctrl + C</code> 停止 gulp。（Mac 中使用 <code>control + C</code>）</p>
+<p>后面的章节中如果代码中存在 <code>gulp.watch</code> 并在命令行运行了 <code>gulp</code> 则需要使用 <code>Ctrl + C</code> 退出任务。</p>
+<h2 id="npm-模块管理器"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#npm-模块管理器" class="headerlink" title="npm 模块管理器"></a>npm 模块管理器</h2><p>如果你了解 npm 则跳过此章节</p>
+<p>若你不了解npm 请阅读 <a href="http://javascript.ruanyifeng.com/nodejs/npm.html" target="_blank" rel="external">npm模块管理器</a></p>
+<h2 id="安装-gulp"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-gulp" class="headerlink" title="安装 gulp"></a>安装 gulp</h2><p>npm 是 node 的包管理工具，可以利用它安装 gulp 所需的包。（在安装 node 时已经自动安装了 npm）</p>
+<p>在命令行输入</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> -g gulp</div></pre></td></tr></table></figure>
+<p>若一直没安装成功，请<a href="https://github.com/nimojs/blog/issues/20" target="_blank" rel="external">使用 cnpm 安装</a>(npm的国内加速镜像)</p>
+<p>意思是：使用 npm 安装全局性的(<code>-g</code>) gulp 包。</p>
+<blockquote>
+<p>如果你安装失败，请输入<code>sudo npm install -g gulp</code>使用管理员权限安装。（可能会要求输入密码）</p>
+</blockquote>
+<p>安装时请注意命令行的提示信息，安装完成后可在命令行输入 <code>gulp -v</code> 以确认安装成功。</p>
+<p>至此，我们完成了准备工作。接着让 gulp 开始帮我们干活吧！</p>
+<p><a href="https://github.com/nimojs/gulp-book/issues/10" target="_blank" rel="external">访问论坛获取帮助</a></p>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/chapter2.md">阅读下一章节：使用 gulp 压缩JS</a></p>
 ]]></content>
     </entry>
     
@@ -1107,6 +1108,7 @@ var openURL = function (url) {
  openURL(addr);
  console.log(&apos;open success!&apos;);
 </code></pre><p>保存，hexo clean ， hexo s测试一下吧</p>
+<p><strong> hexo博客相关使用问题参考文档</strong><br><a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/configuration.html</a><br>next主题<br><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">http://theme-next.iissnan.com/getting-started.html</a></p>
 <h2 id="other"><a href="/2016/09/15/修改hexo-s自动打开浏览器/#other" class="headerlink" title="other"></a>other</h2><p>暂时没花时间去独立提取模块，就整个把anywhere的模块安装进来了，<br>依赖文件太恐怖了。。。<br>想起来再折腾吧</p>
 <blockquote>
 <p>npm ls -g 查看全局安装的模块及依赖</p>
@@ -1288,8 +1290,11 @@ var openURL = function (url) {
     <entry>
       <title><![CDATA[console你不知道的一些高级用法]]></title>
       <url>https://zhaoy875.github.io/2016/09/04/console-console/</url>
-      <content type="html"><![CDATA[<h3 id="前提"><a href="/2016/09/04/console-console/#前提" class="headerlink" title="前提"></a>前提</h3><p>没有特殊声明下，基本都是以chrome为例</p>
-<h2 id="概述console"><a href="/2016/09/04/console-console/#概述console" class="headerlink" title="概述console"></a>概述console</h2><p>大家平常写console最多的就是用来打印信息，console.log(obj or str)，<br>但console能干的事可比这多了，比如console可以自定义打印字符的css样式，<br>console.trace()踪函数的调用轨迹，<br>计时功能console.time()；性能分析console.profile等。。。<br><a id="more"></a><br><strong>让我们来console.log(console)看看</strong><br><img src="http://od6ri688q.bkt.clouddn.com/consoleQQ%E6%88%AA%E5%9B%BE20160908200956.png" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="http://od6ri688q.bkt.clouddn.com/003.jpg" alt="console"></p>
+<h2 id="概述console"><a href="/2016/09/04/console-console/#概述console" class="headerlink" title="概述console"></a>概述console</h2><p><strong>没有单独声明外，本文都是以chrome为例</strong><br><a id="more"></a></p>
+<p>大家平常写console最多的就是用来打印信息，console.log(obj or str)，<br>但console能干的事可比这多了，比如console可以自定义打印字符的css样式，<br>console.trace()踪函数的调用轨迹，<br>计时功能console.time()；性能分析console.profile等。。。</p>
+<p><strong>让我们来console.log(console)看看</strong></p>
+<p><img src="http://od6ri688q.bkt.clouddn.com/consoleQQ%E6%88%AA%E5%9B%BE20160908200956.png" alt="console"></p>
 <h2 id="console打印类型"><a href="/2016/09/04/console-console/#console打印类型" class="headerlink" title="console打印类型"></a>console打印类型</h2><pre><code>console.log(&quot;str or obj&quot;)
 console.info(&quot;这是info&quot;);
 console.debug(&quot;这是debug&quot;);

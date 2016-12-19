@@ -69,7 +69,7 @@ self.log.info(&amp;apo">
 browsersync或者anywhere(随时随地启动当前目录服务器，真的很好用^_^)都有这个功能，从搜了下anywhere的源码实现,移植到hexo 的模块
 打开 \node_modules\hexo-server\lib\server.js这个文件在
 self.log.info(&amp;apo">
-<meta property="og:updated_time" content="2016-09-29T18:00:21.086Z">
+<meta property="og:updated_time" content="2016-12-19T09:26:07.491Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="修改hexo s后自动打开浏览器">
 <meta name="twitter:description" content="##　缘起每次修改博客后 ，hexo s启动本地服务器后不会自动打开浏览器，每次要点开地址。不爽！搞起
@@ -178,7 +178,7 @@ self.log.info(&amp;apo">
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/" rel="section" target="_blank">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -188,7 +188,7 @@ self.log.info(&amp;apo">
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
+          <a href="/categories" rel="section" target="_blank">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -198,7 +198,7 @@ self.log.info(&amp;apo">
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+          <a href="/about" rel="section" target="_blank">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -208,7 +208,7 @@ self.log.info(&amp;apo">
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives" rel="section" target="_blank">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -218,7 +218,7 @@ self.log.info(&amp;apo">
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags" rel="section" target="_blank">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -228,7 +228,7 @@ self.log.info(&amp;apo">
       
         
         <li class="menu-item menu-item-fe_demo">
-          <a href="/zhaoy" rel="section">
+          <a href="/zhaoy" rel="section" target="_blank">
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
@@ -238,11 +238,21 @@ self.log.info(&amp;apo">
       
         
         <li class="menu-item menu-item-fe_nav">
-          <a href="/fe_nav" rel="section">
+          <a href="/fe_nav" rel="section" target="_blank">
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             前端资源导航
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-video">
+          <a href="/video" rel="section" target="_blank">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            在线看视频
           </a>
         </li>
       
@@ -407,6 +417,7 @@ var openURL = function (url) {
  openURL(addr);
  console.log(&apos;open success!&apos;);
 </code></pre><p>保存，hexo clean ， hexo s测试一下吧</p>
+<p><strong> hexo博客相关使用问题参考文档</strong><br><a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/configuration.html</a><br>next主题<br><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">http://theme-next.iissnan.com/getting-started.html</a></p>
 <h2 id="other"><a href="/2016/09/15/修改hexo-s自动打开浏览器/#other" class="headerlink" title="other"></a>other</h2><p>暂时没花时间去独立提取模块，就整个把anywhere的模块安装进来了，<br>依赖文件太恐怖了。。。<br>想起来再折腾吧</p>
 <blockquote>
 <p>npm ls -g 查看全局安装的模块及依赖</p>
