@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>zhaoy-工具箱</title>
+	<style type="text/css">
+	*{margin:0;padding:0;}
+	html,body{width:100%;height:100%;
+		background-color:#dea;
+		position:relative;
+	}
+	.center{text-align:center;margin:auto;}
+	
+	</style>
+	
+</head>
+<body>
+	<script type="text/javascript">
+		(function () {
+		    function browserRedirect() {
+		        var UA = navigator.userAgent.toLowerCase();
+		        var isIpad = UA.match(/ipad/i) == "ipad";
+		        var isIphoneOs = UA.match(/iphone os/i) == "iphone os";
+		        var isMidp = UA.match(/midp/i) == "midp";
+		        var isUc7 = UA.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+		        var isUc = UA.match(/ucweb/i) == "ucweb";
+		        var isAndroid = UA.match(/android/i) == "android";
+		        var isCE = UA.match(/windows ce/i) == "windows ce";
+		        var isWM = UA.match(/windows mobile/i) == "windows mobile";
+		        if (isIpad || isIphoneOs || isMidp || isUc7 || isUc || isAndroid || isCE || isWM) {
+		            return "phone";
+		        } else {
+		            return "pc";
+		        }
+		    }
+		    if (browserRedirect() == "phone"){
+		        var script = document.createElement('script');
+		        script.src = "//liriliri.github.io/eruda/eruda.min.js";
+		        document.body.appendChild(script);
+		        script.onload = function() {
+		            eruda.init()
+		        }
+		    }
+		})();
+	</script>
+
+<script type="text/javascript">
+	function includejs(url) {
+		var script = document.createElement("script");
+		script.src= url;
+		document.head.appendChild(script);
+	}
+</script>
+
+	<div class="center">
+		<h1>移动端控制台eruda.js</h1>
+		<a href="https://github.com/liriliri/eruda" target="_blank">GITHUB: https://github.com/liriliri/eruda</a>
+		<p>二维码打开本页</p>
+		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANAAAADQCAIAAAD5xngjAAAE1klEQVR4nO3dwW7zNhCF0bro+79yuujOCiCC5Xyy8Z+zC2CLSnJBYMAh+fr5+fkLKn8//QL8WQSOlMCREjhS/7z9/Hq9HnmP/1wrmJX3mfvWxpOffZm90edc38cMR0rgSAkcKYEjJXCk3qvUq7m1r73ybW70obFO1a17nzn1rRUrv5cZjpTAkRI4UgJHSuBI3VepV3vLc3vF0V5Bd6oQu61krx+YW/xdec6ecnQzHCmBIyVwpASOlMCR2qlSS6cKulOF2JGO31OVbLYcfJAZjpTAkRI4UgJHSuBIfXqVeqoQW/nWkS2cp174GyvQFWY4UgJHSuBICRwpgSO1U6WW5VJZ4h35zNxpRXPbeMt/qBmOlMCREjhSAkdK4EjdV6nPHhI7d9Ttkc88W0SXzc+nmOFICRwpgSMlcKQEjtTrw/tIy8bXjbFO3QWz15D84f+7X5nhSAkcKYEjJXCkBI5UV6WWxVpW0M114c4d9/TsZ8xwpASOlMCREjhSAkfqveN3bnHw2YW/vbr1SLU7VzKfqiWv5jb2muFICRwpgSMlcKQEjtT9WurcGujec1aePFe+ZacnlXehzq2cXpnhSAkcKYEjJXCkBI7Uzlrq1dzS21xtu/KcoYOG5n7xU8X4yvvs/dnNcKQEjpTAkRI4UgJHaueM35Vu3r220jlZBbrnVE268uRTi8jWUvkCAkdK4EgJHCmBI/Xe8TvXsFr25a68z57b0ctyuDwZ2OlJfCWBIyVwpASOlMCR2jnj91RX8FVZt66MfmvuZKTyj7z3nL0nm+FICRwpgSMlcKQEjtT9WurcBaC/vM2H3VZz+5ly2+ynHT+1wloqDxM4UgJHSuBICRyp+32pe8pdn89eCfr/v3LwZeZuornae7IZjpTAkRI4UgJH6szS1qmTTk6tnzx4UE25kHVKebOoGY6UwJESOFICR0rgSO1sE/zlKWEH37Nnw7yZ+6XKvterubHMcKQEjpTAkRI4UgJHaudikBVzJ33O2XjnTzsR9urT/oBmOFICR0rgSAkcKYEjNbVN8NPOB82aWk/VrXMb9cpvXZnhSAkcKYEjJXCkBI7U1L7UX0Z69DqRBz17XWTZk7zCDEdK4EgJHCmBIyVwpKbWUq9OFT57n8nWbecOidoba+995sp8MxwpgSMlcKQEjpTAkTpTpe7VgM+ejLRXmg2dsHTq+o6yRt4b3QxHSuBICRwpgSMlcKTuO36v5g6Snatb59pujzzko1qUf3WqqdsMR0rgSAkcKYEjJXCk3tdSy6sz98Y61cJ6pHN4bv/m3FbfvefYl8pXEjhSAkdK4EgJHKmdtdQ5ZY2c9feWV/CUN7Hq+OULCBwpgSMlcKQEjtT9vtRnr/IszxNecbuWWu4MXVG2Z68ww5ESOFICR0rgSAkcqZ3Tk04t8+19a+760RUP7ks9dQDUirnOYTMcKYEjJXCkBI6UwJHqbqI55aMWB+cWbed2hp5awtbxyxcQOFICR0rgSAkcqe+rUq+y/t49z9aSK+9T3k1jhiMlcKQEjpTAkRI4UjtVannG0Yq5ZceVsW6HPjXQXOfwqeesMMOREjhSAkdK4EgJHKk/5YzfoXbZZ4+Wunq2T1jHLx9H4EgJHCmBIyVwpN6rVBhlhiMlcKQEjpTAkRI4Uv8CefkKrsq8jWcAAAAASUVORK5CYII=" alt="本页二维码">
+	
+	<p>
+		<button onclick="includejs('http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js')">引入jquery</button>
+	</p>
+	</div>
+	
+
+
+
+<style type="text/css">
+	.console_sidebtn{position:absolute;top:1em;left:0;}
+	.console_indexlink{background:#222;color:#fff;padding:0.5em;border-radius:5px;text-decoration:none;}
+</style>
+<div class="console_sidebtn">
+	<a class="console_indexlink" href="http://zhaoy.site">返回主页</a>
+</div>
+
+
+</body>
+</html>
