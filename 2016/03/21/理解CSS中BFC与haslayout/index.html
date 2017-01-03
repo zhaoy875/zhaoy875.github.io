@@ -63,7 +63,7 @@
 <meta property="og:url" content="https://zhaoy875.github.io/2016/03/21/理解CSS中BFC与haslayout/index.html">
 <meta property="og:site_name" content="zhaoy">
 <meta property="og:description" content="理解CSS中BFC与haslayout一、BFC定义BFC全称Block Formatting Context，即“块级格式化上下文”。Box 是 CSS 布局的对象和基本单位(本文暂不讨论新式布局flex)。一个页面是由很多个Box组成的。元素的类型和 display 属性，决定了这个Box的类型。 不同类型的 Box， 会参与不同的Formatting Context，因此Box内的元素会以不">
-<meta property="og:updated_time" content="2016-12-02T20:08:06.797Z">
+<meta property="og:updated_time" content="2017-01-03T09:01:31.456Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" 理解CSS中BFC与haslayout.md">
 <meta name="twitter:description" content="理解CSS中BFC与haslayout一、BFC定义BFC全称Block Formatting Context，即“块级格式化上下文”。Box 是 CSS 布局的对象和基本单位(本文暂不讨论新式布局flex)。一个页面是由很多个Box组成的。元素的类型和 display 属性，决定了这个Box的类型。 不同类型的 Box， 会参与不同的Formatting Context，因此Box内的元素会以不">
@@ -376,6 +376,23 @@
 <p>它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。</p>
 </blockquote>
 <p>最常见的 Formatting context 有 Block fomatting context (简称BFC)和 Inline formatting context (简称IFC)，CSS3中还增加了GFC和FFC。</p>
+<p>BFC决定了元素如何对其内容进行定位，以及与其他元素的关系和相互作用。当涉及到可视化布局的时候，Block Formatting Context提供了一个环境，HTML元素在这个环境中按照一定规则进行布局。一个环境中的元素不会影响到其它环境中的布局。比如浮动元素会形成BFC，浮动元素内部子元素的主要受该浮动元素影响，两个浮动元素之间是互不影响的。这里有点类似一个BFC就是一个独立的行政单位的意思。也可以说BFC就是一个作用范围。可以把它理解成是一个独立的容器，并且这个容器的里box的布局，与这个容器外的毫不相干。</p>
+<p>另一个通俗点的解释是：在普通流中的 Box(框) 属于一种 formatting context(格式化上下文) ，类型可以是 block ，或者是 inline ，但不能同时属于这两者。并且， Block boxes(块框) 在 block formatting context(块格式化上下文) 里格式化， Inline boxes(块内框) 则在 inline formatting context(行内格式化上下文) 里格式化。任何被渲染的元素都属于一个 box ，并且不是 block ，就是 inline 。即使是未被任何元素包裹的文本，根据不同的情况，也会属于匿名的 block boxes 或者 inline boxes。所以上面的描述，即是把所有的元素划分到对应的 formatting context 里。</p>
+<p>其一般表现规则，我整理了以下这几个情况：</p>
+<p>1、在创建了 Block Formatting Context 的元素中，其子元素按文档流一个接一个地放置。垂直方向上他们的起点是一个包含块的顶部，两个相邻的元素之间的垂直距离取决于 ‘margin’ 特性。</p>
+<pre><code>根据 CSS 2.1 8.3.1 Collapsing margins 第一条，两个相邻的普通流中的块框在垂直位置的空白边会发生折叠现象。也就是处于同一个BFC中的两个垂直窗口的margin会重叠。
+
+根据 CSS 2.1 8.3.1 Collapsing margins 第三条，生成 block formatting context 的元素不会和在流中的子元素发生空白边折叠。所以解决这种问题的办法是要为两个容器添加具有BFC的包裹容器。
+</code></pre><p>2、在 Block Formatting Context 中，每一个元素左外边与包含块的左边相接触（对于从右到左的格式化，右外边接触右边）， 即使存在浮动也是如此（尽管一个元素的内容区域会由于浮动而压缩），除非这个元素也创建了一个新的 Block Formatting Context 。</p>
+<p>3、Block Formatting Context就是页面上的一个隔离的独立容器，容器里面的子元素不会在布局上影响到外面的元素，反之也是如此。</p>
+<p>4、根据 CSS 2.1 9.5 Floats 中的描述，创建了 Block Formatting Context 的元素不能与浮动元素重叠。</p>
+<pre><code>表格的 border-box、块级的替换元素、或是在普通流中创建了新的 block formatting context（如元素的 &apos;overflow&apos; 特性不为 &apos;visible&apos; 时）的元素不可以与位于相同的 block formatting context 中的浮动元素相重叠。
+</code></pre><p>5 、当容器有足够的剩余空间容纳 BFC 的宽度时，所有浏览器都会将 BFC 放置在浮动元素所在行的剩余空间内。 </p>
+<p>6、 在 IE6 IE7 IE8 Chrome Opera 中，当 BFC 的宽度介于 “容器剩余宽度” 与 “容器宽度” 之间时，BFC 会显示在浮动元素的下一行；在 Safari 中，BFC 则仍然保持显示在浮动元素所在行，并且 BFC 溢出容器；在 Firefox 中，当容器本身也创建了 BFC 或者容器的 ‘padding-top’、’border-top-width’ 这些特性不都为 0 时表现与 IE8(S)、Chrome 类似，否则表现与 Safari 类似。 </p>
+<p>经验证，最新版本的浏览中只有firefox会在同一行显示，其它浏览器均换行。</p>
+<p>7、 在 IE6 IE7 IE8 Opera 中，当 BFC 的宽度大于 “容器宽度” 时，BFC 会显示在浮动元素的下一行；在 Chrome Safari 中，BFC 则仍然保持显示在浮动元素所在行，并且 BFC 溢出容器；在 Firefox 中，当容器本身也创建了 BFC 或者容器的 ‘padding- top’、’border-top-width’ 这些特性不都为 0 时表现与 IE8(S) 类似，否则表现与 Chrome 类似。</p>
+<p>经验证，最新版本的浏览中只有firefox会在同一行显示，其它浏览器均换行。</p>
+<p>8、根据CSS2.1 规范第10.6.7部分的高度计算规则，在计算生成了 block formatting context 的元素的高度时，其浮动子元素应该参与计算。</p>
 
       
     </div>
@@ -431,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/21/SublimeText3配置Live​Reload实时刷新网页/" rel="next" title="SublimeText配置Live​Reload实时刷新">
-                <i class="fa fa-chevron-left"></i> SublimeText配置Live​Reload实时刷新
+              <a href="/2016/03/21/linux目录/" rel="next" title=" linux目录结构简析">
+                <i class="fa fa-chevron-left"></i>  linux目录结构简析
               </a>
             
           </div>
@@ -725,8 +742,8 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     
     <i class="menu-item-icon fa fa-fw fa-user"></i>
