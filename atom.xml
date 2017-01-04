@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhaoy875.github.io/"/>
-  <updated>2017-01-04T21:28:03.009Z</updated>
+  <updated>2017-01-04T21:41:54.567Z</updated>
   <id>https://zhaoy875.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Javascript-继承与原型链学习笔记</title>
+    <title>Javascript-继承与原型链一探究竟</title>
     <link href="https://zhaoy875.github.io/2016/12/29/javascript%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0-%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/"/>
     <id>https://zhaoy875.github.io/2016/12/29/javascript系统学习-继承与原型链/</id>
     <published>2016-12-29T07:33:20.000Z</published>
-    <updated>2017-01-04T21:28:03.009Z</updated>
+    <updated>2017-01-04T21:41:54.567Z</updated>
     
     <content type="html"><![CDATA[<h1 id="继承与原型链"><a href="/2016/12/29/javascript系统学习-继承与原型链/#继承与原型链" class="headerlink" title="继承与原型链"></a>继承与原型链</h1><blockquote>
 <p>主要参考MDN，讲的比较通俗易懂 : <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain</a><br>如有错误还望指正，感谢</p>
@@ -80,11 +80,11 @@
   </entry>
   
   <entry>
-    <title>nodejs模块——fs模块</title>
+    <title>nodejs文件模块——fs</title>
     <link href="https://zhaoy875.github.io/2016/12/21/node%E5%AD%A6%E4%B9%A0-nodejs%E6%A8%A1%E5%9D%97-fs%E6%A8%A1%E5%9D%97/"/>
     <id>https://zhaoy875.github.io/2016/12/21/node学习-nodejs模块-fs模块/</id>
     <published>2016-12-21T09:33:20.000Z</published>
-    <updated>2017-01-04T21:20:55.799Z</updated>
+    <updated>2017-01-04T21:45:18.934Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Node-filesystem"><a href="/2016/12/21/node学习-nodejs模块-fs模块/#Node-filesystem" class="headerlink" title="Node filesystem "></a>Node filesystem </h1><blockquote>
 <p>fs和path模块为nodejs自带,fs模块用于对系统文件及目录进行读写操作</p>
@@ -101,9 +101,7 @@
 <h2 id="二、readFile读取文件"><a href="/2016/12/21/node学习-nodejs模块-fs模块/#二、readFile读取文件" class="headerlink" title="二、readFile读取文件"></a>二、readFile读取文件</h2><p>有一个文本文件text.txt内容如下</p>
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">line</span> <span class="literal">one</span></div><div class="line"><span class="built_in">line</span> <span class="literal">two</span></div></pre></td></tr></table></figure>
 <p>在其相同目录中有一个readfile.js，内容如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>); </div><div class="line"><span class="comment">//readFile的回调函数接收两个参数，err是读取文件出错时触发的错误对象，data是从文件读取的数据。</span></div><div class="line"></div><div class="line">fs.readFile(<span class="string">'./test.txt'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>&#123;</div><div class="line">    <span class="comment">// 读取文件失败/错误 抛出异常</span></div><div class="line">    <span class="keyword">if</span> (err) &#123;<span class="keyword">throw</span> err;&#125;</div><div class="line">    <span class="comment">// 读取文件成功</span></div><div class="line">    <span class="built_in">console</span>.log(data);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p> node readfile.js运行结果：</p>
-<blockquote>
-</blockquote>
+<p>三、WriteFile写入文件<br>四、使用fs.read和fs.write读写文件<br>五、目录操作<br>未完待续。。。。</p>
 <p>若一直没安装成功，请<a href="https://github.com/nimojs/blog/issues/20" target="_blank" rel="external">使用 cnpm 安装</a>(npm的国内加速镜像)</p>
 <p>意思是：使用 npm 安装全局性的(<code>-g</code>) gulp 包。</p>
 <blockquote>
@@ -504,6 +502,35 @@
   </entry>
   
   <entry>
+    <title>ubuntu 安装hexo博客</title>
+    <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
+    <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
+    <published>2016-10-11T05:50:43.000Z</published>
+    <updated>2016-10-26T10:25:41.895Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ubuntu-安装hexo博客"><a href="/2016/10/11/ubuntu安装hexo教程/#ubuntu-安装hexo博客" class="headerlink" title="ubuntu 安装hexo博客"></a>ubuntu 安装hexo博客</h1><h2 id="搭建nodejs-环境"><a href="/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt <span class="keyword">install</span> nodejs</div><div class="line">sudo apt <span class="keyword">install</span> npm</div></pre></td></tr></table></figure>
+<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
+<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
+<h3 id="安装hexo"><a href="/2016/10/11/ubuntu安装hexo教程/#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
+<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
+<p>hexo s 本地预览–over</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;ubuntu-安装hexo博客&quot;&gt;&lt;a href=&quot;/2016/10/11/ubuntu安装hexo教程/#ubuntu-安装hexo博客&quot; class=&quot;headerlink&quot; title=&quot;ubuntu 安装hexo博客&quot;&gt;&lt;/a&gt;ubuntu 安装hexo博
+    
+    </summary>
+    
+    
+      <category term="ubuntu" scheme="https://zhaoy875.github.io/tags/ubuntu/"/>
+    
+      <category term="hexo" scheme="https://zhaoy875.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>npm</title>
     <link href="https://zhaoy875.github.io/2016/10/11/npm/"/>
     <id>https://zhaoy875.github.io/2016/10/11/npm/</id>
@@ -541,35 +568,6 @@ npm uninstall express  #删除指定的模块
       <category term="npm" scheme="https://zhaoy875.github.io/tags/npm/"/>
     
       <category term="nodejs" scheme="https://zhaoy875.github.io/tags/nodejs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ubuntu 安装hexo博客</title>
-    <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
-    <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
-    <published>2016-10-11T05:50:43.000Z</published>
-    <updated>2016-10-26T10:25:41.895Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="ubuntu-安装hexo博客"><a href="/2016/10/11/ubuntu安装hexo教程/#ubuntu-安装hexo博客" class="headerlink" title="ubuntu 安装hexo博客"></a>ubuntu 安装hexo博客</h1><h2 id="搭建nodejs-环境"><a href="/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt <span class="keyword">install</span> nodejs</div><div class="line">sudo apt <span class="keyword">install</span> npm</div></pre></td></tr></table></figure>
-<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
-<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
-<h3 id="安装hexo"><a href="/2016/10/11/ubuntu安装hexo教程/#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
-<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
-<p>hexo s 本地预览–over</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;ubuntu-安装hexo博客&quot;&gt;&lt;a href=&quot;/2016/10/11/ubuntu安装hexo教程/#ubuntu-安装hexo博客&quot; class=&quot;headerlink&quot; title=&quot;ubuntu 安装hexo博客&quot;&gt;&lt;/a&gt;ubuntu 安装hexo博
-    
-    </summary>
-    
-    
-      <category term="ubuntu" scheme="https://zhaoy875.github.io/tags/ubuntu/"/>
-    
-      <category term="hexo" scheme="https://zhaoy875.github.io/tags/hexo/"/>
     
   </entry>
   
@@ -1483,9 +1481,9 @@ var o = { name:&apos;赵&apos;, age:12,}; // 报错
       <category term="GitHub" scheme="https://zhaoy875.github.io/categories/GitHub/"/>
     
     
-      <category term="Awesome" scheme="https://zhaoy875.github.io/tags/Awesome/"/>
-    
       <category term="github" scheme="https://zhaoy875.github.io/tags/github/"/>
+    
+      <category term="Awesome" scheme="https://zhaoy875.github.io/tags/Awesome/"/>
     
   </entry>
   
