@@ -64,14 +64,15 @@ lowid/ss-with-net-speeder:latest
 ssserver -p 8080 -k 12345">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Arukas.io docker梯子">
-<meta property="og:url" content="https://zhaoy875.github.io/2016/10/20/搭建樱花梯子/index.html">
+<meta property="og:url" content="https://zhaoy875.github.io/2016/10/20/樱花docker梯子/index.html">
 <meta property="og:site_name" content="zhaoy">
 <meta property="og:description" content="傻瓜教程樱花（Arukas.io）docker 免费搭个人SS
 没账户的先注册一个账户：https://app.arukas.io/sign_up
 登陆后点击左侧+Create 创建一个应用（docker hub地址lowid/ss-with-net-speeder:latest）
 lowid/ss-with-net-speeder:latest
 ssserver -p 8080 -k 12345">
-<meta property="og:updated_time" content="2017-01-10T18:05:14.851Z">
+<meta property="og:image" content="https://zhaoy875.github.io/2016/10/20/樱花docker梯子/docker-ss.png">
+<meta property="og:updated_time" content="2017-01-10T20:39:56.634Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Arukas.io docker梯子">
 <meta name="twitter:description" content="傻瓜教程樱花（Arukas.io）docker 免费搭个人SS
@@ -79,6 +80,7 @@ ssserver -p 8080 -k 12345">
 登陆后点击左侧+Create 创建一个应用（docker hub地址lowid/ss-with-net-speeder:latest）
 lowid/ss-with-net-speeder:latest
 ssserver -p 8080 -k 12345">
+<meta name="twitter:image" content="https://zhaoy875.github.io/2016/10/20/樱花docker梯子/docker-ss.png">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -97,7 +99,7 @@ ssserver -p 8080 -k 12345">
 
 
 
-  <link rel="canonical" href="https://zhaoy875.github.io/2016/10/20/搭建樱花梯子/"/>
+  <link rel="canonical" href="https://zhaoy875.github.io/2016/10/20/樱花docker梯子/"/>
 
 
 
@@ -353,8 +355,8 @@ ssserver -p 8080 -k 12345">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/20/搭建樱花梯子/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/20/搭建樱花梯子/" itemprop="commentsCount"></span>
+                <a href="/2016/10/20/樱花docker梯子/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/20/樱花docker梯子/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -382,9 +384,9 @@ ssserver -p 8080 -k 12345">
       
 
       
-        <h2 id="傻瓜教程"><a href="/2016/10/20/搭建樱花梯子/#傻瓜教程" class="headerlink" title="傻瓜教程"></a>傻瓜教程</h2><p>樱花（Arukas.io）docker 免费搭个人SS</p>
+        <h2 id="傻瓜教程"><a href="/2016/10/20/樱花docker梯子/#傻瓜教程" class="headerlink" title="傻瓜教程"></a>傻瓜教程</h2><p>樱花（Arukas.io）docker 免费搭个人SS</p>
 <p>没账户的先注册一个账户：<a href="https://app.arukas.io/sign_up" target="_blank" rel="external">https://app.arukas.io/sign_up</a></p>
-<p>登陆后点击左侧+Create 创建一个应用（docker hub地址lowid/ss-with-net-speeder:latest）</p>
+<p>登陆后点击左侧+Create 创建一个应用（docker hub地址lowid/ss-with-net-speeder:latest）<br><img src="/2016/10/20/樱花docker梯子/docker-ss.png" alt=""></p>
 <pre><code>lowid/ss-with-net-speeder:latest
 ssserver -p 8080 -k 123456 -m aes-256-cfb
 </code></pre><p>右侧启动应用，start the application</p>
@@ -398,6 +400,12 @@ ssserver -p 8080 -k 123456 -m aes-256-cfb
 <blockquote>
 <p>低调使用,速度不快，满足基本网页浏览了</p>
 </blockquote>
+<h2 id="附录："><a href="/2016/10/20/樱花docker梯子/#附录：" class="headerlink" title="附录："></a>附录：</h2><p>ubuntu下使用ss</p>
+<p>安装步骤：<br>图形界面和命令行模式方案二选一。</p>
+<h3 id="gui方式"><a href="/2016/10/20/樱花docker梯子/#gui方式" class="headerlink" title="gui方式"></a>gui方式</h3><figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">添加PPA源：sudo<span class="built_in"> add-apt-repository </span>ppa:hzwhuang/ss-qt5</div><div class="line">更新软件列表：sudo apt-get update</div><div class="line">安装shadowsocks：sudo apt-get install shadowsocks-qt5</div><div class="line">配置shadowsocks帐号信息</div><div class="line">dash中搜索shadow，然后打开shadowsocks-qt5软件</div></pre></td></tr></table></figure>
+<p>在空白编辑区域点击鼠标右键，点击【添加】，然后填入正确的连接信息<br>然后点击【连接】，状态显示为已连接。</p>
+<h3 id="cmd方式"><a href="/2016/10/20/樱花docker梯子/#cmd方式" class="headerlink" title="cmd方式"></a>cmd方式</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">安装python-pip：apt-get <span class="keyword">install </span>python-pip</div><div class="line">安装<span class="keyword">shadowsocks：pip </span><span class="keyword">install </span><span class="keyword">shadowsocks</span></div></pre></td></tr></table></figure>
+<p>启动客户端<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sslocal -s server_ip -p server_port  -l <span class="number">1080</span> -k password -t <span class="number">600</span> -m aes<span class="number">-256</span>-cfb</div><div class="line"></div><div class="line">-k 密码要加<span class="string">"双引号"</span></div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -478,10 +486,10 @@ ssserver -p 8080 -k 123456 -m aes-256-cfb
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/10/20/搭建樱花梯子/"
+        <div class="ds-share flat" data-thread-key="2016/10/20/樱花docker梯子/"
      data-title="Arukas.io docker梯子"
      data-content=""
-     data-url="https://zhaoy875.github.io/2016/10/20/搭建樱花梯子/">
+     data-url="https://zhaoy875.github.io/2016/10/20/樱花docker梯子/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -508,8 +516,8 @@ ssserver -p 8080 -k 123456 -m aes-256-cfb
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/20/搭建樱花梯子/"
-           data-title="Arukas.io docker梯子" data-url="https://zhaoy875.github.io/2016/10/20/搭建樱花梯子/">
+      <div class="ds-thread" data-thread-key="2016/10/20/樱花docker梯子/"
+           data-title="Arukas.io docker梯子" data-url="https://zhaoy875.github.io/2016/10/20/樱花docker梯子/">
       </div>
     
   </div>
@@ -715,7 +723,7 @@ ssserver -p 8080 -k 123456 -m aes-256-cfb
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#傻瓜教程"><span class="nav-number">1.</span> <span class="nav-text">傻瓜教程</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#傻瓜教程"><span class="nav-number">1.</span> <span class="nav-text">傻瓜教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录："><span class="nav-number">2.</span> <span class="nav-text">附录：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#gui方式"><span class="nav-number">2.1.</span> <span class="nav-text">gui方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cmd方式"><span class="nav-number">2.2.</span> <span class="nav-text">cmd方式</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zhaoy875.github.io/2016/10/20/%E6%90%AD%E5%BB%BA%E6%A8%B1%E8%8A%B1%E6%A2%AF%E5%AD%90/</loc>
+    <loc>https://zhaoy875.github.io/2016/10/20/%E6%A8%B1%E8%8A%B1docker%E6%A2%AF%E5%AD%90/</loc>
     
-    <lastmod>2017-01-10T18:05:14.851Z</lastmod>
+    <lastmod>2017-01-10T20:39:56.634Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/</loc>
+    
+    <lastmod>2017-01-10T20:15:33.630Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://zhaoy875.github.io/2016/12/29/javascript%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0-%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/</loc>
     
-    <lastmod>2017-01-04T21:41:54.567Z</lastmod>
+    <lastmod>2017-01-10T20:13:30.655Z</lastmod>
     
   </url>
   
@@ -243,13 +250,6 @@
     <loc>https://zhaoy875.github.io/2016/01/07/%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8less/</loc>
     
     <lastmod>2016-10-26T10:26:06.855Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/</loc>
-    
-    <lastmod>2016-10-26T10:25:41.895Z</lastmod>
     
   </url>
   
