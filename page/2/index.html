@@ -133,6 +133,71 @@
   
 
 
+	
+	<canvas id="yyx"></canvas>
+	<script>
+		(function(){
+		    // document.addEventListener('touchmove', function(e) {
+		    //     e.preventDefault()
+		    // })
+		    var c = document.getElementById('yyx'),
+		        x = c.getContext('2d'),
+		        pr = window.devicePixelRatio || 1,
+		        w = window.innerWidth,
+		        h = window.innerHeight,
+		        f = 90,
+		        q,
+		        m = Math,
+		        r = 0,
+		        u = m.PI * 2,
+		        v = m.cos,
+		        z = m.random
+		    c.width = w * pr
+		    c.height = h * pr
+		    x.scale(pr, pr)
+		    x.globalAlpha = 0.6
+		    c.style.cssText ='position: fixed;top: 0;left: 0;z-index: 0;width: 100%;height: 100%;pointer-events: none;';
+		    function i() {
+		        x.clearRect(0, 0, w, h)
+		        q = [{
+		            x: 0,
+		            y: h * .7 + f
+		        }, {
+		            x: 0,
+		            y: h * .7 - f
+		        }]
+		        while (q[1].x < w + f) d(q[0], q[1])
+		    }
+
+		    function d(i, j) {
+		        x.beginPath()
+		        x.moveTo(i.x, i.y)
+		        x.lineTo(j.x, j.y)
+		        var k = j.x + (z() * 2 - 0.25) * f,
+		            n = y(j.y)
+		        x.lineTo(k, n)
+		        x.closePath()
+		        r -= u / -50
+		        x.fillStyle = '#' + (v(r) * 127 + 128 << 16 | v(r + u / 3) * 127 + 128 << 8 | v(r + u / 3 * 2) * 127 + 128).toString(16)
+		        x.fill()
+		        q[0] = q[1]
+		        q[1] = {
+		            x: k,
+		            y: n
+		        }
+		    }
+
+		    function y(p) {
+		        var t = p + (z() * 2 - 1.1) * f
+		        return (t > h || t < 0) ? y(p) : t
+		    }
+		    document.onclick = i
+		    document.ontouchstart = i
+		    i()
+		})();  
+	        
+	</script>
+
 
 
   <div class="container one-collumn sidebar-position-left 
@@ -298,6 +363,124 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/" itemprop="url">
+                   gulp入门系列7--构建一个项目
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-20T17:42:20+08:00" content="2016-09-20">
+              2016-09-20
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/20/gulp教程-gulp入门系列7-构建一个项目/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          使用 gulp 构建一个项目请务必理解前面的章节后阅读此章节：
+访问论坛获取帮助
+
+本章将介绍
+
+gulp-watch-path
+stream-combiner2
+gulp-sourcemaps
+gulp-autoprefixer
+
+并将之前所有章节的内容组合起来编写一个前端项目所需的 gulp 代
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/20/gulp教程-gulp入门系列7-构建一个项目/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+
+
+  </article>
+
+
     
       
 
@@ -1582,130 +1765,6 @@ browsersync或者anywhere(随时随地启动当前目录服务器，真的很好
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/07/Git管中窥豹/" itemprop="url">
-                  Git管中窥豹
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-07T15:16:43+08:00" content="2016-09-07">
-              2016-09-07
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/git/" itemprop="url" rel="index">
-                    <span itemprop="name">git</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/07/Git管中窥豹/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/07/Git管中窥豹/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="git简单示意图"><a href="#git简单示意图" class="headerlink" title="git简单示意图"></a>git简单示意图</h2><p><img src="http://od6ri688q.bkt.clouddn.com/git%E4%BB%93%E5%BA%93%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="图解git"></p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/09/07/Git管中窥豹/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-
-
-  </article>
-
-
-    
   </section>
 
   
@@ -1753,7 +1812,7 @@ browsersync或者anywhere(随时随地启动当前目录服务器，真的很好
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">38</span>
+              <span class="site-state-item-count">39</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

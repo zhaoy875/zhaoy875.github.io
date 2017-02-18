@@ -4,6 +4,57 @@
   
     
     <entry>
+      <title><![CDATA[Javascript深浅拷贝]]></title>
+      <url>https://zhaoy875.github.io/2017/01/02/javascript%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0-Javascript%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/</url>
+      <content type="html"><![CDATA[<h1 id="Javascript深浅拷贝"><a href="/2017/01/02/javascript系统学习-Javascript深浅拷贝/#Javascript深浅拷贝" class="headerlink" title="Javascript深浅拷贝"></a>Javascript深浅拷贝</h1><p>Javascript五种基本数据类型（即简单数据类型），分别是：Undefined，Null，Boolean，Number和String。还含有一种复杂数据类型，就是对象。<br>Undefined和Null,Undefined类型只有一个值，就是undefined，Null类型也只有一个值，也就是null</p>
+<ul>
+<li>Undefined其实就是已声明未赋值的变量输出的结果</li>
+<li><p>null其实就是一个不存在的对象的结果</p>
+<p>  var c;<br>  console.log(c)//undefined<br>  console.log(document.getElementById(‘wsscat’))//没有id为wsscat的节点,输出null</p>
+</li>
+</ul>
+<h3 id="简单的数据类型和复杂的数据类型有以下重要的区别"><a href="/2017/01/02/javascript系统学习-Javascript深浅拷贝/#简单的数据类型和复杂的数据类型有以下重要的区别" class="headerlink" title="简单的数据类型和复杂的数据类型有以下重要的区别"></a>简单的数据类型和复杂的数据类型有以下重要的区别</h3><p>对于简单数据类型</p>
+<p>它们值在占据了内存中固定大小的空间，并被保存在栈内存中。当一个变量向另一个变量复制基本类型的值，会创建这个值的一个副本，还有就是不能给基本数据类型的值添加属性</p>
+<pre><code>var a = 1;
+var b = a;
+a.attr = &apos;wsscat&apos;;
+console.log(a.attr)//undefined
+</code></pre><p>上面代码中a就是简单数据类型（Number），b就是a的副本，它们两者都占有不同位置但相等的内存空间</p>
+<p>对于复杂的数据类型</p>
+<p>复杂的数据类型即引用类型，它的值是对象，保存在堆内存中，包含引用类型值的变量实际上包含的并不是对象本身，而是一个指向该对象的指针。从一个变量向另一个变量复制引用类型的值，复制的其实是指针，因此两个变量最终都指向同一个对象。</p>
+<pre><code>var obj = {
+        name:&apos;wsscat&apos;,
+        age:0
+    }
+    var obj2 = obj;
+    obj2[&apos;c&apos;] = 5;
+    console.log(obj);//Object {name: &quot;wsscat&quot;, age: 0, c: 5}
+    console.log(obj2);////Object {name: &quot;wsscat&quot;, age: 0, c: 5}
+</code></pre><p>我们可以看到obj赋值给obj2后，当我们更改其中一个对象的属性值，两个对象都发生了改变，究其原因局势因为obj和obj2这两个变量都指向同一个指针，赋值只是复制了指针，所以当我们改变其中一个的值就会影响另外一个变量的值</p>
+<h2 id="浅拷贝"><a href="/2017/01/02/javascript系统学习-Javascript深浅拷贝/#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h2><p>其实这段代码就是浅拷贝，有时候我们只是想备份数组，但是只是简单让它赋给一个变量，改变其中一个，另外一个就紧跟着改变，但很多时候这不是我们想要的</p>
+<p>var obj = {<br>            name:’wsscat’,<br>            age:0<br>        }<br>        var obj2 = obj;<br>        obj2[‘c’] = 5;<br>        console.log(obj);//Object {name: “wsscat”, age: 0, c: 5}<br>        console.log(obj2);////Object {name: “wsscat”, age: 0, c: 5}</p>
+<p>##　深拷贝</p>
+<h3 id="数组"><a href="/2017/01/02/javascript系统学习-Javascript深浅拷贝/#数组" class="headerlink" title="数组"></a>数组</h3><p>对于数组我们可以使用slice()和concat()方法来解决上面的问题<br>slice</p>
+<p>var arr = [‘wsscat’, ‘autumns’, ‘winds’];<br>        var arrCopy = arr.slice(0);<br>        arrCopy[0] = ‘tacssw’<br>        console.log(arr)//[‘wsscat’, ‘autumns’, ‘winds’]<br>        console.log(arrCopy)//[‘tacssw’, ‘autumns’, ‘winds’]<br>concat</p>
+<p>var arr = [‘wsscat’, ‘autumns’, ‘winds’];<br>        var arrCopy = arr.concat();<br>        arrCopy[0] = ‘tacssw’<br>        console.log(arr)//[‘wsscat’, ‘autumns’, ‘winds’]<br>        console.log(arrCopy)//[‘tacssw’, ‘autumns’, ‘winds’]</p>
+<h3 id="对象"><a href="/2017/01/02/javascript系统学习-Javascript深浅拷贝/#对象" class="headerlink" title="对象"></a>对象</h3><p>对象我们可以定义一个新的对象并遍历新的属性上去实现深拷贝</p>
+<p>var obj = {<br>            name:’wsscat’,<br>            age:0<br>        }</p>
+<pre><code>var obj2 = new Object();
+obj2.name = obj.name;
+obj2.age = obj.age
+
+obj.name = &apos;autumns&apos;;
+console.log(obj);//Object {name: &quot;autumns&quot;, age: 0}
+console.log(obj2);//Object {name: &quot;wsscat&quot;, age: 0}
+</code></pre><p>当然我们可以封装好一个方法来处理对象的深拷贝，代码如下</p>
+<p>var obj = {<br>            name: ‘wsscat’,<br>            age: 0<br>        }<br>        var deepCopy = function(source) {<br>            var result = {};<br>            for(var key in source) {<br>                if(typeof source[key] === ‘object’) {<br>                    result[key] = deepCopy(source[key])<br>                } else {<br>                    result[key] = source[key]<br>                }<br>            }<br>            return result;<br>        }<br>        var obj3 = deepCopy(obj)<br>        obj.name = ‘autumns’;<br>        console.log(obj);//Object {name: “autumns”, age: 0}<br>        console.log(obj3);//Object {name: “wsscat”, age: 0}</p>
+<p> @Wscats Wscats changed the title from Javascript to Javascript基本数据类型 on 13 Oct 2016<br> @Wscats Wscats changed the title from Javascript基本数据类型 to Javascript基本数据类型&amp;&amp;深浅拷贝 on 16 Oct 2016<br> @Wscats Wscats added the notes label on 16 Oct 2016<br> @Wscats Wscats changed the title from Javascript基本数据类型&amp;&amp;深浅拷贝 to Javascript深浅拷贝 on 16 Oct 2016<br>@Wscats<br> Owner<br>Wscats commented on 5 Nov 2016 • edited<br>Javascript数组存放函数</p>
+<p>在javascript中函数也是一种数据，能够像操作一个对象对它进行操作。并且javascript不进行数据类型检查，数组可以存放任何东西，在下面代码中我们不但在数组中存放了函数，并且也可以在存放一个执行函数的返回值，所以数组前两个数据存放都是函数执行返回值</p>
+<p>var funcA = function() {<br>            console.log(“funcA”);<br>            return “hello funA”;<br>        }<br>        var funcB = function() {<br>            console.log(“funcB”);<br>            return “hello funB”;<br>        }<br>        var funcC = function() {<br>            console.log(“funcC”);<br>            return “hello funC”;<br>        }<br>        var arr = [funcA(), funcB(), funcC];<br>        console.log(arr);<br>        arr<a href="/2017/01/02/javascript系统学习-Javascript深浅拷贝/">2</a>;<br>输出的结果如下<br><img src="https://cloud.githubusercontent.com/assets/17243165/20030986/6bd4b49c-a3ab-11e6-8b5e-1b1e37c7f9f1.png" alt=""></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Javascript-继承与原型链一探究竟]]></title>
       <url>https://zhaoy875.github.io/2016/12/29/javascript%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0-%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/</url>
       <content type="html"><![CDATA[<h1 id="继承与原型链"><a href="/2016/12/29/javascript系统学习-继承与原型链/#继承与原型链" class="headerlink" title="继承与原型链"></a>继承与原型链</h1><blockquote>
