@@ -57,40 +57,17 @@
 
 
 
-<meta name="description" content="升级node.js的方法。node有一个模块叫n，专门用来管理node.js的版本的。首先安装n模块：
-npm install -g n
-第二步：升级node.js到最新稳定版:
-n stable
-几个npm的常用命令
-npm install npm #即可安装最新版npm
-
-npm -v          #显示版本，检查npm 是否正确安装。 
-npm install express   #安">
+<meta name="description" content="管理node.js版本升级node.js的方法。node有一个模块叫n，专门用来管理node.js的版本的。首先安装n模块：    npm install -g n 第二步：升级node.js到最新稳定版:    n stable npm的常用命令 npm install npm #即可安装最新版npm npm -v          #显示版本，检查npm 是否正确安装。  npm instal">
+<meta name="keywords" content="npm,nodejs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="npm">
 <meta property="og:url" content="https://zhaoy875.github.io/2016/10/11/npm/index.html">
 <meta property="og:site_name" content="zhaoy">
-<meta property="og:description" content="升级node.js的方法。node有一个模块叫n，专门用来管理node.js的版本的。首先安装n模块：
-npm install -g n
-第二步：升级node.js到最新稳定版:
-n stable
-几个npm的常用命令
-npm install npm #即可安装最新版npm
-
-npm -v          #显示版本，检查npm 是否正确安装。 
-npm install express   #安">
-<meta property="og:updated_time" content="2016-10-26T19:16:15.189Z">
+<meta property="og:description" content="管理node.js版本升级node.js的方法。node有一个模块叫n，专门用来管理node.js的版本的。首先安装n模块：    npm install -g n 第二步：升级node.js到最新稳定版:    n stable npm的常用命令 npm install npm #即可安装最新版npm npm -v          #显示版本，检查npm 是否正确安装。  npm instal">
+<meta property="og:updated_time" content="2017-04-04T11:17:15.657Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="npm">
-<meta name="twitter:description" content="升级node.js的方法。node有一个模块叫n，专门用来管理node.js的版本的。首先安装n模块：
-npm install -g n
-第二步：升级node.js到最新稳定版:
-n stable
-几个npm的常用命令
-npm install npm #即可安装最新版npm
-
-npm -v          #显示版本，检查npm 是否正确安装。 
-npm install express   #安">
+<meta name="twitter:description" content="管理node.js版本升级node.js的方法。node有一个模块叫n，专门用来管理node.js的版本的。首先安装n模块：    npm install -g n 第二步：升级node.js到最新稳定版:    n stable npm的常用命令 npm install npm #即可安装最新版npm npm -v          #显示版本，检查npm 是否正确安装。  npm instal">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -459,13 +436,10 @@ npm install express   #安">
       
 
       
-        <p>升级node.js的方法。node有一个模块叫n，专门用来管理node.js的版本的。<br>首先安装n模块：</p>
-<pre><code>npm install -g n
-</code></pre><p>第二步：<br>升级node.js到最新稳定版:</p>
-<pre><code>n stable
-</code></pre><p>几个npm的常用命令</p>
+        <h2 id="管理node-js版本"><a href="/2016/10/11/npm/#管理node-js版本" class="headerlink" title="管理node.js版本"></a>管理node.js版本</h2><p>升级node.js的方法。node有一个模块叫n，专门用来管理node.js的版本的。<br>首先安装n模块：<br>    npm install -g n</p>
+<p>第二步：<br>升级node.js到最新稳定版:<br>    n stable</p>
+<p>npm的常用命令</p>
 <pre><code>npm install npm #即可安装最新版npm
-
 npm -v          #显示版本，检查npm 是否正确安装。 
 npm install express   #安装express模块 
 npm install -g express  #全局安装express模块 
@@ -475,7 +449,27 @@ npm update        #升级当前目录下的项目的所有模块
 npm update express    #升级当前目录下的项目的指定模块 
 npm update -g express  #升级全局安装的express模块 
 npm uninstall express  #删除指定的模块
-</code></pre>
+</code></pre><h2 id="npm源管理"><a href="/2016/10/11/npm/#npm源管理" class="headerlink" title="npm源管理"></a>npm源管理</h2><p>nrm 是一个 NPM 源管理器</p>
+<ul>
+<li><p>安装<br>  npm install -g nrm</p>
+</li>
+<li><p>列出可选的源 (*为当前正在使用的)<br>  nrm ls</p>
+<p>npm —- <a href="https://registry.npmjs.org/" target="_blank" rel="external">https://registry.npmjs.org/</a></p>
+</li>
+<li><p>cnpm — <a href="http://r.cnpmjs.org/" target="_blank" rel="external">http://r.cnpmjs.org/</a><br>taobao - <a href="https://registry.npm.taobao.org/" target="_blank" rel="external">https://registry.npm.taobao.org/</a><br>nj —– <a href="https://registry.nodejitsu.com/" target="_blank" rel="external">https://registry.nodejitsu.com/</a><br>rednpm - <a href="http://registry.mirror.cqupt.edu.cn/" target="_blank" rel="external">http://registry.mirror.cqupt.edu.cn/</a><br>npmMirror  <a href="https://skimdb.npmjs.com/registry/" target="_blank" rel="external">https://skimdb.npmjs.com/registry/</a><br>edunpm - <a href="http://registry.enpmjs.org/" target="_blank" rel="external">http://registry.enpmjs.org/</a></p>
+</li>
+<li><p>切换源<br>  nrm use cnpm</p>
+</li>
+<li><p>增加源<br>你可以增加定制的源，特别适用于添加企业内部的私有源。 私有源可以使用cnpmjs架设 。（<a href="http://segmentfault.com/a/1190000000368906）" target="_blank" rel="external">http://segmentfault.com/a/1190000000368906）</a><br>  nrm add  <registry> <url> [home]</url></registry></p>
+</li>
+<li><p>删除源<br>  nrm del <registry></registry></p>
+</li>
+<li><p>测试速度<br>例如，测试官方源的响应时间：<br>  nrm test npm<br>测试所有源的响应时间：<br>  nrm test                                                                                                                                   </p>
+<p>npm —- 453ms</p>
+</li>
+<li>cnpm — 219ms<br>taobao - 156ms<br>nj —– Fetch Error<br>rednpm - Fetch Error<br>npmMirror  1876ms<br>edunpm - Fetch Error</li>
+</ul>
+
       
     </div>
 
@@ -538,8 +532,8 @@ npm uninstall express  #删除指定的模块
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/10/11/Gulp插件收藏/" rel="prev" title=" Gulp插件收藏">
-                 Gulp插件收藏 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/09/20/json/" rel="prev" title="json">
+                json <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -585,13 +579,21 @@ npm uninstall express  #删除指定的模块
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/10/11/npm/"
-           data-title="npm" data-url="https://zhaoy875.github.io/2016/10/11/npm/">
-      </div>
-    
-  </div>
+
+
+
+
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: document.location.href, 
+    sourceId: "",
+    productKey: "5bdbfa7a7bc6429fb528542283db5817",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+
 
 
         </div>
@@ -633,7 +635,7 @@ npm uninstall express  #删除指定的模块
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">39</span>
+              <span class="site-state-item-count">40</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -794,7 +796,7 @@ npm uninstall express  #删除指定的模块
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#管理node-js版本"><span class="nav-number">1.</span> <span class="nav-text">管理node.js版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm源管理"><span class="nav-number">2.</span> <span class="nav-text">npm源管理</span></a></li></ol></div>
             
           </div>
         </section>

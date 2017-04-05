@@ -57,46 +57,17 @@
 
 
 
-<meta name="description" content="使用 gulp 压缩 CSS请务必理解如下章节后阅读此章节：
-
-安装 Node 和 gulp
-使用 gulp 压缩 JS
-
-访问论坛获取帮助
-
-压缩 css 代码可降低 css 文件大小，提高页面打开速度。
-我们接着将规律转换为 gulp 代码
-规律找到 css/ 目录下的所有 css 文件，压缩它们，将压缩后的文件存放在 dist/css/ 目录下。
-gulp 代码你可以 下载所有示例代码 或">
+<meta name="description" content="使用 gulp 压缩 CSS请务必理解如下章节后阅读此章节：  安装 Node 和 gulp 使用 gulp 压缩 JS  访问论坛获取帮助  压缩 css 代码可降低 css 文件大小，提高页面打开速度。 我们接着将规律转换为 gulp 代码 规律找到 css/ 目录下的所有 css 文件，压缩它们，将压缩后的文件存放在 dist/css/ 目录下。 gulp 代码你可以 下载所有示例代码 或">
+<meta name="keywords" content="gulp,前端工程自动化">
 <meta property="og:type" content="article">
 <meta property="og:title" content=" gulp入门系列3--压缩 CSS">
 <meta property="og:url" content="https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/index.html">
 <meta property="og:site_name" content="zhaoy">
-<meta property="og:description" content="使用 gulp 压缩 CSS请务必理解如下章节后阅读此章节：
-
-安装 Node 和 gulp
-使用 gulp 压缩 JS
-
-访问论坛获取帮助
-
-压缩 css 代码可降低 css 文件大小，提高页面打开速度。
-我们接着将规律转换为 gulp 代码
-规律找到 css/ 目录下的所有 css 文件，压缩它们，将压缩后的文件存放在 dist/css/ 目录下。
-gulp 代码你可以 下载所有示例代码 或">
+<meta property="og:description" content="使用 gulp 压缩 CSS请务必理解如下章节后阅读此章节：  安装 Node 和 gulp 使用 gulp 压缩 JS  访问论坛获取帮助  压缩 css 代码可降低 css 文件大小，提高页面打开速度。 我们接着将规律转换为 gulp 代码 规律找到 css/ 目录下的所有 css 文件，压缩它们，将压缩后的文件存放在 dist/css/ 目录下。 gulp 代码你可以 下载所有示例代码 或">
 <meta property="og:updated_time" content="2016-12-07T12:27:17.653Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" gulp入门系列3--压缩 CSS">
-<meta name="twitter:description" content="使用 gulp 压缩 CSS请务必理解如下章节后阅读此章节：
-
-安装 Node 和 gulp
-使用 gulp 压缩 JS
-
-访问论坛获取帮助
-
-压缩 css 代码可降低 css 文件大小，提高页面打开速度。
-我们接着将规律转换为 gulp 代码
-规律找到 css/ 目录下的所有 css 文件，压缩它们，将压缩后的文件存放在 dist/css/ 目录下。
-gulp 代码你可以 下载所有示例代码 或">
+<meta name="twitter:description" content="使用 gulp 压缩 CSS请务必理解如下章节后阅读此章节：  安装 Node 和 gulp 使用 gulp 压缩 JS  访问论坛获取帮助  压缩 css 代码可降低 css 文件大小，提高页面打开速度。 我们接着将规律转换为 gulp 代码 规律找到 css/ 目录下的所有 css 文件，压缩它们，将压缩后的文件存放在 dist/css/ 目录下。 gulp 代码你可以 下载所有示例代码 或">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -483,7 +454,7 @@ gulp 代码你可以 下载所有示例代码 或">
 <p>在命令行输入</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> gulp-minify-css</div></pre></td></tr></table></figure>
 <p>安装成功后你会看到如下信息：(安装时间可能会比较长)</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">gulp-minify-css<span class="variable">@1</span>.<span class="number">0.0</span> node_modules/gulp-minify-css</div><div class="line">├── object-assign<span class="variable">@2</span>.<span class="number">0.0</span></div><div class="line">├── vinyl-sourcemaps-apply<span class="variable">@0</span>.<span class="number">1.4</span> (source-map<span class="variable">@0</span>.<span class="number">1.43</span>)</div><div class="line">├── clean-css<span class="variable">@3</span>.<span class="number">1.8</span> (commander<span class="variable">@2</span>.<span class="number">6.0</span>, source-map<span class="variable">@0</span>.<span class="number">1.43</span>)</div><div class="line">├── through2<span class="variable">@0</span>.<span class="number">6.3</span> (xtend<span class="variable">@4</span>.<span class="number">0.0</span>, readable-stream<span class="variable">@1</span>.<span class="number">0.33</span>)</div><div class="line">├── vinyl-bufferstream<span class="variable">@1</span>.<span class="number">0.1</span> (bufferstreams<span class="variable">@1</span>.<span class="number">0.1</span>)</div><div class="line">└── gulp-util<span class="variable">@3</span>.<span class="number">0.4</span> (array-differ<span class="variable">@1</span>.<span class="number">0.0</span>, beeper<span class="variable">@1</span>.<span class="number">0.0</span>, array-uniq<span class="variable">@1</span>.<span class="number">0.2</span>, lodash._reescape<span class="variable">@3</span>.<span class="number">0.0</span>, lodash._reinterpolate<span class="variable">@3</span>.<span class="number">0.0</span>, lodash._reevaluate<span class="variable">@3</span>.<span class="number">0.0</span>, replace-ext<span class="variable">@0</span>.<span class="number">0.1</span>, minimist<span class="variable">@1</span>.<span class="number">1.1</span>, multipipe<span class="variable">@0</span>.<span class="number">1.2</span>, vinyl<span class="variable">@0</span>.<span class="number">4.6</span>, chalk<span class="variable">@1</span>.<span class="number">0.0</span>, lodash.template<span class="variable">@3</span>.<span class="number">3.2</span>, dateformat<span class="variable">@1</span>.<span class="number">0.11</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">gulp-minify-css</span>@<span class="selector-tag">1</span><span class="selector-class">.0</span><span class="selector-class">.0</span> <span class="selector-tag">node_modules</span>/<span class="selector-tag">gulp-minify-css</span></div><div class="line">├── <span class="selector-tag">object-assign</span>@<span class="selector-tag">2</span><span class="selector-class">.0</span><span class="selector-class">.0</span></div><div class="line">├── <span class="selector-tag">vinyl-sourcemaps-apply</span>@<span class="selector-tag">0</span><span class="selector-class">.1</span><span class="selector-class">.4</span> (source-map<span class="variable">@0</span>.<span class="number">1.43</span>)</div><div class="line">├── <span class="selector-tag">clean-css</span>@<span class="selector-tag">3</span><span class="selector-class">.1</span><span class="selector-class">.8</span> (commander<span class="variable">@2</span>.<span class="number">6.0</span>, source-map<span class="variable">@0</span>.<span class="number">1.43</span>)</div><div class="line">├── <span class="selector-tag">through2</span>@<span class="selector-tag">0</span><span class="selector-class">.6</span><span class="selector-class">.3</span> (xtend<span class="variable">@4</span>.<span class="number">0.0</span>, readable-stream<span class="variable">@1</span>.<span class="number">0.33</span>)</div><div class="line">├── <span class="selector-tag">vinyl-bufferstream</span>@<span class="selector-tag">1</span><span class="selector-class">.0</span><span class="selector-class">.1</span> (bufferstreams<span class="variable">@1</span>.<span class="number">0.1</span>)</div><div class="line">└── <span class="selector-tag">gulp-util</span>@<span class="selector-tag">3</span><span class="selector-class">.0</span><span class="selector-class">.4</span> (array-differ<span class="variable">@1</span>.<span class="number">0.0</span>, beeper<span class="variable">@1</span>.<span class="number">0.0</span>, array-uniq<span class="variable">@1</span>.<span class="number">0.2</span>, lodash._reescape<span class="variable">@3</span>.<span class="number">0.0</span>, lodash._reinterpolate<span class="variable">@3</span>.<span class="number">0.0</span>, lodash._reevaluate<span class="variable">@3</span>.<span class="number">0.0</span>, replace-ext<span class="variable">@0</span>.<span class="number">0.1</span>, minimist<span class="variable">@1</span>.<span class="number">1.1</span>, multipipe<span class="variable">@0</span>.<span class="number">1.2</span>, vinyl<span class="variable">@0</span>.<span class="number">4.6</span>, chalk<span class="variable">@1</span>.<span class="number">0.0</span>, lodash.template<span class="variable">@3</span>.<span class="number">3.2</span>, dateformat<span class="variable">@1</span>.<span class="number">0.11</span>)</div></pre></td></tr></table></figure>
 <p><strong>二、参照 <a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/chapter2.md">使用 gulp 压缩 JS</a> 创建 <code>gulpfile.js</code> 文件编写代码</strong></p>
 <p>在对应目录创建 <code>gulpfile.js</code> 文件并写入如下内容：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取 gulp</span></div><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 获取 minify-css 模块（用于压缩 CSS）</span></div><div class="line"><span class="keyword">var</span> minifyCSS = <span class="built_in">require</span>(<span class="string">'gulp-minify-css'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 压缩 css 文件</span></div><div class="line"><span class="comment">// 在命令行使用 gulp css 启动此任务</span></div><div class="line">gulp.task(<span class="string">'css'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 1. 找到文件</span></div><div class="line">    gulp.src(<span class="string">'css/*.css'</span>)</div><div class="line">    <span class="comment">// 2. 压缩文件</span></div><div class="line">        .pipe(minifyCSS())</div><div class="line">    <span class="comment">// 3. 另存为压缩文件</span></div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/css'</span>))</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 在命令行使用 gulp auto 启动此任务</span></div><div class="line">gulp.task(<span class="string">'auto'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 监听文件修改，当文件被修改则执行 css 任务</span></div><div class="line">    gulp.watch(<span class="string">'css/*.css'</span>, [<span class="string">'css'</span>])</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 使用 gulp.task('default') 定义默认任务</span></div><div class="line"><span class="comment">// 在命令行使用 gulp 启动 css 任务和 auto 任务</span></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'css'</span>, <span class="string">'auto'</span>])</div></pre></td></tr></table></figure>
@@ -555,16 +526,16 @@ gulp 代码你可以 下载所有示例代码 或">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/20/gulp教程-gulp入门系列2-压缩-JS/" rel="next" title=" gulp入门系列2--压缩 JS">
-                <i class="fa fa-chevron-left"></i>  gulp入门系列2--压缩 JS
+              <a href="/2016/09/20/gulp教程-gulp入门系列4-压缩图片/" rel="next" title=" gulp入门系列4--压缩图片">
+                <i class="fa fa-chevron-left"></i>  gulp入门系列4--压缩图片
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/09/20/gulp教程-gulp入门系列4-压缩图片/" rel="prev" title=" gulp入门系列4--压缩图片">
-                 gulp入门系列4--压缩图片 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/" rel="prev" title=" gulp入门系列1--安装 Node 和 gulp">
+                 gulp入门系列1--安装 Node 和 gulp <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -610,13 +581,21 @@ gulp 代码你可以 下载所有示例代码 或">
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/"
-           data-title=" gulp入门系列3--压缩 CSS" data-url="https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/">
-      </div>
-    
-  </div>
+
+
+
+
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: document.location.href, 
+    sourceId: "",
+    productKey: "5bdbfa7a7bc6429fb528542283db5817",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+
 
 
         </div>
@@ -658,7 +637,7 @@ gulp 代码你可以 下载所有示例代码 或">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">39</span>
+              <span class="site-state-item-count">40</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
