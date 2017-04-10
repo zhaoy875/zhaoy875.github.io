@@ -64,7 +64,7 @@
 <meta property="og:url" content="https://zhaoy875.github.io/2016/08/21/git-git入门操作/index.html">
 <meta property="og:site_name" content="zhaoy">
 <meta property="og:description" content="本地git仓库推送到远程仓库本地新建仓库 git init或者是从远程git仓库  git clone克隆到本地 git  branch //查看本地分支 git checkout -b  本地分支名//新建本地分支并切换分支（在本地分支进行开发） git pull origin 远程仓库分支名//将远程仓库分支上的代码更新到本地 git status //查看当前状态 git add . //提">
-<meta property="og:updated_time" content="2016-12-04T17:23:49.702Z">
+<meta property="og:updated_time" content="2017-04-05T08:58:35.406Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="本地git仓库推送到远程仓库">
 <meta name="twitter:description" content="本地git仓库推送到远程仓库本地新建仓库 git init或者是从远程git仓库  git clone克隆到本地 git  branch //查看本地分支 git checkout -b  本地分支名//新建本地分支并切换分支（在本地分支进行开发） git pull origin 远程仓库分支名//将远程仓库分支上的代码更新到本地 git status //查看当前状态 git add . //提">
@@ -481,7 +481,13 @@ git rm -r gittest //删除目次
 
 git reset --hard HEAD //回滚到add之前的状态
 git diff //比较的是跟踪列表中的文件和文件系统中文件的差别
-</code></pre>
+</code></pre><h2 id="生成github-ssh"><a href="/2016/08/21/git-git入门操作/#生成github-ssh" class="headerlink" title="生成github ssh"></a>生成github ssh</h2><p>生成SSH密钥过程：<br>1.查看是否已经有了ssh密钥：cd ~/.ssh<br>如果没有密钥则不会有此文件夹，有则备份删除</p>
+<p>2.生存密钥：<br>$ ssh-keygen -t rsa -C “test@gmail.com”<br>按3个回车，密码为空。<br>Your identification has been saved in /home/tekkub/.ssh/id_rsa.<br>Your public key has been saved in /home/tekkub/.ssh/id_rsa.pub.<br>The key fingerprint is:<br>………………</p>
+<p>最后得到了两个文件：id_rsa和id_rsa.pub</p>
+<p>3.添加密钥到ssh：ssh-add 文件名<br>需要之前输入密码。</p>
+<p>4.在github上添加ssh密钥，这要添加的是“id_rsa.pub”里面的公钥。<br>到github.com设置里添加ssh。</p>
+<p>5.测试：ssh git@github.com</p>
+
       
     </div>
 
@@ -593,16 +599,16 @@ git diff //比较的是跟踪列表中的文件和文件系统中文件的差别
 
 
 
-<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-<script>
-  var cloudTieConfig = {
-    url: document.location.href, 
-    sourceId: "",
-    productKey: "5bdbfa7a7bc6429fb528542283db5817",
-    target: "cloud-tie-wrapper"
-  };
-</script>
-<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+  <script>
+    var cloudTieConfig = {
+      url: document.location.href, 
+      sourceId: "",
+      productKey: "5bdbfa7a7bc6429fb528542283db5817",
+      target: "cloud-tie-wrapper"
+    };
+  </script>
+  <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
 
 
 
@@ -645,7 +651,7 @@ git diff //比较的是跟踪列表中的文件和文件系统中文件的差别
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">40</span>
+              <span class="site-state-item-count">39</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -806,7 +812,7 @@ git diff //比较的是跟踪列表中的文件和文件系统中文件的差别
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地git仓库推送到远程仓库"><span class="nav-number">1.</span> <span class="nav-text">本地git仓库推送到远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">1.1.</span> <span class="nav-text">附录</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地git仓库推送到远程仓库"><span class="nav-number">1.</span> <span class="nav-text">本地git仓库推送到远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">1.1.</span> <span class="nav-text">附录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成github-ssh"><span class="nav-number">2.</span> <span class="nav-text">生成github ssh</span></a></li></ol></div>
             
           </div>
         </section>

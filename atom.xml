@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhaoy875.github.io/"/>
-  <updated>2017-04-05T08:14:55.053Z</updated>
+  <updated>2017-02-18T19:30:26.382Z</updated>
   <id>https://zhaoy875.github.io/</id>
   
   <author>
@@ -14,42 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>3个JavaScript经典知识点</title>
-    <link href="https://zhaoy875.github.io/2017/04/02/javascript%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0-3%E4%B8%AAJavaScript%E7%BB%8F%E5%85%B8%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
-    <id>https://zhaoy875.github.io/2017/04/02/javascript系统学习-3个JavaScript经典知识点/</id>
-    <published>2017-04-02T09:00:43.700Z</published>
-    <updated>2017-04-05T08:14:55.053Z</updated>
-    
-    <content type="html"><![CDATA[<p>#　3个JavaScript经典知识点</p>
-<blockquote>
-<p>奇舞周刊 <a href="http://mp.weixin.qq.com/s/vs0cauh0nT8G78Mtx7fCKA" target="_blank" rel="external">http://mp.weixin.qq.com/s/vs0cauh0nT8G78Mtx7fCKA</a></p>
-</blockquote>
-<p>本文不讲最新的 JavaScript 库，通用开发实践，或任何新的 ES6 函数。而是用来考察了解和掌握 JavaScript 和 DOM 的情况的经典问题。<br>下面的例子中使用原生 JavaScript，考察在不借助库（例如 jQuery）的帮助时掌握 JavaScript 和 DOM 的情况</p>
-<h2 id="问题-1：-事件代理"><a href="/2017/04/02/javascript系统学习-3个JavaScript经典知识点/#问题-1：-事件代理" class="headerlink" title="问题 #1： 事件代理"></a>问题 #1： 事件代理</h2><p>创建应用时，有时需要给页面中的按钮，文字，或图片添加事件监听器，当用户与这些元素交互时触发某些操作。</p>
-<p>我们以一个简单的代办事项列表为例，面试官会告诉你，他们希望在用户点击列表中某一项时触发一个动作。并让你用 JavaScript 根据下面的 HTML 代码实现这个功能：</p>
-<pre><code>&lt;ul id=&quot;todo-app&quot;&gt;
-  &lt;li class=&quot;item&quot;&gt;Walk the dog&lt;/li&gt;
-  &lt;li class=&quot;item&quot;&gt;Pay bills&lt;/li&gt;
-  &lt;li class=&quot;item&quot;&gt;Make dinner&lt;/li&gt;
-  &lt;li class=&quot;item&quot;&gt;Code for one hour&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre><p>你可能会像下面的代码一样给元素添加事件监听器：</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;#　3个JavaScript经典知识点&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;奇舞周刊 &lt;a href=&quot;http://mp.weixin.qq.com/s/vs0cauh0nT8G78Mtx7fCKA&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ht
-    
-    </summary>
-    
-    
-      <category term="Javascript" scheme="https://zhaoy875.github.io/tags/Javascript/"/>
-    
-  </entry>
   
   <entry>
     <title>Javascript深浅拷贝</title>
@@ -602,35 +566,6 @@ ssserver -p 8080 -k 123456 -m aes-256-cfb
   </entry>
   
   <entry>
-    <title>ubuntu 安装hexo博客</title>
-    <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
-    <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
-    <published>2016-10-11T05:50:43.000Z</published>
-    <updated>2017-01-10T20:15:33.630Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="搭建nodejs-环境"><a href="/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">安装nodejs，注意这里安装的源比较老，先依次安装<span class="keyword">node</span><span class="title">和npm</span>,</div><div class="line"> sudo apt install nodejs</div><div class="line"> sudo apt install npm</div><div class="line"></div><div class="line"> //使用n模块更新nodejs</div><div class="line"></div><div class="line">  sudo npm install -g n</div></pre></td></tr></table></figure>
-<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
-<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
-<h3 id="安装hexo"><a href="/2016/10/11/ubuntu安装hexo教程/#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
-<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
-<p>hexo s 本地预览–over</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;搭建nodejs-环境&quot;&gt;&lt;a href=&quot;/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境&quot; class=&quot;headerlink&quot; title=&quot;搭建nodejs 环境&quot;&gt;&lt;/a&gt;搭建nodejs 环境&lt;/h2&gt;&lt;figure cl
-    
-    </summary>
-    
-    
-      <category term="ubuntu" scheme="https://zhaoy875.github.io/tags/ubuntu/"/>
-    
-      <category term="hexo" scheme="https://zhaoy875.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>npm</title>
     <link href="https://zhaoy875.github.io/2016/10/11/npm/"/>
     <id>https://zhaoy875.github.io/2016/10/11/npm/</id>
@@ -682,6 +617,35 @@ npm uninstall express  #删除指定的模块
       <category term="npm" scheme="https://zhaoy875.github.io/tags/npm/"/>
     
       <category term="nodejs" scheme="https://zhaoy875.github.io/tags/nodejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu 安装hexo博客</title>
+    <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
+    <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
+    <published>2016-10-11T05:50:43.000Z</published>
+    <updated>2017-01-10T20:15:33.630Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="搭建nodejs-环境"><a href="/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">安装nodejs，注意这里安装的源比较老，先依次安装<span class="keyword">node</span><span class="title">和npm</span>,</div><div class="line"> sudo apt install nodejs</div><div class="line"> sudo apt install npm</div><div class="line"></div><div class="line"> //使用n模块更新nodejs</div><div class="line"></div><div class="line">  sudo npm install -g n</div></pre></td></tr></table></figure>
+<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
+<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
+<h3 id="安装hexo"><a href="/2016/10/11/ubuntu安装hexo教程/#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
+<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
+<p>hexo s 本地预览–over</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;搭建nodejs-环境&quot;&gt;&lt;a href=&quot;/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境&quot; class=&quot;headerlink&quot; title=&quot;搭建nodejs 环境&quot;&gt;&lt;/a&gt;搭建nodejs 环境&lt;/h2&gt;&lt;figure cl
+    
+    </summary>
+    
+    
+      <category term="ubuntu" scheme="https://zhaoy875.github.io/tags/ubuntu/"/>
+    
+      <category term="hexo" scheme="https://zhaoy875.github.io/tags/hexo/"/>
     
   </entry>
   
@@ -1233,6 +1197,82 @@ var o = { name:&apos;赵&apos;, age:12,}; // 报错
     <summary type="html">
     
       &lt;h1 id=&quot;安装-Node-和-gulp&quot;&gt;&lt;a href=&quot;/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-Node-和-gulp&quot; class=&quot;headerlink&quot; title=&quot;安装 Node 和 gulp&quot;&gt;&lt;/a&gt;
+    
+    </summary>
+    
+    
+      <category term="gulp" scheme="https://zhaoy875.github.io/tags/gulp/"/>
+    
+      <category term="前端工程自动化" scheme="https://zhaoy875.github.io/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title> gulp 入门指南</title>
+    <link href="https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97/"/>
+    <id>https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列/</id>
+    <published>2016-09-20T08:53:20.000Z</published>
+    <updated>2016-12-07T12:26:53.208Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="gulp-入门指南"><a href="/2016/09/20/gulp教程-gulp入门系列/#gulp-入门指南" class="headerlink" title="gulp 入门指南"></a>gulp 入门指南</h1><p>gulp 是基于 node 实现 Web 前端自动化开发的工具，利用它能够极大的提高开发效率。</p>
+<p>在 Web 前端开发工作中有很多“重复工作”，比如压缩CSS/JS文件。而这些工作都是有规律的。找到这些规律，并编写 gulp 配置代码,让 gulp 自动执行这些“重复工作”。</p>
+<p>点击右上角的 <strong><a href="https://github.com/nimojs/gulp-book/subscription" target="_blank" rel="external">Watch</a></strong> 订阅本书，点击 Star 收藏本书。</p>
+<ul>
+<li><a href="https://github.com/nimojs/gulp-book/issues/7" target="_blank" rel="external">订阅本书</a></li>
+<li><a href="https://github.com/nimojs/gulp-book/issues" target="_blank" rel="external">论坛</a></li>
+</ul>
+<h1 id="目录"><a href="/2016/09/20/gulp教程-gulp入门系列/#目录" class="headerlink" title="目录"></a>目录</h1><ol>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter1.md">安装 Node 和 gulp</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter2.md">使用 gulp 压缩 JS</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter3.md">使用 gulp 压缩 CSS</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter4.md">使用 gulp 压缩图片</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter5.md">使用 gulp 编译 LESS</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter6.md">使用 gulp 编译 Sass</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter7.md">使用 gulp 构建一个项目</a></li>
+<li></li>
+</ol>
+<p><strong>因为 Node 的全局包安装都是在C盘，所有请在C盘使用 gulp 以方便熟悉 gulp </strong></p>
+<blockquote>
+<p>相关教程：<a href="https://github.com/nimojs/webpack-book" target="_blank" rel="external">webpack-book</a></p>
+</blockquote>
+<h2 id="目录-1"><a href="/2016/09/20/gulp教程-gulp入门系列/#目录-1" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter1.md">安装 Node 和 gulp</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter2.md">使用 gulp 压缩 JS</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter3.md">使用 gulp 压缩 CSS</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter4.md">使用 gulp 压缩图片</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter5.md">使用 gulp 编译 LESS</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter6.md">使用 gulp 编译 Sass</a></li>
+<li><a href="/2016/09/20/gulp教程-gulp入门系列/chapter7.md">使用 gulp 构建一个项目</a></li>
+</ul>
+<h2 id="将规律转换为-gulp-代码"><a href="/2016/09/20/gulp教程-gulp入门系列/#将规律转换为-gulp-代码" class="headerlink" title="将规律转换为 gulp 代码"></a>将规律转换为 gulp 代码</h2><p>现有目录结构如下：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">└── js/</div><div class="line">    └── <span class="selector-tag">a</span>.js</div></pre></td></tr></table></figure>
+<h3 id="规律"><a href="/2016/09/20/gulp教程-gulp入门系列/#规律" class="headerlink" title="规律"></a>规律</h3><ol>
+<li>找到 js/目录下的所有 .js 文件</li>
+<li>压缩这些 js 文件</li>
+<li>将压缩后的代码另存在 dist/js/ 目录下</li>
+</ol>
+<h3 id="编写-gulp-代码"><a href="/2016/09/20/gulp教程-gulp入门系列/#编写-gulp-代码" class="headerlink" title="编写 gulp 代码"></a>编写 gulp 代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 压缩 JavaScript 文件</span></div><div class="line">gulp.task(<span class="string">'script'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 1. 找到</span></div><div class="line">    gulp.src(<span class="string">'js/*.js'</span>)</div><div class="line">    <span class="comment">// 2. 压缩</span></div><div class="line">        .pipe(uglify())</div><div class="line">    <span class="comment">// 3. 另存</span></div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/js'</span>));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="代码执行结果"><a href="/2016/09/20/gulp教程-gulp入门系列/#代码执行结果" class="headerlink" title="代码执行结果"></a>代码执行结果</h3><p>代码执行后文件结构</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">└── js/</div><div class="line">│   └── <span class="selector-tag">a</span><span class="selector-class">.js</span></div><div class="line">└── dist/</div><div class="line">    └── js/</div><div class="line">        └── <span class="selector-tag">a</span>.js</div></pre></td></tr></table></figure>
+<p>a.js 压缩前<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">demo</span> <span class="params">(msg)</span> </span>&#123;</div><div class="line">    alert(<span class="string">'--------\r\n'</span> + msg + <span class="string">'\r\n--------'</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line">demo(<span class="string">'Hi'</span>)</div></pre></td></tr></table></figure></p>
+<p>a.js 压缩后<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">demo</span><span class="params">(n)</span></span>&#123;alert(<span class="string">"--------\r\n"</span>+n+<span class="string">"\r\n--------"</span>)&#125;demo(<span class="string">"Hi"</span>);</div></pre></td></tr></table></figure></p>
+<p>此时 <code>dist/js</code> 目录下的 <code>.js</code> 文件都是压缩后的版本。</p>
+<p>你还可以监控 <code>js/</code> 目录下的 js 文件，当某个文件被修改时，自动压缩修改文件。启动 gulp 后就可以让它帮助你自动构建 Web 项目。</p>
+<hr>
+<p>gulp 还可以做很多事，例如：</p>
+<ol>
+<li>压缩CSS</li>
+<li>压缩图片</li>
+<li>编译Sass/LESS</li>
+<li>编译CoffeeScript</li>
+<li>markdown 转换为 html</li>
+</ol>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列/chapter1.md">开始阅读：安装 Node 和 gulp</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;gulp-入门指南&quot;&gt;&lt;a href=&quot;/2016/09/20/gulp教程-gulp入门系列/#gulp-入门指南&quot; class=&quot;headerlink&quot; title=&quot;gulp 入门指南&quot;&gt;&lt;/a&gt;gulp 入门指南&lt;/h1&gt;&lt;p&gt;gulp 是基于 node 
     
     </summary>
     

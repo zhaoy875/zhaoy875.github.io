@@ -4,34 +4,6 @@
   
     
     <entry>
-      <title><![CDATA[3个JavaScript经典知识点]]></title>
-      <url>https://zhaoy875.github.io/2017/04/02/javascript%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0-3%E4%B8%AAJavaScript%E7%BB%8F%E5%85%B8%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-      <content type="html"><![CDATA[<p>#　3个JavaScript经典知识点</p>
-<blockquote>
-<p>奇舞周刊 <a href="http://mp.weixin.qq.com/s/vs0cauh0nT8G78Mtx7fCKA" target="_blank" rel="external">http://mp.weixin.qq.com/s/vs0cauh0nT8G78Mtx7fCKA</a></p>
-</blockquote>
-<p>本文不讲最新的 JavaScript 库，通用开发实践，或任何新的 ES6 函数。而是用来考察了解和掌握 JavaScript 和 DOM 的情况的经典问题。<br>下面的例子中使用原生 JavaScript，考察在不借助库（例如 jQuery）的帮助时掌握 JavaScript 和 DOM 的情况</p>
-<h2 id="问题-1：-事件代理"><a href="/2017/04/02/javascript系统学习-3个JavaScript经典知识点/#问题-1：-事件代理" class="headerlink" title="问题 #1： 事件代理"></a>问题 #1： 事件代理</h2><p>创建应用时，有时需要给页面中的按钮，文字，或图片添加事件监听器，当用户与这些元素交互时触发某些操作。</p>
-<p>我们以一个简单的代办事项列表为例，面试官会告诉你，他们希望在用户点击列表中某一项时触发一个动作。并让你用 JavaScript 根据下面的 HTML 代码实现这个功能：</p>
-<pre><code>&lt;ul id=&quot;todo-app&quot;&gt;
-  &lt;li class=&quot;item&quot;&gt;Walk the dog&lt;/li&gt;
-  &lt;li class=&quot;item&quot;&gt;Pay bills&lt;/li&gt;
-  &lt;li class=&quot;item&quot;&gt;Make dinner&lt;/li&gt;
-  &lt;li class=&quot;item&quot;&gt;Code for one hour&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre><p>你可能会像下面的代码一样给元素添加事件监听器：</p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> Javascript </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Javascript深浅拷贝]]></title>
       <url>https://zhaoy875.github.io/2017/01/02/javascript%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0-Javascript%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/</url>
       <content type="html"><![CDATA[<h1 id="Javascript深浅拷贝"><a href="/2017/01/02/javascript系统学习-Javascript深浅拷贝/#Javascript深浅拷贝" class="headerlink" title="Javascript深浅拷贝"></a>Javascript深浅拷贝</h1><p>Javascript五种基本数据类型（即简单数据类型），分别是：Undefined，Null，Boolean，Number和String。还含有一种复杂数据类型，就是对象。<br>Undefined和Null,Undefined类型只有一个值，就是undefined，Null类型也只有一个值，也就是null</p>
@@ -527,29 +499,6 @@ ssserver -p 8080 -k 123456 -m aes-256-cfb
     </entry>
     
     <entry>
-      <title><![CDATA[ubuntu 安装hexo博客]]></title>
-      <url>https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/</url>
-      <content type="html"><![CDATA[<h2 id="搭建nodejs-环境"><a href="/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">安装nodejs，注意这里安装的源比较老，先依次安装<span class="keyword">node</span><span class="title">和npm</span>,</div><div class="line"> sudo apt install nodejs</div><div class="line"> sudo apt install npm</div><div class="line"></div><div class="line"> //使用n模块更新nodejs</div><div class="line"></div><div class="line">  sudo npm install -g n</div></pre></td></tr></table></figure>
-<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
-<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
-<h3 id="安装hexo"><a href="/2016/10/11/ubuntu安装hexo教程/#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
-<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
-<p>hexo s 本地预览–over</p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> ubuntu </tag>
-            
-            <tag> hexo </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[npm]]></title>
       <url>https://zhaoy875.github.io/2016/10/11/npm/</url>
       <content type="html"><![CDATA[<h2 id="管理node-js版本"><a href="/2016/10/11/npm/#管理node-js版本" class="headerlink" title="管理node.js版本"></a>管理node.js版本</h2><p>升级node.js的方法。node有一个模块叫n，专门用来管理node.js的版本的。<br>首先安装n模块：<br>    npm install -g n</p>
@@ -593,6 +542,29 @@ npm uninstall express  #删除指定的模块
             <tag> npm </tag>
             
             <tag> nodejs </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[ubuntu 安装hexo博客]]></title>
+      <url>https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/</url>
+      <content type="html"><![CDATA[<h2 id="搭建nodejs-环境"><a href="/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">安装nodejs，注意这里安装的源比较老，先依次安装<span class="keyword">node</span><span class="title">和npm</span>,</div><div class="line"> sudo apt install nodejs</div><div class="line"> sudo apt install npm</div><div class="line"></div><div class="line"> //使用n模块更新nodejs</div><div class="line"></div><div class="line">  sudo npm install -g n</div></pre></td></tr></table></figure>
+<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
+<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
+<h3 id="安装hexo"><a href="/2016/10/11/ubuntu安装hexo教程/#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
+<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
+<p>hexo s 本地预览–over</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> ubuntu </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
         
@@ -1448,9 +1420,9 @@ var o = { name:&apos;赵&apos;, age:12,}; // 报错
         
         <tags>
             
-            <tag> Awesome </tag>
-            
             <tag> github </tag>
+            
+            <tag> Awesome </tag>
             
         </tags>
         
@@ -1651,9 +1623,9 @@ var openURL = function (url) {
         
         <tags>
             
-            <tag> github </tag>
-            
             <tag> git </tag>
+            
+            <tag> github </tag>
             
         </tags>
         
@@ -2130,7 +2102,13 @@ git rm -r gittest //删除目次
 
 git reset --hard HEAD //回滚到add之前的状态
 git diff //比较的是跟踪列表中的文件和文件系统中文件的差别
-</code></pre>]]></content>
+</code></pre><h2 id="生成github-ssh"><a href="/2016/08/21/git-git入门操作/#生成github-ssh" class="headerlink" title="生成github ssh"></a>生成github ssh</h2><p>生成SSH密钥过程：<br>1.查看是否已经有了ssh密钥：cd ~/.ssh<br>如果没有密钥则不会有此文件夹，有则备份删除</p>
+<p>2.生存密钥：<br>$ ssh-keygen -t rsa -C “test@gmail.com”<br>按3个回车，密码为空。<br>Your identification has been saved in /home/tekkub/.ssh/id_rsa.<br>Your public key has been saved in /home/tekkub/.ssh/id_rsa.pub.<br>The key fingerprint is:<br>………………</p>
+<p>最后得到了两个文件：id_rsa和id_rsa.pub</p>
+<p>3.添加密钥到ssh：ssh-add 文件名<br>需要之前输入密码。</p>
+<p>4.在github上添加ssh密钥，这要添加的是“id_rsa.pub”里面的公钥。<br>到github.com设置里添加ssh。</p>
+<p>5.测试：ssh git@github.com</p>
+]]></content>
       
         
         <tags>
@@ -2377,9 +2355,9 @@ console.log(&quot;jQuery未找到&quot;);
         
         <tags>
             
-            <tag> github </tag>
-            
             <tag> git </tag>
+            
+            <tag> github </tag>
             
         </tags>
         
