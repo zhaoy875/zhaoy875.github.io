@@ -36,50 +36,6 @@
 
 
 
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-    
-    
-    <link href="//fonts.lug.ustc.edu.cn/css?family=microsoft jhenghei:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|monospace:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
 
 
 
@@ -108,7 +64,7 @@
 <meta property="og:url" content="https://zhaoy875.github.io/2016/08/21/git-git入门操作/index.html">
 <meta property="og:site_name" content="zhaoy">
 <meta property="og:description" content="本地git仓库推送到远程仓库本地新建仓库 git init或者是从远程git仓库  git clone克隆到本地 git  branch //查看本地分支 git checkout -b  本地分支名//新建本地分支并切换分支（在本地分支进行开发） git pull origin 远程仓库分支名//将远程仓库分支上的代码更新到本地 git status //查看当前状态 git add . //提">
-<meta property="og:updated_time" content="2017-04-05T08:58:35.406Z">
+<meta property="og:updated_time" content="2017-04-13T06:17:51.134Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="本地git仓库推送到远程仓库">
 <meta name="twitter:description" content="本地git仓库推送到远程仓库本地新建仓库 git init或者是从远程git仓库  git clone克隆到本地 git  branch //查看本地分支 git checkout -b  本地分支名//新建本地分支并切换分支（在本地分支进行开发） git pull origin 远程仓库分支名//将远程仓库分支上的代码更新到本地 git status //查看当前状态 git add . //提">
@@ -493,7 +449,8 @@ git push origin 要提交的分支名称  //将本地仓库推送到远程仓库
 <p>　　git branch 获取本地所有分支</p>
 <pre><code>git branch -r  获取远程所有的分支
 git checkout 切换的分支名
-</code></pre><h3 id="附录"><a href="/2016/08/21/git-git入门操作/#附录" class="headerlink" title="附录"></a>附录</h3><pre><code>Git init //在当前项目工程下履行这个号令相当于把当前项目git化，变身！
+</code></pre><h2 id="附入门文档-阮一峰的Git远程操作详解文章"><a href="/2016/08/21/git-git入门操作/#附入门文档-阮一峰的Git远程操作详解文章" class="headerlink" title="附入门文档　阮一峰的Git远程操作详解文章"></a>附入门文档　阮一峰的Git远程操作详解文章</h2><p><a href="http://www.ruanyifeng.com/blog/2014/06/git_remote.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2014/06/git_remote.html</a></p>
+<h3 id="附录"><a href="/2016/08/21/git-git入门操作/#附录" class="headerlink" title="附录"></a>附录</h3><pre><code>Git init //在当前项目工程下履行这个号令相当于把当前项目git化，变身！
 
 git add .//把当前目次下代码参加git的跟踪中，意思就是交给git经管，提交到本地库
 
@@ -531,6 +488,7 @@ git diff //比较的是跟踪列表中的文件和文件系统中文件的差别
 <p>3.添加密钥到ssh：ssh-add 文件名<br>需要之前输入密码。</p>
 <p>4.在github上添加ssh密钥，这要添加的是“id_rsa.pub”里面的公钥。<br>到github.com设置里添加ssh。</p>
 <p>5.测试：ssh git@github.com</p>
+<p>##　git clone一个分支后如何更新和提交<br>第一步：新建分支<br>以一个已存在的远程分支为源新建分支：<br>git checkout -b local_branch_name origin/remote_branch_name<br>比如：<br>git checkout -b feature0001 origin/master<br>这样就克隆master分支新建了一个feature0001分支<br>第二步：提交新建分支到远程<br>git push –set-upstream origin local_branch_name<br>这里即：<br>git push –set-upstream origin feature0001<br>这时你的feature0001分支可以在远程看到了，之后修改、提交你应该会了。<br>第三步：其他的命令<br>查看当前分支（本地分支和本地已检出的远程分支）：<br>git branch<br>查看所有分支（包括远程分支）：<br>git branch -av<br>切换分支（本地已有的分支）：<br>git checkout branch_name<br>切换到远程分支：<br>git checkout remotes/origin/branch_name</p>
 
       
     </div>
@@ -852,7 +810,7 @@ git diff //比较的是跟踪列表中的文件和文件系统中文件的差别
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地git仓库推送到远程仓库"><span class="nav-number">1.</span> <span class="nav-text">本地git仓库推送到远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">1.1.</span> <span class="nav-text">附录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成github-ssh"><span class="nav-number">2.</span> <span class="nav-text">生成github ssh</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地git仓库推送到远程仓库"><span class="nav-number">1.</span> <span class="nav-text">本地git仓库推送到远程仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附入门文档-阮一峰的Git远程操作详解文章"><span class="nav-number">2.</span> <span class="nav-text">附入门文档　阮一峰的Git远程操作详解文章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">2.1.</span> <span class="nav-text">附录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成github-ssh"><span class="nav-number">3.</span> <span class="nav-text">生成github ssh</span></a></li></ol></div>
             
           </div>
         </section>
