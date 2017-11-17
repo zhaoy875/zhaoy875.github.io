@@ -499,29 +499,6 @@ ssserver -p 8080 -k 123456 -m aes-256-cfb
     </entry>
     
     <entry>
-      <title><![CDATA[ubuntu 安装hexo博客]]></title>
-      <url>https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/</url>
-      <content type="html"><![CDATA[<h2 id="搭建nodejs-环境"><a href="/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">安装nodejs，注意这里安装的源比较老，先依次安装<span class="keyword">node</span><span class="title">和npm</span>,</div><div class="line"> sudo apt install nodejs</div><div class="line"> sudo apt install npm</div><div class="line"></div><div class="line"> //使用n模块更新nodejs</div><div class="line"></div><div class="line">  sudo npm install -g n</div></pre></td></tr></table></figure>
-<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
-<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
-<h3 id="安装hexo"><a href="/2016/10/11/ubuntu安装hexo教程/#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
-<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
-<p>hexo s 本地预览–over</p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> ubuntu </tag>
-            
-            <tag> hexo </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[npm]]></title>
       <url>https://zhaoy875.github.io/2016/10/11/npm/</url>
       <content type="html"><![CDATA[<h2 id="管理node-js版本"><a href="/2016/10/11/npm/#管理node-js版本" class="headerlink" title="管理node.js版本"></a>管理node.js版本</h2><p>升级node.js的方法。node有一个模块叫n，专门用来管理node.js的版本的。<br>首先安装n模块：<br>    npm install -g n</p>
@@ -565,6 +542,29 @@ npm uninstall express  #删除指定的模块
             <tag> npm </tag>
             
             <tag> nodejs </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[ubuntu 安装hexo博客]]></title>
+      <url>https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/</url>
+      <content type="html"><![CDATA[<h2 id="搭建nodejs-环境"><a href="/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">安装nodejs，注意这里安装的源比较老，先依次安装<span class="keyword">node</span><span class="title">和npm</span>,</div><div class="line"> sudo apt install nodejs</div><div class="line"> sudo apt install npm</div><div class="line"></div><div class="line"> //使用n模块更新nodejs</div><div class="line"></div><div class="line">  sudo npm install -g n</div></pre></td></tr></table></figure>
+<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
+<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
+<h3 id="安装hexo"><a href="/2016/10/11/ubuntu安装hexo教程/#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
+<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
+<p>hexo s 本地预览–over</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> ubuntu </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
         

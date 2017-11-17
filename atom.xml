@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>zhaoy</title>
-  <subtitle>Your time is limited, so don&#39;t waste it living someone else&#39;s life</subtitle>
+  <subtitle>身教胜言传,宁静以致远</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhaoy875.github.io/"/>
@@ -566,35 +566,6 @@ ssserver -p 8080 -k 123456 -m aes-256-cfb
   </entry>
   
   <entry>
-    <title>ubuntu 安装hexo博客</title>
-    <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
-    <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
-    <published>2016-10-11T05:50:43.000Z</published>
-    <updated>2017-01-10T20:15:33.630Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="搭建nodejs-环境"><a href="/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">安装nodejs，注意这里安装的源比较老，先依次安装<span class="keyword">node</span><span class="title">和npm</span>,</div><div class="line"> sudo apt install nodejs</div><div class="line"> sudo apt install npm</div><div class="line"></div><div class="line"> //使用n模块更新nodejs</div><div class="line"></div><div class="line">  sudo npm install -g n</div></pre></td></tr></table></figure>
-<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
-<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
-<h3 id="安装hexo"><a href="/2016/10/11/ubuntu安装hexo教程/#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
-<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
-<p>hexo s 本地预览–over</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;搭建nodejs-环境&quot;&gt;&lt;a href=&quot;/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境&quot; class=&quot;headerlink&quot; title=&quot;搭建nodejs 环境&quot;&gt;&lt;/a&gt;搭建nodejs 环境&lt;/h2&gt;&lt;figure cl
-    
-    </summary>
-    
-    
-      <category term="ubuntu" scheme="https://zhaoy875.github.io/tags/ubuntu/"/>
-    
-      <category term="hexo" scheme="https://zhaoy875.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>npm</title>
     <link href="https://zhaoy875.github.io/2016/10/11/npm/"/>
     <id>https://zhaoy875.github.io/2016/10/11/npm/</id>
@@ -646,6 +617,35 @@ npm uninstall express  #删除指定的模块
       <category term="npm" scheme="https://zhaoy875.github.io/tags/npm/"/>
     
       <category term="nodejs" scheme="https://zhaoy875.github.io/tags/nodejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu 安装hexo博客</title>
+    <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
+    <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
+    <published>2016-10-11T05:50:43.000Z</published>
+    <updated>2017-01-10T20:15:33.630Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="搭建nodejs-环境"><a href="/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">安装nodejs，注意这里安装的源比较老，先依次安装<span class="keyword">node</span><span class="title">和npm</span>,</div><div class="line"> sudo apt install nodejs</div><div class="line"> sudo apt install npm</div><div class="line"></div><div class="line"> //使用n模块更新nodejs</div><div class="line"></div><div class="line">  sudo npm install -g n</div></pre></td></tr></table></figure>
+<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
+<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
+<h3 id="安装hexo"><a href="/2016/10/11/ubuntu安装hexo教程/#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
+<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
+<p>hexo s 本地预览–over</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;搭建nodejs-环境&quot;&gt;&lt;a href=&quot;/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境&quot; class=&quot;headerlink&quot; title=&quot;搭建nodejs 环境&quot;&gt;&lt;/a&gt;搭建nodejs 环境&lt;/h2&gt;&lt;figure cl
+    
+    </summary>
+    
+    
+      <category term="ubuntu" scheme="https://zhaoy875.github.io/tags/ubuntu/"/>
+    
+      <category term="hexo" scheme="https://zhaoy875.github.io/tags/hexo/"/>
     
   </entry>
   

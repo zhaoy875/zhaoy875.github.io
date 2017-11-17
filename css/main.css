@@ -1719,7 +1719,7 @@ pre .javascript .function {
   color: #fff;
 }
 .links-of-author {
-  margin-top: 20px;
+  margin-bottom: 2em;
 }
 .links-of-author a {
   display: inline-block;
@@ -1737,7 +1737,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fff;
+  background: #a65330;
 }
 .links-of-blogroll {
   font-size: 13px;
