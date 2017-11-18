@@ -1041,6 +1041,59 @@ var o = { name:&apos;赵&apos;, age:12,}; // 报错
   </entry>
   
   <entry>
+    <title> gulp入门系列1--安装 Node 和 gulp</title>
+    <link href="https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%971-%E5%AE%89%E8%A3%85-Node-%E5%92%8C-gulp/"/>
+    <id>https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/</id>
+    <published>2016-09-20T09:33:20.000Z</published>
+    <updated>2016-12-07T12:27:03.532Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="安装-Node-和-gulp"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-Node-和-gulp" class="headerlink" title="安装 Node 和 gulp"></a>安装 Node 和 gulp</h1><p>gulp 是基于 node 实现的，那么我们就需要先安装 node。</p>
+<blockquote>
+<p>Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利用它实现 Web服务，做类似PHP的事。</p>
+</blockquote>
+<p>打开 <a href="https://nodejs.org/" target="_blank" rel="external">https://nodejs.org/</a> 点击绿色的 <strong>INSTALL</strong> 按钮下载安装 node。</p>
+<p><a href="https://github.com/nimojs/gulp-book/issues/10" target="_blank" rel="external">访问论坛获取帮助</a></p>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#hash_cli" name="hash_cli"></a></p>
+<h2 id="使用终端-命令行"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#使用终端-命令行" class="headerlink" title="使用终端/命令行"></a>使用终端/命令行</h2><h3 id="命令行"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>在 Windows 中可按 <kbd>徽标键</kbd>（alt键左边）+ <kbd>R</kbd> 打开输入 <code>cmd</code> + <kbd>Enter</kbd> 打开命令行。</p>
+<h3 id="终端-Mac"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#终端-Mac" class="headerlink" title="终端(Mac)"></a>终端(Mac)</h3><p>打开 Launchpad（像火箭一样的图标），在屏幕上方搜索框中输入 <code>终端</code> + <kbd>Enter</kbd> 打开终端。</p>
+<h3 id="查看-node-版本号"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#查看-node-版本号" class="headerlink" title="查看 node 版本号"></a>查看 node 版本号</h3><p>在终端/命令行中输入 <code>node -v</code> 检测node是否安装成功，安装成功会显示出 node 的版本号。</p>
+<h3 id="跳转目录"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#跳转目录" class="headerlink" title="跳转目录"></a>跳转目录</h3><p>终端/命令行 中可使用 <code>cd 目录名</code> 跳转至指定目录，Mac 中还可以使用 <code>ls</code> 查看当前目录下的文件列表。</p>
+<h4 id="Windows"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#Windows" class="headerlink" title="Windows"></a>Windows</h4><p>Windows 下可使用如下命令跳转至指定目录：</p>
+<figure class="highlight scilab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跳转至 C 盘根目录</span></div><div class="line"><span class="built_in">cd</span> c:\</div><div class="line"><span class="comment">// 跳转至当前目录的 demo 文件夹</span></div><div class="line"><span class="built_in">cd</span> demo</div><div class="line"><span class="comment">// 跳转至上一级</span></div><div class="line"><span class="built_in">cd</span> ..</div></pre></td></tr></table></figure>
+<h4 id="Mac"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#Mac" class="headerlink" title="Mac"></a>Mac</h4><p>Mac 中建议只在 Documents 目录下进行文件操作。</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跳转至文档目录</span></div><div class="line"><span class="keyword">cd</span> /Users/你的用户名/Documents/</div><div class="line"><span class="comment">// 或第一次打开终端时直接输入</span></div><div class="line"><span class="keyword">cd</span> Documents</div><div class="line"><span class="comment">// 查看目录下文件列表</span></div><div class="line"><span class="keyword">ls</span></div><div class="line"><span class="comment">// 创建文件夹</span></div><div class="line"><span class="keyword">mkdir</span> demo</div><div class="line"><span class="comment">// 跳转至当前目录下的 demo 文件夹</span></div><div class="line"><span class="keyword">cd</span> demo</div><div class="line"><span class="comment">// 跳转至上级目录</span></div><div class="line"><span class="keyword">cd</span> ..</div></pre></td></tr></table></figure>
+<h3 id="退出运行状态"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#退出运行状态" class="headerlink" title="退出运行状态"></a>退出运行状态</h3><p>如果你在命令行中启动了一些一直运行的命令，你的命令行会进入“运行”状态，此时你不可以在命令行进行其他操作。可通过 <code>Ctrl + C</code> 停止 gulp。（Mac 中使用 <code>control + C</code>）</p>
+<p>后面的章节中如果代码中存在 <code>gulp.watch</code> 并在命令行运行了 <code>gulp</code> 则需要使用 <code>Ctrl + C</code> 退出任务。</p>
+<h2 id="npm-模块管理器"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#npm-模块管理器" class="headerlink" title="npm 模块管理器"></a>npm 模块管理器</h2><p>如果你了解 npm 则跳过此章节</p>
+<p>若你不了解npm 请阅读 <a href="http://javascript.ruanyifeng.com/nodejs/npm.html" target="_blank" rel="external">npm模块管理器</a></p>
+<h2 id="安装-gulp"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-gulp" class="headerlink" title="安装 gulp"></a>安装 gulp</h2><p>npm 是 node 的包管理工具，可以利用它安装 gulp 所需的包。（在安装 node 时已经自动安装了 npm）</p>
+<p>在命令行输入</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> -g gulp</div></pre></td></tr></table></figure>
+<p>若一直没安装成功，请<a href="https://github.com/nimojs/blog/issues/20" target="_blank" rel="external">使用 cnpm 安装</a>(npm的国内加速镜像)</p>
+<p>意思是：使用 npm 安装全局性的(<code>-g</code>) gulp 包。</p>
+<blockquote>
+<p>如果你安装失败，请输入<code>sudo npm install -g gulp</code>使用管理员权限安装。（可能会要求输入密码）</p>
+</blockquote>
+<p>安装时请注意命令行的提示信息，安装完成后可在命令行输入 <code>gulp -v</code> 以确认安装成功。</p>
+<p>至此，我们完成了准备工作。接着让 gulp 开始帮我们干活吧！</p>
+<p><a href="https://github.com/nimojs/gulp-book/issues/10" target="_blank" rel="external">访问论坛获取帮助</a></p>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/chapter2.md">阅读下一章节：使用 gulp 压缩JS</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;安装-Node-和-gulp&quot;&gt;&lt;a href=&quot;/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-Node-和-gulp&quot; class=&quot;headerlink&quot; title=&quot;安装 Node 和 gulp&quot;&gt;&lt;/a&gt;
+    
+    </summary>
+    
+    
+      <category term="gulp" scheme="https://zhaoy875.github.io/tags/gulp/"/>
+    
+      <category term="前端工程自动化" scheme="https://zhaoy875.github.io/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
     <title> gulp入门系列2--压缩 JS</title>
     <link href="https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%972-%E5%8E%8B%E7%BC%A9-JS/"/>
     <id>https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列2-压缩-JS/</id>
@@ -1144,59 +1197,6 @@ var o = { name:&apos;赵&apos;, age:12,}; // 报错
     <summary type="html">
     
       &lt;h1 id=&quot;使用-gulp-压缩-JS&quot;&gt;&lt;a href=&quot;/2016/09/20/gulp教程-gulp入门系列2-压缩-JS/#使用-gulp-压缩-JS&quot; class=&quot;headerlink&quot; title=&quot;使用 gulp 压缩 JS&quot;&gt;&lt;/a&gt;使用 gulp 压缩 J
-    
-    </summary>
-    
-    
-      <category term="gulp" scheme="https://zhaoy875.github.io/tags/gulp/"/>
-    
-      <category term="前端工程自动化" scheme="https://zhaoy875.github.io/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title> gulp入门系列1--安装 Node 和 gulp</title>
-    <link href="https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%971-%E5%AE%89%E8%A3%85-Node-%E5%92%8C-gulp/"/>
-    <id>https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/</id>
-    <published>2016-09-20T09:33:20.000Z</published>
-    <updated>2016-12-07T12:27:03.532Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="安装-Node-和-gulp"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-Node-和-gulp" class="headerlink" title="安装 Node 和 gulp"></a>安装 Node 和 gulp</h1><p>gulp 是基于 node 实现的，那么我们就需要先安装 node。</p>
-<blockquote>
-<p>Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利用它实现 Web服务，做类似PHP的事。</p>
-</blockquote>
-<p>打开 <a href="https://nodejs.org/" target="_blank" rel="external">https://nodejs.org/</a> 点击绿色的 <strong>INSTALL</strong> 按钮下载安装 node。</p>
-<p><a href="https://github.com/nimojs/gulp-book/issues/10" target="_blank" rel="external">访问论坛获取帮助</a></p>
-<p><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#hash_cli" name="hash_cli"></a></p>
-<h2 id="使用终端-命令行"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#使用终端-命令行" class="headerlink" title="使用终端/命令行"></a>使用终端/命令行</h2><h3 id="命令行"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>在 Windows 中可按 <kbd>徽标键</kbd>（alt键左边）+ <kbd>R</kbd> 打开输入 <code>cmd</code> + <kbd>Enter</kbd> 打开命令行。</p>
-<h3 id="终端-Mac"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#终端-Mac" class="headerlink" title="终端(Mac)"></a>终端(Mac)</h3><p>打开 Launchpad（像火箭一样的图标），在屏幕上方搜索框中输入 <code>终端</code> + <kbd>Enter</kbd> 打开终端。</p>
-<h3 id="查看-node-版本号"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#查看-node-版本号" class="headerlink" title="查看 node 版本号"></a>查看 node 版本号</h3><p>在终端/命令行中输入 <code>node -v</code> 检测node是否安装成功，安装成功会显示出 node 的版本号。</p>
-<h3 id="跳转目录"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#跳转目录" class="headerlink" title="跳转目录"></a>跳转目录</h3><p>终端/命令行 中可使用 <code>cd 目录名</code> 跳转至指定目录，Mac 中还可以使用 <code>ls</code> 查看当前目录下的文件列表。</p>
-<h4 id="Windows"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#Windows" class="headerlink" title="Windows"></a>Windows</h4><p>Windows 下可使用如下命令跳转至指定目录：</p>
-<figure class="highlight scilab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跳转至 C 盘根目录</span></div><div class="line"><span class="built_in">cd</span> c:\</div><div class="line"><span class="comment">// 跳转至当前目录的 demo 文件夹</span></div><div class="line"><span class="built_in">cd</span> demo</div><div class="line"><span class="comment">// 跳转至上一级</span></div><div class="line"><span class="built_in">cd</span> ..</div></pre></td></tr></table></figure>
-<h4 id="Mac"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#Mac" class="headerlink" title="Mac"></a>Mac</h4><p>Mac 中建议只在 Documents 目录下进行文件操作。</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跳转至文档目录</span></div><div class="line"><span class="keyword">cd</span> /Users/你的用户名/Documents/</div><div class="line"><span class="comment">// 或第一次打开终端时直接输入</span></div><div class="line"><span class="keyword">cd</span> Documents</div><div class="line"><span class="comment">// 查看目录下文件列表</span></div><div class="line"><span class="keyword">ls</span></div><div class="line"><span class="comment">// 创建文件夹</span></div><div class="line"><span class="keyword">mkdir</span> demo</div><div class="line"><span class="comment">// 跳转至当前目录下的 demo 文件夹</span></div><div class="line"><span class="keyword">cd</span> demo</div><div class="line"><span class="comment">// 跳转至上级目录</span></div><div class="line"><span class="keyword">cd</span> ..</div></pre></td></tr></table></figure>
-<h3 id="退出运行状态"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#退出运行状态" class="headerlink" title="退出运行状态"></a>退出运行状态</h3><p>如果你在命令行中启动了一些一直运行的命令，你的命令行会进入“运行”状态，此时你不可以在命令行进行其他操作。可通过 <code>Ctrl + C</code> 停止 gulp。（Mac 中使用 <code>control + C</code>）</p>
-<p>后面的章节中如果代码中存在 <code>gulp.watch</code> 并在命令行运行了 <code>gulp</code> 则需要使用 <code>Ctrl + C</code> 退出任务。</p>
-<h2 id="npm-模块管理器"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#npm-模块管理器" class="headerlink" title="npm 模块管理器"></a>npm 模块管理器</h2><p>如果你了解 npm 则跳过此章节</p>
-<p>若你不了解npm 请阅读 <a href="http://javascript.ruanyifeng.com/nodejs/npm.html" target="_blank" rel="external">npm模块管理器</a></p>
-<h2 id="安装-gulp"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-gulp" class="headerlink" title="安装 gulp"></a>安装 gulp</h2><p>npm 是 node 的包管理工具，可以利用它安装 gulp 所需的包。（在安装 node 时已经自动安装了 npm）</p>
-<p>在命令行输入</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> -g gulp</div></pre></td></tr></table></figure>
-<p>若一直没安装成功，请<a href="https://github.com/nimojs/blog/issues/20" target="_blank" rel="external">使用 cnpm 安装</a>(npm的国内加速镜像)</p>
-<p>意思是：使用 npm 安装全局性的(<code>-g</code>) gulp 包。</p>
-<blockquote>
-<p>如果你安装失败，请输入<code>sudo npm install -g gulp</code>使用管理员权限安装。（可能会要求输入密码）</p>
-</blockquote>
-<p>安装时请注意命令行的提示信息，安装完成后可在命令行输入 <code>gulp -v</code> 以确认安装成功。</p>
-<p>至此，我们完成了准备工作。接着让 gulp 开始帮我们干活吧！</p>
-<p><a href="https://github.com/nimojs/gulp-book/issues/10" target="_blank" rel="external">访问论坛获取帮助</a></p>
-<p><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/chapter2.md">阅读下一章节：使用 gulp 压缩JS</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;安装-Node-和-gulp&quot;&gt;&lt;a href=&quot;/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-Node-和-gulp&quot; class=&quot;headerlink&quot; title=&quot;安装 Node 和 gulp&quot;&gt;&lt;/a&gt;
     
     </summary>
     
