@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhaoy875.github.io/"/>
-  <updated>2017-02-18T19:30:26.382Z</updated>
+  <updated>2017-02-18T19:30:26.383Z</updated>
   <id>https://zhaoy875.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://zhaoy875.github.io/2017/01/02/javascript%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0-Javascript%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/"/>
     <id>https://zhaoy875.github.io/2017/01/02/javascript系统学习-Javascript深浅拷贝/</id>
     <published>2017-01-02T03:03:20.000Z</published>
-    <updated>2017-02-18T19:30:26.382Z</updated>
+    <updated>2017-02-18T19:30:26.383Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Javascript深浅拷贝"><a href="/2017/01/02/javascript系统学习-Javascript深浅拷贝/#Javascript深浅拷贝" class="headerlink" title="Javascript深浅拷贝"></a>Javascript深浅拷贝</h1><p>Javascript五种基本数据类型（即简单数据类型），分别是：Undefined，Null，Boolean，Number和String。还含有一种复杂数据类型，就是对象。<br>Undefined和Null,Undefined类型只有一个值，就是undefined，Null类型也只有一个值，也就是null</p>
 <ul>
@@ -85,7 +85,7 @@ console.log(obj2);//Object {name: &quot;wsscat&quot;, age: 0}
     <link href="https://zhaoy875.github.io/2016/12/29/javascript%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0-%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/"/>
     <id>https://zhaoy875.github.io/2016/12/29/javascript系统学习-继承与原型链/</id>
     <published>2016-12-29T07:33:20.000Z</published>
-    <updated>2017-01-10T20:13:30.655Z</updated>
+    <updated>2017-01-10T20:13:30.656Z</updated>
     
     <content type="html"><![CDATA[<h1 id="继承与原型链"><a href="/2016/12/29/javascript系统学习-继承与原型链/#继承与原型链" class="headerlink" title="继承与原型链"></a>继承与原型链</h1><blockquote>
 <p>主要参考MDN，讲的比较通俗易懂 : <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain</a><br>如有错误还望指正，感谢</p>
@@ -443,7 +443,7 @@ console.log(obj2);//Object {name: &quot;wsscat&quot;, age: 0}
     <link href="https://zhaoy875.github.io/2016/10/20/%E6%A8%B1%E8%8A%B1docker%E6%A2%AF%E5%AD%90/"/>
     <id>https://zhaoy875.github.io/2016/10/20/樱花docker梯子/</id>
     <published>2016-10-20T03:23:20.000Z</published>
-    <updated>2017-01-10T20:39:56.634Z</updated>
+    <updated>2017-01-10T20:39:56.635Z</updated>
     
     <content type="html"><![CDATA[<h2 id="傻瓜教程"><a href="/2016/10/20/樱花docker梯子/#傻瓜教程" class="headerlink" title="傻瓜教程"></a>傻瓜教程</h2><p>樱花（Arukas.io）docker 免费搭个人SS</p>
 <p>没账户的先注册一个账户：<a href="https://app.arukas.io/sign_up" target="_blank" rel="external">https://app.arukas.io/sign_up</a></p>
@@ -486,7 +486,7 @@ ssserver -p 8080 -k 123456 -m aes-256-cfb
     <link href="https://zhaoy875.github.io/2016/10/13/npm%E5%A2%9E%E5%BC%BA%E7%89%88-yarn/"/>
     <id>https://zhaoy875.github.io/2016/10/13/npm增强版-yarn/</id>
     <published>2016-10-13T14:16:12.000Z</published>
-    <updated>2016-10-27T07:31:37.230Z</updated>
+    <updated>2016-10-27T07:31:37.231Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>参考 <a href="http://www.jb51.net/article/95199.htm" target="_blank" rel="external">http://www.jb51.net/article/95199.htm</a></p>
@@ -549,7 +549,7 @@ ssserver -p 8080 -k 123456 -m aes-256-cfb
     <link href="https://zhaoy875.github.io/2016/10/11/Gulp%E6%8F%92%E4%BB%B6%E6%94%B6%E8%97%8F/"/>
     <id>https://zhaoy875.github.io/2016/10/11/Gulp插件收藏/</id>
     <published>2016-10-11T07:16:43.000Z</published>
-    <updated>2016-12-07T12:13:47.760Z</updated>
+    <updated>2016-12-07T12:13:47.761Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Gulp插件收藏"><a href="/2016/10/11/Gulp插件收藏/#Gulp插件收藏" class="headerlink" title="Gulp插件收藏"></a>Gulp插件收藏</h2><article><br>    <h2 id="articleHeader0">HTML&amp;CSS </h2><br>    <p><a href="https://github.com/postcss/autoprefixer" target="_blank" rel="external">autoprefixer</a> - parse CSS and add vendor prefixes to rules by Can I Use. </p><br>    <p><a href="https://github.com/BrowserSync/gulp-browser-sync" target="_blank" rel="external">gulp-browser-sync</a> - keep multiple browsers &amp; devices in sync when building websites. </p><br>    <p><a href="https://github.com/jonkemp/gulp-useref" target="_blank" rel="external">gulp-useref</a> - parse build blocks in HTML files to replace references to non-optimized scripts or stylesheets. </p><br>    <p><a href="https://github.com/alexshk/gulp-email-design" target="_blank" rel="external">gulp-email-design</a> - a workflow for designing and testing HTML email templates. </p><br>    <p><a href="https://github.com/addyosmani/gulp-uncss-task" target="_blank" rel="external">gulp-uncss</a> - remove unused CSS from your projects. </p><br>    <p><a href="https://github.com/ben-eb/gulp-csso" target="_blank" rel="external">gulp-csso</a> - very cool CSS minificator. In addition, there are many CSS optimizers and <a href="http://goalsmashers.github.io/css-minification-benchmark/" target="_blank" rel="external">benchmark tests</a> (<a href="https://github.com/GoalSmashers/css-minification-benchmark" target="_blank" rel="external">GitHub</a>) for them. But recently I saw most powerful <a href="https://github.com/frankmarineau/shorthand" target="_blank" rel="external">Shorthand</a> utility without Gulp, which does folowing: </p><br>    <pre>a {<br>    font-family: Arial;<br>    font-style: italic;<br>    font-size: 14px;<br>    line-height: 18px;<br>    font-weight: bold;<br>    background-image: url(‘example.png’);<br>    background-color: red;<br>    background-size: cover;<br>    background-repeat: no-repeat;<br>}<br><br>=&gt;<br><br>a {<br>  font: italic bold 14px/18px Arial;<br>  background: red url(‘example.png’) no-repeat / cover;<br>}</pre><br>    <p><a href="https://github.com/jonschlinkert/gulp-htmlmin" target="_blank" rel="external">gulp-htmlmin</a> - neat HTML minificator. </p><br>    <p><a href="https://github.com/koistya/gulp-csscomb" target="_blank" rel="external">gulp-csscomb</a> - refines the structure of your CSS. </p><br>    <p><a href="https://www.npmjs.com/package/gulp-csslint" target="_blank" rel="external">gulp-csslint</a> - CSS linter. </p><br>    <p><a href="https://github.com/bezoerb/gulp-htmlhint" target="_blank" rel="external">gulp-htmlhint</a> - HTML validator. </p><br>    <p><a href="https://www.npmjs.com/package/gulp-processhtml" target="_blank" rel="external">gulp-processhtml</a> - Process html files at build time to modify them as you wish. </p><br>    <h2 id="articleHeader1">JavaScript </h2><br>    <p><a href="https://github.com/azproduction/gulp-autopolyfiller" target="_blank" rel="external">gulp-autopolyfiller</a> - precise polyfills. This is like Autoprefixer, but for JavaScript polyfills. </p><br>    <p><a href="https://github.com/babel/gulp-babel" target="_blank" rel="external">gulp-babel</a> - transpiler for writing next generation JavaScript. </p><br>    <p><a href="https://www.npmjs.com/package/gulp-jsfmt" target="_blank" rel="external">gulp-jsfmt</a> - for formatting, searching, and rewriting JavaScript. </p><br>    <p><a href="https://github.com/jscs-dev/gulp-jscs" target="_blank" rel="external">gulp-jscs</a> - for checking JavaScript Code Style. </p><br>    <p><a href="https://github.com/doctyper/gulp-modernizr" target="_blank" rel="external">gulp-modernizr</a> - build out a lean, mean Modernizr machine. </p><br>    <p><a href="https://github.com/gimm/gulp-express" target="_blank" rel="external">gulp-express</a> — start (and supervise) an Express.js web server using, works well with socket.io </p><br>    <p><a href="https://github.com/robinthrift/gulp-requirejs" target="_blank" rel="external">gulp-requirejs</a> and <a href="https://github.com/deepak1556/gulp-browserify" target="_blank" rel="external">gulp-browserify</a> - optimize the work with RequireJS and Browserify respectively. </p><br>    <p><a href="https://github.com/sindresorhus/gulp-plato" target="_blank" rel="external">gulp-plato</a> - generate static analysis reports. </p><br>    <p><a href="https://github.com/alexeyraspopov/gulp-complexity" target="_blank" rel="external">gulp-complexity</a> - evaluates code maintainability using Halstead and Cyclomatic metrics. </p><br>    <p><a href="https://github.com/kirjs/gulp-fixmyjs" target="_blank" rel="external">fixmyjs</a> - automatically fix silly lint errors with help of <a href="http://jshint.com/" target="_blank" rel="external">JSHint</a> (<a href="https://github.com/spalger/gulp-jshint" target="_blank" rel="external">gulp-jshint</a>). </p><br>    <p><a href="https://github.com/yannickcr/gulp-jscpd" target="_blank" rel="external">gulp-jscpd</a> — copy/paste detector for programming source code. </p><br>    <p><a href="https://github.com/Semigradsky/gulp-buddy.js" target="_blank" rel="external">gulp-buddy.js</a> - magic number detection for javascript. </p><br>    <p><a href="https://github.com/rogeriopvl/gulp-jsonlint" target="_blank" rel="external">gulp-jsonlint</a> - JSON validator. </p><br>    <p><a href="https://github.com/terinjokes/gulp-uglify" target="_blank" rel="external">gulp-uglify</a> - JavaScript compressor. </p><br>    <p><a href="https://github.com/wearefractal/gulp-concat" target="_blank" rel="external">gulp-concat</a> - concatenate files. </p><br>    <h3 id="articleHeader2">Unit Tests </h3><br>    <ul><br>        <li><a href="https://github.com/kjvalencik/gulp-nodeunit" target="_blank" rel="external">gulp-nodeunit</a> </li><br>        <li><a href="https://github.com/sindresorhus/gulp-jasmine" target="_blank" rel="external">gulp-jasmine</a> </li><br>        <li><a href="https://github.com/jonkemp/gulp-qunit" target="_blank" rel="external">gulp-qunit</a> </li><br>        <li><a href="https://github.com/sindresorhus/gulp-mocha" target="_blank" rel="external">gulp-mocha</a> </li><br>        <li><a href="https://github.com/karma-runner/gulp-karma" target="_blank" rel="external">gulp-karma</a> </li><br>    </ul><br>    <h2 id="articleHeader3">Graphics </h2><br>    <p><a href="https://github.com/wakayama-io/gulpicon/" target="_blank" rel="external">gulpicon</a> - mystical CSS icon solution. </p><br>    <p><a href="https://github.com/nfroidure/gulp-iconfont" target="_blank" rel="external">gulp-iconfont</a> - SVG to webfont converter. </p><br>    <p><a href="https://github.com/mahnunchik/gulp-responsive" target="_blank" rel="external">gulp-responsive</a> - produce images at different sizes for responsive websites. </p><br>    <p><a href="https://github.com/rizalp/gulp-sharp" target="_blank" rel="external">gulp-sharp</a> - fastest module for work JPEG, PNG, WebP and TIFF images. </p><br>    <p><a href="https://github.com/w0rm/gulp-svgstore" target="_blank" rel="external">gulp-svgstore</a> - merge SVGs from a folder. </p><br>    <p><a href="https://github.com/akoenig/imacss" target="_blank" rel="external">gulp-imacss</a> - application and library that transforms image files to data URIs. </p><br>    <p><a href="https://github.com/sindresorhus/gulp-imagemin" target="_blank" rel="external">gulp-imagemin</a> и <a href="https://github.com/creativeaura/gulp-tinypng" target="_blank" rel="external">gulp-tinypng</a> or fimage compression. </p><br>    <p><a href="https://github.com/otouto/gulp-spritesmith" target="_blank" rel="external">gulp-spritesmith</a> - converting a set of images into a spritesheet and corresponding CSS variables. </p><br>    <h2 id="articleHeader4">Others </h2><br>    <p><a href="https://github.com/gratimax/gulp-grunt" target="_blank" rel="external">gulp-grunt</a> - able to run Grunt tasks from Gulp. </p><br>    <p><a href="https://github.com/floatdrop/gulp-watch" target="_blank" rel="external">gulp-watch</a> — run tasks whenever watched files change. </p><br>    <p><a href="https://github.com/mikaelbr/gulp-notify" target="_blank" rel="external">gulp-notify</a> - automatic error messages in system notifications center when Gulp tasks fail. </p><br>    <p><a href="https://github.com/stevelacy/gulp-git" target="_blank" rel="external">gulp-git</a> - able to use Git commands. </p><br>    <p><a href="https://github.com/jsBoot/gulp-jsdoc" target="_blank" rel="external">gulp-jsdoc</a> - generate JavaScript documentation by running JSDoc3. </p><br>    <p><a href="https://github.com/sindresorhus/gulp-rev" target="_blank" rel="external">gulp-rev</a> - static file asset revisioning through content hashing. </p><br>    <p><a href="https://github.com/stevelacy/gulp-bump" target="_blank" rel="external">gulp-bump</a> - increments versions in package JSON and <a href="https://github.com/tounano/gulp-update" target="_blank" rel="external">gulp-update</a>, which automatically updates packages. </p><br>    <p><a href="https://github.com/ck86/gulp-bower-files" target="_blank" rel="external">gulp-bower-files</a> - inject Bower packages. </p><br>    <p><a href="https://github.com/hemanth/gulp-removelogs" target="_blank" rel="external">gulp-removelogs</a> - remove console logging statements. </p><br>    <p><a href="https://github.com/jas/gulp-preprocess" target="_blank" rel="external">gulp-preprocess</a> - preprocess files based off environment configuration. </p><br>    <p><a href="https://github.com/hughsk/gulp-duration" target="_blank" rel="external">gulp-duration</a> — displays the elapsed execution time of Gulp tasks. </p><br>    <p><a href="https://github.com/sindresorhus/gulp-changed" target="_blank" rel="external">gulp-changed</a> and <a href="https://www.npmjs.com/package/gulp-newer" target="_blank" rel="external">gulp-newer</a> — run Gulp tasks with only those source files modified since the last successful run. </p><br>    <p><a href="https://github.com/avevlad/gulp-connect" target="_blank" rel="external">gulp-connect</a> - simple static web server. </p><br>    <p><a href="https://github.com/sun-zheng-an/gulp-shell" target="_blank" rel="external">gulp-shell</a> - run Shell commands. </p><br>    <p><a href="https://github.com/teambition/gulp-ssh" target="_blank" rel="external">gulp-ssh</a> - provides the ability to connect via SSH and SFTP. </p><br>    <p><a href="https://www.npmjs.com/package/gulp-zip" target="_blank" rel="external">gulp-zip</a> - compress files and folders.. </p><br>    <p><a href="https://github.com/peter-vilja/gulp-clean" target="_blank" rel="external">gulp-clean</a> and <a href="https://github.com/klaascuvelier/gulp-copy" target="_blank" rel="external">gulp-copy</a> - respectively remove and copy sources. </p><br>    <p><a href="https://www.npmjs.com/package/gulp-replace" target="_blank" rel="external">gulp-replace</a> - Search and replace strings in text files. </p><br>    <p><a href="https://github.com/Metrime/gulp-filesize" target="_blank" rel="external">gulp-filesize</a> - displays sizes of files in a readable format. </p><br>    <p><a href="https://github.com/gulpjs/gulp-util" target="_blank" rel="external">gulp-util</a> - utilities for developing Gulp plugins. </p><br>    <h2 id="articleHeader5">Compilers </h2><br>    <ul><br>        <li><a href="https://github.com/plus3network/gulp-less" target="_blank" rel="external">gulp-less</a> - LESS in CSS. </li><br>        <li><a href="https://github.com/dlmanning/gulp-sass" target="_blank" rel="external">gulp-sass</a> - SASS/SCSS in СSS. </li><br>        <li><a href="https://github.com/appleboy/gulp-compass" target="_blank" rel="external">gulp-compass</a> - SASS with Compass in CSS. </li><br>        <li><a href="https://github.com/LearnBoost/stylus" target="_blank" rel="external">gulp-stylus</a> - Stylus in CSS. </li><br>        <li><a href="https://github.com/wearefractal/gulp-coffee" target="_blank" rel="external">gulp-coffee</a> - CoffeeScript in JavaScript. </li><br>        <li><a href="https://github.com/ivogabe/gulp-typescript" target="_blank" rel="external">gulp-typescript</a> - TypeScript in JavaScript. </li><br>        <li><a href="https://github.com/phated/gulp-jade" target="_blank" rel="external">gulp-jade</a> - Jade in HTML. </li><br>        <li><a href="https://github.com/lazd/gulp-handlebars" target="_blank" rel="external">gulp-handlebars</a> - Handlebars templates in JST. </li><br>        <li><a href="https://github.com/rdmurphy/gulp-jst" target="_blank" rel="external">gulp-jst</a> - Underscore templates in JST. </li><br>        <li><a href="https://github.com/sindresorhus/gulp-react" target="_blank" rel="external">gulp-react</a> - Facebook React’s JSX templates in JST. </li><br>        <li><a href="https://github.com/sindresorhus/gulp-nunjucks" target="_blank" rel="external">gulp-nunjucks</a> - Nunjucks templates in JST. </li><br>        <li><a href="https://github.com/sindresorhus/gulp-dust" target="_blank" rel="external">gulp-dustjs</a> - Dust templates in JST. </li><br>        <li><a href="https://github.com/miickel/gulp-angular-templatecache" target="_blank" rel="external">gulp-angular-templatecache</a> - AngularJS templates in JST. </li><br>    </ul><br>    <h2 id="articleHeader6">Finally </h2><br>    <ul><br>        <li><a href="https://github.com/addyosmani/psi" target="_blank" rel="external">psi</a> - PageSpeed Insights with reporting. </li><br>        <li><a href="https://github.com/addyosmani/tmi" target="_blank" rel="external">tmi</a> - TMI (Too Many Images) - discover your image weight on the web. </li><br>        <li><a href="https://ngrok.com/" target="_blank" rel="external">ngrok</a> - Introspected tunnels to localhost. </li><br>        <li><a href="https://github.com/sindresorhus/pageres" target="_blank" rel="external">pageres</a> - responsive website screenshots. </li><br>        <li><a href="https://github.com/tkellen/node-matchdep" target="_blank" rel="external">matchdep</a> - filter npm module dependencies. </li><br>        <li>Maybe some automatization methods you want to use directly in the editor, so look at the <a href="http://ipestov.com/the-best-plugins-for-sublime-text/" target="_blank" rel="external">The Best Plugins for Sublime Text</a>. </li><br>    </ul><br>    <a href="https://github.com/Pestov/essential-gulp-plugins" target="_blank" rel="external">https://github.com/Pestov/essential-gulp-plugins</a><br></article>
 ]]></content>
@@ -562,6 +562,35 @@ ssserver -p 8080 -k 123456 -m aes-256-cfb
     
     
       <category term="gulp插件" scheme="https://zhaoy875.github.io/tags/gulp%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu 安装hexo博客</title>
+    <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
+    <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
+    <published>2016-10-11T05:50:43.000Z</published>
+    <updated>2017-01-10T20:15:33.631Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="搭建nodejs-环境"><a href="/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">安装nodejs，注意这里安装的源比较老，先依次安装<span class="keyword">node</span><span class="title">和npm</span>,</div><div class="line"> sudo apt install nodejs</div><div class="line"> sudo apt install npm</div><div class="line"></div><div class="line"> //使用n模块更新nodejs</div><div class="line"></div><div class="line">  sudo npm install -g n</div></pre></td></tr></table></figure>
+<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
+<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
+<h3 id="安装hexo"><a href="/2016/10/11/ubuntu安装hexo教程/#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
+<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
+<p>hexo s 本地预览–over</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;搭建nodejs-环境&quot;&gt;&lt;a href=&quot;/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境&quot; class=&quot;headerlink&quot; title=&quot;搭建nodejs 环境&quot;&gt;&lt;/a&gt;搭建nodejs 环境&lt;/h2&gt;&lt;figure cl
+    
+    </summary>
+    
+    
+      <category term="ubuntu" scheme="https://zhaoy875.github.io/tags/ubuntu/"/>
+    
+      <category term="hexo" scheme="https://zhaoy875.github.io/tags/hexo/"/>
     
   </entry>
   
@@ -617,35 +646,6 @@ npm uninstall express  #删除指定的模块
       <category term="npm" scheme="https://zhaoy875.github.io/tags/npm/"/>
     
       <category term="nodejs" scheme="https://zhaoy875.github.io/tags/nodejs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ubuntu 安装hexo博客</title>
-    <link href="https://zhaoy875.github.io/2016/10/11/ubuntu%E5%AE%89%E8%A3%85hexo%E6%95%99%E7%A8%8B/"/>
-    <id>https://zhaoy875.github.io/2016/10/11/ubuntu安装hexo教程/</id>
-    <published>2016-10-11T05:50:43.000Z</published>
-    <updated>2017-01-10T20:15:33.630Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="搭建nodejs-环境"><a href="/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境" class="headerlink" title="搭建nodejs 环境"></a>搭建nodejs 环境</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">安装nodejs，注意这里安装的源比较老，先依次安装<span class="keyword">node</span><span class="title">和npm</span>,</div><div class="line"> sudo apt install nodejs</div><div class="line"> sudo apt install npm</div><div class="line"></div><div class="line"> //使用n模块更新nodejs</div><div class="line"></div><div class="line">  sudo npm install -g n</div></pre></td></tr></table></figure>
-<p>安装git<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="keyword">get</span> install git-core</div></pre></td></tr></table></figure></p>
-<p>分别使用node -v，npm -v ，git version来检查是否安装成功</p>
-<h3 id="安装hexo"><a href="/2016/10/11/ubuntu安装hexo教程/#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>切换到root用户<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">sudo su</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo npm <span class="keyword">install</span> -g hexo-cli</div><div class="line">sudo npm <span class="keyword">install</span>   hexo-cli  <span class="comment">--save</span></div></pre></td></tr></table></figure>
-<p> 新建初始化博客<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">hexo</span> init <span class="keyword">blog</span></div><div class="line"><span class="symbol">hexo</span> s</div></pre></td></tr></table></figure></p>
-<p>hexo s 本地预览–over</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;搭建nodejs-环境&quot;&gt;&lt;a href=&quot;/2016/10/11/ubuntu安装hexo教程/#搭建nodejs-环境&quot; class=&quot;headerlink&quot; title=&quot;搭建nodejs 环境&quot;&gt;&lt;/a&gt;搭建nodejs 环境&lt;/h2&gt;&lt;figure cl
-    
-    </summary>
-    
-    
-      <category term="ubuntu" scheme="https://zhaoy875.github.io/tags/ubuntu/"/>
-    
-      <category term="hexo" scheme="https://zhaoy875.github.io/tags/hexo/"/>
     
   </entry>
   
@@ -839,7 +839,7 @@ var o = { name:&apos;赵&apos;, age:12,}; // 报错
     <link href="https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%976-%E7%BC%96%E8%AF%91-Sass/"/>
     <id>https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列6-编译-Sass/</id>
     <published>2016-09-20T09:40:23.000Z</published>
-    <updated>2016-12-07T12:27:41.346Z</updated>
+    <updated>2016-12-07T12:27:41.347Z</updated>
     
     <content type="html"><![CDATA[<h1 id="使用-gulp-编译-Sass"><a href="/2016/09/20/gulp教程-gulp入门系列6-编译-Sass/#使用-gulp-编译-Sass" class="headerlink" title="使用 gulp 编译 Sass"></a>使用 gulp 编译 Sass</h1><blockquote>
 <p>无论是 <code>node-sass</code> 还是 <code>ruby-sass</code> 使用 npm 安装都非常的慢，甚至会装不上。及其不利于团队协作。建议使用 less 作为 css 预处理器。<br>如果因为 less 不支持自定义函数选择用 sass 可以使用 <a href="https://github.com/seven-phases-max/less-plugin-functions" target="_blank" rel="external">less-plugin-functions</a> 让 less 支持自定义函数。</p>
@@ -935,7 +935,7 @@ var o = { name:&apos;赵&apos;, age:12,}; // 报错
     <link href="https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%974-%E5%8E%8B%E7%BC%A9%E5%9B%BE%E7%89%87/"/>
     <id>https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列4-压缩图片/</id>
     <published>2016-09-20T09:36:23.000Z</published>
-    <updated>2016-12-07T12:27:26.436Z</updated>
+    <updated>2016-12-07T12:27:26.437Z</updated>
     
     <content type="html"><![CDATA[<h1 id="使用-gulp-压缩图片"><a href="/2016/09/20/gulp教程-gulp入门系列4-压缩图片/#使用-gulp-压缩图片" class="headerlink" title="使用 gulp 压缩图片"></a>使用 gulp 压缩图片</h1><p>请务必理解如下章节后阅读此章节：</p>
 <ol>
@@ -1041,11 +1041,64 @@ var o = { name:&apos;赵&apos;, age:12,}; // 报错
   </entry>
   
   <entry>
+    <title> gulp入门系列1--安装 Node 和 gulp</title>
+    <link href="https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%971-%E5%AE%89%E8%A3%85-Node-%E5%92%8C-gulp/"/>
+    <id>https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/</id>
+    <published>2016-09-20T09:33:20.000Z</published>
+    <updated>2016-12-07T12:27:03.532Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="安装-Node-和-gulp"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-Node-和-gulp" class="headerlink" title="安装 Node 和 gulp"></a>安装 Node 和 gulp</h1><p>gulp 是基于 node 实现的，那么我们就需要先安装 node。</p>
+<blockquote>
+<p>Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利用它实现 Web服务，做类似PHP的事。</p>
+</blockquote>
+<p>打开 <a href="https://nodejs.org/" target="_blank" rel="external">https://nodejs.org/</a> 点击绿色的 <strong>INSTALL</strong> 按钮下载安装 node。</p>
+<p><a href="https://github.com/nimojs/gulp-book/issues/10" target="_blank" rel="external">访问论坛获取帮助</a></p>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#hash_cli" name="hash_cli"></a></p>
+<h2 id="使用终端-命令行"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#使用终端-命令行" class="headerlink" title="使用终端/命令行"></a>使用终端/命令行</h2><h3 id="命令行"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>在 Windows 中可按 <kbd>徽标键</kbd>（alt键左边）+ <kbd>R</kbd> 打开输入 <code>cmd</code> + <kbd>Enter</kbd> 打开命令行。</p>
+<h3 id="终端-Mac"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#终端-Mac" class="headerlink" title="终端(Mac)"></a>终端(Mac)</h3><p>打开 Launchpad（像火箭一样的图标），在屏幕上方搜索框中输入 <code>终端</code> + <kbd>Enter</kbd> 打开终端。</p>
+<h3 id="查看-node-版本号"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#查看-node-版本号" class="headerlink" title="查看 node 版本号"></a>查看 node 版本号</h3><p>在终端/命令行中输入 <code>node -v</code> 检测node是否安装成功，安装成功会显示出 node 的版本号。</p>
+<h3 id="跳转目录"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#跳转目录" class="headerlink" title="跳转目录"></a>跳转目录</h3><p>终端/命令行 中可使用 <code>cd 目录名</code> 跳转至指定目录，Mac 中还可以使用 <code>ls</code> 查看当前目录下的文件列表。</p>
+<h4 id="Windows"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#Windows" class="headerlink" title="Windows"></a>Windows</h4><p>Windows 下可使用如下命令跳转至指定目录：</p>
+<figure class="highlight scilab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跳转至 C 盘根目录</span></div><div class="line"><span class="built_in">cd</span> c:\</div><div class="line"><span class="comment">// 跳转至当前目录的 demo 文件夹</span></div><div class="line"><span class="built_in">cd</span> demo</div><div class="line"><span class="comment">// 跳转至上一级</span></div><div class="line"><span class="built_in">cd</span> ..</div></pre></td></tr></table></figure>
+<h4 id="Mac"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#Mac" class="headerlink" title="Mac"></a>Mac</h4><p>Mac 中建议只在 Documents 目录下进行文件操作。</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跳转至文档目录</span></div><div class="line"><span class="keyword">cd</span> /Users/你的用户名/Documents/</div><div class="line"><span class="comment">// 或第一次打开终端时直接输入</span></div><div class="line"><span class="keyword">cd</span> Documents</div><div class="line"><span class="comment">// 查看目录下文件列表</span></div><div class="line"><span class="keyword">ls</span></div><div class="line"><span class="comment">// 创建文件夹</span></div><div class="line"><span class="keyword">mkdir</span> demo</div><div class="line"><span class="comment">// 跳转至当前目录下的 demo 文件夹</span></div><div class="line"><span class="keyword">cd</span> demo</div><div class="line"><span class="comment">// 跳转至上级目录</span></div><div class="line"><span class="keyword">cd</span> ..</div></pre></td></tr></table></figure>
+<h3 id="退出运行状态"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#退出运行状态" class="headerlink" title="退出运行状态"></a>退出运行状态</h3><p>如果你在命令行中启动了一些一直运行的命令，你的命令行会进入“运行”状态，此时你不可以在命令行进行其他操作。可通过 <code>Ctrl + C</code> 停止 gulp。（Mac 中使用 <code>control + C</code>）</p>
+<p>后面的章节中如果代码中存在 <code>gulp.watch</code> 并在命令行运行了 <code>gulp</code> 则需要使用 <code>Ctrl + C</code> 退出任务。</p>
+<h2 id="npm-模块管理器"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#npm-模块管理器" class="headerlink" title="npm 模块管理器"></a>npm 模块管理器</h2><p>如果你了解 npm 则跳过此章节</p>
+<p>若你不了解npm 请阅读 <a href="http://javascript.ruanyifeng.com/nodejs/npm.html" target="_blank" rel="external">npm模块管理器</a></p>
+<h2 id="安装-gulp"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-gulp" class="headerlink" title="安装 gulp"></a>安装 gulp</h2><p>npm 是 node 的包管理工具，可以利用它安装 gulp 所需的包。（在安装 node 时已经自动安装了 npm）</p>
+<p>在命令行输入</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> -g gulp</div></pre></td></tr></table></figure>
+<p>若一直没安装成功，请<a href="https://github.com/nimojs/blog/issues/20" target="_blank" rel="external">使用 cnpm 安装</a>(npm的国内加速镜像)</p>
+<p>意思是：使用 npm 安装全局性的(<code>-g</code>) gulp 包。</p>
+<blockquote>
+<p>如果你安装失败，请输入<code>sudo npm install -g gulp</code>使用管理员权限安装。（可能会要求输入密码）</p>
+</blockquote>
+<p>安装时请注意命令行的提示信息，安装完成后可在命令行输入 <code>gulp -v</code> 以确认安装成功。</p>
+<p>至此，我们完成了准备工作。接着让 gulp 开始帮我们干活吧！</p>
+<p><a href="https://github.com/nimojs/gulp-book/issues/10" target="_blank" rel="external">访问论坛获取帮助</a></p>
+<p><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/chapter2.md">阅读下一章节：使用 gulp 压缩JS</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;安装-Node-和-gulp&quot;&gt;&lt;a href=&quot;/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-Node-和-gulp&quot; class=&quot;headerlink&quot; title=&quot;安装 Node 和 gulp&quot;&gt;&lt;/a&gt;
+    
+    </summary>
+    
+    
+      <category term="gulp" scheme="https://zhaoy875.github.io/tags/gulp/"/>
+    
+      <category term="前端工程自动化" scheme="https://zhaoy875.github.io/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
     <title> gulp入门系列2--压缩 JS</title>
     <link href="https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%972-%E5%8E%8B%E7%BC%A9-JS/"/>
     <id>https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列2-压缩-JS/</id>
     <published>2016-09-20T09:33:20.000Z</published>
-    <updated>2016-12-07T12:27:11.531Z</updated>
+    <updated>2016-12-07T12:27:11.532Z</updated>
     
     <content type="html"><![CDATA[<h1 id="使用-gulp-压缩-JS"><a href="/2016/09/20/gulp教程-gulp入门系列2-压缩-JS/#使用-gulp-压缩-JS" class="headerlink" title="使用 gulp 压缩 JS"></a>使用 gulp 压缩 JS</h1><p>请务必理解如下章节后阅读此章节：</p>
 <ol>
@@ -1155,64 +1208,11 @@ var o = { name:&apos;赵&apos;, age:12,}; // 报错
   </entry>
   
   <entry>
-    <title> gulp入门系列1--安装 Node 和 gulp</title>
-    <link href="https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%971-%E5%AE%89%E8%A3%85-Node-%E5%92%8C-gulp/"/>
-    <id>https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/</id>
-    <published>2016-09-20T09:33:20.000Z</published>
-    <updated>2016-12-07T12:27:03.532Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="安装-Node-和-gulp"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-Node-和-gulp" class="headerlink" title="安装 Node 和 gulp"></a>安装 Node 和 gulp</h1><p>gulp 是基于 node 实现的，那么我们就需要先安装 node。</p>
-<blockquote>
-<p>Node 是一个基于Chrome JavaScript V8引擎建立的一个平台，可以利用它实现 Web服务，做类似PHP的事。</p>
-</blockquote>
-<p>打开 <a href="https://nodejs.org/" target="_blank" rel="external">https://nodejs.org/</a> 点击绿色的 <strong>INSTALL</strong> 按钮下载安装 node。</p>
-<p><a href="https://github.com/nimojs/gulp-book/issues/10" target="_blank" rel="external">访问论坛获取帮助</a></p>
-<p><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#hash_cli" name="hash_cli"></a></p>
-<h2 id="使用终端-命令行"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#使用终端-命令行" class="headerlink" title="使用终端/命令行"></a>使用终端/命令行</h2><h3 id="命令行"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>在 Windows 中可按 <kbd>徽标键</kbd>（alt键左边）+ <kbd>R</kbd> 打开输入 <code>cmd</code> + <kbd>Enter</kbd> 打开命令行。</p>
-<h3 id="终端-Mac"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#终端-Mac" class="headerlink" title="终端(Mac)"></a>终端(Mac)</h3><p>打开 Launchpad（像火箭一样的图标），在屏幕上方搜索框中输入 <code>终端</code> + <kbd>Enter</kbd> 打开终端。</p>
-<h3 id="查看-node-版本号"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#查看-node-版本号" class="headerlink" title="查看 node 版本号"></a>查看 node 版本号</h3><p>在终端/命令行中输入 <code>node -v</code> 检测node是否安装成功，安装成功会显示出 node 的版本号。</p>
-<h3 id="跳转目录"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#跳转目录" class="headerlink" title="跳转目录"></a>跳转目录</h3><p>终端/命令行 中可使用 <code>cd 目录名</code> 跳转至指定目录，Mac 中还可以使用 <code>ls</code> 查看当前目录下的文件列表。</p>
-<h4 id="Windows"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#Windows" class="headerlink" title="Windows"></a>Windows</h4><p>Windows 下可使用如下命令跳转至指定目录：</p>
-<figure class="highlight scilab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跳转至 C 盘根目录</span></div><div class="line"><span class="built_in">cd</span> c:\</div><div class="line"><span class="comment">// 跳转至当前目录的 demo 文件夹</span></div><div class="line"><span class="built_in">cd</span> demo</div><div class="line"><span class="comment">// 跳转至上一级</span></div><div class="line"><span class="built_in">cd</span> ..</div></pre></td></tr></table></figure>
-<h4 id="Mac"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#Mac" class="headerlink" title="Mac"></a>Mac</h4><p>Mac 中建议只在 Documents 目录下进行文件操作。</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跳转至文档目录</span></div><div class="line"><span class="keyword">cd</span> /Users/你的用户名/Documents/</div><div class="line"><span class="comment">// 或第一次打开终端时直接输入</span></div><div class="line"><span class="keyword">cd</span> Documents</div><div class="line"><span class="comment">// 查看目录下文件列表</span></div><div class="line"><span class="keyword">ls</span></div><div class="line"><span class="comment">// 创建文件夹</span></div><div class="line"><span class="keyword">mkdir</span> demo</div><div class="line"><span class="comment">// 跳转至当前目录下的 demo 文件夹</span></div><div class="line"><span class="keyword">cd</span> demo</div><div class="line"><span class="comment">// 跳转至上级目录</span></div><div class="line"><span class="keyword">cd</span> ..</div></pre></td></tr></table></figure>
-<h3 id="退出运行状态"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#退出运行状态" class="headerlink" title="退出运行状态"></a>退出运行状态</h3><p>如果你在命令行中启动了一些一直运行的命令，你的命令行会进入“运行”状态，此时你不可以在命令行进行其他操作。可通过 <code>Ctrl + C</code> 停止 gulp。（Mac 中使用 <code>control + C</code>）</p>
-<p>后面的章节中如果代码中存在 <code>gulp.watch</code> 并在命令行运行了 <code>gulp</code> 则需要使用 <code>Ctrl + C</code> 退出任务。</p>
-<h2 id="npm-模块管理器"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#npm-模块管理器" class="headerlink" title="npm 模块管理器"></a>npm 模块管理器</h2><p>如果你了解 npm 则跳过此章节</p>
-<p>若你不了解npm 请阅读 <a href="http://javascript.ruanyifeng.com/nodejs/npm.html" target="_blank" rel="external">npm模块管理器</a></p>
-<h2 id="安装-gulp"><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-gulp" class="headerlink" title="安装 gulp"></a>安装 gulp</h2><p>npm 是 node 的包管理工具，可以利用它安装 gulp 所需的包。（在安装 node 时已经自动安装了 npm）</p>
-<p>在命令行输入</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> -g gulp</div></pre></td></tr></table></figure>
-<p>若一直没安装成功，请<a href="https://github.com/nimojs/blog/issues/20" target="_blank" rel="external">使用 cnpm 安装</a>(npm的国内加速镜像)</p>
-<p>意思是：使用 npm 安装全局性的(<code>-g</code>) gulp 包。</p>
-<blockquote>
-<p>如果你安装失败，请输入<code>sudo npm install -g gulp</code>使用管理员权限安装。（可能会要求输入密码）</p>
-</blockquote>
-<p>安装时请注意命令行的提示信息，安装完成后可在命令行输入 <code>gulp -v</code> 以确认安装成功。</p>
-<p>至此，我们完成了准备工作。接着让 gulp 开始帮我们干活吧！</p>
-<p><a href="https://github.com/nimojs/gulp-book/issues/10" target="_blank" rel="external">访问论坛获取帮助</a></p>
-<p><a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/chapter2.md">阅读下一章节：使用 gulp 压缩JS</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;安装-Node-和-gulp&quot;&gt;&lt;a href=&quot;/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/#安装-Node-和-gulp&quot; class=&quot;headerlink&quot; title=&quot;安装 Node 和 gulp&quot;&gt;&lt;/a&gt;
-    
-    </summary>
-    
-    
-      <category term="gulp" scheme="https://zhaoy875.github.io/tags/gulp/"/>
-    
-      <category term="前端工程自动化" scheme="https://zhaoy875.github.io/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
     <title> gulp 入门指南</title>
     <link href="https://zhaoy875.github.io/2016/09/20/gulp%E6%95%99%E7%A8%8B-gulp%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%97/"/>
     <id>https://zhaoy875.github.io/2016/09/20/gulp教程-gulp入门系列/</id>
     <published>2016-09-20T08:53:20.000Z</published>
-    <updated>2016-12-07T12:26:53.208Z</updated>
+    <updated>2016-12-07T12:26:53.209Z</updated>
     
     <content type="html"><![CDATA[<h1 id="gulp-入门指南"><a href="/2016/09/20/gulp教程-gulp入门系列/#gulp-入门指南" class="headerlink" title="gulp 入门指南"></a>gulp 入门指南</h1><p>gulp 是基于 node 实现 Web 前端自动化开发的工具，利用它能够极大的提高开发效率。</p>
 <p>在 Web 前端开发工作中有很多“重复工作”，比如压缩CSS/JS文件。而这些工作都是有规律的。找到这些规律，并编写 gulp 配置代码,让 gulp 自动执行这些“重复工作”。</p>
