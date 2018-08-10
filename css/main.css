@@ -8,15 +8,6 @@ html,
 body {
   cursor: url("/images/cursor.cur"), auto;
 }
-.footer-inner {
-  text-shadow: 0 0 2px #000;
-}
-.footer {
-  background: #222;
-}
-a.theme-link {
-  color: #efefef;
-}
 a.theme-link:hover {
   color: #fff !important;
 }
@@ -1737,7 +1728,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffa4bb;
+  background: #f2ffb0;
 }
 .links-of-blogroll {
   font-size: 13px;

@@ -5,7 +5,7 @@
  / /| | | | (_| | (_) | |_| |
 /___|_| |_|\__,_|\___/ \__, |
                        |___/  
- zjj，我喜欢你i,可是( • ̀ω•́ )✧
+ zjj，我喜欢你i,可是( • ̀ω•́ )✧~~~
                       
     Who are you? Who am I?
         暂且可以说是一只资深网虫，互联网相关的乱七八糟的大概都知道一些，半吊子程序猿，以后想当个厨子，做给自己和爱的人吃。目前想学游泳，学乐器。旅行计划？暂时没有。。大概是没有玩伴吧~~
@@ -17,7 +17,7 @@
   做一个好前端真的难   (╯‵□′)╯ ︵┻━┻ 
   本博客搭建初期是以学习记录提高的目的为主，并不主要为分享，自以为个人能力精力有限，目前的水平姿势相差甚远，如若文章有误还请不吝指教，若是误导了他人我会不安，若能对看到文章的你有所帮助，那就很欣慰了。That's all above i want to say. 
   
-  20180222重新启程，跌落谷底，重新爬起来需要多大的勇气？
+  当你跌落谷底时，重起需要多大的勇气
 -->
 <!doctype html>
 
@@ -107,8 +107,6 @@
 
 <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <title> Music Time歌单 | zhaoy </title>
-  
- 
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -119,7 +117,6 @@
 with(b)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("crossorigin","",src=d)
 })(window,document,"https://retcode.alicdn.com/retcode/bl.js","__bl");
 </script>
-
   <!--[if lte IE 9]>
   <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
   <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -458,7 +455,7 @@ with(b)with(body)with(insertBefore(createElement("script"),firstChild))setAttrib
 <a id="more"></a>
 <h2 id="Interface-usage"><a href="/2016/10/23/music歌单/#Interface-usage" class="headerlink" title="Interface usage"></a>Interface usage</h2><p>歌单：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?playlist=84803078&amp;qssl=1&amp;qlrc=1&amp;autoplay=1&amp;narrow=0"</span>  <span class="attribute">width</span>=<span class="string">"100%"</span>  frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
 <p>单首：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">iframe</span> src=<span class="string">"https://music.daoapp.io/iframe?song=408332757&amp;qssl=1&amp;qlrc=1&amp;autoplay=0"</span> <span class="attribute">width</span>=<span class="string">"100%"</span> frameborder=<span class="string">"0"</span> scrolling=<span class="string">"no"</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure></p>
-<h2 id="API"><a href="/2016/10/23/music歌单/#API" class="headerlink" title="API"></a>API</h2><p>使用iframe内嵌页面<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Demos:</span></div><div class="line"><span class="symbol"></span></div><div class="line">https:<span class="comment">//music.daoapp.io/iframe?song=287749&amp;qssl=1&amp;qlrc=1&amp;qnarrow=0&amp;max_width=50%&amp;autoplay=1</span></div><div class="line"><span class="symbol">https:</span><span class="comment">//music.daoapp.io/iframe?song=287749&amp;qnarrow=1&amp;qssl=1</span></div><div class="line"><span class="symbol">URL:</span> http(s):<span class="comment">//music.daoapp.io/ Donot use HTTPS if it's not necessary. But if you do, don't forget set qssl to 1. Method: GET The arguments are:</span></div><div class="line"></div><div class="line">album=album_id  		<span class="comment">//专辑id</span></div><div class="line">playlist=playlist_id    <span class="comment">//歌单id</span></div><div class="line">song=song_id            <span class="comment">//单首id</span></div><div class="line">program=program_id</div><div class="line">radio=radio_id</div><div class="line">mv=mv_id 				</div><div class="line">qssl=[<span class="number">0</span>|<span class="number">1</span>]            </div><div class="line">qlrc=[<span class="number">0</span>|<span class="number">1</span>]             <span class="comment">//歌词</span></div><div class="line">qnarrow=[<span class="number">0</span>|<span class="number">1</span>]</div><div class="line">max_width=[<span class="number">100</span>%|<span class="number">32</span>rem|<span class="number">400</span>px|something else]</div><div class="line">autoplay=[<span class="number">0</span>|<span class="number">1</span>]         <span class="comment">//自动播放</span></div></pre></td></tr></table></figure></p>
+<h2 id="API"><a href="/2016/10/23/music歌单/#API" class="headerlink" title="API"></a>API</h2><p>使用iframe内嵌页面<br><figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">Demos:</div><div class="line"></div><div class="line">https://music.daoapp.io/iframe?<span class="attr">song=287749&amp;qssl=1&amp;qlrc=1&amp;qnarrow=0&amp;max_width=50%&amp;autoplay=1</span></div><div class="line">https://music.daoapp.io/iframe?<span class="attr">song=287749&amp;qnarrow=1&amp;qssl=1</span></div><div class="line">URL: http(s)://music.daoapp.io/ Donot use HTTPS <span class="keyword">if</span> it's not necessary. But <span class="keyword">if</span> you do, don't forget set qssl to <span class="number">1</span>. Method: GET The arguments are:</div><div class="line"></div><div class="line"><span class="attr">album=album_id</span>  		//专辑id</div><div class="line"><span class="attr">playlist=playlist_id</span>    //歌单id</div><div class="line"><span class="attr">song=song_id</span>            //单首id</div><div class="line"><span class="attr">program=program_id</span></div><div class="line"><span class="attr">radio=radio_id</span></div><div class="line"><span class="attr">mv=mv_id</span> 				</div><div class="line"><span class="attr">qssl=[0|1]</span>            </div><div class="line"><span class="attr">qlrc=[0|1]</span>             //歌词</div><div class="line"><span class="attr">qnarrow=[0|1]</span></div><div class="line"><span class="attr">max_width=[100%|32rem|400px|something</span> <span class="keyword">else</span>]</div><div class="line"><span class="attr">autoplay=[0|1]</span>         //自动播放</div></pre></td></tr></table></figure></p>
 <p>You must choose ONE of those six ids. And it means nothing if you choose more than one of them. You may use <a href="https://music.daoapp.io/" target="_blank" rel="external">The web interface</a> to find the id or use 163Music.</p>
 
       
@@ -666,7 +663,7 @@ with(b)with(body)with(insertBefore(createElement("script"),firstChild))setAttrib
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">39</span>
+              <span class="site-state-item-count">41</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -674,7 +671,7 @@ with(b)with(body)with(insertBefore(createElement("script"),firstChild))setAttrib
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -782,6 +779,31 @@ with(b)with(body)with(insertBefore(createElement("script"),firstChild))setAttrib
 <div class="powered-by">
    <a class="theme-link" href="https://hexo.io">Hexo</a> 驱动
 </div>
+
+<div id="bolg_totalTime"></div>
+<script>
+
+	function Show_myBirthday() {
+		var bolg_totalTime = document.getElementById('bolg_totalTime');
+		window.setTimeout("Show_myBirthday()", 1000);
+		var BirthDay = new Date("3/09/2016 12:40:00"),
+			today = new Date(),
+			timeold = (today.getTime() - BirthDay.getTime()),
+			sectimeold = timeold / 1000,
+			secondsold = Math.floor(sectimeold),
+			msPerDay = 24 * 60 * 60 * 1000,
+			e_daysold = timeold / msPerDay,
+			daysold = Math.floor(e_daysold),
+			e_hrsold = (e_daysold - daysold) * 24,
+			hrsold = Math.floor(e_hrsold),
+			e_minsold = (e_hrsold - hrsold) * 60,
+			minsold = Math.floor((e_hrsold - hrsold) * 60),
+			seconds = Math.floor((e_minsold - minsold) * 60);
+		bolg_totalTime.innerHTML = '我已经来到这个世界&nbsp&nbsp|&nbsp&nbsp' + daysold + '天' + hrsold + '小时' + minsold + '分' + 'seconds +  秒了，My Creator,Are You Ok :）';
+	}
+	Show_myBirthday();
+
+</script>
 
 <div class="theme-info">
  
