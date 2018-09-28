@@ -110,11 +110,8 @@
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
  
-<script>
-!(function(c,b,d,a){c[a]||(c[a]={});c[a].config={pid:"bp253rnmov@7bb952f9a7bfc7c",imgUrl:"https://arms-retcode.aliyuncs.com/r.png?"};
-with(b)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("crossorigin","",src=d)
-})(window,document,"https://retcode.alicdn.com/retcode/bl.js","__bl");
-</script>
+ 
+
   <!--[if lte IE 9]>
   <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
   <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -507,7 +504,7 @@ with(b)with(body)with(insertBefore(createElement("script"),firstChild))setAttrib
 <p><strong>八、编写 js 文件</strong></p>
 <p>我们发现 gulp 没有进行任何压缩操作。因为没有js这个目录，也没有 js 目录下的 <code>.js</code> 后缀文件。</p>
 <p>创建 <code>a.js</code> 文件，并编写如下内容</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// a.js</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">demo</span> (<span class="params">msg</span>) </span>&#123;</div><div class="line">    alert(<span class="string">'--------\r\n'</span> + msg + <span class="string">'\r\n--------'</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line">demo(<span class="string">'Hi'</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// a.js</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">demo</span> <span class="params">(msg)</span> </span>&#123;</div><div class="line">    alert(<span class="string">'--------\r\n'</span> + msg + <span class="string">'\r\n--------'</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line">demo(<span class="string">'Hi'</span>)</div></pre></td></tr></table></figure>
 <p>目录结构：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">├── gulpfile<span class="selector-class">.js</span></div><div class="line">├──  js</div><div class="line">│	└── <span class="selector-tag">a</span><span class="selector-class">.js</span></div><div class="line">└── node_modules</div><div class="line">	└── gulp-uglify</div></pre></td></tr></table></figure></p>
 <p>接着在命令行输入 <code>gulp script</code> 执行任务</p>
 <p>gulp 会在命令行当前目录下创建 <code>dist/js/</code> 文件夹，并创建压缩后的 <code>a.js</code> 文件。</p>
@@ -519,7 +516,7 @@ with(b)with(body)with(insertBefore(createElement("script"),firstChild))setAttrib
 <p>可以使用 <code>gulp.watch(src, fn)</code> 检测指定目录下文件的修改后执行任务。</p>
 <p>在 <code>gulpfile.js</code> 中编写如下代码：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 监听文件修改，当文件被修改则执行 script 任务</span></div><div class="line"><span class="selector-tag">gulp</span><span class="selector-class">.watch</span>(<span class="string">'js/*.js'</span>, [<span class="string">'script'</span>]);</div></pre></td></tr></table></figure></p>
 <p>但是没有命令可以运行 <code>gulp.watch()</code>，需要将 <code>gulp.watch()</code> 包含在一个任务中。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 在命令行使用 gulp auto 启动此任务</span></div><div class="line">gulp.task(<span class="string">'auto'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 监听文件修改，当文件被修改则执行 script 任务</span></div><div class="line">    gulp.watch(<span class="string">'js/*.js'</span>, [<span class="string">'script'</span>])</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 在命令行使用 gulp auto 启动此任务</span></div><div class="line">gulp.task(<span class="string">'auto'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</div><div class="line">    <span class="comment">// 监听文件修改，当文件被修改则执行 script 任务</span></div><div class="line">    gulp.watch(<span class="string">'js/*.js'</span>, [<span class="string">'script'</span>])</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>接着在命令行输入 <code>gulp auto</code>，自动监听 <code>js/*.js</code> 文件的修改后压缩js。</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$gulp</span> auto</div><div class="line">[<span class="number">21</span>:<span class="number">09</span>:<span class="number">45</span>] Using gulpfile ~<span class="regexp">/Documents/</span>code<span class="regexp">/gulp-book/</span>demo<span class="regexp">/chapter2/gu</span>lpfile.js</div><div class="line">[<span class="number">21</span>:<span class="number">09</span>:<span class="number">45</span>] Starting <span class="string">'auto'</span>...</div><div class="line">[<span class="number">21</span>:<span class="number">09</span>:<span class="number">45</span>] Finished <span class="string">'auto'</span> after <span class="number">9.19</span> ms</div></pre></td></tr></table></figure>
 <p>此时修改 <code>js/a.js</code> 中的代码并保存。命令行将会出现提示，表示检测到文件修改并压缩文件。</p>
@@ -594,16 +591,16 @@ with(b)with(body)with(insertBefore(createElement("script"),firstChild))setAttrib
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/" rel="next" title=" gulp入门系列1--安装 Node 和 gulp">
-                <i class="fa fa-chevron-left"></i>  gulp入门系列1--安装 Node 和 gulp
+              <a href="/2016/09/20/gulp教程-gulp入门系列3-压缩-CSS/" rel="next" title=" gulp入门系列3--压缩 CSS">
+                <i class="fa fa-chevron-left"></i>  gulp入门系列3--压缩 CSS
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/09/20/gulp教程-gulp入门系列/" rel="prev" title=" gulp 入门指南">
-                 gulp 入门指南 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/" rel="prev" title=" gulp入门系列1--安装 Node 和 gulp">
+                 gulp入门系列1--安装 Node 和 gulp <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

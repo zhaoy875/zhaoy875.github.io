@@ -110,11 +110,8 @@
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
  
-<script>
-!(function(c,b,d,a){c[a]||(c[a]={});c[a].config={pid:"bp253rnmov@7bb952f9a7bfc7c",imgUrl:"https://arms-retcode.aliyuncs.com/r.png?"};
-with(b)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("crossorigin","",src=d)
-})(window,document,"https://retcode.alicdn.com/retcode/bl.js","__bl");
-</script>
+ 
+
   <!--[if lte IE 9]>
   <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
   <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -487,8 +484,8 @@ with(b)with(body)with(insertBefore(createElement("script"),firstChild))setAttrib
 <h3 id="编写-gulp-代码"><a href="/2016/09/20/gulp教程-gulp入门系列/#编写-gulp-代码" class="headerlink" title="编写 gulp 代码"></a>编写 gulp 代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 压缩 JavaScript 文件</span></div><div class="line">gulp.task(<span class="string">'script'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 1. 找到</span></div><div class="line">    gulp.src(<span class="string">'js/*.js'</span>)</div><div class="line">    <span class="comment">// 2. 压缩</span></div><div class="line">        .pipe(uglify())</div><div class="line">    <span class="comment">// 3. 另存</span></div><div class="line">        .pipe(gulp.dest(<span class="string">'dist/js'</span>));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <h3 id="代码执行结果"><a href="/2016/09/20/gulp教程-gulp入门系列/#代码执行结果" class="headerlink" title="代码执行结果"></a>代码执行结果</h3><p>代码执行后文件结构</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">└── js/</div><div class="line">│   └── <span class="selector-tag">a</span><span class="selector-class">.js</span></div><div class="line">└── dist/</div><div class="line">    └── js/</div><div class="line">        └── <span class="selector-tag">a</span>.js</div></pre></td></tr></table></figure>
-<p>a.js 压缩前<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">demo</span> (<span class="params">msg</span>) </span>&#123;</div><div class="line">    alert(<span class="string">'--------\r\n'</span> + msg + <span class="string">'\r\n--------'</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line">demo(<span class="string">'Hi'</span>)</div></pre></td></tr></table></figure></p>
-<p>a.js 压缩后<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">demo</span>(<span class="params">n</span>)</span>&#123;alert(<span class="string">"--------\r\n"</span>+n+<span class="string">"\r\n--------"</span>)&#125;demo(<span class="string">"Hi"</span>);</div></pre></td></tr></table></figure></p>
+<p>a.js 压缩前<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">demo</span> <span class="params">(msg)</span> </span>&#123;</div><div class="line">    alert(<span class="string">'--------\r\n'</span> + msg + <span class="string">'\r\n--------'</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line">demo(<span class="string">'Hi'</span>)</div></pre></td></tr></table></figure></p>
+<p>a.js 压缩后<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">demo</span><span class="params">(n)</span></span>&#123;alert(<span class="string">"--------\r\n"</span>+n+<span class="string">"\r\n--------"</span>)&#125;demo(<span class="string">"Hi"</span>);</div></pre></td></tr></table></figure></p>
 <p>此时 <code>dist/js</code> 目录下的 <code>.js</code> 文件都是压缩后的版本。</p>
 <p>你还可以监控 <code>js/</code> 目录下的 js 文件，当某个文件被修改时，自动压缩修改文件。启动 gulp 后就可以让它帮助你自动构建 Web 项目。</p>
 <hr>
@@ -556,8 +553,8 @@ with(b)with(body)with(insertBefore(createElement("script"),firstChild))setAttrib
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/20/gulp教程-gulp入门系列2-压缩-JS/" rel="next" title=" gulp入门系列2--压缩 JS">
-                <i class="fa fa-chevron-left"></i>  gulp入门系列2--压缩 JS
+              <a href="/2016/09/20/gulp教程-gulp入门系列1-安装-Node-和-gulp/" rel="next" title=" gulp入门系列1--安装 Node 和 gulp">
+                <i class="fa fa-chevron-left"></i>  gulp入门系列1--安装 Node 和 gulp
               </a>
             
           </div>
